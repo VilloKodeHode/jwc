@@ -1,0 +1,52 @@
+import { useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import NavItem from "./NavItem";
+import Image from "next/image";
+import MENU_LIST from "./menu_list";
+
+export default function Navbar({ activeLink, setActiveLink, setActiveMenu }) {
+  const router = useRouter();
+
+  const handleImageClick = () => {
+    setActiveMenu("");
+    activeLink && setActiveLink("");
+  };
+
+  const filteredMenuList = MENU_LIST.filter((menu) => menu.text !== "Home");
+
+  return (
+    <div className="flex items-center w-full">
+      {MENU_LIST.map((menu) =>
+        menu.isImage ? (
+          <Link key={menu.text} href={menu.href}>
+            <Image
+              onClick={handleImageClick}
+              src={menu.imageSrc}
+              className=""
+              width={menu.imageWidth}
+              height={menu.imageHeight}
+              alt="JV web consult"
+            />
+          </Link>
+        ) : null
+      )}
+      <div className="flex-row justify-center hidden w-full lg:flex">
+        {filteredMenuList.map((menu) => (
+          <NavItem
+            key={menu.text}
+            text={menu.text}
+            textsize="text-2xl"
+            href={menu.href}
+            color={menu.color}
+            active={activeLink === menu.text}
+            activeWidth="w-12"
+            activeHeight="h-12"
+            handleMenuClick={() => setActiveLink(menu.text)}
+            activeLink={activeLink}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
