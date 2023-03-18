@@ -5,12 +5,12 @@ const MENU_LIST = [
     color: "bg-yellow-400",
     isImage: true,
     imageSrc: "/JWC.png",
-    imageWidth: 130,
-    imageHeight: 130,
+    imageWidth: 100,
+    imageHeight: 100,
   },
-  { text: "About", href: "/about", color: "bg-blue-400" },
-  { text: "Projects", href: "/projects", color: "bg-green-400" },
-  { text: "Contact", href: "/contact", color: "bg-red-400" },
+  { text: "About", href: "/about", color: "bg-JWC-teal" },
+  { text: "Projects", href: "/projects", color: "bg-JWC-teal" },
+  { text: "Contact", href: "/contact", color: "bg-JWC-teal" },
 ];
 
 export default MENU_LIST;

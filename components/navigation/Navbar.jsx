@@ -31,17 +31,19 @@ export default function Navbar({ activeLink, setActiveLink, setActiveMenu }) {
           </Link>
         ) : null
       )}
-      <div className="flex-row justify-center hidden w-full lg:flex">
+      <div className="flex-row justify-center hidden w-full pr-24 sm:flex">
         {filteredMenuList.map((menu) => (
           <NavItem
             key={menu.text}
             text={menu.text}
-            textsize="text-2xl"
+            textsize="text-xl"
             href={menu.href}
             color={menu.color}
             active={activeLink === menu.text}
-            activeWidth="w-12"
-            activeHeight="h-12"
+            activeWidth="w-11"
+            activeHeight="h-11"
+            underline="border-b-2"
+            position="left-0"
             handleMenuClick={() => setActiveLink(menu.text)}
             activeLink={activeLink}
           />

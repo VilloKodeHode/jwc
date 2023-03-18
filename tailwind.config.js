@@ -9,9 +9,44 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      ms: "320px",
+
+      mm: "375px",
+
+      ml: "425px",
+
+      sm: "640px",
+
+      md: "768px",
+
+      lg: "1024px",
+
+      xl: "1280px",
+
+      "2xl": "1536px",
+    },
     extend: {
+      fontFamily: {
+        Roboto: ["Roboto", "sans-serif"],
+        Lato: ["Lato", "sans-serif"],
+      },
+      colors: {
+        JWC: {
+          // header, footer and highlights:
+          teal: "#0E7D87",
+          // logo contrast, highlighting heading and subheading, dividers between sections
+          moonstone: "#21ABB8",
+          //
+          robineggblue: "#33C2CC",
+          // main text:
+          tiffanyblue: "#77D3DC",
+          //main background:
+          nonphotoblue: "#B1E4E9",
+        },
+      },
       keyframes: {
-        twist: {
+        buttonHover: {
           "0%": { color: "#C9FEF5" },
           "50%": { color: "#22555C" },
           "100%": { color: "#C9FEF5" },

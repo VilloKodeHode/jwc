@@ -8,9 +8,9 @@ export default function Header() {
 
   return (
     <header
-      className={`flex flex-col justify-center w-full top-0 left-0 z-50 animate-SlideInFromTop backdrop-blur-md bg-white text-[#2f1d87] font-semibold`}
+      className={`flex flex-col justify-center w-full top-0 left-0 animate-SlideInFromTop bg-JWC-nonphotoblue sm:mb-0 mb-24 font-semibold shadow-sm shadow-JWC-tiffanyblue`}
     >
-      <div className="flex my-4 justify-between px-12 items-center">
+      <div className="flex items-center justify-between px-12 my-4">
         <Navbar
           activeLink={activeLink}
           setActiveLink={setActiveLink}

@@ -35,11 +35,13 @@ export default function HamburgerBar({
     onClose();
   };
   return (
-    <div className="block lg:hidden">
+    <div className="block sm:hidden">
       <IconButton
-        variant="ghost hover:bg-none"
+        variant=""
         aria-label="Open Menu"
         size="lg"
+        color="#1fabb7"
+        className="duration-1000 ease-in-out hover:scale-110"
         icon={<HamburgerIcon boxSize="3rem" />}
         onClick={() => handleClick()}
       />
@@ -65,7 +67,7 @@ export default function HamburgerBar({
           </DrawerHeader>
           <DrawerBody>
             <ul
-              className={`text-blue-700
+              className={`
            mt-0 p-2`}
             >
               <div className="flex flex-col items-center justify-center w-full">
@@ -79,6 +81,8 @@ export default function HamburgerBar({
                     active={activeLink === menu.text}
                     activeHeight="h-36"
                     activeWidth="w-36"
+                    position="-left-8"
+                    underline="border-b-4"
                     handleMenuClick={() => {
                       setActiveLink(menu.text);
                       onClose();
