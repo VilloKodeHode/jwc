@@ -4,13 +4,13 @@ const MENU_LIST = [
     href: "/",
     color: "bg-yellow-400",
     isImage: true,
-    imageSrc: "/JWC.png",
+    imageSrc: "/JWC-logo.png",
     imageWidth: 100,
     imageHeight: 100,
   },
-  { text: "About", href: "/about", color: "bg-JWC-teal" },
-  { text: "Projects", href: "/projects", color: "bg-JWC-teal" },
-  { text: "Contact", href: "/contact", color: "bg-JWC-teal" },
+  { text: "About", href: "/about" },
+  { text: "Projects", href: "/projects" },
+  { text: "Contact", href: "/contact" },
 ];
 
 export default MENU_LIST;

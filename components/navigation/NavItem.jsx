@@ -22,7 +22,7 @@ const NavItem = ({
         <span
           className={`${textsize} ${
             active || activeLink === text ? `${underline}` : ""
-          } text-JWC-teal drop-shadow-xl z-10 p-1 hover:${underline} border-JWC-robineggblue`}
+          } z-10 p-1 hover:${underline} border-JWC-secondary`}
           onClick={handleClick}
         >
           {text}
@@ -30,7 +30,7 @@ const NavItem = ({
       </Link>
       {(active || activeLink === text) && (
         <div
-          className={`animate-Appear absolute top-1/2 -translate-y-1/2 ${position} ${activeWidth} ${activeHeight} bg-JWC-robineggblue -z-10 rounded-full`}
+          className={`animate-Appear absolute top-1/3 -translate-y-1/2 ${position} ${activeWidth} ${activeHeight} bg-JWC-secondary -z-10 rounded-full `}
         ></div>
       )}
     </div>

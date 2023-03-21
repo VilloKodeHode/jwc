@@ -1,19 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Image as ChakraImage } from "@chakra-ui/react";
 import PageLayout, {
+  TextFlex,
   TextTwoGridLayout,
   TopTwoGridLayout,
 } from "@/components/Layout";
 import SKILLS_LIST from "@/components/Skills/skills_list";
-import {
-  Box,
-  Container,
-  Divider,
-  Flex,
-  Grid,
-  SimpleGrid,
-} from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -25,41 +17,52 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <Grid className="grid relative text-white font-semibold sm:grid-cols-[65%_35%] h-[calc(100vh-126.767px)] w-screen">
-          <Grid className="items-center justify-center grid-flow-row text-center">
-            <h1 className="z-10 m-12 text-5xl duration-500 lg:text-8xl md:text-7xl hover:scale-110">
-              Devoted to <br /> web-design
+        <section className="relative min-h-[calc(100vh-132px)] text-center">
+          <TextFlex textWidth="">
+            <h2 className="md:leading-h2 sm:leading-h3 leading-h4 md:text-h2 sm:text-h3 text-h4 font-light bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
+              Joakim Villo
+            </h2>
+            <h1 className="text-center max-w-4xl md:text-h1 sm:text-h2 text-h3 md:leading-h1 sm:leading-h2 leading-h3">
+              Freelancer web-developer & UI designer
             </h1>
-            <Box className="absolute sm:h-3/4 h-1/3 sm:w-[60%] w-full bg-JWC-moonstone hover:scale-110 duration-500" />
-            <Box className="absolute sm:left-1/4 sm:translate-x-2/3 left-16 sm:bottom-1/2 bottom-1/2 sm:h-[30%] h-1/3 sm:w-[30%] w-64 bg-JWC-robineggblue hover:scale-110 duration-500" />
-          </Grid>
-          <Grid className="items-end justify-end grid-flow-row text-center">
-            <div className="z-10 p-4 mr-24 duration-500 border-4 border-JWC-teal mb-36 sm:mb-10 sm:mr-10 hover:scale-110">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
+              pellentesque leo. Nam eget maximus libero, a posuere leo.
+            </p>
+            {/* <Box className="absolute sm:h-3/4 h-1/3 sm:w-[60%] w-full bg-JWC-secondary hover:scale-110 duration-500" /> */}
+            {/* <Box className="absolute sm:left-1/4 sm:translate-x-2/3 left-16 sm:bottom-1/2 bottom-1/2 sm:h-[30%] h-1/3 sm:w-[30%] w-64 bg-JWC-primary hover:scale-110 duration-500" /> */}
+          </TextFlex>
+          {/* <Grid className="items-center justify-center grid-flow-row text-center">
+            <div className="z-10 p-4 duration-500 border-4 rounded-3xl border-JWC-tertiary hover:scale-110">
               <Image
                 width={300}
                 height={300}
-                src="/Hero4.jpg"
+                src="/Hero5.png"
                 alt="Joakim Villo"
-                className="w-44 sm:w-96 "
+                className="w-44 sm:w-96 rounded-3xl"
               />
             </div>
-            <Box className="absolute sm:right-0 right-16 bottom-0 sm:h-[60%] h-1/3 sm:w-[30%] w-64 bg-JWC-tiffanyblue hover:scale-110 duration-500" />
-          </Grid>
-        </Grid>
-        <TextTwoGridLayout sectionTitle="JV Web Consult">
-          <Box className="absolute right-1/2 translate-x-1/2 sm:-top-1/2 -top-1/3 h-[50%] sm:h-[100%] sm:w-[30rem] hover:scale-110 w-full bg-JWC-moonstone duration-500" />
-          <Container className="z-20 flex flex-col items-center justify-center gap-4 p-8 duration-500 text-JWC-nonphotoblue bg-JWC-teal hover:scale-110">
-            <h3 className="text-3xl">A Norwegian Company</h3>
-            <p>
+          </Grid> */}
+        </section>
+        <div className="h-[20vh] flex items-end mb-12 text-center font-bold">
+          <h2 className="z-10 text-h2 leading-h2">JV Web Consult</h2>
+        </div>
+        <TextTwoGridLayout>
+          {/* <Box className="absolute right-1/2 translate-x-1/2 sm:-top-1/2 -top-1/3 h-[50%] sm:h-[100%] sm:w-[30rem] hover:scale-110 w-full bg-JWC-secondary duration-500" /> */}
+          <TextFlex textWidth="max-w-[60ch]">
+            <h3 className="text-center text-h3 leading-h3">
+              A Norwegian Company
+            </h3>
+            <p className="text-p leading-p">
               Started by Joakim Villo in 2023 as a one-man freelance business.
               Focuses on does smaller jobs to gain a client base.
             </p>
-          </Container>
-          <Box className="absolute sm:left-0 left-16 sm:bottom-1/3 bottom-1/2 sm:h-[60%] h-1/3 sm:w-[45%] sm:hover:w-[50%] w-64 bg-JWC-robineggblue duration-500 z-10" />
-          <Container className="z-20 flex flex-col items-center justify-center gap-4 p-8 duration-500 text-JWC-nonphotoblue bg-JWC-teal hover:scale-110">
-            <h3 className="text-3xl">Current clients</h3>
-            <h4 className="text-2xl underline">Wileo AS</h4>
-            <ul>
+          </TextFlex>
+          {/* <Box className="absolute sm:left-0 left-16 sm:bottom-1/3 bottom-1/2 sm:h-[60%] h-1/3 sm:w-[45%] sm:hover:w-[50%] w-64 bg-JWC-robineggblue duration-500 z-10" /> */}
+          <TextFlex textWidth="max-w-[60ch]">
+            <h3 className="text-h3 leading-h3">Current clients</h3>
+            <h4 className="underline text-h4 leading-h4">Wileo AS</h4>
+            <ul className="text-p leading-p">
               <li>
                 A startup company that will be releasing their product in mid Q2
               </li>
@@ -76,15 +79,13 @@ export default function Home() {
                 <li>Consultant relevant to their content</li>
               </ul>
             </ul>
-          </Container>
-          <Box className="absolute sm:right-0 right-16 sm:bottom-1/2 bottom-1/2 sm:h-[60%] h-1/3 sm:w-[45%] sm:hover:w-[50%] w-64 bg-JWC-robineggblue duration-500 z-10" />
+          </TextFlex>
+          {/* <Box className="absolute sm:right-0 right-16 sm:bottom-1/2 bottom-1/2 sm:h-[60%] h-1/3 sm:w-[45%] sm:hover:w-[50%] w-64 bg-JWC-robineggblue duration-500 z-10" /> */}
         </TextTwoGridLayout>
-        <SimpleGrid
-          spacing={10}
-          className="relative py-12 text-white bg-JWC-lightblue"
-        >
-          <h2 className="text-5xl text-center">Technologies I use</h2>
-          <Flex className="flex-wrap justify-center items-center mx-[10%] md:gap-24 gap-16 min-h-[50vh] m-20 z-20">
+        <div className="skillswave topwave h-[200px]" />
+        <section className="flex relative py-12 min-h-[60vh] bg-[#312b35]">
+          {/* <h2 className="text-5xl font-bold text-center">Technologies used</h2> */}
+          <div className="flex flex-wrap justify-center items-center md:gap-24 gap-16 w-full m-20 z-20">
             {SKILLS_LIST.map((skill) => (
               <Image
                 key={skill.name}
@@ -92,18 +93,19 @@ export default function Home() {
                 height={100}
                 alt={skill.alt}
                 src={skill.imageSrc}
+                className="z-10 p-2 duration-500 rounded-xl hover:scale-125"
               />
             ))}
-          </Flex>
-          <Box className="absolute w-screen -translate-y-1/2 top-1/2 h-[600px] bg-JWC-darkblue" />
-        </SimpleGrid>
+          </div>
+        </section>
+        <div className="skillswave bottomwave h-[200px]" />
         <TextTwoGridLayout>
-          <Container className="flex flex-col items-center justify-center text-JWC-lightblue">
+          <TextFlex textWidth="max-w-[60ch]">
             <h3>Hello</h3>
-          </Container>
-          <Container className="flex flex-col items-center justify-center text-JWC-lightblue">
+          </TextFlex>
+          <TextFlex textWidth="max-w-[60ch]">
             <h3>Hello</h3>
-          </Container>
+          </TextFlex>
         </TextTwoGridLayout>
       </PageLayout>
     </>

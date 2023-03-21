@@ -1,45 +1,50 @@
-import { Flex, Grid } from "@chakra-ui/react";
-
 export default function PageLayout({ children }) {
   return (
-    <Flex className="flex-col items-center justify-start min-h-screen gap-8">
+    <main className="flex flex-col items-center justify-start min-h-screen z-50">
       <>{children}</>
-    </Flex>
+    </main>
   );
 }
 
 export function TopTwoGridLayout({ children }) {
   return (
-    <Grid className="grid relative text-white sm:grid-cols-[60%_40%] h-[calc(100vh-126.75px)] w-screen bg-JWC-lightblue">
+    <section className="grid relative text-white sm:grid-cols-[60%_40%] h-[calc(100vh-126.75px)] w-full bg-JWC-lightblue">
       <>{children}</>
-    </Grid>
+    </section>
   );
 }
 
 export function TwoGriddedLayout({ children }) {
   return (
-    <Grid className="grid text-white grid-cols-[60%_40%] h-[100vh] w-screen">
+    <section className="grid text-white grid-cols-[60%_40%] h-[100vh] w-full">
       <>{children}</>
-    </Grid>
+    </section>
   );
 }
 
-export function TextTwoGridLayout({ children, sectionTitle }) {
+export function TextTwoGridLayout({ children }) {
   return (
     <>
-      <div className="h-[20vh] flex items-end text-5xl mb-12 text-center text-white font-bold">
-        <h2 className="z-10">{sectionTitle}</h2>
-      </div>
-      <Grid className="items-start sm:grid-cols-[50%_50%] sm:gap-2 gap-12 min-h-[30vh] w-screen relative">
+      <section className="grid items-start sm:grid-cols-[50%_50%] sm:gap-2 gap-12 min-h-[30vh] w-full relative">
         <>{children}</>
-      </Grid>
+      </section>
     </>
   );
 }
 
 export function SkillsLayout({ children }) {
   return (
-    <section className="grid text-white grid-cols-[40%_60%] h-[100vh] w-screen bg-JWC-darkblue">
+    <section className="grid text-white grid-cols-[40%_60%] h-[100vh] w-full">
+      <>{children}</>
+    </section>
+  );
+}
+
+export function TextFlex({ children, textWidth }) {
+  return (
+    <section
+      className={`flex flex-col items-center justify-center ${textWidth} mx-auto`}
+    >
       <>{children}</>
     </section>
   );

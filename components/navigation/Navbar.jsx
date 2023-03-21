@@ -5,7 +5,7 @@ import NavItem from "./NavItem";
 import Image from "next/image";
 import MENU_LIST from "./menu_list";
 
-export default function Navbar({ activeLink, setActiveLink, setActiveMenu }) {
+export default function Navbar({}) {
   const router = useRouter();
 
   const handleImageClick = () => {
@@ -23,7 +23,6 @@ export default function Navbar({ activeLink, setActiveLink, setActiveMenu }) {
             <Image
               onClick={handleImageClick}
               src={menu.imageSrc}
-              className=""
               width={menu.imageWidth}
               height={menu.imageHeight}
               alt="JV web consult"
@@ -31,14 +30,13 @@ export default function Navbar({ activeLink, setActiveLink, setActiveMenu }) {
           </Link>
         ) : null
       )}
-      <div className="flex-row justify-center hidden w-full pr-24 sm:flex">
+      <div className="flex-row justify-center hidden w-full pr-24 sm:flex text-JWC-black">
         {filteredMenuList.map((menu) => (
           <NavItem
             key={menu.text}
             text={menu.text}
-            textsize="text-xl"
+            textsize="text-h6"
             href={menu.href}
-            color={menu.color}
             active={activeLink === menu.text}
             activeWidth="w-11"
             activeHeight="h-11"

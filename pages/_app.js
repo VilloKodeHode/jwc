@@ -1,14 +1,22 @@
+import { useState } from "react";
 import Header from "@/components/navigation/Header";
-import { ChakraProvider } from "@chakra-ui/react";
 import "@/styles/globals.css";
+import Drawer from "@/components/navigation/Drawer";
 
 export default function App({ Component, pageProps }) {
+  const [activeLink, setActiveLink] = useState("");
+  const [activeMenu, setActiveMenu] = useState("");
   return (
     <>
-      <ChakraProvider>
+      {/* <div className="headerwave"></div> */}
+      <Drawer
+        activeLink={activeLink}
+        setActiveLink={setActiveLink}
+        setActiveMenu={setActiveMenu}
+      >
         <Header />
         <Component {...pageProps} />
-      </ChakraProvider>
+      </Drawer>
     </>
   );
 }
