@@ -18,20 +18,18 @@
 }
 
 .headerwave {
-  
-  width: 100%;
+width: 100%;
   position: absolute;
-  top: 0;
+  top: 0; 
   z-index: -10;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
   background-image: url('/header-waves2.svg');
 }
 
 .skillswave {
   
-  width: 100%;
+  width: 4500px;
   /* position: absolute; */
   z-index: -10;
   background-repeat: no-repeat;

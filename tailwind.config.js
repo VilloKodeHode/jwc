@@ -35,6 +35,14 @@ module.exports = {
         "50%": { color: "#22555C" },
         "100%": { color: "#C9FEF5" },
       },
+      waveSlideLeft: {
+        "0%": { translate: "1000px" },
+        "100%": { translate: "-1000px" },
+      },
+      waveSlideRight: {
+        "0%": { translate: "1000px" },
+        "100%": { translate: "-1000px" },
+      },
       glow: {
         "0%": { opacity: "30%" },
         "100%": { opacity: "100%" },
@@ -57,6 +65,8 @@ module.exports = {
       },
     },
     animation: {
+      waveSlideLeft: "waveSlideLeft ease-in 80s alternate infinite",
+      waveSlideRight: "waveSlideRight ease-in 85s 1s alternate infinite",
       ButtonHover: "buttonHover ease-in 1.5s infinite",
       ModalSlideIn: "slideRight ease 0.3s",
       RPSPopUp: "popUp 0.1s ease-in",
@@ -98,6 +108,7 @@ module.exports = {
         h5: "30px",
         h6: "21px",
         p: "21px",
+        p0: "18px",
         "4xl": "2.25rem",
         "3xl": "1.875rem",
         "2xl": "1.5rem",
@@ -115,6 +126,7 @@ module.exports = {
         h5: "40px",
         h6: "36px",
         p: "30px",
+        p0: "24px",
         "4xl": "2.75rem",
         "3xl": "2.5rem",
         "2xl": "2.25rem",

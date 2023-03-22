@@ -16,7 +16,7 @@ export default function Drawer({ children }) {
   };
 
   return (
-    <div className="drawer drawer-end w-full">
+    <div className="w-full drawer drawer-end">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content mainBackground">
         <>{children}</>
@@ -25,7 +25,7 @@ export default function Drawer({ children }) {
         <label htmlFor="my-drawer" className="drawer-overlay" />
         <div className="bg-white menu">
           <div className="flex items-center justify-around w-[300px]">
-            <div className="headerwave h-[417px]" />
+            <div className="headerwave h-[1200px]" />
             {MENU_LIST.map((menu) =>
               menu.isImage ? (
                 <>
