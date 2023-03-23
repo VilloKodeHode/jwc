@@ -17,12 +17,12 @@ const SKILLS_LIST = [
     alt: "JavaScript icon by Icons8",
     skilltype: "code language",
   },
-  {
-    name: "React",
-    imageSrc: "/images/skills/logos_react.svg",
-    alt: "React icon by Icons8",
-    skilltype: "framework",
-  },
+  // {
+  //   name: "React",
+  //   imageSrc: "/images/skills/logos_react.svg",
+  //   alt: "React icon by Icons8",
+  //   skilltype: "framework",
+  // },
   {
     name: "Nextjs",
     imageSrc: "/images/skills/logos_nextjs.svg",

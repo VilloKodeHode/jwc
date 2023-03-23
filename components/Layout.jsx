@@ -1,6 +1,6 @@
 export default function PageLayout({ children }) {
   return (
-    <main className="z-50 flex flex-col items-center justify-start min-h-screen mt-56 overflow-x-hidden">
+    <main className="z-50 flex flex-col items-center justify-start min-h-screen overflow-x-hidden">
       <>{children}</>
     </main>
   );
@@ -17,7 +17,7 @@ export function TwoGriddedLayout({ children }) {
 export function TextTwoGridLayout({ children }) {
   return (
     <>
-      <section className="grid lg:grid-cols-[50%_50%] sm:gap-2 gap-12 min-h-[50vh] justify-center items-center px-4 text-start w-full relative">
+      <section className="grid lg:grid-cols-[50%_50%] gap-12 min-h-[50vh] justify-center items-start px-4 text-start w-full relative">
         <>{children}</>
       </section>
     </>

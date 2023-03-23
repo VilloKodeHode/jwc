@@ -30,7 +30,6 @@ width: 100%;
 .skillswave {
   
   width: 4500px;
-  /* position: absolute; */
   z-index: -10;
   background-repeat: no-repeat;
 
@@ -39,13 +38,15 @@ width: 100%;
 }
 .topwave {
     background-image: url('/topwaveskills2.svg');
-      top: 5%;
 background-position: bottom;
 }
 .bottomwave {
     background-image: url('/bottomwaveskills2.svg');
-      bottom: 5%;
       background-position: top;
+}
+
+.accordiontext {
+  text-shadow: 0px 0px 2px var(--black15);
 }
 
   h1,h2,h3,h4,h5,p {

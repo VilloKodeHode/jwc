@@ -21,11 +21,11 @@ export default function Drawer({ children }) {
       <div className="drawer-content mainBackground">
         <>{children}</>
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side ">
         <label htmlFor="my-drawer" className="drawer-overlay" />
         <div className="bg-white menu">
-          <div className="flex items-center justify-around w-[300px]">
-            <div className="headerwave h-[1200px]" />
+          <div className="flex items-center justify-around sm:w-[300px] mb-48 w-[200px]">
+            <div className="headerwave h-[600px]" />
             {MENU_LIST.map((menu) =>
               menu.isImage ? (
                 <>
