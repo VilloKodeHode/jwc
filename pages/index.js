@@ -15,6 +15,7 @@ import ResponsiveH1, {
   ResponsiveP,
   ResponsiveUL,
 } from "@/components/Responsive text/ResponsiveText";
+import Accordion from "@/components/Accordion";
 
 export default function Home() {
   return (
@@ -26,34 +27,34 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <section className="relative grid justify-center min-h-[60vh] text-center">
+        <section className="relative grid justify-center min-h-[70vh] text-center">
           <TextFlex textWidth="">
-            <ResponsiveH2>
-              <div className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
-                Joakim Villo
-              </div>
-            </ResponsiveH2>
             <ResponsiveH1 className="max-w-4xl text-center lg:text-h1 sm:text-h2 text-h3 lg:leading-h1 sm:leading-h2 leading-h3">
-              Freelance web-developer & UI designer
+              Freelance <br /> web-developer <br /> & UI designer
             </ResponsiveH1>
             <EqualTwoGrids>
-              <p className="max-w-sm">
+              <ResponsiveP maxWidth="max-w-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 ac pellentesque leo. Nam eget maximus libero, a posuere leo.
-              </p>
+              </ResponsiveP>
               <CallToActionButton>Hire me</CallToActionButton>
             </EqualTwoGrids>
           </TextFlex>
         </section>
-        <div className="h-[20vh] flex items-end mb-12 font-bold">
+        <div className="h-[20vh] flex items-center flex-col justify-center mb-12 font-bold">
           <ResponsiveH2>JV Web Consult</ResponsiveH2>
+          <ResponsiveH2>
+            <div className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
+              Joakim Villo
+            </div>
+          </ResponsiveH2>
         </div>
         <TextTwoGridLayout>
           <TextFlex textWidth="max-w-[60ch]">
-            <ResponsiveH3>A Norwegian Company</ResponsiveH3>
+            <ResponsiveH3>Norwegian Company</ResponsiveH3>
             <ResponsiveP>
-              Started by Joakim Villo in 2023 as a one-man freelance business.
-              Focuses on does smaller jobs to gain a client base.
+              Started in Tønsberg by Joakim Villo in 2023 as a one-man freelance
+              business. Focuses on does smaller jobs to gain a client base.
             </ResponsiveP>
           </TextFlex>
 
@@ -80,18 +81,72 @@ export default function Home() {
           </TextFlex>
         </TextTwoGridLayout>
         <div className="skillswave topwave h-[250px] animate-waveSlideRight " />
-        <section className="flex relative min-h-[30vh] bg-[#312b35] snap-center">
-          <div className="z-20 flex flex-wrap items-center justify-center w-full gap-16 m-12 sm:m-24 md:gap-24">
-            {SKILLS_LIST.map((skill) => (
-              <Image
-                key={skill.name}
-                width={100}
-                height={100}
-                alt={skill.alt}
-                src={skill.imageSrc}
-                className="z-10 duration-500 w-fit hover:scale-125"
-              />
-            ))}
+        <section className="flex relative w-screen min-h-[40vh] bg-[#312b35] snap-center">
+          <div className="z-20 grid items-start justify-center w-full gap-16 xl:grid-cols-2 md:gap-24">
+            <Accordion text="Code languages">
+              {SKILLS_LIST.map((skill) =>
+                skill.skilltype === "code language" ? (
+                  <div className="relative" key={skill.name}>
+                    <Image
+                      width={100}
+                      height={100}
+                      alt={skill.alt}
+                      src={skill.imageSrc}
+                      className="relative z-10 m-12 duration-500 w-fit"
+                    ></Image>
+                    <div className="absolute h-[20%] w-[30%] translate-x-1/2 -translate-y-1/2 rounded-full bg-JWC-primary right-1/2 top-1/2 skillGlow animate-glow" />
+                  </div>
+                ) : null
+              )}
+            </Accordion>
+            <Accordion text="Frameworks">
+              {SKILLS_LIST.map((skill) =>
+                skill.skilltype === "framework" ? (
+                  <div className="relative" key={skill.name}>
+                    <Image
+                      width={100}
+                      height={100}
+                      alt={skill.alt}
+                      src={skill.imageSrc}
+                      className="relative z-10 m-12 duration-500 w-fit"
+                    ></Image>
+                    <div className="absolute w-[60%] translate-x-1/2 -translate-y-1/2 rounded-full bg-JWC-primary right-1/2 top-1/2 skillGlow animate-glow" />
+                  </div>
+                ) : null
+              )}
+            </Accordion>
+            <Accordion text="Web Styling">
+              {SKILLS_LIST.map((skill) =>
+                skill.skilltype === "styling" ? (
+                  <div className="relative" key={skill.name}>
+                    <Image
+                      width={100}
+                      height={100}
+                      alt={skill.alt}
+                      src={skill.imageSrc}
+                      className="relative lg:max-w-[100%] max-w-[80%] z-10 m-12 duration-500 w-fit"
+                    ></Image>
+                    <div className="absolute w-[80%] translate-x-1/2 -translate-y-1/2 rounded-full bg-JWC-primary right-1/2 top-1/2 skillGlow animate-glow" />
+                  </div>
+                ) : null
+              )}
+            </Accordion>
+            <Accordion text="Design tools">
+              {SKILLS_LIST.map((skill) =>
+                skill.skilltype === "design" ? (
+                  <div className="relative" key={skill.name}>
+                    <Image
+                      width={100}
+                      height={100}
+                      alt={skill.alt}
+                      src={skill.imageSrc}
+                      className="relative z-10 m-12 duration-500 w-fit"
+                    ></Image>
+                    <div className="absolute h-[35%] w-[35%] translate-x-1/2 -translate-y-1/2 rounded-full bg-JWC-primary right-1/2 top-1/2 skillGlow animate-glow" />
+                  </div>
+                ) : null
+              )}
+            </Accordion>
           </div>
         </section>
         <div className="skillswave bottomwave h-[250px] animate-waveSlideLeft " />

@@ -70,7 +70,7 @@ module.exports = {
       ButtonHover: "buttonHover ease-in 1.5s infinite",
       ModalSlideIn: "slideRight ease 0.3s",
       RPSPopUp: "popUp 0.1s ease-in",
-      glow: "glow 1s ease-in-out infinite alternate",
+      glow: "glow 3s ease-in-out infinite alternate",
       SlideInFromLeft: "slideLeft 0.5s ease-in-out",
       SlideInFromRight: "slideRight 0.5s 1s ease-in-out backwards",
       SlideInFromTop: "slideDown 0.5s ease-in-out",

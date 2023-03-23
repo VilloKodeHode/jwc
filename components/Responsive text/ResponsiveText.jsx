@@ -8,7 +8,7 @@ export default function ResponsiveH1({ children }) {
 
 export function ResponsiveH2({ children }) {
   return (
-    <h2 className="font-light lg:leading-h2 md:leading-h3 leading-h4 lg:text-h2 md:text-h3 text-h4">
+    <h2 className="font-light sm:leading-h2 leading-h3 sm:text-h2 text-h3">
       {children}
     </h2>
   );
@@ -30,9 +30,11 @@ export function ResponsiveH4({ children }) {
   );
 }
 
-export function ResponsiveP({ children }) {
+export function ResponsiveP({ children, maxWidth }) {
   return (
-    <p className="md:text-p text-p0 md:leading-p leading-p0">{children}</p>
+    <p className={` md:text-p text-p0 md:leading-p leading-p0 ${maxWidth}`}>
+      {children}
+    </p>
   );
 }
 

@@ -17,7 +17,7 @@ export function TwoGriddedLayout({ children }) {
 export function TextTwoGridLayout({ children }) {
   return (
     <>
-      <section className="grid items-start lg:grid-cols-[50%_50%] sm:gap-2 gap-12 min-h-[30vh] px-4 text-start w-full relative">
+      <section className="grid lg:grid-cols-[50%_50%] sm:gap-2 gap-12 min-h-[50vh] justify-center items-center px-4 text-start w-full relative">
         <>{children}</>
       </section>
     </>

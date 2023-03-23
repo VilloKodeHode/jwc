@@ -58,15 +58,19 @@ background-position: bottom;
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: Roboto;
+  font-family: Lato;
   font-weight: 900;
 }
 
   p, li, ul {
-font-family: Lato;
+font-family: Roboto;
 }
 
+.skillGlow {
+  box-shadow: #ac6bde 0 0 50px 50px;
+  
 
+}
 
 
 * {
@@ -78,6 +82,7 @@ font-family: Lato;
 #__next {
   /* background: linear-gradient(168.55deg, var(--primary) 2.41%, white 45.79%); */
   background-color: white;
+  text-rendering: optimizeLegibility;
 
 }
 
