@@ -8,7 +8,6 @@ export default function App({ Component, pageProps }) {
   const [activeMenu, setActiveMenu] = useState("");
   return (
     <>
-      {/* <div className="headerwave"></div> */}
       <Drawer
         activeLink={activeLink}
         setActiveLink={setActiveLink}

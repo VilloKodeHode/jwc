@@ -32,7 +32,7 @@ export function ResponsiveH4({ children }) {
 
 export function ResponsiveP({ children, maxWidth }) {
   return (
-    <p className={` md:text-p text-p0 md:leading-p leading-p0 ${maxWidth}`}>
+    <p className={`md:text-p text-p0 md:leading-p leading-p0 ${maxWidth}`}>
       {children}
     </p>
   );

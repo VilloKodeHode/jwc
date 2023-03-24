@@ -45,6 +45,11 @@ background-position: bottom;
       background-position: top;
 }
 
+input, textarea {
+  background-color: var(--black15);
+  color: var(--tertiary);
+}
+
 .accordiontext {
   text-shadow: 0px 0px 2px var(--black15);
 }

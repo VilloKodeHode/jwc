@@ -16,6 +16,7 @@ import ResponsiveH1, {
   ResponsiveUL,
 } from "@/components/Responsive text/ResponsiveText";
 import Accordion from "@/components/Accordion";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -37,7 +38,9 @@ export default function Home() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 ac pellentesque leo. Nam eget maximus libero, a posuere leo.
               </ResponsiveP>
-              <CallToActionButton>Hire me</CallToActionButton>
+              <Link href="/contact">
+                <CallToActionButton>Hire me</CallToActionButton>
+              </Link>
             </EqualTwoGrids>
           </TextFlex>
         </section>
