@@ -10,28 +10,38 @@ import ResponsiveH1, {
 import sendEmail from "./api/sendEmail";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    message: "",
+  });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const [formStatus, setFormStatus] = useState("idle");
 
-    setIsLoading(true);
-
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setFormStatus("submitting");
     try {
-      await sendEmail({ name, email, message });
-
-      setIsSuccess(true);
+      await sendEmail(formData);
+      setFormStatus("success");
+      setFormData({
+        email: "",
+        firstName: "",
+        lastName: "",
+        message: "",
+      });
     } catch (error) {
       console.error(error);
-      setIsError(true);
-    } finally {
-      setIsLoading(false);
+      setFormStatus("error");
     }
+  };
+
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   };
   return (
     <PageLayout>
@@ -43,17 +53,33 @@ export default function Contact() {
             </div>
           </ResponsiveP>
         </div>
-        <form onSubmit={handleSubmit} className="w-[100%] p-4 text-JWC-black">
+        <form className="w-[100%] p-4 text-JWC-black" onSubmit={handleSubmit}>
           <div className="mt-4">
-            <label className="block mb-2 font-bold" htmlFor="name">
-              Name
+            <label className="block mb-2 font-bold" htmlFor="firstName">
+              First Name
             </label>
             <input
               className="w-full p-2 border rounded border-JWC-primary"
-              id="name"
+              id="firstName"
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="mt-4">
+            <label className="block mb-2 font-bold" htmlFor="lastName">
+              Last Name
+            </label>
+            <input
+              className="w-full p-2 border rounded border-JWC-primary"
+              id="lastName"
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
               required
             />
           </div>
@@ -66,8 +92,9 @@ export default function Contact() {
               className="w-full p-2 border rounded border-JWC-primary"
               id="email"
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               required
             />
           </div>
@@ -80,23 +107,40 @@ export default function Contact() {
               className="w-full p-2 border rounded border-JWC-primary"
               id="message"
               rows="4"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               required
             ></textarea>
           </div>
 
-          <div className="mt-8">
-            <CallToActionButton disabled={isLoading}>
-              {isLoading ? "Sending..." : "Send"}
-            </CallToActionButton>
+          {/* <div class="mt-4">
+            <label class="block font-bold mb-2" for="budget">
+              Budget
+            </label>
+            <input
+              class="w-full p-2 border border-JWC-primary rounded"
+              id="budget"
+              type="text"
+              required
+            />
           </div>
 
-          {isSuccess && (
-            <p className="mt-4 text-green-500">Email sent successfully!</p>
-          )}
+          <div class="mt-4">
+            <label class="block font-bold mb-2" for="timeline">
+              Timeline
+            </label>
+            <input
+              class="w-full p-2 border border-JWC-primary rounded"
+              id="timeline"
+              type="text"
+              required
+            />
+          </div> */}
 
-          {isError && <p className="mt-4 text-red-500">Error sending email.</p>}
+          <div class="mt-8">
+            <CallToActionButton type="submit">Send</CallToActionButton>
+          </div>
         </form>
       </section>
     </PageLayout>

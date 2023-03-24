@@ -1,29 +1,36 @@
-const sendEmail = async (req, res) => {
-  const { name, email, message } = req.body;
+import "isomorphic-fetch";
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: {
-      user: process.env.EMAIL_USERNAME,
-      pass: process.env.EMAIL_PASSWORD,
+const sendEmail = async (formData) => {
+  const requiredFields = ["email", "firstName", "lastName", "message"];
+
+  // Check if all required fields are filled out
+  for (const field of requiredFields) {
+    if (!formData[field]) {
+      throw new Error(
+        `Oops! You are missing the ${field} field, please fill it in and retry.`
+      );
+    }
+  }
+
+  const endpoint = process.env.CONTACT_FORM_ENDPOINT;
+  const apiKey = process.env.CONTACT_FORM_API_KEY;
+
+  // Send data to AWS Lambda
+  const response = await fetch(endpoint, {
+    method: "POST",
+    body: JSON.stringify(formData),
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": apiKey,
     },
   });
 
-  try {
-    const info = await transporter.sendMail({
-      from: `${name} <${email}>`,
-      to: "villokodehode@gmail.com",
-      subject: "New Project Request",
-      text: message,
-    });
+  console.log(response);
 
-    console.log(`Message sent: ${info.messageId}`);
-    res.status(200).json({ message: "Email sent successfully" });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Error sending email" });
+  if (response.status === 200) {
+    return { message: "Success! Thank you for your message!" };
+  } else {
+    throw new Error("Oops! Something went wrong. Please try again later.");
   }
 };
 
