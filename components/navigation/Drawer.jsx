@@ -5,14 +5,34 @@ import MENU_LIST from "./menu_list";
 import NavItem from "./NavItem";
 import Image from "next/image";
 
-export default function Drawer({ children }) {
-  const [activeLink, setActiveLink] = useState("");
-  const [activeMenu, setActiveMenu] = useState("");
+export default function Drawer({
+  children,
+  handleDrawerClose,
+  setActiveLink,
+  activeLink,
+  setActiveMenu,
+  isDrawerOpen,
+  setIsDrawerOpen,
+}) {
   const router = useRouter();
   const filteredMenuList = MENU_LIST.filter((menu) => menu.text !== "Home");
+
   const handleImageClick = () => {
     setActiveMenu("");
     activeLink && setActiveLink("");
+  };
+
+  const handleMenuClick = (menuText) => {
+    setActiveMenu(menuText);
+  };
+
+  const handleLinkClick = (text) => {
+    handleDrawerClose();
+    setActiveLink("");
+    console.log("handleClick called");
+    setActiveLink(text);
+    console.log("setDrawerOpen(true) called");
+    setIsDrawerOpen(true);
   };
 
   return (
@@ -21,11 +41,12 @@ export default function Drawer({ children }) {
       <div className="drawer-content mainBackground">
         <>{children}</>
       </div>
-      <div className="drawer-side ">
+      <div className="drawer-side">
         <label htmlFor="my-drawer" className="drawer-overlay" />
         <div className="bg-white menu">
           <div className="flex items-center justify-around sm:w-[300px] mb-48 w-[200px]">
             <div className="headerwave h-[600px]" />
+
             {MENU_LIST.map((menu) =>
               menu.isImage ? (
                 <>
@@ -33,7 +54,7 @@ export default function Drawer({ children }) {
                     <Image
                       onClick={handleImageClick}
                       src={menu.imageSrc}
-                      width={menu.imageWidth}
+                      width={150}
                       height={menu.imageHeight}
                       alt="JV web consult"
                       className="z-20"
@@ -51,17 +72,16 @@ export default function Drawer({ children }) {
                     <NavItem
                       key={menu.text}
                       text={menu.text}
-                      textsize="text-p"
+                      textsize="text-h5"
                       href={menu.href}
                       active={activeLink === menu.text}
                       activeHeight="h-6"
                       activeWidth="w-6"
-                      position="left-0"
-                      underline="border-b-8"
-                      handleMenuClick={() => {
-                        setActiveLink(menu.text);
-                      }}
-                      activeLink={activeLink}
+                      position="-left-2"
+                      underline="border-b-4"
+                      handleClick={() => handleMenuClick(menu.text)}
+                      handleLinkClick={() => handleLinkClick(menu.text)}
+                      handleDrawerClose={handleDrawerClose}
                     />
                   </>
                 ))}

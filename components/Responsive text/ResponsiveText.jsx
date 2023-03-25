@@ -30,6 +30,12 @@ export function ResponsiveH4({ children }) {
   );
 }
 
+export function ResponsiveH5({ children }) {
+  return (
+    <h4 className="md:text-h5 text-h6 md:leading-h5 leading-h6">{children}</h4>
+  );
+}
+
 export function ResponsiveP({ children, maxWidth }) {
   return (
     <p className={`md:text-p text-p0 md:leading-p leading-p0 ${maxWidth}`}>
@@ -40,6 +46,8 @@ export function ResponsiveP({ children, maxWidth }) {
 
 export function ResponsiveUL({ children }) {
   return (
-    <ul className="md:text-p text-p0 md:leading-p leading-p0">{children}</ul>
+    <ul className="grid gap-12 md:text-p text-p0 md:leading-p leading-p0">
+      {children}
+    </ul>
   );
 }

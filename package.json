@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.3",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@sendgrid/mail": "^7.7.0",
     "@tailwindcss/line-clamp": "^0.4.2",
     "aws-sdk": "^2.1342.0",
@@ -17,6 +21,7 @@
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.4",
     "formidable": "^2.1.1",
+    "framer-motion": "^10.9.1",
     "isomorphic-fetch": "^3.0.0",
     "next": "13.2.4",
     "nodemailer": "^6.9.1",

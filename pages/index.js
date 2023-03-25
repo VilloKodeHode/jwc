@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import PageLayout, {
+  ClientLayout,
   EqualTwoGrids,
   TextFlex,
   TextTwoGridLayout,
@@ -35,12 +36,18 @@ export default function Home() {
             </ResponsiveH1>
             <EqualTwoGrids>
               <ResponsiveP maxWidth="max-w-md">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                ac pellentesque leo. Nam eget maximus libero, a posuere leo.
+                I make anything from hompages to full websites. I also make UI
+                designs for web and mobile applications. I have experience with
+                React, Next.js, Node.js, Tailwind CSS, Figma and more.
               </ResponsiveP>
-              <Link href="/contact">
-                <CallToActionButton>Hire me</CallToActionButton>
-              </Link>
+              <div className="flex flex-col">
+                <Link href="/contact">
+                  <CallToActionButton>Hire me</CallToActionButton>
+                </Link>
+                <Link href="/contact">
+                  <CallToActionButton>Hire me</CallToActionButton>
+                </Link>
+              </div>
             </EqualTwoGrids>
           </TextFlex>
         </section>
@@ -65,25 +72,27 @@ export default function Home() {
             </TextFlex>
             <TextFlex textWidth="max-w-[60ch]">
               <ResponsiveH3>Current clients</ResponsiveH3>
-              <ResponsiveH4>Wileo AS</ResponsiveH4>
-              <ResponsiveUL>
-                <li>
-                  A startup company that will be releasing their product in mid
-                  Q2
-                </li>
-                <li className="font-bold">JWC&apos;s roles in Wileo AS:</li>
-                <ul className="ml-8 list-disc">
-                  <li>Making their landingpage</li>
-                  <li>Creating content for their consept</li>
-                </ul>
-                <li className="font-bold">
-                  JWC&apos;s planned future roles in Wileo AS:
-                </li>
-                <ul className="ml-8 list-disc">
-                  <li>Complete Wileo.no website makover</li>
-                  <li>Consultant relevant to their content</li>
-                </ul>
-              </ResponsiveUL>
+              <ClientLayout>
+                <ResponsiveH4>Wileo AS</ResponsiveH4>
+                <ResponsiveUL>
+                  <li>
+                    A startup company that will be releasing their product in
+                    mid Q2
+                  </li>
+                  <li className="font-bold">JWC&apos;s roles in Wileo AS:</li>
+                  <ul className="grid grid-flow-col ml-8 grid-col-2">
+                    <li>Making their landingpage</li>
+                    <li>Creating content for their consept</li>
+                  </ul>
+                  <li className="font-bold">
+                    JWC&apos;s planned future roles in Wileo AS:
+                  </li>
+                  <ul className="grid grid-flow-col ml-8 grid-col-2">
+                    <li>Complete Wileo.no website makover</li>
+                    <li>Consultant relevant to their content</li>
+                  </ul>
+                </ResponsiveUL>
+              </ClientLayout>
             </TextFlex>
           </TextTwoGridLayout>
         </section>

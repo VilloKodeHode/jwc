@@ -1,48 +1,46 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import Drawer from "./Drawer";
-import Navbar from "./Navbar";
 import MENU_LIST from "./menu_list";
+import ChakraDrawer from "./ChakraDrawer";
+import { useDisclosure } from "@chakra-ui/react";
 
-export default function Header({ handleImageClick }) {
+export default function Header() {
+  const [activeLink, setActiveLink] = useState("");
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const handleImageClick = () => {
+    activeLink && setActiveLink("");
+    onClose();
+  };
+
   return (
     <header
       className={`relative flex flex-col justify-center w-full animate-SlideInFromTop font-semibold`}
     >
       <div className="headerwave h-[725px]" />
-      <div className="flex items-center justify-between px-12 z-50">
+      <div className="z-50 flex items-center justify-end px-12 h-28">
         {MENU_LIST.map((menu) =>
           menu.isImage ? (
             <Link key={menu.text} href={menu.href}>
               <Image
                 onClick={handleImageClick}
                 src={menu.imageSrc}
-                width={menu.imageWidth}
+                width={200}
                 height={menu.imageHeight}
                 alt="JV web consult"
+                className="absolute left-0 cursor-pointer -top-10"
               />
             </Link>
           ) : null
         )}
         <div />
-
-        <label htmlFor="my-drawer" className="p-0 drawer-button cursor-pointer">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-12 w-12"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#3c4343"
-          >
-            <path
-              // strokeLinecap="round"
-              // strokeLinejoin="round"
-              strokeWidth="1"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </label>
+        <ChakraDrawer
+          activeLink={activeLink}
+          setActiveLink={setActiveLink}
+          isOpen={isOpen}
+          onOpen={onOpen}
+          onClose={onClose}
+        />
       </div>
     </header>
   );
