@@ -8,7 +8,9 @@ import PageLayout, {
   TopTwoGridLayout,
 } from "@/components/Layout";
 import SKILLS_LIST from "@/components/Skills/skills_list";
-import CallToActionButton from "@/components/Buttons";
+import CallToActionButton, {
+  CallToActionButtonAlt,
+} from "@/components/Buttons";
 import ResponsiveH1, {
   ResponsiveH2,
   ResponsiveH3,
@@ -18,6 +20,9 @@ import ResponsiveH1, {
 } from "@/components/Responsive text/ResponsiveText";
 import Accordion from "@/components/Accordion";
 import Link from "next/link";
+import SkillsWithAccordion from "@/components/Skills/SkillsWithAccordion";
+import SkillWithTabs from "@/components/Skills/SkillsWithTabs";
+import { Box } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -41,8 +46,8 @@ export default function Home() {
                 React, Next.js, Node.js, Tailwind CSS, Figma and more.
               </ResponsiveP>
               <div className="flex flex-col">
-                <Link href="/contact">
-                  <CallToActionButton>Hire me</CallToActionButton>
+                <Link href="">
+                  <CallToActionButtonAlt>My CV</CallToActionButtonAlt>
                 </Link>
                 <Link href="/contact">
                   <CallToActionButton>Hire me</CallToActionButton>
@@ -51,7 +56,6 @@ export default function Home() {
             </EqualTwoGrids>
           </TextFlex>
         </section>
-
         <section className="my-28">
           <div className="h-[20vh] flex items-center flex-col justify-center mb-12 font-bold">
             <ResponsiveH2>JV Web Consult</ResponsiveH2>
@@ -71,7 +75,9 @@ export default function Home() {
               </ResponsiveP>
             </TextFlex>
             <TextFlex textWidth="max-w-[60ch]">
-              <ResponsiveH3>Current clients</ResponsiveH3>
+              <div>
+                <ResponsiveH3>Current clients</ResponsiveH3>
+              </div>
               <ClientLayout>
                 <ResponsiveH4>Wileo AS</ResponsiveH4>
                 <ResponsiveUL>
@@ -79,12 +85,14 @@ export default function Home() {
                     A startup company that will be releasing their product in
                     mid Q2
                   </li>
-                  <li className="font-bold">JWC&apos;s roles in Wileo AS:</li>
+                  <li className="font-bold underline">
+                    JWC&apos;s roles in Wileo AS:
+                  </li>
                   <ul className="grid grid-flow-col ml-8 grid-col-2">
                     <li>Making their landingpage</li>
                     <li>Creating content for their consept</li>
                   </ul>
-                  <li className="font-bold">
+                  <li className="font-bold underline">
                     JWC&apos;s planned future roles in Wileo AS:
                   </li>
                   <ul className="grid grid-flow-col ml-8 grid-col-2">
@@ -99,73 +107,9 @@ export default function Home() {
 
         <div className="skillswave topwave h-[250px] animate-waveSlideRight mt-28" />
         <section className="flex relative w-screen min-h-[40vh] bg-[#312b35] snap-center font-Lato">
-          <div className="z-20 grid items-start justify-center w-full gap-16 xl:grid-cols-2 md:gap-24">
-            <Accordion text="Code languages">
-              {SKILLS_LIST.map((skill) =>
-                skill.skilltype === "code language" ? (
-                  <div className="relative" key={skill.name}>
-                    <Image
-                      width={100}
-                      height={100}
-                      alt={skill.alt}
-                      src={skill.imageSrc}
-                      className="relative max-w-[80%] mx-auto z-10 m-12 duration-500 w-fit"
-                    ></Image>
-                    <div className="absolute h-[20%] w-[30%] translate-x-1/2 -translate-y-1/2 rounded-full bg-JWC-primary right-1/2 top-1/2 skillGlow animate-glow" />
-                  </div>
-                ) : null
-              )}
-            </Accordion>
-            <Accordion text="Frameworks">
-              {SKILLS_LIST.map((skill) =>
-                skill.skilltype === "framework" ? (
-                  <div className="" key={skill.name}>
-                    <div className="relative">
-                      <Image
-                        width={100}
-                        height={100}
-                        alt={skill.alt}
-                        src={skill.imageSrc}
-                        className="relative max-w-[70%] mx-auto z-10 m-12 duration-500 w-fit"
-                      ></Image>
-                      <div className="absolute w-[60%] translate-x-1/2 -translate-y-1/2 rounded-full bg-JWC-primary right-1/2 top-1/2 skillGlow animate-glow" />
-                    </div>
-                  </div>
-                ) : null
-              )}
-            </Accordion>
-            <Accordion text="Web Styling">
-              {SKILLS_LIST.map((skill) =>
-                skill.skilltype === "styling" ? (
-                  <div className="relative" key={skill.name}>
-                    <Image
-                      width={100}
-                      height={100}
-                      alt={skill.alt}
-                      src={skill.imageSrc}
-                      className="relative max-w-[60%] mx-auto z-10 duration-500 w-fit"
-                    ></Image>
-                    <div className="absolute w-[45%] translate-x-1/2 -translate-y-1/2 rounded-full bg-JWC-primary right-1/2 top-1/2 skillGlow animate-glow" />
-                  </div>
-                ) : null
-              )}
-            </Accordion>
-            <Accordion text="Design tools">
-              {SKILLS_LIST.map((skill) =>
-                skill.skilltype === "design" ? (
-                  <div className="relative" key={skill.name}>
-                    <Image
-                      width={100}
-                      height={100}
-                      alt={skill.alt}
-                      src={skill.imageSrc}
-                      className="relative z-10 mx-auto duration-500 max-w-[90%]"
-                    ></Image>
-                    <div className="absolute h-[25%] w-[25%] translate-x-1/2 -translate-y-1/2 rounded-full bg-JWC-primary right-1/2 top-1/2 skillGlow animate-glow" />
-                  </div>
-                ) : null
-              )}
-            </Accordion>
+          {/* <div className="z-20 grid items-start justify-center w-full gap-16 xl:grid-cols-2 md:gap-24"> */}
+          <div className="z-20 grid items-start justify-center w-full">
+            <SkillWithTabs />
           </div>
         </section>
         <div className="skillswave bottomwave h-[250px] animate-waveSlideLeft mb-28" />

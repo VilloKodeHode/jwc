@@ -160,7 +160,6 @@ export default function Contact() {
             </CallToActionButton>
           </div>
         </form>
-        {/* modal for when the form is submitted  */}
         {showModal && (
           <div className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
             <div className="flex flex-col items-center justify-center relative p-8 bg-white rounded-lg xl:max-w-[50%] max-w-[80%]">

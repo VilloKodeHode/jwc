@@ -17,7 +17,7 @@ export function TwoGriddedLayout({ children }) {
 export function TextTwoGridLayout({ children }) {
   return (
     <>
-      <section className="grid lg:grid-cols-[50%_50%] gap-12 min-h-[50vh] justify-center items-start px-4 text-center w-full relative">
+      <section className="grid lg:grid-cols-[50%_50%] gap-12 justify-center items-start px-4 text-center w-full relative">
         <>{children}</>
       </section>
     </>
@@ -54,7 +54,7 @@ export function TextFlex({ children, textWidth }) {
 
 export function ClientLayout({ children }) {
   return (
-    <section className="grid grid-cols-1 gap-12 px-4 bg-JWC-black15">
+    <section className="p-10 px-4 text-white border-4 shadow-sm border-JWC-black shadow-JWC-black bg-JWC-primary rounded-3xl">
       <>{children}</>
     </section>
   );
