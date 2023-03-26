@@ -34,11 +34,12 @@ export default function ChakraDrawer({
         size="lg"
         icon={<HamburgerIcon boxSize="3rem" />}
         onClick={() => onOpen()}
+        className="hover:scale-110 duration-200 ml-8"
       />
       <Drawer onClose={onClose} isOpen={isOpen} size="xs" placement="right">
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
+          <div className="headerwave h-[600px] -z-10" />
           <DrawerHeader>
             {MENU_LIST.map((menu) =>
               menu.isImage ? (
@@ -50,8 +51,8 @@ export default function ChakraDrawer({
                     }}
                     src={menu.imageSrc}
                     className=""
-                    width={menu.imageWidth}
-                    height={menu.imageHeight}
+                    width={150}
+                    height={150}
                     alt="JV web consult"
                   />
                 </Link>

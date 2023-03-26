@@ -9,6 +9,7 @@ import ResponsiveH1, {
   ResponsiveP,
 } from "@/components/Responsive text/ResponsiveText";
 import Image from "next/image";
+import { FiSend } from "react-icons/fi";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -154,9 +155,9 @@ export default function Contact() {
             />
           </div>
 
-          <div class="mt-8">
+          <div class="mt-8 flex justify-center items-center">
             <CallToActionButton type="submit" value="Send">
-              Send
+              Send request <FiSend className="inline-block ml-2" />
             </CallToActionButton>
           </div>
         </form>

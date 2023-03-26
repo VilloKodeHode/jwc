@@ -110,7 +110,6 @@ export default function Home() {
 
         <div className="skillswave topwave h-[250px] animate-waveSlideRight mt-28" />
         <section className="flex relative w-screen min-h-[40vh] bg-[#312b35] snap-center font-Lato">
-          {/* <div className="z-20 grid items-start justify-center w-full gap-16 xl:grid-cols-2 md:gap-24"> */}
           <div className="z-20 grid items-start justify-center w-full">
             <SkillWithTabs />
           </div>
@@ -118,6 +117,7 @@ export default function Home() {
         <div className="skillswave bottomwave h-[250px] animate-waveSlideLeft mb-28" />
 
         <section className="my-28">
+          <h2>Acoording section with some type of FAQ:</h2>
           <TextTwoGridLayout>
             <TextFlex textWidth="max-w-[60ch]">
               <h3>Hello</h3>
