@@ -46,7 +46,7 @@ export default function Home() {
                 React, Next.js, Node.js, Tailwind CSS, Figma and more.
               </ResponsiveP>
               <div className="flex flex-col">
-                <Link href="">
+                <Link href="/Norwegian resume shorted JWC.png" target="_blank">
                   <CallToActionButtonAlt>My CV</CallToActionButtonAlt>
                 </Link>
                 <Link href="/contact">
