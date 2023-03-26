@@ -56,8 +56,8 @@ export default function Home() {
             </EqualTwoGrids>
           </TextFlex>
         </section>
-        <section className="my-28">
-          <div className="h-[20vh] flex items-center flex-col justify-center mb-12 font-bold">
+        <section className="min-h-[70vh] flex items-center text-center gap-12 flex-col justify-center mb-12 font-bold my-28">
+          <div>
             <ResponsiveH2>JV Web Consult</ResponsiveH2>
             <ResponsiveH2>
               <div className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
@@ -65,44 +65,47 @@ export default function Home() {
               </div>
             </ResponsiveH2>
           </div>
-          <TextTwoGridLayout>
-            <TextFlex textWidth="max-w-[60ch]">
-              <ResponsiveH3>Norwegian Company</ResponsiveH3>
-              <ResponsiveP>
-                Started in Tønsberg by Joakim Villo in 2023 as a one-man
-                freelance business. Focuses on does smaller jobs to gain a
-                client base.
-              </ResponsiveP>
-            </TextFlex>
-            <TextFlex textWidth="max-w-[60ch]">
-              <div>
-                <ResponsiveH3>Current clients</ResponsiveH3>
-              </div>
-              <ClientLayout>
-                <ResponsiveH4>Wileo AS</ResponsiveH4>
-                <ResponsiveUL>
-                  <li>
-                    A startup company that will be releasing their product in
-                    mid Q2
-                  </li>
-                  <li className="font-bold underline">
-                    JWC&apos;s roles in Wileo AS:
-                  </li>
-                  <ul className="grid grid-flow-col ml-8 grid-col-2">
-                    <li>Making their landingpage</li>
-                    <li>Creating content for their consept</li>
-                  </ul>
-                  <li className="font-bold underline">
-                    JWC&apos;s planned future roles in Wileo AS:
-                  </li>
-                  <ul className="grid grid-flow-col ml-8 grid-col-2">
-                    <li>Complete Wileo.no website makover</li>
-                    <li>Consultant relevant to their content</li>
-                  </ul>
-                </ResponsiveUL>
-              </ClientLayout>
-            </TextFlex>
-          </TextTwoGridLayout>
+          <TextFlex textWidth="max-w-[60ch]">
+            <ResponsiveH3>Norwegian Company</ResponsiveH3>
+            <ResponsiveP>
+              Started in Tønsberg by Joakim Villo in 2023 as a one-man freelance
+              business. Focuses on does smaller jobs to gain a client base.
+            </ResponsiveP>
+          </TextFlex>
+        </section>
+        <section className="relative grid items-start justify-center w-full gap-12 px-4 text-center my-28">
+          <TextFlex textWidth="max-w-[60ch]">
+            <div>
+              <ResponsiveH3>Current clients</ResponsiveH3>
+            </div>
+            <ClientLayout>
+              <ResponsiveH4>Wileo AS</ResponsiveH4>
+              <Image
+                src="/liva-logo.png"
+                alt="LIVA"
+                width="50"
+                height="50"
+                className="absolute top-5 left-5"
+              />
+
+              <ResponsiveUL>
+                <p>
+                  A startup company that will be releasing their product in mid
+                  Q2
+                </p>
+                <p className="font-bold underline">
+                  JWC&apos;s roles in Wileo AS:
+                </p>
+                <p>Making their landingpage</p>
+                <p>Creating content for their consept</p>
+                <p className="font-bold underline">
+                  JWC&apos;s planned future roles in Wileo AS:
+                </p>
+                <p>Complete Wileo.no website makover</p>
+                <p>Content-creator for their website</p>
+              </ResponsiveUL>
+            </ClientLayout>
+          </TextFlex>
         </section>
 
         <div className="skillswave topwave h-[250px] animate-waveSlideRight mt-28" />

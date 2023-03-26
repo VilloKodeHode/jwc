@@ -54,7 +54,7 @@ export function TextFlex({ children, textWidth }) {
 
 export function ClientLayout({ children }) {
   return (
-    <section className="p-10 px-4 text-white border-4 shadow-sm border-JWC-black shadow-JWC-black bg-JWC-primary rounded-3xl">
+    <section className="relative p-10 px-4 [&>*]:font-mono border shadow-sm border-JWC-15 shadow-JWC-black bg-JWC-white rounded-sm">
       <>{children}</>
     </section>
   );

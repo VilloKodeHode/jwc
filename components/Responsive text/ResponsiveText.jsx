@@ -46,7 +46,7 @@ export function ResponsiveP({ children, maxWidth }) {
 
 export function ResponsiveUL({ children }) {
   return (
-    <ul className="grid gap-12 md:text-p text-p0 md:leading-p leading-p0">
+    <ul className="grid gap-4 md:text-p text-p0 md:leading-p leading-p0 [&>*]:font-mono p-12">
       {children}
     </ul>
   );
