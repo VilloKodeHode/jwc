@@ -11,6 +11,7 @@ const MENU_LIST = [
   { text: "About", href: "/about" },
   { text: "Projects", href: "/projects" },
   { text: "Contact", href: "/contact" },
+  { text: "Test", href: "/testform" },
 ];
 
 export default MENU_LIST;
