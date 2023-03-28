@@ -6,6 +6,7 @@ import ChakraDrawer from "./ChakraDrawer";
 import { useDisclosure } from "@chakra-ui/react";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { VscGithubAlt } from "react-icons/vsc";
+import { ResponsiveP } from "../Responsive text/ResponsiveText";
 
 export default function Header() {
   const [activeLink, setActiveLink] = useState("");
@@ -36,9 +37,9 @@ export default function Header() {
               </Link>
             ) : null
           )}
-          <div className="grid grid-flow-row justify-center items-center">
-            <p className="text-JWC-logo">
-              &#10077;Driven by enthusiasm, skill and coffee&#10078;
+          <div className="lg:grid grid-flow-row justify-center items-center hidden animate-SlideInFromLeft">
+            <p className="text-JWC-logo text-p0">
+              &#10077;Drevet med entusiasme, ferdigheter og koffein&#10078;
             </p>
             <p className="text-JWC-logo">VilloKodeHode@gmail.com</p>
           </div>

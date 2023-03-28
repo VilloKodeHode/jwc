@@ -15,6 +15,7 @@ import ResponsiveH1, {
   ResponsiveH2,
   ResponsiveH3,
   ResponsiveH4,
+  ResponsiveH5,
   ResponsiveP,
   ResponsiveUL,
 } from "@/components/Responsive text/ResponsiveText";
@@ -37,20 +38,21 @@ export default function Home() {
         <section className="relative grid justify-center min-h-[70vh] my-28 text-center">
           <TextFlex textWidth="">
             <ResponsiveH1 className="max-w-4xl text-center lg:text-h1 sm:text-h2 text-h3 lg:leading-h1 sm:leading-h2 leading-h3">
-              Freelance <br /> web-developer <br /> & UI designer
+              Freelance <br /> web-utvikler <br /> & UI designer
             </ResponsiveH1>
             <EqualTwoGrids>
               <ResponsiveP maxWidth="max-w-md">
-                I make anything from hompages to full websites. I also make UI
-                designs for web and mobile applications. I have experience with
-                React, Next.js, Node.js, Tailwind CSS, Figma and more.
+                Enten du trenger en enkel nettside eller en avansert plattform,
+                kan jeg hjelpe deg med både utvikling og UI-design for både web
+                og mobil. Jeg har bred kompetanse innen teknologier som React,
+                Next.js, Node.js, Tailwind CSS, Figma og mer.
               </ResponsiveP>
               <div className="flex flex-col">
                 <Link href="/Norwegian resume shorted JWC.png" target="_blank">
-                  <CallToActionButtonAlt>My CV</CallToActionButtonAlt>
+                  <CallToActionButtonAlt>CV</CallToActionButtonAlt>
                 </Link>
                 <Link href="/contact">
-                  <CallToActionButton>Hire me</CallToActionButton>
+                  <CallToActionButton>Ta kontakt</CallToActionButton>
                 </Link>
               </div>
             </EqualTwoGrids>
@@ -66,17 +68,17 @@ export default function Home() {
             </ResponsiveH2>
           </div>
           <TextFlex textWidth="max-w-[60ch]">
-            <ResponsiveH3>Norwegian Company</ResponsiveH3>
+            <ResponsiveH3>Norsk ENK</ResponsiveH3>
             <ResponsiveP>
-              Started in Tønsberg by Joakim Villo in 2023 as a one-man freelance
-              business. Focuses on does smaller jobs to gain a client base.
+              Virksomheten ble startet i Tønsberg i 2023, og har siden da
+              prioritert mindre oppdrag for å bygge opp en trofast kundebase
             </ResponsiveP>
           </TextFlex>
         </section>
         <section className="relative grid items-start justify-center w-full gap-12 px-4 text-center my-28">
           <TextFlex textWidth="max-w-[60ch]">
             <div>
-              <ResponsiveH3>Current clients</ResponsiveH3>
+              <ResponsiveH3>Klienter</ResponsiveH3>
             </div>
             <ClientLayout>
               <ResponsiveH4>Wileo AS</ResponsiveH4>
@@ -89,20 +91,18 @@ export default function Home() {
               />
 
               <ResponsiveUL>
-                <p>
-                  A startup company that will be releasing their product in mid
-                  Q2
-                </p>
-                <p className="font-bold underline">
-                  JWC&apos;s roles in Wileo AS:
-                </p>
-                <p>Making their landingpage</p>
-                <p>Creating content for their consept</p>
-                <p className="font-bold underline">
-                  JWC&apos;s planned future roles in Wileo AS:
-                </p>
-                <p>Complete Wileo.no website makover</p>
-                <p>Content-creator for their website</p>
+                <p>Et startup som skal lansere produktet sitt midt i Q2.</p>
+                <ResponsiveH5 className="font-bold underline">
+                  JWCs roller:
+                </ResponsiveH5>
+                <p>Lage deres landingsside</p>
+                <p>Skape innhold for deres konsept</p>
+                <p className="text-xs">(linker kommer når siden lanseres)</p>
+                <ResponsiveH5 className="font-bold underline">
+                  JWCs potensielle roller:
+                </ResponsiveH5>
+                <p>Komplett design makover for Wileo.no</p>
+                <p>Innholdskaper for deres nettsted</p>
               </ResponsiveUL>
             </ClientLayout>
           </TextFlex>
@@ -116,8 +116,12 @@ export default function Home() {
         </section>
         <div className="skillswave bottomwave h-[250px] animate-waveSlideLeft mb-28" />
 
+        <Link href="/projects">
+          <CallToActionButton>Se mine prosjekter</CallToActionButton>
+        </Link>
+
         <section className="my-28">
-          <h2>Acoording section with some type of FAQ:</h2>
+          {/* <h2>Acoording section with some type of FAQ:</h2>
           <TextTwoGridLayout>
             <TextFlex textWidth="max-w-[60ch]">
               <h3>Hello</h3>
@@ -125,7 +129,7 @@ export default function Home() {
             <TextFlex textWidth="max-w-[60ch]">
               <h3>Hello</h3>
             </TextFlex>
-          </TextTwoGridLayout>
+          </TextTwoGridLayout> */}
         </section>
       </PageLayout>
     </>

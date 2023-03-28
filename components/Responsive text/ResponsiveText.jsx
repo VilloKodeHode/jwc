@@ -38,9 +38,11 @@ export function ResponsiveH4({ children, className }) {
   );
 }
 
-export function ResponsiveH5({ children }) {
+export function ResponsiveH5({ children, className }) {
   return (
-    <h4 className="md:text-h5 text-h6 md:leading-h5 leading-h6">{children}</h4>
+    <h4 className={`md:text-h5 text-h6 md:leading-h5 leading-h6 ${className}`}>
+      {children}
+    </h4>
   );
 }
 

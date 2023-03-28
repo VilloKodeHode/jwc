@@ -26,6 +26,14 @@ width: 100%;
   background-image: url('/header-waves2.svg');
 }
 
+.footerwave {
+width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-image: url('/footerwaves.svg');
+}
+
 .skillswave {
   
   width: 4500px;

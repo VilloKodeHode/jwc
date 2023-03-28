@@ -40,7 +40,7 @@ export default function ChakraDrawer({
         <DrawerOverlay />
         <DrawerContent>
           <div className="headerwave h-[600px] -z-10" />
-          <DrawerHeader>
+          <DrawerHeader className="flex justify-center">
             {MENU_LIST.map((menu) =>
               menu.isImage ? (
                 <Link key={menu.text} href={menu.href}>
@@ -64,7 +64,7 @@ export default function ChakraDrawer({
               className={`text-JWC-primary
            mt-0 p-2`}
             >
-              <div className="flex flex-col items-center justify-center w-full">
+              <div className="mt-8 flex flex-col items-center justify-center w-full">
                 {filteredMenuList.map((menu) => (
                   <NavItem
                     onClick={() => {

@@ -3,6 +3,7 @@ import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";
 import Drawer from "@/components/navigation/Drawer";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import Footer from "@/components/navigation/Footer";
 
 const theme = extendTheme({
   colors: {
@@ -37,6 +38,7 @@ export default function App({ Component, pageProps }) {
       <ChakraProvider theme={theme}>
         <Header />
         <Component {...pageProps} />
+        <Footer />
       </ChakraProvider>
     </>
   );
