@@ -1,7 +1,7 @@
 export const PROJECT_LIST = [
   {
     projectName: "Stein, sakser, papir app",
-    textColor: "text-white",
+    textColor: "text-JWC-white",
     src: "/images/projects/RPS-collage.png",
     mobileSrc: "/images/projects/RPS.png",
     alt: "Stein sakser papir app",
@@ -14,7 +14,7 @@ export const PROJECT_LIST = [
   },
   {
     projectName: "Flerstegs skjema",
-    textColor: "text-white",
+    textColor: "text-JWC-white",
     src: "/images/projects/MSF-collage.png",
     mobileSrc: "/images/projects/Multi page form.png",
     alt: "Flersteg skjema",
@@ -26,7 +26,7 @@ export const PROJECT_LIST = [
   },
   {
     projectName: "App for gode råd",
-    textColor: "text-white",
+    textColor: "text-JWC-white",
     src: "/images/projects/AG-collage.png",
     mobileSrc: "/images/projects/Advice generator.png",
     alt: "App for gode råd",
@@ -38,7 +38,7 @@ export const PROJECT_LIST = [
   },
   {
     projectName: "Pokedex v1",
-    textColor: "text-white",
+    textColor: "text-JWC-white",
     src: "/images/projects/POKEDEXV1-collage.png",
     mobileSrc: "/images/projects/POKEDEXV1-1.png",
     alt: "Pokedex v1",
@@ -46,7 +46,19 @@ export const PROJECT_LIST = [
     href: "https://villokodehode.github.io/PokeAPI/",
     hrefCode: "https://github.com/VilloKodeHode/PokeAPI",
     description:
-      "Den første appen jeg lagde med REST api. Bruker 3 layered fetching for å hente alle dataene jeg trengte. Bugs: ingen kjente bugs",
+      "Min første REST api app. Bruker 3 layered fetching for å hente alle dataene jeg trengte. Bugs: ingen kjente bugs",
+  },
+  {
+    projectName: "Jobb simulator",
+    textColor: "text-JWC-white",
+    src: "/images/projects/POKEDEXV1-collage.png",
+    mobileSrc: "/images/projects/POKEDEXV1-1.png",
+    alt: "Pokedex v1",
+    cardColor: "bg-[#EECC38]",
+    href: "https://villokodehode.github.io/PokeAPI/",
+    hrefCode: "https://github.com/VilloKodeHode/PokeAPI",
+    description:
+      "Min første REST api app. Bruker 3 layered fetching for å hente alle dataene jeg trengte. Bugs: ingen kjente bugs",
   },
 ];
 
