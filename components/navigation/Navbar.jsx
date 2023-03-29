@@ -1,3 +1,5 @@
+//Unused, but can still be used if I want to have a navbar for bigger screens
+
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";

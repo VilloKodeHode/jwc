@@ -1,7 +1,6 @@
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import PageLayout, { TextFlex } from "@/components/Layout";
 import ResponsiveH1 from "@/components/Responsive text/ResponsiveText";
-import { IoConstructOutline } from "react-icons/io5";
 import PROJECT_LIST from "@/components/Projects/projects_list";
 import ProjectCard from "@/components/Projects/ProjectCard";
 import Head from "next/head";

@@ -1,3 +1,5 @@
+//Not currently used. Alternate look for the skills section. Uses the Accordion component from Chakra UI.
+
 import Image from "next/image";
 import Accordion from "../Accordion";
 import SKILLS_LIST from "./skills_list";

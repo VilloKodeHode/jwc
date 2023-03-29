@@ -1,3 +1,5 @@
+//In use. Uses the Tabs component from Chakra UI to display the skills in a tabbed format.
+
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import Image from "next/image";
 import SKILLS_LIST from "./skills_list";

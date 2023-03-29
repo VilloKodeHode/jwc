@@ -1,3 +1,5 @@
+// Not currently used. Drawer component made with DaisyUI.
+
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";

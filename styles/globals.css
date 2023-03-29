@@ -78,6 +78,16 @@ input, textarea {
 
 }
 
+.greenplanet {  
+  background-image: url('https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png'), url('https://cdn.midjourney.com/642caa24-583f-4c3f-af8d-81d4d807f683/0_2.png');
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.clearText {
+  text-shadow: #312b35 1px 1px 1px;
+}
+
 h1,h2,h3,h4,h5 {
   font-family: Lato;
   font-weight: 900;

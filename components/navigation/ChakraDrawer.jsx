@@ -1,3 +1,5 @@
+// The navigation drawer. Made with Chakra UI.
+
 import Link from "next/link";
 import MENU_LIST from "./menu_list";
 import NavItem from "./NavItem";
@@ -34,7 +36,7 @@ export default function ChakraDrawer({
         size="lg"
         icon={<HamburgerIcon boxSize="3rem" />}
         onClick={() => onOpen()}
-        className="hover:scale-110 duration-200 ml-8"
+        className="ml-8 duration-200 hover:scale-110"
       />
       <Drawer onClose={onClose} isOpen={isOpen} size="xs" placement="right">
         <DrawerOverlay />
@@ -64,7 +66,7 @@ export default function ChakraDrawer({
               className={`text-JWC-primary
            mt-0 p-2`}
             >
-              <div className="mt-8 flex flex-col items-center justify-center w-full">
+              <div className="flex flex-col items-center justify-center w-full mt-8">
                 {filteredMenuList.map((menu) => (
                   <NavItem
                     onClick={() => {

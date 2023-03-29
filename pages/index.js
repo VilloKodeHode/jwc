@@ -4,10 +4,8 @@ import PageLayout, {
   ClientLayout,
   EqualTwoGrids,
   TextFlex,
-  TextTwoGridLayout,
-  TopTwoGridLayout,
 } from "@/components/Layout";
-import SKILLS_LIST from "@/components/Skills/skills_list";
+
 import CallToActionButton, {
   CallToActionButtonAlt,
 } from "@/components/Buttons";
@@ -19,11 +17,8 @@ import ResponsiveH1, {
   ResponsiveP,
   ResponsiveUL,
 } from "@/components/Responsive text/ResponsiveText";
-import Accordion from "@/components/Accordion";
 import Link from "next/link";
-import SkillsWithAccordion from "@/components/Skills/SkillsWithAccordion";
 import SkillWithTabs from "@/components/Skills/SkillsWithTabs";
-import { Box } from "@chakra-ui/react";
 
 export default function Home() {
   return (

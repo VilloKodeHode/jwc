@@ -1,3 +1,5 @@
+// This file contains the menu list for the navigation drawer
+
 const MENU_LIST = [
   {
     text: "Home",
@@ -11,6 +13,7 @@ const MENU_LIST = [
   { text: "Om meg", href: "/about" },
   { text: "Prosjekter", href: "/projects" },
   { text: "Kontakt", href: "/contact" },
+  { text: "AI art", href: "/aiArt" },
   // { text: "Test", href: "/testform" },
 ];
 

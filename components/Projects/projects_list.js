@@ -1,3 +1,5 @@
+// A list of all projects that will be mapped out in the projects page
+
 export const PROJECT_LIST = [
   {
     projectName: "Stein, sakser, papir app",

@@ -1,3 +1,5 @@
+// Components to simplify the use of responsive text
+
 export default function ResponsiveH1({ children, className }) {
   return (
     <h1

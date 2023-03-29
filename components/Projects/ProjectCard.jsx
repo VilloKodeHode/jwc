@@ -1,3 +1,5 @@
+//Component for displaying project layout
+
 import Image from "next/image";
 import { useState } from "react";
 import { CallToActionButtonAlt } from "../Buttons";
@@ -59,7 +61,6 @@ export default function ProjectCard(props) {
                 <CallToActionButtonAlt className="">Kode</CallToActionButtonAlt>
               </a>
             </div>
-            {/* <ResponsiveP>{description}</ResponsiveP> */}
           </div>
         </div>
       </section>

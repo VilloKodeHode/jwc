@@ -1,3 +1,5 @@
+// Not currently used, but kept as a backup in case the contact.js doesn't work.
+
 import { useEffect, useState } from "react";
 import CallToActionButton from "@/components/Buttons";
 import PageLayout, { EqualTwoGrids, TextFlex } from "@/components/Layout";

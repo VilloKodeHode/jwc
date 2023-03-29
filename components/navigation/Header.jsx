@@ -1,3 +1,5 @@
+//Header component
+
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -18,11 +20,11 @@ export default function Header() {
 
   return (
     <header
-      className={`relative flex flex-col justify-center w-full animate-SlideInFromTop font-semibold`}
+      className={`relative flex flex-col justify-center w-full animate-SlideInFromTop font-semibold z-10`}
     >
       <div className="headerwave h-[725px]" />
       <div className="z-50 flex items-center justify-between px-12 h-28">
-        <div className="flex flex-row justify-center items-start gap-12 left-0 -top-10">
+        <div className="left-0 flex flex-row items-start justify-center gap-12 -top-10">
           {MENU_LIST.map((menu) =>
             menu.isImage ? (
               <Link key={menu.text} href={menu.href}>
@@ -37,7 +39,7 @@ export default function Header() {
               </Link>
             ) : null
           )}
-          <div className="lg:grid grid-flow-row justify-center items-center hidden animate-SlideInFromLeft">
+          <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
             <p className="text-JWC-logo text-p0">
               &#10077;Drevet med entusiasme, ferdigheter og koffein&#10078;
             </p>
@@ -45,15 +47,15 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="grid gap-4 grid-flow-col justify-center items-center">
+        <div className="grid items-center justify-center grid-flow-col gap-4">
           <a href="https://github.com/VilloKodeHode" target="_blank">
-            <VscGithubAlt className="h-8 w-8 hover:scale-125 duration-200" />
+            <VscGithubAlt className="w-8 h-8 duration-200 hover:scale-125" />
           </a>
           <a
             href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
             target="_blank"
           >
-            <SlSocialLinkedin className="h-8 w-8 hover:scale-125 duration-200" />
+            <SlSocialLinkedin className="w-8 h-8 duration-200 hover:scale-125" />
           </a>
           <ChakraDrawer
             activeLink={activeLink}
