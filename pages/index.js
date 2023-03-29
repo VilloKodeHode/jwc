@@ -58,22 +58,27 @@ export default function Home() {
             </EqualTwoGrids>
           </TextFlex>
         </section>
-        <section className="min-h-[70vh] flex items-center text-center gap-12 flex-col justify-center mb-12 font-bold my-28">
-          <div>
-            <ResponsiveH2>JV Web Consult</ResponsiveH2>
-            <ResponsiveH2>
-              <div className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
-                Joakim Villo
-              </div>
-            </ResponsiveH2>
+        <section className="grid items-center min-h-[70vh] justify-center w-screen mb-12 font-bold text-center lg:grid-cols-2 my-28">
+          <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] bg-JWC-black p-4">
+            <div className="">
+              <ResponsiveH2 className="text-JWC-white">
+                JV Web Consult
+              </ResponsiveH2>
+              <ResponsiveH2>
+                <div className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
+                  Joakim Villo
+                </div>
+              </ResponsiveH2>
+            </div>
+            <TextFlex textWidth="max-w-[60ch]">
+              <ResponsiveH3 className="text-JWC-white">Norsk ENK</ResponsiveH3>
+              <ResponsiveP className="text-JWC-white">
+                Virksomheten ble startet i Tønsberg i 2023, og har siden da
+                prioritert mindre oppdrag for å bygge opp en trofast kundebase
+              </ResponsiveP>
+            </TextFlex>
           </div>
-          <TextFlex textWidth="max-w-[60ch]">
-            <ResponsiveH3>Norsk ENK</ResponsiveH3>
-            <ResponsiveP>
-              Virksomheten ble startet i Tønsberg i 2023, og har siden da
-              prioritert mindre oppdrag for å bygge opp en trofast kundebase
-            </ResponsiveP>
-          </TextFlex>
+          <div className="w-screen lg:h-full lg:w-full h-[50vh] tonsbergBG" />
         </section>
         <section className="relative grid items-start justify-center w-full gap-12 px-4 text-center my-28">
           <TextFlex textWidth="max-w-[60ch]">

@@ -15,8 +15,8 @@ export default function SkillWithTabs() {
         <TabList className="flex flex-wrap">
           <Tab fontSize="2xl">Kodespråk</Tab>
           <Tab fontSize="2xl">Frameworks</Tab>
-          <Tab fontSize="2xl">Web Styling</Tab>
-          <Tab fontSize="2xl">Design verktøy</Tab>
+          <Tab fontSize="2xl">Web-Styling</Tab>
+          <Tab fontSize="2xl">Design-verktøy</Tab>
         </TabList>
 
         <TabPanels>

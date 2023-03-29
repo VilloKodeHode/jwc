@@ -153,7 +153,7 @@ export default function TestForm() {
         </form>
         {showModal && (
           <div className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="flex flex-col items-center justify-center relative p-8 bg-white rounded-lg xl:max-w-[50%] max-w-[80%]">
+            <div className="flex flex-col items-center justify-center relative p-8 bg-white rounded-3xl xl:max-w-[50%] max-w-[80%]">
               <ResponsiveH2 className="text-JWC-tertiary">
                 Thank you for your message!
               </ResponsiveH2>

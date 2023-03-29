@@ -14,7 +14,15 @@
   --black50: #98959a;
   --black25: #cbcacc;
   --black15: #e0dfe1;
+  --JWCwhite: #fbf7fd;
 
+}
+
+.tonsbergBG {
+  background-image: url('/Tonsberg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .headerwave {
@@ -94,7 +102,7 @@ font-family: Roboto;
 
 #__next {
   /* background: linear-gradient(168.55deg, var(--primary) 2.41%, white 45.79%); */
-  background-color: white;
+  background-color: var(--JWCwhite);
   text-rendering: optimizeLegibility;
 
 }
