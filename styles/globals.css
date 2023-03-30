@@ -28,10 +28,19 @@
 .headerwave {
 width: 100%;
   position: absolute;
-  top: 0; 
+  bottom: -70%; 
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('/header-waves2.svg');
+  background-image: url('/header-waves.svg');
+}
+
+.drawerwave {
+width: 100%;
+  position: absolute;
+  top: 113px; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/header-waves.svg');
 }
 
 .footerwave {
@@ -44,7 +53,7 @@ width: 100%;
 
 .skillswave {
   
-  width: 4500px;
+  width: 4000px;
 
   background-repeat: no-repeat;
 
@@ -52,11 +61,16 @@ width: 100%;
 
 }
 .topwave {
-    background-image: url('/topwaveskills2.svg');
+    background-image: url('/topwaveskills.svg');
 background-position: bottom;
+  width: 4000px;
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
 }
 .bottomwave {
-    background-image: url('/bottomwaveskills2.svg');
+    background-image: url('/bottomwaveskills.svg');
       background-position: top;
 }
 

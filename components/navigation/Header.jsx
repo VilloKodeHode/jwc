@@ -20,10 +20,10 @@ export default function Header() {
 
   return (
     <header
-      className={`relative flex flex-col justify-center w-full animate-SlideInFromTop font-semibold z-10`}
+      className={`relative flex flex-col bg-JWC-primary justify-center w-full animate-SlideInFromTop font-semibold z-10`}
     >
-      <div className="headerwave h-[725px]" />
-      <div className="z-50 flex items-center justify-between px-12 h-28">
+      <div className="headerwave h-[80px]" />
+      <div className="z-50 flex items-center justify-between px-12 pt-8 h-28">
         <div className="left-0 flex flex-row items-start justify-center gap-12 -top-10">
           {MENU_LIST.map((menu) =>
             menu.isImage ? (

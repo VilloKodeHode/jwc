@@ -41,8 +41,8 @@ export default function ChakraDrawer({
       <Drawer onClose={onClose} isOpen={isOpen} size="xs" placement="right">
         <DrawerOverlay />
         <DrawerContent>
-          <div className="headerwave h-[600px] -z-10" />
-          <DrawerHeader className="flex justify-center">
+          <div className="drawerwave h-[80px] -z-10" />
+          <DrawerHeader className="flex justify-center bg-JWC-primary">
             {MENU_LIST.map((menu) =>
               menu.isImage ? (
                 <Link key={menu.text} href={menu.href}>
@@ -52,7 +52,7 @@ export default function ChakraDrawer({
                       onClose();
                     }}
                     src={menu.imageSrc}
-                    className=""
+                    className="pt-8"
                     width={150}
                     height={150}
                     alt="JV web consult"

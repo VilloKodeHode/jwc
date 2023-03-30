@@ -17,15 +17,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center w-screen text-center bg-JWC-black">
-          <div className="bg-[url('https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png')] flex bg-cover p-8 h-full min-h-[45vh]">
+        <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center xl:pt-[2.5vw] w-screen text-center bg-JWC-black">
+          <div className="bg-[url('https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png')] flex bg-cover px-8 py-16 h-full min-h-[45vh]">
             <TextFlex>
               <ResponsiveH1 className="font-extralight text-JWC-white clearText">
                 Jeg lager AI genererte bilder
               </ResponsiveH1>
             </TextFlex>
           </div>
-          <div className="bg-[url('https://cdn.midjourney.com/591f3ac9-8b22-46ee-91cd-d4a9b1ae53b7/grid_0.png')] bg-cover p-8 h-full flex min-h-[45vh] clearText">
+          <div className="bg-[url('https://cdn.midjourney.com/591f3ac9-8b22-46ee-91cd-d4a9b1ae53b7/grid_0.png')] bg-cover px-8 py-16 h-full flex min-h-[45vh] clearText">
             <TextFlex>
               <ResponsiveH3 className="font-extralight text-JWC-white">
                 Nettinnhold til din side

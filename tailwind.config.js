@@ -120,8 +120,8 @@ module.exports = {
         },
       },
       animation: {
-        waveSlideLeft: "waveSlideLeft ease-in 50s alternate infinite",
-        waveSlideRight: "waveSlideRight ease-in 55s 1s alternate infinite",
+        waveSlideLeft: "waveSlideLeft ease-in 16s alternate infinite",
+        waveSlideRight: "waveSlideRight ease-in 15s 1s alternate infinite",
         ButtonHover: "buttonHover ease-in 1.5s infinite",
         ModalSlideIn: "slideRight ease 0.3s",
         RPSPopUp: "popUp 0.1s ease-in",
