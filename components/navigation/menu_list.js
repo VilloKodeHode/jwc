@@ -12,8 +12,8 @@ const MENU_LIST = [
   },
   { text: "Om meg", href: "/about" },
   { text: "Prosjekter", href: "/projects" },
-  { text: "Kontakt", href: "/contact" },
   { text: "AI art", href: "/aiArt" },
+  { text: "Kontakt", href: "/contact" },
   // { text: "Test", href: "/testform" },
 ];
 

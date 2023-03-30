@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const NavItem = ({ text, href, active, activeLink, onClick }) => {
   return (
-    <div key={text} className="relative z-10 p-3 inline-block">
+    <div key={text} className="relative z-10 inline-block p-3">
       <Link href={href} className="">
         <p
           className={`text-h5 text-JWC-tertiary ${
@@ -18,7 +18,7 @@ const NavItem = ({ text, href, active, activeLink, onClick }) => {
       </Link>
       {(active || activeLink === text) && (
         <div
-          className={`animate-Appear absolute top-1/3 -translate-y-1/2 -left-3 h-6 w-6 bg-JWC-secondary -z-10 rounded-full `}
+          className={`animate-Appear absolute top-1/2 -translate-y-1/2 -left-5 h-6 w-6 border-l-8 border-t-8 border-r-8 border-r-JWC-tertiary border-l-JWC-primary border-t-JWC-secondary duration-75 -z-10 rounded-full `}
         ></div>
       )}
     </div>

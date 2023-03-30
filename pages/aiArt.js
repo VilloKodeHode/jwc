@@ -35,7 +35,9 @@ export default function Home() {
         </section>
         <section className="grid justify-center w-screen pb-12 bg-JWC-black">
           <TextFlex>
-            <ResponsiveH2 className="p-8 text-JWC-white">Galleri:</ResponsiveH2>
+            <ResponsiveH2 className="p-8 font-extralight clearText bg-gradient-to-r from-JWC-primary to-JWC-secondary bg-clip-text transparent">
+              Galleri
+            </ResponsiveH2>
           </TextFlex>
           <div className="grid grid-flow-row grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
             {AIART_LIST.map((image, index) => (

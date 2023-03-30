@@ -51,9 +51,10 @@ export default function TestForm() {
   return (
     <PageLayout>
       <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center min-w-[80%] min-h-[70vh] my-28 text-center">
-        <div className="flex justify-center">
+        <div className="flex justify-center px-8">
           <ResponsiveH4 className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent lg:max-w-[20ch] max-w-[30ch]">
-            Fill out the form and I will contact you as quickly as possible!
+            Fyll ut skjemaet om du ønsker at jeg skal lage noe for deg, så vil
+            du bli kontaktet så raskt som mulig.
           </ResponsiveH4>
         </div>
         <form

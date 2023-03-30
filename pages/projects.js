@@ -1,6 +1,10 @@
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import PageLayout, { TextFlex } from "@/components/Layout";
-import ResponsiveH1 from "@/components/Responsive text/ResponsiveText";
+import ResponsiveH1, {
+  ResponsiveH2,
+  ResponsiveH3,
+  ResponsiveP,
+} from "@/components/Responsive text/ResponsiveText";
 import PROJECT_LIST from "@/components/Projects/projects_list";
 import ProjectCard from "@/components/Projects/ProjectCard";
 import Head from "next/head";
@@ -35,6 +39,13 @@ export default function Projects() {
               />
             ))}
           </div>
+        </section>
+        <section className="relative grid justify-center min-h-[40vh] mb-56 text-center">
+          <TextFlex>
+            <ResponsiveP>
+              Flere prosjekter vil bli lagt til etterhvert
+            </ResponsiveP>
+          </TextFlex>
         </section>
       </PageLayout>
     </>

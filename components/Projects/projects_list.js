@@ -48,20 +48,8 @@ export const PROJECT_LIST = [
     href: "https://villokodehode.github.io/PokeAPI/",
     hrefCode: "https://github.com/VilloKodeHode/PokeAPI",
     description:
-      "Min første REST api app. Bruker 3 layered fetching for å hente alle dataene jeg trengte. Har nylig laget en forbedret versjon (link inne i samme app) Bugs: ingen kjente bugs",
+      "Min første REST api app. Bruker 3 layered fetching for å hente alle dataene jeg trengte. Har nylig laget en forbedret versjon, men mangler noe styling (link inne i samme app) Bugs: ingen kjente bugs",
   },
-  // {
-  //   projectName: "Jobb simulator",
-  //   textColor: "text-JWC-white",
-  //   src: "/images/projects/POKEDEXV1-collage.png",
-  //   mobileSrc: "/images/projects/POKEDEXV1-1.png",
-  //   alt: "Pokedex v1",
-  //   cardColor: "bg-[#EECC38]",
-  //   href: "https://villokodehode.github.io/PokeAPI/",
-  //   hrefCode: "https://github.com/VilloKodeHode/PokeAPI",
-  //   description:
-  //     "Min første REST api app. Bruker 3 layered fetching for å hente alle dataene jeg trengte. Bugs: ingen kjente bugs",
-  // },
 ];
 
 export default PROJECT_LIST;
