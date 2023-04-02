@@ -39,7 +39,7 @@ export default function Home() {
               Galleri
             </ResponsiveH2>
           </TextFlex>
-          <div className="grid grid-flow-row grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+          <div className="grid grid-flow-row grid-cols-1 select-none xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
             {AIART_LIST.map((image, index) => (
               <Image
                 key={index}

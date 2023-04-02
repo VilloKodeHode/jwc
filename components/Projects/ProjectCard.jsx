@@ -26,7 +26,7 @@ export default function ProjectCard(props) {
   return (
     <>
       <section
-        className={`w-[100vw] my-28 ${cardColor} shadow-JWC-black50 shadow-sm`}
+        className={`w-[100vw] my-28 ${cardColor} shadow-JWC-black50 shadow-sm border-opacity-10 border-JWC-black border-[5vw]`}
       >
         <div className="z-10 flex flex-col items-center justify-center m-4 snap-always snap-mandatory snap-center">
           <ResponsiveH3 className={`p-8 ${textColor}`}>

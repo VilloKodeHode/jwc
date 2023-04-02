@@ -19,11 +19,11 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <section className="relative grid justify-center min-h-[70vh] my-28 text-center">
+        <section className="relative grid justify-center min-h-[70vh] text-center mt-[112px]">
           <TextFlex>
             <ResponsiveH1>Prosjekter</ResponsiveH1>
           </TextFlex>
-          <div className="flex flex-col justify-center gap-12">
+          <div className="flex flex-col justify-center gap-24">
             {PROJECT_LIST.map((project) => (
               <ProjectCard
                 key={project.projectName}
@@ -39,13 +39,13 @@ export default function Projects() {
               />
             ))}
           </div>
-        </section>
-        <section className="relative grid justify-center min-h-[40vh] mb-56 text-center">
-          <TextFlex>
-            <ResponsiveP>
-              Flere prosjekter vil bli lagt til etterhvert
-            </ResponsiveP>
-          </TextFlex>
+          <section className="relative grid justify-center min-h-[40vh] mb-[112px] text-center">
+            <TextFlex>
+              <ResponsiveP>
+                Flere prosjekter vil bli lagt til etterhvert
+              </ResponsiveP>
+            </TextFlex>
+          </section>
         </section>
       </PageLayout>
     </>

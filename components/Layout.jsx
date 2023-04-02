@@ -1,12 +1,16 @@
 // Components to simplify the layout of the page and sections
 
-export default function PageLayout({ children }) {
+export default function PageLayout({ children, gap }) {
   return (
-    <main className="z-50 flex flex-col items-center justify-start min-h-screen overflow-x-hidden">
+    <main
+      className={`z-50 flex flex-col items-center justify-start min-h-screen overflow-x-hidden ${gap}`}
+    >
       <>{children}</>
     </main>
   );
 }
+
+
 
 export function TwoGriddedLayout({ children }) {
   return (
