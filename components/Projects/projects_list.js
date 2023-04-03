@@ -50,6 +50,18 @@ export const PROJECT_LIST = [
     description:
       "Min første REST api app. Bruker 3 layered fetching for å hente alle dataene jeg trengte. Har nylig laget en forbedret versjon, men mangler noe styling (link inne i samme app) Bugs: ingen kjente bugs",
   },
+  {
+    projectName: "Gift helper",
+    textColor: "text-JWC-white",
+    src: "/images/projects/GH-collage.png",
+    mobileSrc: "/images/projects/GH1.png",
+    alt: "Gift helper",
+    cardColor: "bg-[#df64cf]",
+    href: "https://villokodehode.github.io/gift-helper-web/",
+    hrefCode: "https://github.com/VilloKodeHode/gift-helper-web",
+    description:
+      "En ny ide jeg lagde i full fart. En app for å hjelpe deg med å finne gaver til andre. Ingen kjente bugs, men gaveutvalget er ikke så stort enda",
+  },
 ];
 
 export default PROJECT_LIST;
