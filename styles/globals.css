@@ -15,8 +15,11 @@
   --black25: #cbcacc;
   --black15: #e0dfe1;
   --JWCwhite: #fbf7fd;
+  --JWCwhite10: #f7f1fc
 
 }
+
+
 
 .tonsbergBG {
   background-image: url('/Tonsberg.jpg');

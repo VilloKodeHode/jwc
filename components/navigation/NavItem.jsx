@@ -1,16 +1,14 @@
 import Link from "next/link";
 
 
-const NavItem = ({ text, href, active, activeLink, onClick }) => {
+const NavItem = ({ text, href, active, activeLink, onClick, className }) => {
   return (
-    <div key={text} className="relative z-10 inline-block p-3">
+    <div key={text} className={`relative z-10 p-3 ${className}`}>
       <Link href={href} className="">
         <p
-          className={`text-h5 text-JWC-tertiary ${
-            active || activeLink === text
-              ? `border-b-4 hover:mb-[4px] active:mb-[8px]`
-              : "active:mb-[4px] hover:mb-[0px]"
-          } z-10 p-1 hover:border-b-8 mb-[9px] hover:-translate-y-1 hover:border active:translate-y-0 active:border-b-4  rounded-xl border-JWC-secondary`}
+          className={`text-h6 text-JWC-black75 ${
+            active || activeLink === text ? `border-b-2` : " hover:mb-[0px]"
+          } z-10 border-JWC-secondary`}
           onClick={onClick}
         >
           {text}

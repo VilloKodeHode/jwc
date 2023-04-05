@@ -3,6 +3,7 @@ import PageLayout, { TextFlex } from "@/components/Layout";
 import ResponsiveH1, {
   ResponsiveH2,
   ResponsiveH3,
+  ResponsiveP,
 } from "@/components/Responsive text/ResponsiveText";
 import Head from "next/head";
 import Image from "next/image";
@@ -41,13 +42,20 @@ export default function Home() {
           </TextFlex>
           <div className="grid grid-flow-row grid-cols-1 select-none xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
             {AIART_LIST.map((image, index) => (
-              <Image
-                key={index}
-                src={image.src}
-                width={image.width}
-                height={image.height}
-                alt={image.alt}
-              />
+              <div key={index} className="relative border border-transparent">
+                <Image
+                  className=""
+                  src={image.src}
+                  width={image.width}
+                  height={image.height}
+                  alt={image.alt}
+                />
+                <div className="absolute flex items-center justify-center w-full h-full transition-opacity duration-200 transform -translate-x-1/2 -translate-y-1/2 opacity-0 top-1/2 left-1/2 active:backdrop-blur-[2px] hover:backdrop-blur-[2px] hover:opacity-100">
+                  <ResponsiveP className="p-2 rounded-md text-JWC-white10 clearText">
+                    {image.alt}
+                  </ResponsiveP>
+                </div>
+              </div>
             ))}
           </div>
         </section>

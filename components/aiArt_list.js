@@ -155,6 +155,42 @@ const AIART_LIST = [
     height: 750,
     alt: "AI art av Joakim Villo (Twisted stone)",
   },
+  {
+    src: "https://cdn.midjourney.com/5ddabf4d-25d5-4eea-a1fc-31508dabe5a7/0_3.png",
+    width: 750,
+    height: 750,
+    alt: "Cat playing banjo",
+  },
+  {
+    src: "https://cdn.midjourney.com/9651e2af-2b19-49bd-b4aa-ce0a07e24f95/0_1.png",
+    width: 750,
+    height: 750,
+    alt: "Rainbow waves",
+  },
+  {
+    src: "https://cdn.midjourney.com/79ba5ee9-fc84-4ec6-8d30-b713cce27fb1/0_3.png",
+    width: 750,
+    height: 750,
+    alt: "Skating red panda",
+  },
+  {
+    src: "https://cdn.midjourney.com/4e1f0e68-20d0-498a-a159-685f63cd36f4/0_2.png",
+    width: 750,
+    height: 750,
+    alt: "Penguin in the desert",
+  },
+  {
+    src: "https://cdn.midjourney.com/60b2587f-4c18-4825-858e-955b609fb9b2/0_2.png",
+    width: 750,
+    height: 750,
+    alt: "Magical valley",
+  },
+  {
+    src: "https://cdn.midjourney.com/380804fd-6777-4d57-9f3e-f1a90725d8eb/0_0.png",
+    width: 750,
+    height: 750,
+    alt: "Polar bear sherpa mascot",
+  },
 ];
 
 export default AIART_LIST;

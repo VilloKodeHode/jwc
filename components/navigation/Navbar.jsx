@@ -7,44 +7,31 @@ import NavItem from "./NavItem";
 import Image from "next/image";
 import MENU_LIST from "./menu_list";
 
-export default function Navbar({}) {
-  const router = useRouter();
-
-  const handleImageClick = () => {
-    setActiveMenu("");
-    activeLink && setActiveLink("");
-  };
-
+export default function Navbar({
+  activeLink,
+  setActiveLink,
+  handleImageClick,
+  isOpen,
+  onOpen,
+  onClose,
+  className,
+}) {
   const filteredMenuList = MENU_LIST.filter((menu) => menu.text !== "Home");
 
   return (
-    <div className="flex items-center w-full">
-      {MENU_LIST.map((menu) =>
-        menu.isImage ? (
-          <Link key={menu.text} href={menu.href}>
-            <Image
-              onClick={handleImageClick}
-              src={menu.imageSrc}
-              width={menu.imageWidth}
-              height={menu.imageHeight}
-              alt="JV web consult"
-            />
-          </Link>
-        ) : null
-      )}
-      <div className="flex-row justify-center hidden w-full pr-24 sm:flex text-JWC-black">
+    <div className={`flex items-center w-[800px] ${className}`}>
+      <div className="flex-row justify-start hidden w-full gap-8 xl:flex">
         {filteredMenuList.map((menu) => (
           <NavItem
+            onClick={() => {
+              setActiveLink(menu.text);
+              onClose();
+            }}
             key={menu.text}
             text={menu.text}
-            textsize="text-h6"
             href={menu.href}
+            color={menu.color}
             active={activeLink === menu.text}
-            activeWidth="w-11"
-            activeHeight="h-11"
-            underline="border-b-2"
-            position="left-0"
-            handleMenuClick={() => setActiveLink(menu.text)}
             activeLink={activeLink}
           />
         ))}

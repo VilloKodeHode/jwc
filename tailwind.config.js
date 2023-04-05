@@ -41,6 +41,7 @@ module.exports = {
           black15: "#e0dfe1",
           logo: "#3c4343",
           white: "#fbf7fd",
+          white10: "#f7f1fc",
         },
       },
       fontSize: {

@@ -29,7 +29,7 @@ export default function ChakraDrawer({
   const filteredMenuList = MENU_LIST.filter((menu) => menu.text !== "Home");
 
   return (
-    <div>
+    <div className="block xl:hidden">
       <IconButton
         variant="ghost hover:bg-none hover-scale-110"
         aria-label="Open Menu"
@@ -41,8 +41,8 @@ export default function ChakraDrawer({
       <Drawer onClose={onClose} isOpen={isOpen} size="xs" placement="right">
         <DrawerOverlay />
         <DrawerContent>
-          <div className="drawerwave h-[80px] -z-10" />
-          <DrawerHeader className="flex justify-center bg-JWC-primary">
+          {/* <div className="drawerwave h-[80px] -z-10" /> */}
+          <DrawerHeader className="flex items-center justify-center border-b-2 bg-JWC-white10 border-JWC-secondary">
             {MENU_LIST.map((menu) =>
               menu.isImage ? (
                 <Link key={menu.text} href={menu.href}>
@@ -52,7 +52,7 @@ export default function ChakraDrawer({
                       onClose();
                     }}
                     src={menu.imageSrc}
-                    className="pt-8"
+                    className="p-4 my-[16.5px] duration-200 rounded-xl bg-gradient-to-r from-JWC-primary to-JWC-secondary hover:scale-105"
                     width={150}
                     height={150}
                     alt="JV web consult"

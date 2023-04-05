@@ -54,12 +54,12 @@ export default function ProjectCard(props) {
 
               <a className="" href={href} target="_blank">
                 <CallToActionButtonAlt className={``}>
-                  App
+                  Prøv ut
                 </CallToActionButtonAlt>
               </a>
-              <a href={hrefCode} target="_blank">
+              {/* <a href={hrefCode} target="_blank">
                 <CallToActionButtonAlt className="">Kode</CallToActionButtonAlt>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

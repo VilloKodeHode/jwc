@@ -38,7 +38,7 @@ export default function Home() {
               Freelance <br /> web-utvikler <br /> & UI designer
             </ResponsiveH1>
             <EqualTwoGrids>
-              <ResponsiveP maxWidth="max-w-md">
+              <ResponsiveP maxWidth="max-w-md" className="text-JWC-black75">
                 Enten du trenger en enkel nettside eller en avansert plattform,
                 kan jeg hjelpe deg med både utvikling og UI-design for både web
                 og mobil. Jeg har bred kompetanse innen teknologier som React,
@@ -68,7 +68,9 @@ export default function Home() {
               </ResponsiveH2>
             </div>
             <TextFlex textWidth="max-w-[60ch]">
-              <ResponsiveH3 className="text-JWC-white">Norsk ENK</ResponsiveH3>
+              <ResponsiveH3 className="text-JWC-white">
+                Norsk foretak
+              </ResponsiveH3>
               <ResponsiveP className="text-JWC-white">
                 Virksomheten ble startet i Tønsberg i 2023, og har siden da
                 prioritert mindre oppdrag for å bygge opp en trofast kundebase
@@ -78,6 +80,7 @@ export default function Home() {
           <div className="w-screen lg:h-full lg:w-full h-[50vh] tonsbergBG" />
         </section>
         <section className="relative grid items-start justify-center w-full gap-12 px-4 text-center">
+          <div className="absolute w-screen left-1/2 -translate-x-1/2 h-[70%] bg-JWC-tertiary -translate-y-1/2 top-1/2 " />
           <TextFlex textWidth="max-w-[60ch]">
             <div>
               <ResponsiveH3>Klienter</ResponsiveH3>
@@ -112,13 +115,13 @@ export default function Home() {
         </section>
 
         <div className="flex flex-col items-center justify-start">
-          <div className="skillswave topwave h-[250px] animate-waveSlideRight" />
-          <section className="flex relative w-screen min-h-[40vh] bg-[#312b35] snap-center font-Lato">
+          {/* <div className="skillswave topwave h-[250px] animate-waveSlideRight" /> */}
+          <section className="flex relative w-screen min-h-[40vh] py-8 bg-JWC-white10 snap-center font-Lato">
             <div className="z-20 grid items-start justify-center w-full">
               <SkillWithTabs />
             </div>
           </section>
-          <div className="skillswave bottomwave h-[250px] animate-waveSlideLeft" />
+          {/* <div className="skillswave bottomwave h-[250px] animate-waveSlideLeft" /> */}
         </div>
         <div className="mb-[212px]">
           <Link href="/projects">
