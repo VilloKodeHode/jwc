@@ -31,8 +31,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PageLayout gap="gap-28">
-        <section className="relative grid justify-center min-h-[50vh] text-center mt-[112px]">
+      <PageLayout gap="gap-48">
+        <section className="relative grid justify-center min-h-[50vh] text-center mt-[91px]">
           <TextFlex>
             <ResponsiveH1 className="max-w-4xl text-center lg:text-h1 sm:text-h2 text-h3 lg:leading-h1 sm:leading-h2 leading-h3">
               Freelance <br /> web-utvikler <br /> & UI designer

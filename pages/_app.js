@@ -17,7 +17,7 @@ const theme = extendTheme({
 
       //font colors:
       black: "#312b35",
-      100: "#312b35",
+      // 100: "#312b35",
       black75: "#656068",
       500: "#656068",
       black50: "#98959a",
@@ -28,6 +28,9 @@ const theme = extendTheme({
       800: "#e0dfe1",
       logo: "#3c4343",
       900: "#3c4343",
+      white: "#fbf7fd",
+      white10: "#f7f1fc",
+      100: "#f7f1fc",
     },
   },
 });

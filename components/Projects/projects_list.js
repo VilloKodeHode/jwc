@@ -7,7 +7,7 @@ export const PROJECT_LIST = [
     src: "/images/projects/GH-collage.png",
     mobileSrc: "/images/projects/GH1.png",
     alt: "Gift helper",
-    cardColor: "bg-[#df64cf]",
+    cardColor: "bg-[#e882db]",
     href: "https://villokodehode.github.io/gift-helper-web/",
     hrefCode: "https://github.com/VilloKodeHode/gift-helper-web",
     description:
@@ -31,7 +31,7 @@ export const PROJECT_LIST = [
     src: "/images/projects/POKEDEXV1-collage.png",
     mobileSrc: "/images/projects/POKEDEXV1-1.png",
     alt: "Pokedex v1",
-    cardColor: "bg-[#EECC38]",
+    cardColor: "bg-[#e7cf63]",
     href: "https://villokodehode.github.io/PokeAPI/",
     hrefCode: "https://github.com/VilloKodeHode/PokeAPI",
     description:
@@ -43,7 +43,7 @@ export const PROJECT_LIST = [
     src: "/images/projects/RPS-collage.png",
     mobileSrc: "/images/projects/RPS.png",
     alt: "Stein sakser papir app",
-    cardColor: "bg-[#427de9]",
+    cardColor: "bg-[#6792e2]",
     href: "https://villokodehode.github.io/Rock--Paper--Scissors--Lizard--Spock-game/#/",
     hrefCode:
       "https://github.com/VilloKodeHode/Rock--Paper--Scissors--Lizard--Spock-game",
@@ -56,7 +56,7 @@ export const PROJECT_LIST = [
     src: "/images/projects/AG-collage.png",
     mobileSrc: "/images/projects/Advice generator.png",
     alt: "App for gode råd",
-    cardColor: "bg-[#66e2b3]",
+    cardColor: "bg-[#86e5c1]",
     href: "https://villokodehode.github.io/advice-generator/",
     hrefCode: "https://github.com/VilloKodeHode/advice-generator",
     description:
