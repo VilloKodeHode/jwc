@@ -24,7 +24,7 @@ export default function Header() {
       className={`relative flex flex-col h-36 w-full justify-center animate-SlideInFromTop bg-JWC-white10 border-b-2 border-JWC-secondary font-semibold z-10`}
     >
       {/* <div className="headerwave h-[80px]" /> */}
-      <div className="z-50 flex items-center justify-between px-12 h-28">
+      <div className="z-50 flex items-center justify-between px-2 sm:px-12 h-28">
         <div className="flex flex-row items-center justify-center lg:min-w-[500px] min-w-[150px] gap-8">
           {MENU_LIST.map((menu) =>
             menu.isImage ? (
@@ -41,10 +41,12 @@ export default function Header() {
             ) : null
           )}
           <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
-            <p className="text-JWC-logo text-p0">
+            <p className="text-JWC-black75 text-[12px]">
               &#10077;Drevet med entusiasme, ferdigheter og koffein&#10078;
             </p>
-            <p className="text-JWC-logo">VilloKodeHode@gmail.com</p>
+            <p className="text-JWC-black75 text-[10px]">
+              VilloKodeHode@gmail.com
+            </p>
           </div>
         </div>
         <Navbar
@@ -65,14 +67,14 @@ export default function Header() {
           >
             <SlSocialLinkedin className="w-8 h-8 mr-4 duration-200 hover:text-JWC-tertiary hover:scale-125" />
           </a>
-          <ChakraDrawer
-            activeLink={activeLink}
-            setActiveLink={setActiveLink}
-            isOpen={isOpen}
-            onOpen={onOpen}
-            onClose={onClose}
-          />
         </div>
+        <ChakraDrawer
+          activeLink={activeLink}
+          setActiveLink={setActiveLink}
+          isOpen={isOpen}
+          onOpen={onOpen}
+          onClose={onClose}
+        />
       </div>
     </header>
   );
