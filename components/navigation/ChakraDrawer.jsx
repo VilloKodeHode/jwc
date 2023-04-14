@@ -17,6 +17,7 @@ import {
   DrawerCloseButton,
   IconButton,
 } from "@chakra-ui/react";
+import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
 
 export default function ChakraDrawer({
   activeLink,
@@ -30,7 +31,7 @@ export default function ChakraDrawer({
 
   return (
     <>
-      <div className="block xl:hidden">
+      <div className="block md:hidden">
         <IconButton
           variant="ghost hover:bg-none hover-scale-110"
           aria-label="Open Menu"
@@ -42,8 +43,13 @@ export default function ChakraDrawer({
         <Drawer onClose={onClose} isOpen={isOpen} size="xs" placement="right">
           <DrawerOverlay />
           <DrawerContent>
-            {/* <div className="drawerwave h-[80px] -z-10" /> */}
-            <DrawerHeader className="flex items-center justify-center border-b-2 bg-JWC-white10 border-JWC-secondary">
+            <div className="flex justify-between px-12 py-1 font-bold bg-JWC-black text-JWC-white">
+              <LanguageSwitch />
+              <Link href="/Norwegian resume shorted JWC.png" target="_blank">
+                CV
+              </Link>
+            </div>
+            <DrawerHeader className="relative flex justify-center">
               {MENU_LIST.map((menu) =>
                 menu.isImage ? (
                   <Link key={menu.text} href={menu.href}>
@@ -53,7 +59,7 @@ export default function ChakraDrawer({
                         onClose();
                       }}
                       src={menu.imageSrc}
-                      className="p-4 my-[16.5px] duration-200 rounded-xl bg-gradient-to-r from-JWC-primary to-JWC-secondary hover:scale-105"
+                      className="p-4 my-[1.5px] duration-200 hover:scale-105"
                       width={150}
                       height={150}
                       alt="JV web consult"
@@ -74,6 +80,8 @@ export default function ChakraDrawer({
                         setActiveLink(menu.text);
                         onClose();
                       }}
+                      textSize="text-h4"
+                      textColor="text-JWC-black"
                       key={menu.text}
                       text={menu.text}
                       href={menu.href}

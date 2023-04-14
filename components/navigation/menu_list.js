@@ -10,7 +10,7 @@ const MENU_LIST = [
     imageWidth: 200,
     imageHeight: 200,
   },
-  { text: "Om JWC", href: "/about" },
+  // { text: "Om JWC", href: "/about" },
   { text: "Prosjekter", href: "/projects" },
   { text: "AI art", href: "/aiArt" },
   { text: "Kontakt", href: "/contact" },

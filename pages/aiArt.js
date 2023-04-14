@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center xl:pt-[2.5vw] w-screen text-center bg-JWC-black">
+        <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center w-screen text-center">
           <div className="bg-[url('https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png')] flex bg-cover px-8 py-16 h-full min-h-[45vh]">
             <TextFlex>
               <ResponsiveH1 className="font-extralight text-JWC-white clearText">
@@ -34,13 +34,13 @@ export default function Home() {
             </TextFlex>
           </div>
         </section>
-        <section className="grid justify-center w-screen pb-12 bg-JWC-black">
+        <section className="grid justify-center w-screen bg-JWC-black">
           <TextFlex>
             <ResponsiveH2 className="p-8 font-extralight clearText bg-gradient-to-r from-JWC-primary to-JWC-secondary bg-clip-text transparent">
               Galleri
             </ResponsiveH2>
           </TextFlex>
-          <div className="grid grid-flow-row grid-cols-1 select-none xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+          <section className="grid grid-flow-row grid-cols-1 select-none xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
             {AIART_LIST.map((image, index) => (
               <div key={index} className="relative border border-transparent">
                 <Image
@@ -57,7 +57,7 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </section>
         </section>
       </PageLayout>
     </>

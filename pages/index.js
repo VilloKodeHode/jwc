@@ -31,30 +31,43 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PageLayout gap="gap-48">
-        <section className="relative grid justify-center min-h-[50vh] text-center mt-[91px]">
-          <TextFlex>
-            <ResponsiveH1 className="max-w-4xl text-center lg:text-h1 sm:text-h2 text-h3 lg:leading-h1 sm:leading-h2 leading-h3">
-              Freelance <br /> web-utvikler <br /> & UI designer
-            </ResponsiveH1>
-            <EqualTwoGrids>
-              <ResponsiveP maxWidth="max-w-md" className="text-JWC-black75">
-                Enten du trenger en enkel nettside eller en avansert plattform,
-                kan jeg hjelpe deg med både utvikling og UI-design for både web
-                og mobil. Jeg har bred kompetanse innen teknologier som React,
-                Next.js, Node.js, Tailwind CSS, Figma og mer.
-              </ResponsiveP>
-              <div className="flex flex-col">
-                <Link href="/Norwegian resume shorted JWC.png" target="_blank">
-                  <CallToActionButtonAlt>CV</CallToActionButtonAlt>
-                </Link>
-                <Link href="/contact">
-                  <CallToActionButton>Ta kontakt</CallToActionButton>
-                </Link>
-              </div>
-            </EqualTwoGrids>
-          </TextFlex>
-        </section>
+      <PageLayout gap="gap-28">
+        <div className="heroBG">
+          <section className="relative grid xl:grid-cols-2 md:py-12 sm:pt-0 pt-12 px-12 justify-center items-center mx-auto min-h-[65vh]">
+            <TextFlex>
+              <ResponsiveH1 className="text-left">
+                Webdesign og utvikling
+              </ResponsiveH1>
+              <EqualTwoGrids>
+                <ResponsiveP
+                  maxWidth="max-w-md"
+                  className="text-left text-JWC-black75"
+                >
+                  Lag en engasjerende nettside med JWC. Nettsider som er enkle å
+                  bruke, og som er tilpasset alle enheter.
+                </ResponsiveP>
+                <div className="flex flex-col">
+                  {/* <Link
+                    href="/Norwegian resume shorted JWC.png"
+                    target="_blank"
+                  >
+                    <CallToActionButtonAlt>CV</CallToActionButtonAlt>
+                  </Link> */}
+                  <Link href="/contact">
+                    <CallToActionButton>Ta kontakt</CallToActionButton>
+                  </Link>
+                </div>
+              </EqualTwoGrids>
+            </TextFlex>
+            <Image
+              src="/Hero8.png"
+              alt="hero"
+              width="500"
+              height="500"
+              className="mx-auto heroShadow"
+            />
+          </section>
+        </div>
         <section className="grid items-center min-h-[70vh] justify-center w-screen font-bold text-center lg:grid-cols-2">
           <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] bg-JWC-black p-4">
             <div className="">

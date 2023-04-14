@@ -27,21 +27,21 @@ module.exports = {
     extend: {
       colors: {
         JWC: {
-          primary: "#ac6bde",
+          primary: "#a2cbcc",
 
-          secondary: "#eb65cf",
+          secondary: "#f78f6a",
 
-          tertiary: "#6865eb",
+          tertiary: "#387184",
 
           //font colors:
-          black: "#312b35",
-          black75: "#656068",
-          black50: "#98959a",
-          black25: "#cbcacc",
-          black15: "#e0dfe1",
+          black: "#202929",
+          black75: "#585f5f",
+          black50: "#909494",
+          black25: "#c7c9c9",
+          black15: "#dedfdf",
           logo: "#3c4343",
-          white: "#fbf7fd",
-          white10: "#f7f1fc",
+          white: "#fdfdfd",
+          white10: "#f6fafa",
         },
       },
       fontSize: {

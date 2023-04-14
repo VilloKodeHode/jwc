@@ -6,16 +6,16 @@
 @tailwind utilities;
 
 :root {
-  --primary: #ac6bde;
-  --secondary: #eb65cf;
-  --tertiary: #6865eb;
-  --black: #312b35;
-  --black75: #656068;
-  --black50: #98959a;
-  --black25: #cbcacc;
-  --black15: #e0dfe1;
-  --JWCwhite: #fbf7fd;
-  --JWCwhite10: #f7f1fc
+  --primary: #a2cbcc;
+  --secondary: #f78f6a;
+  --tertiary: #387184;
+  --black: #202929;
+  --black75: #585f5f;
+  --black50: #909494;
+  --black25: #c7c9c9;
+  --black15: #dedfdf;
+  --JWCwhite: #fdfdfd;
+  --JWCwhite10: #f6fafa
 
 }
 
@@ -94,6 +94,15 @@ input, textarea {
   color: transparent;
 
 }
+
+/* .heroBG {
+  background-image: url("/Hero7.png");
+  background-repeat: no-repeat;
+  width: 100vw;
+  background-position: center;
+  background-size: contain;
+  background-color: #10284b;
+} */
 
 .greenplanet {  
   background-image: url('https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png'), url('https://cdn.midjourney.com/642caa24-583f-4c3f-af8d-81d4d807f683/0_2.png');
