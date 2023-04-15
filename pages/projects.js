@@ -1,13 +1,17 @@
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
-import PageLayout, { TextFlex } from "@/components/Layout";
+import PageLayout, { ClientLayout, TextFlex } from "@/components/Layout";
 import ResponsiveH1, {
   ResponsiveH2,
   ResponsiveH3,
+  ResponsiveH4,
+  ResponsiveH5,
   ResponsiveP,
+  ResponsiveUL,
 } from "@/components/Responsive text/ResponsiveText";
 import PROJECT_LIST from "@/components/Projects/projects_list";
 import ProjectCard from "@/components/Projects/ProjectCard";
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Projects() {
   return (
@@ -39,6 +43,42 @@ export default function Projects() {
               />
             ))}
           </div>
+          <section className="relative grid items-start justify-center w-full gap-12 px-4 text-center">
+            <div className="absolute w-screen left-1/2 -translate-x-1/2 h-[70%] bg-JWC-tertiary -translate-y-1/2 top-1/2 " />
+            <TextFlex textWidth="max-w-[60ch]">
+              <div>
+                <ResponsiveH3>Klienter</ResponsiveH3>
+              </div>
+              <ClientLayout>
+                <ResponsiveH4>Wileo AS</ResponsiveH4>
+                <Image
+                  src="/liva-logo.png"
+                  alt="LIVA"
+                  width="50"
+                  height="50"
+                  className="absolute top-5 left-5"
+                />
+                <div className="text-start">
+                  <ResponsiveUL>
+                    <p>Et startup som skal lansere produktet sitt midt i Q2.</p>
+                    <ResponsiveH5 className="font-bold underline">
+                      JWCs roller:
+                    </ResponsiveH5>
+                    <p>Lage deres landingsside</p>
+                    <p>Skape innhold for deres konsept</p>
+                    <p className="text-xs">
+                      (linker kommer når siden lanseres)
+                    </p>
+                    <ResponsiveH5 className="font-bold underline">
+                      JWCs potensielle roller:
+                    </ResponsiveH5>
+                    <p>Komplett design makover for Wileo.no</p>
+                    <p>Innholdskaper for deres nettsted</p>
+                  </ResponsiveUL>
+                </div>
+              </ClientLayout>
+            </TextFlex>
+          </section>
           <section className="relative grid justify-center min-h-[40vh] mb-[112px] text-center">
             <TextFlex>
               <ResponsiveP>

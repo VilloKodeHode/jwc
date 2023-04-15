@@ -20,9 +20,7 @@ export function ResponsiveH2({ children, className }) {
 
 export function ResponsiveH3({ children, className }) {
   return (
-    <h3
-      className={`text-center md:text-h3 text-h4 md:leading-h3 leading-h4 ${className}`}
-    >
+    <h3 className={`md:text-h3 text-h4 md:leading-h3 leading-h4 ${className}`}>
       {children}
     </h3>
   );
@@ -53,6 +51,26 @@ export function ResponsiveP({ children, maxWidth, className }) {
     >
       {children}
     </p>
+  );
+}
+
+export function ResponsiveSmall({ children, maxWidth, className }) {
+  return (
+    <p
+      className={`md:text-p0 text-small md:leading-p0 leading-small ${className} ${maxWidth}`}
+    >
+      {children}
+    </p>
+  );
+}
+
+export function ResponsiveLi({ children, maxWidth, className }) {
+  return (
+    <li
+      className={`md:text-p0 text-small md:leading-p0 leading-small text-JWC-black75 ${className} ${maxWidth}`}
+    >
+      {children}
+    </li>
   );
 }
 

@@ -16,11 +16,14 @@ import ResponsiveH1, {
   ResponsiveH3,
   ResponsiveH4,
   ResponsiveH5,
+  ResponsiveLi,
   ResponsiveP,
+  ResponsiveSmall,
   ResponsiveUL,
 } from "@/components/Responsive text/ResponsiveText";
 import Link from "next/link";
 import SkillWithTabs from "@/components/Skills/SkillsWithTabs";
+import JWCIcon from "@/components/base components/Icon";
 
 export default function Home() {
   return (
@@ -28,123 +31,147 @@ export default function Home() {
       <Head>
         <title>JV Web Consult</title>
         <meta name="description" content="JWC official website" />
+        <meta name="keywords" content="webdesign, utvikling, nettside, SEO" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout gap="gap-28">
-        <div className="heroBG">
-          <section className="relative grid xl:grid-cols-2 md:py-12 sm:pt-0 pt-12 px-12 justify-center items-center mx-auto min-h-[65vh]">
-            <TextFlex>
-              <ResponsiveH1 className="text-left">
-                Webdesign og utvikling
-              </ResponsiveH1>
-              <EqualTwoGrids>
-                <ResponsiveP
-                  maxWidth="max-w-md"
-                  className="text-left text-JWC-black75"
-                >
-                  Lag en engasjerende nettside med JWC. Nettsider som er enkle å
-                  bruke, og som er tilpasset alle enheter.
-                </ResponsiveP>
-                <div className="flex flex-col">
-                  {/* <Link
+        <section className="relative grid xl:grid-cols-2 md:py-12 sm:pt-0 pt-12 px-12 justify-center items-center mx-auto min-h-[65vh]">
+          <TextFlex>
+            <ResponsiveH1 className="text-left">
+              Webdesign og utvikling
+            </ResponsiveH1>
+            <EqualTwoGrids>
+              <ResponsiveP
+                maxWidth="max-w-md"
+                className="text-left text-JWC-black75"
+              >
+                Sammen lager vi en engasjerende nettside for ditt formål: Fra
+                enkle til komplekse nettsider, som er tilpasset alle enheter.
+              </ResponsiveP>
+              <div className="flex flex-col">
+                {/* <Link
                     href="/Norwegian resume shorted JWC.png"
                     target="_blank"
                   >
                     <CallToActionButtonAlt>CV</CallToActionButtonAlt>
                   </Link> */}
-                  <Link href="/contact">
-                    <CallToActionButton>Ta kontakt</CallToActionButton>
-                  </Link>
-                </div>
-              </EqualTwoGrids>
-            </TextFlex>
-            <Image
-              src="/Hero8.png"
-              alt="hero"
-              width="500"
-              height="500"
-              className="mx-auto heroShadow"
-            />
-          </section>
-        </div>
-        <section className="grid items-center min-h-[70vh] justify-center w-screen font-bold text-center lg:grid-cols-2">
-          <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] bg-JWC-black p-4">
-            <div className="">
-              <ResponsiveH2 className="text-JWC-white">
-                JV Web Consult
-              </ResponsiveH2>
-              <ResponsiveH2>
-                <div className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
-                  Joakim Villo
-                </div>
-              </ResponsiveH2>
-            </div>
-            <TextFlex textWidth="max-w-[60ch]">
-              <ResponsiveH3 className="text-JWC-white">
-                Norsk foretak
-              </ResponsiveH3>
-              <ResponsiveP className="text-JWC-white">
-                Virksomheten ble startet i Tønsberg i 2023, og har siden da
-                prioritert mindre oppdrag for å bygge opp en trofast kundebase
-              </ResponsiveP>
-            </TextFlex>
-          </div>
-          <div className="w-screen lg:h-full lg:w-full h-[50vh] tonsbergBG" />
-        </section>
-        <section className="relative grid items-start justify-center w-full gap-12 px-4 text-center">
-          <div className="absolute w-screen left-1/2 -translate-x-1/2 h-[70%] bg-JWC-tertiary -translate-y-1/2 top-1/2 " />
-          <TextFlex textWidth="max-w-[60ch]">
-            <div>
-              <ResponsiveH3>Klienter</ResponsiveH3>
-            </div>
-            <ClientLayout>
-              <ResponsiveH4>Wileo AS</ResponsiveH4>
-              <Image
-                src="/liva-logo.png"
-                alt="LIVA"
-                width="50"
-                height="50"
-                className="absolute top-5 left-5"
-              />
-              <div className="text-start">
-                <ResponsiveUL>
-                  <p>Et startup som skal lansere produktet sitt midt i Q2.</p>
-                  <ResponsiveH5 className="font-bold underline">
-                    JWCs roller:
-                  </ResponsiveH5>
-                  <p>Lage deres landingsside</p>
-                  <p>Skape innhold for deres konsept</p>
-                  <p className="text-xs">(linker kommer når siden lanseres)</p>
-                  <ResponsiveH5 className="font-bold underline">
-                    JWCs potensielle roller:
-                  </ResponsiveH5>
-                  <p>Komplett design makover for Wileo.no</p>
-                  <p>Innholdskaper for deres nettsted</p>
-                </ResponsiveUL>
+                <Link href="/contact">
+                  <CallToActionButton>Ta kontakt</CallToActionButton>
+                </Link>
               </div>
-            </ClientLayout>
+            </EqualTwoGrids>
           </TextFlex>
+          <Image
+            src="/Hero8.png"
+            alt="hero"
+            width="500"
+            height="500"
+            className="mx-auto heroShadow"
+          />
         </section>
-
-        <div className="flex flex-col items-center justify-start">
-          {/* <div className="skillswave topwave h-[250px] animate-waveSlideRight" /> */}
-          <section className="flex relative w-screen min-h-[40vh] py-8 bg-JWC-white10 snap-center font-Lato">
-            <div className="z-20 grid items-start justify-center w-full">
-              <SkillWithTabs />
+        <section className="relative grid justify-center items-center min-h-[35vh] text-left xl:gap-0 gap-12">
+          <TextFlex>
+            <ResponsiveH2 className="flex px-12 text-center">
+              Hva du kan oppnå med JWC
+            </ResponsiveH2>
+          </TextFlex>
+          <div className="flex flex-col items-center justify-center gap-12 xl:flex-row">
+            <div>
+              <div className="flex gap-2 ">
+                <JWCIcon />
+                <ResponsiveP maxWidth="max-w-xs">
+                  Meget konkurransedyktige priser og høy kvalitet
+                </ResponsiveP>
+              </div>
+              <ResponsiveLi maxWidth="max-w-xs" className="ml-8">
+                Tydelig på pris og forvetninger
+              </ResponsiveLi>
             </div>
-          </section>
-          {/* <div className="skillswave bottomwave h-[250px] animate-waveSlideLeft" /> */}
-        </div>
-        <div className="mb-[212px]">
-          <Link href="/projects">
-            <BigButton>
-              <ResponsiveP className="text-JWC-white">
-                Mine prosjekter
-              </ResponsiveP>
-            </BigButton>
-          </Link>
-        </div>
+            <div>
+              <div className="flex gap-2">
+                <JWCIcon />
+                <ResponsiveP maxWidth="max-w-xs">
+                  Optimaliserte websider som bruker den nyeste teknologien
+                </ResponsiveP>
+              </div>
+              <ResponsiveLi maxWidth="max-w-xs" className="ml-8">
+                For best SEO og brukeropplevelse
+              </ResponsiveLi>
+            </div>
+            <div>
+              <div className="flex gap-2 ">
+                <JWCIcon />
+                <ResponsiveP maxWidth="max-w-xs">
+                  God kommunikasjon gjennom hele prosessen
+                </ResponsiveP>
+              </div>
+              <ResponsiveLi maxWidth="max-w-xs" className="ml-8">
+                For å sikre at du får nettsiden du ønsker
+              </ResponsiveLi>
+            </div>
+          </div>
+        </section>
+        <section className="grid items-center justify-center px-12 lg:px-24">
+          <div className="grid items-center justify-center lg:grid-cols-2">
+            <div className="grid items-center justify-center w-full h-full p-8 bg-JWC-primary">
+              <div className="flex flex-col items-center justify-center gap-8">
+                <ResponsiveH4 className="text-center">
+                  My main value proposition fds
+                </ResponsiveH4>
+                <ResponsiveP className="text-center">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  quod, voluptate, quia, voluptas quas voluptatem quibusdam
+                </ResponsiveP>
+                <div>
+                  <ResponsiveLi className="text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </ResponsiveLi>
+                  <ResponsiveLi className="text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </ResponsiveLi>
+                  <ResponsiveLi className="text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  </ResponsiveLi>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <Image
+                width={500}
+                height={500}
+                src="/socialProof1.png"
+                alt="man programming"
+                className="px-12 md:px-0"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col-reverse items-center justify-center lg:grid lg:grid-cols-2">
+            <div className="flex justify-center lg:justify-start">
+              <Image
+                width={500}
+                height={500}
+                src="/socialProof2.png"
+                alt="several people working on a website"
+                className="px-12 md:px-0"
+              />
+            </div>
+
+            <div className="grid items-center justify-center w-full h-full p-8 bg-JWC-primary">
+              <div className="flex flex-col items-center justify-center gap-8">
+                <ResponsiveH4 className="text-center">
+                  My main value proposition fds
+                </ResponsiveH4>
+                <ResponsiveP className="text-center">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  quod, voluptate, quia, voluptas quas voluptatem quibusdam.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  quod, voluptate, quia, voluptas quas voluptatem quibusdam
+                </ResponsiveP>
+              </div>
+            </div>
+          </div>
+        </section>
       </PageLayout>
     </>
   );

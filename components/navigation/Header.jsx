@@ -25,13 +25,16 @@ export default function Header() {
     <>
       <div className="flex items-center justify-between px-12 py-1 font-bold bg-JWC-black text-JWC-white10">
         <LanguageSwitch />
+        <p className="text-sm text-JWC-secondary">
+          Siden er under konstruksjon
+        </p>
         <Link href="/Norwegian resume shorted JWC.png" target="_blank">
           CV
         </Link>
       </div>
 
       <header
-        className={`relative flex flex-col h-28 w-full justify-center animate-SlideInFromTop font-semibold z-10 bg-JWC-white10`}
+        className={`relative flex flex-col h-28 w-full justify-center animate-SlideInFromTop font-semibold z-10`}
       >
         {/* <div className="absolute top-0 left-0 z-0 w-full h-full bg-gradient-to-r from-JWC-primary to-JWC-secondary"></div> */}
         <div className="z-50 flex items-center justify-between px-12 h-28">
