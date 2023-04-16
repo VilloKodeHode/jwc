@@ -64,10 +64,20 @@ export function ResponsiveSmall({ children, maxWidth, className }) {
   );
 }
 
+export function ResponsiveMini({ children, maxWidth, className }) {
+  return (
+    <p
+      className={`md:text-small text-mini md:leading-small leading-mini ${className} ${maxWidth}`}
+    >
+      {children}
+    </p>
+  );
+}
+
 export function ResponsiveLi({ children, maxWidth, className }) {
   return (
     <li
-      className={`md:text-p0 text-small md:leading-p0 leading-small text-JWC-black75 ${className} ${maxWidth}`}
+      className={`md:text-p0 text-small md:leading-p0 leading-small text-JWC-black ${className} ${maxWidth}`}
     >
       {children}
     </li>

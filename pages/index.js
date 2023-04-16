@@ -17,6 +17,7 @@ import ResponsiveH1, {
   ResponsiveH4,
   ResponsiveH5,
   ResponsiveLi,
+  ResponsiveMini,
   ResponsiveP,
   ResponsiveSmall,
   ResponsiveUL,
@@ -42,15 +43,15 @@ export default function Home() {
               <ResponsiveH1 className="text-center xl:text-right">
                 Webdesign og utvikling
               </ResponsiveH1>
-              <div className="flex flex-col items-center justify-center w-full md:flex-row xl:justify-end">
+              <div className="flex flex-col items-center justify-center w-full gap-8 md:flex-row xl:justify-end">
                 <ResponsiveP
                   maxWidth="max-w-sm"
                   className="text-center md:text-right text-JWC-black75"
                 >
-                  Engasjerende nettside for ditt formål: Fra enkle til komplekse
-                  nettsider, som er tilpasset alle enheter.
+                  Engasjerende nettsider for ditt formål: Fra enkle til
+                  komplekse nettsider, som er tilpasset alle enheter.
                 </ResponsiveP>
-                <Link href="/contact">
+                <Link href="/contact" className="">
                   <CallToActionButton>Ta kontakt</CallToActionButton>
                 </Link>
               </div>
@@ -108,8 +109,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="grid items-center justify-center px-12 lg:px-24 mb-[116px]">
-          <div className="grid items-center justify-center lg:grid-cols-2">
+        <section className="relative grid items-center justify-center gap-12 px-12 lg:px-24">
+          <div className="grid items-center justify-center gap-12 lg:grid-cols-2">
             <div className="grid items-center justify-center w-full h-full p-8 bg-JWC-primary">
               <div className="flex flex-col items-center justify-center gap-8">
                 <ResponsiveH4 className="text-center">
@@ -118,22 +119,29 @@ export default function Home() {
                 <ResponsiveP className="text-center">
                   Websidens helhetsutrykk er essensielt for et godt resultat.
                   Derfor trengs det forarbeid for å forsikre at designet du
-                  ønsker både fungerer og er tilpasset dine behov.
+                  ønsker både fungerer og er tilpasset dine behov. Dette er
+                  prosessen som blir fulgt:
                 </ResponsiveP>
                 <div>
                   <ResponsiveLi className="text-left">
                     Først lages en mockup av siden du ønsker, med designmanual.
                   </ResponsiveLi>
+                  <ResponsiveMini className="text-JWC-black75">
+                    Har du allerede en mockup kan denne brukes.
+                  </ResponsiveMini>
                   <ResponsiveLi className="text-left">
                     Deretter lages en prototype for å teste ut designet.
                   </ResponsiveLi>
+                  <ResponsiveMini className="text-JWC-black75">
+                    Igjen om du har en prototype kan denne brukes.
+                  </ResponsiveMini>
                   <ResponsiveLi className="text-left">
                     Tilslutt lages nettsiden i henhold til designmanualen.
                   </ResponsiveLi>
-                  <ResponsiveSmall className="text-JWC-black50">
-                    I alle trinn får oppdragsgiver innsikt og mulighet for å gi
-                    tilbakemeldinger
-                  </ResponsiveSmall>
+                  <ResponsiveMini className="text-JWC-black75">
+                    <br />I alle trinn får oppdragsgiver innsikt og mulighet for
+                    å gi tilbakemeldinger.
+                  </ResponsiveMini>
                 </div>
               </div>
             </div>
@@ -147,8 +155,8 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="flex flex-col-reverse items-center justify-center lg:grid lg:grid-cols-2">
-            <div className="flex justify-center lg:justify-start">
+          <div className="flex flex-col-reverse items-center justify-center gap-12 lg:grid lg:grid-cols-2">
+            <div className="flex justify-center">
               <Image
                 width={500}
                 height={500}
@@ -164,14 +172,24 @@ export default function Home() {
                   Hva med pris?
                 </ResponsiveH4>
                 <ResponsiveP className="text-center">
-                  Mine priser er svært konkurransedyktige som følge av at jeg
-                  ønsker å tilby kundene mine det beste til en rimelig pris. Jeg
-                  har også en god forståelse for hva som kreves for å lage en
-                  god nettside, og derfor er jeg i stand til å gi deg en god
-                  pris.
+                  Konkurransedyktige priser for å kunne tilby det beste,
+                  rimelig. Endelig pris blir diskutert og avtalt før prosjektet
+                  starter.
                 </ResponsiveP>
               </div>
             </div>
+          </div>
+        </section>
+        <section className="relative grid items-center justify-center gap-2 px-12 pt-12 mx-auto md:py-12 sm:pt-0 xl:gap-16 mb-[116px]">
+          <TextFlex>
+            <ResponsiveH3 className="flex px-12 text-center">
+              La oss lage noe fantastisk sammen!
+            </ResponsiveH3>
+          </TextFlex>
+          <div className="flex flex-col items-center justify-center w-full">
+            <Link href="/contact">
+              <CallToActionButton>Ta kontakt</CallToActionButton>
+            </Link>
           </div>
         </section>
       </PageLayout>

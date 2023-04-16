@@ -2,7 +2,7 @@ export default function CallToActionButton({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="flex px-16 m-4 font-semibold shadow-md h-14 w-72 text-JWC-white font-Roboto shadow-JWC-tertiary btn bg-gradient-to-r from-JWC-primary to-JWC-secondary rounded-3xl"
+      className="flex px-16 font-semibold shadow-md h-14 w-72 text-JWC-white font-Roboto shadow-JWC-tertiary btn bg-gradient-to-r from-JWC-primary to-JWC-secondary rounded-3xl"
     >
       <>{children}</>
     </button>
