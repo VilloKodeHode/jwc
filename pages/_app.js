@@ -5,7 +5,6 @@ import Drawer from "@/components/navigation/Drawer";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Footer from "@/components/navigation/Footer";
 import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
-// import { IBM_Plex_Mono, Inter, PT_Serif } from "@next/font/google";
 
 const theme = extendTheme({
   colors: {
@@ -37,38 +36,10 @@ const theme = extendTheme({
   },
 });
 
-// const mono = IBM_Plex_Mono({
-//   variable: "--font-mono",
-//   subsets: ["latin"],
-//   weight: ["500", "700"],
-// });
-
-// const sans = Inter({
-//   variable: "--font-sans",
-//   subsets: ["latin"],
-//   weight: ["500", "700", "800"],
-// });
-
-// const serif = PT_Serif({
-//   variable: "--font-serif",
-//   style: ["normal", "italic"],
-//   subsets: ["latin"],
-//   weight: ["400", "700"],
-// });
-
 export default function App({ Component, pageProps }) {
   const [language, setLanguage] = useState("Norwegian");
   return (
     <>
-      {/* <style jsx global>
-        {`
-          :root {
-            --font-mono: ${mono.style.fontFamily};
-            --font-sans: ${sans.style.fontFamily};
-            --font-serif: ${serif.style.fontFamily};
-          }
-        `}
-      </style> */}
       <LanguageContext.Provider value={{ language, setLanguage }}>
         <ChakraProvider theme={theme}>
           <Header />

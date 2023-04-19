@@ -1,32 +1,24 @@
-import anime from "animejs";
 import Head from "next/head";
 import Image from "next/image";
-import PageLayout, {
-  ClientLayout,
-  EqualTwoGrids,
-  TextFlex,
-} from "@/components/Layout";
+import PageLayout, { TextFlex } from "@/components/Layout";
 
-import CallToActionButton, {
-  BigButton,
-  CallToActionButtonAlt,
-} from "@/components/Buttons";
+import CallToActionButton from "@/components/Buttons";
 import ResponsiveH1, {
   ResponsiveH2,
   ResponsiveH3,
   ResponsiveH4,
-  ResponsiveH5,
+  ResponsiveHeaderH1,
   ResponsiveLi,
   ResponsiveMini,
   ResponsiveP,
-  ResponsiveSmall,
-  ResponsiveUL,
 } from "@/components/Responsive text/ResponsiveText";
 import Link from "next/link";
-import SkillWithTabs from "@/components/Skills/SkillsWithTabs";
+
 import JWCIcon from "@/components/base components/Icon";
+import { useState } from "react";
 
 export default function Home() {
+  const [currentWeb, setCurrentWeb] = useState("/Hero8.png");
   return (
     <>
       <Head>
@@ -37,12 +29,43 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout gap="gap-28">
-        <section className="relative grid xl:grid-cols-2 md:py-12 sm:pt-0 pt-12 xl:gap-16 gap-2 px-12 justify-center items-center mx-auto min-h-[45vh]">
-          <div className="flex items-center justify-center w-full h-full">
+        <section className="relative grid xl:grid-cols-[60%_40%] group/imageEffect md:py-12 sm:pt-0 pt-12 xl:gap-16 gap-2 px-12 justify-center items-center mx-auto min-h-[45vh]">
+          <div className="flex items-center justify-center w-full h-full web">
             <TextFlex>
-              <ResponsiveH1 className="text-center xl:text-right">
-                Webdesign og utvikling
-              </ResponsiveH1>
+              <div className="flex items-center justify-end">
+                <ResponsiveHeaderH1 className="flex flex-col items-center justify-center text-center xl:items-end headertext xl:text-right">
+                  <span
+                    onMouseEnter={() => setCurrentWeb("/HeroDesign.webp")}
+                    onMouseLeave={() => setCurrentWeb("/Hero8.png")}
+                    className="cursor-pointer group text-JWC-primary w-fit"
+                  >
+                    <span className="group-hover:opacity-100 opacity-10 h1hidden">
+                      Web
+                    </span>
+                    design
+                  </span>{" "}
+                  <span
+                    onMouseEnter={() => setCurrentWeb("/HeroDevelopment.webp")}
+                    onMouseLeave={() => setCurrentWeb("/Hero8.png")}
+                    className="cursor-pointer group text-JWC-secondary w-fit"
+                  >
+                    <span className="group-hover:opacity-100 opacity-10 h1hidden">
+                      Web
+                    </span>
+                    utvikling
+                  </span>{" "}
+                  <span
+                    onMouseEnter={() => setCurrentWeb("/HeroCollage.webp")}
+                    onMouseLeave={() => setCurrentWeb("/Hero8.png")}
+                    className="cursor-pointer group text-JWC-tertiary w-fit"
+                  >
+                    <span className="group-hover:opacity-100 opacity-10 h1hidden">
+                      Web
+                    </span>
+                    innhold
+                  </span>
+                </ResponsiveHeaderH1>
+              </div>
               <div className="flex flex-col items-center justify-center w-full gap-8 md:flex-row xl:justify-end">
                 <ResponsiveP
                   maxWidth="max-w-sm"
@@ -57,13 +80,13 @@ export default function Home() {
               </div>
             </TextFlex>
           </div>
-          <div className="flex justify-center w-full h-full xl:justify-start">
+          <div className="flex justify-center w-full h-full border-black xl:justify-start ">
             <Image
-              src="/Hero8.png"
+              src={currentWeb}
               alt="hero"
               width={500}
               height={500}
-              className=""
+              className="m-4 duration-300 opacity-90 shadowblend group-hover/imageEffect:opacity-100"
             />
           </div>
         </section>
@@ -151,7 +174,7 @@ export default function Home() {
                 height={500}
                 src="/socialProof1.png"
                 alt="man programming"
-                className="px-12 md:px-0"
+                className="px-12 md:px-0 shadowblend"
               />
             </div>
           </div>
@@ -162,7 +185,7 @@ export default function Home() {
                 height={500}
                 src="/socialProof2.png"
                 alt="several people working on a website"
-                className="px-12 md:px-0"
+                className="px-12 md:px-0 shadowblend"
               />
             </div>
 
@@ -173,8 +196,7 @@ export default function Home() {
                 </ResponsiveH4>
                 <ResponsiveP className="text-center">
                   Konkurransedyktige priser for å kunne tilby det beste,
-                  rimelig. Endelig pris blir diskutert og avtalt før prosjektet
-                  starter.
+                  rimelig. Pris blir diskutert og avtalt før prosjektet starter.
                 </ResponsiveP>
               </div>
             </div>
@@ -183,7 +205,7 @@ export default function Home() {
         <section className="relative grid items-center justify-center gap-2 px-12 pt-12 mx-auto md:py-12 sm:pt-0 xl:gap-16 mb-[116px]">
           <TextFlex>
             <ResponsiveH3 className="flex px-12 text-center">
-              La oss lage noe fantastisk sammen!
+              La oss lage noe fantastisk!
             </ResponsiveH3>
           </TextFlex>
           <div className="flex flex-col items-center justify-center w-full">

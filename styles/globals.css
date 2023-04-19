@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@font-face {
+    font-family: SalmaProNarrow;
+    src: url('/fonts/SalmaproMediumnarrow-VG5v6.otf');
+}
+@font-face {
+    font-family: SalmaPro;
+    src: url('/fonts/SalmaproMedium-0Wooo.otf');
+}
+@font-face {
+    font-family: RcRocket;
+    src: url('/fonts/RcRocketRegular-0WVW9.otf');
+}
+
+
+
 
 @tailwind base;
 @tailwind components;
@@ -15,11 +30,17 @@
   --black25: #c7c9c9;
   --black15: #dedfdf;
   --JWCwhite: #fdfdfd;
-  --JWCwhite10: #f6fafa
+  --JWCwhite10: #f6fafa;
+  --JWCwhite15: #f1f7f8;
+  --JWCwhite20: #ecf5f5;
+  --JWCwhite25: #e7f2f2;
 
 }
 
-
+.shadowblend {
+  box-shadow: 0 0 5px 10px var(--JWCwhite);
+  border-radius: 10px;
+}
 
 .tonsbergBG {
   background-image: url('/Tonsberg.jpg');
@@ -115,12 +136,12 @@ input, textarea {
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: Lato;
+  font-family: SalmaPro;
   font-weight: 900;
 }
 
   p, li, ul {
-font-family: Roboto;
+font-family: SalmaPro;
 }
 
 .skillGlow {
@@ -137,8 +158,8 @@ font-family: Roboto;
 }
 
 #__next {
-  /* background: linear-gradient(168.55deg, var(--primary) 2.41%, white 45.79%); */
-  background-color: var(--JWCwhite);
+  /* background: linear-gradient(180deg, var(--JWCwhite15), var(--secondary), var(--tertiary)); */
+  background-color: var(--JWCwhite25);
   text-rendering: optimizeLegibility;
 
 }
@@ -156,3 +177,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* .web-image {
+  transition: transform 0.5s ease-in-out;
+}
+
+.web:hover + .web-image {
+  transform: opacity(0);
+} */
+

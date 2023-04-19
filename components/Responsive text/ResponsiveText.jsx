@@ -1,14 +1,26 @@
 // Components to simplify the use of responsive text
 
+
 export default function ResponsiveH1({ children, className }) {
   return (
     <h1
-      className={`max-w-4xl text-center lg:text-h1 sm:text-h2 text-h3 lg:leading-h1 sm:leading-h2 leading-h3 ${className}`}
+      className={`lg:text-h1 sm:text-h2 text-h3 lg:leading-h1 sm:leading-h2 leading-h3 ${className}`}
     >
       {children}
     </h1>
   );
 }
+
+export function ResponsiveHeaderH1({ children, className }) {
+  return (
+    <h1
+      className={`lg:text-h1 sm:text-h2 text-h3 lg:leading-h1 sm:leading-h2 leading-h3 ${className}`}
+    >
+      {children}
+    </h1>
+  );
+}
+
 
 export function ResponsiveH2({ children, className }) {
   return (

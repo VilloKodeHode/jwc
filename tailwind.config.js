@@ -42,6 +42,7 @@ module.exports = {
           logo: "#3c4343",
           white: "#fdfdfd",
           white10: "#f6fafa",
+          white15: "#f1f7f8",
         },
       },
       fontSize: {
