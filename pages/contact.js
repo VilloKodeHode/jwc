@@ -53,8 +53,8 @@ export default function TestForm() {
       <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center min-w-[80%] min-h-[70vh] my-28 text-center">
         <div className="flex justify-center px-8">
           <ResponsiveH4 className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent lg:max-w-[20ch] max-w-[30ch]">
-            Fyll ut skjemaet om du ønsker at jeg skal lage noe for deg, så vil
-            du bli kontaktet så raskt som mulig.
+            Fyll ut skjemaet om du ønsker å ta en prat, så vil du bli kontaktet
+            snarest.
           </ResponsiveH4>
         </div>
         <form
@@ -154,14 +154,16 @@ export default function TestForm() {
         </form>
         {showModal && (
           <div className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="flex flex-col items-center justify-center relative p-8 bg-white rounded-3xl xl:max-w-[50%] max-w-[80%]">
-              <ResponsiveH2 className="text-JWC-tertiary">
-                Thank you for your message!
+            <div className="flex flex-col items-center justify-center relative p-8 bg-JWC-black rounded-3xl xl:max-w-[50%] max-w-[80%]">
+              <ResponsiveH2 className="text-JWC-secondary">
+                Takk for at du tok kontakt!
               </ResponsiveH2>
-              <ResponsiveP className="text-JWC-tertiary">
-                I will get back to you as soon as possible.
+              <ResponsiveP className="text-JWC-primary">
+                Du vil snart få svar på henvendelsen din.
               </ResponsiveP>
-              <ResponsiveP>Let make something great togheter!</ResponsiveP>
+              <ResponsiveP className="text-JWC-primary">
+                La oss lage noe fantastisk!
+              </ResponsiveP>
               <Image
                 src="/loading.svg"
                 width={200}
@@ -169,7 +171,7 @@ export default function TestForm() {
                 alt="loading..."
               />
               <CallToActionButton onClick={() => setShowModal(false)}>
-                Okeydokey!
+                Flotters!
               </CallToActionButton>
             </div>
           </div>

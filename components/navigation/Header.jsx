@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <>
       <div className="flex items-center justify-between px-12 py-1 font-bold bg-JWC-black text-JWC-white10">
-        <LanguageSwitch />
+        {/* <LanguageSwitch /> */}
         <p className="text-sm text-JWC-secondary">
           Siden er under konstruksjon
         </p>

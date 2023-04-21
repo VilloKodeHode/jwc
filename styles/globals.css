@@ -37,6 +37,10 @@
 
 }
 
+.particles {
+  border: 10px solid white;
+}
+
 .shadowblend {
   box-shadow: 0 0 5px 10px var(--JWCwhite);
   border-radius: 10px;
@@ -47,6 +51,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
 }
 
 .headerwave {

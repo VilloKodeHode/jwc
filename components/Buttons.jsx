@@ -24,7 +24,7 @@ export function BigButton({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="h-20 px-16 py-4 m-4 text-xl w-80 text-JWC-white font-Roboto shadow-JWC-black btn bg-gradient-to-r from-JWC-black75 to-JWC-black rounded-3xl"
+      className="h-20 px-16 py-4 m-4 w-80 text-JWC-white font-Roboto shadow-JWC-black btn bg-gradient-to-r from-JWC-black75 to-JWC-black rounded-3xl"
     >
       <>{children}</>
     </button>

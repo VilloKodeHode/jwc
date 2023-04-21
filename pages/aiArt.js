@@ -18,20 +18,47 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center w-screen text-center">
-          <div className="bg-[url('https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png')] flex bg-cover px-8 py-16 h-full min-h-[45vh]">
+        <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center min-w-full text-center">
+          {/* <div className="bg-[url('https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png')] flex bg-cover px-8 py-16 h-full min-h-[45vh]">
             <TextFlex>
               <ResponsiveH1 className="font-light text-JWC-white clearText font-Lato">
                 Jeg lager AI genererte bilder
               </ResponsiveH1>
             </TextFlex>
+          </div> */}
+          <div className="relative px-8 py-16 h-full lg:min-w-[50vw] min-w-[100vw] min-h-[45vh]">
+            <Image
+              src="https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png"
+              alt="Green plantet"
+              cover="true"
+              style={{ objectFit: "cover", objectPosition: "top" }}
+              fill="true"
+              priority={true}
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <TextFlex>
+                <ResponsiveH2 className="font-light text-JWC-white clearText font-Lato">
+                  Jeg lager AI genererte bilder
+                </ResponsiveH2>
+              </TextFlex>
+            </div>
           </div>
-          <div className="bg-[url('https://cdn.midjourney.com/591f3ac9-8b22-46ee-91cd-d4a9b1ae53b7/grid_0.png')] bg-cover px-8 py-16 h-full flex min-h-[45vh] clearText">
-            <TextFlex>
-              <ResponsiveH3 className="font-light text-JWC-white font-Lato ">
-                Nettinnhold til din side
-              </ResponsiveH3>
-            </TextFlex>
+          <div className="relative px-8 py-16 h-full lg:min-w-[50vw] min-w-[100vw] min-h-[45vh] overflow-hidden">
+            <Image
+              src="https://cdn.midjourney.com/591f3ac9-8b22-46ee-91cd-d4a9b1ae53b7/grid_0.png"
+              alt="Etheral Angel"
+              cover="true"
+              style={{ objectFit: "cover", objectPosition: "top" }}
+              fill="true"
+              priority={true}
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <TextFlex>
+                <ResponsiveH3 className="font-light text-JWC-white font-Lato ">
+                  Nettinnhold til din side
+                </ResponsiveH3>
+              </TextFlex>
+            </div>
           </div>
         </section>
         <section className="grid justify-center w-screen bg-JWC-black">

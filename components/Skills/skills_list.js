@@ -17,12 +17,18 @@ const SKILLS_LIST = [
     alt: "JavaScript icon",
     skilltype: "code language",
   },
-  // {
-  //   name: "React",
-  //   imageSrc: "/images/skills/logos_react.svg",
-  //   alt: "React icon",
-  //   skilltype: "framework",
-  // },
+  {
+    name: "GraphQL",
+    imageSrc: "/images/skills/logos_graphql.svg",
+    alt: "GraphQL icon",
+    skilltype: "code language",
+  },
+  {
+    name: "React",
+    imageSrc: "/images/skills/logos_react.svg",
+    alt: "React icon",
+    skilltype: "framework",
+  },
   {
     name: "Nextjs",
     imageSrc: "/images/skills/logos_nextjs.svg",
@@ -39,6 +45,12 @@ const SKILLS_LIST = [
     name: "Nuxt",
     imageSrc: "/images/skills/logos_nuxt.svg",
     alt: "Nuxt icon",
+    skilltype: "framework",
+  },
+  {
+    name: "Sanity",
+    imageSrc: "/images/skills/logos_sanity.svg",
+    alt: "Sanity icon",
     skilltype: "framework",
   },
   {

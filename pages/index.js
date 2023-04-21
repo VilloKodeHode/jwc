@@ -16,6 +16,8 @@ import Link from "next/link";
 
 import JWCIcon from "@/components/base components/Icon";
 import { useState } from "react";
+import THREEBackground from "@/components/animation/Cube";
+import THREESpace from "@/components/animation/Space";
 
 export default function Home() {
   const [currentWeb, setCurrentWeb] = useState("/Hero8.png");
@@ -87,7 +89,16 @@ export default function Home() {
               width={500}
               height={500}
               className="m-4 duration-300 opacity-90 shadowblend group-hover/imageEffect:opacity-100"
+              priority={true}
             />
+          </div>
+        </section>
+        <section className="relative snap-y snap-mandatory">
+          <THREESpace className="snap-center" />
+          <div className="absolute z-10 px-12 translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 w-fit">
+            <ResponsiveH3 className="flex flex-wrap text-JWC-white15">
+              Welcome to infinite <br /> possibilites!
+            </ResponsiveH3>
           </div>
         </section>
         <section className="relative grid justify-center items-center min-h-[35vh] text-left xl:gap-0 gap-12">
@@ -134,9 +145,9 @@ export default function Home() {
         </section>
         <section className="relative grid items-center justify-center gap-12 px-12 lg:px-24">
           <div className="grid items-center justify-center gap-12 lg:grid-cols-2">
-            <div className="grid items-center justify-center w-full h-full p-8 bg-JWC-primary">
+            <div className="grid items-center justify-center w-full h-full p-8 bg-JWC-secondary rounded-xl">
               <div className="flex flex-col items-center justify-center gap-8">
-                <ResponsiveH4 className="text-center">
+                <ResponsiveH4 className="text-center text-JWC-tertiary">
                   Design fra idè til virkelighet
                 </ResponsiveH4>
                 <ResponsiveP className="text-center">
@@ -174,7 +185,7 @@ export default function Home() {
                 height={500}
                 src="/socialProof1.png"
                 alt="man programming"
-                className="px-12 md:px-0 shadowblend"
+                className="mx-12 md:px-0 shadowblend"
               />
             </div>
           </div>
@@ -185,13 +196,13 @@ export default function Home() {
                 height={500}
                 src="/socialProof2.png"
                 alt="several people working on a website"
-                className="px-12 md:px-0 shadowblend"
+                className="mx-12 md:px-0 shadowblend"
               />
             </div>
 
-            <div className="grid items-center justify-center w-full h-full p-8 bg-JWC-primary">
+            <div className="grid items-center justify-center w-full h-full p-8 bg-JWC-secondary rounded-xl">
               <div className="flex flex-col items-center justify-center gap-8">
-                <ResponsiveH4 className="text-center">
+                <ResponsiveH4 className="text-center text-JWC-tertiary">
                   Hva med pris?
                 </ResponsiveH4>
                 <ResponsiveP className="text-center">
@@ -204,7 +215,7 @@ export default function Home() {
         </section>
         <section className="relative grid items-center justify-center gap-2 px-12 pt-12 mx-auto md:py-12 sm:pt-0 xl:gap-16 mb-[116px]">
           <TextFlex>
-            <ResponsiveH3 className="flex px-12 text-center">
+            <ResponsiveH3 className="flex px-12 text-center bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
               La oss lage noe fantastisk!
             </ResponsiveH3>
           </TextFlex>

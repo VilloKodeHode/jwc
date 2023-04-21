@@ -4,6 +4,7 @@ import ResponsiveH1, {
   ResponsiveH2,
   ResponsiveH3,
   ResponsiveP,
+  ResponsiveSmall,
 } from "@/components/Responsive text/ResponsiveText";
 import SkillWithTabs from "@/components/Skills/SkillsWithTabs";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -47,9 +48,9 @@ export default function About() {
       <div className="mb-[92px]">
         <Link href="/projects">
           <BigButton>
-            <ResponsiveP className="text-JWC-white">
+            <ResponsiveSmall className="text-JWC-white">
               Mine prosjekter
-            </ResponsiveP>
+            </ResponsiveSmall>
           </BigButton>
         </Link>
       </div>
