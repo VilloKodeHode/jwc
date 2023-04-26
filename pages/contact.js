@@ -147,7 +147,7 @@ export default function TestForm() {
               ></input>
             </div>
 
-            <div className="mt-8">
+            <div className="grid justify-start mt-8">
               <CallToActionButton type="submit">Send</CallToActionButton>
             </div>
           </div>

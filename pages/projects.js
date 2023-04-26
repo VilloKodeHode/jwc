@@ -50,7 +50,7 @@ export default function Projects() {
                 <ResponsiveH3>Klienter</ResponsiveH3>
               </div>
               <ClientLayout>
-                <ResponsiveH4>Wileo AS</ResponsiveH4>
+                <ResponsiveH4 className="text-JWC-black">Wileo AS</ResponsiveH4>
                 <Image
                   src="/liva-logo.png"
                   alt="LIVA"
@@ -58,22 +58,30 @@ export default function Projects() {
                   height="50"
                   className="absolute top-5 left-5"
                 />
-                <div className="text-start">
+                <div className="text-start ">
                   <ResponsiveUL>
-                    <p>Et startup som skal lansere produktet sitt midt i Q2.</p>
-                    <ResponsiveH5 className="font-bold underline">
+                    <p className="text-JWC-black">
+                      Et startup som skal lansere produktet sitt midt i Q2.
+                    </p>
+                    <ResponsiveH5 className="font-bold underline text-JWC-black">
                       JWCs roller:
                     </ResponsiveH5>
-                    <p>Lage deres landingsside</p>
-                    <p>Skape innhold for deres konsept</p>
-                    <p className="text-xs">
+                    <p className="text-JWC-black">Lage deres landingsside</p>
+                    <p className="text-JWC-black">
+                      Skape innhold for deres konsept
+                    </p>
+                    <p className="text-xs text-JWC-black">
                       (linker kommer når siden lanseres)
                     </p>
-                    <ResponsiveH5 className="font-bold underline">
+                    <ResponsiveH5 className="font-bold underline text-JWC-black">
                       JWCs potensielle roller:
                     </ResponsiveH5>
-                    <p>Komplett design makover for Wileo.no</p>
-                    <p>Innholdskaper for deres nettsted</p>
+                    <p className="text-JWC-black">
+                      Komplett design makover for Wileo.no
+                    </p>
+                    <p className="text-JWC-black">
+                      Innholdskaper for deres nettsted
+                    </p>
                   </ResponsiveUL>
                 </div>
               </ClientLayout>

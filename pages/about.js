@@ -15,7 +15,7 @@ export default function About() {
   return (
     <PageLayout gap="gap-28">
       <section className="grid items-center min-h-[70vh] justify-center w-screen font-bold text-center lg:grid-cols-2 mt-[56px]">
-        <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] bg-JWC-black p-4">
+        <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] bg-JWC-primary p-4">
           <div className="">
             <ResponsiveH2 className="text-JWC-white">
               JV Web Consult
@@ -39,7 +39,7 @@ export default function About() {
         <div className="w-screen lg:h-full lg:w-full h-[50vh] tonsbergBG" />
       </section>
 
-      <section className="flex relative w-screen min-h-[40vh] py-8 bg-JWC-white10 snap-center font-Lato">
+      <section className="flex relative w-screen min-h-[40vh] py-8 bg-JWC-tertiary snap-center font-Lato">
         <div className="z-20 grid items-start justify-center w-full">
           <SkillWithTabs />
         </div>

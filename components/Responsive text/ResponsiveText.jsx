@@ -89,7 +89,7 @@ export function ResponsiveMini({ children, maxWidth, className }) {
 export function ResponsiveLi({ children, maxWidth, className }) {
   return (
     <li
-      className={`md:text-p0 text-small md:leading-p0 leading-small text-JWC-black ${className} ${maxWidth}`}
+      className={`md:text-p0 text-small md:leading-p0 leading-small ${className} ${maxWidth}`}
     >
       {children}
     </li>

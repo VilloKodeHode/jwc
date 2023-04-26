@@ -1,8 +1,10 @@
+import { ResponsiveP } from "./Responsive text/ResponsiveText";
+
 export default function CallToActionButton({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="flex px-16 font-semibold shadow-md h-14 w-72 text-JWC-white font-Roboto shadow-JWC-tertiary btn bg-gradient-to-r from-JWC-primary to-JWC-secondary rounded-3xl"
+      className="grid items-center px-10 py-4 m-4 font-semibold uppercase duration-100 ease-in-out rounded-md shadow-sm text-JWC-black active:scale-95 text-p font-Roboto shadow-JWC-black bg-gradient-to-r hover:scale-105 from-JWC-primary to-JWC-secondary"
     >
       <>{children}</>
     </button>
@@ -13,7 +15,7 @@ export function CallToActionButtonAlt({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="w-48 px-16 py-4 m-4 shadow-md text-JWC-white font-Roboto shadow-JWC-black btn bg-gradient-to-r from-JWC-black75 to-JWC-black rounded-3xl"
+      className="grid items-center px-10 py-4 m-4 font-semibold uppercase duration-100 ease-in-out rounded-md shadow-sm active:scale-95 text-p text-JWC-white font-Roboto shadow-JWC-black bg-gradient-to-r from-JWC-black hover:scale-105 to-JWC-black75"
     >
       <>{children}</>
     </button>

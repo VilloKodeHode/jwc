@@ -38,9 +38,9 @@ const THREESpace = () => {
       });
       const particle = new THREE.Mesh(geometry, material);
       particle.position.set(
-        (Math.random() - 0.5) * 10,
-        (Math.random() - 0.5) * 10,
-        (Math.random() - 0.5) * 10
+        (Math.random() - 0.5) * 15,
+        (Math.random() - 0.5) * 15,
+        (Math.random() - 0.5) * 15
       );
       particle.scale.set(0.1, 0.1, 0.1);
 
@@ -49,7 +49,7 @@ const THREESpace = () => {
 
     scene.add(particles);
 
-    camera.position.z = 5;
+    camera.position.z = 10;
 
     function animate() {
       requestAnimationFrame(animate);
@@ -64,7 +64,7 @@ const THREESpace = () => {
     animate();
   }, []);
 
-  return <canvas ref={canvasRef} />;
+  return <canvas ref={canvasRef} className="absolute top-0" />;
 };
 
 export default THREESpace;

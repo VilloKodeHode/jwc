@@ -31,7 +31,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout gap="gap-28">
-        <section className="relative grid xl:grid-cols-[60%_40%] group/imageEffect md:py-12 sm:pt-0 pt-12 xl:gap-16 gap-2 px-12 justify-center items-center mx-auto min-h-[45vh]">
+        {/* <div className="min-h-[50vh] w-screen]"> */}
+        <section className="grid xl:grid-cols-[60%_40%] group/imageEffect md:py-12 z-20 sm:pt-0 pt-12 xl:gap-16 gap-2 px-12 justify-center items-center mx-auto min-h-[45vh] w-screen">
           <div className="flex items-center justify-center w-full h-full web">
             <TextFlex>
               <div className="flex items-center justify-end">
@@ -71,7 +72,7 @@ export default function Home() {
               <div className="flex flex-col items-center justify-center w-full gap-8 md:flex-row xl:justify-end">
                 <ResponsiveP
                   maxWidth="max-w-sm"
-                  className="text-center md:text-right text-JWC-black75"
+                  className="text-center md:text-right text-JWC-white15 clearText"
                 >
                   Engasjerende nettsider for ditt formål: Fra enkle til
                   komplekse nettsider, som er tilpasset alle enheter.
@@ -82,7 +83,7 @@ export default function Home() {
               </div>
             </TextFlex>
           </div>
-          <div className="flex justify-center w-full h-full border-black xl:justify-start ">
+          <div className="flex justify-center w-full h-full xl:justify-start ">
             <Image
               src={currentWeb}
               alt="hero"
@@ -93,29 +94,35 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className="relative snap-y snap-mandatory">
+        <THREESpace className="absolute top-0 -z-10" />
+        {/* </div> */}
+
+        {/* <section className="relative snap-y snap-mandatory">
           <THREESpace className="snap-center" />
           <div className="absolute z-10 px-12 translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 w-fit">
             <ResponsiveH3 className="flex flex-wrap text-JWC-white15">
               Welcome to infinite <br /> possibilites!
             </ResponsiveH3>
           </div>
-        </section>
+        </section> */}
         <section className="relative grid justify-center items-center min-h-[35vh] text-left xl:gap-0 gap-12">
           <TextFlex>
             <ResponsiveH2 className="flex px-12 text-center">
               Hva du kan oppnå med JWC
             </ResponsiveH2>
           </TextFlex>
-          <div className="flex flex-col items-center justify-center gap-12 xl:flex-row">
+          <div className="flex flex-wrap justify-center gap-12 xl:items-start text-JWC-white15">
             <div>
-              <div className="flex gap-2 ">
+              <div className="flex gap-2">
                 <JWCIcon />
                 <ResponsiveP maxWidth="max-w-xs">
                   Meget konkurransedyktige priser og høy kvalitet
                 </ResponsiveP>
               </div>
-              <ResponsiveLi maxWidth="max-w-xs" className="ml-8">
+              <ResponsiveLi
+                maxWidth="max-w-xs"
+                className="ml-8 text-JWC-black25"
+              >
                 Tydelig på pris og forvetninger
               </ResponsiveLi>
             </div>
@@ -126,7 +133,10 @@ export default function Home() {
                   Optimaliserte websider som bruker den nyeste teknologien
                 </ResponsiveP>
               </div>
-              <ResponsiveLi maxWidth="max-w-xs" className="ml-8">
+              <ResponsiveLi
+                maxWidth="max-w-xs"
+                className="ml-8 text-JWC-black25"
+              >
                 For best SEO og brukeropplevelse
               </ResponsiveLi>
             </div>
@@ -137,7 +147,10 @@ export default function Home() {
                   God kommunikasjon gjennom hele prosessen
                 </ResponsiveP>
               </div>
-              <ResponsiveLi maxWidth="max-w-xs" className="ml-8">
+              <ResponsiveLi
+                maxWidth="max-w-xs"
+                className="ml-8 text-JWC-black25"
+              >
                 For å sikre at du får nettsiden du ønsker
               </ResponsiveLi>
             </div>
@@ -150,7 +163,7 @@ export default function Home() {
                 <ResponsiveH4 className="text-center text-JWC-tertiary">
                   Design fra idè til virkelighet
                 </ResponsiveH4>
-                <ResponsiveP className="text-center">
+                <ResponsiveP className="text-center text-JWC-black">
                   Websidens helhetsutrykk er essensielt for et godt resultat.
                   Derfor trengs det forarbeid for å forsikre at designet du
                   ønsker både fungerer og er tilpasset dine behov. Dette er
@@ -205,7 +218,7 @@ export default function Home() {
                 <ResponsiveH4 className="text-center text-JWC-tertiary">
                   Hva med pris?
                 </ResponsiveH4>
-                <ResponsiveP className="text-center">
+                <ResponsiveP className="text-center text-JWC-black">
                   Konkurransedyktige priser for å kunne tilby det beste,
                   rimelig. Pris blir diskutert og avtalt før prosjektet starter.
                 </ResponsiveP>

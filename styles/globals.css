@@ -37,13 +37,11 @@
 
 }
 
-.particles {
-  border: 10px solid white;
-}
 
 .shadowblend {
-  box-shadow: 0 0 5px 10px var(--JWCwhite);
-  border-radius: 10px;
+  box-shadow: 0 0 5px 10px var(--black75);
+  border: 10px solid;
+  border-image: linear-gradient(45deg, var(--primary), var(--secondary),  var(--tertiary)) 1;
 }
 
 .tonsbergBG {
@@ -113,7 +111,7 @@ input, textarea {
 }
 
   h1,h2,h3,h4,h5,p {
-  color: var(--black);
+  color: var(--JWCwhite25);
 }
 
 .transparent {
@@ -164,7 +162,7 @@ font-family: SalmaPro;
 
 #__next {
   /* background: linear-gradient(180deg, var(--JWCwhite15), var(--secondary), var(--tertiary)); */
-  background-color: var(--JWCwhite25);
+  background-color: var(--black);
   text-rendering: optimizeLegibility;
 
 }
