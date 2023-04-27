@@ -16,7 +16,6 @@ import Link from "next/link";
 
 import JWCIcon from "@/components/base components/Icon";
 import { useState } from "react";
-import THREEBackground from "@/components/animation/Cube";
 import THREESpace from "@/components/animation/Space";
 
 export default function Home() {
