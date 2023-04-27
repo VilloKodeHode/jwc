@@ -9,7 +9,7 @@ import { ResponsiveH5, ResponsiveP } from "../Responsive text/ResponsiveText";
 export default function Footer() {
   return (
     <>
-      <div className="relative pt-12 pb-12 bg-JWC-primary">
+      <div className="relative pt-12 pb-12 bg-JWC-tertiary">
         {/* <div className="absolute footerwave h-[80px] z-10 -top-1/3" /> */}
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">

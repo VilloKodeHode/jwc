@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="relative z-10 flex items-center justify-between px-12 py-1 font-bold bg-JWC-black75 text-JWC-white10">
+      <div className="relative z-10 flex items-center justify-between px-12 py-1 font-bold bg-JWC-tertiary text-JWC-white10">
         {/* <LanguageSwitch /> */}
         <p className="text-sm text-JWC-secondary">
           Siden er under konstruksjon
@@ -34,7 +34,7 @@ export default function Header() {
       </div>
 
       <header
-        className={`relative flex flex-col h-28 w-full justify-center animate-SlideInFromTop font-semibold z-10 backdrop-blur-[1px]`}
+        className={`relative flex flex-col h-28 w-full justify-center animate-SlideInFromTop shadow-md font-semibold z-10 backdrop-blur-[1px]`}
       >
         {/* <div className="absolute top-0 left-0 z-0 w-full h-full bg-gradient-to-r from-JWC-primary to-JWC-secondary"></div> */}
         <div className="z-50 flex items-center justify-between px-12 h-28">

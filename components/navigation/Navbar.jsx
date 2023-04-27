@@ -20,7 +20,7 @@ export default function Navbar({ activeLink, setActiveLink, onClose, className }
               onClose();
             }}
             textSize="text-p0"
-            textColor="text-JWC-black50"
+            textColor="text-JWC-white15"
             key={menu.text}
             text={menu.text}
             href={menu.href}

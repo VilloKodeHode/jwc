@@ -105,7 +105,7 @@ export default function Home() {
             </ResponsiveH3>
           </div>
         </section> */}
-        <section className="relative grid justify-center items-center min-h-[35vh] text-left xl:gap-0 gap-12">
+        <section className="relative grid justify-center items-center py-8 w-full bg-JWC-black75 my-8 min-h-[35vh] text-left xl:gap-0 gap-12">
           <TextFlex>
             <ResponsiveH2 className="flex px-12 text-center">
               Hva du kan oppnå med JWC
