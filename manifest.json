@@ -1,0 +1,16 @@
+{
+  "name": "JV web consult",
+  "short_name": "JWC",
+  "start_url": "https://www.jvwebconsult.no/",
+  "background_color": "#202929",
+  "theme_color": "#a2cbcc",
+  "display": "standalone",
+  "description": "Frontend developer, web designer, web developer, web consultant,",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

@@ -28,7 +28,8 @@ export default function Home() {
         <meta name="description" content="JWC official website" />
         <meta name="keywords" content="webdesign, utvikling, nettside, SEO" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon-32x32.png" />
       </Head>
       <PageLayout gap="gap-28">
         {/* <div className="min-h-[50vh] w-screen]"> */}
