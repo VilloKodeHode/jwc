@@ -1,13 +1,14 @@
 //Component for displaying project layout
 
 import Image from "next/image";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { CallToActionButtonAlt } from "../Buttons";
 import {
   ResponsiveH3,
   ResponsiveH4,
   ResponsiveP,
 } from "../Responsive text/ResponsiveText";
+import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 
 export default function ProjectCard(props) {
   const {
@@ -17,12 +18,11 @@ export default function ProjectCard(props) {
     src,
     mobileSrc,
     description,
-    hrefCode,
     alt,
     cardColor,
   } = props;
+  const { language } = useContext(LanguageContext);
 
-  const [toggle, setToggle] = useState(false);
   return (
     <>
       <section
@@ -51,15 +51,13 @@ export default function ProjectCard(props) {
                 src={mobileSrc}
                 alt={alt}
               />
-
-              <a className="" href={href} target="_blank">
-                <CallToActionButtonAlt className={``}>
-                  Prøv ut
-                </CallToActionButtonAlt>
-              </a>
-              {/* <a href={hrefCode} target="_blank">
-                <CallToActionButtonAlt className="">Kode</CallToActionButtonAlt>
-              </a> */}
+              <div className="flex justify-center w-full mt-8">
+                <a className="" href={href} target="_blank">
+                  <CallToActionButtonAlt>
+                    {language === "Norwegian" ? "Prøv ut" : "Try it out"}
+                  </CallToActionButtonAlt>
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -19,7 +19,9 @@ const LanguageSwitch = () => {
         alt="Norwegian"
         width={50}
         height={50}
-        onClick={() => setLanguage("Norwegian")}
+        onClick={() => {
+          setLanguage("Norwegian");
+        }}
       />
       <Image
         src={ENGLISH}
@@ -29,7 +31,9 @@ const LanguageSwitch = () => {
         alt="English"
         width={50}
         height={50}
-        onClick={() => setLanguage("English")}
+        onClick={() => {
+          setLanguage("English");
+        }}
       />
     </div>
   );

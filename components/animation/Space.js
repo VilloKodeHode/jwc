@@ -38,7 +38,7 @@ const THREESpace = () => {
       });
       const particle = new THREE.Mesh(geometry, material);
       particle.position.set(
-        (Math.random() - 0.5) * 15,
+        (Math.random() - 0.5) * 25,
         (Math.random() - 0.5) * 15,
         (Math.random() - 0.5) * 15
       );

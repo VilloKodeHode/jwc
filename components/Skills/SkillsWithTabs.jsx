@@ -3,10 +3,11 @@
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import Image from "next/image";
 import SKILLS_LIST from "./skills_list";
+import { useContext } from "react";
+import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 
 export default function SkillWithTabs() {
-  
-
+  const { language } = useContext(LanguageContext);
   return (
     <>
       <Tabs
@@ -17,10 +18,14 @@ export default function SkillWithTabs() {
         className="w-[90vw]"
       >
         <TabList className="flex flex-wrap">
-          <Tab fontSize="2xl">Kodespråk</Tab>
+          <Tab fontSize="2xl">
+            {language === "Norwegian" ? "Kodespråk" : "Code languages"}
+          </Tab>
           <Tab fontSize="2xl">Frameworks</Tab>
           <Tab fontSize="2xl">Web-Styling</Tab>
-          <Tab fontSize="2xl">Design-verktøy</Tab>
+          <Tab fontSize="2xl">
+            {language === "Norwegian" ? "Design-verktøy" : "Design-tools"}
+          </Tab>
         </TabList>
 
         <TabPanels>

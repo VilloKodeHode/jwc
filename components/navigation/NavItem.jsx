@@ -10,8 +10,9 @@ const NavItem = ({
   textColor,
   textSize,
 }) => {
+  
   return (
-    <div key={text} className={`relative z-10 p-3 ${className}`}>
+    <div key={text} className={`relative z-10 p-5 ${className}`}>
       <Link href={href} className="">
         <p
           className={`${textSize} ${textColor} ${
@@ -24,7 +25,7 @@ const NavItem = ({
       </Link>
       {(active || activeLink === text) && (
         <div
-          className={`animate-Appear absolute top-1/2 -translate-y-1/2 -left-3 h-6 w-6 border-l-8 border-t-8 border-r-8 border-r-JWC-tertiary border-l-JWC-primary border-t-JWC-secondary duration-75 -z-10 rounded-full `}
+          className={`animate-Appear absolute top-1/2 -translate-y-1/2 -left-2 h-6 w-6 border-l-8 border-t-8 border-r-8 border-r-JWC-tertiary border-l-JWC-primary border-t-JWC-secondary duration-75 -z-10 rounded-full `}
         ></div>
       )}
     </div>

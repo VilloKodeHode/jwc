@@ -13,12 +13,15 @@
     src: url('/fonts/RcRocketRegular-0WVW9.otf');
 }
 
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 :root {
   --primary: #a2cbcc;
@@ -52,55 +55,6 @@
 
 }
 
-.headerwave {
-width: 100%;
-  position: absolute;
-  bottom: -70%; 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('/header-waves.svg');
-}
-
-.drawerwave {
-width: 100%;
-  position: absolute;
-  top: 113px; 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url('/header-waves.svg');
-}
-
-.footerwave {
-width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  background-image: url('/footerwaves.svg');
-}
-
-.skillswave {
-  
-  width: 4000px;
-
-  background-repeat: no-repeat;
-
-  background-size: cover;
-
-}
-.topwave {
-    background-image: url('/topwaveskills.svg');
-background-position: bottom;
-  width: 4000px;
-
-  background-repeat: no-repeat;
-
-  background-size: cover;
-}
-.bottomwave {
-    background-image: url('/bottomwaveskills.svg');
-      background-position: top;
-}
-
 input, textarea {
   background-color: var(--black15);
   color: var(--tertiary);
@@ -119,15 +73,6 @@ input, textarea {
 
 }
 
-/* .heroBG {
-  background-image: url("/Hero7.png");
-  background-repeat: no-repeat;
-  width: 100vw;
-  background-position: center;
-  background-size: contain;
-  background-color: #10284b;
-} */
-
 .greenplanet {  
   background-image: url('https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png'), url('https://cdn.midjourney.com/642caa24-583f-4c3f-af8d-81d4d807f683/0_2.png');
   background-size: auto;
@@ -143,22 +88,16 @@ h1,h2,h3,h4,h5 {
   font-weight: 900;
 }
 
+.SalmaPro {
+  font-family: SalmaPro;
+}
+
   p, li, ul {
-font-family: SalmaPro;
-}
-
-.skillGlow {
-  box-shadow: #ac6bde 0 0 50px 50px;
-  
-
+font-family: Roboto;
 }
 
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+
 
 #__next {
   /* background: linear-gradient(180deg, var(--JWCwhite15), var(--secondary), var(--tertiary)); */
@@ -181,11 +120,4 @@ a {
   text-decoration: none;
 }
 
-/* .web-image {
-  transition: transform 0.5s ease-in-out;
-}
-
-.web:hover + .web-image {
-  transform: opacity(0);
-} */
 

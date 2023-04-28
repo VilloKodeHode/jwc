@@ -2,16 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import MENU_LIST from "./menu_list";
+import { useContext, useState } from "react";
+import MENU_LIST, { LOGO } from "./menu_list";
 import ChakraDrawer from "./ChakraDrawer";
 import { useDisclosure } from "@chakra-ui/react";
-import { SlSocialLinkedin } from "react-icons/sl";
-import { VscGithubAlt } from "react-icons/vsc";
-import { ResponsiveP } from "../Responsive text/ResponsiveText";
 import Navbar from "./Navbar";
 import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
-import { CallToActionButtonAlt, SmallButton } from "../Buttons";
+import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 
 export default function Header() {
   const [activeLink, setActiveLink] = useState("");
@@ -20,13 +17,15 @@ export default function Header() {
     activeLink && setActiveLink("");
     onClose();
   };
-
+  const { language } = useContext(LanguageContext);
   return (
     <>
       <div className="relative z-10 flex items-center justify-between px-12 py-1 font-bold bg-JWC-tertiary text-JWC-white10">
-        {/* <LanguageSwitch /> */}
+        <LanguageSwitch />
         <p className="text-sm text-JWC-secondary">
-          Siden er under konstruksjon
+          {language === "Norwegian"
+            ? "Siden er under konstruksjon"
+            : "Site is under construction"}
         </p>
         <Link href="/Norwegian resume shorted JWC.png" target="_blank">
           CV
@@ -34,28 +33,30 @@ export default function Header() {
       </div>
 
       <header
-        className={`relative flex flex-col h-28 w-full justify-center animate-SlideInFromTop shadow-md font-semibold z-10 backdrop-blur-[1px]`}
+        className={`relative flex flex-col h-28 w-full justify-center animate-SlideInFromTop shadow-md z-10 backdrop-blur-[1px]`}
       >
         {/* <div className="absolute top-0 left-0 z-0 w-full h-full bg-gradient-to-r from-JWC-primary to-JWC-secondary"></div> */}
         <div className="z-50 flex items-center justify-between px-12 h-28">
           <div className="flex flex-row items-center justify-start lg:min-w-[500px] min-w-[150px] gap-8">
-            {MENU_LIST.map((menu) =>
-              menu.isImage ? (
-                <Link key={menu.text} href={menu.href}>
-                  <Image
-                    onClick={handleImageClick}
-                    src={menu.imageSrc}
-                    width={150}
-                    height={150}
-                    alt="JV web consult"
-                    className="p-4 duration-200 hover:scale-105"
-                  />
-                </Link>
-              ) : null
-            )}
-            <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
+            {LOGO.map((logo) => (
+              <Link key={logo.text} href={logo.href}>
+                <Image
+                  onClick={handleImageClick}
+                  src="/JWC-logo-compact.png"
+                  width={logo.imageWidth}
+                  height={logo.imageHeight}
+                  alt="JV web consult"
+                  className="p-4 duration-200 hover:scale-105"
+                />
+              </Link>
+            ))}
+            <div className="items-center justify-center hidden grid-flow-row font-semibold lg:grid animate-SlideInFromLeft">
               <p className="text-JWC-black75 text-[12px]">
-                &#10077;Drevet med entusiasme, ferdigheter og koffein&#10078;
+                &#10077;
+                {language === "Norwegian"
+                  ? "Drevet med ambisjoner, ekspertise og en uendelig tilførsel av koffein"
+                  : "Driven by ambitions, expertise and an endless supply of caffeine"}
+                &#10078;
               </p>
               <p className="text-JWC-black75 text-[10px]">
                 VilloKodeHode@gmail.com

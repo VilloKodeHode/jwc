@@ -66,7 +66,7 @@ module.exports = {
         xs: "0.75rem",
       },
       lineHeight: {
-        h1: "144px",
+        h1: "124px",
         h2: "112px",
         h3: "72px",
         h4: "48px",
