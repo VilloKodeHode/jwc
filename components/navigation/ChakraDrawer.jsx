@@ -1,7 +1,7 @@
 // The navigation drawer. Made with Chakra UI.
 
 import Link from "next/link";
-import MENU_LIST from "./menu_list";
+import MENU_LIST, { LOGO } from "./menu_list";
 import NavItem from "./NavItem";
 import Image from "next/image";
 import { HamburgerIcon } from "@chakra-ui/icons";
@@ -14,10 +14,11 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
   IconButton,
 } from "@chakra-ui/react";
 import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
+import { useContext } from "react";
+import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 
 export default function ChakraDrawer({
   activeLink,
@@ -27,8 +28,10 @@ export default function ChakraDrawer({
   onOpen,
   onClose,
 }) {
-  const filteredMenuList = MENU_LIST.filter((menu) => menu.text !== "Home");
+  const { language } = useContext(LanguageContext);
 
+  const menuObj = MENU_LIST.find((menu) => menu.language === language);
+  const menu_items = menuObj ? menuObj.menu_items : [];
   return (
     <>
       <div className="block md:hidden">
@@ -44,29 +47,27 @@ export default function ChakraDrawer({
           <DrawerOverlay />
           <DrawerContent>
             <div className="flex justify-between px-12 py-1 font-bold bg-JWC-black text-JWC-white">
-              {/* <LanguageSwitch /> */}
+              <LanguageSwitch />
               <Link href="/Norwegian resume shorted JWC.png" target="_blank">
                 CV
               </Link>
             </div>
             <DrawerHeader className="relative flex justify-center">
-              {MENU_LIST.map((menu) =>
-                menu.isImage ? (
-                  <Link key={menu.text} href={menu.href}>
-                    <Image
-                      onClick={() => {
-                        activeLink && setActiveLink("");
-                        onClose();
-                      }}
-                      src={menu.imageSrc}
-                      className="p-4 my-[1.5px] duration-200 hover:scale-105"
-                      width={150}
-                      height={150}
-                      alt="JV web consult"
-                    />
-                  </Link>
-                ) : null
-              )}
+              {LOGO.map((logo) => (
+                <Link key={logo.text} href={logo.href}>
+                  <Image
+                    onClick={() => {
+                      activeLink && setActiveLink("");
+                      onClose();
+                    }}
+                    src={logo.imageSrc}
+                    className="p-4 my-[1.5px] duration-200 hover:scale-105"
+                    width={logo.imageWidth}
+                    height={logo.imageHeight}
+                    alt="JV web consult"
+                  />
+                </Link>
+              ))}
             </DrawerHeader>
             <DrawerBody>
               <ul
@@ -74,7 +75,7 @@ export default function ChakraDrawer({
            mt-0 p-2`}
               >
                 <div className="flex flex-col items-center justify-center w-full mt-8">
-                  {filteredMenuList.map((menu) => (
+                  {menu_items.map((menu) => (
                     <NavItem
                       onClick={() => {
                         setActiveLink(menu.text);
