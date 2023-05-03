@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState } from "react";
-import MENU_LIST, { LOGO } from "./menu_list";
+import { LOGO } from "./menu_list";
 import ChakraDrawer from "./ChakraDrawer";
 import { useDisclosure } from "@chakra-ui/react";
 import Navbar from "./Navbar";
@@ -20,7 +20,7 @@ export default function Header() {
   const { language } = useContext(LanguageContext);
   return (
     <>
-      <div className="relative z-10 flex items-center justify-between px-12 py-1 font-bold bg-JWC-tertiary text-JWC-white10">
+      <div className="relative z-10 flex items-center justify-between px-12 py-1 font-bold bg-JWC-black text-JWC-white10">
         <LanguageSwitch />
         <p className="text-sm text-JWC-secondary">
           {language === "Norwegian"
@@ -33,7 +33,7 @@ export default function Header() {
       </div>
 
       <header
-        className={`relative flex flex-col h-28 w-full justify-center animate-SlideInFromTop shadow-md z-10 backdrop-blur-[1px]`}
+        className={`relative flex flex-col h-28 w-full justify-center animate-SlideInFromTop shadow-md z-10 backdrop-blur-[1px] bg-JWC-white15 bg-opacity-90`}
       >
         {/* <div className="absolute top-0 left-0 z-0 w-full h-full bg-gradient-to-r from-JWC-primary to-JWC-secondary"></div> */}
         <div className="z-50 flex items-center justify-between px-12 h-28">
@@ -42,7 +42,7 @@ export default function Header() {
               <Link key={logo.text} href={logo.href}>
                 <Image
                   onClick={handleImageClick}
-                  src="/JWC-logo-compact.png"
+                  src={logo.imageSrc}
                   width={logo.imageWidth}
                   height={logo.imageHeight}
                   alt="JV web consult"

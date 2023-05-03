@@ -1,5 +1,3 @@
-//Unused, but can still be used if I want to have a navbar for bigger screens
-
 import { useContext } from "react";
 import NavItem from "./NavItem";
 
@@ -27,13 +25,14 @@ export default function Navbar({
               onClose();
             }}
             textSize="text-p0"
-            textColor="text-JWC-white15"
+            textColor="text-JWC-black"
             key={menu.text}
             text={menu.text}
             href={menu.href}
             color={menu.color}
             active={activeLink === menu.text}
             activeLink={activeLink}
+            icon={menu.icon}
           />
         ))}
       </div>

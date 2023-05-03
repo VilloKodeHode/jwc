@@ -89,6 +89,7 @@ export default function ChakraDrawer({
                       color={menu.color}
                       active={activeLink === menu.text}
                       activeLink={activeLink}
+                      icon={menu.icon}
                     />
                   ))}
                 </div>
