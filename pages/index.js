@@ -11,6 +11,7 @@ import ResponsiveH1, {
   ResponsiveLi,
   ResponsiveMini,
   ResponsiveP,
+  ResponsiveSmall,
 } from "@/components/Responsive text/ResponsiveText";
 import Link from "next/link";
 
@@ -34,17 +35,17 @@ export default function Home() {
       </Head>
       <PageLayout gap="gap-28">
         {/* <div className="min-h-[50vh] w-screen]"> */}
-        <section className="grid xl:grid-cols-[60%_40%] group/imageEffect md:py-12 z-20 sm:pt-0 pt-12 xl:gap-16 gap-2 px-12 justify-center items-center mx-auto min-h-[45vh] w-screen">
+        <section className="grid xl:grid-cols-[60%_40%] group/imageEffect md:py-12 z-20 sm:pt-0 pt-12 xl:gap-16 gap-2 px-12 justify-center items-center mx-auto min-h-[75vh] w-screen">
           <div className="flex items-center justify-center w-full h-full web">
             <TextFlex>
-              <div className="flex items-center justify-end">
+              <div className="flex items-center justify-end select-none">
                 <ResponsiveHeaderH1 className="flex flex-col items-center justify-center text-center xl:items-end headertext xl:text-right">
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDesign.webp")}
                     onMouseLeave={() => setCurrentWeb("/Hero8.png")}
                     className="cursor-pointer group text-JWC-primary w-fit"
                   >
-                    <span className="group-hover:opacity-100 opacity-10 h1hidden">
+                    <span className="group-hover:text-JWC-primary group-hover:opacity-100 opacity-80 text-JWC-white15 h1hidden">
                       Web
                     </span>
                     design
@@ -54,7 +55,7 @@ export default function Home() {
                     onMouseLeave={() => setCurrentWeb("/Hero8.png")}
                     className="cursor-pointer group text-JWC-secondary w-fit"
                   >
-                    <span className="group-hover:opacity-100 opacity-10 h1hidden">
+                    <span className="group-hover:text-JWC-secondary group-hover:opacity-100 opacity-80 text-JWC-white15 h1hidden">
                       Web
                     </span>
                     {language === "Norwegian" ? "utvikling" : "dev"}
@@ -64,25 +65,24 @@ export default function Home() {
                     onMouseLeave={() => setCurrentWeb("/Hero8.png")}
                     className="cursor-pointer group text-JWC-tertiary w-fit"
                   >
-                    <span className="group-hover:opacity-100 opacity-10 h1hidden">
+                    <span className="group-hover:text-JWC-tertiary group-hover:opacity-100 opacity-80 text-JWC-white15 h1hidden">
                       Web
                     </span>
                     {language === "Norwegian" ? "innhold" : "content"}
                   </span>
                 </ResponsiveHeaderH1>
               </div>
-              <div className="flex flex-col items-center justify-center w-full md:gap-8 md:flex-row xl:justify-end">
-                <ResponsiveP
+              <div className="grid items-center justify-center w-full grid-flow-row gap-4 md:gap-8 md:grid-flow-col xl:justify-end">
+                <ResponsiveSmall
                   maxWidth="max-w-sm"
                   className="text-center xl:text-right text-JWC-white15 clearText"
                 >
                   {language === "Norwegian"
                     ? "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter."
                     : "Engaging websites for your purpose: From simple to complex websites, customized for all devices."}
-                </ResponsiveP>
+                </ResponsiveSmall>
                 <Link href="/contact" className="">
                   <CallToActionButton>
-                    {" "}
                     {language === "Norwegian" ? "Ta kontakt" : "Contact me"}
                   </CallToActionButton>
                 </Link>

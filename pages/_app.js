@@ -5,6 +5,7 @@ import Drawer from "@/components/navigation/Drawer";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Footer from "@/components/navigation/Footer";
 import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
+import { ScrollToTopButton } from "@/components/Buttons";
 
 const theme = extendTheme({
   colors: {
@@ -53,6 +54,7 @@ export default function App({ Component, pageProps }) {
           <Header />
           <Component {...pageProps} />
           <Footer />
+          <ScrollToTopButton />
         </ChakraProvider>
       </LanguageContext.Provider>
     </>

@@ -26,20 +26,22 @@ export default function ProjectCard(props) {
   return (
     <>
       <section
-        className={`w-[100vw] my-28 ${cardColor} shadow-JWC-black50 shadow-sm border-opacity-10 border-JWC-black border-[5vw]`}
+        className={`xl:max-w-[60%] md:max-w-[70%] max-w-[90%] my-28 ${cardColor} bg-opacity-10`}
       >
         <div className="z-10 flex flex-col items-center justify-center m-4 snap-always snap-mandatory snap-center">
-          <ResponsiveH3 className={`p-8 ${textColor}`}>
+          <ResponsiveH3 className={`p-4 ${textColor}`}>
             {projectName}
           </ResponsiveH3>
-          <div className="flex flex-col items-center justify-center gap-12 p-8 xl:flex-row">
-            <ResponsiveP className={`xl:max-w-[30%] max-w-[80%] ${textColor}`}>
+          <div className="flex flex-col items-center justify-center p-8 xl:flex-row">
+            <ResponsiveP
+              className={`xl:max-w-[30%] max-w-[100%] ${textColor} shadow-sm p-8`}
+            >
               {description}
             </ResponsiveP>
             <div className="">
               <Image
-                width={800}
-                height={800}
+                width={700}
+                height={700}
                 className={`hidden md:block`}
                 src={src}
                 alt={alt}

@@ -33,7 +33,7 @@ export default function ProjectPage() {
               {language === "Norwegian" ? "Prosjekter" : "Projects"}
             </ResponsiveH1>
           </TextFlex>
-          <div className="flex flex-col justify-center gap-24">
+          <div className="flex flex-col items-center justify-center gap-24">
             {PROJECT_LIST.map((project) => (
               <ProjectCard
                 key={project.engProjectName}

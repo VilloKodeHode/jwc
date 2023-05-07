@@ -16,12 +16,12 @@ export default function Footer() {
             <div className="flex flex-row">
               <div className="flex flex-row items-center justify-center m-4">
                 <Link href="/contact">
-                  <FiMail className="w-8 h-8 mr-4 text-white duration-200 hover:text-JWC-tertiary hover:scale-125" />
+                  <FiMail className="w-8 h-8 mr-4 text-white duration-200 hover:text-JWC-secondary hover:scale-125" />
                 </Link>
               </div>
               <div className="flex flex-row items-center justify-center m-4">
                 <a href="https://github.com/VilloKodeHode" target="_blank">
-                  <VscGithubAlt className="w-8 h-8 mr-4 text-white duration-200 hover:text-JWC-tertiary hover:scale-125" />
+                  <VscGithubAlt className="w-8 h-8 mr-4 text-white duration-200 hover:text-JWC-secondary hover:scale-125" />
                 </a>
               </div>
               <div className="flex flex-row items-center justify-center m-4">
@@ -29,7 +29,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
                   target="_blank"
                 >
-                  <SlSocialLinkedin className="w-8 h-8 mr-4 text-white duration-200 hover:text-JWC-tertiary hover:scale-125" />
+                  <SlSocialLinkedin className="w-8 h-8 mr-4 text-white duration-200 hover:text-JWC-secondary hover:scale-125" />
                 </a>
               </div>
             </div>

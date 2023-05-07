@@ -57,7 +57,7 @@ export default function AIArtPage() {
             />
             <div className="absolute inset-0 flex items-center justify-center">
               <TextFlex>
-                <ResponsiveH3 className="font-light text-JWC-white font-Lato ">
+                <ResponsiveH3 className="font-light clearText text-JWC-white font-Lato ">
                   {language === "Norwegian"
                     ? "Høykvalitets nettinnhold tilpasset behovene til din nettside."
                     : "High-quality web content tailored to your site's needs."}
@@ -68,7 +68,7 @@ export default function AIArtPage() {
         </section>
         <section className="grid justify-center w-screen bg-JWC-black">
           <TextFlex>
-            <ResponsiveH2 className="p-8 font-light clearText bg-gradient-to-r from-JWC-primary to-JWC-secondary bg-clip-text transparent font-Lato">
+            <ResponsiveH2 className="p-8 font-light bg-gradient-to-r from-JWC-primary to-JWC-secondary bg-clip-text transparent font-Lato">
               {language === "Norwegian" ? "Galleri" : "Gallery"}
             </ResponsiveH2>
           </TextFlex>

@@ -58,9 +58,9 @@ export const PROJECT_LIST = [
     hrefCode:
       "https://github.com/VilloKodeHode/Rock--Paper--Scissors--Lizard--Spock-game",
     engDescription:
-      "This is a rock-paper-scissors game with two expanded versions: Version 2 adds two new options, while Version 3 adds a total of four new options. The game logic is handled using useState and useEffect hooks, ensuring a smooth and bug-free experience. Additionally, the game is fully customizable, allowing for easy adaptation to any desired specifications.",
+      "This is a rock-paper-scissors game with two expanded versions. The game is fully customizable, allowing for easy adaptation to any desired specifications.",
     norDescription:
-      "Dette er et stein, saks, papir-spill med to utvidede versjoner: Versjon 2 legger til to nye alternativer, mens versjon 3 legger til totalt fire nye alternativer. Spilllogikken håndteres ved hjelp av useState og useEffect hooks, noe som sikrer en jevn og feilfri opplevelse. Spillet er også fullstendig tilpassbart, slik at det kan tilpasses til ønsket spesifikasjon.",
+      "Dette er et stein, saks, papir-spill med to utvidede versjoner. Spillet er fullstendig tilpassbart, slik at det kan tilpasses til ønsket spesifikasjon.",
   },
   {
     engProjectName: "Advice generator",

@@ -29,7 +29,7 @@ export default function SkillWithTabs() {
         </TabList>
 
         <TabPanels>
-          <TabPanel className="flex items-center gap-12 justify-center min-h-[300px]">
+          <TabPanel className="flex items-center flex-wrap gap-12 justify-center min-h-[300px]">
             {SKILLS_LIST.map((skill) =>
               skill.skilltype === "code language" ? (
                 <div className="relative" key={skill.name}>
