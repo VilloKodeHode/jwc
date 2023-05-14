@@ -3,7 +3,7 @@
 export default function PageLayout({ children, gap }) {
   return (
     <main
-      className={`z-50 flex flex-col items-center justify-start min-h-screen overflow-x-hidden ${gap}`}
+      className={`z-50 flex flex-col items-center px-4 mx-auto sm:px-6 lg:px-12 justify-start min-h-screen overflow-x-hidden ${gap}`}
     >
       <>{children}</>
     </main>

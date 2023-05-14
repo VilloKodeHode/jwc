@@ -16,16 +16,16 @@ export default function Navbar({
   const menu_items = menuObj ? menuObj.menu_items : [];
 
   return (
-    <div className={`flex items-center w-[800px] ${className}`}>
-      <div className="flex-row justify-end hidden w-full gap-2 md:flex">
+    <div className={`flex justify-end items-center w-[800px] ${className}`}>
+      <div className="flex-row hidden h-[112px] items-center rounded-bl-full gap-2 w-fit md:flex">
         {menu_items.map((menu) => (
           <NavItem
             onClick={() => {
               setActiveLink(menu.text);
               onClose();
             }}
-            textSize="text-p0"
-            textColor="text-JWC-black"
+            textSize="text-p"
+            textColor="text-JWC-white"
             key={menu.text}
             text={menu.text}
             href={menu.href}

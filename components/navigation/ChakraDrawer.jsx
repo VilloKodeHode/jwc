@@ -34,14 +34,14 @@ export default function ChakraDrawer({
   const menu_items = menuObj ? menuObj.menu_items : [];
   return (
     <>
-      <div className="block md:hidden">
+      <div className="flex items-center h-full rounded-bl-full md:hidden">
         <IconButton
           variant="ghost hover:bg-none hover-scale-110"
           aria-label="Open Menu"
           size="lg"
           icon={<HamburgerIcon boxSize="3rem" />}
           onClick={() => onOpen()}
-          className="block ml-8 duration-200 hover:scale-110 text-JWC-black75"
+          className="block ml-8 duration-200 hover:scale-110 text-JWC-primary"
         />
         <Drawer onClose={onClose} isOpen={isOpen} size="xs" placement="right">
           <DrawerOverlay />
@@ -52,7 +52,7 @@ export default function ChakraDrawer({
                 CV
               </Link>
             </div>
-            <DrawerHeader className="relative flex justify-center">
+            <DrawerHeader className="relative flex justify-center bg-JWC-backgroundBlack">
               {LOGO.map((logo) => (
                 <Link key={logo.text} href={logo.href}>
                   <Image

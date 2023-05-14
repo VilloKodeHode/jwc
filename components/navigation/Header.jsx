@@ -5,10 +5,14 @@ import Link from "next/link";
 import { useContext, useState } from "react";
 import { LOGO } from "./menu_list";
 import ChakraDrawer from "./ChakraDrawer";
-import { useDisclosure } from "@chakra-ui/react";
+import { AbsoluteCenter, useDisclosure } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
+import {
+  ResponsiveMini,
+  ResponsiveSmall,
+} from "../Responsive text/ResponsiveText";
 
 export default function Header() {
   const [activeLink, setActiveLink] = useState("");
@@ -33,34 +37,36 @@ export default function Header() {
       </div>
 
       <header
-        className={`relative flex flex-col h-28 w-full justify-center animate-SlideInFromTop shadow-md z-10 backdrop-blur-[1px] bg-JWC-white15 bg-opacity-90`}
+        className={`relative flex flex-col h-28 w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 animate-SlideInFromTop shadow-md z-10 backdrop-blur-[1px]`}
       >
-        {/* <div className="absolute top-0 left-0 z-0 w-full h-full bg-gradient-to-r from-JWC-primary to-JWC-secondary"></div> */}
-        <div className="z-50 flex items-center justify-between px-12 h-28">
-          <div className="flex flex-row items-center justify-start lg:min-w-[500px] min-w-[150px] gap-8">
-            {LOGO.map((logo) => (
-              <Link key={logo.text} href={logo.href}>
-                <Image
-                  onClick={handleImageClick}
-                  src={logo.imageSrc}
-                  width={logo.imageWidth}
-                  height={logo.imageHeight}
-                  alt="JV web consult"
-                  className="p-4 duration-200 hover:scale-105"
-                />
-              </Link>
-            ))}
-            <div className="items-center justify-center hidden grid-flow-row font-semibold lg:grid animate-SlideInFromLeft">
-              <p className="text-JWC-black75 text-[12px]">
+        <div className="z-50 flex items-center justify-between h-28 ">
+          <div className="flex flex-row items-center justify-start lg:min-w-[500px] h-full min-w-[200px] gap-8 rounded-br-full rounded-bl-">
+            <div className="relative z-40">
+              {LOGO.map((logo) => (
+                <Link key={logo.text} href={logo.href}>
+                  <Image
+                    onClick={handleImageClick}
+                    src={logo.imageSrc}
+                    width={logo.imageWidth}
+                    height={logo.imageHeight}
+                    alt="JV web consult"
+                    className="z-50 h-full duration-200 lg:p-1 hover:scale-105"
+                  />
+                </Link>
+              ))}
+              <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" />
+            </div>
+            <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
+              <ResponsiveSmall className="text-JWC-black25">
                 &#10077;
                 {language === "Norwegian"
                   ? "Drevet med ambisjoner, ekspertise og en uendelig tilførsel av koffein"
                   : "Driven by ambitions, expertise and an endless supply of caffeine"}
                 &#10078;
-              </p>
-              <p className="text-JWC-black75 text-[10px]">
+              </ResponsiveSmall>
+              <ResponsiveMini className="text-JWC-black25 text-small">
                 VilloKodeHode@gmail.com
-              </p>
+              </ResponsiveMini>
             </div>
           </div>
           <Navbar
@@ -80,17 +86,6 @@ export default function Header() {
           />
         </div>
       </header>
-      {/* <div className="absolute grid items-center justify-end grid-flow-col gap-4 top-28 md:grid-flow-row right-16">
-        <a href="https://github.com/VilloKodeHode" target="_blank">
-          <VscGithubAlt className="w-8 h-8 duration-200 hover:text-JWC-tertiary hover:scale-125" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
-          target="_blank"
-        >
-          <SlSocialLinkedin className="w-8 h-8 duration-200 hover:text-JWC-tertiary hover:scale-125" />
-        </a>
-      </div> */}
     </>
   );
 }

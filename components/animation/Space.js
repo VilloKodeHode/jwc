@@ -15,7 +15,7 @@ const THREESpace = () => {
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x202929);
+    renderer.setClearColor(0x19211e);
 
     // const light = new THREE.PointLight(0xffffff, 1, 100);
     // light.position.set(50, 0, 10);
@@ -27,7 +27,7 @@ const THREESpace = () => {
     const colors = [
       0xf78f6a, 0xff5722, 0xe91e63, 0x9c27b0, 0x673ab7, 0x3f51b5, 0x2196f3,
       0x03a9f4, 0x00bcd4, 0x009688, 0x4caf50, 0x8bc34a, 0xcddc39, 0xffeb3b,
-      0xffc107, 0xff9800, 0xff5722,
+      0xffc107, 0xff9800, 0xff5722, 0x61dedb, 0xde78c6, 0xe91e63,
     ];
 
     const particles = new THREE.Group();
@@ -55,8 +55,8 @@ const THREESpace = () => {
       requestAnimationFrame(animate);
 
       // Update particles
-      particles.rotation.x += 0.00002;
-      particles.rotation.y += 0.00001;
+      particles.rotation.x += 0.000008;
+      particles.rotation.y += 0.000008;
 
       renderer.render(scene, camera);
     }

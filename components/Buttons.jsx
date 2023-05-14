@@ -6,7 +6,7 @@ export default function CallToActionButton({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="grid items-center w-full px-10 py-4 font-semibold uppercase duration-100 ease-in-out rounded-md shadow-md text-JWC-black active:scale-95 text-p font-Roboto shadow-JWC-tertiary bg-gradient-to-r hover:scale-105 from-JWC-primary to-JWC-secondary"
+      className="px-6 py-4 my-4 font-bold uppercase duration-100 ease-in-out rounded-md shadow-md xl:w-fit text-JWC-black85 active:scale-95 text-p leading-p shadow-JWC-black50 bg-gradient-to-r hover:scale-105 from-JWC-primary to-JWC-tertiary"
     >
       <>{children}</>
     </button>
@@ -17,7 +17,7 @@ export function CallToActionButtonAlt({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="grid items-center px-10 py-4 m-4 font-semibold uppercase duration-100 ease-in-out rounded-md shadow-sm active:scale-95 text-p text-JWC-white font-Roboto shadow-JWC-black bg-gradient-to-r from-JWC-black hover:scale-105 to-JWC-black75"
+      className="grid items-center px-10 py-4 m-4 font-semibold uppercase duration-100 ease-in-out rounded-md shadow active:scale-95 text-p text-JWC-white font-Roboto shadow-JWC-black50 bg-gradient-to-r from-JWC-black hover:scale-105 to-JWC-black85"
     >
       <>{children}</>
     </button>
@@ -68,11 +68,16 @@ export function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className={`text-JWC-white15 z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 hover:text-JWC-secondary hover:scale-125  ${
+      className={`text-JWC-white z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 hover:text-JWC-primary rounded-full hover:scale-125  ${
         isVisible ? "opacity-100 " : "opacity-0 cursor-default"
       }`}
     >
-      <FiArrowUpCircle className="w-12 h-12" />
+      <FiArrowUpCircle
+        className="w-12 h-12"
+        strokeWidth={1.5}
+        // stroke="black"
+        // fill="none"
+      />
     </button>
   );
 }
