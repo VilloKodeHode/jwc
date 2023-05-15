@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import { ResponsiveP } from "./Responsive text/ResponsiveText";
+import {
+  ResponsiveP,
+  ResponsiveThemedH5,
+} from "./Responsive text/ResponsiveText";
 import { FiArrowUpCircle } from "react-icons/fi";
 
 export default function CallToActionButton({ children, onClick }) {
@@ -28,9 +31,9 @@ export function BigButton({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="h-20 px-16 py-4 m-4 w-80 text-JWC-white font-Roboto shadow-JWC-black btn bg-gradient-to-r from-JWC-black75 to-JWC-black rounded-3xl"
+      className="h-20 px-16 py-4 m-4 w-80 font-Roboto shadow-JWC-black shadow btn bg-gradient-to-r from-JWC-black75 to-JWC-black rounded-3xl"
     >
-      <>{children}</>
+      <ResponsiveThemedH5>{children}</ResponsiveThemedH5>
     </button>
   );
 }

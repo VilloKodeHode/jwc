@@ -1,0 +1,81 @@
+import Image from "next/image";
+import { SimpleLogoComponent } from "@/components/base components/Logo";
+import {
+  ResponsiveH3,
+  ResponsiveThemedH4,
+  ResponsiveThemedH5,
+  ResponsiveThemedP,
+} from "../Responsive text/ResponsiveText";
+import { TextFlex } from "../Layout";
+import { useContext } from "react";
+import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
+import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
+
+export const CompanyInfo = () => {
+  const { language } = useContext(LanguageContext);
+  const { Theme } = useContext(ThemeContext);
+  return (
+    <div className="grid justify-center items-center min-h-[calc(100vh-144px)]">
+      <div
+        className={`min-h-[90%] sm:rounded-lg grid lg:grid-cols-2  ${
+          Theme === "light" ? "bg-JWC-white" : "bg-JWC-black"
+        }`}
+      >
+        <div
+          className={`col-span-1 py-12 min-h-[30vh] flex flex-col justify-center items-center`}
+        >
+          <SimpleLogoComponent />
+          <ResponsiveThemedH5>JV Web Consult</ResponsiveThemedH5>
+          <ResponsiveH3 className="bg-gradient-to-r py-5 from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
+            Joakim Villo
+          </ResponsiveH3>
+          <ResponsiveThemedP className="text-center max-w-md pb-5">
+            {language === "Norwegian"
+              ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
+              : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
+          </ResponsiveThemedP>
+        </div>
+        <div className="col-span-1">
+          <Image
+            src="/Tonsberg.jpg"
+            width={800}
+            height={800}
+            alt="Tønsberg brygge"
+            className="w-full object-cover h-full"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const OldCompanyInfo = () => {
+  const { language } = useContext(LanguageContext);
+  return (
+    <section className="grid items-center min-h-[60vh] justify-center w-screen font-bold text-center lg:grid-cols-2 mt-[56px]">
+      <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] shadow shadow-JWC-black75 px-8">
+        <SimpleLogoComponent />
+        <div className="">
+          <ResponsiveThemedH5>JV Web Consult</ResponsiveThemedH5>
+          <ResponsiveH3>
+            <div className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
+              Joakim Villo
+            </div>
+          </ResponsiveH3>
+        </div>
+        <TextFlex textWidth="md:max-w-[60ch] max-w-[80ch]">
+          <ResponsiveThemedH4>
+            {language === "Norwegian" ? "Norsk foretak" : "Norwegian company"}
+          </ResponsiveThemedH4>
+          <ResponsiveThemedP>
+            {language === "Norwegian"
+              ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
+              : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
+          </ResponsiveThemedP>
+        </TextFlex>
+      </div>
+
+      <div className="lg:h-full lg:w-full h-[40vh] shadow shadow-JWC-black75 tonsbergBG" />
+    </section>
+  );
+};

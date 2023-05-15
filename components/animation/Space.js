@@ -15,7 +15,7 @@ const THREESpace = () => {
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x19211e);
+    renderer.setClearColor(0x19211e, 0);
 
     // const light = new THREE.PointLight(0xffffff, 1, 100);
     // light.position.set(50, 0, 10);

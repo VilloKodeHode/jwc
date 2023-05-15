@@ -4,6 +4,7 @@ import THREESpace from "../animation/Space";
 import ResponsiveH1, {
   ResponsiveH2,
   ResponsiveP,
+  ThemedP,
 } from "../Responsive text/ResponsiveText";
 import Link from "next/link";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
@@ -25,7 +26,7 @@ export const CTAOneSection = () => {
                     onMouseLeave={() => setCurrentWeb("/Hero8.png")}
                     className="cursor-pointer group text-JWC-primary"
                   >
-                    <span className="group-hover:text-JWC-primary group-hover:opacity-100 opacity-80 text-JWC-white15 h1hidden">
+                    <span className="group-hover:text-JWC-primary group-hover:opacity-100 opacity-80 text-JWC-black50 h1hidden">
                       Web
                     </span>
                     design
@@ -35,7 +36,7 @@ export const CTAOneSection = () => {
                     onMouseLeave={() => setCurrentWeb("/Hero8.png")}
                     className="cursor-pointer group text-JWC-secondary w-fit"
                   >
-                    <span className="group-hover:text-JWC-secondary group-hover:opacity-100 opacity-80 text-JWC-white15 h1hidden">
+                    <span className="group-hover:text-JWC-secondary group-hover:opacity-100 opacity-80 text-JWC-black50 h1hidden">
                       <br />
                       Web
                     </span>
@@ -46,18 +47,18 @@ export const CTAOneSection = () => {
                     onMouseLeave={() => setCurrentWeb("/Hero8.png")}
                     className="cursor-pointer group text-JWC-tertiary w-fit"
                   >
-                    <span className="group-hover:text-JWC-tertiary group-hover:opacity-100 opacity-80 text-JWC-white15 h1hidden">
+                    <span className="group-hover:text-JWC-tertiary group-hover:opacity-100 opacity-80 text-JWC-black50 h1hidden">
                       <br />
                       Web
                     </span>
                     {language === "Norwegian" ? "innhold" : "content"}
                   </span>
                 </ResponsiveH2>
-                <ResponsiveP className="mb-8 text-JWC-white15 clearText">
+                <ThemedP className="mb-8 max-w-md">
                   {language === "Norwegian"
                     ? "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter."
                     : "Engaging websites for your purpose: From simple to complex websites, customized for all devices."}
-                </ResponsiveP>
+                </ThemedP>
               </div>
             </div>
             <div className="w-full mt-8 md:w-1/2">

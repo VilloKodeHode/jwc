@@ -1,5 +1,4 @@
-// This file contains the menu list for the navigation drawer
-
+// This file contains the menu list for the navigation
 
 export const MENU_LIST = [
   {
@@ -24,13 +23,23 @@ export const MENU_LIST = [
 
 export const LOGO = [
   {
-    text: "Home",
-    href: "/",
-    imageSrc: "/windLogo.svg",
-    imageWidth: 200,
-    imageHeight: 200,
+    light: {
+      text: "Home",
+      href: "/", // Provide a valid URL or route path for the light theme
+      imageSrc: "/WindLogoLightmode.svg",
+      imageWidth: 200,
+      imageHeight: 200,
+    },
+  },
+  {
+    dark: {
+      text: "Home",
+      href: "/", // Provide a valid URL or route path for the dark theme
+      imageSrc: "/WindLogoDarkmode.svg",
+      imageWidth: 200,
+      imageHeight: 200,
+    },
   },
 ];
-
 
 export default MENU_LIST;

@@ -19,6 +19,8 @@ import {
 import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
 import { useContext } from "react";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
+import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
+import LogoComponent from "../base components/Logo";
 
 export default function ChakraDrawer({
   activeLink,
@@ -29,7 +31,7 @@ export default function ChakraDrawer({
   onClose,
 }) {
   const { language } = useContext(LanguageContext);
-
+  const { Theme } = useContext(ThemeContext);
   const menuObj = MENU_LIST.find((menu) => menu.language === language);
   const menu_items = menuObj ? menuObj.menu_items : [];
   return (
@@ -52,24 +54,22 @@ export default function ChakraDrawer({
                 CV
               </Link>
             </div>
-            <DrawerHeader className="relative flex justify-center bg-JWC-backgroundBlack">
-              {LOGO.map((logo) => (
-                <Link key={logo.text} href={logo.href}>
-                  <Image
-                    onClick={() => {
-                      activeLink && setActiveLink("");
-                      onClose();
-                    }}
-                    src={logo.imageSrc}
-                    className="p-4 my-[1.5px] duration-200 hover:scale-105"
-                    width={logo.imageWidth}
-                    height={logo.imageHeight}
-                    alt="JV web consult"
-                  />
-                </Link>
-              ))}
+            <DrawerHeader
+              className={`relative flex justify-center  ${
+                Theme === "light" ? "bg-JWC-white25" : "bg-JWC-backgroundBlack"
+              }`}
+            >
+              <LogoComponent
+                setActiveLink={setActiveLink}
+                activeLink={activeLink}
+                onClose={onClose}
+              />
             </DrawerHeader>
-            <DrawerBody>
+            <DrawerBody
+              className={
+                Theme === "light" ? "bg-JWC-white" : "bg-JWC-backgroundBlack"
+              }
+            >
               <ul
                 className={`text-JWC-primary
            mt-0 p-2`}
@@ -82,7 +82,6 @@ export default function ChakraDrawer({
                         onClose();
                       }}
                       textSize="text-h4"
-                      textColor="text-JWC-black"
                       key={menu.text}
                       text={menu.text}
                       href={menu.href}

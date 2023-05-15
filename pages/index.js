@@ -43,7 +43,7 @@ export default function Home() {
         <BenefitsSection />
         <ServicesSection />
 
-        <section className="relative grid items-center justify-center gap-2 px-12 pt-12 mx-auto md:py-12 sm:pt-0 xl:gap-16 mb-[116px]">
+        <section className=" relative grid items-center justify-center gap-2 px-12 pt-12 mx-auto md:py-12 sm:pt-0 xl:gap-16 mb-[116px]">
           <TextFlex>
             <ResponsiveH3 className="flex px-12 text-center bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
               {language === "Norwegian"
