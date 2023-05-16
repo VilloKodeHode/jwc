@@ -10,7 +10,7 @@ import ThemeContext from "@/components/Utilities/ThemeSwitch/ThemeContext";
 
 export default function App({ Component, pageProps }) {
   const [language, setLanguage] = useState("");
-  const [Theme, setTheme] = useState("light");
+  const [Theme, setTheme] = useState("dark");
 
   useEffect(() => {
     if (typeof navigator !== "undefined") {

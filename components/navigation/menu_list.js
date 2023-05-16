@@ -1,6 +1,4 @@
 // This file contains the menu list for the navigation
-// import LOGOLIGHTMODE from "/WindLogoLightmode.svg";
-// import LOGODARKMODE from "/WindLogoDarkmode.svg";
 
 export const MENU_LIST = [
   {
