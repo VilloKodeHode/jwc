@@ -51,7 +51,7 @@ export const SimpleLogoComponent = () => {
   const logoDetails = logoObject[Theme];
 
   return (
-    <div key={logoDetails.text}>
+    <div>
       <Image
         src={logoDetails.imageSrc}
         width={logoDetails.imageWidth}
