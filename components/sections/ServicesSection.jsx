@@ -33,7 +33,7 @@ export const ServicesSection = () => {
               <div className="overflow-hidden shadow shadow-JWC-black75 sm:rounded-lg">
                 <div
                   className={`flex flex-col justify-between px-4 py-5 min-h-[150px] md:min-h-[200px] ${
-                    Theme === "light" ? "bg-JWC-white" : "bg-jwc-black"
+                    Theme === "light" ? "bg-JWC-white" : "bg-JWC-black"
                   } sm:p-6`}
                 >
                   <div className="h-full">
@@ -57,7 +57,7 @@ export const ServicesSection = () => {
               <div className="overflow-hidden shadow shadow-JWC-black75 sm:rounded-lg">
                 <div
                   className={`flex flex-col justify-between px-4 py-5 min-h-[150px] md:min-h-[200px] ${
-                    Theme === "light" ? "bg-JWC-white" : "bg-jwc-black"
+                    Theme === "light" ? "bg-JWC-white" : "bg-JWC-black"
                   } sm:p-6`}
                 >
                   <div className="h-full">
@@ -81,7 +81,7 @@ export const ServicesSection = () => {
               <div className="overflow-hidden shadow shadow-JWC-black75 sm:rounded-lg">
                 <div
                   className={`flex flex-col justify-between px-4 py-5 min-h-[150px] md:min-h-[200px] ${
-                    Theme === "light" ? "bg-JWC-white" : "bg-jwc-black"
+                    Theme === "light" ? "bg-JWC-white" : "bg-JWC-black"
                   } sm:p-6`}
                 >
                   <div className="h-full">
@@ -103,7 +103,7 @@ export const ServicesSection = () => {
               <div className="overflow-hidden shadow shadow-JWC-black75 sm:rounded-lg">
                 <div
                   className={`flex flex-col justify-between px-4 py-5 min-h-[150px] md:min-h-[200px] ${
-                    Theme === "light" ? "bg-JWC-white" : "bg-jwc-black"
+                    Theme === "light" ? "bg-JWC-white" : "bg-JWC-black"
                   } sm:p-6`}
                 >
                   <div className="h-full">

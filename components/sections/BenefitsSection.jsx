@@ -54,7 +54,7 @@ export const BenefitsSection = () => {
               <div className="overflow-hidden shadow shadow-JWC-black75 sm:rounded-lg">
                 <div
                   className={`px-4 py-5  ${
-                    Theme === "light" ? "bg-JWC-white" : "bg-jwc-black"
+                    Theme === "light" ? "bg-JWC-white" : "bg-JWC-black"
                   } sm:p-6`}
                 >
                   <ResponsiveH5 className="font-light bg-gradient-to-br from-JWC-secondary to-JWC-primary bg-clip-text transparent">
@@ -77,7 +77,7 @@ export const BenefitsSection = () => {
               <div className="overflow-hidden shadow shadow-JWC-black75 sm:rounded-lg">
                 <div
                   className={`px-4 py-5  ${
-                    Theme === "light" ? "bg-JWC-white" : "bg-jwc-black"
+                    Theme === "light" ? "bg-JWC-white" : "bg-JWC-black"
                   } sm:p-6`}
                 >
                   <ResponsiveH5 className="font-light bg-gradient-to-br from-JWC-secondary to-JWC-primary bg-clip-text transparent">
