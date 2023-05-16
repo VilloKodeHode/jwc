@@ -26,10 +26,10 @@ export const CompanyInfo = () => {
         >
           <SimpleLogoComponent />
           <ResponsiveThemedH5>JV Web Consult</ResponsiveThemedH5>
-          <ResponsiveH3 className="bg-gradient-to-r py-5 from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
+          <ResponsiveH3 className="py-5 bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
             Joakim Villo
           </ResponsiveH3>
-          <ResponsiveThemedP className="text-center max-w-md pb-5">
+          <ResponsiveThemedP className="max-w-md pb-5 text-center">
             {language === "Norwegian"
               ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
               : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
@@ -41,7 +41,7 @@ export const CompanyInfo = () => {
             width={800}
             height={800}
             alt="Tønsberg brygge"
-            className="w-full object-cover h-full"
+            className="object-cover w-full h-full"
           />
         </div>
       </div>
