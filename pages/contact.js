@@ -27,7 +27,7 @@ export default function ContactPage() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/favicon-32x32.png" />
+        <link rel="icon" href="/logo/WindLogoNoText.svg" />
       </Head>
       <PageLayout>
         <ContactformSection />
