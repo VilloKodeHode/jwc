@@ -21,6 +21,7 @@ import { useContext } from "react";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 import LogoComponent from "../base components/Logo";
+import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
 
 export default function ChakraDrawer({
   activeLink,
@@ -50,6 +51,7 @@ export default function ChakraDrawer({
           <DrawerContent>
             <div className="flex justify-between px-12 py-1 font-bold bg-JWC-black text-JWC-white">
               <LanguageSwitch />
+              <ThemeSwitch />
               <Link href="/Norwegian resume shorted JWC.png" target="_blank">
                 CV
               </Link>
