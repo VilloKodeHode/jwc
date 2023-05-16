@@ -1,4 +1,6 @@
 // This file contains the menu list for the navigation
+import LOGOLIGHTMODE from "@/public/WindLogoLightmode.svg";
+import LOGODARKMODE from "@/public/WindLogoDarkmode.svg";
 
 export const MENU_LIST = [
   {
@@ -25,8 +27,8 @@ export const LOGO = [
   {
     light: {
       text: "Home",
-      href: "/", // Provide a valid URL or route path for the light theme
-      imageSrc: "/WindLogoLightmode.svg",
+      href: "/",
+      imageSrc: LOGOLIGHTMODE,
       imageWidth: 200,
       imageHeight: 200,
     },
@@ -34,8 +36,8 @@ export const LOGO = [
   {
     dark: {
       text: "Home",
-      href: "/", // Provide a valid URL or route path for the dark theme
-      imageSrc: "/WindLogoDarkmode.svg",
+      href: "/",
+      imageSrc: LOGODARKMODE,
       imageWidth: 200,
       imageHeight: 200,
     },
