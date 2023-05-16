@@ -7,6 +7,7 @@ import ResponsiveH1, {
   ResponsiveThemedH5,
 } from "../Responsive text/ResponsiveText";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
+import Link from "next/link";
 
 export const HeroSection = () => {
   const { language } = useContext(LanguageContext);
@@ -58,11 +59,11 @@ export const HeroSection = () => {
               ? "Jeg bygger nettsider raskt og effektivt ved å bruke de nyeste webteknologiene. Med prompt engineering kan jeg lage innhold raskt, og deretter forbedre det med min egen ekspertise for å skape en unik nettside som passer dine behov."
               : "I build websites quickly and efficiently using the latestweb technologies. With prompt engineering can make content swiftly, then improve upon this with my own expertise to create a unique website for your needs."}
           </ResponsiveThemedH5>
-
-          <CallToActionButton>
-            {" "}
-            {language === "Norwegian" ? "Kontakt nå" : "Contact now"}
-          </CallToActionButton>
+          <Link href="/contact">
+            <CallToActionButton>
+              {language === "Norwegian" ? "Kontakt nå" : "Contact now"}
+            </CallToActionButton>
+          </Link>
         </div>
       </div>
     </section>
