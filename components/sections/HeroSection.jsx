@@ -57,7 +57,7 @@ export const HeroSection = () => {
 
             {language === "Norwegian"
               ? "Jeg bygger nettsider raskt og effektivt ved å bruke de nyeste webteknologiene. Med prompt engineering kan jeg lage innhold raskt, og deretter forbedre det med min egen ekspertise for å skape en unik nettside som passer dine behov."
-              : "I build websites quickly and efficiently using the latestweb technologies. With prompt engineering can make content swiftly, then improve upon this with my own expertise to create a unique website for your needs."}
+              : "I build websites quickly and efficiently using the latest web technologies. With prompt engineering can make content swiftly, then improve upon this with my own expertise to create a unique website for your needs."}
           </ResponsiveThemedH5>
           <Link href="/contact">
             <CallToActionButton>

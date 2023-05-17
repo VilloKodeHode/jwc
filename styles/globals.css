@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
     font-family: SalmaProNarrow;
     src: url('/fonts/SalmaproMediumnarrow-VG5v6.otf');
@@ -167,8 +168,8 @@ input, textarea {
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: SalmaPro;
-  font-weight: 900;
+  font-family: 'Figtree',SalmaPro, sans-serif;
+  font-weight: 800;
 }
 
 .SalmaPro {
@@ -176,7 +177,7 @@ h1,h2,h3,h4,h5 {
 }
 
   p, li, ul {
-font-family: Roboto;
+    font-family: 'Figtree', Roboto, sans-serif;
 }
 
 

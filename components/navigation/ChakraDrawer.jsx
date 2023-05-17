@@ -49,7 +49,7 @@ export default function ChakraDrawer({
         <Drawer onClose={onClose} isOpen={isOpen} size="xs" placement="right">
           <DrawerOverlay />
           <DrawerContent>
-            <div className="flex justify-between px-12 py-1 font-bold bg-JWC-black text-JWC-white">
+            <div className="flex justify-between px-12 py-1 bg-JWC-black text-JWC-white">
               <LanguageSwitch />
               <ThemeSwitch />
               <Link href="/Norwegian resume shorted JWC.png" target="_blank">

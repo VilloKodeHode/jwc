@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <>
-      <div className="relative z-10 flex items-center justify-between px-12 py-1 font-bold bg-JWC-black text-JWC-white10">
+      <div className="relative z-10 flex items-center justify-between px-12 py-1 bg-JWC-black text-JWC-white10">
         <div className="grid gap-12 grid-flow-col">
           <LanguageSwitch />
           <ThemeSwitch />
