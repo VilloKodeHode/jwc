@@ -43,21 +43,9 @@ export const HeroSection = () => {
           </ResponsiveThemedH1>
 
           <ResponsiveThemedH5 className="mb-8 font-normal text-left">
-            {/* <span className="text-JWC-secondary">I build websites </span>{" "}
-            <span className="text-JWC-tertiary">quickly</span> and{" "}
-            <span className="text-JWC-tertiary">efficiently</span> using the
-            latest <span className="text-JWC-accent">web technologies.</span>{" "}
-            With <span className="text-JWC-accent">prompt engineering</span> I
-            can make content <span className="text-JWC-tertiary">swiftly</span>,
-            then <span className="text-JWC-tertiary">improve</span> upon this
-            with my own <span className="text-JWC-primary">expertise</span> to{" "}
-            <span className="text-JWC-tertiary">create</span> a{" "}
-            <span className="text-JWC-secondary">unique website</span> for your
-            needs. */}
-
             {language === "Norwegian"
               ? "Jeg bygger nettsider raskt og effektivt ved å bruke de nyeste webteknologiene. Med prompt engineering kan jeg lage innhold raskt, og deretter forbedre det med min egen ekspertise for å skape en unik nettside som passer dine behov."
-              : "I build websites quickly and efficiently using the latest web technologies. With prompt engineering can make content swiftly, then improve upon this with my own expertise to create a unique website for your needs."}
+              : "I build websites quickly and efficiently using the latest web technologies. With prompt engineering I can make content swiftly, then improve upon this with my own expertise to create a unique website for your needs."}
           </ResponsiveThemedH5>
           <Link href="/contact">
             <CallToActionButton>

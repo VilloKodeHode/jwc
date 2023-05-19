@@ -7,46 +7,53 @@ import {
   ResponsiveH3,
   ResponsiveH4,
   ResponsiveH5,
+  ResponsiveThemedH2,
   ResponsiveUL,
 } from "../Responsive text/ResponsiveText";
 import { ClientLayout, TextFlex } from "../Layout";
+import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 
 export const ClientSection = () => {
   const { language } = useContext(LanguageContext);
   const clientObj = CLIENT_LIST.find((client) => client.language === language);
   const CLIENTS = clientObj ? clientObj.CLIENTS : [];
+  const { Theme } = useContext(ThemeContext);
   return (
-    <div className="py-12 bg-JWC-black">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="text-center">
-          <ResponsiveH2 className="font-extrabold text-JWC-White15">
-            Clients
-          </ResponsiveH2>
-        </div>
-        <div className="mt-10">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {CLIENTS.map((client) => (
-              <div
-                key={client.id}
-                className="overflow-hidden bg-white rounded-lg shadow-lg"
-              >
-                <Image
-                  className="object-cover object-center w-full h-48"
-                  src={client.imageUrl}
-                  alt={client.name}
-                  width={500}
-                  height={400}
-                />
-                <div className="p-6">
-                  <h3 className="text-lg font-medium text-gray-900">
-                    {client.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-gray-500">{client.jobDone}</p>
-                </div>
+    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="text-center">
+        <ResponsiveThemedH2 className="px-12 text-center">
+          {language === "Norwegian" ? "Klienter" : "Clients"}
+        </ResponsiveThemedH2>
+      </div>
+      {/* <div
+        className={`py-10  
+        
+        `}
+      > */}
+      <div className="mt-10">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {CLIENTS.map((client) => (
+            <div
+              key={client.id}
+              className="overflow-hidden bg-white rounded-lg shadow-lg"
+            >
+              <Image
+                className="object-cover object-center w-full h-48"
+                src={client.imageUrl}
+                alt={client.name}
+                width={500}
+                height={400}
+              />
+              <div className="p-6">
+                <h3 className="text-lg font-medium text-gray-900">
+                  {client.name}
+                </h3>
+                <p className="mt-2 text-sm text-gray-500">{client.jobDone}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
+        {/* </div> */}
       </div>
     </div>
   );
