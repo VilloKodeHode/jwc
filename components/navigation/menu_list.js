@@ -12,6 +12,7 @@ export const MENU_LIST = [
       },
       // { text: "AI kunst", href: "/aiArt", icon: "/logo/WindLogoNoText.svg" },
       { text: "Kontakt", href: "/contact", icon: "/logo/WindLogoNoText.svg" },
+      // { text: "Laster", href: "/loading", icon: "/logo/WindLogoNoText.svg" },
     ],
   },
   {
@@ -21,6 +22,7 @@ export const MENU_LIST = [
       { text: "Projects", href: "/projects", icon: "/logo/WindLogoNoText.svg" },
       // { text: "AI art", href: "/aiArt", icon: "/logo/WindLogoNoText.svg" },
       { text: "Contact", href: "/contact", icon: "/logo/WindLogoNoText.svg" },
+      // { text: "Loading", href: "/loading", icon: "/logo/WindLogoNoText.svg" },
     ],
   },
 ];

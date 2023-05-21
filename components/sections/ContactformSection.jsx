@@ -48,7 +48,7 @@ export const ContactformSection = () => {
   const { language } = useContext(LanguageContext);
   const { Theme } = useContext(ThemeContext);
   return (
-    <div className="flex flex-col min-h-[calc(100vh-144px)] justify-center items-center py-8">
+    <div className="animate-PageAppearRight flex flex-col min-h-[calc(100vh-144px)] justify-center items-center py-8">
       <ResponsiveThemedH1 className="mb-4">
         {language === "Norwegian" ? "Kontaktskjema" : "Contact form"}
       </ResponsiveThemedH1>
@@ -74,7 +74,7 @@ export const ContactformSection = () => {
           <input
             type="text"
             id="name"
-            className="w-full px-4 py-2 rounded-lg border border-JWC-primary focus:outline-none focus:border-JWC-secondary"
+            className="w-full px-4 py-2 border rounded-lg border-JWC-primary focus:outline-none focus:border-JWC-secondary"
             placeholder={language === "Norwegian" ? "Ditt navn" : "Your name"}
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -93,7 +93,7 @@ export const ContactformSection = () => {
           <input
             type="email"
             id="email"
-            className="w-full px-4 py-2 rounded-lg border border-JWC-primary focus:outline-none focus:border-JWC-secondary"
+            className="w-full px-4 py-2 border rounded-lg border-JWC-primary focus:outline-none focus:border-JWC-secondary"
             placeholder={
               language === "Norwegian"
                 ? "Din email addresse"
@@ -117,7 +117,7 @@ export const ContactformSection = () => {
           </label>
           <textarea
             id="message"
-            className="w-full px-4 py-2 rounded-lg border border-JWC-primary focus:outline-none focus:border-JWC-secondary"
+            className="w-full px-4 py-2 border rounded-lg border-JWC-primary focus:outline-none focus:border-JWC-secondary"
             rows="4"
             placeholder={
               language === "Norwegian" ? "Din melding" : "Your message"

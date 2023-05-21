@@ -15,7 +15,7 @@ export const CompanyInfo = () => {
   const { language } = useContext(LanguageContext);
   const { Theme } = useContext(ThemeContext);
   return (
-    <div className="grid justify-center items-center min-h-[calc(100vh-144px)]">
+    <div className="grid animate-PageAppearRight justify-center items-center min-h-[calc(100vh-144px)]">
       <div
         className={`min-h-[90%] sm:rounded-lg grid lg:grid-cols-2  ${
           Theme === "light" ? "bg-JWC-white" : "bg-JWC-black"

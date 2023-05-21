@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <>
       <div className="relative z-10 flex items-center justify-between px-12 py-1 bg-JWC-black text-JWC-white10">
-        <div className="grid gap-12 grid-flow-col">
+        <div className="grid grid-flow-col gap-12">
           <LanguageSwitch />
           <ThemeSwitch />
         </div>
@@ -38,9 +38,9 @@ export default function Header() {
             ? "Siden er under konstruksjon"
             : "Site is under construction"}
         </p> */}
-        <Link href="/Norwegian resume shorted JWC.png" target="_blank">
+        {/* <Link href="/Norwegian resume shorted JWC.png" target="_blank">
           CV
-        </Link>
+        </Link> */}
       </div>
 
       <header

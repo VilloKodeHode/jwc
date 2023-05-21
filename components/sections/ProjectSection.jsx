@@ -20,7 +20,7 @@ export const ProjectSection = (props) => {
             {language === "Norwegian" ? "Prosjekter" : "Projects"}
           </ResponsiveThemedH1>
         </div>
-        <div className="mt-10">
+        <div className="mt-10 animate-PageAppearRight">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {PROJECT_LIST.map((project) => (
               <div

@@ -146,17 +146,33 @@ module.exports = {
           "0%": { translate: "-100%", opacity: "0%" },
           "100%": { translate: "0%", opacity: "100%" },
         },
-        slideLeft: {
-          "0%": { translate: "100%", opacity: "0%" },
-          "100%": { translate: "0%", opacity: "100%" },
-        },
         slideDown: {
           "0%": { transform: "translateY(-100%)", opacity: "0%" },
           "100%": { translate: "translateY(0%)", opacity: "100%" },
         },
+        slideLeft: {
+          "0%": { translate: "100%", opacity: "0%" },
+          "100%": { translate: "0%", opacity: "100%" },
+        },
         appear: {
           "0%": { opacity: "0%" },
           "100%": { opacity: "100%" },
+        },
+        slideInRight: {
+          "0%": { translate: "-100%", opacity: "0%", display: "hidden" },
+          "100%": { translate: "-0%", opacity: "100%", display: "block" },
+        },
+        slideInLeft: {
+          "0%": { translate: "100%", opacity: "0%", display: "hidden" },
+          "100%": { translate: "0%", opacity: "100%", display: "block" },
+        },
+        slideOutRight: {
+          "0%": { translate: "-0%", opacity: "100%", display: "hidden" },
+          "100%": { translate: "-100%", opacity: "0%" },
+        },
+        slideOutLeft: {
+          "0%": { translate: "0%", opacity: "100%", display: "hidden" },
+          "100%": { translate: "50%", opacity: "0%", display: "block" },
         },
       },
       animation: {
@@ -167,9 +183,13 @@ module.exports = {
         RPSPopUp: "popUp 0.1s ease-in",
         glow: "glow 3s ease-in-out infinite alternate",
         SlideInFromLeft: "slideLeft 0.5s ease-in-out",
-        SlideInFromRight: "slideRight 0.5s 1s ease-in-out backwards",
+        SlideInFromRight: "slideInRight 0.5s 1s ease-in-out backwards",
+        ThemeSwitchSlideIn: "slideInRight 0.5s ease-in-out backwards",
+        ThemeSwitchSlideOut: "slideOutRight 0.5s ease-in-out forwards",
         SlideInFromTop: "slideDown 0.5s ease-in-out",
         Appear: "appear 0.3s ease-in-out",
+        PageAppearRight: "slideInRight 0.6s ease-in-out forwards",
+        PageAppearLeft: "slideInLeft 0.3s ease-in-out",
         RPSPopUpDelayed: "popUp 0.1s ease-in 1.0s backwards",
         RPSPopUpMoreDelayed: "popUp 0.1s ease-in 2s backwards",
       },

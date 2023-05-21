@@ -15,8 +15,8 @@ export const CTAOneSection = () => {
   const { language } = useContext(LanguageContext);
   return (
     <>
-      <section className="relative z-10 flex items-center justify-center w-full min-h-[calc(100vh-144px)] bg-center bg-cover group/imageEffect">
-        <div className="max-w-6xl">
+      <section className="relative animate-PageAppearRight z-10 flex items-center justify-center w-full min-h-[calc(100vh-144px)] bg-center bg-cover group/imageEffect">
+        <div className="max-w-6xl ">
           <div className="flex flex-col items-center md:flex-row">
             <div className="w-full md:w-1/2">
               <div className="relative z-10 text-center select-none md:text-left">
@@ -54,7 +54,7 @@ export const CTAOneSection = () => {
                     {language === "Norwegian" ? "innhold" : "content"}
                   </span>
                 </ResponsiveH2>
-                <ThemedP className="mb-8 max-w-md">
+                <ThemedP className="max-w-md mb-8">
                   {language === "Norwegian"
                     ? "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter."
                     : "Engaging websites for your purpose: From simple to complex websites, customized for all devices."}

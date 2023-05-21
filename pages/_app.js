@@ -7,8 +7,10 @@ import Footer from "@/components/navigation/Footer";
 import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
 import { ScrollToTopButton } from "@/components/Buttons";
 import ThemeContext from "@/components/Utilities/ThemeSwitch/ThemeContext";
+import LoadingScreen from "./loading";
 
 export default function App({ Component, pageProps }) {
+  const [isLoading, setIsLoading] = useState(true);
   const [language, setLanguage] = useState("");
   const [Theme, setTheme] = useState("dark");
 
@@ -19,6 +21,22 @@ export default function App({ Component, pageProps }) {
       setLanguage("English"); // fallback language if navigator is not defined
     }
   }, []);
+  // useEffect  should run when the page components are loading showing a loading screen until the page is loaded
+  // useEffect(() => {
+  //   const handler = () => {
+  //     setIsLoading(false);
+  //   };
+
+  //   window.addEventListener("load", handler);
+
+  //   return () => {
+  //     window.removeEventListener("load", handler);
+  //   };
+  // }, []);
+
+  // if (isLoading) {
+  //   return <LoadingScreen />;
+  // }
 
   return (
     <>

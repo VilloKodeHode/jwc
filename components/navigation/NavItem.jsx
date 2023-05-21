@@ -25,7 +25,7 @@ const NavItem = ({
               : "text-JWC-white border-JWC-white"
           } ${
             active || activeLink === text ? `border-b` : "hover:underline"
-          } z-10  duration-150`}
+          } z-10`}
           onClick={onClick}
         >
           {text}
@@ -35,7 +35,7 @@ const NavItem = ({
         <div className="absolute top-0 w-5 h-full -left-1">
           <Image
             src={icon}
-            className="w-auto h-full"
+            className="w-auto h-full animate-Appear"
             fill="responsive"
             alt=""
           />

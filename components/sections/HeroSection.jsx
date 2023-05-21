@@ -12,12 +12,12 @@ import Link from "next/link";
 export const HeroSection = () => {
   const { language } = useContext(LanguageContext);
   return (
-    <section className="relative flex items-center justify-center w-full min-h-[calc(100vh-144px)] bg-center bg-cover">
-      <div className="max-w-6xl">
+    <section className="relative  flex items-center justify-center w-full min-h-[calc(100vh-144px)] bg-center bg-cover">
+      <div className="max-w-6xl animate-PageAppearRight">
         <div className="relative z-10 text-left">
           <ResponsiveP className="mb-8 text-left rainbowtext w-fit">
             {language === "Norwegian"
-              ? "Få nettsiden din opp og kjørende, raskt!"
+              ? "Få nettsiden din opp og gå, raskt!"
               : "Get your website up and running, fast!"}
           </ResponsiveP>
           <ResponsiveThemedH1 className="mb-8">
