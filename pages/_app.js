@@ -8,6 +8,7 @@ import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageConte
 import { ScrollToTopButton } from "@/components/Buttons";
 import ThemeContext from "@/components/Utilities/ThemeSwitch/ThemeContext";
 import LoadingScreen from "./loading";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,7 +23,6 @@ export default function App({ Component, pageProps }) {
     }
   }, []);
 
-
   return (
     <>
       <LanguageContext.Provider value={{ language, setLanguage }}>
@@ -35,6 +35,7 @@ export default function App({ Component, pageProps }) {
               }
             >
               <Component {...pageProps} />
+              <Analytics />
             </div>
             <Footer />
             <ScrollToTopButton />
