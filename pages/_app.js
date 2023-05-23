@@ -21,22 +21,7 @@ export default function App({ Component, pageProps }) {
       setLanguage("English"); // fallback language if navigator is not defined
     }
   }, []);
-  // useEffect  should run when the page components are loading showing a loading screen until the page is loaded
-  // useEffect(() => {
-  //   const handler = () => {
-  //     setIsLoading(false);
-  //   };
 
-  //   window.addEventListener("load", handler);
-
-  //   return () => {
-  //     window.removeEventListener("load", handler);
-  //   };
-  // }, []);
-
-  // if (isLoading) {
-  //   return <LoadingScreen />;
-  // }
 
   return (
     <>

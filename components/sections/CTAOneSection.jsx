@@ -1,18 +1,11 @@
 import Image from "next/image";
-import CallToActionButton from "../Buttons";
-import THREESpace from "../animation/Space";
-import ResponsiveH1, {
-  ResponsiveH2,
-  ResponsiveP,
-  ThemedP,
-} from "../Responsive text/ResponsiveText";
-import Link from "next/link";
+import { ResponsiveH2, ThemedP } from "../Responsive text/ResponsiveText";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import { useContext, useState } from "react";
-
 export const CTAOneSection = () => {
   const [currentWeb, setCurrentWeb] = useState("/Hero8.png");
   const { language } = useContext(LanguageContext);
+
   return (
     <>
       <section className="relative animate-PageAppearRight z-10 flex items-center justify-center w-full min-h-[calc(100vh-144px)] bg-center bg-cover group/imageEffect">
@@ -72,16 +65,40 @@ export const CTAOneSection = () => {
                   priority={true}
                 />
               </div>
-              {/* <Link href="/contact" className="">
-                <CallToActionButton>
-                  {language === "Norwegian" ? "Ta kontakt" : "Contact me"}
-                </CallToActionButton>
-              </Link> */}
             </div>
           </div>
         </div>
       </section>
-      <THREESpace className="absolute top-0 -z-10" />
     </>
   );
 };
+
+// export const getStaticProps = async () => {
+//   const images = [
+//     "/Hero8.png",
+//     "/HeroDesign.webp",
+//     "/HeroDevelopment.webp",
+//     "/HeroCollage.webp",
+//   ];
+
+//   const imagePromises = images.map((image) => {
+//     return new Promise((resolve, reject) => {
+//       const img = new Image();
+//       img.src = image;
+//       img.onload = resolve;
+//       img.onerror = reject;
+//     });
+//   });
+
+//   try {
+//     await Promise.all(imagePromises);
+//   } catch (error) {
+//     console.error("Failed to preload images:", error);
+//   }
+
+//   return {
+//     props: {},
+//   };
+// };
+
+// CTAOneSection.getStaticProps = getStaticProps;
