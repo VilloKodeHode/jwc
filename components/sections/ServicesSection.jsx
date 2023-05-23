@@ -67,7 +67,7 @@ export const ServicesSection = () => {
                     <ThemedP className="mt-2">
                       {language === "Norwegian"
                         ? "Jeg har kunnskap innen flere felt utenom programmering, som ernæring, pedagogikk og fysisk aktivitet. Jeg kan skrive nettinnhold som både er informativt og engasjerende."
-                        : "Im knowledgeable in several fields outside of programming, like nutrition, pedagogy and physical activity. I can write content for your website that is both informative and engaging."}
+                        : "I'm knowledgeable in several fields outside of programming, like nutrition, pedagogy and physical activity. I can write content for your website that is both informative and engaging."}
                     </ThemedP>
                   </div>
                   {/* <CallToActionButton>Learn more</CallToActionButton> */}
@@ -113,7 +113,7 @@ export const ServicesSection = () => {
                     <ThemedP className="mt-2">
                       {language === "Norwegian"
                         ? "Hvis du trenger hjelp med noe som ikke er nevnt her, ikke nøl med å ta kontakt med meg. Jeg er alltid åpen for nye utfordringer, og jeg er sikker på at vi kan finne en løsning."
-                        : "If you need help with something that is not listed here, dont hesitate to contact me. I&apos;m always open to new challenges and I&apos;m sure we can work something out."}
+                        : "If you need help with something that is not listed here, dont hesitate to contact me. I'm always open to new challenges and I'm sure we can work something out."}
                     </ThemedP>
                   </div>
                   {/* <CallToActionButton>Contact me</CallToActionButton> */}
