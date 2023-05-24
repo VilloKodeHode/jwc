@@ -31,8 +31,11 @@ export default function Home() {
     <>
       <Head>
         <title>JV Web Consult</title>
-        <meta name="JWC web consult" content="JWC official website" />
-        <meta name="keywords" content="webdesign, utvikling, nettside, SEO" />
+        <meta name="Villo utvikling" content="Villo utvikling's webside" />
+        <meta
+          name="keywords"
+          content="webdesign, utvikling, nettside, SEO, frontend utvikling"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/logo/WindLogoNoText.svg" />

@@ -27,7 +27,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        JWC: {
+        Villo: {
           // primary: "#a2cbcc",
           // secondary: "#f78f6a",
           // tertiary: "#387184",

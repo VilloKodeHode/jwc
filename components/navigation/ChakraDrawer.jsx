@@ -44,21 +44,23 @@ export default function ChakraDrawer({
           size="lg"
           icon={<HamburgerIcon boxSize="3rem" />}
           onClick={() => onOpen()}
-          className="block ml-8 duration-200 hover:scale-110 text-JWC-primary"
+          className="block ml-8 duration-200 hover:scale-110 text-Villo-primary"
         />
         <Drawer onClose={onClose} isOpen={isOpen} size="xs" placement="right">
           <DrawerOverlay />
           <DrawerContent>
-            <div className="flex justify-between px-12 py-1 bg-JWC-black text-JWC-white">
+            <div className="flex justify-between px-12 py-1 bg-Villo-black text-Villo-white">
               <LanguageSwitch />
               <ThemeSwitch />
-              <Link href="/Norwegian resume shorted JWC.png" target="_blank">
+              {/* <Link href="/Norwegian resume shorted JWC.png" target="_blank">
                 CV
-              </Link>
+              </Link> */}
             </div>
             <DrawerHeader
               className={`relative flex justify-center  ${
-                Theme === "light" ? "bg-JWC-white25" : "bg-JWC-backgroundBlack"
+                Theme === "light"
+                  ? "bg-Villo-white25"
+                  : "bg-Villo-backgroundBlack"
               }`}
             >
               <LogoComponent
@@ -69,11 +71,13 @@ export default function ChakraDrawer({
             </DrawerHeader>
             <DrawerBody
               className={
-                Theme === "light" ? "bg-JWC-white" : "bg-JWC-backgroundBlack"
+                Theme === "light"
+                  ? "bg-Villo-white"
+                  : "bg-Villo-backgroundBlack"
               }
             >
               <ul
-                className={`text-JWC-primary
+                className={`text-Villo-primary
            mt-0 p-2`}
               >
                 <div className="flex flex-col items-center justify-center w-full mt-8">

@@ -4,7 +4,7 @@ export const PROJECT_LIST = [
   {
     engProjectName: "Gift helper",
     norProjectName: "Gavehjelper",
-    textColor: "text-JWC-white",
+    textColor: "text-Villo-white",
     src: "/images/projects/GH-collage.png",
     mobileSrc: "/images/projects/GH1.png",
     alt: "Gift helper",
@@ -19,7 +19,7 @@ export const PROJECT_LIST = [
   {
     engProjectName: "Multistep form",
     norProjectName: "Flerstegs skjema",
-    textColor: "text-JWC-white",
+    textColor: "text-Villo-white",
     src: "/images/projects/MSF-collage.png",
     mobileSrc: "/images/projects/Multi page form.png",
     alt: "Flersteg skjema",
@@ -34,7 +34,7 @@ export const PROJECT_LIST = [
   {
     engProjectName: "Pokedex v1 and v2",
     norProjectName: "Pokedex v1 og v2",
-    textColor: "text-JWC-white",
+    textColor: "text-Villo-white",
     src: "/images/projects/POKEDEXV1-collage.png",
     mobileSrc: "/images/projects/POKEDEXV1-1.png",
     alt: "Pokedex v1",
@@ -49,7 +49,7 @@ export const PROJECT_LIST = [
   {
     engProjectName: "Rock, paper, scissors game",
     norProjectName: "Stein, sakser, papir spill",
-    textColor: "text-JWC-white",
+    textColor: "text-Villo-white",
     src: "/images/projects/RPS-collage.png",
     mobileSrc: "/images/projects/RPS.png",
     alt: "Stein sakser papir app",
@@ -65,7 +65,7 @@ export const PROJECT_LIST = [
   {
     engProjectName: "Advice generator",
     norProjectName: "Rådgivningsgenerator",
-    textColor: "text-JWC-white",
+    textColor: "text-Villo-white",
     src: "/images/projects/AG-collage.png",
     mobileSrc: "/images/projects/Advice generator.png",
     alt: "App for gode råd",

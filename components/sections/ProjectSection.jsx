@@ -25,7 +25,7 @@ export const ProjectSection = (props) => {
             {PROJECT_LIST.map((project) => (
               <div
                 key={project.engProjectName}
-                className="flex flex-col justify-between overflow-hidden rounded-lg shadow shadow-JWC-black75 bg-JWC-black"
+                className="flex flex-col justify-between overflow-hidden rounded-lg shadow shadow-Villo-black75 bg-Villo-black"
               >
                 <Image
                   className="object-cover object-center w-full h-48"
@@ -35,12 +35,12 @@ export const ProjectSection = (props) => {
                   height={300}
                 />
                 <div className="h-full p-6">
-                  <ResponsiveH5 className="font-light bg-gradient-to-br from-JWC-secondary to-JWC-primary bg-clip-text transparent">
+                  <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
                     {language === "Norwegian"
                       ? project.norProjectName
                       : project.engProjectName}
                   </ResponsiveH5>
-                  <ResponsiveP className="mt-2 text-sm text-JWC-white15">
+                  <ResponsiveP className="mt-2 text-sm text-Villo-white15">
                     {language === "Norwegian"
                       ? project.norDescription
                       : project.engDescription}

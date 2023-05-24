@@ -51,7 +51,7 @@ export function SkillsLayout({ children }) {
 export function TextFlex({ children, textWidth }) {
   return (
     <section
-      className={`flex flex-col items-center snap-center justify-center ${textWidth} mx-auto text-JWC-black`}
+      className={`flex flex-col items-center snap-center justify-center ${textWidth} mx-auto text-Villo-black`}
     >
       <>{children}</>
     </section>
@@ -60,7 +60,7 @@ export function TextFlex({ children, textWidth }) {
 
 export function ClientLayout({ children }) {
   return (
-    <section className="relative p-10 px-4 [&>*]:font-mono border shadow-sm border-JWC-15 shadow-JWC-black bg-JWC-white rounded-sm">
+    <section className="relative p-10 px-4 [&>*]:font-mono border shadow-sm border-Villo-15 shadow-Villo-black bg-Villo-white rounded-sm">
       <>{children}</>
     </section>
   );

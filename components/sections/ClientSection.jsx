@@ -62,7 +62,7 @@ export const ClientSection = () => {
 export const OldClientLayout = () => {
   return (
     <section className="relative grid items-start justify-center w-full gap-12 px-4 text-center">
-      <div className="absolute w-screen left-1/2 -translate-x-1/2 h-[70%] bg-JWC-tertiary -translate-y-1/2 top-1/2 " />
+      <div className="absolute w-screen left-1/2 -translate-x-1/2 h-[70%] bg-Villo-tertiary -translate-y-1/2 top-1/2 " />
       <TextFlex textWidth="max-w-[60ch]">
         <div>
           <ResponsiveH3>
@@ -70,7 +70,7 @@ export const OldClientLayout = () => {
           </ResponsiveH3>
         </div>
         <ClientLayout>
-          <ResponsiveH4 className="text-JWC-black">Wileo AS</ResponsiveH4>
+          <ResponsiveH4 className="text-Villo-black">Wileo AS</ResponsiveH4>
           <Image
             src="/liva-logo.png"
             alt="LIVA"
@@ -80,37 +80,41 @@ export const OldClientLayout = () => {
           />
           <div className="text-start ">
             <ResponsiveUL>
-              <p className="text-JWC-black">
+              <p className="text-Villo-black">
                 {language === "Norwegian"
                   ? "Et startup som skal lansere produktet sitt midt i Q2."
                   : "A startup that is planning to launch its product in the middle of Q2."}
               </p>
-              <ResponsiveH5 className="font-bold underline text-JWC-black">
-                {language === "Norwegian" ? "JWC's roller:" : "JWC's roles:"}
+              <ResponsiveH5 className="font-bold underline text-Villo-black">
+                {language === "Norwegian"
+                  ? "Villo utvikling's roller:"
+                  : "Villo development's roles:"}
               </ResponsiveH5>
-              <p className="text-JWC-black">
+              <p className="text-Villo-black">
                 {" "}
                 {language === "Norwegian"
                   ? "Lage deres landingsside"
                   : "Make their landing page"}
               </p>
-              <p className="text-JWC-black">
+              <p className="text-Villo-black">
                 {language === "Norwegian"
                   ? "Skape innhold for deres konsept"
                   : "Create content for their concept"}
               </p>
-              <p className="text-xs text-JWC-black">
+              <p className="text-xs text-Villo-black">
                 {language === "Norwegian"
                   ? "(linker kommer når siden lanseres)"
                   : "(links will be added when the page is launched)"}
               </p>
-              <ResponsiveH5 className="font-bold underline text-JWC-black">
+              <ResponsiveH5 className="font-bold underline text-Villo-black">
                 {language === "Norwegian"
-                  ? " JWC's potensielle roller:"
-                  : "JWC's potential roles:"}
+                  ? " Villo utvikling's potensielle roller:"
+                  : "Villo development's potential roles:"}
               </ResponsiveH5>
-              <p className="text-JWC-black">Full design makover for Wileo.no</p>
-              <p className="text-JWC-black">
+              <p className="text-Villo-black">
+                Full design makover for Wileo.no
+              </p>
+              <p className="text-Villo-black">
                 {language === "Norwegian"
                   ? "Innholdskaper for deres nettsted"
                   : "Content creator for their website"}

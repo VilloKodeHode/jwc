@@ -21,8 +21,8 @@ const NavItem = ({
         <p
           className={`${textSize} ${
             Theme === "light"
-              ? "text-JWC-black border-JWC-black"
-              : "text-JWC-white border-JWC-white"
+              ? "text-Villo-black border-Villo-black"
+              : "text-Villo-white border-Villo-white"
           } ${
             active || activeLink === text ? `border-b` : "hover:underline"
           } z-10`}
@@ -41,7 +41,7 @@ const NavItem = ({
           />
         </div>
         // <div
-        //   className={`animate-Appear absolute top-1/2 -translate-y-1/2 -left-2 h-6 w-6 border-l-8 border-t-8 border-r-8 border-r-JWC-tertiary border-l-JWC-primary border-t-JWC-secondary duration-75 -z-10 rounded-full `}
+        //   className={`animate-Appear absolute top-1/2 -translate-y-1/2 -left-2 h-6 w-6 border-l-8 border-t-8 border-r-8 border-r-Villo-tertiary border-l-Villo-primary border-t-Villo-secondary duration-75 -z-10 rounded-full `}
         // ></div>
       )}
     </div>

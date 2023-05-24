@@ -20,7 +20,7 @@ export default function ContactPage() {
     <>
       <Head>
         <title>JV Web Consult</title>
-        <meta name="JWC web consult" content="JWC contact form" />
+        <meta name="Villo utvikling" content="contact form" />
         <meta
           name="keywords"
           content="contact form, kontaktskjema, skjema, kontakt, contact"

@@ -28,24 +28,28 @@ export default function Header() {
 
   return (
     <>
-      <div className="relative z-10 flex items-center justify-between px-12 py-1 bg-JWC-black text-JWC-white10">
+      <div
+        className={`relative z-10 flex items-center justify-between px-12 py-1 ${
+          Theme === "light" ? "bg-Villo-white25" : "bg-Villo-black"
+        } text-Villo-white10`}
+      >
         <div className="grid grid-flow-col gap-12">
           <LanguageSwitch />
           <ThemeSwitch />
         </div>
-        {/* <p className="text-sm text-JWC-secondary">
+        {/* <p className="text-sm text-Villo-secondary">
           {language === "Norwegian"
             ? "Siden er under konstruksjon"
             : "Site is under construction"}
         </p> */}
-        {/* <Link href="/Norwegian resume shorted JWC.png" target="_blank">
+        {/* <Link href="/Norwegian resume shorted Villo.png" target="_blank">
           CV
         </Link> */}
       </div>
 
       <header
         className={`relative ${
-          Theme === "light" ? "bg-JWC-white25" : "bg-JWC-black"
+          Theme === "light" ? "bg-Villo-white25" : "bg-Villo-black"
         } flex flex-col h-28 w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 animate-SlideInFromTop shadow-md z-10 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between h-28 ">
@@ -60,14 +64,14 @@ export default function Header() {
               <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" />
             </div>
             <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
-              <ResponsiveThemedSmall className="text-JWC-black25">
+              <ResponsiveThemedSmall className="text-Villo-black25">
                 &#10077;
                 {language === "Norwegian"
                   ? "Drevet med ambisjoner, ekspertise og en uendelig tilførsel av koffein"
                   : "Driven by ambitions, expertise and an endless supply of caffeine"}
                 &#10078;
               </ResponsiveThemedSmall>
-              <ResponsiveThemedMini className="text-JWC-black25">
+              <ResponsiveThemedMini className="text-Villo-black25">
                 VilloKodeHode@gmail.com
               </ResponsiveThemedMini>
             </div>

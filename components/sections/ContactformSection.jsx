@@ -66,7 +66,7 @@ export const ContactformSection = () => {
           <label
             htmlFor="name"
             className={`block font-bold mb-2 ${
-              Theme === "light" ? "text-JWC-black" : "text-JWC-white"
+              Theme === "light" ? "text-Villo-black" : "text-Villo-white"
             }`}
           >
             {language === "Norwegian" ? "Navn" : "Name"}
@@ -74,7 +74,7 @@ export const ContactformSection = () => {
           <input
             type="text"
             id="name"
-            className="w-full px-4 py-2 border rounded-lg border-JWC-primary focus:outline-none focus:border-JWC-secondary"
+            className="w-full px-4 py-2 border rounded-lg border-Villo-primary focus:outline-none focus:border-Villo-secondary"
             placeholder={language === "Norwegian" ? "Ditt navn" : "Your name"}
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -85,7 +85,7 @@ export const ContactformSection = () => {
           <label
             htmlFor="email"
             className={`block font-bold mb-2 ${
-              Theme === "light" ? "text-JWC-black" : "text-JWC-white"
+              Theme === "light" ? "text-Villo-black" : "text-Villo-white"
             }`}
           >
             Email
@@ -93,7 +93,7 @@ export const ContactformSection = () => {
           <input
             type="email"
             id="email"
-            className="w-full px-4 py-2 border rounded-lg border-JWC-primary focus:outline-none focus:border-JWC-secondary"
+            className="w-full px-4 py-2 border rounded-lg border-Villo-primary focus:outline-none focus:border-Villo-secondary"
             placeholder={
               language === "Norwegian"
                 ? "Din email addresse"
@@ -110,14 +110,14 @@ export const ContactformSection = () => {
           <label
             htmlFor="message"
             className={`block font-bold mb-2 ${
-              Theme === "light" ? "text-JWC-black" : "text-JWC-white"
+              Theme === "light" ? "text-Villo-black" : "text-Villo-white"
             }`}
           >
             {language === "Norwegian" ? "Melding" : "Message"}
           </label>
           <textarea
             id="message"
-            className="w-full px-4 py-2 border rounded-lg border-JWC-primary focus:outline-none focus:border-JWC-secondary"
+            className="w-full px-4 py-2 border rounded-lg border-Villo-primary focus:outline-none focus:border-Villo-secondary"
             rows="4"
             placeholder={
               language === "Norwegian" ? "Din melding" : "Your message"
@@ -133,18 +133,18 @@ export const ContactformSection = () => {
       </form>
       {showModal && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="flex flex-col items-center justify-center relative p-8 bg-JWC-black rounded-3xl xl:max-w-[50%] max-w-[80%]">
-            <ResponsiveH2 className="text-JWC-secondary">
+          <div className="flex flex-col items-center justify-center relative p-8 bg-Villo-black rounded-3xl xl:max-w-[50%] max-w-[80%]">
+            <ResponsiveH2 className="text-Villo-secondary">
               {language === "Norwegian"
                 ? "Takk for at du tok kontakt!"
                 : "Thank you for reaching out!"}
             </ResponsiveH2>
-            <ResponsiveP className="text-JWC-primary">
+            <ResponsiveP className="text-Villo-primary">
               {language === "Norwegian"
                 ? "Du vil snart få svar på henvendelsen din."
                 : "You will soon receive a reply to your inquiry."}
             </ResponsiveP>
-            <ResponsiveP className="text-JWC-primary">
+            <ResponsiveP className="text-Villo-primary">
               {language === "Norwegian"
                 ? "La oss lage noe fantastisk!"
                 : "Let's make something awesome!"}
@@ -207,14 +207,14 @@ export const OldContactformSection = () => {
   return (
     <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center min-w-[80%] min-h-[70vh] my-28 text-center">
       <div className="flex justify-center px-8">
-        <ResponsiveH4 className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent lg:max-w-[20ch] max-w-[30ch]">
+        <ResponsiveH4 className="bg-gradient-to-r from-Villo-tertiary to-Villo-secondary bg-clip-text transparent lg:max-w-[20ch] max-w-[30ch]">
           {language === "Norwegian"
             ? "Ønsker du å ta en prat? Fyll ut skjemaet og vi vil kontakte deg så snart som mulig."
             : "Fill out the form if you want to have a chat, and you will be contacted as soon as possible."}
         </ResponsiveH4>
       </div>
       <form
-        className="w-[100%] flex flex-col justify-center items-center p-4 text-JWC-white15"
+        className="w-[100%] flex flex-col justify-center items-center p-4 text-Villo-white15"
         action={endpoint}
         onSubmit={handleSubmit}
       >
@@ -224,7 +224,7 @@ export const OldContactformSection = () => {
               Full name
             </label>
             <input
-              className="w-full p-2 border rounded border-JWC-primary"
+              className="w-full p-2 border rounded border-Villo-primary"
               id="fullName"
               type="text"
               name="fullName"
@@ -241,7 +241,7 @@ export const OldContactformSection = () => {
               Email
             </label>
             <input
-              className="w-full p-2 border rounded border-JWC-primary"
+              className="w-full p-2 border rounded border-Villo-primary"
               id="email"
               type="email"
               name="email"
@@ -258,7 +258,7 @@ export const OldContactformSection = () => {
               Project details
             </label>
             <textarea
-              className="w-full p-2 border rounded border-JWC-primary"
+              className="w-full p-2 border rounded border-Villo-primary"
               id="project"
               rows="4"
               name="project"
@@ -274,7 +274,7 @@ export const OldContactformSection = () => {
               Timeline
             </label>
             <input
-              className="w-full p-2 border rounded border-JWC-primary"
+              className="w-full p-2 border rounded border-Villo-primary"
               id="timeline"
               rows="4"
               name="timeline"
@@ -291,7 +291,7 @@ export const OldContactformSection = () => {
               Budget
             </label>
             <input
-              className="w-full p-2 border rounded border-JWC-primary"
+              className="w-full p-2 border rounded border-Villo-primary"
               id="budget"
               rows="4"
               name="budget"
@@ -310,14 +310,14 @@ export const OldContactformSection = () => {
       </form>
       {showModal && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="flex flex-col items-center justify-center relative p-8 bg-JWC-black rounded-3xl xl:max-w-[50%] max-w-[80%]">
-            <ResponsiveH2 className="text-JWC-secondary">
+          <div className="flex flex-col items-center justify-center relative p-8 bg-Villo-black rounded-3xl xl:max-w-[50%] max-w-[80%]">
+            <ResponsiveH2 className="text-Villo-secondary">
               Takk for at du tok kontakt!
             </ResponsiveH2>
-            <ResponsiveP className="text-JWC-primary">
+            <ResponsiveP className="text-Villo-primary">
               Du vil snart få svar på henvendelsen din.
             </ResponsiveP>
-            <ResponsiveP className="text-JWC-primary">
+            <ResponsiveP className="text-Villo-primary">
               La oss lage noe fantastisk!
             </ResponsiveP>
             <Image

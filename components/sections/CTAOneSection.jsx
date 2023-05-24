@@ -17,9 +17,9 @@ export const CTAOneSection = () => {
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDesign.webp")}
                     onMouseLeave={() => setCurrentWeb("/Hero8.png")}
-                    className="cursor-pointer group text-JWC-primary"
+                    className="cursor-pointer group text-Villo-primary"
                   >
-                    <span className="group-hover:text-JWC-primary group-hover:opacity-100 opacity-80 text-JWC-black50 h1hidden">
+                    <span className="group-hover:text-Villo-primary group-hover:opacity-100 opacity-80 text-Villo-black50 h1hidden">
                       Web
                     </span>
                     design
@@ -27,9 +27,9 @@ export const CTAOneSection = () => {
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDevelopment.webp")}
                     onMouseLeave={() => setCurrentWeb("/Hero8.png")}
-                    className="cursor-pointer group text-JWC-secondary w-fit"
+                    className="cursor-pointer group text-Villo-secondary w-fit"
                   >
-                    <span className="group-hover:text-JWC-secondary group-hover:opacity-100 opacity-80 text-JWC-black50 h1hidden">
+                    <span className="group-hover:text-Villo-secondary group-hover:opacity-100 opacity-80 text-Villo-black50 h1hidden">
                       <br />
                       Web
                     </span>
@@ -38,9 +38,9 @@ export const CTAOneSection = () => {
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroCollage.webp")}
                     onMouseLeave={() => setCurrentWeb("/Hero8.png")}
-                    className="cursor-pointer group text-JWC-tertiary w-fit"
+                    className="cursor-pointer group text-Villo-tertiary w-fit"
                   >
-                    <span className="group-hover:text-JWC-tertiary group-hover:opacity-100 opacity-80 text-JWC-black50 h1hidden">
+                    <span className="group-hover:text-Villo-tertiary group-hover:opacity-100 opacity-80 text-Villo-black50 h1hidden">
                       <br />
                       Web
                     </span>

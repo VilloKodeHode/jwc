@@ -18,15 +18,15 @@ export const CompanyInfo = () => {
     <div className="grid animate-PageAppearRight justify-center items-center min-h-[calc(100vh-144px)]">
       <div
         className={`min-h-[90%] sm:rounded-lg grid lg:grid-cols-2  ${
-          Theme === "light" ? "bg-JWC-white" : "bg-JWC-black"
+          Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
         }`}
       >
         <div
           className={`col-span-1 py-12 min-h-[30vh] flex flex-col justify-center items-center`}
         >
           <SimpleLogoComponent />
-          <ResponsiveThemedH5>JV Web Consult</ResponsiveThemedH5>
-          <ResponsiveH3 className="py-5 bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
+
+          <ResponsiveH3 className="py-5 bg-gradient-to-r from-Villo-tertiary to-Villo-secondary bg-clip-text transparent">
             Joakim Villo
           </ResponsiveH3>
           <ResponsiveThemedP className="max-w-md pb-5 text-center">
@@ -53,12 +53,12 @@ export const OldCompanyInfo = () => {
   const { language } = useContext(LanguageContext);
   return (
     <section className="grid items-center min-h-[60vh] justify-center w-screen font-bold text-center lg:grid-cols-2 mt-[56px]">
-      <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] shadow shadow-JWC-black75 px-8">
+      <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] shadow shadow-Villo-black75 px-8">
         <SimpleLogoComponent />
         <div className="">
-          <ResponsiveThemedH5>JV Web Consult</ResponsiveThemedH5>
+          {/* <ResponsiveThemedH5>JV Web Consult</ResponsiveThemedH5> */}
           <ResponsiveH3>
-            <div className="bg-gradient-to-r from-JWC-tertiary to-JWC-secondary bg-clip-text transparent">
+            <div className="bg-gradient-to-r from-Villo-tertiary to-Villo-secondary bg-clip-text transparent">
               Joakim Villo
             </div>
           </ResponsiveH3>
@@ -75,7 +75,7 @@ export const OldCompanyInfo = () => {
         </TextFlex>
       </div>
 
-      <div className="lg:h-full lg:w-full h-[40vh] shadow shadow-JWC-black75 tonsbergBG" />
+      <div className="lg:h-full lg:w-full h-[40vh] shadow shadow-Villo-black75 tonsbergBG" />
     </section>
   );
 };

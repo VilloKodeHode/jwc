@@ -1,7 +1,7 @@
 import Image from "next/image";
 // import JWCMAINSHAPE from "/logo_main_shape.svg";
 
-export default function JWCIcon() {
+export default function VilloIcon() {
   return (
     <div className="w-8 h-8">
       <Image

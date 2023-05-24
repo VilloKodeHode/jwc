@@ -23,22 +23,22 @@ export const HeroSection = () => {
                 : "Get your website up and running, fast!"}
             </ResponsiveP>
             <ResponsiveThemedH1 className="mb-8">
-              <span className="text-JWC-primary">
+              <span className="text-Villo-primary">
                 {language === "Norwegian"
                   ? "AI-forsterket utvikler"
                   : "AI-powered developer"}
               </span>{" "}
               {language === "Norwegian" ? "som lager" : "creating"}{" "}
-              <span className="text-JWC-secondary">
+              <span className="text-Villo-secondary">
                 {" "}
                 {language === "Norwegian" ? "nettsider" : "websites"}
               </span>{" "}
-              <span className="text-JWC-tertiary">
+              <span className="text-Villo-tertiary">
                 {" "}
                 {language === "Norwegian" ? "raskere" : "faster"}{" "}
               </span>
               {language === "Norwegian" ? "og" : "and"}
-              <span className="text-JWC-tertiary">
+              <span className="text-Villo-tertiary">
                 {" "}
                 {language === "Norwegian" ? "bedre" : "better"}{" "}
               </span>

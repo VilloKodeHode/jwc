@@ -10,7 +10,7 @@ export const Loading = () => {
       <div className="flex flex-col items-center justify-center w-1/2 h-1/2">
         <Image
           src="/logo/WindLogoNoText.svg"
-          alt="JWC Logo"
+          alt="Villo utvikling logo"
           width="50"
           height="50"
           className="animate-bounce"

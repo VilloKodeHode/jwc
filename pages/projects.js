@@ -19,8 +19,14 @@ export default function ProjectPage() {
     <>
       <Head>
         <title>JV Web Consult</title>
-        <meta name="JWC's projects" content="JWC projects" />
-        <meta name="keywords" content="webdesign, utvikling, nettside, SEO" />
+        <meta
+          name="Villo utviklings's prosjekter"
+          content="Villo utviklings prosjekter"
+        />
+        <meta
+          name="keywords"
+          content="webdesign, utvikling, nettside, SEO, prosjekter, projects"
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/logo/WindLogoNoText.svg" />

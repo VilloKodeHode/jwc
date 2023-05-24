@@ -30,7 +30,7 @@ const LogoComponent = ({ activeLink, setActiveLink, onClose }) => {
         src={logoDetails.imageSrc}
         width={logoDetails.imageWidth}
         height={logoDetails.imageHeight}
-        alt="JV web consult"
+        alt="Villo utvikling logo"
         className="z-50 h-full duration-200 lg:p-1 hover:scale-105"
       />
     </Link>
@@ -56,7 +56,7 @@ export const SimpleLogoComponent = () => {
         src={logoDetails.imageSrc}
         width={logoDetails.imageWidth}
         height={logoDetails.imageHeight}
-        alt="JV web consult"
+        alt="Villo utvikling logo"
         className="z-50 m-4"
       />
     </div>

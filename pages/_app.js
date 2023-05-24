@@ -31,7 +31,9 @@ export default function App({ Component, pageProps }) {
             <Header />
             <div
               className={
-                Theme === "light" ? "bg-JWC-white15" : "bg-JWC-backgroundBlack"
+                Theme === "light"
+                  ? "bg-Villo-white15"
+                  : "bg-Villo-backgroundBlack"
               }
             >
               <Component {...pageProps} />
