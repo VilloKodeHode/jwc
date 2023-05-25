@@ -1,17 +1,14 @@
 import AIART_LIST from "@/components/aiArt_list";
 import PageLayout from "@/components/Layout";
-import ResponsiveH1, {
+import {
   ResponsiveH2,
   ResponsiveH3,
-  ResponsiveP,
 } from "@/components/Responsive text/ResponsiveText";
-import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
+
 import Head from "next/head";
 import Image from "next/image";
-import { useContext } from "react";
 
-export default function AIArtPage() {
-  const { language } = useContext(LanguageContext);
+export default function AIArtPage({ language, Theme }) {
   return (
     <>
       <Head>

@@ -1,18 +1,10 @@
-import { useContext } from "react";
-import CallToActionButton from "../Buttons";
 import {
-  ResponsiveH2,
   ResponsiveH5,
-  ResponsiveP,
   ResponsiveThemedH2,
   ThemedP,
 } from "../Responsive text/ResponsiveText";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 
-export const ServicesSection = () => {
-  const { Theme } = useContext(ThemeContext);
-  const { language } = useContext(LanguageContext);
+export const ServicesSection = ({ language, Theme }) => {
   return (
     <div className="py-12 ">
       <div className="mx-auto max-w-7xl">

@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 
 const NavItem = ({
   text,
@@ -11,10 +9,9 @@ const NavItem = ({
   activeLink,
   onClick,
   className,
-  textColor,
   textSize,
+  Theme,
 }) => {
-  const { Theme } = useContext(ThemeContext);
   return (
     <div key={text} className={`relative z-10 p-5 ${className}`}>
       <Link href={href} className="">
@@ -40,9 +37,6 @@ const NavItem = ({
             alt=""
           />
         </div>
-        // <div
-        //   className={`animate-Appear absolute top-1/2 -translate-y-1/2 -left-2 h-6 w-6 border-l-8 border-t-8 border-r-8 border-r-Villo-tertiary border-l-Villo-primary border-t-Villo-secondary duration-75 -z-10 rounded-full `}
-        // ></div>
       )}
     </div>
   );

@@ -21,7 +21,7 @@ export function CallToActionButtonAlt({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="grid items-center px-10 py-4 m-4 font-semibold uppercase duration-100 ease-in-out rounded-md shadow active:scale-95 text-p text-Villo-white font-Roboto shadow-Villo-black50 bg-gradient-to-r from-Villo-black hover:scale-105 to-Villo-black85"
+      className="px-6 py-4 font-bold uppercase duration-100 ease-in-out rounded-md shadow-md xl:w-fit leading-p active:scale-95 text-p text-Villo-white shadow-Villo-black50 bg-gradient-to-r from-Villo-black hover:scale-105 to-Villo-black85"
     >
       <>{children}</>
     </button>

@@ -1,15 +1,12 @@
 import Image from "next/image";
 import { ResponsiveThemedH2, ThemedP } from "../Responsive text/ResponsiveText";
 import SKILLS_LIST from "../Skills/skills_list";
-import { useContext } from "react";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 
-export const SkillsSection = () => {
-  const { language } = useContext(LanguageContext);
+export const SkillsSection = ({ language, Theme }) => {
   return (
     <section className="py-20 ">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="grid justify-center lg:text-center">
+        <div className="grid justify-center md:text-center">
           <ResponsiveThemedH2 className="">
             {language === "Norwegian" ? "Kode kunnskap" : "Coding skills"}
           </ResponsiveThemedH2>

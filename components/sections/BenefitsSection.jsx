@@ -1,20 +1,10 @@
-import { useContext } from "react";
 import {
-  ResponsiveH2,
-  ResponsiveH3,
   ResponsiveH5,
-  ResponsiveP,
   ResponsiveThemedH2,
-  Themed,
   ThemedP,
-  ThemedPP,
 } from "../Responsive text/ResponsiveText";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 
-export const BenefitsSection = () => {
-  const { language } = useContext(LanguageContext);
-  const { Theme } = useContext(ThemeContext);
+export const BenefitsSection = ({ language, Theme }) => {
   return (
     <div className="py-12">
       <div className="mx-auto max-w-7xl">

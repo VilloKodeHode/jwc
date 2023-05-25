@@ -10,8 +10,7 @@ import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import Link from "next/link";
 import THREESpace from "../animation/Space";
 
-export const HeroSection = () => {
-  const { language } = useContext(LanguageContext);
+export const HeroSection = ({ language, Theme }) => {
   return (
     <>
       <section className="relative z-10  flex items-center justify-center w-full min-h-[calc(100vh-144px)] bg-center bg-cover">

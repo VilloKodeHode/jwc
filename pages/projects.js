@@ -5,6 +5,7 @@ import ResponsiveH1, {
   ResponsiveH4,
   ResponsiveH5,
   ResponsiveP,
+  ResponsiveThemedP,
   ResponsiveUL,
 } from "@/components/Responsive text/ResponsiveText";
 import Head from "next/head";
@@ -13,8 +14,8 @@ import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageConte
 import { ClientSection } from "@/components/sections/ClientSection";
 import { ProjectSection } from "@/components/sections/ProjectSection";
 
-export default function ProjectPage() {
-  const { language } = useContext(LanguageContext);
+export default function ProjectPage({ language, Theme }) {
+  // const { language } = useContext(LanguageContext);
   return (
     <>
       <Head>
@@ -32,16 +33,16 @@ export default function ProjectPage() {
         <link rel="icon" href="/logo/WindLogoNoText.svg" />
       </Head>
       <PageLayout gap="gap-28">
-        <ProjectSection />
-        <ClientSection />
+        <ProjectSection language={language} Theme={Theme} />
+        <ClientSection language={language} Theme={Theme} />
 
         <section className="relative grid justify-center min-h-[40vh] mb-[112px] text-center">
           <TextFlex>
-            <ResponsiveP>
+            <ResponsiveThemedP>
               {language === "Norwegian"
                 ? " Flere prosjekter vil bli lagt til etterhvert"
                 : "More projects will be added eventually"}
-            </ResponsiveP>
+            </ResponsiveThemedP>
           </TextFlex>
         </section>
         {/* </section> */}

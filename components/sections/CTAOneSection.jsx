@@ -2,9 +2,10 @@ import Image from "next/image";
 import { ResponsiveH2, ThemedP } from "../Responsive text/ResponsiveText";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import { useContext, useState } from "react";
-export const CTAOneSection = () => {
+
+export const CTAOneSection = ({ language, Theme }) => {
   const [currentWeb, setCurrentWeb] = useState("/Hero8.png");
-  const { language } = useContext(LanguageContext);
+  // const { language } = useContext(LanguageContext);
 
   return (
     <>

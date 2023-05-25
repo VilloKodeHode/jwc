@@ -1,34 +1,21 @@
 import Head from "next/head";
 import Image from "next/image";
-import PageLayout, { TextFlex } from "@/components/Layout";
+import PageLayout from "@/components/Layout";
 
 import CallToActionButton from "@/components/Buttons";
-import ResponsiveH1, {
-  ResponsiveH2,
-  ResponsiveH3,
-  ResponsiveH4,
-  ResponsiveHeaderH1,
-  ResponsiveLi,
-  ResponsiveMini,
-  ResponsiveP,
-  ResponsiveSmall,
-} from "@/components/Responsive text/ResponsiveText";
+import { ResponsiveH3 } from "@/components/Responsive text/ResponsiveText";
 import Link from "next/link";
 
-import VilloIcon, {
-  VilloIconAbsoluted,
-} from "@/components/base components/Icon";
-import { useContext, useState } from "react";
-import THREESpace from "@/components/animation/Space";
+import { useContext } from "react";
+
 import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
 import { CTAOneSection } from "@/components/sections/CTAOneSection";
-import { BullitinSection } from "@/components/sections/BullitinSection";
 import { BenefitsSection } from "@/components/sections/BenefitsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 
-export default function Home() {
-  const { language } = useContext(LanguageContext);
+export default function Home({ language, Theme }) {
+  // const { language } = useContext(LanguageContext);
   return (
     <>
       <Head>
@@ -43,13 +30,13 @@ export default function Home() {
         <link rel="icon" href="/logo/WindLogoNoText.svg" />
       </Head>
       <PageLayout gap="gap-28">
-        <HeroSection />
-        <CTAOneSection />
-        <BenefitsSection />
-        <ServicesSection />
+        <HeroSection language={language} Theme={Theme} />
+        <CTAOneSection language={language} Theme={Theme} />
+        <BenefitsSection language={language} Theme={Theme} />
+        <ServicesSection language={language} Theme={Theme} />
 
         <section className="relative grid items-center justify-center gap-2 px-12 pt-12 mx-auto md:py-12 sm:pt-0 xl:gap-16 mb-[116px]">
-          <div className="z-20">
+          <div className="z-20 mb-16">
             <ResponsiveH3 className="z-20 flex px-12 text-center bg-gradient-to-r from-Villo-tertiary to-Villo-secondary bg-clip-text transparent">
               {language === "Norwegian"
                 ? "La oss komme i gang!"

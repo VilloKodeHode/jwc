@@ -1,21 +1,8 @@
-import { useContext, useState } from "react";
-import CallToActionButton from "@/components/Buttons";
-import PageLayout, { EqualTwoGrids, TextFlex } from "@/components/Layout";
-import ResponsiveH1, {
-  ResponsiveH2,
-  ResponsiveH3,
-  ResponsiveH4,
-  ResponsiveP,
-} from "@/components/Responsive text/ResponsiveText";
-import Image from "next/image";
+import PageLayout from "@/components/Layout";
 import Head from "next/head";
-import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
-import {
-  ContactformSection,
-  OldContactformSection,
-} from "@/components/sections/ContactformSection";
+import { ContactformSection } from "@/components/sections/ContactformSection";
 
-export default function ContactPage() {
+export default function ContactPage({ language, Theme }) {
   return (
     <>
       <Head>
@@ -30,7 +17,7 @@ export default function ContactPage() {
         <link rel="icon" href="/logo/WindLogoNoText.svg" />
       </Head>
       <PageLayout>
-        <ContactformSection />
+        <ContactformSection language={language} Theme={Theme} />
       </PageLayout>
     </>
   );

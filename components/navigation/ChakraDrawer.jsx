@@ -30,9 +30,11 @@ export default function ChakraDrawer({
   isOpen,
   onOpen,
   onClose,
+  language,
+  Theme,
 }) {
-  const { language } = useContext(LanguageContext);
-  const { Theme } = useContext(ThemeContext);
+  // const { language } = useContext(LanguageContext);
+  // const { Theme } = useContext(ThemeContext);
   const menuObj = MENU_LIST.find((menu) => menu.language === language);
   const menu_items = menuObj ? menuObj.menu_items : [];
   return (
@@ -95,6 +97,7 @@ export default function ChakraDrawer({
                       active={activeLink === menu.text}
                       activeLink={activeLink}
                       icon={menu.icon}
+                      Theme={Theme}
                     />
                   ))}
                 </div>

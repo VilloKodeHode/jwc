@@ -11,7 +11,7 @@ import { useContext, useState } from "react";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 
-export const ContactformSection = () => {
+export const ContactformSection = ({ language, Theme }) => {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -45,8 +45,8 @@ export const ContactformSection = () => {
         console.log(data); // handle response, catch errors
       });
   };
-  const { language } = useContext(LanguageContext);
-  const { Theme } = useContext(ThemeContext);
+  // const { language } = useContext(LanguageContext);
+  // const { Theme } = useContext(ThemeContext);
   return (
     <div className="animate-PageAppearRight flex flex-col min-h-[calc(100vh-144px)] justify-center items-center py-8">
       <ResponsiveThemedH1 className="mb-4">

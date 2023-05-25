@@ -1,23 +1,20 @@
 import Image from "next/image";
 import { CLIENT_LIST } from "../client_list";
-import { useContext } from "react";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import {
-  ResponsiveH2,
   ResponsiveH3,
   ResponsiveH4,
   ResponsiveH5,
   ResponsiveThemedH2,
+  ResponsiveThemedH4,
   ResponsiveUL,
+  ThemedH3,
+  ThemedP,
 } from "../Responsive text/ResponsiveText";
 import { ClientLayout, TextFlex } from "../Layout";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 
-export const ClientSection = () => {
-  const { language } = useContext(LanguageContext);
+export const ClientSection = ({ language, Theme }) => {
   const clientObj = CLIENT_LIST.find((client) => client.language === language);
   const CLIENTS = clientObj ? clientObj.CLIENTS : [];
-  const { Theme } = useContext(ThemeContext);
   return (
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div className="text-center">
@@ -25,35 +22,35 @@ export const ClientSection = () => {
           {language === "Norwegian" ? "Klienter" : "Clients"}
         </ResponsiveThemedH2>
       </div>
-      {/* <div
-        className={`py-10  
-        
-        `}
-      > */}
       <div className="mt-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {CLIENTS.map((client) => (
             <div
               key={client.id}
-              className="overflow-hidden bg-white rounded-lg shadow-lg"
+              className={`overflow-hidden ${
+                Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
+              } rounded-lg shadow-lg`}
             >
               <Image
-                className="object-cover object-center w-full h-48"
+                className="object-cover w-full h-48"
                 src={client.imageUrl}
                 alt={client.name}
                 width={500}
                 height={400}
               />
-              <div className="p-6">
-                <h3 className="text-lg font-medium text-gray-900">
+              <div
+                className={`h-full p-6  ${
+                  Theme === "light" ? "bg-Villo-white25" : "bg-Villo-black85"
+                }`}
+              >
+                <ResponsiveThemedH4 className="font-medium">
                   {client.name}
-                </h3>
-                <p className="mt-2 text-sm text-gray-500">{client.jobDone}</p>
+                </ResponsiveThemedH4>
+                <ThemedP className="mt-2 text-sm">{client.jobDone}</ThemedP>
               </div>
             </div>
           ))}
         </div>
-        {/* </div> */}
       </div>
     </div>
   );

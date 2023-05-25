@@ -2,15 +2,11 @@ import Image from "next/image";
 import {
   ResponsiveH4,
   ResponsiveLi,
-  ResponsiveMini,
   ResponsiveP,
   ResponsiveSmall,
 } from "../Responsive text/ResponsiveText";
-import { useContext } from "react";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 
-export const ProcessSection = () => {
-  const { language } = useContext(LanguageContext);
+export const ProcessSection = ({ language, Theme }) => {
   return (
     <section className="relative grid items-center justify-center gap-12 px-12 lg:px-24">
       <div className="grid items-center justify-center gap-12 lg:grid-cols-2">

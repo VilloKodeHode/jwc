@@ -19,14 +19,6 @@ const ThemeSwitch = () => {
       className="relative grid w-[24px] h-[24px] grid-flow-col"
       onClick={toggleTheme}
     >
-      {/* <Image
-        src={Theme === "light" ? LIGHTMODE : DARKMODE}
-        width={320}
-        height={320}
-        alt="themeswitch"
-        className="w-5 h-5"
-      />
-       */}
       <Image
         src={LIGHTMODE}
         width={320}

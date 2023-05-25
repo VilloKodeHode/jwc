@@ -1,31 +1,19 @@
 //Header component
-
-import Image from "next/image";
-import Link from "next/link";
-import { useContext, useState } from "react";
-import { LOGO } from "./menu_list";
+import { useState } from "react";
 import ChakraDrawer from "./ChakraDrawer";
 import { AbsoluteCenter, useDisclosure } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import {
-  ResponsiveMini,
-  ResponsiveSmall,
   ResponsiveThemedMini,
   ResponsiveThemedSmall,
 } from "../Responsive text/ResponsiveText";
 import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 import LogoComponent from "../base components/Logo";
 
-export default function Header() {
+export default function Header({ language, setLanguage, Theme, setTheme }) {
   const [activeLink, setActiveLink] = useState("");
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const { language } = useContext(LanguageContext);
-  const { Theme } = useContext(ThemeContext);
-
   return (
     <>
       <div
@@ -34,17 +22,9 @@ export default function Header() {
         } text-Villo-white10`}
       >
         <div className="grid grid-flow-col gap-12">
-          <LanguageSwitch />
-          <ThemeSwitch />
+          <LanguageSwitch setLanguage={setLanguage} />
+          <ThemeSwitch setTheme={setTheme} />
         </div>
-        {/* <p className="text-sm text-Villo-secondary">
-          {language === "Norwegian"
-            ? "Siden er under konstruksjon"
-            : "Site is under construction"}
-        </p> */}
-        {/* <Link href="/Norwegian resume shorted Villo.png" target="_blank">
-          CV
-        </Link> */}
       </div>
 
       <header
@@ -82,6 +62,8 @@ export default function Header() {
             isOpen={isOpen}
             onOpen={onOpen}
             onClose={onClose}
+            language={language}
+            Theme={Theme}
           />
 
           <ChakraDrawer
@@ -90,6 +72,8 @@ export default function Header() {
             isOpen={isOpen}
             onOpen={onOpen}
             onClose={onClose}
+            language={language}
+            Theme={Theme}
           />
         </div>
       </header>

@@ -11,9 +11,9 @@ import { useContext } from "react";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 
-export const CompanyInfo = () => {
-  const { language } = useContext(LanguageContext);
-  const { Theme } = useContext(ThemeContext);
+export const CompanyInfo = ({ language, Theme }) => {
+  // const { language } = useContext(LanguageContext);
+  // const { Theme } = useContext(ThemeContext);
   return (
     <div className="grid animate-PageAppearRight justify-center items-center min-h-[calc(100vh-144px)]">
       <div

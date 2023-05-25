@@ -5,13 +5,10 @@ import {
   ResponsiveThemedH1,
 } from "../Responsive text/ResponsiveText";
 import { CallToActionButtonAlt } from "../Buttons";
-import { useContext } from "react";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import PROJECT_LIST from "../Projects/projects_list";
+import Link from "next/link";
 
-export const ProjectSection = (props) => {
-  const {} = props;
-  const { language } = useContext(LanguageContext);
+export const ProjectSection = ({ language, Theme }) => {
   return (
     <div className="py-12">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -25,15 +22,19 @@ export const ProjectSection = (props) => {
             {PROJECT_LIST.map((project) => (
               <div
                 key={project.engProjectName}
-                className="flex flex-col justify-between overflow-hidden rounded-lg shadow shadow-Villo-black75 bg-Villo-black"
+                className={`flex flex-col justify-between overflow-hidden rounded-lg shadow bg-Villo-black85 shadow-Villo-black75`}
               >
-                <Image
-                  className="object-cover object-center w-full h-48"
-                  src={project.src}
-                  alt={project.engProjectName}
-                  width={400}
-                  height={300}
-                />
+                <div className="shadow shadow-Villo-black75">
+                  <div className="p-4 pb-0 shadow-inner shadow-Villo-black">
+                    <Image
+                      className="object-cover object-center w-full h-48"
+                      src={project.src}
+                      alt={project.engProjectName}
+                      width={400}
+                      height={300}
+                    />
+                  </div>
+                </div>
                 <div className="h-full p-6">
                   <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
                     {language === "Norwegian"
@@ -46,11 +47,17 @@ export const ProjectSection = (props) => {
                       : project.engDescription}
                   </ResponsiveP>
                 </div>
-                <a className="" href={project.href} target="_blank">
-                  <CallToActionButtonAlt>
-                    {language === "Norwegian" ? "Prøv ut" : "Try it out"}
-                  </CallToActionButtonAlt>
-                </a>
+                <div className="m-4">
+                  <Link
+                    className="w-fit h-fit"
+                    href={project.href}
+                    target="_blank"
+                  >
+                    <CallToActionButtonAlt>
+                      {language === "Norwegian" ? "Prøv ut" : "Try it out"}
+                    </CallToActionButtonAlt>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>

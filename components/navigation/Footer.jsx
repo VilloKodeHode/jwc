@@ -1,16 +1,15 @@
 //Footer component
 
 import Link from "next/link";
-import { FiFacebook, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiMail } from "react-icons/fi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { VscGithubAlt } from "react-icons/vsc";
-import { ResponsiveH5, ResponsiveP } from "../Responsive text/ResponsiveText";
+import { ResponsiveH5 } from "../Responsive text/ResponsiveText";
 
-export default function Footer() {
+export default function Footer({ language, Theme }) {
   return (
     <>
-      <div className="relative pt-12 pb-12 bg-Villo-black85">
-        {/* <div className="absolute footerwave h-[80px] z-10 -top-1/3" /> */}
+      <div className={`relative pt-12 pb-12 bg-Villo-black`}>
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">
             <div className="flex flex-row">
@@ -35,7 +34,9 @@ export default function Footer() {
             </div>
             <div className="flex flex-row items-center justify-center m-4">
               <ResponsiveH5 className="text-white">
-                © 2023 JV Web Consult
+                {language === "Norwegian"
+                  ? "© 2023 Villo utvikling"
+                  : "© 2023 Villo development"}
               </ResponsiveH5>
             </div>
           </div>

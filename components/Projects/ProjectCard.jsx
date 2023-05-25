@@ -1,28 +1,13 @@
 //Component for displaying project layout
 
 import Image from "next/image";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CallToActionButtonAlt } from "../Buttons";
-import ResponsiveH1, {
-  ResponsiveH3,
-  ResponsiveH4,
-  ResponsiveH5,
-  ResponsiveP,
-} from "../Responsive text/ResponsiveText";
+import { ResponsiveH3, ResponsiveP } from "../Responsive text/ResponsiveText";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
-import PROJECT_LIST from "./projects_list";
 
 export default function ProjectCard(props) {
-  const {
-    href,
-    projectName,
-    textColor,
-    src,
-    mobileSrc,
-    description,
-    alt,
-    cardColor,
-  } = props;
+  const { href, projectName, src, mobileSrc, description, alt } = props;
   const { language } = useContext(LanguageContext);
 
   return (

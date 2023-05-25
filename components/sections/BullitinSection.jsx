@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { TextFlex } from "../Layout";
 import {
   ResponsiveH2,
@@ -6,10 +5,8 @@ import {
   ResponsiveP,
 } from "../Responsive text/ResponsiveText";
 import VilloIcon from "../base components/Icon";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 
-export const BullitinSection = () => {
-  const { language } = useContext(LanguageContext);
+export const BullitinSection = ({ language, Theme }) => {
   return (
     <section className="relative grid justify-center items-center py-8 w-full bg-Villo-tertiary my-8 min-h-[35vh] text-left xl:gap-0 gap-12">
       <TextFlex>
@@ -70,8 +67,7 @@ export const BullitinSection = () => {
   );
 };
 
-export const OldBullitinSection = () => {
-  const { language } = useContext(LanguageContext);
+export const OldBullitinSection = (language) => {
   return (
     <section className="relative grid justify-center items-center py-8 w-full bg-Villo-tertiary my-8 min-h-[35vh] text-left xl:gap-0 gap-12">
       <TextFlex>
