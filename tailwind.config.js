@@ -188,6 +188,7 @@ module.exports = {
         ThemeSwitchSlideOut: "slideOutRight 0.5s ease-in-out forwards",
         SlideInFromTop: "slideDown 0.5s ease-in-out",
         Appear: "appear 0.3s ease-in-out",
+        Disappear: "appear 0.3s ease-in-out backwards",
         PageAppearRight: "slideInRight 0.6s ease-in-out forwards",
         PageAppearLeft: "slideInLeft 0.3s ease-in-out",
         RPSPopUpDelayed: "popUp 0.1s ease-in 1.0s backwards",

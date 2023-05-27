@@ -1,11 +1,38 @@
 import Image from "next/image";
 import { ResponsiveH2, ThemedP } from "../Responsive text/ResponsiveText";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export const CTAOneSection = ({ language, Theme }) => {
   const [currentWeb, setCurrentWeb] = useState("/Hero8.png");
-  // const { language } = useContext(LanguageContext);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        switch (currentWeb) {
+          case "/Hero8.png":
+            setCurrentWeb("/HeroDesign.webp");
+            break;
+          case "/HeroDesign.webp":
+            setCurrentWeb("/HeroDevelopment.webp");
+            break;
+          case "/HeroDevelopment.webp":
+            setCurrentWeb("/HeroCollage.webp");
+            break;
+          case "/HeroCollage.webp":
+            setCurrentWeb("/Hero8.png");
+            break;
+          default:
+            setCurrentWeb("/Hero8.png");
+        }
+        setIsAnimating(false);
+      }, 500); // Adjust the duration to match your animation
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [currentWeb]);
 
   return (
     <>
@@ -17,20 +44,30 @@ export const CTAOneSection = ({ language, Theme }) => {
                 <ResponsiveH2 className="mb-8 ">
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDesign.webp")}
-                    onMouseLeave={() => setCurrentWeb("/Hero8.png")}
                     className="cursor-pointer group text-Villo-primary"
                   >
-                    <span className="group-hover:text-Villo-primary group-hover:opacity-100 opacity-80 text-Villo-black50 h1hidden">
+                    <span
+                      className={`group-hover:text-Villo-primary group-hover:opacity-100 transition-all duration-500 opacity-80 text-Villo-black50 h1hidden ${
+                        currentWeb === "/HeroDesign.webp"
+                          ? "text-Villo-primary"
+                          : ""
+                      }`}
+                    >
                       Web
                     </span>
                     design
                   </span>{" "}
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDevelopment.webp")}
-                    onMouseLeave={() => setCurrentWeb("/Hero8.png")}
                     className="cursor-pointer group text-Villo-secondary w-fit"
                   >
-                    <span className="group-hover:text-Villo-secondary group-hover:opacity-100 opacity-80 text-Villo-black50 h1hidden">
+                    <span
+                      className={`group-hover:text-Villo-secondary group-hover:opacity-100 transition-all duration-500 opacity-80 text-Villo-black50 h1hidden ${
+                        currentWeb === "/HeroDevelopment.webp"
+                          ? "text-Villo-secondary"
+                          : ""
+                      }`}
+                    >
                       <br />
                       Web
                     </span>
@@ -38,10 +75,15 @@ export const CTAOneSection = ({ language, Theme }) => {
                   </span>{" "}
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroCollage.webp")}
-                    onMouseLeave={() => setCurrentWeb("/Hero8.png")}
                     className="cursor-pointer group text-Villo-tertiary w-fit"
                   >
-                    <span className="group-hover:text-Villo-tertiary group-hover:opacity-100 opacity-80 text-Villo-black50 h1hidden">
+                    <span
+                      className={`group-hover:text-Villo-tertiary transition-all duration-500 group-hover:opacity-100 opacity-80 text-Villo-black50 h1hidden ${
+                        currentWeb === "/HeroCollage.webp"
+                          ? "text-Villo-tertiary"
+                          : ""
+                      }`}
+                    >
                       <br />
                       Web
                     </span>
@@ -56,15 +98,19 @@ export const CTAOneSection = ({ language, Theme }) => {
               </div>
             </div>
             <div className="w-full mt-8 md:w-1/2">
-              <div className="relative z-10 grid justify-center">
-                <Image
-                  src={currentWeb}
-                  alt="intro image"
-                  width={400}
-                  height={400}
-                  className="object-cover duration-300 md:w-full md:h-full opacity-90 shadowblend group-hover/imageEffect:opacity-100"
-                  priority={true}
-                />
+              <div className={`relative z-10 grid justify-center`}>
+                <div className="transition-opacity">
+                  <Image
+                    src={currentWeb}
+                    alt="intro image"
+                    width={400}
+                    height={400}
+                    className={`object-cover duration-500 md:w-full md:h-full ${
+                      isAnimating ? "opacity-0" : "opacity-100"
+                    } shadowblend`}
+                    priority={true}
+                  />
+                </div>
               </div>
             </div>
           </div>
