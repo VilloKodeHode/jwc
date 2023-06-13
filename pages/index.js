@@ -6,9 +6,7 @@ import CallToActionButton from "@/components/Buttons";
 import { ResponsiveH3 } from "@/components/Responsive text/ResponsiveText";
 import Link from "next/link";
 
-import { useContext } from "react";
 
-import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
 import { CTAOneSection } from "@/components/sections/CTAOneSection";
 import { BenefitsSection } from "@/components/sections/BenefitsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";

@@ -202,3 +202,10 @@ module.exports = {
     require("daisyui"),
   ],
 };
+
+
+
+
+
+
+

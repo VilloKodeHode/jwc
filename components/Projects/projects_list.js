@@ -77,6 +77,37 @@ export const PROJECT_LIST = [
     norDescription:
       "Enkel app som henter råd fra en API. Prosjektet var raskt å lage. Bugs: Jeg oppdaget nylig at den ikke fungerer i Firefox (jeg har planer om å fikse dette).",
   },
+  {
+    engProjectName: "Mockup-site: Kjælevenner",
+    norProjectName: "Mockup-side: Kjælevenner",
+    textColor: "text-Villo-white",
+    src: "/images/projects/KV-collage.png",
+    mobileSrc: "/images/projects/KV-collage.png",
+    alt: "Kjælevenner mockup side",
+    cardColor: "bg-[#86e5c1]",
+
+    href: "https://voffoffer-k602v0ypn-villokodehode.vercel.app/",
+    hrefCode: "https://github.com/VilloKodeHode/voffoffer",
+    engDescription:
+      "A webpage with information about house pets. Projects like this are easy and quick to setup. Currently only in Norwegian.",
+    norDescription:
+      "En webside med informasjon om husdyr. Prosjekter som dette er enkle og raske å sette opp. Foreløpig bare på norsk.",
+  },
+  {
+    engProjectName: "Mockup-site: Ola's Matlaging",
+    norProjectName: "Mockup-side: Ola's Matlaging",
+    textColor: "text-Villo-white",
+    src: "/images/projects/OM-collage.png",
+    mobileSrc: "/images/projects/OM-collage.png",
+    alt: "Ola's Matlaging mockup side",
+    cardColor: "bg-[#86e5c1]",
+    href: "https://olas-matlaging.vercel.app/",
+    hrefCode: "https://github.com/VilloKodeHode/om-site",
+    engDescription:
+      "A satire webpage about a fictional chef. Extremlly simple recipes for people who don't know how to cook. Connected with Sanity CMS for easy content update. Currently only in Norwegian",
+    norDescription:
+      "En satire webside om en fiktiv kokk. Ekstremt enkle oppskrifter for personer som ikke vet hvordan man skal lage mat. Koblet til Sanity CMS for enkelt innholdsoppdatering. Foreløpig bare på norsk.",
+  },
 ];
 
 export default PROJECT_LIST;
