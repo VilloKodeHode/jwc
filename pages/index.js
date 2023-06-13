@@ -12,6 +12,7 @@ import { BenefitsSection } from "@/components/sections/BenefitsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 
+
 export default function Home({ language, Theme }) {
   // const { language } = useContext(LanguageContext);
   return (

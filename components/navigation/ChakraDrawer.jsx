@@ -6,6 +6,7 @@ import NavItem from "./NavItem";
 import Image from "next/image";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
+
 //chakra components:
 import {
   Drawer,
@@ -37,6 +38,24 @@ export default function ChakraDrawer({
   // const { Theme } = useContext(ThemeContext);
   const menuObj = MENU_LIST.find((menu) => menu.language === language);
   const menu_items = menuObj ? menuObj.menu_items : [];
+
+  //TODO implementer useRef så jeg kan ta bort chakraUI
+  // const menuRef = useRef(null);
+
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (menuRef.current && !menuRef.current.contains(event.target)) {
+  //       setIsOpen(false);
+  //     }
+  //   };
+
+  //   document.addEventListener("mousedown", handleClickOutside);
+
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
+
   return (
     <>
       <div className="flex items-center h-full rounded-bl-full md:hidden">
@@ -48,7 +67,13 @@ export default function ChakraDrawer({
           onClick={() => onOpen()}
           className="block ml-8 duration-200 hover:scale-110 text-Villo-primary"
         />
-        <Drawer onClose={onClose} isOpen={isOpen} size="xs" placement="right">
+        <Drawer
+          onClose={onClose}
+          isOpen={isOpen}
+          size="xs"
+          placement="right"
+          // ref={menuRef}
+        >
           <DrawerOverlay />
           <DrawerContent>
             <div className="flex justify-between px-12 py-1 bg-Villo-black text-Villo-white">
