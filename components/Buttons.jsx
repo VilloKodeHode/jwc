@@ -10,7 +10,7 @@ export default function CallToActionButton({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="px-6 py-4 my-4 font-bold uppercase duration-100 ease-in-out rounded-md shadow-md xl:w-fit text-Villo-black85 active:scale-95 text-p leading-p shadow-Villo-black50 bg-gradient-to-r hover:scale-105 from-Villo-primary to-Villo-tertiary"
+      className="px-6 py-4 my-4 font-bold uppercase duration-100 ease-in-out rounded-md shadow-md xl:w-fit text-Villo-black85 active:scale-95 text-p leading-p shadow-Villo-black bg-Villo-secondary hover:scale-105"
     >
       <>{children}</>
     </button>
@@ -21,7 +21,7 @@ export function CallToActionButtonAlt({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="px-6 py-4 font-bold uppercase duration-100 ease-in-out rounded-md shadow-md xl:w-fit leading-p active:scale-95 text-p text-Villo-white shadow-Villo-black50 bg-gradient-to-r from-Villo-black hover:scale-105 to-Villo-black85"
+      className="px-6 py-4 font-bold uppercase duration-100 ease-in-out rounded-md shadow-md xl:w-fit leading-p active:scale-95 text-p text-Villo-white shadow-Villo-black bg-Villo-black hover:scale-105"
     >
       <>{children}</>
     </button>
@@ -32,7 +32,7 @@ export function BigButton({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="h-20 px-16 py-4 m-4 shadow w-80 font-Roboto shadow-Villo-black btn bg-gradient-to-r from-Villo-black75 to-Villo-black rounded-3xl"
+      className="h-20 px-16 py-4 m-4 transition shadow w-80 font-Roboto shadow-Villo-black hover:scale-[0.99] bg-Villo-black rounded-3xl"
     >
       <ResponsiveH5>{children}</ResponsiveH5>
     </button>
