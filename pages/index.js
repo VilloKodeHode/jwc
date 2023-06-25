@@ -18,7 +18,7 @@ export default function Home({ language, Theme }) {
   return (
     <>
       <Head>
-        <title>JV Web Consult</title>
+        <title>Villo utvikling</title>
         <meta name="description" content="Villo utvikling's webside" />
         <meta
           name="keywords"

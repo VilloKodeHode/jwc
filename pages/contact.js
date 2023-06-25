@@ -6,8 +6,8 @@ export default function ContactPage({ language, Theme }) {
   return (
     <>
       <Head>
-        <title>JV Web Consult</title>
-        <meta name="Villo utvikling" content="contact form" />
+        <title>Villo utvikling</title>
+        <meta name="description" content="Villo utvikling kontakt skjema" />
         <meta
           name="keywords"
           content="contact form, kontaktskjema, skjema, kontakt, contact"

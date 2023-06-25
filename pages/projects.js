@@ -20,13 +20,10 @@ export default function ProjectPage({ language, Theme }) {
     <>
       <Head>
         <title>JV Web Consult</title>
-        <meta
-          name="Villo utviklings's prosjekter"
-          content="Villo utviklings prosjekter"
-        />
+        <meta name="description" content="Villo utviklings prosjekter" />
         <meta
           name="keywords"
-          content="webdesign, utvikling, nettside, SEO, prosjekter, projects"
+          content="web design, development, website, SEO, frontend development, frontend developer, freelance, freelancer, freelance developer, web developer, UI/UX, HTML, CSS, JavaScript, responsive design, cross-browser compatibility"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
