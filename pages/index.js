@@ -19,11 +19,13 @@ export default function Home({ language, Theme }) {
     <>
       <Head>
         <title>JV Web Consult</title>
-        <meta name="Villo utvikling" content="Villo utvikling's webside" />
+        <meta name="description" content="Villo utvikling's webside" />
         <meta
           name="keywords"
-          content="webdesign, utvikling, nettside, SEO, frontend utvikling"
+          content="web design, development, website, SEO, frontend development, frontend developer, freelance, freelancer, freelance developer, web developer, UI/UX, HTML, CSS, JavaScript, responsive design, cross-browser compatibility"
         />
+        <meta name="theme-color" content="#a2cbcc" />
+        <meta name="description" content="Put your description here." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/logo/WindLogoNoText.svg" />
