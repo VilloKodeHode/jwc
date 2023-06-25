@@ -4,6 +4,10 @@ const nextConfig = {
     domains: ["cdn.midjourney.com", "via.placeholder.com"],
   },
   reactStrictMode: true,
+  headers: {
+    contentSecurityPolicy:
+      "default-src 'self'; connect-src 'self' vitals.vercel-insights.com",
+  },
 };
 
 module.exports = nextConfig
