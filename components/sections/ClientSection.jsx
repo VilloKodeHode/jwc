@@ -11,6 +11,7 @@ import {
   ThemedP,
 } from "../Responsive text/ResponsiveText";
 import { ClientLayout, TextFlex } from "../Layout";
+import Link from "next/link";
 
 export const ClientSection = ({ language, Theme }) => {
   const clientObj = CLIENT_LIST.find((client) => client.language === language);
@@ -25,11 +26,12 @@ export const ClientSection = ({ language, Theme }) => {
       <div className="mt-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {CLIENTS.map((client) => (
-            <div
+            <Link
               key={client.id}
               className={`overflow-hidden ${
                 Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
               } rounded-lg shadow-lg`}
+              href={client.href}
             >
               <Image
                 className="object-cover w-full h-48"
@@ -48,7 +50,7 @@ export const ClientSection = ({ language, Theme }) => {
                 </ResponsiveThemedH4>
                 <ThemedP className="mt-2 text-sm">{client.jobDone}</ThemedP>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

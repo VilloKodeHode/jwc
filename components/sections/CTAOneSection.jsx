@@ -99,7 +99,7 @@ export const CTAOneSection = ({ language, Theme }) => {
             </div>
             <div className="w-full mt-8 md:w-1/2">
               <div className={`relative z-10 grid justify-center`}>
-                <div className="transition-opacity">
+                <div className="transition-opacity shadowblend">
                   <Image
                     src={currentWeb}
                     alt="intro image"
@@ -107,7 +107,7 @@ export const CTAOneSection = ({ language, Theme }) => {
                     height={400}
                     className={`object-cover duration-500 md:w-full md:h-full ${
                       isAnimating ? "opacity-0" : "opacity-100"
-                    } shadowblend`}
+                    } `}
                     priority={true}
                   />
                 </div>

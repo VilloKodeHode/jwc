@@ -59,9 +59,10 @@
 
           --primary: #61dedb;
 
-          --secondary: #de78c6;
-
-          --tertiary: #dec54b;
+          --secondary: #5FD0F5;
+            /* --secondary: #de78c6; */
+          --tertiary: #5FF5C8;
+             /* --tertiary: #dec54b; */
 
           --black: #131515;
           --black85: #323838;

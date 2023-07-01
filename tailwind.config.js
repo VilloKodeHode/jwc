@@ -62,9 +62,9 @@ module.exports = {
 
           primary: "#61dedb",
 
-          secondary: "#de78c6",
+          secondary: "#5FD0F5",
 
-          tertiary: "#dec54b",
+          tertiary: "#5FF5C8",
 
           black: "#131515",
           black85: "#323838",

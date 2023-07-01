@@ -55,7 +55,7 @@ export function ScrollToTopButton() {
 
   useEffect(() => {
     function handleScroll() {
-      setIsVisible(window.pageYOffset > 0);
+      setIsVisible(window.scrollY > 0);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -79,8 +79,6 @@ export function ScrollToTopButton() {
       <FiArrowUpCircle
         className="w-12 h-12"
         strokeWidth={1.5}
-        // stroke="black"
-        // fill="none"
       />
     </button>
   );
