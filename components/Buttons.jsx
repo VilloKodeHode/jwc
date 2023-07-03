@@ -6,11 +6,13 @@ import {
 } from "./Responsive text/ResponsiveText";
 import { FiArrowUpCircle } from "react-icons/fi";
 
-export default function CallToActionButton({ children, onClick }) {
+export default function CallToActionButton({ children, onClick, Theme }) {
   return (
     <button
       onClick={onClick}
-      className="px-6 py-4 my-4 font-bold uppercase duration-100 ease-in-out rounded-md shadow-md xl:w-fit text-Villo-black85 active:scale-95 text-p leading-p shadow-Villo-black85 bg-Villo-primary hover:scale-105"
+      className={`px-6 py-4 my-4 font-bold uppercase duration-100 ease-in-out ${
+                Theme === "light" ? "text-Villo-light-white10  bg-Villo-light-primary hover:text-Villo-dark-black85 hover:bg-Villo-dark-primary" : "text-Villo-dark-black85 hover:text-Villo-light-white10  bg-Villo-dark-primary hover:bg-Villo-light-primary"
+              } rounded-md shadow-md xl:w-fit active:scale-95 text-p leading-p shadow-Villo-black85 hover:scale-105`}
     >
       <>{children}</>
     </button>
@@ -50,7 +52,7 @@ export function SmallButton({ children, onClick }) {
   );
 }
 
-export function ScrollToTopButton() {
+export function ScrollToTopButton({Theme}) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -72,7 +74,7 @@ export function ScrollToTopButton() {
   return (
     <button
       onClick={scrollToTop}
-      className={`text-Villo-white z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 hover:text-Villo-primary rounded-full hover:scale-125  ${
+      className={`${Theme === "light" ? "text-Villo-light-black hover:text-Villo-light-primary" : "text-Villo-dark-white hover:text-Villo-dark-primary" } z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 rounded-full hover:scale-125  ${
         isVisible ? "opacity-100 " : "opacity-0 cursor-default"
       }`}
     >

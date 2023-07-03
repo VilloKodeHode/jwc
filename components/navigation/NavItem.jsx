@@ -18,8 +18,8 @@ const NavItem = ({
         <p
           className={`${textSize} ${
             Theme === "light"
-              ? "text-Villo-black border-Villo-black"
-              : "text-Villo-white border-Villo-white"
+              ? "text-Villo-light-black"
+              : "text-Villo-dark-white"
           }  z-10`}
           onClick={onClick}
         >
@@ -28,7 +28,7 @@ const NavItem = ({
         <div
           className={`${
             active || activeLink === text ? `h-2` : "group-hover:h-2"
-          } absolute w-full h-0 transition-all bg-Villo-primary `}
+          } absolute w-full h-0 transition-all ${Theme === "light" ? "bg-Villo-light-primary " : "bg-Villo-dark-primary " }`}
         />
       </Link>
       {(active || activeLink === text) && (

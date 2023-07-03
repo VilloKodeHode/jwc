@@ -18,7 +18,7 @@ export const HeroSection = ({ language, Theme }) => {
           <div className="relative z-10 text-left">
             <ResponsiveP
               className={`mb-8 text-left ${
-                Theme === "light" ? "text-Villo-black85" : "text-Villo-white10"
+                Theme === "light" ? "text-Villo-light-black85" : "text-Villo-dark-white10"
               }  w-fit`}
             >
               {language === "Norwegian"
@@ -26,7 +26,9 @@ export const HeroSection = ({ language, Theme }) => {
                 : "Get your website up and running, fast!"}
             </ResponsiveP>
             <ResponsiveThemedH1 className="mb-8">
-              <span className="text-Villo-primary">
+              <span className={`${
+                Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary"
+              }`}>
                 {language === "Norwegian"
                   ? "AI-forsterket utvikler"
                   : "AI-powered developer"}
@@ -48,7 +50,7 @@ export const HeroSection = ({ language, Theme }) => {
                 : "I build websites quickly and efficiently using the latest web technologies. With prompt engineering I can make content swiftly, then improve upon this with my own expertise to create a unique website for your needs."}
             </ResponsiveThemedH5>
             <Link href="/contact">
-              <CallToActionButton>
+              <CallToActionButton Theme={Theme}>
                 {language === "Norwegian" ? "Kontakt nå" : "Contact now"}
               </CallToActionButton>
             </Link>

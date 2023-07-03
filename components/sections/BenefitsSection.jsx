@@ -1,6 +1,7 @@
 import {
   ResponsiveH5,
   ResponsiveThemedH2,
+  ResponsiveThemedH5,
   ThemedP,
 } from "../Responsive text/ResponsiveText";
 
@@ -18,17 +19,17 @@ export const BenefitsSection = ({ language, Theme }) => {
         <div className="mt-10">
           <div className="md:grid md:grid-cols-1 md:gap-6">
             <div className="mt-5 md:mt-0 md:col-span-1">
-              <div className="overflow-hidden shadow shadow-Villo-black75 sm:rounded-lg">
+              <div className="overflow-hidden shadow sm:rounded-lg">
                 <div
                   className={`px-4 py-5  ${
-                    Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
+                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
                   } sm:p-6`}
                 >
-                  <ResponsiveH5 className="font-bold text-Villo-primary">
+                  <ResponsiveThemedH5 className="font-bold">
                     {language === "Norwegian"
                       ? "Kvalitet til en god pris"
                       : "Quality for a good price"}
-                  </ResponsiveH5>
+                  </ResponsiveThemedH5>
                   <div className="mt-2">
                     <ThemedP>
                       {language === "Norwegian"
@@ -41,17 +42,17 @@ export const BenefitsSection = ({ language, Theme }) => {
             </div>
 
             <div className="mt-5 md:mt-0 md:col-span-1">
-              <div className="overflow-hidden shadow shadow-Villo-black75 sm:rounded-lg">
+              <div className="overflow-hidden shadow sm:rounded-lg">
                 <div
                   className={`px-4 py-5  ${
-                    Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
+                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
                   } sm:p-6`}
                 >
-                  <ResponsiveH5 className="font-bold text-Villo-primary">
+                  <ResponsiveThemedH5 className="font-bold">
                     {language === "Norwegian"
                       ? "Optimaliserte websider som bruker den nyeste teknologien"
                       : "Optimized websites that use the latest technology"}
-                  </ResponsiveH5>
+                  </ResponsiveThemedH5>
                   <div className="mt-2">
                     <ThemedP>
                       {language === "Norwegian"
@@ -64,17 +65,17 @@ export const BenefitsSection = ({ language, Theme }) => {
             </div>
 
             <div className="mt-5 md:mt-0 md:col-span-1">
-              <div className="overflow-hidden shadow shadow-Villo-black75 sm:rounded-lg">
+              <div className="overflow-hidden shadow sm:rounded-lg">
                 <div
                   className={`px-4 py-5  ${
-                    Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
+                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
                   } sm:p-6`}
                 >
-                  <ResponsiveH5 className="font-bold text-Villo-primary">
+                  <ResponsiveThemedH5 className="font-bold">
                     {language === "Norwegian"
                       ? "Kontinuerlige kommunikasjon gjennom hele prosessen"
                       : "Continuous communication throughout the whole process"}
-                  </ResponsiveH5>
+                  </ResponsiveThemedH5>
                   <div className="mt-2">
                     <ThemedP>
                       {language === "Norwegian"

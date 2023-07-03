@@ -5,6 +5,8 @@ import {
   ResponsiveH4,
   ResponsiveP,
   ResponsiveThemedH1,
+  ResponsiveThemedH2,
+  ResponsiveThemedP,
   ThemedP,
 } from "../Responsive text/ResponsiveText";
 import { useContext, useState } from "react";
@@ -66,7 +68,7 @@ export const ContactformSection = ({ language, Theme }) => {
           <label
             htmlFor="name"
             className={`block font-bold mb-2 ${
-              Theme === "light" ? "text-Villo-black" : "text-Villo-white"
+              Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
             }`}
           >
             {language === "Norwegian" ? "Navn" : "Name"}
@@ -75,7 +77,7 @@ export const ContactformSection = ({ language, Theme }) => {
             type="text"
             id="name"
             className={` ${
-              Theme === "light" ? "text-Villo-black bg-Villo-white border-Villo-black focus:outline-Villo-black" : "text-Villo-white bg-Villo-black border-Villo-white focus:outline-Villo-white"
+              Theme === "light" ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary" : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
             } w-full px-4 py-2 border rounded-lg  focus:outline `}
             placeholder={language === "Norwegian" ? "Ditt navn" : "Your name"}
             value={formData.name}
@@ -86,8 +88,8 @@ export const ContactformSection = ({ language, Theme }) => {
         <div className="mb-4">
           <label
             htmlFor="email"
-            className={`block font-bold mb-2 ${
-              Theme === "light" ? "text-Villo-black" : "text-Villo-white"
+     className={`block font-bold mb-2 ${
+              Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
             }`}
           >
             Email
@@ -95,8 +97,8 @@ export const ContactformSection = ({ language, Theme }) => {
           <input
             type="email"
             id="email"
-                   className={` ${
-              Theme === "light" ? "text-Villo-black bg-Villo-white border-Villo-black focus:outline-Villo-black" : "text-Villo-white bg-Villo-black border-Villo-white focus:outline-Villo-white"
+            className={` ${
+              Theme === "light" ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary" : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
             } w-full px-4 py-2 border rounded-lg  focus:outline `}
             placeholder={
               language === "Norwegian"
@@ -113,16 +115,16 @@ export const ContactformSection = ({ language, Theme }) => {
         <div className="mb-4">
           <label
             htmlFor="message"
-            className={`block font-bold mb-2 ${
-              Theme === "light" ? "text-Villo-black" : "text-Villo-white"
+             className={`block font-bold mb-2 ${
+              Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
             }`}
           >
             {language === "Norwegian" ? "Melding" : "Message"}
           </label>
           <textarea
             id="message"
-             className={` ${
-              Theme === "light" ? "text-Villo-black bg-Villo-white border-Villo-black focus:outline-Villo-black" : "text-Villo-white bg-Villo-black border-Villo-white focus:outline-Villo-white"
+            className={` ${
+              Theme === "light" ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary" : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
             } w-full px-4 py-2 border rounded-lg  focus:outline `}
             rows="4"
             placeholder={
@@ -135,33 +137,36 @@ export const ContactformSection = ({ language, Theme }) => {
             required
           ></textarea>
         </div>
-        <CallToActionButton type="submit">Send</CallToActionButton>
+        <CallToActionButton Theme={Theme} type="submit">Send</CallToActionButton>
       </form>
       {showModal && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="flex flex-col items-center justify-center relative p-8 bg-Villo-black rounded-3xl xl:max-w-[50%] max-w-[80%]">
-            <ResponsiveH2 className="text-Villo-primary">
+        <div className={`fixed inset-0 z-40 flex items-center justify-center ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black50"} `}>
+          <div className="relative flex flex-col items-center justify-center gap-8 px-8 bg-Villo-black rounded-3xl">
+            <ResponsiveThemedH2 className="text-center">
               {language === "Norwegian"
                 ? "Takk for at du tok kontakt!"
                 : "Thank you for reaching out!"}
-            </ResponsiveH2>
-            <ResponsiveP className="text-Villo-primary">
+            </ResponsiveThemedH2>
+            <div className="text-center">
+            <ResponsiveThemedP className="">
               {language === "Norwegian"
                 ? "Du vil snart få svar på henvendelsen din."
                 : "You will soon receive a reply to your inquiry."}
-            </ResponsiveP>
-            <ResponsiveP className="text-Villo-primary">
+            </ResponsiveThemedP>
+            <ResponsiveThemedP className="">
               {language === "Norwegian"
                 ? "La oss lage noe fantastisk!"
                 : "Let's make something awesome!"}
-            </ResponsiveP>
+            </ResponsiveThemedP>
+            </div>
             <Image
-              src="/loading.svg"
+            className="animate-pulse"
+                src={Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"}
               width={200}
               height={200}
               alt="loading..."
             />
-            <CallToActionButton onClick={() => setShowModal(false)}>
+            <CallToActionButton Theme={Theme} onClick={() => setShowModal(false)}>
               {language === "Norwegian" ? "Flotters!" : "Roger that!"}
             </CallToActionButton>
           </div>

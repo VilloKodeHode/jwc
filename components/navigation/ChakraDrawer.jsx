@@ -65,7 +65,7 @@ export default function ChakraDrawer({
           size="lg"
           icon={<HamburgerIcon boxSize="3rem" />}
           onClick={() => onOpen()}
-          className="block ml-8 duration-200 hover:scale-110 text-Villo-primary"
+          className={`block ml-8 duration-200 hover:scale-110 ${Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary" } `}
         />
         <Drawer
           onClose={onClose}
@@ -76,7 +76,9 @@ export default function ChakraDrawer({
         >
           <DrawerOverlay />
           <DrawerContent>
-            <div className="flex justify-between px-12 py-1 bg-Villo-black text-Villo-white">
+            <div className={`flex justify-between px-12 py-1 ${
+          Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
+        }`}>
               <LanguageSwitch />
               <ThemeSwitch />
               {/* <Link href="/Norwegian resume shorted JWC.png" target="_blank">
@@ -86,8 +88,8 @@ export default function ChakraDrawer({
             <DrawerHeader
               className={`relative flex justify-center  ${
                 Theme === "light"
-                  ? "bg-Villo-white25"
-                  : "bg-Villo-backgroundBlack"
+                  ? "bg-Villo-light-white"
+                  : "bg-Villo-dark-black"
               }`}
             >
               <LogoComponent
@@ -99,13 +101,12 @@ export default function ChakraDrawer({
             <DrawerBody
               className={
                 Theme === "light"
-                  ? "bg-Villo-white"
-                  : "bg-Villo-backgroundBlack"
+                  ? "bg-Villo-light-white"
+                  : "bg-Villo-dark-black"
               }
             >
               <ul
-                className={`text-Villo-primary
-           mt-0 p-2`}
+                className={`mt-0 p-2`}
               >
                 <div className="flex flex-col items-center justify-center w-full gap-8 mt-8">
                   {menu_items.map((menu) => (

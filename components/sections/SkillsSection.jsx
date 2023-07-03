@@ -17,7 +17,7 @@ export const SkillsSection = ({ language, Theme }) => {
           </ThemedP>
         </div>
 
-        <div className="relative flex justify-center p-8 mt-10 border-[20px] border-Villo-primary bg-Villo-white10">
+        <div className={`relative flex justify-center p-8 mt-10 border-[20px] ${Theme === "light" ? "border-Villo-light-primary bg-Villo-light-white10" : "border-Villo-dark-primary bg-Villo-dark-white20" } `}>
           <div className="grid grid-cols-2 gap-8 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4">
             {SKILLS_LIST.map((skill) =>
               skill.skilltype === "code language" ? (

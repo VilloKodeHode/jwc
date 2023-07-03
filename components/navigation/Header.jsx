@@ -17,7 +17,7 @@ export default function Header({ language, setLanguage, Theme, setTheme }) {
   return (
     <>
       <div
-        className={`relative z-10 flex items-center justify-between px-12 py-1 bg-Villo-black text-Villo-white`}
+        className={`relative z-10 flex items-center justify-between px-12 py-1 ${Theme === "light" ? "bg-Villo-light-white text-Villo-light-black" : "bg-Villo-dark-black text-Villo-dark-white"} `}
       >
         <div className="grid grid-flow-col gap-12">
           <LanguageSwitch setLanguage={setLanguage} />
@@ -27,7 +27,7 @@ export default function Header({ language, setLanguage, Theme, setTheme }) {
 
       <header
         className={`relative ${
-          Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
+          Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
         } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between">
@@ -42,7 +42,7 @@ export default function Header({ language, setLanguage, Theme, setTheme }) {
               {/* <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" /> */}
             </div>
             <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
-              <ResponsiveThemedSmall className="text-Villo-black25">
+              <ResponsiveThemedSmall className={`${Theme === "light" ? "text-Villo-dark-black50" : "text-Villo-dark-white15" } `}>
                 &#10077;
                 {language === "Norwegian"
                   ? "Drevet med ambisjoner, ekspertise og en uendelig tilførsel av koffein"

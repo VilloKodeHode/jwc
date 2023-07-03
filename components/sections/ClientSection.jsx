@@ -29,7 +29,7 @@ export const ClientSection = ({ language, Theme }) => {
             <Link
               key={client.id}
               className={`overflow-hidden ${
-                Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
+                Theme === "light" ? "bg-Villo-light-primary" : "bg-Villo-dark-primary"
               } rounded-lg shadow-lg`}
               href={client.href}
             >
@@ -42,7 +42,7 @@ export const ClientSection = ({ language, Theme }) => {
               />
               <div
                 className={`h-full p-6  ${
-                  Theme === "light" ? "bg-Villo-white10" : "bg-Villo-black85"
+                  Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
                 }`}
               >
                 <ResponsiveThemedH4 className="font-medium">

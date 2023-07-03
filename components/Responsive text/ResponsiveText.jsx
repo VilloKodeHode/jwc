@@ -18,7 +18,7 @@ export const ResponsiveThemedH1 = ({ children, className }) => {
   return (
     <h1
       className={`lg:text-h1  ${
-        Theme === "light" ? "text-Villo-black" : "text-Villo-white"
+        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } sm:text-h2 text-h3 lg:leading-h1 sm:leading-h2 leading-h3 ${className}`}
     >
       {children}
@@ -39,7 +39,7 @@ export const ResponsiveThemedH2 = ({ children, className }) => {
   return (
     <h2
       className={` ${
-        Theme === "light" ? "text-Villo-black75" : "text-Villo-white15"
+        Theme === "light" ? "text-Villo-light-black75" : "text-Villo-dark-white15"
       } sm:leading-h2 leading-h3 sm:text-h2 text-h3 ${className}`}
     >
       {children}
@@ -60,7 +60,7 @@ export const ResponsiveThemedH3 = ({ children, className }) => {
   return (
     <h3
       className={` ${
-        Theme === "light" ? "text-Villo-black75" : "text-Villo-white15"
+        Theme === "light" ? "text-Villo-light-black75" : "text-Villo-dark-white15"
       } md:text-h3 text-h4 md:leading-h3 leading-h4 ${className}`}
     >
       {children}
@@ -73,7 +73,7 @@ export function ThemedH3({ children, className }) {
   return (
     <h3
       className={`text-h3 leading-h3 ${
-        Theme === "light" ? "text-Villo-black75" : "text-Villo-white15"
+        Theme === "light" ? "text-Villo-light-black75" : "text-Villo-dark-white15"
       } ${className}`}
     >
       {children}
@@ -94,7 +94,7 @@ export const ResponsiveThemedH4 = ({ children, className }) => {
   return (
     <h4
       className={` ${
-        Theme === "light" ? "text-Villo-black" : "text-Villo-white"
+        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } md:text-h4 text-h5 md:leading-h4 leading-h5 ${className}`}
     >
       {children}
@@ -115,7 +115,7 @@ export const ResponsiveThemedH5 = ({ children, className }) => {
   return (
     <h5
       className={` ${
-        Theme === "light" ? "text-Villo-black" : "text-Villo-white"
+        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } md:text-h5 text-h6 md:leading-h5 leading-h6 ${className}`}
     >
       {children}
@@ -138,7 +138,7 @@ export const ResponsiveThemedP = ({ children, className }) => {
   return (
     <p
       className={` ${
-        Theme === "light" ? "text-Villo-black" : "text-Villo-white"
+        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } md:text-p text-p0 md:leading-p leading-p0 ${className}`}
     >
       {children}
@@ -151,7 +151,7 @@ export const ThemedP = ({ children, className }) => {
   return (
     <p
       className={` ${
-        Theme === "light" ? "text-Villo-black" : "text-Villo-white"
+        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } text-p leading-p ${className}`}
     >
       {children}
@@ -174,7 +174,7 @@ export const ResponsiveThemedSmall = ({ children, className }) => {
   return (
     <p
       className={` ${
-        Theme === "light" ? "text-Villo-black85" : "text-Villo-white"
+        Theme === "light" ? "text-Villo-light-black85" : "text-Villo-dark-white"
       } md:text-p0 text-small font-normal md:leading-p0 leading-small ${className}`}
     >
       {children}
@@ -197,7 +197,7 @@ export const ResponsiveThemedMini = ({ children, className }) => {
   return (
     <small
       className={` ${
-        Theme === "light" ? "text-Villo-black75" : "text-Villo-white25"
+        Theme === "light" ? "text-Villo-light-black75" : "text-Villo-dark-white25"
       } md:text-small font-normal text-mini md:leading-small leading-mini ${className}`}
     >
       {children}

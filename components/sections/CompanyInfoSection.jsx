@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SimpleLogoComponent } from "@/components/base components/Logo";
 import {
   ResponsiveH3,
+  ResponsiveThemedH3,
   ResponsiveThemedH4,
   ResponsiveThemedH5,
   ResponsiveThemedP,
@@ -18,7 +19,7 @@ export const CompanyInfo = ({ language, Theme }) => {
     <div className="grid animate-PageAppearRight justify-center items-center min-h-[calc(100vh-144px)]">
       <div
         className={`min-h-[90%] sm:rounded-lg grid lg:grid-cols-2  ${
-          Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
+          Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
         }`}
       >
         <div
@@ -26,9 +27,9 @@ export const CompanyInfo = ({ language, Theme }) => {
         >
           <SimpleLogoComponent />
 
-          <ResponsiveH3 className="py-5 text-Villo-primary text-bold">
+          <ResponsiveThemedH3 className="py-5 text-bold">
             Joakim Villo
-          </ResponsiveH3>
+          </ResponsiveThemedH3>
           <ResponsiveThemedP className="max-w-md pb-5 text-center">
             {language === "Norwegian"
               ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."

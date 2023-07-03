@@ -25,42 +25,12 @@
 }
 
 :root {
-  /* --primary: #a2cbcc;
-  --secondary: #f78f6a;
-  --tertiary: #387184;
-  --black: #202929;
-  --black75: #585f5f;
-  --black50: #909494;
-  --black25: #c7c9c9;
-  --black15: #dedfdf;
-  --JWCwhite: #fdfdfd;
-  --JWCwhite10: #f6fafa;
-  --JWCwhite15: #f1f7f8;
-  --JWCwhite20: #ecf5f5;
-  --JWCwhite25: #e7f2f2; */
-
-  /* --primary: #FA9A85;
-  --secondary: #FAF29D;
-  --tertiary: #9978FA;
-  --accent: #6BFAC6;
-  --black: #171515;
-  --black85: #3a3838;
-  --black75: #515050;
-  --black50: #8c8b8b;
-  --black25: #c5c4c4;
-  --white: #fefcfb;
-  --white10: #fff5f3;
-  --white15: #fef0ed;
-  --white20: #feebe7;
-  --white25: #fde5e0;
-  --backgroundBlack: #19211E; */
-
   --primary: #ff495c;
 
   --secondary: #9dff57;
-  /* --secondary: #de78c6; */
+
   --tertiary: #3dffd7;
-  /* --tertiary: #dec54b; */
+
 
   --black: #1c1919;
   --black85: #393434;

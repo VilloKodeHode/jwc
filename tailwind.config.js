@@ -28,72 +28,45 @@ module.exports = {
     extend: {
       colors: {
         Villo: {
-          // primary: "#a2cbcc",
-          // secondary: "#f78f6a",
-          // tertiary: "#387184",
+    dark: {          
+      primary: "#858ee0",
 
-          //font colors:
-          // black: "#202929",
-          // black75: "#585f5f",
-          // black50: "#909494",
-          // black25: "#c7c9c9",
-          // black15: "#dedfdf",
-          // logo: "#3c4343",
-          // white: "#fdfdfd",
-          // white10: "#f6fafa",
-          // white15: "#f1f7f8",
+          secondary: "#571dff",
+    
 
-          // primary: "#FA9A85",
-          // secondary: "#FAF29D",
-          // tertiary: "#9978FA",
-          // accent: "#6BFAC6",
 
-          // black: "#171515",
-          // black85: "#3a3838",
-          // black75: "#515050",
-          // black50: "#8c8b8b",
-          // black25: "#c5c4c4",
-          // white: "#fefcfb",
-          // white10: "#fff5f3",
-          // white15: "#fef0ed",
-          // white20: "#feebe7",
-          // white25: "#fde5e0",
-          // backgroundBlack: "#19211E",
 
-          // primary: "#61dedb",
-          primary: "#FF495C",
+          black: "#161618",
+          black85: "#2e2f34",
+          black75: "#383844",
+          black50: "#48485b",
+  
+          white: "#fbfbfe",
+          white10: "#f3f4fc",
+          white15: "#e9ebf9",
+          white20: "#e0e2f7",
 
-          secondary: "#9DFF57",
-          // secondary: "#5FD0F5",
-          // darksecondary: "#73B346",
-          tertiary: "#3DFFD7",
-          // darktertiary: "#22B394",
-          // tertiary: "#5FF5C8",
+  },
 
-          black: "#1c1919",
-          black85: "#393434",
-          black75: "#493e3f",
-          black50: "#718786",
-          black25: "#aec7c6",
-          white: "#ffffff",
-          white10: "#ffedef",
-          white15: "#e8fafa",
-          white20: "#dff8f8",
-          white25: "#d7f6f6",
-          backgroundBlack: "#19211E",
+ light: {          
+      primary: "#571dff",
 
-          // black: "#131515",
-          // black85: "#323838",
-          // black75: "#475353",
-          // black50: "#718786",
-          // black25: "#aec7c6",
-          // white: "#fafefe",
-          // white10: "#f0fcfc",
-          // white15: "#e8fafa",
-          // white20: "#dff8f8",
-          // white25: "#d7f6f6",
-          // backgroundBlack: "#19211E",
+          secondary: "#858ee0",
+
+
+          black: "#141315",
+         black85: "#2e2f34",
+          black75: "#383844",
+          black50: "#48485b",
+   
+          white: "#fefdff",
+          white10: "#f6f3ff",
+          white15: "#efe9ff",
+          white20: "#e6ddff",
+      },
+
         },
+        
       },
       fontSize: {
         h1: "4.209rem",

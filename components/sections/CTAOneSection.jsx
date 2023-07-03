@@ -28,7 +28,7 @@ export const CTAOneSection = ({ language, Theme }) => {
             setCurrentWeb("/Hero8.png");
         }
         setIsAnimating(false);
-      }, 500); // Adjust the duration to match your animation
+      }, 500); // Adjust the duration here
     }, 3500);
 
     return () => clearInterval(interval);
@@ -44,15 +44,15 @@ export const CTAOneSection = ({ language, Theme }) => {
                 <ResponsiveH2 className="mb-8 ">
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDesign.webp")}
-                    className="cursor-pointer group text-Villo-primary"
+                    className={`cursor-pointer group  ${Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary"}`}
                   >
                     <span
-                      className={`group-hover:text-Villo-primary group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
+                      className={` ${Theme === "light" ? "group-hover:text-Villo-light-primary" : "group-hover:text-Villo-dark-primary"}  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
                         currentWeb === "/HeroDesign.webp"
-                          ? "text-Villo-primary"
+                          ? "text-Villo-dark-primary"
                           : Theme === "light"
-                          ? "text-Villo-white10"
-                          : "text-Villo-black75"
+                           ? "text-Villo-light-white10"
+                          : "text-Villo-dark-black75"
                       }`}
                     >
                       Web
@@ -61,15 +61,15 @@ export const CTAOneSection = ({ language, Theme }) => {
                   </span>{" "}
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDevelopment.webp")}
-                    className="cursor-pointer group text-Villo-primary w-fit"
+                       className={`cursor-pointer group  ${Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary"}`}
                   >
                     <span
-                      className={`group-hover:text-Villo-primary group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
+                      className={` ${Theme === "light" ? "group-hover:text-Villo-light-primary" : "group-hover:text-Villo-dark-primary"}  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
                         currentWeb === "/HeroDevelopment.webp"
-                          ? "text-Villo-primary"
+                          ? "text-Villo-dark-primary"
                           : Theme === "light"
-                          ? "text-Villo-white10"
-                          : "text-Villo-black75"
+                           ? "text-Villo-light-white10"
+                          : "text-Villo-dark-black75"
                       }`}
                     >
                       <br />
@@ -79,15 +79,15 @@ export const CTAOneSection = ({ language, Theme }) => {
                   </span>{" "}
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroCollage.webp")}
-                    className="cursor-pointer group text-Villo-primary w-fit"
+                    className={`cursor-pointer group  ${Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary"}`}
                   >
                     <span
-                      className={`group-hover:text-Villo-primary transition-all duration-500 group-hover:opacity-100 opacity-80 h1hidden ${
+                      className={` ${Theme === "light" ? "group-hover:text-Villo-light-primary" : "group-hover:text-Villo-dark-primary"}  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
                         currentWeb === "/HeroCollage.webp"
-                          ? "text-Villo-primary"
+                          ? "text-Villo-dark-primary"
                           : Theme === "light"
-                          ? "text-Villo-white10"
-                          : "text-Villo-black75"
+                          ? "text-Villo-light-white10"
+                          : "text-Villo-dark-black75"
                       }`}
                     >
                       <br />
@@ -105,7 +105,7 @@ export const CTAOneSection = ({ language, Theme }) => {
             </div>
             <div className="w-full mt-8 md:w-1/2">
               <div className={`relative z-10 grid justify-center`}>
-                <div className="transition-opacity border-[20px] border-Villo-primary">
+                <div className={`transition-opacity border-[20px] ${Theme === "light" ? "border-Villo-light-primary" : "border-Villo-dark-primary"}  `}>
                   <Image
                     src={currentWeb}
                     alt="intro image"
