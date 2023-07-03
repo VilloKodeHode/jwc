@@ -107,7 +107,7 @@ export default function ChakraDrawer({
                 className={`text-Villo-primary
            mt-0 p-2`}
               >
-                <div className="flex flex-col items-center justify-center w-full mt-8">
+                <div className="flex flex-col items-center justify-center w-full gap-8 mt-8">
                   {menu_items.map((menu) => (
                     <NavItem
                       onClick={() => {

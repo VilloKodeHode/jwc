@@ -42,7 +42,7 @@ export const ClientSection = ({ language, Theme }) => {
               />
               <div
                 className={`h-full p-6  ${
-                  Theme === "light" ? "bg-Villo-white25" : "bg-Villo-black85"
+                  Theme === "light" ? "bg-Villo-white10" : "bg-Villo-black85"
                 }`}
               >
                 <ResponsiveThemedH4 className="font-medium">

@@ -26,7 +26,7 @@ export const CompanyInfo = ({ language, Theme }) => {
         >
           <SimpleLogoComponent />
 
-          <ResponsiveH3 className="py-5 bg-gradient-to-r from-Villo-tertiary to-Villo-secondary bg-clip-text transparent">
+          <ResponsiveH3 className="py-5 text-Villo-primary text-bold">
             Joakim Villo
           </ResponsiveH3>
           <ResponsiveThemedP className="max-w-md pb-5 text-center">

@@ -6,12 +6,10 @@ import CallToActionButton from "@/components/Buttons";
 import { ResponsiveH3 } from "@/components/Responsive text/ResponsiveText";
 import Link from "next/link";
 
-
 import { CTAOneSection } from "@/components/sections/CTAOneSection";
 import { BenefitsSection } from "@/components/sections/BenefitsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
-
 
 export default function Home({ language, Theme }) {
   // const { language } = useContext(LanguageContext);
@@ -25,7 +23,11 @@ export default function Home({ language, Theme }) {
           content="web design, development, website, SEO, frontend development, frontend developer, freelance, freelancer, freelance developer, web developer, UI/UX, HTML, CSS, JavaScript, responsive design, cross-browser compatibility"
         />
         <meta name="theme-color" content="#a2cbcc" />
-        <meta name="description" content="Put your description here." />
+        <meta
+          name="description"
+          content="Transforming ideas into captivating websites through professional frontend development services. Crafted with precision and creativity, we specialize in creating responsive, user-friendly, and visually appealing websites that engage and delight users. Our expertise covers modern web technologies, including HTML, CSS, JavaScript, and frameworks like React and Next.js. Partner with us to bring your online presence to life and establish a strong digital footprint. Contact us today to discuss your project and unlock the full potential of your website."
+        />
+
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/logo/WindLogoNoText.svg" />
@@ -38,7 +40,7 @@ export default function Home({ language, Theme }) {
 
         <section className="relative grid items-center justify-center gap-2 px-12 pt-12 mx-auto md:py-12 sm:pt-0 xl:gap-16 mb-[116px]">
           <div className="z-20 mb-16">
-            <ResponsiveH3 className="z-20 flex px-12 text-center bg-gradient-to-r from-Villo-tertiary to-Villo-secondary bg-clip-text transparent">
+            <ResponsiveH3 className="z-20 flex px-12 font-extrabold text-center text-Villo-primary">
               {language === "Norwegian"
                 ? "La oss komme i gang!"
                 : "Let's get started!"}

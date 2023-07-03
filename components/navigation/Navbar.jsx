@@ -13,7 +13,7 @@ export default function Navbar({
   const menu_items = menuObj ? menuObj.menu_items : [];
   return (
     <div className={`flex justify-end items-center w-[800px] ${className}`}>
-      <div className="flex-row hidden h-[112px] items-center rounded-bl-full gap-2 w-fit md:flex">
+      <div className="flex-row hidden h-[112px] items-center rounded-bl-full gap-8 w-fit md:flex">
         {menu_items.map((menu) => (
           <NavItem
             onClick={() => {

@@ -10,7 +10,7 @@ export default function CallToActionButton({ children, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="px-6 py-4 my-4 font-bold uppercase duration-100 ease-in-out rounded-md shadow-md xl:w-fit text-Villo-black85 active:scale-95 text-p leading-p shadow-Villo-black bg-Villo-secondary hover:scale-105"
+      className="px-6 py-4 my-4 font-bold uppercase duration-100 ease-in-out rounded-md shadow-md xl:w-fit text-Villo-black85 active:scale-95 text-p leading-p shadow-Villo-black85 bg-Villo-primary hover:scale-105"
     >
       <>{children}</>
     </button>

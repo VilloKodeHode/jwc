@@ -29,7 +29,7 @@ export const ServicesSection = ({ language, Theme }) => {
                   } sm:p-6`}
                 >
                   <div className="h-full">
-                    <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
+                    <ResponsiveH5 className="font-bold text-Villo-primary">
                       {language === "Norwegian"
                         ? "Lage nettside"
                         : "Website creation"}
@@ -53,7 +53,7 @@ export const ServicesSection = ({ language, Theme }) => {
                   } sm:p-6`}
                 >
                   <div className="h-full">
-                    <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
+                    <ResponsiveH5 className="font-bold text-Villo-primary">
                       {language === "Norwegian" ? "Nettinnhold" : " Webcontent"}
                     </ResponsiveH5>
                     <ThemedP className="mt-2">
@@ -77,7 +77,7 @@ export const ServicesSection = ({ language, Theme }) => {
                   } sm:p-6`}
                 >
                   <div className="h-full">
-                    <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
+                    <ResponsiveH5 className="font-bold text-Villo-primary">
                       {language === "Norwegian" ? "Nettdesign" : " Webdesign"}
                     </ResponsiveH5>
                     <ThemedP className="mt-2">
@@ -99,7 +99,7 @@ export const ServicesSection = ({ language, Theme }) => {
                   } sm:p-6`}
                 >
                   <div className="h-full">
-                    <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
+                    <ResponsiveH5 className="font-bold text-Villo-primary">
                       {language === "Norwegian" ? "Småjobber" : "Odd jobs"}
                     </ResponsiveH5>
                     <ThemedP className="mt-2">

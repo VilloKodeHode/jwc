@@ -22,10 +22,12 @@ export const ProjectSection = ({ language, Theme }) => {
             {PROJECT_LIST.map((project) => (
               <div
                 key={project.engProjectName}
-                className={`flex flex-col justify-between overflow-hidden rounded-lg shadow bg-Villo-black85 shadow-Villo-black75`}
+                className={`flex flex-col justify-between overflow-hidden rounded-lg shadow ${
+                  Theme === "light" ? "bg-Villo-white10" : "bg-Villo-black85"
+                }  shadow-Villo-black75`}
               >
-                <div className="shadow shadow-Villo-black75">
-                  <div className="p-4 pb-0 shadow-inner shadow-Villo-black">
+                <div className="">
+                  <div className="p-4 pb-0 border-b-2 border-Villo-black">
                     <Image
                       className="object-cover object-center w-full h-48"
                       src={project.src}
@@ -36,12 +38,18 @@ export const ProjectSection = ({ language, Theme }) => {
                   </div>
                 </div>
                 <div className="h-full p-6">
-                  <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
+                  <ResponsiveH5 className="font-bold text-Villo-primary">
                     {language === "Norwegian"
                       ? project.norProjectName
                       : project.engProjectName}
                   </ResponsiveH5>
-                  <ResponsiveP className="mt-2 text-sm text-Villo-white15">
+                  <ResponsiveP
+                    className={`mt-2 text-sm ${
+                      Theme === "light"
+                        ? "text-Villo-black"
+                        : "text-Villo-white15"
+                    } `}
+                  >
                     {language === "Norwegian"
                       ? project.norDescription
                       : project.engDescription}

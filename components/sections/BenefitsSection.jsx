@@ -24,7 +24,7 @@ export const BenefitsSection = ({ language, Theme }) => {
                     Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
                   } sm:p-6`}
                 >
-                  <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
+                  <ResponsiveH5 className="font-bold text-Villo-primary">
                     {language === "Norwegian"
                       ? "Kvalitet til en god pris"
                       : "Quality for a good price"}
@@ -47,7 +47,7 @@ export const BenefitsSection = ({ language, Theme }) => {
                     Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
                   } sm:p-6`}
                 >
-                  <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
+                  <ResponsiveH5 className="font-bold text-Villo-primary">
                     {language === "Norwegian"
                       ? "Optimaliserte websider som bruker den nyeste teknologien"
                       : "Optimized websites that use the latest technology"}
@@ -70,7 +70,7 @@ export const BenefitsSection = ({ language, Theme }) => {
                     Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"
                   } sm:p-6`}
                 >
-                  <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
+                  <ResponsiveH5 className="font-bold text-Villo-primary">
                     {language === "Norwegian"
                       ? "Kontinuerlige kommunikasjon gjennom hele prosessen"
                       : "Continuous communication throughout the whole process"}

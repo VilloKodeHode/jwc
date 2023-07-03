@@ -74,7 +74,9 @@ export const ContactformSection = ({ language, Theme }) => {
           <input
             type="text"
             id="name"
-            className="w-full px-4 py-2 border rounded-lg border-Villo-primary focus:outline-none focus:border-Villo-secondary"
+            className={` ${
+              Theme === "light" ? "text-Villo-black bg-Villo-white border-Villo-black focus:outline-Villo-black" : "text-Villo-white bg-Villo-black border-Villo-white focus:outline-Villo-white"
+            } w-full px-4 py-2 border rounded-lg  focus:outline `}
             placeholder={language === "Norwegian" ? "Ditt navn" : "Your name"}
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -93,7 +95,9 @@ export const ContactformSection = ({ language, Theme }) => {
           <input
             type="email"
             id="email"
-            className="w-full px-4 py-2 border rounded-lg border-Villo-primary focus:outline-none focus:border-Villo-secondary"
+                   className={` ${
+              Theme === "light" ? "text-Villo-black bg-Villo-white border-Villo-black focus:outline-Villo-black" : "text-Villo-white bg-Villo-black border-Villo-white focus:outline-Villo-white"
+            } w-full px-4 py-2 border rounded-lg  focus:outline `}
             placeholder={
               language === "Norwegian"
                 ? "Din email addresse"
@@ -117,7 +121,9 @@ export const ContactformSection = ({ language, Theme }) => {
           </label>
           <textarea
             id="message"
-            className="w-full px-4 py-2 border rounded-lg border-Villo-primary focus:outline-none focus:border-Villo-secondary"
+             className={` ${
+              Theme === "light" ? "text-Villo-black bg-Villo-white border-Villo-black focus:outline-Villo-black" : "text-Villo-white bg-Villo-black border-Villo-white focus:outline-Villo-white"
+            } w-full px-4 py-2 border rounded-lg  focus:outline `}
             rows="4"
             placeholder={
               language === "Norwegian" ? "Din melding" : "Your message"
@@ -134,7 +140,7 @@ export const ContactformSection = ({ language, Theme }) => {
       {showModal && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-50">
           <div className="flex flex-col items-center justify-center relative p-8 bg-Villo-black rounded-3xl xl:max-w-[50%] max-w-[80%]">
-            <ResponsiveH2 className="text-Villo-secondary">
+            <ResponsiveH2 className="text-Villo-primary">
               {language === "Norwegian"
                 ? "Takk for at du tok kontakt!"
                 : "Thank you for reaching out!"}

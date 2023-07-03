@@ -33,9 +33,7 @@ function AppContent({ Component, pageProps }) {
           setTheme={setTheme}
         />
         <div
-          className={
-            Theme === "light" ? "bg-Villo-white15" : "bg-Villo-backgroundBlack"
-          }
+          className={Theme === "light" ? "bg-Villo-white" : "bg-Villo-black"}
         >
           <Component {...pageProps} language={language} Theme={Theme} />
           <Analytics />
