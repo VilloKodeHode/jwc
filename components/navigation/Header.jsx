@@ -17,9 +17,7 @@ export default function Header({ language, setLanguage, Theme, setTheme }) {
   return (
     <>
       <div
-        className={`relative z-10 flex items-center justify-between px-12 py-1 ${
-          Theme === "light" ? "bg-Villo-white25" : "bg-Villo-black"
-        } text-Villo-white10`}
+        className={`relative z-10 flex items-center justify-between px-12 py-1 ${Theme === "light" ? "bg-Villo-light-white text-Villo-light-black" : "bg-Villo-dark-black text-Villo-dark-white"} `}
       >
         <div className="grid grid-flow-col gap-12">
           <LanguageSwitch setLanguage={setLanguage} />
@@ -29,10 +27,10 @@ export default function Header({ language, setLanguage, Theme, setTheme }) {
 
       <header
         className={`relative ${
-          Theme === "light" ? "bg-Villo-white25" : "bg-Villo-black"
-        } flex flex-col h-28 w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 animate-SlideInFromTop shadow-md z-10 backdrop-blur-[1px]`}
+          Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
+        } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
       >
-        <div className="z-50 flex items-center justify-between h-28 ">
+        <div className="z-50 flex items-center justify-between">
           <div className="flex flex-row items-center justify-start lg:min-w-[500px] h-full min-w-[200px] gap-8 rounded-br-full rounded-bl-">
             <div className="relative z-40">
               <LogoComponent
@@ -41,19 +39,19 @@ export default function Header({ language, setLanguage, Theme, setTheme }) {
                 onClose={onClose}
               />
 
-              <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" />
+              {/* <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" /> */}
             </div>
             <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
-              <ResponsiveThemedSmall className="text-Villo-black25">
+              <ResponsiveThemedSmall className={`${Theme === "light" ? "text-Villo-dark-black50" : "text-Villo-dark-white15" } `}>
                 &#10077;
                 {language === "Norwegian"
                   ? "Drevet med ambisjoner, ekspertise og en uendelig tilførsel av koffein"
                   : "Driven by ambitions, expertise and an endless supply of caffeine"}
                 &#10078;
               </ResponsiveThemedSmall>
-              <ResponsiveThemedMini className="text-Villo-black25">
+              {/* <ResponsiveThemedMini className="text-Villo-black25">
                 VilloKodeHode@gmail.com
-              </ResponsiveThemedMini>
+              </ResponsiveThemedMini> */}
             </div>
           </div>
           <Navbar

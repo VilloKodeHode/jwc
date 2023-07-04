@@ -3,8 +3,10 @@ import {
   ResponsiveH5,
   ResponsiveP,
   ResponsiveThemedH1,
+  ResponsiveThemedH5,
+  ResponsiveThemedP,
 } from "../Responsive text/ResponsiveText";
-import { CallToActionButtonAlt } from "../Buttons";
+import CallToActionButton, { CallToActionButtonAlt } from "../Buttons";
 import PROJECT_LIST from "../Projects/projects_list";
 import Link from "next/link";
 
@@ -22,10 +24,12 @@ export const ProjectSection = ({ language, Theme }) => {
             {PROJECT_LIST.map((project) => (
               <div
                 key={project.engProjectName}
-                className={`flex flex-col justify-between overflow-hidden rounded-lg shadow bg-Villo-black85 shadow-Villo-black75`}
+                className={`flex flex-col justify-between overflow-hidden rounded-lg shadow ${
+                  Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
+                }  shadow-Villo-black75`}
               >
-                <div className="shadow shadow-Villo-black75">
-                  <div className="p-4 pb-0 shadow-inner shadow-Villo-black">
+               
+                  <div className={`p-4 pb-0 border-b-4 ${Theme === "light" ? "border-Villo-light-primary" : "border-Villo-dark-primary"} `}>
                     <Image
                       className="object-cover object-center w-full h-48"
                       src={project.src}
@@ -34,28 +38,34 @@ export const ProjectSection = ({ language, Theme }) => {
                       height={300}
                     />
                   </div>
-                </div>
+            
                 <div className="h-full p-6">
-                  <ResponsiveH5 className="font-light bg-gradient-to-br from-Villo-secondary to-Villo-primary bg-clip-text transparent">
+                  <ResponsiveThemedH5 className="font-bold">
                     {language === "Norwegian"
                       ? project.norProjectName
                       : project.engProjectName}
-                  </ResponsiveH5>
-                  <ResponsiveP className="mt-2 text-sm text-Villo-white15">
+                  </ResponsiveThemedH5>
+                  <ResponsiveThemedP
+                    className={`mt-2 ${
+                      Theme === "light"
+                        ? "text-Villo-black"
+                        : "text-Villo-white15"
+                    } `}
+                  >
                     {language === "Norwegian"
                       ? project.norDescription
                       : project.engDescription}
-                  </ResponsiveP>
+                  </ResponsiveThemedP>
                 </div>
-                <div className="m-4">
+                <div className="ml-3">
                   <Link
                     className="w-fit h-fit"
                     href={project.href}
                     target="_blank"
                   >
-                    <CallToActionButtonAlt>
+                    <CallToActionButton Theme={Theme}>
                       {language === "Norwegian" ? "Prøv ut" : "Try it out"}
-                    </CallToActionButtonAlt>
+                    </CallToActionButton>
                   </Link>
                 </div>
               </div>
