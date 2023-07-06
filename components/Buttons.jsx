@@ -74,7 +74,7 @@ export function ScrollToTopButton({Theme}) {
   return (
     <button
       onClick={scrollToTop}
-      className={`${Theme === "light" ? "text-Villo-light-black hover:text-Villo-light-primary" : "text-Villo-dark-white hover:text-Villo-dark-primary" } z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 rounded-full hover:scale-125  ${
+      className={`${Theme === "light" ? "text-Villo-light-black hover:text-Villo-light-secondary" : "text-Villo-dark-white hover:text-Villo-dark-secondary" } z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 rounded-full hover:scale-125  ${
         isVisible ? "opacity-100 " : "opacity-0 cursor-default"
       }`}
     >
