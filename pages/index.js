@@ -53,7 +53,7 @@ export default function Home({ language, Theme }) {
               </CallToActionButton>
             </Link>
             <Image
-              src={Theme === "light" ? "/logo/WindLogoNoTextDarkMode.svg" : "/logo/WindLogoNoTextLightMode.svg"}
+              src={Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"}
               className="absolute w-48 h-48 duration-500 -translate-y-1/2 -z-10 group-active:scale-110 group-hover:rotate-180 group-hover:scale-150 top-1/2"
               width={150}
               height={150}

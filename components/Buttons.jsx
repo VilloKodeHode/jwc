@@ -10,9 +10,9 @@ export default function CallToActionButton({ children, onClick, Theme }) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 py-4 my-4 font-bold uppercase duration-100 ease-in-out ${
-                Theme === "light" ? "text-Villo-light-white10  bg-Villo-light-primary hover:text-Villo-dark-black85 hover:bg-Villo-dark-primary" : "text-Villo-dark-black85 hover:text-Villo-light-white10  bg-Villo-dark-primary hover:bg-Villo-light-primary"
-              } rounded-md shadow-md xl:w-fit active:scale-95 text-p leading-p shadow-Villo-black85 hover:scale-105`}
+      className={`px-6 outline outline-2 outline-black hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${
+                Theme === "light" ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85  hover:bg-Villo-dark-primary" : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
+              } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>
     </button>
