@@ -28,13 +28,13 @@ const NavItem = ({
         <div
           className={`${
             active || activeLink === text ? `h-2` : "group-hover:h-2"
-          } absolute w-full h-0 transition-all ${Theme === "light" ? "bg-Villo-light-primary " : "bg-Villo-dark-primary " }`}
+          } absolute w-full h-0 transition-all ${Theme === "light" ? "bg-Villo-light-primary " : "bg-Villo-dark-primary" }`}
         />
       </Link>
       {(active || activeLink === text) && (
         <div className="absolute top-0 w-3 h-full -left-4">
           <Image
-            src={icon}
+           src={Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"}
             className="w-auto h-full animate-Appear"
             fill="responsive"
             alt=""

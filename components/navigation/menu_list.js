@@ -4,25 +4,24 @@ export const MENU_LIST = [
   {
     language: "Norwegian",
     menu_items: [
-      { text: "Om", href: "/about", icon: "/logo/WindLogoNoText.svg" },
+      { text: "Om", href: "/about"},
       {
         text: "Prosjekter",
         href: "/projects",
-        icon: "/logo/WindLogoNoText.svg",
       },
-      // { text: "AI kunst", href: "/aiArt", icon: "/logo/WindLogoNoText.svg" },
-      { text: "Kontakt", href: "/contact", icon: "/logo/WindLogoNoText.svg" },
-      // { text: "Laster", href: "/loading", icon: "/logo/WindLogoNoText.svg" },
+      // { text: "AI kunst", href: "/aiArt",},
+      { text: "Kontakt", href: "/contact",},
+      // { text: "Laster", href: "/loading",},
     ],
   },
   {
     language: "English",
     menu_items: [
-      { text: "About", href: "/about", icon: "/logo/WindLogoNoText.svg" },
-      { text: "Projects", href: "/projects", icon: "/logo/WindLogoNoText.svg" },
-      // { text: "AI art", href: "/aiArt", icon: "/logo/WindLogoNoText.svg" },
-      { text: "Contact", href: "/contact", icon: "/logo/WindLogoNoText.svg" },
-      // { text: "Loading", href: "/loading", icon: "/logo/WindLogoNoText.svg" },
+      { text: "About", href: "/about",},
+      { text: "Projects", href: "/projects",},
+      // { text: "AI art", href: "/aiArt",},
+      { text: "Contact", href: "/contact",},
+      // { text: "Loading", href: "/loading",},
     ],
   },
 ];
