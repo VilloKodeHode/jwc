@@ -42,13 +42,13 @@ export default function Header({ language, setLanguage, Theme, setTheme }) {
               {/* <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" /> */}
             </div>
             <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
-              <ResponsiveThemedSmall className={`${Theme === "light" ? "text-Villo-dark-black50" : "text-Villo-dark-white15" } `}>
+              {/* <ResponsiveThemedSmall className={`${Theme === "light" ? "text-Villo-dark-black50" : "text-Villo-dark-white15" } `}>
                 &#10077;
                 {language === "Norwegian"
                   ? "Drevet med ambisjoner, ekspertise og en uendelig tilførsel av koffein"
                   : "Driven by ambitions, expertise and an endless supply of caffeine"}
                 &#10078;
-              </ResponsiveThemedSmall>
+              </ResponsiveThemedSmall> */}
               {/* <ResponsiveThemedMini className="text-Villo-black25">
                 VilloKodeHode@gmail.com
               </ResponsiveThemedMini> */}

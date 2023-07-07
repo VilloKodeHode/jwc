@@ -19,7 +19,7 @@ export default function AboutPage({ language, Theme }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/logo/WindLogoNoText.svg" />
+            <link rel="icon" href={Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"} />
       </Head>
       <PageLayout gap="gap-28">
         <CompanyInfo language={language} Theme={Theme} />

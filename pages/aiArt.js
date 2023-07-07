@@ -20,7 +20,7 @@ export default function AIArtPage({ language, Theme }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/logo/WindLogoNoText.svg" />
+           <link rel="icon" href={Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"} />
       </Head>
       <PageLayout gap="gap-28">
         <section className="relative grid lg:grid-cols-[50%_50%] min-h-[calc(100vh-144px)] lg:grid-flow-col items-center justify-center min-w-full text-center">
