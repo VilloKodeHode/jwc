@@ -3,7 +3,8 @@ const nextConfig = {
   images: {
     domains: ["cdn.midjourney.com", "via.placeholder.com"],
   },
-  reactStrictMode: true,
+  domains: ["vitals.vercel-insights.com"],
+  reactStrictMode: false,
   
 };
 
