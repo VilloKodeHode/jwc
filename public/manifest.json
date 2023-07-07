@@ -1,6 +1,6 @@
 {
-  "name": "JV web consult",
-  "short_name": "JWC",
+  "name": "Villo Utvikling",
+  "short_name": "Villo Utvikling",
   "start_url": "https://www.jvwebconsult.no/",
   "background_color": "#202929",
   "theme_color": "#a2cbcc",
@@ -8,9 +8,9 @@
   "description": "Frontend developer, web designer, web developer, web consultant,",
   "icons": [
     {
-      "src": "/favicon-32x32.png",
+      "src": "/logo/WindLogoNoTextDarkMode.svg",
       "sizes": "32x32",
-      "type": "image/png",
+      "type": "image/svg",
       "purpose": "maskable any"
     }
   ],
