@@ -1,41 +1,30 @@
 // The navigation drawer. Made with Chakra UI.
 
-import Link from "next/link";
-import MENU_LIST, { LOGO } from "./menu_list";
+import MENU_LIST from "./menu_list";
 import NavItem from "./NavItem";
-import Image from "next/image";
 import { HamburgerIcon } from "@chakra-ui/icons";
-
 
 //chakra components:
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   IconButton,
 } from "@chakra-ui/react";
 import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
-import { useContext } from "react";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 import LogoComponent from "../base components/Logo";
 import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
 
 export default function ChakraDrawer({
-  activeLink,
-  setActiveLink,
-  handleImageClick,
   isOpen,
   onOpen,
   onClose,
   language,
   Theme,
+  currentPath,
 }) {
-  // const { language } = useContext(LanguageContext);
-  // const { Theme } = useContext(ThemeContext);
   const menuObj = MENU_LIST.find((menu) => menu.language === language);
   const menu_items = menuObj ? menuObj.menu_items : [];
 
@@ -65,7 +54,11 @@ export default function ChakraDrawer({
           size="lg"
           icon={<HamburgerIcon boxSize="3rem" />}
           onClick={() => onOpen()}
-          className={`block ml-8 duration-200 hover:scale-110 ${Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary" } `}
+          className={`block ml-8 duration-200 hover:scale-110 ${
+            Theme === "light"
+              ? "text-Villo-light-primary"
+              : "text-Villo-dark-primary"
+          } `}
         />
         <Drawer
           onClose={onClose}
@@ -76,9 +69,13 @@ export default function ChakraDrawer({
         >
           <DrawerOverlay />
           <DrawerContent>
-            <div className={`flex justify-between px-12 py-1 ${
-          Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
-        }`}>
+            <div
+              className={`flex justify-between px-12 py-1 ${
+                Theme === "light"
+                  ? "bg-Villo-light-white"
+                  : "bg-Villo-dark-black"
+              }`}
+            >
               <LanguageSwitch />
               <ThemeSwitch />
               {/* <Link href="/Norwegian resume shorted JWC.png" target="_blank">
@@ -92,11 +89,7 @@ export default function ChakraDrawer({
                   : "bg-Villo-dark-black"
               }`}
             >
-              <LogoComponent
-                setActiveLink={setActiveLink}
-                activeLink={activeLink}
-                onClose={onClose}
-              />
+              <LogoComponent onClose={onClose} />
             </DrawerHeader>
             <DrawerBody
               className={
@@ -105,14 +98,11 @@ export default function ChakraDrawer({
                   : "bg-Villo-dark-black"
               }
             >
-              <ul
-                className={`mt-0 p-2`}
-              >
+              <ul className={`mt-0 p-2`}>
                 <div className="flex flex-col items-center justify-center w-full gap-8 mt-8">
                   {menu_items.map((menu) => (
                     <NavItem
                       onClick={() => {
-                        setActiveLink(menu.text);
                         onClose();
                       }}
                       textSize="text-h4"
@@ -120,10 +110,9 @@ export default function ChakraDrawer({
                       text={menu.text}
                       href={menu.href}
                       color={menu.color}
-                      active={activeLink === menu.text}
-                      activeLink={activeLink}
                       icon={menu.icon}
                       Theme={Theme}
+                      currentPath={currentPath}
                     />
                   ))}
                 </div>

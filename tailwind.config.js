@@ -28,45 +28,38 @@ module.exports = {
     extend: {
       colors: {
         Villo: {
-    dark: {          
-      primary: "#858ee0",
+          dark: {
+            primary: "#858ee0",
 
-          secondary: "#571dff",
-    
+            secondary: "#571dff",
 
+            black: "#161618",
+            black85: "#2e2f34",
+            black75: "#383844",
+            black50: "#48485b",
 
+            white: "#fbfbfe",
+            white10: "#f3f4fc",
+            white15: "#e9ebf9",
+            white20: "#e0e2f7",
+          },
 
-          black: "#161618",
-          black85: "#2e2f34",
-          black75: "#383844",
-          black50: "#48485b",
-  
-          white: "#fbfbfe",
-          white10: "#f3f4fc",
-          white15: "#e9ebf9",
-          white20: "#e0e2f7",
+          light: {
+            primary: "#571dff",
 
-  },
+            secondary: "#858ee0",
 
- light: {          
-      primary: "#571dff",
+            black: "#141315",
+            black85: "#2e2f34",
+            black75: "#383844",
+            black50: "#48485b",
 
-          secondary: "#858ee0",
-
-
-          black: "#141315",
-         black85: "#2e2f34",
-          black75: "#383844",
-          black50: "#48485b",
-   
-          white: "#fefdff",
-          white10: "#f6f3ff",
-          white15: "#efe9ff",
-          white20: "#e6ddff",
-      },
-
+            white: "#fefdff",
+            white10: "#f6f3ff",
+            white15: "#efe9ff",
+            white20: "#e6ddff",
+          },
         },
-        
       },
       fontSize: {
         h1: "4.209rem",
@@ -185,16 +178,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/typography"),
-    require("daisyui"),
-  ],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };
-
-
-
-
-
-
-

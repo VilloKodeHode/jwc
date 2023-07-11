@@ -3,14 +3,12 @@
 export default function PageLayout({ children, gap }) {
   return (
     <main
-      className={`z-50 flex flex-col animate-Appear items-center px-4 mx-auto sm:px-6 lg:px-12 justify-start min-h-screen overflow-x-hidden ${gap}`}
+      className={`flex flex-col animate-Appear items-center px-4 mx-auto sm:px-6 lg:px-12 justify-start min-h-screen overflow-x-hidden ${gap}`}
     >
       <>{children}</>
     </main>
   );
 }
-
-
 
 export function TwoGriddedLayout({ children }) {
   return (

@@ -5,10 +5,9 @@ import Image from "next/image";
 import { LOGO } from "../navigation/menu_list";
 import { useDisclosure } from "@chakra-ui/react";
 
-const LogoComponent = ({ activeLink, setActiveLink, onClose }) => {
+const LogoComponent = ({ onClose }) => {
   const { Theme } = useContext(ThemeContext);
   const handleImageClick = () => {
-    activeLink && setActiveLink("");
     onClose();
   };
 

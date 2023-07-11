@@ -4,13 +4,12 @@ import Link from "next/link";
 const NavItem = ({
   text,
   href,
-  icon,
   active,
-  activeLink,
   onClick,
   className,
   textSize,
   Theme,
+  currentPath,
 }) => {
   return (
     <div key={text} className={`relative group z-10 ${className}`}>
@@ -27,14 +26,22 @@ const NavItem = ({
         </p>
         <div
           className={`${
-            active || activeLink === text ? `h-2` : "group-hover:h-2"
-          } absolute w-full h-0 transition-all ${Theme === "light" ? "bg-Villo-light-primary " : "bg-Villo-dark-primary" }`}
+            active || currentPath === href ? `h-2` : "group-hover:h-2"
+          } absolute w-full h-0 transition-all ${
+            Theme === "light"
+              ? "bg-Villo-light-primary "
+              : "bg-Villo-dark-primary"
+          }`}
         />
       </Link>
-      {(active || activeLink === text) && (
+      {(active || currentPath === href) && (
         <div className="absolute top-0 w-3 h-full -left-4">
           <Image
-           src={Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"}
+            src={
+              Theme === "light"
+                ? "/logo/WindLogoNoTextLightMode.svg"
+                : "/logo/WindLogoNoTextDarkMode.svg"
+            }
             className="w-auto h-full animate-Appear"
             fill="responsive"
             alt=""

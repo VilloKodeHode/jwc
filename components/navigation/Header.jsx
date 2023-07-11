@@ -1,27 +1,57 @@
 //Header component
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ChakraDrawer from "./ChakraDrawer";
-import { AbsoluteCenter, useDisclosure } from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
-import {
-  ResponsiveThemedMini,
-  ResponsiveThemedSmall,
-} from "../Responsive text/ResponsiveText";
+
 import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
 import LogoComponent from "../base components/Logo";
 
-export default function Header({ language, setLanguage, Theme, setTheme }) {
-  const [activeLink, setActiveLink] = useState("");
+export default function Header({
+  language,
+  setLanguage,
+  Theme,
+  setTheme,
+  currentPath,
+}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [notTop, setNotTop] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      setNotTop(window.scrollY > 0);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <>
       <div
-        className={`relative z-10 flex items-center justify-between px-12 py-1 ${Theme === "light" ? "bg-Villo-light-white text-Villo-light-black" : "bg-Villo-dark-black text-Villo-dark-white"} `}
+        className={`relative z-40 h-8 flex items-center justify-between px-12 py-1 ${
+          Theme === "light"
+            ? "bg-Villo-light-white text-Villo-light-black"
+            : "bg-Villo-dark-black text-Villo-dark-white"
+        } `}
       >
-        <div className="grid grid-flow-col gap-12">
+        <div
+          className={`grid z-40 ${
+            notTop
+              ? Theme === "light"
+                ? "bg-Villo-light-white20"
+                : "bg-Villo-dark-black50"
+              : ""
+          }  ${
+            notTop
+              ? "fixed opacity-50 hover:opacity-100 right-0 transition rounded-bl-full top-0 gap-2 grid-flow-row p-4 pl-6 pb-6 animate-SlideInFromLeft"
+              : "grid-flow-col gap-12 animate-SlideInFromTop"
+          }`}
+        >
           <LanguageSwitch setLanguage={setLanguage} />
-          <ThemeSwitch setTheme={setTheme} />
+          <div className={`${notTop ? "translate-x-9" : ""}`}>
+            <ThemeSwitch setTheme={setTheme} />
+          </div>
         </div>
       </div>
 
@@ -33,11 +63,7 @@ export default function Header({ language, setLanguage, Theme, setTheme }) {
         <div className="z-50 flex items-center justify-between">
           <div className="flex flex-row items-center justify-start lg:min-w-[500px] h-full min-w-[200px] gap-8 rounded-br-full rounded-bl-">
             <div className="relative z-40">
-              <LogoComponent
-                setActiveLink={setActiveLink}
-                activeLink={activeLink}
-                onClose={onClose}
-              />
+              <LogoComponent onClose={onClose} currentPath={currentPath} />
 
               {/* <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" /> */}
             </div>
@@ -55,23 +81,21 @@ export default function Header({ language, setLanguage, Theme, setTheme }) {
             </div>
           </div>
           <Navbar
-            activeLink={activeLink}
-            setActiveLink={setActiveLink}
             isOpen={isOpen}
             onOpen={onOpen}
             onClose={onClose}
             language={language}
             Theme={Theme}
+            currentPath={currentPath}
           />
 
           <ChakraDrawer
-            activeLink={activeLink}
-            setActiveLink={setActiveLink}
             isOpen={isOpen}
             onOpen={onOpen}
             onClose={onClose}
             language={language}
             Theme={Theme}
+            currentPath={currentPath}
           />
         </div>
       </header>

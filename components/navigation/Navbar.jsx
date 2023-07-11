@@ -2,12 +2,11 @@ import NavItem from "./NavItem";
 import MENU_LIST from "./menu_list";
 
 export default function Navbar({
-  activeLink,
-  setActiveLink,
   onClose,
   className,
   Theme,
   language,
+  currentPath,
 }) {
   const menuObj = MENU_LIST.find((menu) => menu.language === language);
   const menu_items = menuObj ? menuObj.menu_items : [];
@@ -17,7 +16,6 @@ export default function Navbar({
         {menu_items.map((menu) => (
           <NavItem
             onClick={() => {
-              setActiveLink(menu.text);
               onClose();
             }}
             textSize="text-p"
@@ -25,11 +23,10 @@ export default function Navbar({
             text={menu.text}
             href={menu.href}
             color={menu.color}
-            active={activeLink === menu.text}
-            activeLink={activeLink}
             icon={menu.icon}
             Theme={Theme}
             language={language}
+            currentPath={currentPath}
           />
         ))}
       </div>

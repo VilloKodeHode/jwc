@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -8,6 +8,7 @@ import { ScrollToTopButton } from "@/components/Buttons";
 import ThemeContext from "@/components/Utilities/ThemeSwitch/ThemeContext";
 import { Analytics } from "@vercel/analytics/react";
 import { ContextProviders } from "@/components/Utilities/CombinedContextProvider";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -20,8 +21,15 @@ export default function App({ Component, pageProps }) {
 }
 
 function AppContent({ Component, pageProps }) {
+  const router = useRouter();
   const { language, setLanguage } = useContext(LanguageContext);
   const { Theme, setTheme } = useContext(ThemeContext);
+
+  const currentPath = router.asPath;
+
+  useEffect(() => {
+    console.log("Current path changed:", currentPath);
+  }, [currentPath]);
 
   return (
     <div>
@@ -31,14 +39,22 @@ function AppContent({ Component, pageProps }) {
           setLanguage={setLanguage}
           Theme={Theme}
           setTheme={setTheme}
+          currentPath={currentPath}
         />
         <div
-          className={Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"}
+          className={
+            Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
+          }
         >
-          <Component {...pageProps} language={language} Theme={Theme} />
+          <Component
+            {...pageProps}
+            language={language}
+            Theme={Theme}
+            currentPath={currentPath}
+          />
           <Analytics />
         </div>
-        <Footer language={language} Theme={Theme} />
+        <Footer language={language} Theme={Theme} currentPath={currentPath} />
         <ScrollToTopButton Theme={Theme} />
       </ChakraProvider>
     </div>
