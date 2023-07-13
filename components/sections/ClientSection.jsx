@@ -6,6 +6,7 @@ import {
   ResponsiveH5,
   ResponsiveThemedH2,
   ResponsiveThemedH4,
+  ResponsiveThemedH5,
   ResponsiveUL,
   ThemedH3,
   ThemedP,
@@ -29,20 +30,31 @@ export const ClientSection = ({ language, Theme }) => {
             <Link
               key={client.id}
               className={`overflow-hidden ${
-                Theme === "light" ? "bg-Villo-light-primary" : "bg-Villo-dark-primary"
+                Theme === "light"
+                  ? "bg-Villo-light-primary"
+                  : "bg-Villo-dark-primary"
               } rounded-lg shadow-lg`}
               href={client.href}
             >
-              <Image
-                className="object-cover w-full h-48"
-                src={client.imageUrl}
-                alt={client.name}
-                width={500}
-                height={400}
-              />
+              <div className="grid items-center grid-flow-col gap-4 px-2 py-4">
+                <div className="w-28 h-28">
+                  <Image
+                    className="w-28 h-28"
+                    src={client.imageUrl}
+                    alt={client.name}
+                    width={300}
+                    height={300}
+                  />
+                </div>
+                <ResponsiveThemedH4 className="font-medium">
+                  {client.name}
+                </ResponsiveThemedH4>
+              </div>
               <div
                 className={`h-full p-6  ${
-                  Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
+                  Theme === "light"
+                    ? "bg-Villo-light-white10"
+                    : "bg-Villo-dark-black85"
                 }`}
               >
                 <ResponsiveThemedH4 className="font-medium">
@@ -50,6 +62,59 @@ export const ClientSection = ({ language, Theme }) => {
                 </ResponsiveThemedH4>
                 <ThemedP className="mt-2 text-sm">{client.jobDone}</ThemedP>
               </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const NewClientLayout = ({ language, Theme }) => {
+  const clientObj = CLIENT_LIST.find((client) => client.language === language);
+  const CLIENTS = clientObj ? clientObj.CLIENTS : [];
+  return (
+    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+      <div className="text-center">
+        <ResponsiveThemedH2 className="px-12 text-center">
+          {language === "Norwegian" ? "Klienter" : "Clients"}
+        </ResponsiveThemedH2>
+      </div>
+      <div className="mt-10">
+        <div className={`flex flex-wrap justify-center gap-1`}>
+          {CLIENTS.map((client) => (
+            <Link
+              key={client.id}
+              href={client.href}
+              target="_blank"
+              className={`overflow-hidden w-48 rounded-sm shadow-lg hover:scale-105 transition`}
+            >
+              <div className={`grid justify-center px-2 py-4 ${
+                Theme === "light"
+                  ? "bg-Villo-light-white15"
+                  : "bg-Villo-dark-black75"
+              }`}>
+                <div className="w-28 h-28">
+                  <Image
+                    className="object-contain w-full h-full filter grayscale"
+                    src={client.imageUrl}
+                    alt={client.name}
+                    width={300}
+                    height={300}
+                  />
+                </div>
+              </div>
+              {/* <div
+                className={`h-full p-2 ${
+                  Theme === "light"
+                    ? "bg-Villo-light-white10"
+                    : "bg-Villo-dark-black85"
+                }`}
+              >
+                <ResponsiveThemedH5 className="font-normal text-center">
+                  {client.name}
+                </ResponsiveThemedH5>
+              </div> */}
             </Link>
           ))}
         </div>
