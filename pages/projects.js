@@ -44,7 +44,7 @@ export default function ProjectPage({ language, Theme }) {
         {/* <ClientSection language={language} Theme={Theme} /> */}
         <NewClientLayout language={language} Theme={Theme} />
 
-        <section className="relative grid justify-center min-h-[40vh] mb-[112px] text-center">
+        {/* <section className="relative grid justify-center min-h-[40vh] mb-[112px] text-center">
           <TextFlex>
             <ResponsiveThemedP>
               {language === "Norwegian"
@@ -52,8 +52,9 @@ export default function ProjectPage({ language, Theme }) {
                 : "More projects will be added eventually"}
             </ResponsiveThemedP>
           </TextFlex>
-        </section>
+        </section> */}
         {/* </section> */}
+        <div className="mb-[112px]" />
       </PageLayout>
     </>
   );
