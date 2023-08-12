@@ -156,6 +156,10 @@ module.exports = {
           "0%": { translate: "0%", opacity: "100%", display: "hidden" },
           "100%": { translate: "50%", opacity: "0%", display: "block" },
         },
+        toolsSlideIn: {
+          "0%": { translate: "100%", display: "hidden" },
+          "100%": { translate: "0%", display: "block" },
+        },
       },
       animation: {
         waveSlideLeft: "waveSlideLeft ease-in 16s alternate infinite",
@@ -165,6 +169,7 @@ module.exports = {
         RPSPopUp: "popUp 0.1s ease-in",
         glow: "glow 3s ease-in-out infinite alternate",
         SlideInFromLeft: "slideLeft 0.5s ease-in-out",
+        ToolsSlideIn: "toolsSlideIn 0.5s ease-in-out",
         SlideInFromRight: "slideInRight 0.5s 1s ease-in-out backwards",
         ThemeSwitchSlideIn: "slideInRight 0.5s ease-in-out backwards",
         ThemeSwitchSlideOut: "slideOutRight 0.5s ease-in-out forwards",

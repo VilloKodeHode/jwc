@@ -36,7 +36,7 @@ export default function Header({
         } `}
       >
         <div
-          className={`grid z-40 ${
+          className={`grid transition-all z-40 ${
             notTop
               ? Theme === "light"
                 ? "bg-Villo-light-white20"
@@ -44,7 +44,7 @@ export default function Header({
               : ""
           }  ${
             notTop
-              ? "fixed opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-2 grid-flow-row p-4 pl-6 pb-6 animate-SlideInFromLeft"
+              ? "fixed opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-2 grid-flow-row p-4 pl-6 pb-6 animate-ToolsSlideIn"
               : "grid-flow-col gap-12 transition-all animate-SlideInFromTop"
           }`}
         >

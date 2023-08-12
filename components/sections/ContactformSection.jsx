@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CallToActionButton from "../Buttons";
+import CallToActionButton, { SendCTA } from "../Buttons";
 import {
   ResponsiveH2,
   ResponsiveH4,
@@ -163,9 +163,9 @@ export const ContactformSection = ({ language, Theme }) => {
                 required
               ></textarea>
             </div>
-            <CallToActionButton Theme={Theme} type="submit">
+            <SendCTA Theme={Theme} type="submit">
               Send
-            </CallToActionButton>
+            </SendCTA>
           </form>
         </>
       )}
