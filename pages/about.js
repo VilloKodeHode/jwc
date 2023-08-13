@@ -42,8 +42,8 @@ export default function AboutPage({ language, Theme }) {
           engText="Check my portfolio"
           norText="Sjekk min portfølje"
           href="/projects"
-          buttonEngText="View now"
-          buttonNorText="Se nå"
+          buttonEngText="View portfolio"
+          buttonNorText="Se portfølje"
         />
       </PageLayout>
     </>

@@ -25,7 +25,7 @@ export const ServicesSection = ({ language, Theme }) => {
               <div className="overflow-hidden shadow sm:rounded-lg">
                 <div
                   className={`flex flex-col justify-between px-4 py-5 min-h-[150px] md:min-h-[200px] ${
-                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
+                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
                   } sm:p-6`}
                 >
                   <div className="h-full">
@@ -49,7 +49,7 @@ export const ServicesSection = ({ language, Theme }) => {
               <div className="overflow-hidden shadow sm:rounded-lg">
                <div
                   className={`flex flex-col justify-between px-4 py-5 min-h-[150px] md:min-h-[200px] ${
-                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
+                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
                   } sm:p-6`}
                 >
                   <div className="h-full">
@@ -73,7 +73,7 @@ export const ServicesSection = ({ language, Theme }) => {
               <div className="overflow-hidden shadow sm:rounded-lg">
                 <div
                   className={`flex flex-col justify-between px-4 py-5 min-h-[150px] md:min-h-[200px] ${
-                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
+                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
                   } sm:p-6`}
                 >
                   <div className="h-full">
@@ -95,7 +95,7 @@ export const ServicesSection = ({ language, Theme }) => {
               <div className="overflow-hidden shadow sm:rounded-lg">
                 <div
                   className={`flex flex-col justify-between px-4 py-5 min-h-[150px] md:min-h-[200px] ${
-                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
+                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
                   } sm:p-6`}
                 >
                   <div className="h-full">

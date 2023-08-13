@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { ResponsiveThemedH2, ThemedP } from "../Responsive text/ResponsiveText";
 import SKILLS_LIST from "../Skills/skills_list";
+import { SiAdobephotoshop, SiCanva, SiChakraui, SiCss3, SiDaisyui, SiFigma, SiGit, SiGithub, SiHtml5, SiJavascript, SiNextdotjs, SiNuxtdotjs, SiReact, SiSvelte, SiTailwindcss, SiVisualstudiocode } from "react-icons/si";
 
 export const SkillsSection = ({ language, Theme }) => {
   return (
-    <section className="py-20 ">
+    <section className={`w-screen py-20 ${Theme === "light" ? "bg-Villo-light-white15" : " bg-Villo-dark-black85" }`}>
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="grid justify-center md:text-center">
+        <div className="grid justify-center text-center">
           <ResponsiveThemedH2 className="">
             {language === "Norwegian" ? "Kode kunnskap" : "Coding skills"}
           </ResponsiveThemedH2>
@@ -17,9 +18,25 @@ export const SkillsSection = ({ language, Theme }) => {
           </ThemedP>
         </div>
 
-        <div className={`relative flex justify-center p-8 mt-10 border-[20px] ${Theme === "light" ? "border-Villo-light-primary bg-Villo-light-white10" : "border-Villo-dark-primary bg-Villo-dark-white20" } `}>
-          <div className="grid grid-cols-2 gap-8 xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4">
-            {SKILLS_LIST.map((skill) =>
+        <div className={`relative flex justify-center mt-10 ${Theme === "light" ? " bg-Villo-light-" : "bg-Villo-dark-" } `}>
+          <div className={`flex flex-wrap  ${Theme === "light" ? " [&>*]:text-Villo-light-black hover:[&>*]:text-Villo-light-primary" : "[&>*]:text-Villo-dark-white20 hover:[&>*]:text-Villo-dark-primary" } md:gap-20 gap-12`}>
+            <SiHtml5 className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiCss3 className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiJavascript className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiReact className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiNextdotjs className={`relative z-10 w-[60px] h-[60px] mx-auto duration-500`} />
+            <SiSvelte className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiNuxtdotjs className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiVisualstudiocode className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiGit className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiGithub className={`relative z-10 w-[60px] h-[60px] mx-auto duration-500`} />
+            <SiTailwindcss className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiDaisyui className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiChakraui className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiFigma className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            <SiCanva className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
+            {/* <SiAdobephotoshop className="relative z-10 w-[60px] h-[60px] mx-auto duration-500 hover:text-[#31c5f0] border-[#31c5f0] rounded-xl hover:bg-white hover:border-8 border-spacing-2" /> */}
+            {/* {SKILLS_LIST.map((skill) =>
               skill.skilltype === "code language" ? (
                 <div
                   className="flex items-center justify-center"
@@ -82,7 +99,7 @@ export const SkillsSection = ({ language, Theme }) => {
                   ></Image>
                 </div>
               ) : null
-            )}
+            )} */}
           </div>
         </div>
       </div>

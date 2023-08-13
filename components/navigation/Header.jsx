@@ -7,6 +7,7 @@ import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
 
 import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
 import LogoComponent from "../base components/Logo";
+import { SiGithub } from "react-icons/si";
 
 export default function Header({
   language,
@@ -29,14 +30,14 @@ export default function Header({
   return (
     <>
       <div
-        className={`relative z-40 h-8 flex items-center justify-between px-12 py-1 ${
+        className={`relative z-40 h-10 flex items-center justify-between px-12 py-2 ${
           Theme === "light"
             ? "bg-Villo-light-white text-Villo-light-black"
             : "bg-Villo-dark-black text-Villo-dark-white"
         } `}
       >
         <div
-          className={`grid z-40 ${
+          className={`grid transition-all z-40 ${
             notTop
               ? Theme === "light"
                 ? "bg-Villo-light-white20"
@@ -44,14 +45,21 @@ export default function Header({
               : ""
           }  ${
             notTop
-              ? "fixed opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-2 grid-flow-row p-4 pl-6 pb-6 animate-SlideInFromLeft"
+              ? "fixed opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-2 grid-flow-row p-4 pl-6 pb-6 animate-ToolsSlideIn"
               : "grid-flow-col gap-12 transition-all animate-SlideInFromTop"
           }`}
         >
           <LanguageSwitch setLanguage={setLanguage} />
           <div className={`${notTop ? "translate-x-9" : ""}`}>
             <ThemeSwitch setTheme={setTheme} />
+            
           </div>
+          
+        </div>
+        <div className="flex justify-end" >
+          <a href="https://github.com/VilloKodeHode" target="_blank">
+        <SiGithub className={`relative z-10 w-8 h-8 mx-auto duration-200 hover:scale-105`} />
+        </a>
         </div>
       </div>
 

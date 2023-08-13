@@ -89,10 +89,10 @@ export const NewClientLayout = ({ language, Theme }) => {
               target="_blank"
               className={`overflow-hidden w-48 rounded-sm shadow-lg hover:scale-105 transition`}
             >
-              <div className={`grid justify-center px-2 py-4 ${
+              <div className={`grid justify-center transition-all px-2 py-4 ${
                 Theme === "light"
-                  ? "bg-Villo-light-white15"
-                  : "bg-Villo-dark-black75"
+                  ? "bg-Villo-light-white15 hover:bg-Villo-light-white10"
+                  : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
               }`}>
                 <div className="w-28 h-28">
                   <Image

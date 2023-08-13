@@ -6,7 +6,7 @@ import {
   ResponsiveThemedH5,
   ResponsiveThemedP,
 } from "../Responsive text/ResponsiveText";
-import CallToActionButton, { CallToActionButtonAlt } from "../Buttons";
+import CallToActionButton, { CallToActionButtonAlt, ArrowCTA, ExternalCTA } from "../Buttons";
 import PROJECT_LIST from "../Projects/projects_list";
 import Link from "next/link";
 
@@ -24,7 +24,7 @@ export const ProjectSection = ({ language, Theme }) => {
             {PROJECT_LIST.map((project) => (
               <div
                 key={project.engProjectName}
-                className={`flex flex-col justify-between overflow-hidden rounded-lg shadow ${
+                className={`flex flex-col h-[530px] justify-between overflow-hidden rounded-lg shadow ${
                   Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
                 }  shadow-Villo-black75`}
               >
@@ -57,15 +57,15 @@ export const ProjectSection = ({ language, Theme }) => {
                       : project.engDescription}
                   </ResponsiveThemedP>
                 </div>
-                <div className="ml-3">
+                <div className="ml-3 max-w-fit">
                   <Link
                     className="w-fit h-fit"
                     href={project.href}
                     target="_blank"
                   >
-                    <CallToActionButton Theme={Theme}>
+                    <ExternalCTA Theme={Theme}>
                       {language === "Norwegian" ? "Prøv ut" : "Try it out"}
-                    </CallToActionButton>
+                    </ExternalCTA>
                   </Link>
                 </div>
               </div>
