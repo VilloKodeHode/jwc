@@ -4,7 +4,7 @@ import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import { useContext, useEffect, useState } from "react";
 
 export const CTAOneSection = ({ language, Theme }) => {
-  const [currentWeb, setCurrentWeb] = useState("/Hero8.png");
+  const [currentWeb, setCurrentWeb] = useState("/HeroLogo.png");
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
@@ -12,24 +12,24 @@ export const CTAOneSection = ({ language, Theme }) => {
       setIsAnimating(true);
       setTimeout(() => {
         switch (currentWeb) {
-          case "/Hero8.png":
-            setCurrentWeb("/HeroDesign.webp");
+          case "/HeroLogo.png":
+            setCurrentWeb("/HeroDesign.png");
             break;
-          case "/HeroDesign.webp":
-            setCurrentWeb("/HeroDevelopment.webp");
+          case "/HeroDesign.png":
+            setCurrentWeb("/HeroDevelopment.png");
             break;
-          case "/HeroDevelopment.webp":
+          case "/HeroDevelopment.png":
             setCurrentWeb("/HeroCollage.webp");
             break;
           case "/HeroCollage.webp":
-            setCurrentWeb("/Hero8.png");
+            setCurrentWeb("/HeroLogo.png");
             break;
           default:
-            setCurrentWeb("/Hero8.png");
+            setCurrentWeb("/HeroLogo.png");
         }
         setIsAnimating(false);
       }, 500); // Adjust the duration here
-    }, 3500);
+    }, 5500);
 
     return () => clearInterval(interval);
   }, [currentWeb]);
@@ -43,12 +43,12 @@ export const CTAOneSection = ({ language, Theme }) => {
               <div className="relative z-10 text-center select-none md:text-left">
                 <ResponsiveH2 className="mb-8 ">
                   <span
-                    onMouseEnter={() => setCurrentWeb("/HeroDesign.webp")}
+                    onMouseEnter={() => setCurrentWeb("/HeroDesign.png")}
                     className={`cursor-pointer group  ${Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary"}`}
                   >
                     <span
                       className={` ${Theme === "light" ? "group-hover:text-Villo-light-primary" : "group-hover:text-Villo-dark-primary"}  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
-                        currentWeb === "/HeroDesign.webp"
+                        currentWeb === "/HeroDesign.png"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
                            ? "text-Villo-light-white10"
@@ -60,12 +60,12 @@ export const CTAOneSection = ({ language, Theme }) => {
                     design
                   </span>{" "}
                   <span
-                    onMouseEnter={() => setCurrentWeb("/HeroDevelopment.webp")}
+                    onMouseEnter={() => setCurrentWeb("/HeroDevelopment.png")}
                        className={`cursor-pointer group  ${Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary"}`}
                   >
                     <span
                       className={` ${Theme === "light" ? "group-hover:text-Villo-light-primary" : "group-hover:text-Villo-dark-primary"}  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
-                        currentWeb === "/HeroDevelopment.webp"
+                        currentWeb === "/HeroDevelopment.png"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
                            ? "text-Villo-light-white10"
@@ -105,13 +105,13 @@ export const CTAOneSection = ({ language, Theme }) => {
             </div>
             <div className="w-full mt-8 md:w-1/2">
               <div className={`relative z-10 grid justify-center`}>
-                <div className={`transition-opacity border-[20px] ${Theme === "light" ? "border-Villo-light-primary" : "border-Villo-dark-primary"}  `}>
+                <div className={`transition-all border border-b-8 border-r-8 w-fit h-fit rounded-xl ${Theme === "light" ? "border-Villo-light-primary" : "border-Villo-dark-primary"}  `}>
                   <Image
                     src={currentWeb}
                     alt="intro image"
                     width={400}
                     height={400}
-                    className={`object-cover duration-500 md:w-full md:h-full ${
+                    className={`object-cover duration-500 bg-Villo-dark-primary transition-all rounded-[4px] rounded-tl-xl xl:w-[550px] xl-h md:w-full md:h-full ${
                       isAnimating ? "opacity-0" : "opacity-100"
                     } `}
                     priority={true}
@@ -128,9 +128,9 @@ export const CTAOneSection = ({ language, Theme }) => {
 
 // export const getStaticProps = async () => {
 //   const images = [
-//     "/Hero8.png",
-//     "/HeroDesign.webp",
-//     "/HeroDevelopment.webp",
+//     "/HeroLogo.png",
+//     "/HeroDesign.png",
+//     "/HeroDevelopment.png",
 //     "/HeroCollage.webp",
 //   ];
 
