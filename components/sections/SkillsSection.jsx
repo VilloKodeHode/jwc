@@ -5,7 +5,7 @@ import { SiAdobephotoshop, SiCanva, SiChakraui, SiCss3, SiDaisyui, SiFigma, SiGi
 
 export const SkillsSection = ({ language, Theme }) => {
   return (
-    <section className={`w-screen py-20 ${Theme === "light" ? "bg-Villo-light-white10" : " bg-Villo-dark-black85" }`}>
+    <section className={`w-screen py-20 ${Theme === "light" ? "bg-Villo-light-white15" : " bg-Villo-dark-black85" }`}>
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="grid justify-center text-center">
           <ResponsiveThemedH2 className="">

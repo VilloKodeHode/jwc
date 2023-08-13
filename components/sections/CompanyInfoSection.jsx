@@ -19,7 +19,7 @@ export const CompanyInfo = ({ language, Theme }) => {
     <div className="grid animate-PageAppearRight justify-center items-center min-h-[calc(100vh-144px)]">
       <div
         className={`min-h-[90%] sm:rounded-lg grid lg:grid-cols-2  ${
-          Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
+          Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
         }`}
       >
         <div
