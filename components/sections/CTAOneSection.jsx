@@ -97,9 +97,31 @@ export const CTAOneSection = ({ language, Theme }) => {
                   </span>
                 </ResponsiveH2>
                 <ThemedP className="max-w-md mb-8">
-                  {language === "Norwegian"
-                    ? "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter."
-                    : "Engaging websites for your purpose: From simple to complex websites, customized for all devices."}
+                {currentWeb === "/HeroLogo.png" ? (
+    language === "Norwegian" ? (
+      "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter."
+    ) : (
+      "Engaging websites for your purpose: From simple to complex websites, customized for all devices."
+    )
+  ) : currentWeb === "/HeroDesign.png" ? (
+    language === "Norwegian" ? (
+      "Gjennomgående design som er estetisk og funksjonelt, med fokus på brukervennlighet og konvertering"
+    ) : (
+      "Consistent design that is aesthetic and functional, with a focus on user-friendliness and conversion"
+    )
+  ) : currentWeb === "/HeroDevelopment.png" ? (
+    language === "Norwegian" ? (
+      "Ekspertise innenfor utvikling av nettsider som er lette å vedlikeholde og endre innhold på"
+    ) : (
+      "Expertise in developing websites that are easy to maintain and change content on"
+    )
+  ) : currentWeb === "/HeroCollage.webp" ? (
+    language === "Norwegian" ? (
+      "Originalt høykvalitets innhold til nettsiden din, som er tilpasset ditt formål og målgruppe"
+    ) : (
+      "Original high-quality content for your website, customized for your purpose and target audience"
+    )
+  ) : null}
                 </ThemedP>
               </div>
             </div>
@@ -111,7 +133,7 @@ export const CTAOneSection = ({ language, Theme }) => {
                     alt="intro image"
                     width={400}
                     height={400}
-                    className={`object-cover duration-500 bg-Villo-dark-primary transition-all rounded-[4px] rounded-tl-xl xl:w-[550px] xl-h md:w-full md:h-full ${
+                    className={`object-cover duration-500 bg-Villo-dark-primary transition-all rounded-[4px] rounded-tl-xl xl:w-[550px] lg:w-[500px] md:w-full md:h-full h-[300px] ${
                       isAnimating ? "opacity-0" : "opacity-100"
                     } `}
                     priority={true}
