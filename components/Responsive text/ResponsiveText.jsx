@@ -39,7 +39,9 @@ export const ResponsiveThemedH2 = ({ children, className }) => {
   return (
     <h2
       className={` ${
-        Theme === "light" ? "text-Villo-light-black75" : "text-Villo-dark-white15"
+        Theme === "light"
+          ? "text-Villo-light-black75"
+          : "text-Villo-dark-white15"
       } sm:leading-h2 leading-h3 sm:text-h2 text-h3 ${className}`}
     >
       {children}
@@ -60,7 +62,9 @@ export const ResponsiveThemedH3 = ({ children, className }) => {
   return (
     <h3
       className={` ${
-        Theme === "light" ? "text-Villo-light-black75" : "text-Villo-dark-white15"
+        Theme === "light"
+          ? "text-Villo-light-black75"
+          : "text-Villo-dark-white15"
       } md:text-h3 text-h4 md:leading-h3 leading-h4 ${className}`}
     >
       {children}
@@ -73,7 +77,9 @@ export function ThemedH3({ children, className }) {
   return (
     <h3
       className={`text-h3 leading-h3 ${
-        Theme === "light" ? "text-Villo-light-black75" : "text-Villo-dark-white15"
+        Theme === "light"
+          ? "text-Villo-light-black75"
+          : "text-Villo-dark-white15"
       } ${className}`}
     >
       {children}
@@ -197,7 +203,9 @@ export const ResponsiveThemedMini = ({ children, className }) => {
   return (
     <small
       className={` ${
-        Theme === "light" ? "text-Villo-light-black75" : "text-Villo-dark-white25"
+        Theme === "light"
+          ? "text-Villo-light-black75"
+          : "text-Villo-dark-white25"
       } md:text-small font-normal text-mini md:leading-small leading-mini ${className}`}
     >
       {children}
