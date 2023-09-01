@@ -4,12 +4,15 @@ import {
   ResponsiveThemedH5,
   ThemedP,
 } from "../Responsive text/ResponsiveText";
+import { BenefitsSectionPart } from "./sectionsParts/BenefitsSectionParts";
 
 export const BenefitsSection = ({ language, Theme }) => {
   return (
-    <div className={`w-screen py-12 ${
-      Theme === "light" ? "bg-Villo-light-white15" : "bg-Villo-dark-black85"
-    }`}>
+    <div
+      className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 ${
+        Theme === "light" ? "bg-Villo-light-white15" : "bg-Villo-dark-black85"
+      }`}
+    >
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
           <ResponsiveThemedH2 className="px-12 text-center">
@@ -19,75 +22,37 @@ export const BenefitsSection = ({ language, Theme }) => {
           </ResponsiveThemedH2>
         </div>
         <div className="flex justify-center mt-10">
-          <div className="md:grid md:grid-cols-1 md:gap-6">
-            <div className="mt-5 md:mt-0 md:col-span-1">
-              <div className="overflow-hidden shadow sm:rounded-lg">
-                <div
-                  className={`px-4 py-5  ${
-                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
-                  } sm:p-6`}
-                >
-                  <ResponsiveThemedH5 className="font-bold">
-                    {language === "Norwegian"
-                      ? "Kvalitet til en god pris"
-                      : "Quality for a good price"}
-                  </ResponsiveThemedH5>
-                  <div className="mt-2">
-                    <ThemedP>
-                      {language === "Norwegian"
-                        ? "Ingen mellomledd som tar en stor del av budsjettet"
-                        : "No middleman that takes a big part of the budget"}
-                    </ThemedP>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-5 md:mt-0 md:col-span-1">
-              <div className="overflow-hidden shadow sm:rounded-lg">
-                <div
-                  className={`px-4 py-5  ${
-                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
-                  } sm:p-6`}
-                >
-                  <ResponsiveThemedH5 className="font-bold">
-                    {language === "Norwegian"
-                      ? "Optimaliserte websider som bruker den nyeste teknologien"
-                      : "Optimized websites that use the latest technology"}
-                  </ResponsiveThemedH5>
-                  <div className="mt-2">
-                    <ThemedP>
-                      {language === "Norwegian"
-                        ? "For den beste nettrafikken og brukeropplevelse"
-                        : "For the best web traffic and user experience"}
-                    </ThemedP>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-5 md:mt-0 md:col-span-1">
-              <div className="overflow-hidden shadow sm:rounded-lg">
-                <div
-                  className={`px-4 py-5  ${
-                    Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
-                  } sm:p-6`}
-                >
-                  <ResponsiveThemedH5 className="font-bold">
-                    {language === "Norwegian"
-                      ? "Kontinuerlige kommunikasjon gjennom hele prosessen"
-                      : "Continuous communication throughout the whole process"}
-                  </ResponsiveThemedH5>
-                  <div className="mt-2">
-                    <ThemedP>
-                      {language === "Norwegian"
-                        ? "For å sikre at du får det resultatet du ønsker"
-                        : "To ensure that the result will be just what you want"}
-                    </ThemedP>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="grid items-center grid-cols-1 xl:grid-cols-3 md:gap-6">
+            <BenefitsSectionPart
+              language={language}
+              Theme={Theme}
+              norTitle="Kvalitet nettsider"
+              norSubTitle="til en god pris og service"
+              engTitle="Quality websites"
+              engSubTitle="for a good price and service"
+              norText="Det er ingen mellomledd i produksjonen av nettsiden din. Dette betyr at du får en nettside av høy kvalitet til en god pris."
+              engText="There are no intermediaries in the production of your website. This means that you get a high quality website at a good price."
+            />
+            <BenefitsSectionPart
+              language={language}
+              Theme={Theme}
+              norTitle="Optimaliserte websider"
+              norSubTitle="som bruker den nyeste teknologien"
+              engTitle="Optimized websites"
+              engSubTitle="that use the latest technology"
+              norText="For å sikre at nettsiden din er rask, sikker og responsiv på alle enheter og skjermstørrelser brukes den nyeste teknologien."
+              engText="To ensure that your website is fast, secure and responsive on all devices and screen sizes, the latest technology is used."
+            />
+            <BenefitsSectionPart
+              language={language}
+              Theme={Theme}
+              norTitle="Åpen kommunikasjon"
+              norSubTitle="gjennom hele prosessen"
+              engTitle="Open communication"
+              engSubTitle="throughout the whole process"
+              norText="Åpen kommunikasjon er viktig for å sikre at resultatet blir akkurat det du ønsker deg. Derfor vil du bli oppdatert gjennom hele prosessen."
+              engText="Open communication is important to ensure that the result is exactly what you want. Therefore, you will be updated throughout the process."
+            />
           </div>
         </div>
       </div>
