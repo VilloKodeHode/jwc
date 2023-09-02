@@ -52,20 +52,20 @@ export default function Header({
           <LanguageSwitch setLanguage={setLanguage} />
           <div className={`${notTop ? "translate-x-9" : ""}`}>
             <ThemeSwitch setTheme={setTheme} />
-            
           </div>
-          
         </div>
-        <div className="flex justify-end" >
+        <div className="flex justify-end">
           <a href="https://github.com/VilloKodeHode" target="_blank">
-        <SiGithub className={`relative z-10 w-8 h-8 mx-auto duration-200 hover:scale-105`} />
-        </a>
+            <SiGithub
+              className={`relative z-10 w-8 h-8 mx-auto duration-200 hover:scale-105`}
+            />
+          </a>
         </div>
       </div>
 
       <header
-        className={`relative ${
-          Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
+        className={`relative bg-opacity-20 ${
+          Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black "
         } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between">

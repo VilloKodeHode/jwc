@@ -32,7 +32,9 @@ function AppContent({ Component, pageProps }) {
   }, [currentPath]);
 
   return (
-    <div>
+    <div className={
+      Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black bg-opacity"
+    }>
       <ChakraProvider>
         <Header
           language={language}
@@ -43,7 +45,7 @@ function AppContent({ Component, pageProps }) {
         />
         <div
           className={
-            Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
+            Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black bg-opacity"
           }
         >
           <Component
