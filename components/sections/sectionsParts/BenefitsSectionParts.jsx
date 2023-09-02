@@ -15,7 +15,7 @@ export const BenefitsSectionPart = ({
 }) => {
   return (
     <div className="mt-5 transition-all duration-300 md:mt-0 md:col-span-1 hover:scale-[1.02] active:scale-[1.02] group cursor-default">
-      <div className={`overflow-hidden transition-all duration-300 shadow sm:rounded-lg group-hover:outline  ${Theme === "light"
+      <div className={`overflow-hidden transition-transform duration-300 shadow sm:rounded-lg group-hover:outline  ${Theme === "light"
         ? " group-hover:outline-Villo-light-white20"
         : " group-hover:outline-Villo-dark-black50"
         }`}>
