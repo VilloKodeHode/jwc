@@ -160,6 +160,14 @@ module.exports = {
           "0%": { translate: "100%", display: "hidden" },
           "100%": { translate: "0%", display: "block" },
         },
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "100%" },
+        },
       },
       animation: {
         waveSlideLeft: "waveSlideLeft ease-in 16s alternate infinite",
@@ -180,8 +188,10 @@ module.exports = {
         PageAppearLeft: "slideInLeft 0.3s ease-in-out",
         RPSPopUpDelayed: "popUp 0.1s ease-in 1.0s backwards",
         RPSPopUpMoreDelayed: "popUp 0.1s ease-in 2s backwards",
+        fadeIn: "fadeIn 1s forwards",
+        scroll: "scroll 35s linear infinite",
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [require("@tailwindcss/typography"),],
 };

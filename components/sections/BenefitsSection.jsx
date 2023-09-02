@@ -9,9 +9,8 @@ import { BenefitsSectionPart } from "./sectionsParts/BenefitsSectionParts";
 export const BenefitsSection = ({ language, Theme }) => {
   return (
     <div
-      className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 ${
-        Theme === "light" ? "bg-Villo-light-white15" : "bg-Villo-dark-black85"
-      }`}
+      className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 ${Theme === "light" ? "bg-Villo-light-white15" : "bg-Villo-dark-black85"
+        }`}
     >
       <div className="mx-auto max-w-7xl">
         <div className="text-center">

@@ -1,15 +1,12 @@
-import { useContext } from "react";
-import CallToActionButton, { ArrowCTA } from "../Buttons";
-import ResponsiveH1, {
-  ResponsiveH5,
+import { ArrowCTA } from "../Buttons";
+import {
   ResponsiveP,
   ResponsiveThemedH1,
   ResponsiveThemedH5,
 } from "../Responsive text/ResponsiveText";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 import Link from "next/link";
 import THREESpace from "../animation/Space";
-import { FiArrowRight } from "react-icons/fi";
+
 
 export const HeroSection = ({ language, Theme }) => {
   return (
@@ -18,18 +15,16 @@ export const HeroSection = ({ language, Theme }) => {
         <div className="max-w-6xl animate-PageAppearRight">
           <div className="relative z-10 text-left">
             <ResponsiveP
-              className={`mb-8 text-left ${
-                Theme === "light" ? "text-Villo-light-black85" : "text-Villo-dark-white10"
-              }  w-fit`}
+              className={`mb-8 text-left ${Theme === "light" ? "text-Villo-light-black85" : "text-Villo-dark-white10"
+                }  w-fit`}
             >
               {language === "Norwegian"
                 ? "Få siden din opp og gå, raskt!"
                 : "Get your site up and running, fast!"}
             </ResponsiveP>
             <ResponsiveThemedH1 className="mb-8">
-              <span className={`${
-                Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary"
-              }`}>
+              <span className={`${Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary"
+                }`}>
                 {language === "Norwegian"
                   ? "Nettside utvikler"
                   : "Website developer"}
@@ -51,11 +46,11 @@ export const HeroSection = ({ language, Theme }) => {
                 : "I build websites quickly and efficiently using the latest web technologies. Whether you want a simple solution with a user-friendly system, or a custom website tailored to your needs, you can rely on my expertise."}
             </ResponsiveThemedH5>
             <div className="h-[60px] max-w-fit">
-            <Link href="/contact" className="">
-              <ArrowCTA Theme={Theme} className="">
-                {language === "Norwegian" ? "Kontakt nå" : "Contact now"}
-              </ArrowCTA>
-            </Link>
+              <Link href="/contact" className="">
+                <ArrowCTA Theme={Theme} className="">
+                  {language === "Norwegian" ? "Kontakt nå" : "Contact now"}
+                </ArrowCTA>
+              </Link>
             </div>
           </div>
         </div>
