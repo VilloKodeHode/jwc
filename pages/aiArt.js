@@ -14,7 +14,7 @@ export default function AIArtPage({ language, Theme }) {
     <>
       <Head>
         <title>JV Web Consult</title>
-        <meta name="JV Web Consult" content="Villo' AI art" />
+        <meta name="JV Web Consult" content="Villo's AI art" />
         <meta
           name="keywords"
           content="AI art, AI kunst, nettinnhold, webcontent, AI"
@@ -25,7 +25,9 @@ export default function AIArtPage({ language, Theme }) {
       </Head>
       <PageLayout gap="gap-28">
         <section className="relative grid lg:grid-cols-[50%_50%] min-h-[calc(100vh-144px)] lg:grid-flow-col items-center justify-center min-w-full text-center">
-          <div className="relative px-8 py-16 h-full lg:min-w-[50vw] min-w-[100vw] min-h-[45vh]">
+
+          <h1>Under construction</h1>
+          {/* <div className="relative px-8 py-16 h-full lg:min-w-[50vw] min-w-[100vw] min-h-[45vh]">
             <Image
               src="https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png"
               alt="Green plantet"
@@ -83,7 +85,7 @@ export default function AIArtPage({ language, Theme }) {
                 </div>
               </div>
             ))}
-          </section>
+          </section> */}
         </section>
       </PageLayout>
     </>
