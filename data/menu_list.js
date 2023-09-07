@@ -9,6 +9,7 @@ export const MENU_LIST = [
         text: "Prosjekter",
         href: "/projects",
       },
+      { text: "Arbeid", href: "/work",},
       // { text: "AI kunst", href: "/aiArt",},
       { text: "Kontakt", href: "/contact",},
       // { text: "Laster", href: "/loading",},
@@ -19,6 +20,7 @@ export const MENU_LIST = [
     menu_items: [
       { text: "About", href: "/about",},
       { text: "Projects", href: "/projects",},
+      { text: "Work", href: "/work",},
       // { text: "AI art", href: "/aiArt",},
       { text: "Contact", href: "/contact",},
       // { text: "Loading", href: "/loading",},

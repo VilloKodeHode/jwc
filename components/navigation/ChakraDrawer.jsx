@@ -1,6 +1,6 @@
 // The navigation drawer. Made with Chakra UI.
 
-import MENU_LIST from "./menu_list";
+import MENU_LIST from "../../data/menu_list";
 import NavItem from "./NavItem";
 import { HamburgerIcon } from "@chakra-ui/icons";
 

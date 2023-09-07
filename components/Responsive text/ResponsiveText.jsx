@@ -116,6 +116,21 @@ export function ResponsiveH5({ children, className }) {
   );
 }
 
+export function ThemedH5({ children, className }) {
+  const { Theme } = useContext(ThemeContext);
+  return (
+    <h3
+      className={`text-h5 leading-h5 ${
+        Theme === "light"
+          ? "text-Villo-light-black75"
+          : "text-Villo-dark-white15"
+      } ${className}`}
+    >
+      {children}
+    </h3>
+  );
+}
+
 export const ResponsiveThemedH5 = ({ children, className }) => {
   const { Theme } = useContext(ThemeContext);
   return (
@@ -174,6 +189,19 @@ export function ResponsiveSmall({ children, maxWidth, className }) {
     </p>
   );
 }
+
+export const ThemedSmall = ({ children, className }) => {
+  const { Theme } = useContext(ThemeContext);
+  return (
+    <p
+      className={` ${
+        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+      } text-p0 leading-p0 ${className}`}
+    >
+      {children}
+    </p>
+  );
+};
 
 export const ResponsiveThemedSmall = ({ children, className }) => {
   const { Theme } = useContext(ThemeContext);

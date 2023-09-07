@@ -7,7 +7,6 @@ import {
 import Link from "next/link";
 import THREESpace from "../animation/Space";
 
-
 export const HeroSection = ({ language, Theme }) => {
   return (
     <>
@@ -15,16 +14,24 @@ export const HeroSection = ({ language, Theme }) => {
         <div className="max-w-6xl animate-PageAppearRight">
           <div className="relative z-10 text-left">
             <ResponsiveP
-              className={`mb-8 text-left ${Theme === "light" ? "text-Villo-light-black85" : "text-Villo-dark-white10"
-                }  w-fit`}
+              className={`mb-8 text-left ${
+                Theme === "light"
+                  ? "text-Villo-light-black85"
+                  : "text-Villo-dark-white10"
+              }  w-fit`}
             >
               {language === "Norwegian"
-                ? "Få siden din opp og gå, raskt!"
-                : "Get your site up and running, fast!"}
+                ? "Nettsider for små og mellomstore bedrifter"
+                : "Websites for small and medium-sized businesses"}
             </ResponsiveP>
             <ResponsiveThemedH1 className="mb-8">
-              <span className={`${Theme === "light" ? "text-Villo-light-primary" : "text-Villo-dark-primary"
-                }`}>
+              <span
+                className={`${
+                  Theme === "light"
+                    ? "text-Villo-light-primary"
+                    : "text-Villo-dark-primary"
+                }`}
+              >
                 {language === "Norwegian"
                   ? "Nettside utvikler"
                   : "Website developer"}

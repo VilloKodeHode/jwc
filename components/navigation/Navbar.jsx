@@ -1,5 +1,5 @@
 import NavItem from "./NavItem";
-import MENU_LIST from "./menu_list";
+import MENU_LIST from "../../data/menu_list";
 
 export default function Navbar({
   onClose,

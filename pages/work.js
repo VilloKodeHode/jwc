@@ -5,8 +5,10 @@ import ResponsiveH1, {
   ResponsiveH4,
   ResponsiveH5,
   ResponsiveP,
+  ResponsiveThemedH1,
   ResponsiveThemedP,
   ResponsiveUL,
+  ThemedP,
 } from "@/components/Responsive text/ResponsiveText";
 import Head from "next/head";
 import { useContext } from "react";
@@ -16,6 +18,7 @@ import {
   NewClientLayout,
 } from "@/components/sections/ClientSection";
 import { ProjectSection } from "@/components/sections/ProjectSection";
+import { QuotesSection } from "@/components/sections/QuotesSections";
 
 export default function ProjectPage({ language, Theme }) {
   // const { language } = useContext(LanguageContext);
@@ -40,10 +43,13 @@ export default function ProjectPage({ language, Theme }) {
         />
       </Head>
       <PageLayout gap="gap-28">
-        <ProjectSection language={language} Theme={Theme} />
-     
-        {/* <NewClientLayout language={language} Theme={Theme} /> */}
-
+        <div className="text-center">
+          <ResponsiveThemedH1>
+            {language === "Norwegian" ? "Arbeid" : "Work"}
+          </ResponsiveThemedH1>
+        </div>
+        <NewClientLayout language={language} Theme={Theme} />
+        <QuotesSection language={language} Theme={Theme} />
         <div className="mb-[112px]" />
       </PageLayout>
     </>

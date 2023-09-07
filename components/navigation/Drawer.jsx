@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import MENU_LIST from "./menu_list";
+import MENU_LIST from "../../data/menu_list";
 import NavItem from "./NavItem";
 import Image from "next/image";
 

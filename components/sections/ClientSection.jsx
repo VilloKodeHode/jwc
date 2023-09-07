@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { CLIENT_LIST } from "../client_list";
 import {
   ResponsiveH3,
   ResponsiveH4,
@@ -13,6 +12,7 @@ import {
 } from "../Responsive text/ResponsiveText";
 import { ClientLayout, TextFlex } from "../Layout";
 import Link from "next/link";
+import { CLIENT_LIST } from "@/data/client_list";
 
 export const ClientSection = ({ language, Theme }) => {
   const clientObj = CLIENT_LIST.find((client) => client.language === language);
@@ -74,7 +74,7 @@ export const NewClientLayout = ({ language, Theme }) => {
   const clientObj = CLIENT_LIST.find((client) => client.language === language);
   const CLIENTS = clientObj ? clientObj.CLIENTS : [];
   return (
-    <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div className="flex flex-col justify-center px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 min-h-[50vh]">
       <div className="text-center">
         <ResponsiveThemedH2 className="px-12 text-center">
           {language === "Norwegian" ? "Klienter" : "Clients"}
@@ -89,11 +89,13 @@ export const NewClientLayout = ({ language, Theme }) => {
               target="_blank"
               className={`overflow-hidden w-48 rounded-sm shadow-lg hover:scale-105 transition`}
             >
-              <div className={`grid justify-center transition-all px-2 py-4 ${
-                Theme === "light"
-                  ? "bg-Villo-light-white15 hover:bg-Villo-light-white10"
-                  : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
-              }`}>
+              <div
+                className={`grid justify-center transition-all px-2 py-4 ${
+                  Theme === "light"
+                    ? "bg-Villo-light-white15 hover:bg-Villo-light-white10"
+                    : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
+                }`}
+              >
                 <div className="w-28 h-28">
                   <Image
                     className="object-contain w-full h-full filter grayscale"

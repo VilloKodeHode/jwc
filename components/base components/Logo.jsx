@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 import Link from "next/link";
 import Image from "next/image";
-import { LOGO } from "../navigation/menu_list";
+import { LOGO } from "../../data/menu_list";
 import { useDisclosure } from "@chakra-ui/react";
 
 const LogoComponent = ({ onClose }) => {
