@@ -3,10 +3,6 @@ import {
   ResponsiveThemedH2,
   ResponsiveThemedH5,
   ResponsiveThemedP,
-  ThemedH3,
-  ThemedH5,
-  ThemedP,
-  ThemedSmall,
 } from "../Responsive text/ResponsiveText";
 import { QUOTES_LIST } from "@/data/quotes_list";
 

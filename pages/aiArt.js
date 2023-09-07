@@ -1,9 +1,10 @@
-import AIART_LIST from "@/components/aiArt_list";
+
 import PageLayout from "@/components/Layout";
 import {
   ResponsiveH2,
   ResponsiveH3,
 } from "@/components/Responsive text/ResponsiveText";
+import AIART_LIST from "@/data/aiArt_list";
 
 import Head from "next/head";
 import Image from "next/image";
@@ -20,7 +21,7 @@ export default function AIArtPage({ language, Theme }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-           <link rel="icon" href={Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"} />
+        <link rel="icon" href={Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"} />
       </Head>
       <PageLayout gap="gap-28">
         <section className="relative grid lg:grid-cols-[50%_50%] min-h-[calc(100vh-144px)] lg:grid-flow-col items-center justify-center min-w-full text-center">
