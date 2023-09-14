@@ -33,7 +33,7 @@ export const HeroSection = ({ language, Theme }) => {
                 }`}
               >
                 {language === "Norwegian"
-                  ? "Nettside utvikler"
+                  ? "Webutviklinger"
                   : "Website developer"}
               </span>{" "}
               {language === "Norwegian" ? "som lager" : "creating"}{" "}
