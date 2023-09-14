@@ -22,7 +22,7 @@ export default function Home({ language, Theme }) {
         <meta name="theme-color" content="#a2cbcc" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Villo Utvikling" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
 
         <meta name="og:title" content="Profesjonell Frontend webutvikling og webdesign service | Villo Utvikling" />
         <meta name="og:description" content="Profesjonell frontend webutvikling og webdesign service. Vi omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder." />

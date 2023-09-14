@@ -32,8 +32,8 @@ export default function Header({
       <div
         className={`relative z-40 h-10 flex items-center justify-between px-12 py-2 ${
           Theme === "light"
-            ? "bg-Villo-light-white text-Villo-light-black"
-            : "bg-Villo-dark-black text-Villo-dark-white"
+            ? "bg-Villo-light-white10 text-Villo-light-black"
+            : "bg-Villo-dark-black text-Villo-dark-white10"
         } `}
       >
         <div

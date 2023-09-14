@@ -10,7 +10,7 @@ import THREESpace from "../animation/Space";
 export const HeroSection = ({ language, Theme }) => {
   return (
     <>
-      <section className="relative z-10  flex items-center justify-center w-full min-h-[calc(100vh-144px)] bg-center bg-cover">
+      <section className="relative z-10 flex items-center justify-center w-full min-h-[calc(100vh-144px)] bg-center bg-cover">
         <div className="max-w-6xl animate-PageAppearRight">
           <div className="relative z-10 text-left">
             <ResponsiveP
@@ -61,8 +61,14 @@ export const HeroSection = ({ language, Theme }) => {
             </div>
           </div>
         </div>
+        <div className={`absolute z-50 w-screen h-12 bg-gradient-to-b ${
+                  Theme === "light"
+                    ? "from-[#fbf9ff] to-Villo-light-white"
+                    : "from-[#18181b] to-Villo-dark-black"
+                }  top-[99%]`} />
       </section>
-      <THREESpace className="absolute top-0 -z-10" />
+      <THREESpace className="absolute top-0 -z-10" Theme={Theme} />
+  
     </>
   );
 };

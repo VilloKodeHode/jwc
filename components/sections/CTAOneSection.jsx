@@ -33,11 +33,16 @@ export const CTAOneSection = ({ language, Theme }) => {
     return () => clearInterval(interval);
   }, [currentWeb]);
 
+  const imageWidth =
+  currentWeb === "/HeroLogo.png" ? 400 : 500; // Adjust the sizes as needed
+const imageHeight =
+  currentWeb === "/HeroLogo.png" ? 400 : 300; // Adjust the sizes as needed
+
   return (
     <>
-      <section className="relative animate-PageAppearRight z-10 flex items-center justify-center w-full h-[100vh] bg-center bg-cover group/imageEffect">
-        <div className="max-w-6xl ">
-          <div className="flex flex-col items-center md:flex-row">
+      <section className="relative animate-PageAppearRight z-10 flex items-center justify-center w-full h-[100vh] group/imageEffect">
+        <div className="flex items-center justify-center h-full m-0">
+          <div className="flex flex-col items-center justify-center w-full max-w-6xl md:flex-row">
             <div className="w-full md:w-1/2">
               <div className="relative z-10 text-center select-none md:text-left">
                 <ResponsiveH2 className="mb-8 ">
@@ -119,7 +124,7 @@ export const CTAOneSection = ({ language, Theme }) => {
                     {language === "Norwegian" ? "innhold" : "content"}
                   </span>
                 </ResponsiveH2>
-                <ThemedP className="max-w-md max-h-[48px] mb-8">
+                <ThemedP className="md:max-w-md max-h-[48px] mb-8">
                   {currentWeb === "/HeroLogo.png"
                     ? language === "Norwegian"
                       ? "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter."
@@ -140,10 +145,10 @@ export const CTAOneSection = ({ language, Theme }) => {
                 </ThemedP>
               </div>
             </div>
-            <div className="w-full mt-8 md:w-1/2">
-              <div className={`relative z-10 grid justify-center`}>
+            <div className="w-full md:w-1/2">
+              <div className={`relative z-10 grid items-center justify-center`}>
                 <div
-                  className={`transition-all border border-b-8 border-r-8 w-fit h-fit rounded-xl ${
+                  className={`transition-all border border-b-8 border-r-8 w-fit md:h-[450px] rounded-xl ${
                     Theme === "light"
                       ? "border-Villo-light-primary"
                       : "border-Villo-dark-primary"
@@ -151,9 +156,21 @@ export const CTAOneSection = ({ language, Theme }) => {
                 >
                   <Image
                     src={currentWeb}
-                    alt={currentWeb === "/HeroLogo.png" ? "Logo" : currentWeb === "/HeroLogo.png" ? "Villo utvikling" : currentWeb === "/HeroDesign.png" ? "Web design" : currentWeb === "/HeroDevelopment.png" ? "Web utvikling" : currentWeb === "/HeroCollage.webp" ? "Web innhold" : null}
-                    width={400}
-                    height={400}
+                    alt={
+                      currentWeb === "/HeroLogo.png"
+                        ? "Logo"
+                        : currentWeb === "/HeroLogo.png"
+                        ? "Villo utvikling"
+                        : currentWeb === "/HeroDesign.png"
+                        ? "Web design"
+                        : currentWeb === "/HeroDevelopment.png"
+                        ? "Web utvikling"
+                        : currentWeb === "/HeroCollage.webp"
+                        ? "Web innhold"
+                        : null
+                    }
+                    width={imageWidth}
+                    height={imageHeight}
                     className={`object-cover duration-500 bg-Villo-dark-primary transition-all rounded-[4px] rounded-tl-xl xl:w-[550px] lg:w-[500px] md:w-full md:h-full h-[300px] ${
                       isAnimating ? "opacity-0" : "opacity-100"
                     } `}

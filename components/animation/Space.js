@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-const THREESpace = () => {
+const THREESpace = ({Theme}) => {
   const canvasRef = useRef();
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const THREESpace = () => {
 
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x19211e, 0);
+    renderer.setClearColor(Theme === "light" ? 0x571dff : 0x858ee0, 0.015);
 
     // const light = new THREE.PointLight(0xffffff, 1, 100);
     // light.position.set(50, 0, 10);
@@ -62,7 +62,7 @@ const THREESpace = () => {
     }
 
     animate();
-  }, []);
+  }, [Theme]);
 
   return <canvas ref={canvasRef} className="absolute top-0" />;
 };

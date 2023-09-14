@@ -1,23 +1,8 @@
-import PageLayout, { ClientLayout, TextFlex } from "@/components/Layout";
-import ResponsiveH1, {
-  ResponsiveH2,
-  ResponsiveH3,
-  ResponsiveH4,
-  ResponsiveH5,
-  ResponsiveP,
-  ResponsiveThemedH1,
-  ResponsiveThemedP,
-  ResponsiveUL,
-  ThemedP,
-} from "@/components/Responsive text/ResponsiveText";
+import PageLayout from "@/components/Layout";
+import { ResponsiveThemedH1 } from "@/components/Responsive text/ResponsiveText";
 import Head from "next/head";
-import { useContext } from "react";
-import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
-import {
-  ClientSection,
-  NewClientLayout,
-} from "@/components/sections/ClientSection";
-import { ProjectSection } from "@/components/sections/ProjectSection";
+
+import { NewClientLayout } from "@/components/sections/ClientSection";
 import { QuotesSection } from "@/components/sections/QuotesSections";
 
 export default function ProjectPage({ language, Theme }) {
