@@ -16,7 +16,7 @@ export default function Home({ language, Theme }) {
         <title>Frontend webutvikling og webdesign service | Villo Utvikling</title>
         <meta
           name="description"
-          content="Profesjonell Frontend webutvikling og webdesign service. Vi omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder."
+          content="Frontend webutvikling og webdesign service. Omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder."
         />
         <meta name="keywords" content="webdesign, webutvikling, nettside, SEO, frontend-utvikling, frontend-utvikler, frilans, frilanser, frilans utvikler, webutvikler, UI/UX, HTML, CSS, JavaScript, responsivt design, kryssnettleserkompatibilitet" />
         <meta name="theme-color" content="#a2cbcc" />
