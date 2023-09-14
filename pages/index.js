@@ -13,17 +13,13 @@ export default function Home({ language, Theme }) {
   return (
     <>
       <Head>
-        <title>Villo utvikling</title>
+        <title>Profesjonell Frontend web utvikling service | Villo Utvikling</title>
         <meta name="description" content="Villo utvikling's webside" />
-        <meta
-          name="keywords"
-          content="web design, development, website, SEO, frontend development, frontend developer, freelance, freelancer, freelance developer, web developer, UI/UX, HTML, CSS, JavaScript, responsive design, cross-browser compatibility"
-        />
+        <meta name="keywords" content="webdesign, utvikling, nettside, SEO, frontend-utvikling, frontend-utvikler, frilans, frilanser, frilans utvikler, webutvikler, UI/UX, HTML, CSS, JavaScript, responsivt design, kryssnettleserkompatibilitet" />
         <meta name="theme-color" content="#a2cbcc" />
         <meta
           name="description"
-          content="Transforming ideas into captivating websites through professional frontend development services. Crafted with precision and creativity, we specialize in creating responsive, user-friendly, and visually appealing websites that engage and delight users. Our expertise covers modern web technologies, including HTML, CSS, JavaScript, and frameworks like React and Next.js. Partner with us to bring your online presence to life and establish a strong digital footprint. Contact us today to discuss your project and unlock the full potential of your website."
-        />
+          content="Omskaper ideer til fengslende nettsider gjennom profesjonell frontend-utvikling. Spesialister på responsive, brukervennlige og visuelt tiltalende nettsteder ved hjelp av HTML, CSS, JavaScript og rammeverk som React og Next.js. Samarbeid med oss i dag!" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />

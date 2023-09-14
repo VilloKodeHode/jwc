@@ -151,7 +151,7 @@ export const CTAOneSection = ({ language, Theme }) => {
                 >
                   <Image
                     src={currentWeb}
-                    alt="intro image"
+                    alt={currentWeb === "/HeroLogo.png" ? "Logo" : currentWeb === "/HeroLogo.png" ? "Villo utvikling" : currentWeb === "/HeroDesign.png" ? "Web design" : currentWeb === "/HeroDevelopment.png" ? "Web utvikling" : currentWeb === "/HeroCollage.webp" ? "Web innhold" : null}
                     width={400}
                     height={400}
                     className={`object-cover duration-500 bg-Villo-dark-primary transition-all rounded-[4px] rounded-tl-xl xl:w-[550px] lg:w-[500px] md:w-full md:h-full h-[300px] ${
