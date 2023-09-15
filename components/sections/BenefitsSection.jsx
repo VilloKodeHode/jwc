@@ -1,8 +1,5 @@
 import {
-  ResponsiveH5,
   ResponsiveThemedH2,
-  ResponsiveThemedH5,
-  ThemedP,
 } from "../Responsive text/ResponsiveText";
 import { BenefitsSectionPart } from "./sectionsParts/BenefitsSectionParts";
 

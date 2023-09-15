@@ -35,7 +35,7 @@ function AppContent({ Component, pageProps }) {
     <div className={
       Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black bg-opacity"
     }>
-      <ChakraProvider>
+      {/* <ChakraProvider> */}
         <Header
           language={language}
           setLanguage={setLanguage}
@@ -58,7 +58,7 @@ function AppContent({ Component, pageProps }) {
         </div>
         <Footer language={language} Theme={Theme} currentPath={currentPath} />
         <ScrollToTopButton Theme={Theme} />
-      </ChakraProvider>
+      {/* </ChakraProvider> */}
     </div>
   );
 }

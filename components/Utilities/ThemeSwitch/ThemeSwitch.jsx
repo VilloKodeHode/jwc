@@ -24,22 +24,20 @@ const ThemeSwitch = () => {
         width={320}
         height={320}
         alt="themeswitch"
-        className={` ${
-          Theme === "light"
-            ? "animate-ThemeSwitchSlideIn"
-            : "animate-ThemeSwitchSlideOut pointer-events-none"
-        }  w-5 h-5 absolute translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 `}
+        className={` origin-top ${Theme === "light"
+          ? "animate-ThemeSwitchSlideIn"
+          : "animate-ThemeSwitchSlideOut pointer-events-none"
+          }  w-5 h-5 absolute translate-x-1/2 -translate-y-1/2 top-1/2 hover:scale-110 right-1/2 transition`}
       />
       <Image
         src={DARKMODE}
         width={320}
         height={320}
         alt="themeswitch"
-        className={` ${
-          Theme === "light"
-            ? "animate-ThemeSwitchSlideOut pointer-events-none"
-            : "animate-ThemeSwitchSlideIn "
-        }  w-5 h-5 absolute translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 `}
+        className={`origin-top ${Theme === "light"
+          ? "animate-ThemeSwitchSlideOut pointer-events-none"
+          : "animate-ThemeSwitchSlideIn "
+          }  w-5 h-5 absolute translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 hover:scale-110 transition`}
       />
     </button>
   );
