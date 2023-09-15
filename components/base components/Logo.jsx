@@ -7,9 +7,6 @@ import { useDisclosure } from "@chakra-ui/react";
 
 const LogoComponent = ({ handleMenuToggle }) => {
   const { Theme } = useContext(ThemeContext);
-  const handleImageClick = () => {
-    onClose();
-  };
 
   // Find the logo object based on the theme
   const logoObject = LOGO.find((logo) => logo.hasOwnProperty(Theme));
@@ -23,14 +20,14 @@ const LogoComponent = ({ handleMenuToggle }) => {
   const logoDetails = logoObject[Theme];
 
   return (
-    <Link key={logoDetails.text} href={logoDetails.href}>
+    <Link onClick={handleMenuToggle} key={logoDetails.text} href={logoDetails.href} className="">
       <Image
-        onClick={handleMenuToggle}
+        
         src={logoDetails.imageSrc}
         width={logoDetails.imageWidth}
         height={logoDetails.imageHeight}
         alt="Villo utvikling logo"
-        className="z-50 h-full duration-200 lg:p-1 hover:scale-105"
+        className="z-20 h-full duration-200 lg:p-1 hover:scale-105"
       />
     </Link>
   );

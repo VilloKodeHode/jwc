@@ -17,9 +17,7 @@ export default function Header({
   setTheme,
   currentPath,
 }) {
-  // const { isOpen, onOpen, onClose } = useDisclosure();
   const [notTop, setNotTop] = useState(false);
-
   const [isOpen, setIsOpen] = useState(false);
 
 
@@ -62,20 +60,19 @@ export default function Header({
         } `}
       >
         <div
-          className={`grid transition-all z-40 ${
+          className={`grid transition-all z-40 
+ 
+          ${
             notTop
-              ? Theme === "light"
-                ? "bg-Villo-light-white20"
-                : "bg-Villo-dark-black50"
-              : ""
-          }  ${
-            notTop
-              ? "fixed opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-2 grid-flow-row p-4 pl-6 pb-6 animate-ToolsSlideIn"
+              ? "grid-flow-col gap-12 transition-all hidden"
+              // "fixed opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-2 grid-flow-row p-4 pl-6 pb-6 animate-ToolsSlideIn"
               : "grid-flow-col gap-12 transition-all animate-SlideInFromTop"
           }`}
         >
           <LanguageSwitch setLanguage={setLanguage} />
-          <div className={` ${notTop ? "translate-x-9" : "animate-SlideInFromTop"}`}>
+          
+          <div className={` ${notTop ? "hidden" : 
+          "animate-SlideInFromTop"}`}>
             <ThemeSwitch setTheme={setTheme} />
           </div>
         </div>
@@ -96,7 +93,8 @@ export default function Header({
         <div className="z-50 flex items-center justify-between">
           <div className="flex flex-row items-center justify-start lg:min-w-[500px] h-[112px] min-w-[200px] gap-8 rounded-br-full rounded-bl-">
             <div className="relative z-40">
-              <LogoComponent onClick={handleMenuToggle} currentPath={currentPath} />
+              <LogoComponent currentPath={currentPath} />
+          
               
 
               {/* <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" /> */}
@@ -115,22 +113,16 @@ export default function Header({
             </div>
           </div>
           <Navbar
-            // isOpen={isOpen}
-            // onOpen={onOpen}
-            // onClose={onClose}
             language={language}
             Theme={Theme}
             currentPath={currentPath}
           />
 
           <HamburgerBar
-          // handleClickOutside={handleClickOutside}
           menuRef={menuRef}
           handleMenuToggle={handleMenuToggle}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
-            // onOpen={onOpen}
-            // onClose={onClose}
             language={language}
             Theme={Theme}
             currentPath={currentPath}

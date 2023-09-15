@@ -1,36 +1,38 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 
-const THREESpace = ({Theme}) => {
+const THREESpace = ({ Theme }) => {
   const canvasRef = useRef();
+  const scene = useRef();
+  const camera = useRef();
+  const renderer = useRef();
+  const particles = useRef();
 
   useEffect(() => {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
+    scene.current = new THREE.Scene();
+    camera.current = new THREE.PerspectiveCamera(
       60,
       window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
 
-    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(Theme === "light" ? 0x571dff : 0x858ee0, 0);
+    renderer.current = new THREE.WebGLRenderer({ canvas: canvasRef.current });
+    renderer.current.setSize(window.innerWidth, window.innerHeight);
+    renderer.current.setClearColor(Theme === "light" ? 0x571dff : 0x858ee0, 0);
 
-    // const light = new THREE.PointLight(0xffffff, 1, 100);
-    // light.position.set(50, 0, 10);
-    // scene.add(light);
-
-    // Add particles
     const particleCount = 1000;
     const geometry = new THREE.CircleGeometry(0.1, 200);
-    const colors = [
-      0xf78f6a, 0xff5722, 0xe91e63, 0x9c27b0, 0x673ab7, 0x3f51b5, 0x2196f3,
-      0x03a9f4, 0x00bcd4, 0x009688, 0x4caf50, 0x8bc34a, 0xcddc39, 0xffeb3b,
-      0xffc107, 0xff9800, 0xff5722, 0x61dedb, 0xde78c6, 0xe91e63,
-    ];
+    const colors = Theme === "light"
+    ? [0x571dff, 0x858ee0, 0x141315, 0x2e2f34, 0x383844, 0x48485b, 0xfefdff,
+      0xf6f3ff, 0xefe9ff, 0xe6ddff,]
+    :  [0x858ee0, 0x571dff, 0x161618, 0x2e2f34, 0x383844, 0x48485b, 0xfbfbfe, 0xf3f4fc, 0xe9ebf9,
+      0xe0e2f7,];
+      // 0x571dff, 0x858ee0, 0x161618, 0x2e2f34, 0x383844, 0xfbfbfe, 0xf3f4fc,
+      // 0xe9ebf9, 0xe0e2f7,
 
-    const particles = new THREE.Group();
+    
+    particles.current = new THREE.Group();
 
     for (let i = 0; i < particleCount; i++) {
       const material = new THREE.MeshBasicMaterial({
@@ -44,24 +46,40 @@ const THREESpace = ({Theme}) => {
       );
       particle.scale.set(0.1, 0.1, 0.1);
 
-      particles.add(particle);
+      particles.current.add(particle);
     }
 
-    scene.add(particles);
+    scene.current.add(particles.current);
 
-    camera.position.z = 10;
+    camera.current.position.z = 10;
+
+    function handleResize() {
+      const newWidth = window.innerWidth;
+      const newHeight = window.innerHeight;
+
+      camera.current.aspect = newWidth / newHeight;
+      camera.current.updateProjectionMatrix();
+
+      renderer.current.setSize(newWidth, newHeight);
+    }
+
+    window.addEventListener("resize", handleResize);
 
     function animate() {
       requestAnimationFrame(animate);
 
       // Update particles
-      particles.rotation.x += 0.000008;
-      particles.rotation.y += 0.000008;
+      particles.current.rotation.x += 0.0000008;
+      particles.current.rotation.y += 0.0000008;
 
-      renderer.render(scene, camera);
+      renderer.current.render(scene.current, camera.current);
     }
 
     animate();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, [Theme]);
 
   return <canvas ref={canvasRef} className="absolute top-0" />;

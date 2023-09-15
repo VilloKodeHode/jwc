@@ -140,9 +140,17 @@ module.exports = {
           "0%": { opacity: "0%" },
           "100%": { opacity: "100%" },
         },
+        themeInAnimation: {
+          "0%": { translate: "-100%", scale: "0" ,  opacity: "0%", display: "hidden"  },
+          "100%": { translate: "-0%", scale: "1" ,  opacity: "100%", display: "block"  },
+        },
+        themeOutAnimation: {
+          "0%": { translate: "-0%", scale: "1" ,  opacity: "100%", display: "hidden"},
+          "100%": { translate: "-100%", scale: "0" ,  opacity: "0%", display: "block"},
+        },
         slideInRight: {
-          "0%": { translate: "-100%", opacity: "0%", display: "hidden" },
-          "100%": { translate: "-0%", opacity: "100%", display: "block" },
+          "0%": { translate: "-100%",  opacity: "0%", display: "hidden" },
+          "100%": { translate: "-0%",  opacity: "100%", display: "block" },
         },
         slideInLeft: {
           "0%": { translate: "100%", opacity: "0%", display: "hidden" },
@@ -152,6 +160,7 @@ module.exports = {
           "0%": { translate: "-0%", opacity: "100%", display: "hidden" },
           "100%": { translate: "-100%", opacity: "0%" },
         },
+
         slideOutLeft: {
           "0%": { translate: "0%", opacity: "100%", display: "hidden" },
           "100%": { translate: "50%", opacity: "0%", display: "block" },
@@ -168,8 +177,19 @@ module.exports = {
           "0%": { opacity: "0" },
           "100%": { opacity: "100%" },
         },
+        rotateLeft: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" },
+        },
+        rotateRight: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+ 
       },
       animation: {
+        rotateLeft: "rotateLeft ease-in 1s alternate",
+        rotateRight: "rotateRight ease-in 1s alternate",
         waveSlideLeft: "waveSlideLeft ease-in 16s alternate infinite",
         waveSlideRight: "waveSlideRight ease-in 15s 1s alternate infinite",
         ButtonHover: "buttonHover ease-in 1.5s infinite",
@@ -179,8 +199,8 @@ module.exports = {
         SlideInFromLeft: "slideLeft 0.5s ease-in-out",
         ToolsSlideIn: "toolsSlideIn 0.5s ease-in-out",
         SlideInFromRight: "slideInRight 0.5s 1s ease-in-out backwards",
-        ThemeSwitchSlideIn: "slideInRight 0.5s ease-in-out backwards",
-        ThemeSwitchSlideOut: "slideOutRight 0.5s ease-in-out forwards",
+        ThemeSwitchSlideIn: "themeInAnimation 0.5s ease-in-out backwards",
+        ThemeSwitchSlideOut: "themeOutAnimation 0.5s ease-in-out forwards",
         SlideInFromTop: "slideDown 0.5s ease-in-out",
         Appear: "appear 0.3s ease-in-out",
         Disappear: "appear 0.3s ease-in-out backwards",
