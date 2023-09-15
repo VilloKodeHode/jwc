@@ -2,7 +2,7 @@ import NavItem from "./NavItem";
 import MENU_LIST from "../../data/menu_list";
 
 export default function Navbar({
-  onClose,
+  // onClose,
   className,
   Theme,
   language,
@@ -16,7 +16,7 @@ export default function Navbar({
         {menu_items.map((menu) => (
           <NavItem
             onClick={() => {
-              onClose();
+              // onClose();
             }}
             textSize="text-p"
             key={menu.text}

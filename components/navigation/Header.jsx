@@ -1,5 +1,5 @@
 //Header component
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ChakraDrawer from "./ChakraDrawer";
 import { useDisclosure } from "@chakra-ui/react";
 import Navbar from "./Navbar";
@@ -8,6 +8,7 @@ import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
 import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
 import LogoComponent from "../base components/Logo";
 import { SiGithub } from "react-icons/si";
+import HamburgerBar from "./HamburgerBar";
 
 export default function Header({
   language,
@@ -16,8 +17,32 @@ export default function Header({
   setTheme,
   currentPath,
 }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
   const [notTop, setNotTop] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+
+  const handleMenuToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const menuRef = useRef(null);
+
 
   useEffect(() => {
     function handleScroll() {
@@ -64,14 +89,15 @@ export default function Header({
       </div>
 
       <header
-        className={`relative bg-opacity-20 ${
+        className={`relative z-50 bg-opacity-20 ${
           Theme === "light" ? "bg-Villo-light-white15" : "bg-black"
         } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between">
-          <div className="flex flex-row items-center justify-start lg:min-w-[500px] h-full min-w-[200px] gap-8 rounded-br-full rounded-bl-">
+          <div className="flex flex-row items-center justify-start lg:min-w-[500px] h-[112px] min-w-[200px] gap-8 rounded-br-full rounded-bl-">
             <div className="relative z-40">
-              <LogoComponent onClose={onClose} currentPath={currentPath} />
+              <LogoComponent onClick={handleMenuToggle} currentPath={currentPath} />
+              
 
               {/* <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" /> */}
             </div>
@@ -89,18 +115,22 @@ export default function Header({
             </div>
           </div>
           <Navbar
-            isOpen={isOpen}
-            onOpen={onOpen}
-            onClose={onClose}
+            // isOpen={isOpen}
+            // onOpen={onOpen}
+            // onClose={onClose}
             language={language}
             Theme={Theme}
             currentPath={currentPath}
           />
 
-          <ChakraDrawer
+          <HamburgerBar
+          // handleClickOutside={handleClickOutside}
+          menuRef={menuRef}
+          handleMenuToggle={handleMenuToggle}
             isOpen={isOpen}
-            onOpen={onOpen}
-            onClose={onClose}
+            setIsOpen={setIsOpen}
+            // onOpen={onOpen}
+            // onClose={onClose}
             language={language}
             Theme={Theme}
             currentPath={currentPath}

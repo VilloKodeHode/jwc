@@ -5,7 +5,7 @@ import Image from "next/image";
 import { LOGO } from "../../data/menu_list";
 import { useDisclosure } from "@chakra-ui/react";
 
-const LogoComponent = ({ onClose }) => {
+const LogoComponent = ({ handleMenuToggle }) => {
   const { Theme } = useContext(ThemeContext);
   const handleImageClick = () => {
     onClose();
@@ -25,7 +25,7 @@ const LogoComponent = ({ onClose }) => {
   return (
     <Link key={logoDetails.text} href={logoDetails.href}>
       <Image
-        onClick={handleImageClick}
+        onClick={handleMenuToggle}
         src={logoDetails.imageSrc}
         width={logoDetails.imageWidth}
         height={logoDetails.imageHeight}
