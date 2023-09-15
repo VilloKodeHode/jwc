@@ -30,10 +30,10 @@ export default function Header({
   return (
     <>
       <div
-        className={`relative z-40 h-10 flex items-center justify-between px-12 py-2 ${
+        className={`relative backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-2 ${
           Theme === "light"
             ? "bg-Villo-light-white10 text-Villo-light-black"
-            : "bg-Villo-dark-black text-Villo-dark-white10"
+            : "bg-black bg-opacity-40 text-Villo-dark-white10"
         } `}
       >
         <div
@@ -50,11 +50,11 @@ export default function Header({
           }`}
         >
           <LanguageSwitch setLanguage={setLanguage} />
-          <div className={`${notTop ? "translate-x-9" : ""}`}>
+          <div className={` ${notTop ? "translate-x-9" : "animate-SlideInFromTop"}`}>
             <ThemeSwitch setTheme={setTheme} />
           </div>
         </div>
-        <div className="flex justify-end">
+        <div className={`flex transition-all justify-end ${notTop ? "hidden" : "animate-SlideInFromTop"}`}>
           <a href="https://github.com/VilloKodeHode" target="_blank">
             <SiGithub
               className={`relative z-10 w-8 h-8 mx-auto duration-200 hover:scale-105`}
@@ -65,7 +65,7 @@ export default function Header({
 
       <header
         className={`relative bg-opacity-20 ${
-          Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black "
+          Theme === "light" ? "bg-Villo-light-white15" : "bg-black"
         } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between">
