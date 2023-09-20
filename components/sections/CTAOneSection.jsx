@@ -167,7 +167,7 @@ const imageHeight =
                         ? "Web utvikling"
                         : currentWeb === "/HeroCollage.webp"
                         ? "Web innhold"
-                        : null
+                        : "Image showing the services of Villo utvikling"
                     }
                     width={imageWidth}
                     height={imageHeight}

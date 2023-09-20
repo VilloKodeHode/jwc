@@ -19,7 +19,7 @@ export const SkillsSection = ({ language, Theme }) => {
         </div>
 
         <div className={`relative flex justify-center mt-10 ${Theme === "light" ? " bg-Villo-light-" : "bg-Villo-dark-" } `}>
-          <div className={`flex flex-wrap  ${Theme === "light" ? " [&>*]:text-Villo-light-black hover:[&>*]:text-Villo-light-primary" : "[&>*]:text-Villo-dark-white20 hover:[&>*]:text-Villo-dark-primary" } md:gap-20 gap-12`}>
+          <div className={`flex flex-wrap transition-colors duration-1000   ${Theme === "light" ? " [&>*]:text-Villo-light-black hover:[&>*]:text-Villo-light-primary" : "[&>*]:text-Villo-dark-white20 hover:[&>*]:text-Villo-dark-primary" } md:gap-20 gap-12`}>
             <SiHtml5 className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
             <SiCss3 className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />
             <SiJavascript className="relative z-10 w-[60px] h-[60px] mx-auto duration-500" />

@@ -166,8 +166,12 @@ module.exports = {
           "100%": { translate: "50%", opacity: "0%", display: "block" },
         },
         toolsSlideIn: {
-          "0%": { translate: "100%", display: "hidden" },
-          "100%": { translate: "0%", display: "block" },
+          "0%": { translate: "0% -280%", display: "hidden" },
+          "100%": { translate: "0% 0%", display: "block" },
+        },
+        toolsSlideOut: {
+          "0%": { translate: "0% 0%", display: "block" },
+          "100%": { translate: "-200% 0%", display: "hidden" },
         },
         scroll: {
           "0%": { transform: "translateX(0)" },
@@ -197,7 +201,8 @@ module.exports = {
         RPSPopUp: "popUp 0.1s ease-in",
         glow: "glow 3s ease-in-out infinite alternate",
         SlideInFromLeft: "slideLeft 0.5s ease-in-out",
-        ToolsSlideIn: "toolsSlideIn 0.5s ease-in-out",
+        ToolsSlideIn: "toolsSlideIn 0.5s ease-in-out forwards",
+        ToolsSlideOut: "toolsSlideOut 0.5s ease-in-out forwards",
         SlideInFromRight: "slideInRight 0.5s 1s ease-in-out backwards",
         ThemeSwitchSlideIn: "themeInAnimation 0.5s ease-in-out backwards",
         ThemeSwitchSlideOut: "themeOutAnimation 0.5s ease-in-out forwards",

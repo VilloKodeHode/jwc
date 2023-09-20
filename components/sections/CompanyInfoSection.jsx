@@ -16,10 +16,10 @@ export const CompanyInfo = ({ language, Theme }) => {
   // const { language } = useContext(LanguageContext);
   // const { Theme } = useContext(ThemeContext);
   return (
-    <div className="grid  justify-center items-center min-h-[calc(100vh-144px)]">
+    <div className="grid justify-center items-center min-h-[calc(100vh-144px)]">
       <div className="animate-PageAppearRight">
       <div
-        className={`sm:rounded-lg grid min-h-[70vh] lg:grid-cols-2  ${
+        className={`sm:rounded-lg grid min-h-[70vh] lg:grid-cols-2 transition-colors duration-1000  ${
           Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
         }`}
       >

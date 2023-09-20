@@ -53,12 +53,11 @@ export default function Header({
   return (
     <>
       <div
-        className={`relative backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-2 ${
+        className={`relative transition-colors duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-2 ${
           Theme === "light"
             ? "bg-Villo-light-white10 text-Villo-light-black"
             : "bg-black bg-opacity-40 text-Villo-dark-white10"
-        } `}
-      >
+        } `}>
         <div
           className={`grid transition-all z-40 
  
@@ -84,6 +83,39 @@ export default function Header({
           </a>
         </div>
       </div>
+
+
+{/* Floating util bar: */}
+{/* TODO: Add a button to show/hide the floating util bar (add an icon for the button) */}
+      <div
+        className={`fixed transition-colors p-3 top-[10%] duration-1000 backdrop-blur-[10px] z-[999] flex items-center rounded-r-full pr-5 justify-between ${
+          notTop
+            ? "animate-ToolsSlideIn"
+            : "animate-ToolsSlideOut"
+        } ${
+          Theme === "light"
+            ? "bg-Villo-light-white10 text-Villo-light-black"
+            : "bg-black bg-opacity-40 text-Villo-dark-white10"
+        } `}>
+        <div
+          className={`flex opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-4`}
+        >
+          <LanguageSwitch setLanguage={setLanguage} />
+          
+    
+            <ThemeSwitch setTheme={setTheme} />
+        
+        
+          {/* <a href="https://github.com/VilloKodeHode" target="_blank">
+            <SiGithub
+              className={`z-10 w-6 h-6 mx-auto duration-200 hover:scale-105`}
+            />
+          </a> */}
+      
+        </div>
+        
+      </div>
+
 
       <header
         className={`relative z-50 bg-opacity-20 ${

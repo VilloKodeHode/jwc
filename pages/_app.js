@@ -32,10 +32,8 @@ function AppContent({ Component, pageProps }) {
   }, [currentPath]);
 
   return (
-    <div className={
-      Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black bg-opacity"
-    }>
-      {/* <ChakraProvider> */}
+    <div className={`transition-colors duration-1000 ${Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black bg-opacity"}`}>
+      
         <Header
           language={language}
           setLanguage={setLanguage}
@@ -44,9 +42,7 @@ function AppContent({ Component, pageProps }) {
           currentPath={currentPath}
         />
         <div
-          className={
-            Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black bg-opacity"
-          }
+          className={`transition-colors duration-1000 ${Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black bg-opacity"}`}
         >
           <Component
             {...pageProps}
@@ -58,7 +54,7 @@ function AppContent({ Component, pageProps }) {
         </div>
         <Footer language={language} Theme={Theme} currentPath={currentPath} />
         <ScrollToTopButton Theme={Theme} />
-      {/* </ChakraProvider> */}
+
     </div>
   );
 }
