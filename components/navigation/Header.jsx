@@ -16,10 +16,10 @@ export default function Header({
   Theme,
   setTheme,
   currentPath,
+  cookiesAccepted,
 }) {
   const [notTop, setNotTop] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-
 
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
@@ -41,7 +41,6 @@ export default function Header({
 
   const menuRef = useRef(null);
 
-
   useEffect(() => {
     function handleScroll() {
       setNotTop(window.scrollY > 0);
@@ -57,25 +56,35 @@ export default function Header({
           Theme === "light"
             ? "bg-Villo-light-white10 text-Villo-light-black"
             : "bg-black bg-opacity-40 text-Villo-dark-white10"
-        } `}>
+        } `}
+      >
         <div
           className={`grid transition-all z-40 
  
           ${
             notTop
               ? "grid-flow-col gap-12 transition-all hidden"
-              // "fixed opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-2 grid-flow-row p-4 pl-6 pb-6 animate-ToolsSlideIn"
-              : "grid-flow-col gap-12 transition-all animate-SlideInFromTop"
+              : // "fixed opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-2 grid-flow-row p-4 pl-6 pb-6 animate-ToolsSlideIn"
+                "grid-flow-col gap-12 transition-all animate-SlideInFromTop"
           }`}
         >
-          <LanguageSwitch setLanguage={setLanguage} />
-          
-          <div className={` ${notTop ? "hidden" : 
-          "animate-SlideInFromTop"}`}>
-            <ThemeSwitch setTheme={setTheme} />
+          <LanguageSwitch
+            setLanguage={setLanguage}
+            cookiesAccepted={cookiesAccepted}
+          />
+
+          <div className={` ${notTop ? "hidden" : "animate-SlideInFromTop"}`}>
+            <ThemeSwitch
+              setTheme={setTheme}
+              cookiesAccepted={cookiesAccepted}
+            />
           </div>
         </div>
-        <div className={`flex transition-all justify-end ${notTop ? "hidden" : "animate-SlideInFromTop"}`}>
+        <div
+          className={`flex transition-all justify-end ${
+            notTop ? "hidden" : "animate-SlideInFromTop"
+          }`}
+        >
           <a href="https://github.com/VilloKodeHode" target="_blank">
             <SiGithub
               className={`relative z-10 w-8 h-8 mx-auto duration-200 hover:scale-105`}
@@ -84,38 +93,29 @@ export default function Header({
         </div>
       </div>
 
-
-{/* Floating util bar: */}
-{/* TODO: Add a button to show/hide the floating util bar (add an icon for the button) */}
+      {/* Floating util bar: */}
+      {/* TODO: Add a button to show/hide the floating util bar (add an icon for the button) */}
       <div
-        className={`fixed transition-colors p-3 top-[10%] duration-1000 backdrop-blur-[10px] z-[999] flex items-center rounded-r-full pr-5 justify-between ${
-          notTop
-            ? "animate-ToolsSlideIn"
-            : "animate-ToolsSlideOut"
+        className={`fixed transition-colors p-3 top-[10%] duration-1000 backdrop-blur-[10px] z-[999] flex items-center 2xl:rounded-r-full rounded-r-[30px] pr-5 justify-between ${
+          notTop ? "animate-ToolsSlideIn" : "animate-ToolsSlideOut"
         } ${
           Theme === "light"
             ? "bg-Villo-light-white10 text-Villo-light-black"
             : "bg-black bg-opacity-40 text-Villo-dark-white10"
-        } `}>
+        } `}
+      >
         <div
-          className={`flex opacity-50 hover:opacity-100 right-0 transition-all rounded-bl-full top-0 gap-4`}
+          className={`flex 2xl:flex-row flex-col opacity-50 hover:opacity-100 right-0 transition-all top-0 gap-4`}
         >
-          <LanguageSwitch setLanguage={setLanguage} />
-          
-    
-            <ThemeSwitch setTheme={setTheme} />
-        
-        
-          {/* <a href="https://github.com/VilloKodeHode" target="_blank">
-            <SiGithub
-              className={`z-10 w-6 h-6 mx-auto duration-200 hover:scale-105`}
-            />
-          </a> */}
-      
-        </div>
-        
-      </div>
+          <LanguageSwitch
+            className={`2xl:flex-row flex-col`}
+            setLanguage={setLanguage}
+            cookiesAccepted={cookiesAccepted}
+          />
 
+          <ThemeSwitch setTheme={setTheme} cookiesAccepted={cookiesAccepted} />
+        </div>
+      </div>
 
       <header
         className={`relative z-50 bg-opacity-20 ${
@@ -126,8 +126,6 @@ export default function Header({
           <div className="flex flex-row items-center justify-start lg:min-w-[500px] h-[112px] min-w-[200px] gap-8 rounded-br-full rounded-bl-">
             <div className="relative z-40">
               <LogoComponent currentPath={currentPath} />
-          
-              
 
               {/* <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" /> */}
             </div>
@@ -144,15 +142,11 @@ export default function Header({
               </ResponsiveThemedMini> */}
             </div>
           </div>
-          <Navbar
-            language={language}
-            Theme={Theme}
-            currentPath={currentPath}
-          />
+          <Navbar language={language} Theme={Theme} currentPath={currentPath} />
 
           <HamburgerBar
-          menuRef={menuRef}
-          handleMenuToggle={handleMenuToggle}
+            menuRef={menuRef}
+            handleMenuToggle={handleMenuToggle}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
             language={language}

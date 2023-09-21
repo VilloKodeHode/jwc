@@ -20,6 +20,7 @@
     "animejs": "^3.2.1",
     "aws-sdk": "^2.1356.0",
     "cannon": "^0.6.2",
+    "cookies-next": "^4.0.0",
     "dotenv": "^16.0.3",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.4",
