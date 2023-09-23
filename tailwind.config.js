@@ -141,16 +141,36 @@ module.exports = {
           "100%": { opacity: "100%" },
         },
         themeInAnimation: {
-          "0%": { translate: "-100%", scale: "0" ,  opacity: "0%", display: "hidden"  },
-          "100%": { translate: "-0%", scale: "1" ,  opacity: "100%", display: "block"  },
+          "0%": {
+            translate: "-100%",
+            scale: "0",
+            opacity: "0%",
+            display: "hidden",
+          },
+          "100%": {
+            translate: "-0%",
+            scale: "1",
+            opacity: "100%",
+            display: "block",
+          },
         },
         themeOutAnimation: {
-          "0%": { translate: "-0%", scale: "1" ,  opacity: "100%", display: "hidden"},
-          "100%": { translate: "-100%", scale: "0" ,  opacity: "0%", display: "block"},
+          "0%": {
+            translate: "-0%",
+            scale: "1",
+            opacity: "100%",
+            display: "hidden",
+          },
+          "100%": {
+            translate: "-100%",
+            scale: "0",
+            opacity: "0%",
+            display: "block",
+          },
         },
         slideInRight: {
-          "0%": { translate: "-100%",  opacity: "0%", display: "hidden" },
-          "100%": { translate: "-0%",  opacity: "100%", display: "block" },
+          "0%": { translate: "-100%", opacity: "0%", display: "hidden" },
+          "100%": { translate: "-0%", opacity: "100%", display: "block" },
         },
         slideInLeft: {
           "0%": { translate: "100%", opacity: "0%", display: "hidden" },
@@ -173,6 +193,14 @@ module.exports = {
           "0%": { translate: "0% 0%", display: "block" },
           "100%": { translate: "-200% 0%", display: "hidden" },
         },
+        cookiesSlideOut: {
+          "0%": { translate: "0% 0%" },
+          "100%": { translate: "-100% 0%" },
+        },
+        cookiesSlideIn: {
+          "0%": { translate: "-100% 0%" },
+          "100%": { translate: "0% 0%" },
+        },
         scroll: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
@@ -189,7 +217,6 @@ module.exports = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
- 
       },
       animation: {
         rotateLeft: "rotateLeft ease-in 1s alternate",
@@ -203,6 +230,8 @@ module.exports = {
         SlideInFromLeft: "slideLeft 0.5s ease-in-out",
         ToolsSlideIn: "toolsSlideIn 0.5s ease-in-out forwards",
         ToolsSlideOut: "toolsSlideOut 0.5s ease-in-out forwards",
+        CookiesSlideOut: "cookiesSlideOut 0.5s ease-in-out forwards",
+        CookiesSlideIn: "cookiesSlideIn 0.5s ease-in-out forwards",
         SlideInFromRight: "slideInRight 0.5s 1s ease-in-out backwards",
         ThemeSwitchSlideIn: "themeInAnimation 0.5s ease-in-out backwards",
         ThemeSwitchSlideOut: "themeOutAnimation 0.5s ease-in-out forwards",
@@ -218,5 +247,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"),],
+  plugins: [require("@tailwindcss/typography")],
 };

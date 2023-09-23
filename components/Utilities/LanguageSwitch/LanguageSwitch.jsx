@@ -9,22 +9,29 @@ const LanguageSwitch = ({ cookiesAccepted, className }) => {
   const { language, setLanguage } = useContext(LanguageContext);
 
   useEffect(() => {
-    if (cookiesAccepted) {
-      // Check if the language cookie is set
-      const storedLanguage = getCookie("language");
-      if (storedLanguage) {
-        setLanguage(storedLanguage);
-      }
+    // Check if cookies are accepted and the language cookie is set
+    const storedLanguage = cookiesAccepted ? getCookie("language") : null;
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
     }
+    console.log("Is theme cookie set?", !!storedLanguage);
   }, [setLanguage, cookiesAccepted]);
 
-  const changeLanguage = (newLanguage) => {
-    setLanguage(newLanguage);
-    // Set the language cookie based on the selected language
-    if (cookiesAccepted) {
-      setCookie("language", newLanguage, {
-        maxAge: 30 * 24 * 60 * 60, // Cookie expiration in seconds (30 days in this example)
-      });
+  const changeLanguage = () => {
+    if (language === "Norwegian") {
+      setLanguage("English");
+      if (cookiesAccepted) {
+        setCookie("language", "English", {
+          maxAge: 365 * 24 * 60 * 60, // Cookie expiration in seconds (1 year in this example)
+        });
+      }
+    } else {
+      setLanguage("Norwegian");
+      if (cookiesAccepted) {
+        setCookie("language", "Norwegian", {
+          maxAge: 365 * 24 * 60 * 60, // Cookie expiration in seconds (1 year in this example)
+        });
+      }
     }
   };
 

@@ -4,54 +4,23 @@ import ThemeContext from "./ThemeSwitch/ThemeContext";
 import { setCookie, getCookie } from "cookies-next"; // Import setCookie and getCookie
 
 export const ContextProviders = ({ children, cookiesAccepted }) => {
-  const [language, setLanguage] = useState("");
+  const [language, setLanguage] = useState("Norwegian");
   const [Theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    // Check if the theme and language cookies are set, but only if cookiesAccepted is true
+    // Check if cookies are accepted
     if (cookiesAccepted) {
-      const storedTheme = getCookie("theme");
-      const storedLanguage = getCookie("language");
+      // Set the theme cookie to the current theme
+      setCookie("theme", Theme, {
+        maxAge: 30 * 24 * 60 * 60,
+      });
 
-      if (storedTheme) {
-        setTheme(storedTheme);
-      } else {
-        // If the theme cookie is not set, detect the user's preferred theme using window.matchMedia
-        if (typeof window !== "undefined") {
-          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            setTheme("dark");
-            // Set the theme cookie based on the detected theme
-            setCookie("theme", "dark", {
-              maxAge: 30 * 24 * 60 * 60,
-            });
-          } else {
-            setTheme("light");
-            // Set the theme cookie based on the detected theme
-            setCookie("theme", "light", {
-              maxAge: 30 * 24 * 60 * 60,
-            });
-          }
-        }
-      }
-
-      if (storedLanguage) {
-        setLanguage(storedLanguage);
-      } else {
-        // If the language cookie is not set, detect the user's preferred language using navigator.language
-        if (typeof navigator !== "undefined") {
-          const userLanguage =
-            navigator.language === "nb-NO" ? "Norwegian" : "English";
-          setLanguage(userLanguage);
-          // Set the language cookie based on the detected language
-          setCookie("language", userLanguage, {
-            maxAge: 30 * 24 * 60 * 60,
-          });
-        } else {
-          setLanguage("English"); // fallback language if navigator is not defined
-        }
-      }
+      // Set the language cookie to the current language
+      setCookie("language", language, {
+        maxAge: 365 * 24 * 60 * 60,
+      });
     }
-  }, [cookiesAccepted]);
+  }, [cookiesAccepted, Theme, language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>

@@ -17,18 +17,6 @@ export default function App({ Component, pageProps }) {
   const { setTheme } = useContext(ThemeContext);
 
   useEffect(() => {
-    // Check if the theme and language cookies are set
-    const storedTheme = getCookie("theme");
-    const storedLanguage = getCookie("language");
-
-    if (storedTheme) {
-      setTheme(storedTheme);
-    }
-
-    if (storedLanguage) {
-      setLanguage(storedLanguage);
-    }
-
     // Check if the user has accepted cookies by checking a cookie
     const acceptedCookies = getCookie("acceptedCookies");
     if (acceptedCookies) {
@@ -75,6 +63,12 @@ function AppContent({
     console.log("Current path changed:", currentPath);
   }, [currentPath]);
 
+  useEffect(() => {
+    console.log("theme:", Theme, "language:", language);
+  }, [Theme, language]);
+
+  // console.log(navigator.language === "nb-NO");
+
   return (
     <div
       className={`relative transition-colors duration-1000 ${
@@ -98,13 +92,13 @@ function AppContent({
             : "bg-Villo-dark-black bg-opacity"
         }`}
       >
-        {!cookiesAccepted && (
-          <CookiePopup
-            handleCookieAccept={handleCookieAccept}
-            language={language}
-            Theme={Theme}
-          />
-        )}
+        <CookiePopup
+          handleCookieAccept={handleCookieAccept}
+          language={language}
+          Theme={Theme}
+          cookiesAccepted={cookiesAccepted}
+        />
+
         <Component
           {...pageProps}
           language={language}
