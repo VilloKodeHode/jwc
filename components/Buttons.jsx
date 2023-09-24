@@ -22,11 +22,10 @@ export default function CallToActionButton({
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${
-        Theme === "light"
-          ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white  hover:bg-Villo-dark-primary"
-          : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
-      } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+      className={`px-6 outline outline-2 group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white  hover:bg-Villo-dark-primary"
+        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>
     </button>
@@ -37,11 +36,10 @@ export function ArrowCTA({ children, Theme, onClick, className }) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${
-        Theme === "light"
-          ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-light-secondary"
-          : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
-      } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-bottom-right`}
+      className={`px-6 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-light-secondary"
+        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-bottom-right`}
     >
       <>
         {children}
@@ -55,11 +53,10 @@ export function ExternalCTA({ children, Theme, onClick, className }) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-100 ease-in-out ${className} ${
-        Theme === "light"
-          ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-dark-primary"
-          : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
-      } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+      className={`px-6 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-100 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-dark-primary"
+        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>
         {children}
@@ -73,11 +70,10 @@ export function SendCTA({ children, Theme, onClick, className }) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-100 ease-in-out ${className} ${
-        Theme === "light"
-          ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-dark-primary"
-          : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
-      } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+      className={`px-6 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-100 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-dark-primary"
+        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>
         {children}
@@ -91,11 +87,10 @@ export function CookieAccept({ children, Theme, onClick, className }) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 group hover:outline-none py-2 font-bold uppercase transition duration-200 ease-in-out ${className} ${
-        Theme === "light"
-          ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white  hover:bg-Villo-dark-primary"
-          : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
-      } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+      className={`px-6 outline outline-2 group hover:outline-none py-2 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white  hover:bg-Villo-dark-primary"
+        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>
     </button>
@@ -106,11 +101,10 @@ export function ToolsToggleButton({ children, Theme, onClick, className }) {
   return (
     <button
       onClick={onClick}
-      className={`outline outline-2 flex justify-center items-center group hover:outline-none py-2 px-4 pl-8 my-4 font-bold uppercase transition-all duration-200 ease-in-out ${className} ${
-        Theme === "light"
-          ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-light-secondary"
-          : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
-      } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-bottom-right`}
+      className={`outline outline-2 flex justify-center items-center group hover:outline-none py-2 px-4 pl-8 my-4 font-bold uppercase transition-all duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-light-secondary"
+        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-bottom-right`}
     >
       <>
         {children}
@@ -175,13 +169,11 @@ export function ScrollToTopButton({ Theme }) {
   return (
     <button
       onClick={scrollToTop}
-      className={`${
-        Theme === "light"
-          ? "text-Villo-light-white20 hover:text-Villo-light-secondary"
-          : "text-Villo-dark-black50 hover:text-Villo-dark-secondary"
-      } z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 rounded-full hover:scale-125  ${
-        isVisible ? "opacity-100 " : "opacity-0 cursor-default"
-      }`}
+      className={`${Theme === "light"
+        ? "text-Villo-light-white20 hover:text-Villo-light-secondary"
+        : "text-Villo-dark-black50 hover:text-Villo-dark-secondary"
+        } z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 rounded-full hover:scale-125  ${isVisible ? "opacity-100 " : "opacity-0 cursor-default"
+        }`}
     >
       <FiArrowUpCircle className="w-12 h-12" strokeWidth={1.5} />
     </button>
