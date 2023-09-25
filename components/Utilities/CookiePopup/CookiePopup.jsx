@@ -35,7 +35,7 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
   return (
     <div
       className={`${showPopup ? "animate-CookiesSlideIn" : "animate-CookiesSlideOut"
-        } fixed bottom-0 left-0 z-50 flex items-center justify-center group h-fit shadow-orange-500 w-fit`}
+        } fixed bottom-0 left-0 z-50 flex items-center justify-center group h-fit w-fit`}
     >
       <div
         className={`min-h-[131px] max-w-[300px] transition-all duration-300 bg-opacity-[0.95] px-6 py-4 outline m-2 rounded-xl  ${Theme === "light"
@@ -43,7 +43,7 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
           : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-black85  outline-Villo-dark-white10"
           }`}
       >
-        <div className="grid justify-center items-center relative gap-2 pt-3">
+        <div className="relative grid items-center justify-center gap-2 pt-3">
           <ThemedH5 className={`pb-2`}>
             {language === "Norwegian" ? "Cookies" : "Cookies"}
           </ThemedH5>
@@ -60,7 +60,7 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
               ? "Vi lagrer ikke informasjon som kan identifisere deg som person. Cookies blir lagret i 1 år"
               : "We do not store information that can identify you as a person. Cookies are stored for 1 year."}
           </ThemedSmall>
-          <div className="flex gap-2 justify-around">
+          <div className="flex justify-around gap-2">
             <CookieAccept onClick={handleAccept} Theme={Theme} className="">
               {language === "Norwegian" ? "Godta" : "Accept"}
             </CookieAccept>
@@ -75,10 +75,10 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
             width="50"
             height="50"
             alt="cookie"
-            className={`absolute transition-all duration-500 bottom-[230px] left-[280px]
+            className={` absolute transition-all duration-500 bottom-[230px] left-[280px]
           ${showPopup
                 ? ""
-                : "bottom-[4px] left-[320px] hover:scale-125 opacity-30 hover:opacity-100"
+                : "bottom-[4px] left-[320px] hover:scale-125 opacity-30 hover:animate-cookieShake hover:opacity-100"
               }
           `}
           ></Image>

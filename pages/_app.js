@@ -70,13 +70,7 @@ function AppContent({
   // console.log(navigator.language === "nb-NO");
 
   return (
-    <div
-      className={`relative transition-colors duration-1000 ${
-        Theme === "light"
-          ? "bg-Villo-light-white"
-          : "bg-Villo-dark-black bg-opacity"
-      }`}
-    >
+    <div className={`relative transition-colors duration-1000 `}>
       <Header
         language={language}
         setLanguage={setLanguage}
@@ -87,9 +81,7 @@ function AppContent({
       />
       <div
         className={` transition-colors duration-1000 ${
-          Theme === "light"
-            ? "bg-Villo-light-white"
-            : "bg-Villo-dark-black bg-opacity"
+          Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
         }`}
       >
         <CookiePopup
