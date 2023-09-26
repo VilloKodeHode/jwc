@@ -1,20 +1,5 @@
-import PageLayout, { ClientLayout, TextFlex } from "@/components/Layout";
-import ResponsiveH1, {
-  ResponsiveH2,
-  ResponsiveH3,
-  ResponsiveH4,
-  ResponsiveH5,
-  ResponsiveP,
-  ResponsiveThemedP,
-  ResponsiveUL,
-} from "@/components/Responsive text/ResponsiveText";
+import PageLayout from "@/components/Layout";
 import Head from "next/head";
-import { useContext } from "react";
-import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
-import {
-  ClientSection,
-  NewClientLayout,
-} from "@/components/sections/ClientSection";
 import { ProjectSection } from "@/components/sections/ProjectSection";
 
 export default function ProjectPage({ language, Theme }) {
@@ -41,7 +26,7 @@ export default function ProjectPage({ language, Theme }) {
       </Head>
       <PageLayout gap="gap-28">
         <ProjectSection language={language} Theme={Theme} />
-     
+
         {/* <NewClientLayout language={language} Theme={Theme} /> */}
 
         <div className="mb-[112px]" />

@@ -23,15 +23,17 @@ const THREESpace = ({ Theme }) => {
 
     const particleCount = 1000;
     const geometry = new THREE.CircleGeometry(0.1, 200);
-    const colors = Theme === "light"
-    ? [0x571dff, 0x858ee0, 0x141315, 0x2e2f34, 0x383844, 0x48485b, 0xfefdff,
-      0xf6f3ff, 0xefe9ff, 0xe6ddff,]
-    :  [0x858ee0, 0x571dff, 0x161618, 0x2e2f34, 0x383844, 0x48485b, 0xfbfbfe, 0xf3f4fc, 0xe9ebf9,
-      0xe0e2f7,];
-      // 0x571dff, 0x858ee0, 0x161618, 0x2e2f34, 0x383844, 0xfbfbfe, 0xf3f4fc,
-      // 0xe9ebf9, 0xe0e2f7,
+    const colors =
+      Theme === "light"
+        ? [
+            0x571dff, 0x858ee0, 0x141315, 0x2e2f34, 0x383844, 0x48485b, 0xfff,
+            0xf6f3ff, 0xefe9ff, 0xe6ddff,
+          ]
+        : [
+            0x858ee0, 0x571dff, 0x161618, 0x2e2f34, 0x383844, 0x48485b,
+            0xfbfbfe, 0x03f4fc, 0xe9ebf9, 0xe02f7,
+          ];
 
-    
     particles.current = new THREE.Group();
 
     for (let i = 0; i < particleCount; i++) {
@@ -80,7 +82,7 @@ const THREESpace = ({ Theme }) => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [Theme]);
+  }, [Theme, canvasRef, scene, camera, renderer, particles]);
 
   return <canvas ref={canvasRef} className="absolute top-0" />;
 };

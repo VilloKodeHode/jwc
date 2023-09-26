@@ -4,8 +4,11 @@ import Head from "next/head";
 
 import { NewClientLayout } from "@/components/sections/ClientSection";
 import { QuotesSection } from "@/components/sections/QuotesSections";
+import { CLIENT_LIST } from "@/data/client_list";
 
 export default function ProjectPage({ language, Theme }) {
+  const clientList =
+    CLIENT_LIST.find((list) => list.language === language).CLIENTS || [];
   // const { language } = useContext(LanguageContext);
   return (
     <>
@@ -33,7 +36,11 @@ export default function ProjectPage({ language, Theme }) {
             {language === "Norwegian" ? "Arbeid" : "Work"}
           </ResponsiveThemedH1>
         </div>
-        <NewClientLayout language={language} Theme={Theme} />
+        <NewClientLayout
+          clients={clientList}
+          language={language}
+          Theme={Theme}
+        />
         <QuotesSection language={language} Theme={Theme} />
         <div className="mb-[112px]" />
       </PageLayout>

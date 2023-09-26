@@ -1,7 +1,7 @@
 {
   "name": "Villo Utvikling",
   "short_name": "Villo Utvikling",
-  "start_url": "https://www.jvwebconsult.no/",
+  "start_url": "/",
   "background_color": "#202929",
   "theme_color": "#a2cbcc",
   "display": "standalone",
@@ -13,6 +13,5 @@
       "type": "image/svg",
       "purpose": "maskable any"
     }
-  ],
-  "splash_pages": null
+  ]
 }

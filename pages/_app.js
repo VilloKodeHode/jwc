@@ -1,4 +1,6 @@
 import { useContext, useEffect, useState } from "react";
+import Head from "next/head";
+import Script from "next/script";
 import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";
 import Footer from "@/components/navigation/Footer";
@@ -59,48 +61,54 @@ function AppContent({
 
   const currentPath = router.asPath;
 
-  useEffect(() => {
-    console.log("Current path changed:", currentPath);
-  }, [currentPath]);
+  // useEffect(() => {
+  //   console.log("Current path changed:", currentPath);
+  // }, [currentPath]);
 
-  useEffect(() => {
-    console.log("theme:", Theme, "language:", language);
-  }, [Theme, language]);
+  // useEffect(() => {
+  //   console.log("theme:", Theme, "language:", language);
+  // }, [Theme, language]);
 
   // console.log(navigator.language === "nb-NO");
 
   return (
-    <div className={`relative transition-colors duration-1000 `}>
-      <Header
-        language={language}
-        setLanguage={setLanguage}
-        Theme={Theme}
-        setTheme={setTheme}
-        currentPath={currentPath}
-        cookiesAccepted={cookiesAccepted}
-      />
-      <div
-        className={` transition-colors duration-1000 ${
-          Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
-        }`}
-      >
-        <CookiePopup
-          handleCookieAccept={handleCookieAccept}
+    <>
+      <div className={`relative transition-colors duration-1000 `}>
+        <Header
           language={language}
+          setLanguage={setLanguage}
           Theme={Theme}
+          setTheme={setTheme}
+          currentPath={currentPath}
           cookiesAccepted={cookiesAccepted}
         />
+        <div
+          className={` transition-colors duration-1000 ${
+            Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
+          }`}
+        >
+          <CookiePopup
+            handleCookieAccept={handleCookieAccept}
+            language={language}
+            Theme={Theme}
+            cookiesAccepted={cookiesAccepted}
+          />
 
-        <Component
-          {...pageProps}
-          language={language}
-          Theme={Theme}
-          currentPath={currentPath}
-        />
-        <Analytics />
+          <Component
+            {...pageProps}
+            language={language}
+            Theme={Theme}
+            currentPath={currentPath}
+          />
+          <Analytics defer />
+          <Script
+            src="https://cdn.addrow.com/ads/viewability251.js"
+            strategy="lazyOnload"
+          />
+        </div>
+        <Footer language={language} Theme={Theme} currentPath={currentPath} />
+        <ScrollToTopButton Theme={Theme} />
       </div>
-      <Footer language={language} Theme={Theme} currentPath={currentPath} />
-      <ScrollToTopButton Theme={Theme} />
-    </div>
+    </>
   );
 }

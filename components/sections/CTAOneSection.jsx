@@ -34,9 +34,9 @@ export const CTAOneSection = ({ language, Theme }) => {
   }, [currentWeb]);
 
   const imageWidth =
-  currentWeb === "/HeroLogo.png" ? 400 : 500; // Adjust the sizes as needed
-const imageHeight =
-  currentWeb === "/HeroLogo.png" ? 400 : 300; // Adjust the sizes as needed
+    currentWeb === "/HeroLogo.png" ? 400 : 500; // Adjust the sizes as needed
+  const imageHeight =
+    currentWeb === "/HeroLogo.png" ? 400 : 300; // Adjust the sizes as needed
 
   return (
     <>
@@ -48,24 +48,21 @@ const imageHeight =
                 <ResponsiveH2 className="mb-8 ">
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDesign.png")}
-                    className={`cursor-pointer group  ${
-                      Theme === "light"
+                    className={`cursor-pointer group  ${Theme === "light"
                         ? "text-Villo-light-primary"
                         : "text-Villo-dark-primary"
-                    }`}
+                      }`}
                   >
                     <span
-                      className={` ${
-                        Theme === "light"
+                      className={` ${Theme === "light"
                           ? "group-hover:text-Villo-light-primary"
                           : "group-hover:text-Villo-dark-primary"
-                      }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
-                        currentWeb === "/HeroDesign.png"
+                        }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${currentWeb === "/HeroDesign.png"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
-                          ? "text-Villo-light-white10"
-                          : "text-Villo-dark-black75"
-                      }`}
+                            ? "text-Villo-light-white10"
+                            : "text-Villo-dark-black75"
+                        }`}
                     >
                       Web
                     </span>
@@ -73,24 +70,21 @@ const imageHeight =
                   </span>{" "}
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDevelopment.png")}
-                    className={`cursor-pointer group  ${
-                      Theme === "light"
+                    className={`cursor-pointer group  ${Theme === "light"
                         ? "text-Villo-light-primary"
                         : "text-Villo-dark-primary"
-                    }`}
+                      }`}
                   >
                     <span
-                      className={` ${
-                        Theme === "light"
+                      className={` ${Theme === "light"
                           ? "group-hover:text-Villo-light-primary"
                           : "group-hover:text-Villo-dark-primary"
-                      }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
-                        currentWeb === "/HeroDevelopment.png"
+                        }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${currentWeb === "/HeroDevelopment.png"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
-                          ? "text-Villo-light-white10"
-                          : "text-Villo-dark-black75"
-                      }`}
+                            ? "text-Villo-light-white10"
+                            : "text-Villo-dark-black75"
+                        }`}
                     >
                       <br />
                       Web
@@ -99,24 +93,21 @@ const imageHeight =
                   </span>{" "}
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroCollage.webp")}
-                    className={`cursor-pointer group  ${
-                      Theme === "light"
+                    className={`cursor-pointer group  ${Theme === "light"
                         ? "text-Villo-light-primary"
                         : "text-Villo-dark-primary"
-                    }`}
+                      }`}
                   >
                     <span
-                      className={` ${
-                        Theme === "light"
+                      className={` ${Theme === "light"
                           ? "group-hover:text-Villo-light-primary"
                           : "group-hover:text-Villo-dark-primary"
-                      }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
-                        currentWeb === "/HeroCollage.webp"
+                        }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${currentWeb === "/HeroCollage.webp"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
-                          ? "text-Villo-light-white10"
-                          : "text-Villo-dark-black75"
-                      }`}
+                            ? "text-Villo-light-white10"
+                            : "text-Villo-dark-black75"
+                        }`}
                     >
                       <br />
                       Web
@@ -130,29 +121,28 @@ const imageHeight =
                       ? "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter."
                       : "Engaging websites for your purpose: From simple to complex websites, customized for all devices."
                     : currentWeb === "/HeroDesign.png"
-                    ? language === "Norwegian"
-                      ? "Gjennomgående design som er estetisk og funksjonelt, med fokus på brukervennlighet og konvertering"
-                      : "Consistent design that is aesthetic and functional, with a focus on user-friendliness and conversion"
-                    : currentWeb === "/HeroDevelopment.png"
-                    ? language === "Norwegian"
-                      ? "Ekspertise innenfor utvikling av nettsider som er lette å vedlikeholde og endre innhold på"
-                      : "Expertise in developing websites that are easy to maintain and change content on"
-                    : currentWeb === "/HeroCollage.webp"
-                    ? language === "Norwegian"
-                      ? "Originalt høykvalitets innhold til nettsiden din, som er tilpasset ditt formål og målgruppe"
-                      : "Original high-quality content for your website, customized for your purpose and target audience"
-                    : null}
+                      ? language === "Norwegian"
+                        ? "Gjennomgående design som er estetisk og funksjonelt, med fokus på brukervennlighet og konvertering"
+                        : "Consistent design that is aesthetic and functional, with a focus on user-friendliness and conversion"
+                      : currentWeb === "/HeroDevelopment.png"
+                        ? language === "Norwegian"
+                          ? "Ekspertise innenfor utvikling av nettsider som er lette å vedlikeholde og endre innhold på"
+                          : "Expertise in developing websites that are easy to maintain and change content on"
+                        : currentWeb === "/HeroCollage.webp"
+                          ? language === "Norwegian"
+                            ? "Originalt høykvalitets innhold til nettsiden din, som er tilpasset ditt formål og målgruppe"
+                            : "Original high-quality content for your website, customized for your purpose and target audience"
+                          : null}
                 </ThemedP>
               </div>
             </div>
             <div className="w-full md:w-1/2">
               <div className={`relative z-10 grid items-center justify-center`}>
                 <div
-                  className={`transition-all border border-b-8 border-r-8 w-fit md:h-[450px] rounded-xl ${
-                    Theme === "light"
+                  className={`transition-all border border-b-8 border-r-8 w-fit md:h-[450px] rounded-xl ${Theme === "light"
                       ? "border-Villo-light-primary"
                       : "border-Villo-dark-primary"
-                  }  `}
+                    }  `}
                 >
                   <Image
                     src={currentWeb}
@@ -160,21 +150,20 @@ const imageHeight =
                       currentWeb === "/HeroLogo.png"
                         ? "Logo"
                         : currentWeb === "/HeroLogo.png"
-                        ? "Villo utvikling"
-                        : currentWeb === "/HeroDesign.png"
-                        ? "Web design"
-                        : currentWeb === "/HeroDevelopment.png"
-                        ? "Web utvikling"
-                        : currentWeb === "/HeroCollage.webp"
-                        ? "Web innhold"
-                        : "Image showing the services of Villo utvikling"
+                          ? "Villo utvikling"
+                          : currentWeb === "/HeroDesign.png"
+                            ? "Web design"
+                            : currentWeb === "/HeroDevelopment.png"
+                              ? "Web utvikling"
+                              : currentWeb === "/HeroCollage.webp"
+                                ? "Web innhold"
+                                : "Image showing the services of Villo utvikling"
                     }
                     width={imageWidth}
                     height={imageHeight}
-                    className={`object-cover duration-500 bg-Villo-dark-primary transition-all rounded-[4px] rounded-tl-xl xl:w-[550px] lg:w-[500px] md:w-full md:h-full h-[300px] ${
-                      isAnimating ? "opacity-0" : "opacity-100"
-                    } `}
-                    priority={true}
+                    className={`object-cover duration-500 bg-Villo-dark-primary transition-all rounded-[4px] rounded-tl-xl xl:w-[550px] lg:w-[500px] md:w-full md:h-full h-[300px] ${isAnimating ? "opacity-0" : "opacity-100"
+                      } `}
+
                   />
                 </div>
               </div>
