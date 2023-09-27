@@ -7,7 +7,7 @@ const THREESpace = ({ Theme }) => {
   const camera = useRef();
   const renderer = useRef();
   const particles = useRef();
-
+  let frame = useRef(0);
   useEffect(() => {
     scene.current = new THREE.Scene();
     camera.current = new THREE.PerspectiveCamera(
@@ -68,7 +68,10 @@ const THREESpace = ({ Theme }) => {
     window.addEventListener("resize", handleResize);
 
     function animate() {
-      requestAnimationFrame(animate);
+      frame.current = requestAnimationFrame(animate);
+
+      // Parallax scrolling effect
+      particles.current.position.y = window.scrollY * 0.002;
 
       // Update particles
       particles.current.rotation.x += 0.0000008;
@@ -81,6 +84,7 @@ const THREESpace = ({ Theme }) => {
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      cancelAnimationFrame(frame.current);
     };
   }, [Theme, canvasRef, scene, camera, renderer, particles]);
 
