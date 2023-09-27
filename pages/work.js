@@ -5,6 +5,7 @@ import Head from "next/head";
 import { NewClientLayout } from "@/components/sections/ClientSection";
 import { QuotesSection } from "@/components/sections/QuotesSections";
 import { CLIENT_LIST } from "@/data/client_list";
+import MetaTags from "@/components/Utilities/Metatags";
 
 export default function ProjectPage({ language, Theme }) {
   const clientList =
@@ -12,7 +13,7 @@ export default function ProjectPage({ language, Theme }) {
   // const { language } = useContext(LanguageContext);
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>JV Web Consult</title>
         <meta name="description" content="Villo utviklings prosjekter" />
         <meta
@@ -29,7 +30,13 @@ export default function ProjectPage({ language, Theme }) {
               : "/logo/WindLogoNoTextDarkMode.svg"
           }
         />
-      </Head>
+      </Head> */}
+      <MetaTags
+        Theme={Theme}
+        description="Villo utvikling spesialiserer seg på å tilby høykvalitets webutviklings- og designtjenester. Lær mer om mitt tidligere arbeid og attester fra fornøyde kunder."
+        title="Villo Utvikling - Work"
+        url="https://jvwebconsult.no/work"
+      />
       <PageLayout gap="gap-28">
         <div className="pt-12 text-center">
           <ResponsiveThemedH1>

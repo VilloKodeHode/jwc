@@ -4,6 +4,7 @@ import {
   ResponsiveH3,
   ThemedH3,
 } from "@/components/Responsive text/ResponsiveText";
+import MetaTags from "@/components/Utilities/Metatags";
 import AIART_LIST from "@/data/aiArt_list";
 
 import Head from "next/head";
@@ -12,7 +13,7 @@ import Image from "next/image";
 export default function AIArtPage({ language, Theme }) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>JV Web Consult</title>
         <meta name="JV Web Consult" content="Villo's AI art" />
         <meta
@@ -29,7 +30,13 @@ export default function AIArtPage({ language, Theme }) {
               : "/logo/WindLogoNoTextDarkMode.svg"
           }
         />
-      </Head>
+      </Head> */}
+      <MetaTags
+        Theme={Theme}
+        description="Villo utvikling spesialiserer seg på å tilby høykvalitets webutviklings- og designtjenester. Se på mitt arbeid med AI-kunst"
+        title="Villo Utvikling - Ai kunst"
+        url="https://jvwebconsult.no/aiArt"
+      />
       <PageLayout>
         <section className="relative grid lg:grid-cols-[50%_50%] min-h-[70vh] pt-16 lg:grid-flow-col items-center justify-center min-w-full text-center">
           <div className="relative h-full lg:min-w-[30vw] min-w-[80vw] min-h-[45vh]">
@@ -70,7 +77,7 @@ export default function AIArtPage({ language, Theme }) {
         <section className="grid justify-center">
           <div className="grid justify-center">
             <ThemedH3
-              className={`p-36 transition-all text-h1 font-light bg-gradient-to-r bg-clip-text transparent ${
+              className={`p-36 transition-all text-[4.209rem] font-light bg-gradient-to-r bg-clip-text transparent ${
                 Theme === "light"
                   ? "from-Villo-light-primary to-Villo-light-secondary"
                   : "from-Villo-dark-primary to-Villo-dark-secondary"
@@ -79,7 +86,7 @@ export default function AIArtPage({ language, Theme }) {
               {language === "Norwegian" ? "Galleri" : "Gallery"}
             </ThemedH3>
           </div>
-          <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-[144px]">
             {AIART_LIST.map((image, index) => (
               <div key={index} className="relative">
                 <Image

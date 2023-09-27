@@ -42,25 +42,23 @@ const ThemeSwitch = ({ cookiesAccepted }) => {
     >
       <Image
         src={LIGHTMODE}
-        width={320}
-        height={320}
-        alt="themeswitch"
-        className={` origin-top ${
-          Theme === "light"
-            ? "animate-ThemeSwitchSlideIn"
-            : "animate-ThemeSwitchSlideOut pointer-events-none"
-        }  w-5 h-5 absolute translate-x-1/2 -translate-y-1/2 top-1/2 hover:scale-110 right-1/2 transition`}
+        width={30}
+        height={30}
+        alt="themeswitch to darkmode"
+        className={` origin-top ${Theme === "light"
+          ? "animate-ThemeSwitchSlideIn"
+          : "animate-ThemeSwitchSlideOut pointer-events-none"
+          }  w-8 h-8 absolute translate-x-1/2 origin-center -translate-y-1/2 top-1/2 hover:scale-110 right-1/2 transition`}
       />
       <Image
         src={DARKMODE}
-        width={320}
-        height={320}
-        alt="themeswitch"
-        className={`origin-top ${
-          Theme === "light"
-            ? "animate-ThemeSwitchSlideOut pointer-events-none"
-            : "animate-ThemeSwitchSlideIn "
-        }  w-5 h-5 absolute translate-x-1/2 -translate-y-1/2 top-1/2 right-1/2 hover:scale-110 transition`}
+        width={30}
+        height={30}
+        alt="themeswitch to lightmode"
+        className={`origin-top ${Theme === "light"
+          ? "animate-ThemeSwitchSlideOut pointer-events-none"
+          : "animate-ThemeSwitchSlideIn "
+          }  w-8 h-8 absolute translate-x-1/2 origin-center -translate-y-1/2 top-1/2 right-1/2 hover:scale-110 transition`}
       />
     </button>
   );

@@ -1,12 +1,13 @@
 import PageLayout from "@/components/Layout";
 import Head from "next/head";
 import { ProjectSection } from "@/components/sections/ProjectSection";
+import MetaTags from "@/components/Utilities/Metatags";
 
 export default function ProjectPage({ language, Theme }) {
   // const { language } = useContext(LanguageContext);
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>JV Web Consult</title>
         <meta name="description" content="Villo utviklings prosjekter" />
         <meta
@@ -23,7 +24,13 @@ export default function ProjectPage({ language, Theme }) {
               : "/logo/WindLogoNoTextDarkMode.svg"
           }
         />
-      </Head>
+      </Head> */}
+      <MetaTags
+        Theme={Theme}
+        description="Villo utvikling spesialiserer seg på å tilby høykvalitets webutviklings- og designtjenester. Lær mer om mine prosjekter."
+        title="Villo Utvikling - Projects"
+        url="https://jvwebconsult.no/projects"
+      />
       <PageLayout gap="gap-28">
         <ProjectSection language={language} Theme={Theme} />
 

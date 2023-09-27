@@ -39,24 +39,22 @@ const LanguageSwitch = ({ cookiesAccepted, className }) => {
     <div className={`flex gap-3 ${className}`}>
       <Image
         src={NORWEGIAN}
-        className={`w-6 hover:scale-110 transition h-6 cursor-pointer ${
-          language === "Norwegian" ? "opacity-100" : "opacity-50"
-        }`}
+        className={`w-8 hover:scale-110 transition h-6 cursor-pointer ${language === "Norwegian" ? "opacity-100" : "opacity-50"
+          }`}
         alt="Norwegian"
-        width={50}
-        height={50}
+        width={500}
+        height={500}
         onClick={() => {
           changeLanguage("Norwegian");
         }}
       />
       <Image
         src={ENGLISH}
-        className={`w-6 h-6 hover:scale-110 transition cursor-pointer ${
-          language === "English" ? "opacity-100" : "opacity-50"
-        }`}
+        className={`w-8 h-6 hover:scale-110 transition cursor-pointer ${language === "English" ? "opacity-100" : "opacity-50"
+          }`}
         alt="English"
-        width={50}
-        height={50}
+        width={500}
+        height={500}
         onClick={() => {
           changeLanguage("English");
         }}

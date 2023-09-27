@@ -108,16 +108,16 @@ export default function Header({
 
       <div className="relative">
         <div
-          className={`fixed transition-all p-3 top-2 duration-1000 backdrop-blur-[10px] z-[999] flex items-center rounded-r-[30px] pr-5 justify-between ${notTop ? "animate-ToolsSlideIn" : "animate-ToolsSlideOut"
+          className={`fixed transition-all p-3 group top-2 duration-1000 z-[999] hover:bg-opacity-100 border-b-2 hover:border-opacity-100 bg-opacity-40  border-opacity-40 flex items-center rounded-r-[30px] pr-5 justify-between ${notTop ? "animate-ToolsSlideIn" : "animate-ToolsSlideOut"
             } ${Theme === "light"
-              ? "bg-Villo-light-white10 text-Villo-light-black"
-              : "bg-black bg-opacity-40 text-Villo-dark-white10"
+              ? "bg-Villo-light-white15  text-Villo-light-black border-Villo-light-primary"
+              : "bg-Villo-dark-black75 text-Villo-dark-white10 border-Villo-dark-black85"
             } 
           ${showToolBar ? "" : "translate-x-[-100%]"}
           `}
         >
           <div
-            className={`flex 2xl:flex-row flex-col opacity-30 hover:opacity-100 right-0 transition-all top-0 gap-4`}
+            className={`flex 2xl:flex-row flex-col opacity-30 group-hover:opacity-100  right-0 transition-all top-0 gap-4`}
           >
             <LanguageSwitch
               className={`2xl:flex-row flex-col`}
@@ -148,20 +148,8 @@ export default function Header({
           <div className="flex flex-row items-center justify-start lg:min-w-[500px] h-[112px] min-w-[200px] gap-8 rounded-br-full">
             <div className="relative z-40">
               <LogoComponent currentPath={currentPath} />
-
-              {/* <AbsoluteCenter className="w-[120%] h-[110%] rounded-full bg-opacity-80 -z-10" /> */}
             </div>
             <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
-              {/* <ResponsiveThemedSmall className={`${Theme === "light" ? "text-Villo-dark-black50" : "text-Villo-dark-white15" } `}>
-                &#10077;
-                {language === "Norwegian"
-                  ? "Drevet med ambisjoner, ekspertise og en uendelig tilførsel av koffein"
-                  : "Driven by ambitions, expertise and an endless supply of caffeine"}
-                &#10078;
-              </ResponsiveThemedSmall> */}
-              {/* <ResponsiveThemedMini className="text-Villo-black25">
-                VilloKodeHode@gmail.com
-              </ResponsiveThemedMini> */}
             </div>
           </div>
           <Navbar language={language} Theme={Theme} currentPath={currentPath} />
