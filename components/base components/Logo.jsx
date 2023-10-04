@@ -1,9 +1,9 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 import Link from "next/link";
 import Image from "next/image";
 import { LOGO } from "../../data/menu_list";
-import { useDisclosure } from "@chakra-ui/react";
+
 
 const LogoComponent = ({ handleMenuToggle }) => {
   const { Theme } = useContext(ThemeContext);
@@ -22,7 +22,7 @@ const LogoComponent = ({ handleMenuToggle }) => {
   return (
     <Link onClick={handleMenuToggle} key={logoDetails.text} href={logoDetails.href} className="">
       <Image
-        
+
         src={logoDetails.imageSrc}
         width={logoDetails.imageWidth}
         height={logoDetails.imageHeight}

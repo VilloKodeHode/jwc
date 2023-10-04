@@ -16,34 +16,35 @@ export const CompanyInfo = ({ language, Theme }) => {
   // const { language } = useContext(LanguageContext);
   // const { Theme } = useContext(ThemeContext);
   return (
-    <div className="grid animate-PageAppearRight justify-center items-center min-h-[calc(100vh-144px)]">
-      <div
-        className={`min-h-[90%] sm:rounded-lg grid lg:grid-cols-2  ${
-          Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
-        }`}
-      >
+    <div className="grid max-w-7xl justify-center items-center min-h-[calc(100vh-144px)]">
+      <div className="animate-PageAppearRight">
         <div
-          className={`col-span-1 py-12 min-h-[30vh] flex flex-col justify-center items-center`}
+          className={`sm:rounded-lg grid min-h-[70vh] lg:grid-cols-2 transition-colors duration-1000  ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
+            }`}
         >
-          <SimpleLogoComponent />
+          <div
+            className={`col-span-1 py-12 min-h-[30vh] flex flex-col justify-center items-center`}
+          >
+            <SimpleLogoComponent />
 
-          <ResponsiveThemedH3 className="py-5 text-bold">
-            Joakim Villo
-          </ResponsiveThemedH3>
-          <ResponsiveThemedP className="max-w-md pb-5 text-center">
-            {language === "Norwegian"
-              ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
-              : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
-          </ResponsiveThemedP>
-        </div>
-        <div className="col-span-1">
-          <Image
-            src="/Tonsberg.jpg"
-            width={800}
-            height={800}
-            alt="Tønsberg brygge"
-            className="object-cover w-full h-full"
-          />
+            <ResponsiveThemedH3 className="py-5 text-bold">
+              Joakim Villo
+            </ResponsiveThemedH3>
+            <ResponsiveThemedP className="max-w-md pb-5 text-center">
+              {language === "Norwegian"
+                ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
+                : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
+            </ResponsiveThemedP>
+          </div>
+          <div className="col-span-1">
+            <Image
+              src="/Tonsberg.jpg"
+              width={1200}
+              height={1200}
+              alt="Tønsberg brygge"
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </div>

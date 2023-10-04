@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @font-face {
   font-family: SalmaProNarrow;
   src: url("/fonts/SalmaproMediumnarrow-VG5v6.otf");
 }
+
 @font-face {
   font-family: SalmaPro;
   src: url("/fonts/SalmaproMedium-0Wooo.otf");
 }
+
 @font-face {
   font-family: RcRocket;
   src: url("/fonts/RcRocketRegular-0WVW9.otf");
@@ -31,7 +34,6 @@
 
   --tertiary: #3dffd7;
 
-
   --black: #1c1919;
   --black85: #393434;
   --black75: #493e3f;
@@ -45,6 +47,20 @@
   --backgroundBlack: #19211e;
 }
 
+#SectionNavigation div {
+  perspective: 1000px;
+}
+
+#SectionNavigation div a {
+  transition: all 0.5s ease-in-out;
+  transform: translateZ(100px) rotateY(-30deg);
+  transform-style: preserve-3d;
+}
+
+#SectionNavigation div a:hover {
+  transform: translateZ(200px) translateX(-20px) rotateY(-10deg);
+}
+
 .shadowblend {
   box-shadow: 0 0 5px 10px var(--black85);
   border: 10px solid;
@@ -55,24 +71,6 @@
       var(--tertiary)
     )
     1;
-}
-
-.backgroundblend {
-  background: linear-gradient(
-    45deg,
-    var(--primary),
-    var(--secondary),
-    var(--tertiary) /* var(--accent) */
-  );
-}
-
-.cleanbackgroundblend {
-  background: linear-gradient(
-    45deg,
-    var(--primary),
-    var(--secondary),
-    var(--tertiary) /* var(--accent) */
-  );
 }
 
 .rainbowtext {
@@ -94,9 +92,11 @@
   0% {
     background-position: 0% 0%;
   }
+
   50% {
     background-position: 0% 75%;
   }
+
   100% {
     background-position: 100% 100%;
   }
@@ -109,12 +109,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    253,
-    253,
-    253,
-    0.5
-  ); /* Change the color and opacity as needed */
+  background-color: rgba(253, 253, 253, 0.5);
+  /* Change the color and opacity as needed */
 }
 
 .tonsbergBG {
@@ -177,7 +173,7 @@ ul {
 }
 
 #__next {
-  background-color: var(--backgroundBlack);
+  /* background-color: var(--backgroundBlack); */
   text-rendering: optimizeLegibility;
 }
 
@@ -191,6 +187,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {

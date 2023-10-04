@@ -3,14 +3,14 @@ export const CLIENT_LIST = [
     language: "Norwegian",
     CLIENTS: [
       {
-        id: 1 + "Norwegian",
+        id: "1Norwegian",
         name: "Wileo AS",
         jobDone: "Lagd landingsside og skapt innhold for nettsiden",
         imageUrl: "/Wileo-logo.svg",
         href: "https://wileo.no/",
       },
       {
-        id: 2 + "Norwegian",
+        id: "2Norwegian",
         name: "Hawii Analyse",
         jobDone: "",
         imageUrl: "/Hawii-analyse-logo.svg",
@@ -29,17 +29,17 @@ export const CLIENT_LIST = [
     language: "English",
     CLIENTS: [
       {
-        id: 1 + "English",
+        id: "1English",
         name: "Wileo AS",
         jobDone: "Created landing page and content for the website",
-  imageUrl: "/Wileo-logo.svg",
+        imageUrl: "/Wileo-logo.svg",
         href: "https://wileo.no/",
       },
       {
-        id: 2 + "English",
+        id: "2English",
         name: "Hawii Analytics",
         jobDone: "",
-      imageUrl: "/Hawii-analyse-logo.svg",
+        imageUrl: "/Hawii-analyse-logo.svg",
         href: "https://www.hawiianalyse.no/",
       },
       // {

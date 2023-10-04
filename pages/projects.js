@@ -1,27 +1,13 @@
-import PageLayout, { ClientLayout, TextFlex } from "@/components/Layout";
-import ResponsiveH1, {
-  ResponsiveH2,
-  ResponsiveH3,
-  ResponsiveH4,
-  ResponsiveH5,
-  ResponsiveP,
-  ResponsiveThemedP,
-  ResponsiveUL,
-} from "@/components/Responsive text/ResponsiveText";
+import PageLayout from "@/components/Layout";
 import Head from "next/head";
-import { useContext } from "react";
-import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
-import {
-  ClientSection,
-  NewClientLayout,
-} from "@/components/sections/ClientSection";
 import { ProjectSection } from "@/components/sections/ProjectSection";
+import MetaTags from "@/components/Utilities/Metatags";
 
 export default function ProjectPage({ language, Theme }) {
   // const { language } = useContext(LanguageContext);
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>JV Web Consult</title>
         <meta name="description" content="Villo utviklings prosjekter" />
         <meta
@@ -38,10 +24,16 @@ export default function ProjectPage({ language, Theme }) {
               : "/logo/WindLogoNoTextDarkMode.svg"
           }
         />
-      </Head>
+      </Head> */}
+      <MetaTags
+        Theme={Theme}
+        description="Villo utvikling spesialiserer seg på å tilby høykvalitets webutviklings- og designtjenester. Lær mer om mine prosjekter."
+        title="Villo Utvikling - Projects"
+        url="https://jvwebconsult.no/projects"
+      />
       <PageLayout gap="gap-28">
         <ProjectSection language={language} Theme={Theme} />
-     
+
         {/* <NewClientLayout language={language} Theme={Theme} /> */}
 
         <div className="mb-[112px]" />

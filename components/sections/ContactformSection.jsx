@@ -58,124 +58,119 @@ export const ContactformSection = ({ language, Theme }) => {
   };
 
   return (
-    <div className="animate-PageAppearRight flex flex-col min-h-[calc(100vh-144px)] justify-center items-center py-8">
+    <div className="grid justify-center items-center min-h-[calc(100vh-144px)]">
       {!showModal && (
         <>
-          <ResponsiveThemedH1 className="mb-4">
-            {language === "Norwegian" ? "Kontaktskjema" : "Contact form"}
-          </ResponsiveThemedH1>
-          <ThemedP className="mb-4">
-            {language === "Norwegian"
-              ? "Vennligst fyll ut skjemaet under og vi vil komme tilbake til deg så snart som mulig."
-              : "Please fill out the form below and we will get back to you as soon as possible."}
-          </ThemedP>
-          <form
-            className="w-full max-w-lg"
-            action={endpoint}
-            onSubmit={handleSubmit}
-          >
-            <div className="mb-4">
-              <label
-                htmlFor="name"
-                className={`block font-bold mb-2 ${
-                  Theme === "light"
+          <div className="animate-PageAppearRight">
+            <ResponsiveThemedH1 className="mb-4">
+              {language === "Norwegian" ? "Kontaktskjema" : "Contact form"}
+            </ResponsiveThemedH1>
+            <ThemedP className="mb-4">
+              {language === "Norwegian"
+                ? "Vennligst fyll ut skjemaet under og vi vil komme tilbake til deg så snart som mulig."
+                : "Please fill out the form below and we will get back to you as soon as possible."}
+            </ThemedP>
+            <form
+              className="w-full max-w-lg"
+              action={endpoint}
+              onSubmit={handleSubmit}
+            >
+              <div className="mb-4">
+                <label
+                  htmlFor="name"
+                  className={`block font-bold mb-2 ${Theme === "light"
                     ? "text-Villo-light-black"
                     : "text-Villo-dark-white"
-                }`}
-              >
-                {language === "Norwegian" ? "Navn" : "Name"}
-              </label>
-              <input
-                type="text"
-                id="name"
-                className={` ${
-                  Theme === "light"
+                    }`}
+                >
+                  {language === "Norwegian" ? "Navn" : "Name"}
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className={` ${Theme === "light"
                     ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
                     : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
-                } w-full px-4 py-2 border rounded-lg  focus:outline `}
-                placeholder={
-                  language === "Norwegian" ? "Ditt navn" : "Your name"
-                }
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="email"
-                className={`block font-bold mb-2 ${
-                  Theme === "light"
+                    } w-full px-4 py-2 border rounded-lg  focus:outline `}
+                  placeholder={
+                    language === "Norwegian" ? "Ditt navn" : "Your name"
+                  }
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="email"
+                  className={`block font-bold mb-2 ${Theme === "light"
                     ? "text-Villo-light-black"
                     : "text-Villo-dark-white"
-                }`}
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className={` ${
-                  Theme === "light"
+                    }`}
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className={` ${Theme === "light"
                     ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
                     : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
-                } w-full px-4 py-2 border rounded-lg  focus:outline `}
-                placeholder={
-                  language === "Norwegian"
-                    ? "Din email addresse"
-                    : "Your email address"
-                }
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                required
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                htmlFor="message"
-                className={`block font-bold mb-2 ${
-                  Theme === "light"
+                    } w-full px-4 py-2 border rounded-lg  focus:outline `}
+                  placeholder={
+                    language === "Norwegian"
+                      ? "Din email addresse"
+                      : "Your email address"
+                  }
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
+                  required
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  htmlFor="message"
+                  className={`block font-bold mb-2 ${Theme === "light"
                     ? "text-Villo-light-black"
                     : "text-Villo-dark-white"
-                }`}
-              >
-                {language === "Norwegian" ? "Melding" : "Message"}
-              </label>
-              <textarea
-                id="message"
-                className={` ${
-                  Theme === "light"
+                    }`}
+                >
+                  {language === "Norwegian" ? "Melding" : "Message"}
+                </label>
+                <textarea
+                  id="message"
+                  className={` ${Theme === "light"
                     ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
                     : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
-                } w-full px-4 py-2 border rounded-lg  focus:outline `}
-                rows="4"
-                placeholder={
-                  language === "Norwegian" ? "Din melding" : "Your message"
-                }
-                value={formData.message}
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-                required
-              ></textarea>
-            </div>
-            <SendCTA Theme={Theme} type="submit">
-              Send
-            </SendCTA>
-          </form>
+                    } w-full px-4 py-2 border rounded-lg  focus:outline `}
+                  rows="4"
+                  placeholder={
+                    language === "Norwegian" ? "Din melding" : "Your message"
+                  }
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
+                  required
+                ></textarea>
+              </div>
+              <SendCTA Theme={Theme} type="submit">
+                Send
+              </SendCTA>
+            </form>
+          </div>
         </>
       )}
       {showModal && (
         <div
-          className={`flex items-center justify-center ${
-            Theme === "light"
-              ? "bg-Villo-light-white20"
-              : "bg-Villo-dark-black50"
-          } `}
+          className={`flex items-center rounded-xl justify-center ${Theme === "light"
+            ? "bg-Villo-light-white20"
+            : "bg-Villo-dark-black50"
+            } `}
         >
           <div className="relative flex flex-col items-center justify-center gap-8 p-8 bg-Villo-black rounded-3xl">
             <ResponsiveThemedH2 className="text-center">

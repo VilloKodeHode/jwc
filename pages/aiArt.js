@@ -1,9 +1,10 @@
-
 import PageLayout from "@/components/Layout";
 import {
   ResponsiveH2,
   ResponsiveH3,
+  ThemedH3,
 } from "@/components/Responsive text/ResponsiveText";
+import MetaTags from "@/components/Utilities/Metatags";
 import AIART_LIST from "@/data/aiArt_list";
 
 import Head from "next/head";
@@ -12,7 +13,7 @@ import Image from "next/image";
 export default function AIArtPage({ language, Theme }) {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>JV Web Consult</title>
         <meta name="JV Web Consult" content="Villo's AI art" />
         <meta
@@ -21,15 +22,26 @@ export default function AIArtPage({ language, Theme }) {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href={Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"} />
-      </Head>
-      <PageLayout gap="gap-28">
-        <section className="relative grid lg:grid-cols-[50%_50%] min-h-[calc(100vh-144px)] lg:grid-flow-col items-center justify-center min-w-full text-center">
-
-          <h1>Under construction</h1>
-          {/* <div className="relative px-8 py-16 h-full lg:min-w-[50vw] min-w-[100vw] min-h-[45vh]">
+        <link
+          rel="icon"
+          href={
+            Theme === "light"
+              ? "/logo/WindLogoNoTextLightMode.svg"
+              : "/logo/WindLogoNoTextDarkMode.svg"
+          }
+        />
+      </Head> */}
+      <MetaTags
+        Theme={Theme}
+        description="Villo utvikling spesialiserer seg på å tilby høykvalitets webutviklings- og designtjenester. Se på mitt arbeid med AI-kunst"
+        title="Villo Utvikling - Ai kunst"
+        url="https://jvwebconsult.no/aiArt"
+      />
+      <PageLayout>
+        <section className="relative grid lg:grid-cols-[50%_50%] min-h-[70vh] pt-16 lg:grid-flow-col items-center justify-center min-w-full text-center">
+          <div className="relative h-full lg:min-w-[30vw] min-w-[80vw] min-h-[45vh]">
             <Image
-              src="https://cdn.midjourney.com/52a4027a-565a-4cfb-ad6a-5b17a39b8f7a/0_1.png"
+              src="/images/midjourney/green_planet.webp"
               alt="Green plantet"
               cover="true"
               style={{ objectFit: "cover", objectPosition: "top" }}
@@ -44,9 +56,9 @@ export default function AIArtPage({ language, Theme }) {
               </ResponsiveH2>
             </div>
           </div>
-          <div className="relative px-8 py-16 h-full lg:min-w-[50vw] min-w-[100vw] min-h-[45vh] overflow-hidden">
+          <div className="relative h-full lg:min-w-[30vw] min-w-[80vw] min-h-[45vh] overflow-hidden">
             <Image
-              src="https://cdn.midjourney.com/591f3ac9-8b22-46ee-91cd-d4a9b1ae53b7/grid_0.png"
+              src="/images/midjourney/etheral_angel.webp"
               alt="Etheral Angel"
               cover="true"
               style={{ objectFit: "cover", objectPosition: "top" }}
@@ -64,11 +76,17 @@ export default function AIArtPage({ language, Theme }) {
         </section>
         <section className="grid justify-center">
           <div className="grid justify-center">
-            <ResponsiveH2 className="p-8 font-light bg-gradient-to-r from-Villo-primary to-Villo-secondary bg-clip-text transparent font-Lato">
+            <ThemedH3
+              className={`p-36 transition-all text-[4.209rem] font-light bg-gradient-to-r bg-clip-text transparent ${
+                Theme === "light"
+                  ? "from-Villo-light-primary to-Villo-light-secondary"
+                  : "from-Villo-dark-primary to-Villo-dark-secondary"
+              } `}
+            >
               {language === "Norwegian" ? "Galleri" : "Gallery"}
-            </ResponsiveH2>
+            </ThemedH3>
           </div>
-          <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-[144px]">
             {AIART_LIST.map((image, index) => (
               <div key={index} className="relative">
                 <Image
@@ -80,12 +98,12 @@ export default function AIArtPage({ language, Theme }) {
                 />
                 <div className="absolute top-0 left-0 w-full h-full transition duration-300 opacity-0 bg-Villo-black hover:opacity-80">
                   <div className="absolute w-full text-center text-white transform -translate-y-1/2 top-1/2">
-                    <p className="text-lg">{image.alt}</p>
+                    <p className="text-lg bg-black">{image.alt}</p>
                   </div>
                 </div>
               </div>
             ))}
-          </section> */}
+          </section>
         </section>
       </PageLayout>
     </>

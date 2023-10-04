@@ -124,33 +124,59 @@ module.exports = {
           "0%": { opacity: "30%" },
           "100%": { opacity: "100%" },
         },
+
         slideRight: {
           "0%": { translate: "-100%", opacity: "0%" },
           "100%": { translate: "0%", opacity: "100%" },
-        },
-        slideDown: {
-          "0%": { transform: "translateY(-100%)", opacity: "0%" },
-          "100%": { translate: "translateY(0%)", opacity: "100%" },
         },
         slideLeft: {
           "0%": { translate: "100%", opacity: "0%" },
           "100%": { translate: "0%", opacity: "100%" },
         },
+        slideUp: {
+          "0%": { transform: "translateY(0%)", opacity: "100%" },
+          "100%": { translate: "translateY(100%)", opacity: "0%" },
+        },
+        slideDown: {
+          "0%": { transform: "translateY(-100%)", opacity: "0%" },
+          "100%": { translate: "translateY(0%)", opacity: "100%" },
+        },
+
         appear: {
           "0%": { opacity: "0%" },
           "100%": { opacity: "100%" },
         },
         themeInAnimation: {
-          "0%": { translate: "-100%", scale: "0" ,  opacity: "0%", display: "hidden"  },
-          "100%": { translate: "-0%", scale: "1" ,  opacity: "100%", display: "block"  },
+          "0%": {
+            translate: "-100%",
+            scale: "0",
+            opacity: "0%",
+            display: "hidden",
+          },
+          "100%": {
+            translate: "-0%",
+            scale: "1",
+            opacity: "100%",
+            display: "block",
+          },
         },
         themeOutAnimation: {
-          "0%": { translate: "-0%", scale: "1" ,  opacity: "100%", display: "hidden"},
-          "100%": { translate: "-100%", scale: "0" ,  opacity: "0%", display: "block"},
+          "0%": {
+            translate: "-0%",
+            scale: "1",
+            opacity: "100%",
+            display: "hidden",
+          },
+          "100%": {
+            translate: "-100%",
+            scale: "0",
+            opacity: "0%",
+            display: "block",
+          },
         },
         slideInRight: {
-          "0%": { translate: "-100%",  opacity: "0%", display: "hidden" },
-          "100%": { translate: "-0%",  opacity: "100%", display: "block" },
+          "0%": { translate: "-100%", opacity: "0%", display: "hidden" },
+          "100%": { translate: "-0%", opacity: "100%", display: "block" },
         },
         slideInLeft: {
           "0%": { translate: "100%", opacity: "0%", display: "hidden" },
@@ -166,8 +192,20 @@ module.exports = {
           "100%": { translate: "50%", opacity: "0%", display: "block" },
         },
         toolsSlideIn: {
-          "0%": { translate: "100%", display: "hidden" },
-          "100%": { translate: "0%", display: "block" },
+          "0%": { translate: "0% -280%", display: "hidden" },
+          "100%": { translate: "0% 0%", display: "block" },
+        },
+        toolsSlideOut: {
+          "0%": { translate: "0% 0%", display: "block" },
+          "100%": { translate: "-200% 0%", display: "hidden" },
+        },
+        cookiesSlideOut: {
+          "0%": { translate: "0% 0%" },
+          "100%": { translate: "-100% 0%" },
+        },
+        cookiesSlideIn: {
+          "0%": { translate: "-100% 0%" },
+          "100%": { translate: "0% 0%" },
         },
         scroll: {
           "0%": { transform: "translateX(0)" },
@@ -185,7 +223,30 @@ module.exports = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
- 
+        cogSpin: {
+          "0%": { transform: "rotate(0deg) scale(1)" },
+          "10%": { transform: "rotate(36deg) scale(1.1)" },
+          "20%": { transform: "rotate(72deg) scale(1.1)" },
+          "30%": { transform: "rotate(108deg) scale(1.1)" },
+          "40%": { transform: "rotate(144deg) scale(1.1)" },
+          "50%": { transform: "rotate(180deg) scale(1.1)" },
+          "60%": { transform: "rotate(216deg) scale(1.1)" },
+          "70%": { transform: "rotate(252deg) scale(1.1)" },
+          "80%": { transform: "rotate(288deg) scale(1.1)" },
+          "90%": { transform: "rotate(324deg) scale(1.1)" },
+          "100%": { transform: "rotate(360deg) scale(1)" },
+        },
+        cookieShake: {
+          "0%": { transform: "rotate(0deg) scale(1)" },
+          "20%": { transform: "rotate(10deg) scale(1.1)" },
+          "30%": { transform: "rotate(-20deg) scale(1.1)" },
+          "40%": { transform: "rotate(20deg) scale(1.1)" },
+          "50%": { transform: "rotate(-30deg) scale(1.1)" },
+          "60%": { transform: "rotate(20deg) scale(1.1)" },
+          "70%": { transform: "rotate(-20deg) scale(1.1)" },
+          "80%": { transform: "rotate(-10deg) scale(1.1)" },
+          "100%": { transform: "rotate(0deg) scale(1)" },
+        },
       },
       animation: {
         rotateLeft: "rotateLeft ease-in 1s alternate",
@@ -197,11 +258,15 @@ module.exports = {
         RPSPopUp: "popUp 0.1s ease-in",
         glow: "glow 3s ease-in-out infinite alternate",
         SlideInFromLeft: "slideLeft 0.5s ease-in-out",
-        ToolsSlideIn: "toolsSlideIn 0.5s ease-in-out",
+        ToolsSlideIn: "toolsSlideIn 0.5s ease-in-out forwards",
+        ToolsSlideOut: "toolsSlideOut 0.5s ease-in-out forwards",
+        CookiesSlideOut: "cookiesSlideOut 0.5s ease-in-out forwards",
+        CookiesSlideIn: "cookiesSlideIn 0.5s ease-in-out forwards",
         SlideInFromRight: "slideInRight 0.5s 1s ease-in-out backwards",
         ThemeSwitchSlideIn: "themeInAnimation 0.5s ease-in-out backwards",
         ThemeSwitchSlideOut: "themeOutAnimation 0.5s ease-in-out forwards",
         SlideInFromTop: "slideDown 0.5s ease-in-out",
+        SlideInFromBottom: "slideUp 0.5s ease-in-out forwards",
         Appear: "appear 0.3s ease-in-out",
         Disappear: "appear 0.3s ease-in-out backwards",
         PageAppearRight: "slideInRight 0.6s ease-in-out forwards",
@@ -210,8 +275,11 @@ module.exports = {
         RPSPopUpMoreDelayed: "popUp 0.1s ease-in 2s backwards",
         fadeIn: "fadeIn 1s forwards",
         scroll: "scroll 35s linear infinite",
+        cogSpin:
+          "cogSpin 10s cubic-bezier(0, 1.6, 0.68, 1.1) infinite forwards",
+        cookieShake: "cookieShake 2s ease-in-out infinite forwards",
       },
     },
   },
-  plugins: [require("@tailwindcss/typography"),],
+  plugins: [require("@tailwindcss/typography")],
 };
