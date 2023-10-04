@@ -5,7 +5,7 @@ export const SectionNavigation = () => {
         {text.split("").map((char, index) => (
           <>
             <span
-              key={index}
+              key={index + char}
               className=" group drop-shadow-[10px_10px_0px_#383844] hover:drop-shadow-[10px_10px_0px_#858ee0] transition-all duration-500 ease-in-out hover:text-Villo-light-primary"
             >
               {char}

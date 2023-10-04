@@ -48,11 +48,11 @@ export function SkillsLayout({ children }) {
 
 export function TextFlex({ children, textWidth }) {
   return (
-    <section
+    <div
       className={`flex flex-col items-center snap-center justify-center ${textWidth} mx-auto text-Villo-black`}
     >
       <>{children}</>
-    </section>
+    </div>
   );
 }
 
