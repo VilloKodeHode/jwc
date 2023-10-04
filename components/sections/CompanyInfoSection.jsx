@@ -4,17 +4,13 @@ import {
   ResponsiveH3,
   ResponsiveThemedH3,
   ResponsiveThemedH4,
-  ResponsiveThemedH5,
   ResponsiveThemedP,
 } from "../Responsive text/ResponsiveText";
 import { TextFlex } from "../Layout";
 import { useContext } from "react";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 
 export const CompanyInfo = ({ language, Theme }) => {
-  // const { language } = useContext(LanguageContext);
-  // const { Theme } = useContext(ThemeContext);
   return (
     <div className="grid max-w-7xl justify-center items-center min-h-[calc(100vh-144px)]">
       <div className="animate-PageAppearRight">
