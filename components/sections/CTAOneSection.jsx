@@ -40,7 +40,7 @@ export const CTAOneSection = ({ language, Theme }) => {
 
   return (
     <>
-      <section className="relative animate-PageAppearRight z-10 flex items-center justify-center w-full h-[100vh] group/imageEffect">
+      <section className="relative animate-PageAppearRight z-10 flex items-center justify-center w-full h-[100vh] group/imageEffect" id="CTAOneSection">
         <div className="flex items-center justify-center h-full m-0">
           <div className="flex flex-col items-center justify-center w-full max-w-6xl md:flex-row">
             <div className="w-full md:w-1/2">
@@ -49,14 +49,14 @@ export const CTAOneSection = ({ language, Theme }) => {
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDesign.png")}
                     className={`cursor-pointer group  ${Theme === "light"
-                        ? "text-Villo-light-primary"
-                        : "text-Villo-dark-primary"
+                      ? "text-Villo-light-primary"
+                      : "text-Villo-dark-primary"
                       }`}
                   >
                     <span
                       className={` ${Theme === "light"
-                          ? "group-hover:text-Villo-light-primary"
-                          : "group-hover:text-Villo-dark-primary"
+                        ? "group-hover:text-Villo-light-primary"
+                        : "group-hover:text-Villo-dark-primary"
                         }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${currentWeb === "/HeroDesign.png"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
@@ -71,14 +71,14 @@ export const CTAOneSection = ({ language, Theme }) => {
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDevelopment.png")}
                     className={`cursor-pointer group  ${Theme === "light"
-                        ? "text-Villo-light-primary"
-                        : "text-Villo-dark-primary"
+                      ? "text-Villo-light-primary"
+                      : "text-Villo-dark-primary"
                       }`}
                   >
                     <span
                       className={` ${Theme === "light"
-                          ? "group-hover:text-Villo-light-primary"
-                          : "group-hover:text-Villo-dark-primary"
+                        ? "group-hover:text-Villo-light-primary"
+                        : "group-hover:text-Villo-dark-primary"
                         }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${currentWeb === "/HeroDevelopment.png"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
@@ -94,14 +94,14 @@ export const CTAOneSection = ({ language, Theme }) => {
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroCollage.webp")}
                     className={`cursor-pointer group  ${Theme === "light"
-                        ? "text-Villo-light-primary"
-                        : "text-Villo-dark-primary"
+                      ? "text-Villo-light-primary"
+                      : "text-Villo-dark-primary"
                       }`}
                   >
                     <span
                       className={` ${Theme === "light"
-                          ? "group-hover:text-Villo-light-primary"
-                          : "group-hover:text-Villo-dark-primary"
+                        ? "group-hover:text-Villo-light-primary"
+                        : "group-hover:text-Villo-dark-primary"
                         }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${currentWeb === "/HeroCollage.webp"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
@@ -140,8 +140,8 @@ export const CTAOneSection = ({ language, Theme }) => {
               <div className={`relative z-10 grid items-center justify-center`}>
                 <div
                   className={`transition-all border border-b-8 border-r-8 w-fit md:h-[450px] rounded-xl ${Theme === "light"
-                      ? "border-Villo-light-primary"
-                      : "border-Villo-dark-primary"
+                    ? "border-Villo-light-primary"
+                    : "border-Villo-dark-primary"
                     }  `}
                 >
                   <Image

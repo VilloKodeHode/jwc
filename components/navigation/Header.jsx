@@ -131,8 +131,8 @@ export default function Header({
             />
             <button onClick={toggleToolBar} className="">
               <FcSettings
-                className={`absolute h-[50px] w-fit top-0 2xl:left-[120px] left-[60px] transition-all duration-500 hover:animate-cogSpin 
-          ${showToolBar ? "" : "2xl:left-[155px] left-[70px]"}
+                className={`absolute h-[50px] w-fit top-0 2xl:left-[140px] left-[50px] transition-all duration-500 hover:animate-cogSpin 
+          ${showToolBar ? "" : "2xl:left-[165px] left-[65px]"}
           `}
               ></FcSettings>
             </button>

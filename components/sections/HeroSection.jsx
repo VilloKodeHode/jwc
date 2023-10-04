@@ -10,8 +10,18 @@ import THREESpace from "../animation/Space";
 export const HeroSection = ({ language, Theme }) => {
   return (
     <>
-      <div className="w-full h-full">
-        <section className="relative z-10 flex items-center justify-center w-full min-h-[calc(100vh-144px)] bg-center bg-cover">
+      <div className="relative w-full h-full">
+        <section
+          className="relative z-10 flex items-center justify-center w-full min-h-[calc(100vh)] bg-center bg-cover"
+          id="HeroSection"
+        >
+          <div
+            className={`absolute  z-50 w-screen h-24 bg-gradient-to-b ${
+              Theme === "light"
+                ? "to-[#fbf9ff] from-Villo-light-white"
+                : "to-[#18181b] from-Villo-dark-black"
+            }  bottom-[99%]`}
+          />
           <div className="max-w-6xl animate-PageAppearRight">
             <div className="relative z-50 text-left">
               <ResponsiveP
