@@ -9,8 +9,8 @@ export default function ProvidedServiceSEO({ language, Theme }) {
       <MetaTags
         Theme={Theme}
         description="Profesjonell frontend webutvikling og webdesign service. Vi omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder."
-        title="Villo Utvikling - Home"
-        url="https://jvwebconsult.no/"
+        title="Villo Utvikling - Trenger du mer trafikk til din nettside?"
+        url="https://jvwebconsult.no/services_provided/SEO"
       />
       <PageLayout gap="gap-28">
         <div className="py-12 ">

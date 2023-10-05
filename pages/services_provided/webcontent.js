@@ -10,8 +10,8 @@ export default function ProvidedServiceWebcontent({ language, Theme }) {
       <MetaTags
         Theme={Theme}
         description="Profesjonell frontend webutvikling og webdesign service. Vi omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder."
-        title="Villo Utvikling - Home"
-        url="https://jvwebconsult.no/"
+        title="Villo Utvikling - Trenger du nettinnhold?"
+        url="https://jvwebconsult.no/services_provided/webcontent"
       />
       <PageLayout gap="gap-28">
         <WebcontentServiceTopSection language={language} Theme={Theme} />
