@@ -8,8 +8,8 @@ export const WebcontentProcessSection = ({ language, Theme }) => {
             <TextFlex>
                 <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
                     {language === "Norwegian"
-                        ? "Økt nettside trafikk som øker din online tilstedeværelse og tiltrekker flere besøkende til nettsiden din."
-                        : "Enhanced website traffic that elevates your online presence and attract more visitors to your website."}
+                        ? "Hvorfor velge meg som din nettinnhold-skaper..."
+                        : "Why you should choose me as your webcontent-creator..."}
                 </ResponsiveThemedH3>
             </TextFlex>
             <div className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15">

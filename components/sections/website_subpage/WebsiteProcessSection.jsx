@@ -15,8 +15,8 @@ export const WebsiteProcessSection = ({ language, Theme }) => {
             <TextFlex>
                 <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
                     {language === "Norwegian"
-                        ? "Hvorfor velge meg som din nettside-utvikler?"
-                        : "Why you should choose me as your website-developer?"}
+                        ? "Hvorfor du burde velge meg som din nettside-utvikler..."
+                        : "Why you should choose me as your website-developer..."}
                 </ResponsiveThemedH3>
             </TextFlex>
             <div className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15">
