@@ -2,9 +2,9 @@ import PageLayout from "@/components/Layout";
 import MetaTags from "@/components/Utilities/Metatags";
 import { ServicesSectionPart } from "@/components/sections/sectionsParts/ServiceSectionsParts";
 import { ResponsiveThemedH1, ResponsiveThemedH2, ThemedH5, ThemedP } from "@/components/Responsive text/ResponsiveText";
-import { WebsiteServiceSection } from "@/components/sections/WebsiteServiceSection";
+import { WebsiteServiceSection } from "@/components/sections/website_subpage/WebsiteServiceTopSection";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
-import { WebsiteProcessSection } from "@/components/sections/WebsiteProcessSection";
+import { WebsiteProcessSection } from "@/components/sections/website_subpage/WebsiteProcessSection";
 
 export default function ProvidedServiceWebsite({ language, Theme }) {
   return (
