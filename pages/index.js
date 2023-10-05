@@ -1,11 +1,6 @@
-import Head from "next/head";
 import PageLayout from "@/components/Layout";
-import CallToActionButton from "@/components/Buttons";
-import Link from "next/link";
-
 import { CTAOneSection } from "@/components/sections/CTAOneSection";
 import { OfferSection } from "@/components/sections/OfferSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
