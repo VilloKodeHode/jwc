@@ -1,19 +1,49 @@
+import Link from "next/link"
 import { ResponsiveThemedH1, ResponsiveThemedH5, ThemedH5 } from "../../Responsive text/ResponsiveText"
+import { ArrowCTA, ReadMoreButton } from "@/components/Buttons"
 
-export const WebsiteServiceSection = ({ language, Theme }) => {
+export const WebsiteServiceTopSection = ({ language, Theme }) => {
     return (<section className="py-12">
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center gap-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="text-center">
                 <ResponsiveThemedH1>
                     {language === "Norwegian" ? "Trenger du ny nettside?" : "Need a new website?"}
                 </ResponsiveThemedH1>
             </div>
-            <div className="mt-10 text-center animate-PageAppearRight">
-                <ResponsiveThemedH5 className={`mt-4 font-normal`}>
+            <div className="text-center animate-PageAppearRight">
+                <ResponsiveThemedH5 className={`font-normal`}>
                     {language === "Norwegian"
                         ? "Jeg lager nettsider som er optimalisert for best mulig brukeropplevelse og trafikk på nettet. Den nyeste teknologien blir brukt for å sikre at nettsiden din er rask, moderne og responsiv. Som profesjonell nettsidedesigner spesialiserer jeg meg på å lage imponerende og funksjonelle nettsteder som tilpasses dine unike behov og mål."
                         : "I create websites that are optimized for the best user experience and web traffic. The latest technology is used to ensure that your website is fast, secure, and responsive. As a professional website designer, I specialize in crafting stunning and functional websites that cater to your unique needs and goals."}
                 </ResponsiveThemedH5>
+            </div>
+            <div className="grid justify-center grid-flow-col gap-8">
+                <div className="h-[60px] flex justify-start items-center max-w-fit">
+                    <a href="#websiteYouGet" className="">
+                        <ReadMoreButton Theme={Theme} className="">
+                            {language === "Norwegian" ? "lær mer" : "learn more"}
+                        </ReadMoreButton>
+                    </a>
+                </div>
+                <div className="h-[60px] flex justify-start items-center">
+                    <Link href="/contact" className="">
+                        <ArrowCTA Theme={Theme} className="">
+                            {language === "Norwegian" ? "Kontakt nå" : "Contact now"}
+                        </ArrowCTA>
+                    </Link>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    )
+}
+
+
+export const WebsiteServiceBottomSection = ({ language, Theme }) => {
+    return (<section className="">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div className="mt-10 text-center animate-PageAppearRight">
                 <ResponsiveThemedH5 className={`mt-4 font-normal`}>
                     {language === "Norwegian"
                         ? "Med års erfaring innen feltet forstår jeg betydningen av en sterk tilstedeværelse på nett i dagens digitale tidsalder. Mine tjenester er skreddersydd for enkeltpersoner og bedrifter som ønsker å etablere eller forbedre sin online tilstedeværelse. Jeg tar en personlig tilnærming til hvert prosjekt, slik at nettstedet ditt ikke bare ser visuelt tiltalende ut, men også fungerer sømløst på alle enheter."

@@ -15,7 +15,7 @@ export const SectionProcessPartSection = ({ Theme, language, norTitle, engTitle,
                             : engTitle}
                     </ThemedH4>
                 </div>
-                <div className={`flex flex-row flex-wrap justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
+                <div className={`flex flex-row flex-wrap lg:justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
                     ? "bg-Villo-light-white10 hover:bg-Villo-light-white15"
                     : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
                     }`}>
@@ -32,12 +32,14 @@ export const LogoProcessBullitin = ({ Theme, children }) => {
   
             `}>
             {/* <LogoBullitinPointSmall Theme={Theme} /> */}
-            <AiOutlineCheck className={`w-8 h-8 transition-all  ${Theme === "light"
-                ? "text-Villo-light-primary group-hover:scale-125"
-                : "text-Villo-dark-primary group-hover:scale-125"
-                }`} />
+            <div>
+                <AiOutlineCheck className={`w-8 h-8 transition-all  ${Theme === "light"
+                    ? "text-Villo-light-primary group-hover:scale-125"
+                    : "text-Villo-dark-primary group-hover:scale-125"
+                    }`} />
+            </div>
             {/* <div className="flex flex-col justify-center h-full"> */}
-            <ThemedLi className="max-w-xs list-none ">
+            <ThemedLi className="list-none lg:max-w-xs ">
                 {children}
             </ThemedLi>
             {/* </div> */}

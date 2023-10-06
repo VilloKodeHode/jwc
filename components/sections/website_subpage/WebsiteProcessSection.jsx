@@ -9,9 +9,9 @@ import {
 import { ServicesSectionPart } from "../sectionsParts/ServiceSectionsParts";
 
 
-export const WebsiteProcessSection = ({ language, Theme }) => {
-    return (<section className="py-12">
-        <section className="relative grid justify-center items-center py-8 w-full bg-Villo-tertiary min-h-[35vh] text-left xl:gap-0 gap-12">
+export const WebsiteProcessSection = ({ language, Theme, id }) => {
+    return (
+        <section className="relative grid justify-center items-center w-full bg-Villo-tertiary min-h-[35vh] text-left xl:gap-0 gap-12">
             <TextFlex>
                 <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
                     {language === "Norwegian"
@@ -19,7 +19,7 @@ export const WebsiteProcessSection = ({ language, Theme }) => {
                         : "Why you should choose me as your website-developer..."}
                 </ResponsiveThemedH3>
             </TextFlex>
-            <div className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15">
+            <div id={id} className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15">
 
                 <SectionProcessPartSection Theme={Theme} language={language} engTitle="You get:" norTitle="Du får:">
                     <LogoProcessBullitin Theme={Theme} language={language}>
@@ -92,11 +92,9 @@ export const WebsiteProcessSection = ({ language, Theme }) => {
                     </LogoProcessBullitin>
 
                 </SectionProcessPartSection>
-
             </div>
         </section>
-    </section>)
-
+    )
 }
 
 

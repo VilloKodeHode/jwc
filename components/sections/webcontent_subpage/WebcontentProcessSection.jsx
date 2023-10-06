@@ -84,7 +84,6 @@ export const WebcontentProcessSection = ({ language, Theme }) => {
                             : "Track your SEO progress with transparent reporting and analytics, ensuring you can see the tangible results of our efforts."}
                     </LogoProcessBullitin>
                 </SectionProcessPartSection>
-
             </div>
         </section>
     </section>)
