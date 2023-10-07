@@ -1,11 +1,8 @@
-import CallToActionButton, {
-  ArrowCTA,
+import {
   CookieAccept,
-  ToolsToggleButton,
 } from "@/components/Buttons";
 import {
   ThemedH5,
-  ThemedP,
   ThemedSmall,
 } from "@/components/Responsive text/ResponsiveText";
 import Image from "next/image";
@@ -40,7 +37,7 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
       <div
         className={`min-h-[131px] max-w-[300px] transition-all duration-300 bg-opacity-[0.95] px-6 py-4 outline m-2 rounded-xl  ${Theme === "light"
           ? "bg-Villo-light-white10 group-hover:bg-Villo-light-white20 outline-Villo-dark-black85"
-          : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-black85  outline-Villo-dark-white10"
+          : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-black85 outline-Villo-dark-white10"
           }`}
       >
         <div className="relative grid items-center justify-center gap-2 pt-3">
@@ -83,13 +80,6 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
           `}
           ></Image>
         </button>
-        {/* <ToolsToggleButton
-          Theme={Theme}
-          onClick={handleShowPopup}
-          className={`absolute top-1/3 hover:translate-x-5 -right-5 ${
-            !showPopup ? "opacity-100" : "opacity-0 pointer-events-none"
-          } transition-all duration-1000`}
-        /> */}
       </div>
     </div>
   );

@@ -1,10 +1,9 @@
-import PageLayout from "@/components/Layout";
+import PageLayout from "@/components/Layout/Layout";
 import MetaTags from "@/components/Utilities/Metatags";
-import { ServicesSectionPart } from "@/components/sections/sectionsParts/ServiceSectionsParts";
-import { ResponsiveThemedH1, ResponsiveThemedH2, ThemedH5, ThemedP } from "@/components/Responsive text/ResponsiveText";
-import { WebsiteServiceSection } from "@/components/sections/WebsiteServiceSection";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
-import { WebsiteProcessSection } from "@/components/sections/WebsiteProcessSection";
+import { WebsiteProcessSection } from "@/components/sections/WebsitePage/WebsiteProcessSection";
+import { WebsiteServiceBottomSection, WebsiteServiceTopSection } from "@/components/sections/WebsitePage/WebsiteServiceContentSections";
+
 
 export default function ProvidedServiceWebsite({ language, Theme }) {
   return (
@@ -16,8 +15,9 @@ export default function ProvidedServiceWebsite({ language, Theme }) {
         url="https://jvwebconsult.no/services_provided/website"
       />
       <PageLayout gap="gap-28">
-        <WebsiteServiceSection language={language} Theme={Theme} />
-        <WebsiteProcessSection language={language} Theme={Theme} />
+        <WebsiteServiceTopSection language={language} Theme={Theme} />
+        <WebsiteProcessSection id="websiteYouGet" language={language} Theme={Theme} />
+        <WebsiteServiceBottomSection language={language} Theme={Theme} />
         <LetsGoCTA
           language={language}
           Theme={Theme}

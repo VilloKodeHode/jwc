@@ -5,10 +5,10 @@ import {
   ResponsiveThemedH3,
   ResponsiveThemedH4,
   ResponsiveThemedP,
-} from "../Responsive text/ResponsiveText";
-import { TextFlex } from "../Layout";
+} from "../../Responsive text/ResponsiveText";
+import { TextFlex } from "../../Layout/Layout";
 import { useContext } from "react";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
+import LanguageContext from "../../Utilities/LanguageSwitch/LanguageContext";
 
 export const CompanyInfo = ({ language, Theme }) => {
   return (

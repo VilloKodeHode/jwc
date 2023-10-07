@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { useContext } from "react";
-import { CallToActionButtonAlt } from "../Buttons";
-import { ResponsiveH3, ResponsiveP } from "../Responsive text/ResponsiveText";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
+import { CallToActionButtonAlt } from "../../Buttons";
+import { ResponsiveH3, ResponsiveP } from "../../Responsive text/ResponsiveText";
+import LanguageContext from "../../Utilities/LanguageSwitch/LanguageContext";
 
 export default function ProjectCard(props) {
   const { href, projectName, src, mobileSrc, description, alt } = props;

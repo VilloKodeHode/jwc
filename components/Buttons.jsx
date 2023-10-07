@@ -22,7 +22,7 @@ export default function CallToActionButton({
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
+      className={`px-6 outline outline-2 group hover:outline-none py-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
         ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white  hover:bg-Villo-dark-primary"
         : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
         } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
@@ -36,18 +36,42 @@ export function ArrowCTA({ children, Theme, onClick, className }) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
+      className={`relative px-6 pr-12 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
         ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-light-secondary"
         : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
-        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-bottom-right`}
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-center`}
     >
       <>
         {children}
-        <FiArrowRight className="inline-block w-5 h-5 m-auto ml-1 transition-all duration-200 opacity-90 group-hover:opacity-100 group-hover:ml-2 group-hover:w-7 group-hover:h-7" />
+        <FiArrowRight className={`${Theme === "light"
+          ? "text-Villo-light-black85  group-hover:text-Villo-light-white"
+          : "text-Villo-dark-white10 "
+          } absolute inline-block w-5 h-5 m-auto ml-1 transition-all duration-200 right-4 opacity-90 group-hover:ml-2 group-hover:w-7 group-hover:h-7`} />
       </>
     </button>
   );
 }
+
+export function ReadMoreButton({ children, Theme, onClick, className }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`relative flex justify-center items-center group m-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85  hover:text-Villo-light-primary"
+        : "text-Villo-dark-white10  hover:text-Villo-dark-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-center`}
+    >
+      <>
+        {children}
+        <div className={`absolute w-full h-[1px] py-[1px] bottom-0 ${Theme === "light"
+          ? "bg-Villo-light-black85  group-hover:bg-Villo-light-primary"
+          : "bg-Villo-dark-white10  group-hover:bg-Villo-dark-primary"
+          }`} />
+      </>
+    </button>
+  );
+}
+
 
 export function ExternalCTA({ children, Theme, onClick, className }) {
   return (

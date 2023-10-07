@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ResponsiveH2, ThemedP } from "../Responsive text/ResponsiveText";
+import { ResponsiveH2, ThemedP } from "../../Responsive text/ResponsiveText";
 import { useEffect, useState } from "react";
 
 export const CTAOneSection = ({ language, Theme }) => {

@@ -1,17 +1,7 @@
-import Head from "next/head";
-import PageLayout from "@/components/Layout";
-import CallToActionButton from "@/components/Buttons";
-import Link from "next/link";
-
-import { CTAOneSection } from "@/components/sections/CTAOneSection";
-import { OfferSection } from "@/components/sections/OfferSection";
-import { ServicesSection } from "@/components/sections/ServicesSection";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
+import PageLayout from "@/components/Layout/Layout";
 import MetaTags from "@/components/Utilities/Metatags";
-import { SectionNavigation } from "@/components/navigation/SectionNavigation";
-import { ServicesSectionPart } from "@/components/sections/sectionsParts/ServiceSectionsParts";
 import { ResponsiveThemedH2, ThemedP } from "@/components/Responsive text/ResponsiveText";
+import { ServicesSectionPart } from "@/components/sections/ServiceSection";
 
 export default function ProvidedServiceSEO({ language, Theme }) {
   return (
@@ -19,8 +9,8 @@ export default function ProvidedServiceSEO({ language, Theme }) {
       <MetaTags
         Theme={Theme}
         description="Profesjonell frontend webutvikling og webdesign service. Vi omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder."
-        title="Villo Utvikling - Home"
-        url="https://jvwebconsult.no/"
+        title="Villo Utvikling - Trenger du mer trafikk til din nettside?"
+        url="https://jvwebconsult.no/services_provided/SEO"
       />
       <PageLayout gap="gap-28">
         <div className="py-12 ">

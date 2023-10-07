@@ -3,7 +3,7 @@ import {
   ResponsiveThemedH2,
   ResponsiveThemedH5,
   ResponsiveThemedP,
-} from "../Responsive text/ResponsiveText";
+} from "../../Responsive text/ResponsiveText";
 import { QUOTES_LIST } from "@/data/quotes_list";
 
 export const QuotesSection = ({ Theme, language }) => {
@@ -18,19 +18,17 @@ export const QuotesSection = ({ Theme, language }) => {
         {QUOTES_LIST.map((quote) => (
           <>
             <div
-              className={`flex gap-4 p-2 rounded-xl  ${
-                Theme === "light"
+              className={`flex gap-4 p-2 rounded-xl  ${Theme === "light"
                   ? "bg-Villo-light-white10"
                   : "bg-Villo-dark-black85"
-              } `}
+                } `}
             >
               <div
                 key={quote.id}
-                className={`transition-all border border-b-8 border-r-8 w-fit h-fit rounded-xl ${
-                  Theme === "light"
+                className={`transition-all border border-b-8 border-r-8 w-fit h-fit rounded-xl ${Theme === "light"
                     ? "border-Villo-light-primary"
                     : "border-Villo-dark-primary"
-                }  `}
+                  }  `}
               >
                 <Image
                   className={`object-cover object-center duration-500  bg-Villo-dark-primary transition-all rounded-[4px] rounded-tl-xl md:w-[300px] md:h-[300px] h-[250px] w-[250px]`}
