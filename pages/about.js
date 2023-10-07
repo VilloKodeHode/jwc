@@ -1,8 +1,8 @@
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
-import PageLayout from "@/components/Layout";
+import PageLayout from "@/components/Layout/Layout";
 import MetaTags from "@/components/Utilities/Metatags";
-import { CompanyInfo } from "@/components/sections/CompanyInfoSection";
-import { SkillsSection } from "@/components/sections/SkillsSection";
+import { CompanyInfo } from "@/components/sections/AboutPage/CompanyInfoSection";
+import { SkillsSection } from "@/components/sections/AboutPage/SkillsSection";
 
 
 export default function AboutPage({ language, Theme }) {

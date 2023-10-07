@@ -1,11 +1,11 @@
-import CallToActionButton, { ArrowCTA } from "../Buttons";
+import CallToActionButton, { ArrowCTA } from "../../Buttons";
 import {
   ResponsiveP,
   ResponsiveThemedH1,
   ResponsiveThemedH5,
-} from "../Responsive text/ResponsiveText";
+} from "../../Responsive text/ResponsiveText";
 import Link from "next/link";
-import THREESpace from "../animation/Space";
+import THREESpace from "../../animation/Space";
 
 export const HeroSection = ({ language, Theme }) => {
   return (
@@ -16,20 +16,18 @@ export const HeroSection = ({ language, Theme }) => {
           id="HeroSection"
         >
           <div
-            className={`absolute  z-50 w-screen h-24 bg-gradient-to-b ${
-              Theme === "light"
+            className={`absolute  z-50 w-screen h-24 bg-gradient-to-b ${Theme === "light"
                 ? "to-[#fbf9ff] from-Villo-light-white"
                 : "to-[#18181b] from-Villo-dark-black"
-            }  bottom-[99%]`}
+              }  bottom-[99%]`}
           />
           <div className="max-w-6xl animate-PageAppearRight">
             <div className="relative z-50 text-left">
               <ResponsiveP
-                className={`mb-8 text-left ${
-                  Theme === "light"
+                className={`mb-8 text-left ${Theme === "light"
                     ? "text-Villo-light-black85"
                     : "text-Villo-dark-white10"
-                }  w-fit`}
+                  }  w-fit`}
               >
                 {language === "Norwegian"
                   ? "Nettsider for små og mellomstore bedrifter"
@@ -37,11 +35,10 @@ export const HeroSection = ({ language, Theme }) => {
               </ResponsiveP>
               <ResponsiveThemedH1 className="mb-8">
                 <span
-                  className={`${
-                    Theme === "light"
+                  className={`${Theme === "light"
                       ? "text-Villo-light-primary"
                       : "text-Villo-dark-primary"
-                  }`}
+                    }`}
                 >
                   {language === "Norwegian"
                     ? "Webutviklinger"
@@ -74,11 +71,10 @@ export const HeroSection = ({ language, Theme }) => {
             </div>
           </div>
           <div
-            className={`absolute z-50 w-screen h-24 bg-gradient-to-b ${
-              Theme === "light"
+            className={`absolute z-50 w-screen h-24 bg-gradient-to-b ${Theme === "light"
                 ? "from-[#fbf9ff] to-Villo-light-white"
                 : "from-[#18181b] to-Villo-dark-black"
-            }  top-[99%]`}
+              }  top-[99%]`}
           />
         </section>
         <THREESpace className="absolute top-0 -z-20" Theme={Theme} />

@@ -1,4 +1,4 @@
-import PageLayout from "@/components/Layout";
+import PageLayout from "@/components/Layout/Layout";
 import MetaTags from "@/components/Utilities/Metatags";
 import { ServicesSectionPart } from "@/components/sections/sectionsParts/ServiceSectionsParts";
 import { ResponsiveThemedH2, ThemedP } from "@/components/Responsive text/ResponsiveText";

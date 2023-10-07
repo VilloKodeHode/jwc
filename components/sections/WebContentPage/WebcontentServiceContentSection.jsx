@@ -1,5 +1,5 @@
 import { ArrowCTA, ReadMoreButton } from "@/components/Buttons"
-import { ResponsiveThemedH1, ResponsiveThemedH5, ThemedH5 } from "../../Responsive text/ResponsiveText"
+import { ResponsiveThemedH1, ResponsiveThemedH5 } from "../../Responsive text/ResponsiveText"
 import Link from "next/link"
 
 export const WebcontentServiceTopSection = ({ language, Theme }) => {

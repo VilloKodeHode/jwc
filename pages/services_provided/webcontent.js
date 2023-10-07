@@ -1,9 +1,9 @@
-import PageLayout from "@/components/Layout";
+import PageLayout from "@/components/Layout/Layout";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
 
-import { WebcontentProcessSection } from "@/components/sections/webcontent_subpage/WebcontentProcessSection";
-import { WebcontentServiceBottomSection, WebcontentServiceTopSection } from "@/components/sections/webcontent_subpage/WebcontentServiceContentSection";
+import { WebcontentProcessSection } from "@/components/sections/WebContentPage/WebcontentProcessSection";
+import { WebcontentServiceBottomSection, WebcontentServiceTopSection } from "@/components/sections/WebContentPage/WebcontentServiceContentSection";
 
 
 export default function ProvidedServiceWebcontent({ language, Theme }) {

@@ -1,10 +1,11 @@
-import PageLayout from "@/components/Layout";
-import { CTAOneSection } from "@/components/sections/CTAOneSection";
-import { OfferSection } from "@/components/sections/OfferSection";
-import { HeroSection } from "@/components/sections/HeroSection";
+import PageLayout from "@/components/Layout/Layout";
+import { CTAOneSection } from "@/components/sections/IndexPage/CTAOneSection";
+import { OfferSection } from "@/components/sections/IndexPage/OfferSection";
+import { HeroSection } from "@/components/sections/IndexPage/HeroSection";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
-import { SectionNavigation } from "@/components/navigation/SectionNavigation";
+import { SectionNavigation } from "@/components/sections/IndexPage/SectionNavigation";
+
 
 export default function Home({ language, Theme }) {
   return (

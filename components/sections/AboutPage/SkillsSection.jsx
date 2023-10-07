@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { ResponsiveThemedH2, ThemedP } from "../Responsive text/ResponsiveText";
-import SKILLS_LIST from "../Skills/skills_list";
+import { ResponsiveThemedH2, ThemedP } from "../../Responsive text/ResponsiveText";
+import SKILLS_LIST from "../../Skills/skills_list";
 import { SiAdobephotoshop, SiSquarespace, SiWix, SiCanva, SiChakraui, SiCss3, SiDaisyui, SiFigma, SiGit, SiGithub, SiHtml5, SiJavascript, SiNextdotjs, SiNuxtdotjs, SiReact, SiSvelte, SiTailwindcss, SiVisualstudiocode } from "react-icons/si";
 import SiSanity from "public/images/skills/SiSanity.svg";
 export const SkillsSection = ({ language, Theme }) => {

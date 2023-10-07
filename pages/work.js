@@ -1,9 +1,9 @@
-import PageLayout from "@/components/Layout";
+import PageLayout from "@/components/Layout/Layout";
 import { ResponsiveThemedH1 } from "@/components/Responsive text/ResponsiveText";
 import Head from "next/head";
 
-import { NewClientLayout } from "@/components/sections/ClientSection";
-import { QuotesSection } from "@/components/sections/QuotesSections";
+import { NewClientLayout } from "@/components/sections/WorkPage/ClientSection";
+import { QuotesSection } from "@/components/sections/WorkPage/QuotesSections";
 import { CLIENT_LIST } from "@/data/client_list";
 import MetaTags from "@/components/Utilities/Metatags";
 

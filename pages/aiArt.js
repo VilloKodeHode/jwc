@@ -1,4 +1,4 @@
-import PageLayout from "@/components/Layout";
+import PageLayout from "@/components/Layout/Layout";
 import {
   ResponsiveH2,
   ResponsiveH3,
@@ -77,11 +77,10 @@ export default function AIArtPage({ language, Theme }) {
         <section className="grid justify-center">
           <div className="grid justify-center">
             <ThemedH3
-              className={`p-36 transition-all text-[4.209rem] font-light bg-gradient-to-r bg-clip-text transparent ${
-                Theme === "light"
+              className={`p-36 transition-all text-[4.209rem] font-light bg-gradient-to-r bg-clip-text transparent ${Theme === "light"
                   ? "from-Villo-light-primary to-Villo-light-secondary"
                   : "from-Villo-dark-primary to-Villo-dark-secondary"
-              } `}
+                } `}
             >
               {language === "Norwegian" ? "Galleri" : "Gallery"}
             </ThemedH3>

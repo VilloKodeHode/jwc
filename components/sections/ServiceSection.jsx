@@ -1,5 +1,7 @@
-import { ResponsiveThemedH2, ThemedP } from "../Responsive text/ResponsiveText";
-import { ServicesSectionPart } from "./sectionsParts/ServiceSectionsParts";
+import { AiOutlineCheck } from "react-icons/ai";
+import { ResponsiveThemedH2, ResponsiveThemedH5, ThemedH4, ThemedLi, ThemedP } from "../Responsive text/ResponsiveText";
+import { LogoBullitinPoint } from "../base components/LogoBullitinPoint";
+
 
 export const ServicesSection = ({ language, Theme }) => {
     return (
@@ -56,3 +58,94 @@ export const ServicesSection = ({ language, Theme }) => {
         </div>
     );
 };
+
+
+export const ServicesSectionPart = ({
+    language,
+    Theme,
+    norTitle,
+    engTitle,
+    norText,
+    engText,
+}) => {
+    return (
+        <div className="mt-5 md:mt-0 md:col-span-1 group cursor-default hover:scale-[1.02] active:scale-[1.02] transition-all duration-300">
+            <div className={`overflow-hidden shadow sm:rounded-lg transition-transform duration-300 group-hover:outline ${Theme === "light"
+                ? " group-hover:outline-Villo-light-white20"
+                : " group-hover:outline-Villo-dark-black50"
+                }`}>
+                <div
+                    className={`flex transition-colors duration-300 flex-col justify-between px-4 py-5 min-h-[150px] md:min-h-[200px] ${Theme === "light"
+                        ? "bg-Villo-light-white10 group-hover:bg-Villo-light-primary"
+                        : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-primary"
+                        } sm:p-6`}
+                >
+                    <div className="h-full ">
+                        <ResponsiveThemedH5
+                            className={`font-bold max-w-fit ${Theme === "light"
+                                ? "group-hover:text-Villo-light-white"
+                                : "group-hover:text-Villo-dark-black"
+                                }`}
+                        >
+                            {language === "Norwegian" ? norTitle : engTitle}
+                        </ResponsiveThemedH5>
+
+                        <ThemedP
+                            className={`mt-2 ${Theme === "light"
+                                ? "group-hover:text-Villo-light-white"
+                                : "group-hover:text-Villo-dark-black"
+                                }`}
+                        >
+                            {language === "Norwegian" ? norText : engText}
+                        </ThemedP>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+
+export const SectionProcessPartSection = ({ Theme, language, norTitle, engTitle, children }) => {
+    return (
+        <>
+            <div className={`z-20 flex flex-col justify-center gap-4`}>
+                <div className="flex items-center justify-center gap-2 mb-8">
+
+                    <LogoBullitinPoint Theme={Theme} />
+                    <ThemedH4 className="">
+                        {language === "Norwegian"
+                            ? norTitle
+                            : engTitle}
+                    </ThemedH4>
+                </div>
+                <div className={`relative flex flex-row flex-wrap lg:justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
+                    ? "bg-Villo-light-white10 hover:bg-Villo-light-white15"
+                    : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
+                    }`}>
+                    {children}
+                </div>
+            </div>
+        </>
+    )
+}
+
+export const CheckProcessBullitin = ({ Theme, children }) => {
+    return (
+        <div className={`flex relative group items-start min-h-[103px] p-8 m-2 transition-all gap-2 sm:rounded-lg 
+  
+            `}>
+            <div>
+                <AiOutlineCheck className={`w-8 h-8 transition-all  ${Theme === "light"
+                    ? "text-Villo-light-primary group-hover:scale-125"
+                    : "text-Villo-dark-primary group-hover:scale-125"
+                    }`} />
+            </div>
+            {/* <div className="flex flex-col justify-center h-full"> */}
+            <ThemedLi className="list-none lg:max-w-xs ">
+                {children}
+            </ThemedLi>
+            {/* </div> */}
+        </div>
+    )
+}

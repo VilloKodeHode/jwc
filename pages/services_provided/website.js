@@ -1,12 +1,9 @@
-import PageLayout from "@/components/Layout";
+import PageLayout from "@/components/Layout/Layout";
 import MetaTags from "@/components/Utilities/Metatags";
-
-
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
-import { WebsiteProcessSection } from "@/components/sections/website_subpage/WebsiteProcessSection";
-import { WebsiteServiceBottomSection, WebsiteServiceTopSection } from "@/components/sections/website_subpage/WebsiteServiceContentSections";
-import Link from "next/link";
-import { ArrowCTA } from "@/components/Buttons";
+import { WebsiteProcessSection } from "@/components/sections/WebsitePage/WebsiteProcessSection";
+import { WebsiteServiceBottomSection, WebsiteServiceTopSection } from "@/components/sections/WebsitePage/WebsiteServiceContentSections";
+
 
 export default function ProvidedServiceWebsite({ language, Theme }) {
   return (
