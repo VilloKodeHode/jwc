@@ -19,7 +19,6 @@ export default function ProvidedServiceWebsite({ language, Theme }) {
       />
       <PageLayout gap="gap-28">
         <WebsiteServiceTopSection language={language} Theme={Theme} />
-
         <WebsiteProcessSection id="websiteYouGet" language={language} Theme={Theme} />
         <WebsiteServiceBottomSection language={language} Theme={Theme} />
         <LetsGoCTA

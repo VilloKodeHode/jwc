@@ -1,17 +1,13 @@
 import { TextFlex } from "../../Layout"
-import { ResponsiveThemedH3, ThemedH3 } from "../../Responsive text/ResponsiveText"
+import { ResponsiveThemedH3 } from "../../Responsive text/ResponsiveText"
 import { LogoProcessBullitin, SectionProcessPartSection } from "../sectionsParts/SectionProcessPartSection"
-import {
-    ResponsiveThemedH5,
-    ResponsiveThemedH2,
-    ThemedP,
-} from "../../Responsive text/ResponsiveText";
+import { ResponsiveThemedH2, ThemedP } from "../../Responsive text/ResponsiveText";
 import { ServicesSectionPart } from "../sectionsParts/ServiceSectionsParts";
 
 
 export const WebsiteProcessSection = ({ language, Theme, id }) => {
     return (
-        <section className="relative grid justify-center items-center w-full bg-Villo-tertiary min-h-[35vh] text-left xl:gap-0 gap-12">
+        <section className="grid justify-center items-center w-full bg-Villo-tertiary min-h-[35vh] text-left xl:gap-0 gap-12">
             <TextFlex>
                 <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
                     {language === "Norwegian"
@@ -22,6 +18,7 @@ export const WebsiteProcessSection = ({ language, Theme, id }) => {
             <div id={id} className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15">
 
                 <SectionProcessPartSection Theme={Theme} language={language} engTitle="You get:" norTitle="Du får:">
+
                     <LogoProcessBullitin Theme={Theme} language={language}>
                         {language === "Norwegian"
                             ? "Ingen mellomledd som tar en stor del av budsjettet. Vi avtaler ferdig pris før prosjektet starter"
@@ -90,8 +87,9 @@ export const WebsiteProcessSection = ({ language, Theme, id }) => {
                             ? "Fornøydhetsgaranti! Resultatet skal bli som avtalt, og jeg strekker meg ekstra langt for å gi et godt produkt."
                             : "Guarantee of quality! The result will be as agreed, and I will go the extra mile to give you a good product."}
                     </LogoProcessBullitin>
-
+                    <div className={`absolute -z-10 w-screen overflow-hidden translate-x-1/2 -translate-y-1/2 bg-opacity-50  ml:h-[90%] h-[97%] right-1/2 top-1/2 ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"} `} />
                 </SectionProcessPartSection>
+
             </div>
         </section>
     )

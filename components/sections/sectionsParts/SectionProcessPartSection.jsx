@@ -5,7 +5,7 @@ import { AiOutlineCheck } from "react-icons/ai"
 export const SectionProcessPartSection = ({ Theme, language, norTitle, engTitle, children }) => {
     return (
         <>
-            <div className={`flex flex-col justify-center gap-4`}>
+            <div className={`z-20 flex flex-col justify-center gap-4`}>
                 <div className="flex items-center justify-center gap-2 mb-8">
 
                     <LogoBullitinPoint Theme={Theme} />
@@ -15,7 +15,7 @@ export const SectionProcessPartSection = ({ Theme, language, norTitle, engTitle,
                             : engTitle}
                     </ThemedH4>
                 </div>
-                <div className={`flex flex-row flex-wrap lg:justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
+                <div className={`relative flex flex-row flex-wrap lg:justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
                     ? "bg-Villo-light-white10 hover:bg-Villo-light-white15"
                     : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
                     }`}>
@@ -31,7 +31,6 @@ export const LogoProcessBullitin = ({ Theme, children }) => {
         <div className={`flex relative group items-start min-h-[103px] p-8 m-2 transition-all gap-2 sm:rounded-lg 
   
             `}>
-            {/* <LogoBullitinPointSmall Theme={Theme} /> */}
             <div>
                 <AiOutlineCheck className={`w-8 h-8 transition-all  ${Theme === "light"
                     ? "text-Villo-light-primary group-hover:scale-125"

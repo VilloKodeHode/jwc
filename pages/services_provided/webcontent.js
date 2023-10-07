@@ -1,8 +1,10 @@
 import PageLayout from "@/components/Layout";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
-import { WebcontentServiceTopSection } from "@/components/sections/webcontent_subpage/WebcontentServiceTopSection";
+
 import { WebcontentProcessSection } from "@/components/sections/webcontent_subpage/WebcontentProcessSection";
+import { WebcontentServiceBottomSection, WebcontentServiceTopSection } from "@/components/sections/webcontent_subpage/WebcontentServiceContentSection";
+
 
 export default function ProvidedServiceWebcontent({ language, Theme }) {
   return (
@@ -15,12 +17,13 @@ export default function ProvidedServiceWebcontent({ language, Theme }) {
       />
       <PageLayout gap="gap-28">
         <WebcontentServiceTopSection language={language} Theme={Theme} />
-        <WebcontentProcessSection language={language} Theme={Theme} />
+        <WebcontentProcessSection id="webContentYouGet" language={language} Theme={Theme} />
+        <WebcontentServiceBottomSection language={language} Theme={Theme} />
         <LetsGoCTA
           language={language}
           Theme={Theme}
-          engText="Let us make you new website!"
-          norText="La oss lage din nye nettside!"
+          engText="Let us make some webcontent!"
+          norText="La oss lage noe nettside!"
           href="/contact"
           buttonEngText="Contact us"
           buttonNorText="Kontakt oss"
