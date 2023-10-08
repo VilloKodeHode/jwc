@@ -3,6 +3,8 @@ import Head from "next/head";
 import { ContactformSection } from "@/components/sections/ContactPage/ContactformSection";
 
 export default function ContactPage({ language, Theme }) {
+  // const endpoint = process.env.EMAIL_API;
+  // console.log(endpoint);
   return (
     <>
       <Head>
