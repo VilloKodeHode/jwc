@@ -23,7 +23,7 @@ export const ContactformSection = ({ language, Theme }) => {
 
 
 
-  const endpoint = process.env.EMAIL_API;
+  const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
 
 
   const handleSubmit = (e) => {
