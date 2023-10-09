@@ -17,7 +17,7 @@ export default function Home({ language, Theme }) {
         url="https://jvwebconsult.no/"
       />
       <PageLayout gap="gap-28">
-        <SectionNavigation language={language} Theme={Theme} />
+        {/* <SectionNavigation language={language} Theme={Theme} /> */}
         <HeroSection language={language} Theme={Theme} />
         <CTAOneSection language={language} Theme={Theme} />
         <OfferSection language={language} Theme={Theme} />

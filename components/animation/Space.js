@@ -8,6 +8,7 @@ const THREESpace = ({ Theme }) => {
   const renderer = useRef();
   const particles = useRef();
   let frame = useRef(0);
+
   useEffect(() => {
     scene.current = new THREE.Scene();
     camera.current = new THREE.PerspectiveCamera(
@@ -21,8 +22,8 @@ const THREESpace = ({ Theme }) => {
     renderer.current.setSize(window.innerWidth, window.innerHeight);
     renderer.current.setClearColor(Theme === "light" ? 0x571dff : 0x858ee0, 0);
 
-    const particleCount = 1000;
-    const geometry = new THREE.CircleGeometry(0.1, 200);
+    const particleCount = 2000;
+    const geometry = new THREE.SphereGeometry(0.05, 16, 16);
     const colors =
       Theme === "light"
         ? [
@@ -42,11 +43,11 @@ const THREESpace = ({ Theme }) => {
       });
       const particle = new THREE.Mesh(geometry, material);
       particle.position.set(
-        (Math.random() - 0.5) * 25,
-        (Math.random() - 0.5) * 25,
-        (Math.random() - 0.5) * 25
+        (Math.random() - 0.3) * 25,
+        (Math.random() - 0.3) * 25,
+        (Math.random() - 0.3) * 25
       );
-      particle.scale.set(0.1, 0.1, 0.1);
+      particle.scale.set(0.3, 0.3, 0.3);
 
       particles.current.add(particle);
     }
@@ -54,6 +55,11 @@ const THREESpace = ({ Theme }) => {
     scene.current.add(particles.current);
 
     camera.current.position.z = 10;
+
+    // Rotation speed
+    const baseRotationSpeed = 0.00008008;
+    const scrollRotationSpeed = 0.0004008;
+    let totalRotationY = 0.00080008;
 
     function handleResize() {
       const newWidth = window.innerWidth;
@@ -70,12 +76,16 @@ const THREESpace = ({ Theme }) => {
     function animate() {
       frame.current = requestAnimationFrame(animate);
 
-      // Parallax scrolling effect
-      particles.current.position.y = window.scrollY * 0.002;
+      // Continuous rotation around Y-axis
+      totalRotationY += baseRotationSpeed;
+      particles.current.rotation.y = totalRotationY;
 
-      // Update particles
-      particles.current.rotation.x += 0.0000008;
-      particles.current.rotation.y += 0.0000008;
+      // Parallax scrolling effect
+      const scrollFactor = 0.002;
+      particles.current.position.y = window.scrollY * scrollFactor;
+
+      // Additional rotation when scrolling
+      particles.current.rotation.x = window.scrollY * scrollRotationSpeed;
 
       renderer.current.render(scene.current, camera.current);
     }
