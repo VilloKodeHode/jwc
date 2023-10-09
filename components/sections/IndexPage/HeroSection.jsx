@@ -6,27 +6,28 @@ import {
 } from "../../Responsive text/ResponsiveText";
 import Link from "next/link";
 import THREESpace from "../../animation/Space";
+import { SectionNavigation } from "./SectionNavigation";
 
 export const HeroSection = ({ language, Theme }) => {
   return (
     <>
-      <div className="relative w-full h-full">
+      <div className="relative flex justify-center w-full h-full">
         <section
-          className="relative z-10 flex items-center justify-center w-full min-h-[calc(100vh)] bg-center bg-cover"
+          className="relative max-w-6xl z-10 flex items-center justify-center w-full min-h-[calc(100vh-142px)] bg-center bg-cover"
           id="HeroSection"
         >
-          <div
-            className={`absolute  z-50 w-screen h-24 bg-gradient-to-b ${Theme === "light"
-                ? "to-[#fbf9ff] from-Villo-light-white"
-                : "to-[#18181b] from-Villo-dark-black"
+          {/* <div
+            className={`absolute z-50 w-screen h-24 bg-gradient-to-b ${Theme === "light"
+              ? "to-[#fbf9ff] from-Villo-light-white"
+              : "to-[#18181b] from-Villo-dark-black"
               }  bottom-[99%]`}
-          />
+          /> */}
           <div className="max-w-6xl animate-PageAppearRight">
             <div className="relative z-50 text-left">
               <ResponsiveP
                 className={`mb-8 text-left ${Theme === "light"
-                    ? "text-Villo-light-black85"
-                    : "text-Villo-dark-white10"
+                  ? "text-Villo-light-black85"
+                  : "text-Villo-dark-white10"
                   }  w-fit`}
               >
                 {language === "Norwegian"
@@ -36,8 +37,8 @@ export const HeroSection = ({ language, Theme }) => {
               <ResponsiveThemedH1 className="mb-8">
                 <span
                   className={`${Theme === "light"
-                      ? "text-Villo-light-primary"
-                      : "text-Villo-dark-primary"
+                    ? "text-Villo-light-primary"
+                    : "text-Villo-dark-primary"
                     }`}
                 >
                   {language === "Norwegian"
@@ -45,15 +46,14 @@ export const HeroSection = ({ language, Theme }) => {
                     : "Website developer"}
                 </span>{" "}
                 {language === "Norwegian" ? "som lager" : "creating"}{" "}
-                {/* <span className="text-Villo-secondary"> */}{" "}
+
                 {language === "Norwegian" ? "din idè" : "your idea"}{" "}
-                {/* </span>{" "} */}
-                {/* <span className="text-Villo-tertiary"> */}{" "}
+
                 {language === "Norwegian" ? "raskere" : "faster"}{" "}
-                {/* </span> */}
-                {language === "Norwegian" ? "og" : "and"}
-                {/* <span className="text-Villo-tertiary"> */}{" "}
-                {language === "Norwegian" ? "bedre" : "better"} {/* </span> */}
+
+                {language === "Norwegian" ? "og" : "and"}{" "}
+
+                {language === "Norwegian" ? "bedre" : "better"}
               </ResponsiveThemedH1>
 
               <ResponsiveThemedH5 className="mb-8 font-normal text-left">
@@ -69,11 +69,13 @@ export const HeroSection = ({ language, Theme }) => {
                 </Link>
               </div>
             </div>
+
           </div>
+          {/* <SectionNavigation /> */}
           <div
-            className={`absolute z-50 w-screen h-24 bg-gradient-to-b ${Theme === "light"
-                ? "from-[#fbf9ff] to-Villo-light-white"
-                : "from-[#18181b] to-Villo-dark-black"
+            className={`absolute z-50 w-screen h-48 bg-gradient-to-b ${Theme === "light"
+              ? "from-[#fbf9ff] to-Villo-light-white"
+              : "from-[#18181b] to-Villo-dark-black"
               }  top-[99%]`}
           />
         </section>
