@@ -44,7 +44,7 @@ export const CTAOneSection = ({ language, Theme }) => {
         <div className="flex items-center justify-center h-full m-0">
           <div className="flex flex-col items-center justify-center w-full max-w-6xl md:flex-row">
             <div className="w-full md:w-1/2">
-              <div className="relative z-10 text-center select-none md:text-left">
+              <div className="relative z-10 select-none">
                 <ResponsiveH2 className="mb-8 ">
                   <span
                     onMouseEnter={() => setCurrentWeb("/HeroDesign.png")}

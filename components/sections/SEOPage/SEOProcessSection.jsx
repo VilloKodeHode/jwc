@@ -9,8 +9,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
             <TextFlex>
                 <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
                     {language === "Norwegian"
-                        ? "Hvorfor velge meg til å fikse din SEO..."
-                        : "Why you should choose me to fix your SEO..."}
+                        ? "Hvorfor velge meg til å oppgradere din SEO..."
+                        : "Why you should choose me upgrade your SEO..."}
                 </ResponsiveThemedH3>
             </TextFlex>
             <div id={id} className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15">

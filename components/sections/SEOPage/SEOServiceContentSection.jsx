@@ -5,21 +5,21 @@ import Link from "next/link"
 export const SEOServiceTopSection = ({ language, Theme }) => {
     return (
         <section className="py-12">
-            <div className="flex flex-col items-center justify-center gap-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div className="text-center">
+            <div className="flex flex-col items-start justify-center gap-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div className="flex w-full text-left">
                     <ResponsiveThemedH1>
                         {language === "Norwegian" ? "Trenger du mer besøkende på siden?" : "Need more visitors on your website?"}
                     </ResponsiveThemedH1>
                 </div>
-                <div className="text-center animate-PageAppearRight">
+                <div className="animate-PageAppearRight">
                     <ResponsiveThemedH5 className={`mt-4 font-normal`}>
                         {language === "Norwegian"
-                            ? "Levering av engasjerende og innflytelsesrik webinnhold er min ekspertise. Jeg forstår at innholdet på nettstedet ditt spiller en avgjørende rolle i å tiltrekke og beholde besøkende. Med en lidenskap for effektiv kommunikasjon og en evne for kreativitet, tilbyr jeg profesjonelle tjenester innen webinnholdsskaping til bedrifter og enkeltpersoner som ønsker å skape et varig inntrykk på nettet."
-                            : "Delivering engaging and impactful web content is my expertise. I understand that the content on your website plays a pivotal role in attracting and retaining visitors. With a passion for effective communication and a flair for creativity, I offer professional web content creation services to businesses and individuals looking to make a lasting impression online."}
+                            ? "Ønsker du å øke synligheten på nettet og tiltrekke trafikk til nettsiden din? Våre tilpassede SEO-tjenester er skapt for dine spesifikke forretningsmål. Enten du ønsker å oppnå topp rangering på Google eller dominere det lokale markedet, er vi eksperter på nøkkelordoptimalisering, on-page og off-page SEO-teknikker, samt innholdsforbedring. I tillegg gir vår gjennomsiktige rapportering deg muligheten til å følge fremgangen og se konkrete resultater."
+                            : "Looking to boost online visibility and drive traffic to your website? Our tailored SEO services are designed for your unique business goals. Whether it's achieving top rankings on Google or local market dominance, we specialize in keyword optimization, on/off-page SEO, and content enhancement. Plus, our transparent reporting lets you track progress and see tangible results."}
                     </ResponsiveThemedH5>
 
                 </div>
-                <div className="grid justify-center grid-flow-col gap-8">
+                <div className="grid justify-center gap-8 ml:grid-flow-col">
                     <div className="h-[60px] flex justify-start items-center max-w-fit">
                         <a href="#webContentYouGet" className="">
                             <ReadMoreButton Theme={Theme} className="">
@@ -47,13 +47,13 @@ export const SEOServiceBottomSection = ({ language, Theme }) => {
             <div className="mt-10 text-center animate-PageAppearRight">
                 <ResponsiveThemedH5 className={`mt-4 font-normal`}>
                     {language === "Norwegian"
-                        ? "Med en lidenskap for effektiv kommunikasjon og en evne for kreativitet, tilbyr jeg profesjonelle tjenester innen webinnholdsskaping til bedrifter og enkeltpersoner som ønsker å skape et varig inntrykk på nettet. Min tilnærming til innholdsskaping er skreddersydd for dine unike behov og mål."
-                        : "With a passion for effective communication and a flair for creativity, I offer professional web content creation services to businesses and individuals looking to make a lasting impression online. My approach to content creation is tailored to your unique needs and objectives."}
+                        ? "Å velge oss betyr suksess. Vi tilpasser SEO-løsninger eksklusivt for din bedrift, forbedrer nettsidens innhold og struktur for høyere rangering. Vår ekspertise omfatter lokale SEO-strategier, transparent rapportering og maksimal online suksess. Med oss øker du trafikken og blir mer synlig for brukere. Velkommen til å forbedre din online tilstedeværelse."
+                        : "Choosing us means success. We tailor SEO solutions exclusively for your business, improve your website's content and structure for higher rankings. Our expertise includes local SEO strategies, transparent reporting, and maximum online success. With us, you'll increase traffic and become more visible to users. Welcome to improving your online presence."}
                 </ResponsiveThemedH5>
                 <ResponsiveThemedH5 className={`mt-4 font-normal`}>
                     {language === "Norwegian"
                         ? "Enten du trenger engasjerende blogginnlegg, informative artikler, overbevisende produktbeskrivelser eller engasjerende innhold for sosiale medier, har jeg ferdighetene som kreves. Jeg gjennomfører grundig research for å sikre at innholdet ikke bare er velinformert, men også relevant for din målgruppe."
-                        : "Whether you require compelling blog posts, informative articles, persuasive product descriptions, or engaging social media content, I have the skills to deliver. I conduct thorough research to ensure that the content is not only well-informed but also relevant to your target audience."}
+                        : "Ikke la nettsiden din forbli ubemerket. Forbedre din online synlighet, øk organisk trafikk og forbedre konverteringer med våre ekspert SEO-tjenester. Ta kontakt i dag for å diskutere hvordan vi kan forbedre din SEO-strategi og løfte din bedrift til nye høyder i den digitale verden."}
                 </ResponsiveThemedH5>
             </div>
         </div>

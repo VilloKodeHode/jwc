@@ -19,7 +19,7 @@ export const WebcontentServiceTopSection = ({ language, Theme }) => {
                     </ResponsiveThemedH5>
 
                 </div>
-                <div className="grid justify-center grid-flow-col gap-8">
+                <div className="grid justify-center gap-8 ml:grid-flow-col">
                     <div className="h-[60px] flex justify-start items-center max-w-fit">
                         <a href="#webContentYouGet" className="">
                             <ReadMoreButton Theme={Theme} className="">

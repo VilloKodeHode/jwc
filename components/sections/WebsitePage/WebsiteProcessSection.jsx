@@ -8,7 +8,7 @@ import { CheckProcessBullitin, SectionProcessPartSection } from "../ServiceSecti
 
 export const WebsiteProcessSection = ({ language, Theme, id }) => {
     return (
-        <section className="grid justify-center items-center w-full bg-Villo-tertiary min-h-[35vh] text-left xl:gap-0 gap-12">
+        <section className="grid justify-center items-center w-full min-h-[35vh] text-left xl:gap-0 gap-12">
             <TextFlex>
                 <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
                     {language === "Norwegian"
