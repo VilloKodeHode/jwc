@@ -11,14 +11,14 @@ export const WebsiteServiceTopSection = ({ language, Theme }) => {
                         {language === "Norwegian" ? "Trenger du ny nettside?" : "Need a new website?"}
                     </ResponsiveThemedH1>
                 </div>
-                <div className="text-left animate-PageAppearRight">
+                <div className="animate-PageAppearRight">
                     <ResponsiveThemedH5 className={`font-normal`}>
                         {language === "Norwegian"
                             ? "Jeg lager nettsider som er optimalisert for best mulig brukeropplevelse og trafikk på nettet. Den nyeste teknologien blir brukt for å sikre at nettsiden din er rask, moderne og responsiv. Som profesjonell nettsidedesigner spesialiserer jeg meg på å lage imponerende og funksjonelle nettsteder som tilpasses dine unike behov og mål."
                             : "I create websites that are optimized for the best user experience and web traffic. The latest technology is used to ensure that your website is fast, secure, and responsive. As a professional website designer, I specialize in crafting stunning and functional websites that cater to your unique needs and goals."}
                     </ResponsiveThemedH5>
                 </div>
-                <div className="grid justify-center grid-flow-col gap-8">
+                <div className="grid justify-center gap-8 ml:grid-flow-col">
                     <div className="h-[60px] flex justify-start items-center max-w-fit">
                         <a href="#websiteYouGet" className="">
                             <ReadMoreButton Theme={Theme} className="">

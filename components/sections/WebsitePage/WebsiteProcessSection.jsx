@@ -8,7 +8,7 @@ import { CheckProcessBullitin, SectionProcessPartSection } from "../ServiceSecti
 
 export const WebsiteProcessSection = ({ language, Theme, id }) => {
     return (
-        <section className="grid justify-center items-center w-full bg-Villo-tertiary min-h-[35vh] text-left xl:gap-0 gap-12">
+        <section className="grid justify-center items-center w-full min-h-[35vh] text-left xl:gap-0 gap-12">
             <TextFlex>
                 <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
                     {language === "Norwegian"
@@ -23,7 +23,7 @@ export const WebsiteProcessSection = ({ language, Theme, id }) => {
                     <CheckProcessBullitin Theme={Theme} language={language}>
                         {language === "Norwegian"
                             ? "Ingen mellomledd som tar en stor del av budsjettet. Vi avtaler ferdig pris før prosjektet starter"
-                            : "No middleman that takes a big part of the budget"}
+                            : "No middleman that takes a big part of the budget. A a final price is set before the project starts"}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin

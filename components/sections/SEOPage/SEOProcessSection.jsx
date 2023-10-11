@@ -9,8 +9,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
             <TextFlex>
                 <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
                     {language === "Norwegian"
-                        ? "Hvorfor velge meg til å fikse din SEO..."
-                        : "Why you should choose me to fix your SEO..."}
+                        ? "Hvorfor velge meg til å oppgradere din SEO..."
+                        : "Why you should choose me upgrade your SEO..."}
                 </ResponsiveThemedH3>
             </TextFlex>
             <div id={id} className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15">
@@ -45,8 +45,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Vi forbedrer kvaliteten og relevansen til nettsidens innhold for å engasjere brukere og søkemotorer."
-                            : "We enhance the quality and relevance of your website's content to engage users and search engines alike."}
+                            ? "Jeg forbedrer kvaliteten og relevansen til nettsidens innhold for å engasjere brukere og søkemotorer."
+                            : "I enhance the quality and relevance of your website's content to engage users and search engines alike."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -54,8 +54,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Vår omfattende tilnærming inkluderer både on-page og off-page SEO teknikker for å maksimere din online suksess"
-                            : "Our comprehensive approach includes both on-page and off-page SEO techniques to maximize your online success"}
+                            ? "Min omfattende tilnærming inkluderer både on-page og off-page SEO teknikker for å maksimere din online suksess"
+                            : "My comprehensive approach includes both on-page and off-page SEO techniques to maximize your online success"}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -63,8 +63,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Dominer ditt lokale marked med våre spesialiserte lokale SEO strategier, som tiltrekker flere lokale kunder til din virksomhet"
-                            : "Dominate your local market with our specialized local SEO strategies, driving more local customers to your business"}
+                            ? "Dominer ditt lokale marked med mine spesialiserte lokale SEO strategier, som tiltrekker flere lokale kunder til din virksomhet"
+                            : "Dominate your local market with my specialized local SEO strategies, driving more local customers to your business"}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -81,8 +81,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Følg din SEO fremgang med gjennomsiktig rapportering og analyser, som sikrer at du kan se de konkrete resultatene av våre innsats."
-                            : "Track your SEO progress with transparent reporting and analytics, ensuring you can see the tangible results of our efforts."}
+                            ? "Følg din SEO fremgang med gjennomsiktig rapportering og analyser, som sikrer at du kan se de konkrete resultatene av min innsats."
+                            : "Track your SEO progress with transparent reporting and analytics, ensuring you can see the tangible results of my efforts."}
                     </CheckProcessBullitin>
                 </SectionProcessPartSection>
             </div>

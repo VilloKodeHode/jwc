@@ -4,7 +4,7 @@ import MetaTags from "@/components/Utilities/Metatags";
 
 
 import { SEOServiceBottomSection, SEOServiceTopSection } from "@/components/sections/SEOPage/SEOServiceContentSection";
-import { SEOProcessSection } from "@/components/sections/SEOPage/SEOcontentProcessSection";
+import { SEOProcessSection } from "@/components/sections/SEOPage/SEOProcessSection";
 
 
 export default function ProvidedServiceSEO({ language, Theme }) {
@@ -23,8 +23,8 @@ export default function ProvidedServiceSEO({ language, Theme }) {
         <LetsGoCTA
           language={language}
           Theme={Theme}
-          engText="Let us make some webcontent!"
-          norText="La oss lage noe nettside!"
+          engText="Lets improve your SEO!"
+          norText="Lås opp din synlighet!"
           href="/contact"
           buttonEngText="Contact us"
           buttonNorText="Kontakt oss"

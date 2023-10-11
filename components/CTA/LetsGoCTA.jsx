@@ -13,9 +13,9 @@ export const LetsGoCTA = ({
   buttonNorText,
 }) => {
   return (
-    <section className="relative grid items-center justify-center px-12 pt-12 mx-auto md:py-12 sm:pt-0 mb-[126px]">
+    <section className="relative grid items-center justify-center px-12 sm:pt-0 mb-[126px]">
       <div className="z-20 mb-16">
-        <ResponsiveThemedH3 className="z-20 flex px-12 mb-10 font-extrabold text-center">
+        <ResponsiveThemedH3 className="z-20 flex px-12 font-extrabold text-center">
           {language === "Norwegian" ? norText : engText}
         </ResponsiveThemedH3>
       </div>

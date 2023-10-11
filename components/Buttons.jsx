@@ -198,7 +198,7 @@ export function ScrollToTopButton({ Theme }) {
       className={`${Theme === "light"
         ? "text-Villo-light-white20 hover:text-Villo-light-secondary"
         : "text-Villo-dark-black50 hover:text-Villo-dark-secondary"
-        } z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 rounded-full hover:scale-125  ${isVisible ? "opacity-100 " : "opacity-0 cursor-default"
+        } z-50 p-1 fixed bottom-0 right-0 transition-all duration-200 rounded-full hover:scale-125  ${isVisible ? "opacity-100 " : "opacity-0 cursor-default"
         }`}
     >
       <FiArrowUpCircle className="w-12 h-12" strokeWidth={1.5} />

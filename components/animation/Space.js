@@ -22,7 +22,7 @@ const THREESpace = ({ Theme }) => {
     renderer.current.setSize(window.innerWidth, window.innerHeight);
     renderer.current.setClearColor(Theme === "light" ? 0x571dff : 0x858ee0, 0);
 
-    const particleCount = 2000;
+    const particleCount = 1500;
     const geometry = new THREE.SphereGeometry(0.05, 16, 16);
     const colors =
       Theme === "light"
@@ -43,9 +43,9 @@ const THREESpace = ({ Theme }) => {
       });
       const particle = new THREE.Mesh(geometry, material);
       particle.position.set(
-        (Math.random() - 0.3) * 25,
-        (Math.random() - 0.3) * 25,
-        (Math.random() - 0.3) * 25
+        (Math.random() - 0.3) * 35,
+        (Math.random() - 0.3) * 35,
+        (Math.random() - 0.3) * 35
       );
       particle.scale.set(0.3, 0.3, 0.3);
 
@@ -59,7 +59,7 @@ const THREESpace = ({ Theme }) => {
     // Rotation speed
     const baseRotationSpeed = 0.00008008;
     const scrollRotationSpeed = 0.0004008;
-    let totalRotationY = 0.00080008;
+    let totalRotationY = 0.00180008;
 
     function handleResize() {
       const newWidth = window.innerWidth;
@@ -98,7 +98,10 @@ const THREESpace = ({ Theme }) => {
     };
   }, [Theme, canvasRef, scene, camera, renderer, particles]);
 
-  return <canvas ref={canvasRef} className="absolute top-0" />;
+  return <canvas ref={canvasRef} className={`absolute top-0 border-b ${Theme === "light"
+    ? "border-Villo-light-primary opacity-0"
+    : "border-Villo-dark-primary opacity-100"
+    }`} />;
 };
 
 export default THREESpace;

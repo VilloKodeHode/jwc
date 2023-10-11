@@ -11,9 +11,9 @@ import { SectionNavigation } from "./SectionNavigation";
 export const HeroSection = ({ language, Theme }) => {
   return (
     <>
-      <div className="relative flex justify-center w-full h-full">
+      <div className="flex justify-center w-full h-full ">
         <section
-          className="relative max-w-6xl z-10 flex items-center justify-center w-full min-h-[calc(100vh-142px)] bg-center bg-cover"
+          className=" max-w-6xl z-10 flex items-center justify-center w-full min-h-[calc(100vh-142px)] bg-center bg-cover"
           id="HeroSection"
         >
           {/* <div
@@ -72,15 +72,21 @@ export const HeroSection = ({ language, Theme }) => {
 
           </div>
           {/* <SectionNavigation /> */}
-          <div
+          {/* <div
             className={`absolute z-50 w-screen h-48 bg-gradient-to-b ${Theme === "light"
               ? "from-[#fbf9ff] to-Villo-light-white"
               : "from-[#18181b] to-Villo-dark-black"
               }  top-[99%]`}
-          />
+          /> */}
         </section>
         <THREESpace className="absolute top-0 -z-20" Theme={Theme} />
       </div>
+      {/* <div
+        className={`z-50 w-screen h-12 bg-gradient-to-b ${Theme === "light"
+          ? "from-[#fbf9ff] to-Villo-light-white"
+          : "from-[#18181b] to-Villo-dark-black"
+          }  top-[99%]`}
+      /> */}
     </>
   );
 };

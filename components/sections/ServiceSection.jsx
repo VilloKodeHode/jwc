@@ -119,7 +119,7 @@ export const SectionProcessPartSection = ({ Theme, language, norTitle, engTitle,
                             : engTitle}
                     </ThemedH4>
                 </div>
-                <div className={`relative flex flex-row flex-wrap lg:justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
+                <div className={`relative transition-all flex flex-row flex-wrap lg:justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
                     ? "bg-Villo-light-white10 hover:bg-Villo-light-white15"
                     : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
                     }`}>
