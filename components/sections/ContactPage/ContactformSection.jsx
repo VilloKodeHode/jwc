@@ -123,7 +123,7 @@ export const ContactformSection = ({ language, Theme }) => {
                     } w-full px-4 py-2 border rounded-lg  focus:outline `}
                   placeholder={
                     language === "Norwegian"
-                      ? "Din email addresse"
+                      ? "Din email adresse"
                       : "Your email address"
                   }
                   value={formData.email}
