@@ -18,16 +18,16 @@ export const QuotesSection = ({ Theme, language }) => {
         {QUOTES_LIST.map((quote) => (
           <>
             <div
-              className={`flex gap-4 p-2 rounded-xl  ${Theme === "light"
-                  ? "bg-Villo-light-white10"
-                  : "bg-Villo-dark-black85"
+              className={`flex 2xl:flex-row lg:flex-col gap-4 p-2 rounded-xl  ${Theme === "light"
+                ? "bg-Villo-light-white10"
+                : "bg-Villo-dark-black85"
                 } `}
             >
               <div
                 key={quote.id}
                 className={`transition-all border border-b-8 border-r-8 w-fit h-fit rounded-xl ${Theme === "light"
-                    ? "border-Villo-light-primary"
-                    : "border-Villo-dark-primary"
+                  ? "border-Villo-light-primary"
+                  : "border-Villo-dark-primary"
                   }  `}
               >
                 <Image
@@ -38,26 +38,28 @@ export const QuotesSection = ({ Theme, language }) => {
                   height={300}
                 />
               </div>
-              <div className="relative z-10 flex flex-col justify-between p-1">
+              <div className="relative z-10 flex flex-col justify-between h-full p-1">
                 <Image
-                  className="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-5 top-1/2 left-1/2"
+                  className="absolute transform -translate-x-1/2 -translate-y-1/2 opacity-10 top-1/2 left-1/2"
                   src={quote.logo}
                   alt="company logo"
                   width={300}
                   height={300}
                 />
-                <ResponsiveThemedP className="z-20 max-w-xs italic">
-                  {language === "Norwegian" ? quote.norQuote : quote.engQuote}
-                </ResponsiveThemedP>
-                <div>
-                  <ResponsiveThemedH5 className="z-20 max-w-xs font-normal">
-                    - {quote.person}
-                  </ResponsiveThemedH5>
-                  <ResponsiveThemedH5 className="z-20 max-w-xs pl-4 font-thin">
-                    {language === "Norwegian"
-                      ? quote.norPersonTitle
-                      : quote.engPersonTitle}
-                  </ResponsiveThemedH5>
+                <div className="flex flex-col justify-between h-full">
+                  <ResponsiveThemedP className="z-20 max-w-xs italic">
+                    {language === "Norwegian" ? quote.norQuote : quote.engQuote}
+                  </ResponsiveThemedP>
+                  <div>
+                    <ResponsiveThemedH5 className="z-20 max-w-xs font-normal">
+                      - {quote.person}
+                    </ResponsiveThemedH5>
+                    <ResponsiveThemedH5 className="z-20 max-w-xs pl-4 font-thin">
+                      {language === "Norwegian"
+                        ? quote.norPersonTitle
+                        : quote.engPersonTitle}
+                    </ResponsiveThemedH5>
+                  </div>
                 </div>
               </div>
             </div>

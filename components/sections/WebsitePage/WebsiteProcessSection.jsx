@@ -23,7 +23,7 @@ export const WebsiteProcessSection = ({ language, Theme, id }) => {
                     <CheckProcessBullitin Theme={Theme} language={language}>
                         {language === "Norwegian"
                             ? "Ingen mellomledd som tar en stor del av budsjettet. Vi avtaler ferdig pris før prosjektet starter"
-                            : "No middleman that takes a big part of the budget"}
+                            : "No middleman that takes a big part of the budget. A a final price is set before the project starts"}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin

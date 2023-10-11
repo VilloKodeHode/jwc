@@ -36,8 +36,8 @@ export const OfferSection = ({ language, Theme }) => {
               Theme={Theme}
               norTitle="Søkemotor-optimalisering"
               engTitle="Search engine optimization"
-              norText="Vi øker trafikken til til nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester."
-              engText="We increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services."
+              norText="Jeg øker trafikken til til nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester."
+              engText="I increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services."
               href="/services_provided/SEO"
             />
             <OfferSectionPart
@@ -45,8 +45,8 @@ export const OfferSection = ({ language, Theme }) => {
               Theme={Theme}
               norTitle="Engasjerende nettinnhold"
               engTitle="Engaging webcontent"
-              norText="Vi skaper engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer."
-              engText="We creating captivating online experiences that combine powerful words with eye-catching visuals."
+              norText="Jeg skaper engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer."
+              engText="I creating captivating online experiences that combine powerful words with eye-catching visuals."
               href="/services_provided/webcontent"
             />
           </div>

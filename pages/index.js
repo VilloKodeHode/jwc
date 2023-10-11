@@ -29,8 +29,8 @@ export default function Home({ language, Theme }) {
           engText="Let's get started!"
           norText="La oss komme i gang!"
           href="/contact"
-          buttonEngText="Contact us"
-          buttonNorText="Kontakt oss"
+          buttonEngText="Contact me"
+          buttonNorText="Kontakt meg"
         />
       </PageLayout>
     </>

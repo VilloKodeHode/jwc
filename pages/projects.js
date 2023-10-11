@@ -1,3 +1,4 @@
+import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import PageLayout from "@/components/Layout/Layout";
 import { ProjectSection } from "@/components/sections/ProjectsPage/ProjectSection";
 import MetaTags from "@/components/Utilities/Metatags";
@@ -17,7 +18,15 @@ export default function ProjectPage({ language, Theme }) {
 
         {/* <NewClientLayout language={language} Theme={Theme} /> */}
 
-        <div className="mb-[112px]" />
+        <LetsGoCTA
+          language={language}
+          Theme={Theme}
+          engText="Check my work with previous customers"
+          norText="Sjekk mitt arbeid med tidligere kunder"
+          href="/work"
+          buttonEngText="My work"
+          buttonNorText="Mitt arbeid"
+        />
       </PageLayout>
     </>
   );

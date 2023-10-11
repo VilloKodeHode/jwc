@@ -45,8 +45,8 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Vi forbedrer kvaliteten og relevansen til nettsidens innhold for å engasjere brukere og søkemotorer."
-                            : "We enhance the quality and relevance of your website's content to engage users and search engines alike."}
+                            ? "Jeg forbedrer kvaliteten og relevansen til nettsidens innhold for å engasjere brukere og søkemotorer."
+                            : "I enhance the quality and relevance of your website's content to engage users and search engines alike."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
