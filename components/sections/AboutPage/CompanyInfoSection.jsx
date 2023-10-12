@@ -34,9 +34,9 @@ export const CompanyInfo = ({ language, Theme }) => {
           </div>
           <div className="col-span-1">
             <Image
-              src="/Tonsberg.jpg"
-              width={1200}
-              height={1200}
+              src="/Joakim_bilde_redigert.jpg"
+              width={1400}
+              height={1400}
               alt="Tønsberg brygge"
               className="object-cover w-full h-full"
             />
