@@ -40,7 +40,7 @@ export const CTAOneSection = ({ language, Theme }) => {
 
   return (
     <>
-      <section className="relative animate-PageAppearRight z-10 flex items-center justify-center w-full h-[100vh] group/imageEffect" id="CTAOneSection">
+      <section className="relative animate-on-scroll opacity-0 z-10 flex items-center justify-center w-full h-[100vh] group/imageEffect" id="CTAOneSection">
         <div className="flex items-center justify-center h-full m-0">
           <div className="flex flex-col items-center justify-center w-full max-w-6xl md:flex-row">
             <div className="w-full md:w-1/2">
@@ -60,8 +60,8 @@ export const CTAOneSection = ({ language, Theme }) => {
                         }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${currentWeb === "/HeroDesign.png"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
-                            ? "text-Villo-light-white10"
-                            : "text-Villo-dark-black75"
+                            ? "text-Villo-light-white20"
+                            : "text-Villo-dark-black50"
                         }`}
                     >
                       Web
@@ -82,8 +82,8 @@ export const CTAOneSection = ({ language, Theme }) => {
                         }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${currentWeb === "/HeroDevelopment.png"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
-                            ? "text-Villo-light-white10"
-                            : "text-Villo-dark-black75"
+                            ? "text-Villo-light-white20"
+                            : "text-Villo-dark-black50"
                         }`}
                     >
                       <br />
@@ -105,8 +105,8 @@ export const CTAOneSection = ({ language, Theme }) => {
                         }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${currentWeb === "/HeroCollage.webp"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
-                            ? "text-Villo-light-white10"
-                            : "text-Villo-dark-black75"
+                            ? "text-Villo-light-white20"
+                            : "text-Villo-dark-black50"
                         }`}
                     >
                       <br />

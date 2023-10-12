@@ -25,6 +25,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -187,10 +188,26 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  scroll-behavior: smooth;
+
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.scroll-into-view {
+  animation: appearing 2s ease forwards;
+  /* You can customize the animation properties (duration, timing function, etc.) */
+}
+
+@keyframes appearing {
+  from {
+    opacity: 0;
+    /* scale: 0; */
+  }
+  to {
+    /* scale: 1; */
+    opacity: 1;
+  }
 }

@@ -59,7 +59,7 @@ const THREESpace = ({ Theme }) => {
     // Rotation speed
     const baseRotationSpeed = 0.00008008;
     const scrollRotationSpeed = 0.0004008;
-    let totalRotationY = 0.00180008;
+    let totalRotationY = 0.00480008;
 
     function handleResize() {
       const newWidth = window.innerWidth;
