@@ -23,7 +23,7 @@ export default function ProjectPage({ language, Theme }) {
       <PageLayout gap="gap-28">
         <div className="pt-12 text-center">
           <ResponsiveThemedH1>
-            {language === "Norwegian" ? "Arbeid" : "Work"}
+            {language === "Norwegian" ? "Portofølje" : "Portfolio"}
           </ResponsiveThemedH1>
           <ThemedP className="px-4 pt-8 mx-auto text-left max-w-7xl sm:px-6 lg:px-8">
             {language === "Norwegian"

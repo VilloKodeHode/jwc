@@ -4,12 +4,13 @@ export const MENU_LIST = [
   {
     language: "Norwegian",
     menu_items: [
+      { text: "Hjem", href: "/" },
       { text: "Om", href: "/about" },
       {
-        text: "Prosjekter",
-        href: "/projects",
+        text: "Portofølje",
+        href: "/portfolio",
       },
-      { text: "Arbeid", href: "/work", },
+      // { text: "Arbeid", href: "/work", },
       // { text: "AI kunst", href: "/aiArt", },
       { text: "Kontakt", href: "/contact", },
       // { text: "Laster", href: "/loading",},
@@ -18,9 +19,10 @@ export const MENU_LIST = [
   {
     language: "English",
     menu_items: [
+      { text: "Home", href: "/" },
       { text: "About", href: "/about", },
-      { text: "Projects", href: "/projects", },
-      { text: "Work", href: "/work", },
+      { text: "Portfolio", href: "/portfolio", },
+      // { text: "Work", href: "/work", },
       // { text: "AI art", href: "/aiArt", },
       { text: "Contact", href: "/contact", },
       // { text: "Loading", href: "/loading",},

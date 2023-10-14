@@ -26,7 +26,7 @@ export const CompanyInfo = ({ language, Theme }) => {
             <ResponsiveThemedH3 className="py-5 text-bold">
               Joakim Villo
             </ResponsiveThemedH3>
-            <ResponsiveThemedP className="max-w-md pb-5 text-center">
+            <ResponsiveThemedP className="max-w-md px-8 pb-5 text-center">
               {language === "Norwegian"
                 ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
                 : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
@@ -34,11 +34,11 @@ export const CompanyInfo = ({ language, Theme }) => {
           </div>
           <div className="col-span-1">
             <Image
-              src="/Tonsberg.jpg"
+              src="/Joakim.webp"
               width={1200}
               height={1200}
               alt="Tønsberg brygge"
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full rounded-b-lg lg:rounded-r-lg lg:rounded-b-none"
             />
           </div>
         </div>

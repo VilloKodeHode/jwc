@@ -16,7 +16,7 @@ export const ProjectSection = ({ language, Theme }) => {
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="text-center">
           <ResponsiveThemedH1>
-            {language === "Norwegian" ? "Prosjekter" : "Projects"}
+            {language === "Norwegian" ? "Hobby prosjekter" : "Hobby projects"}
           </ResponsiveThemedH1>
         </div>
         <div className="mt-10 animate-PageAppearRight">
