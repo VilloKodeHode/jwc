@@ -1,79 +1,48 @@
 import Image from "next/image";
 import { SimpleLogoComponent } from "@/components/base components/Logo";
 import {
-  ResponsiveH3,
-  ResponsiveThemedH3,
-  ResponsiveThemedH4,
-  ResponsiveThemedP,
+
+    ResponsiveThemedH3,
+
+    ResponsiveThemedP,
 } from "../../Responsive text/ResponsiveText";
-import { TextFlex } from "../../Layout/Layout";
-import { useContext } from "react";
-import LanguageContext from "../../Utilities/LanguageSwitch/LanguageContext";
+
 
 export const CompanyInfo = ({ language, Theme }) => {
-  return (
-    <div className="grid max-w-7xl justify-center items-center min-h-[calc(100vh-144px)]">
-      <div className="animate-PageAppearRight">
-        <div
-          className={`sm:rounded-lg grid min-h-[70vh] lg:grid-cols-2 transition-colors duration-1000  ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
-            }`}
-        >
-          <div
-            className={`col-span-1 py-12 min-h-[30vh] flex flex-col justify-center items-center`}
-          >
-            <SimpleLogoComponent />
+    return (
+        <div className="grid max-w-7xl justify-center items-center min-h-[calc(100vh-144px)]">
+            <div className="animate-PageAppearRight">
+                <div
+                    className={`sm:rounded-lg grid min-h-[70vh] transition-colors duration-1000  ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
+                        }`}
+                >
+                    <div
+                        className={`col-span-1 py-12 min-h-[30vh] flex flex-col justify-center items-center`}
+                    >
+                        <SimpleLogoComponent />
 
-            <ResponsiveThemedH3 className="py-5 text-bold">
-              Joakim Villo
-            </ResponsiveThemedH3>
-            <ResponsiveThemedP className="max-w-md px-8 pb-5 text-center">
-              {language === "Norwegian"
-                ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
-                : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
-            </ResponsiveThemedP>
-          </div>
-          <div className="col-span-1">
-            <Image
-              src="/Joakim.webp"
-              width={1200}
-              height={1200}
-              alt="Tønsberg brygge"
-              className="object-cover w-full h-full rounded-b-lg lg:rounded-r-lg lg:rounded-b-none"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+                        <ResponsiveThemedH3 className="py-5 text-bold">
+                            Norsk webutvikler
+                        </ResponsiveThemedH3>
+                        <ResponsiveThemedP className="max-w-5xl px-8 pb-5 ">
+                            {language === "Norwegian"
+                                ? "Det er ingenting som gir meg større glede enn å se hvordan mine tjenester har en positiv innvirkning på kundens virksomhet. Målet mitt er å bygge sterke, langsiktige og verdifulle forhold med kundene mine. Dette oppnås ved å levere tjenester av høy kvalitet og åpen kommunikasjonen gjennom arbeidesprosessen."
+                                : "Seeing my services make a positive impact on a customer's business is what I love the most. My goal is to build strong, long-lasting, and valuable relationships with my customers. I do this by providing high-quality services and open communication throughout the work process."}
+                        </ResponsiveThemedP>
+                        <ResponsiveThemedP className="max-w-5xl px-8 pb-5 ">
+                            {language === "Norwegian"
+                                ? "Min visjon er å lage gode nettsider for små og mellomstore bedrifter, uten at det skal bli for dyrt, men allikevel å tilby god kvalitet med de nyeste webteknologiene, søkemotoroptimalisering og innhold."
+                                : "My vision is to create good websites for small and medium-sized businesses without it becoming too expensive, while still offering high quality with the latest web technologies, search engine optimization, and content."}
+                        </ResponsiveThemedP>
+                        <ResponsiveThemedP className="max-w-5xl px-8 pb-5 ">
+                            {language === "Norwegian"
+                                ? ""
+                                : ""}
+                        </ResponsiveThemedP>
+                    </div>
 
-export const OldCompanyInfo = () => {
-  const { language } = useContext(LanguageContext);
-  return (
-    <section className="grid items-center min-h-[60vh] justify-center w-screen font-bold text-center lg:grid-cols-2 mt-[56px]">
-      <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] shadow shadow-Villo-black75 px-8">
-        <SimpleLogoComponent />
-        <div className="">
-          {/* <ResponsiveThemedH5>JV Web Consult</ResponsiveThemedH5> */}
-          <ResponsiveH3>
-            <div className="bg-gradient-to-r from-Villo-tertiary to-Villo-secondary bg-clip-text transparent">
-              Joakim Villo
+                </div>
             </div>
-          </ResponsiveH3>
         </div>
-        <TextFlex textWidth="md:max-w-[60ch] max-w-[80ch]">
-          <ResponsiveThemedH4>
-            {language === "Norwegian" ? "Norsk foretak" : "Norwegian company"}
-          </ResponsiveThemedH4>
-          <ResponsiveThemedP>
-            {language === "Norwegian"
-              ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
-              : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
-          </ResponsiveThemedP>
-        </TextFlex>
-      </div>
-
-      <div className="lg:h-full lg:w-full h-[40vh] shadow shadow-Villo-black75 tonsbergBG" />
-    </section>
-  );
+    );
 };

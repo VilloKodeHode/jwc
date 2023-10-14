@@ -86,7 +86,7 @@ export const NewClientLayout = ({ language, Theme }) => {
             <Link
               key={client.id}
               href={client.href}
-              target="_blank"
+              target={client.href ? "_blank" : undefined}
               className={`overflow-hidden w-48 rounded-sm shadow-lg hover:scale-105 transition`}
             >
               <div
