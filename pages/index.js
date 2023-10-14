@@ -5,9 +5,11 @@ import { HeroSection } from "@/components/sections/IndexPage/HeroSection";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
 import { SectionNavigation } from "@/components/sections/IndexPage/SectionNavigation";
+import { useEffect } from "react";
 
 
 export default function Home({ language, Theme }) {
+
   return (
     <>
       <MetaTags
@@ -17,12 +19,9 @@ export default function Home({ language, Theme }) {
         url="https://jvwebconsult.no/"
       />
       <PageLayout gap="gap-28">
-        {/* <SectionNavigation language={language} Theme={Theme} /> */}
         <HeroSection language={language} Theme={Theme} />
         <CTAOneSection language={language} Theme={Theme} />
         <OfferSection language={language} Theme={Theme} />
-        {/* <ServicesSection language={language} Theme={Theme} /> */}
-
         <LetsGoCTA
           language={language}
           Theme={Theme}

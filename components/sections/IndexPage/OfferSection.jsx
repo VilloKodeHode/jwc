@@ -12,7 +12,7 @@ export const OfferSection = ({ language, Theme }) => {
       className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 ${Theme === "light" ? "bg-Villo-light-white15" : "bg-Villo-dark-black85"
         }`}
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl ">
         <div className="text-center">
           <ResponsiveThemedH2 className="px-12 text-center">
             {language === "Norwegian"
@@ -20,7 +20,7 @@ export const OfferSection = ({ language, Theme }) => {
               : "Villo Development offers:"}
           </ResponsiveThemedH2>
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-10 opacity-0 animate-on-scroll">
           <div className="flex flex-wrap items-center justify-center md:gap-6">
             <OfferSectionPart
               language={language}
