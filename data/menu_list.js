@@ -15,6 +15,14 @@ export const MENU_LIST = [
       { text: "Kontakt", href: "/contact", },
       // { text: "Laster", href: "/loading",},
     ],
+    drop_down: {
+      text: "Tjenester",
+      drop_down_items: [
+        { text: "Ny nettside", href: "/services_provided/website" },
+        { text: "Forbedre SEO", href: "/services_provided/SEO" },
+        { text: "Nytt nettinnhold", href: "/services_provided/webcontent" },
+      ]
+    }
   },
   {
     language: "English",
@@ -27,6 +35,14 @@ export const MENU_LIST = [
       { text: "Contact", href: "/contact", },
       // { text: "Loading", href: "/loading",},
     ],
+    drop_down: {
+      text: "Services",
+      drop_down_items: [
+        { text: "New website", href: "/services_provided/website" },
+        { text: "Improved SEO", href: "/services_provided/SEO" },
+        { text: "New webcontent", href: "/services_provided/webcontent" },
+      ]
+    }
   },
 ];
 
