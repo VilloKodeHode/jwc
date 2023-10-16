@@ -5,7 +5,7 @@ import Image from "next/image";
 import { LOGO } from "../../data/menu_list";
 
 
-const LogoComponent = ({ handleMenuToggle }) => {
+const LogoComponent = ({ onclick }) => {
   const { Theme } = useContext(ThemeContext);
 
   // Find the logo object based on the theme
@@ -20,7 +20,7 @@ const LogoComponent = ({ handleMenuToggle }) => {
   const logoDetails = logoObject[Theme];
 
   return (
-    <Link onClick={handleMenuToggle} key={logoDetails.text} href={logoDetails.href} className="">
+    <Link onClick={onclick} key={logoDetails.text} href={logoDetails.href} className="">
       <Image
 
         src={logoDetails.imageSrc}

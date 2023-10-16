@@ -119,9 +119,9 @@ export const SectionProcessPartSection = ({ Theme, language, norTitle, engTitle,
                             : engTitle}
                     </ThemedH4>
                 </div>
-                <div className={`relative transition-all flex flex-row flex-wrap lg:justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
-                    ? "bg-Villo-light-white10 hover:bg-Villo-light-white15"
-                    : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
+                <div className={`relative transition-all flex shadow flex-row flex-wrap lg:justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
+                    ? "bg-Villo-light-white10 shadow-Villo-light-white15 hover:shadow-Villo-light-primary"
+                    : "bg-Villo-dark-black85 shadow-Villo-dark-black75 hover:shadow-Villo-dark-primary"
                     }`}>
                     {children}
                 </div>

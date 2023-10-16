@@ -13,9 +13,11 @@ export default function Navbar({
   menu_items,
   drop_down,
   drop_down_items,
+  toogleDropDown,
+  setToogleDropDown,
 
 }) {
-  const [toogleDropDown, setToogleDropDown] = useState(false);
+
 
 
 
