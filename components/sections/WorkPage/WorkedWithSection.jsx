@@ -16,7 +16,7 @@ export const WorkedWithSection = ({ language, Theme }) => {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div className="text-center">
                 <ResponsiveThemedH2 className="px-12 text-center">
-                    {language === "Norwegian" ? "Jobbet med" : "Worked with"}
+                    {language === "Norwegian" ? "Erfaring" : "Experience"}
                 </ResponsiveThemedH2>
             </div>
             <div className="mt-10">
