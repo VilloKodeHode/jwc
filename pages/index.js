@@ -6,6 +6,7 @@ import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
 import { SectionNavigation } from "@/components/sections/IndexPage/SectionNavigation";
 import { useEffect } from "react";
+import { EmailCTA } from "@/components/Buttons";
 
 
 export default function Home({ language, Theme }) {
@@ -24,13 +25,15 @@ export default function Home({ language, Theme }) {
         <OfferSection language={language} Theme={Theme} />
         <LetsGoCTA
           language={language}
+          type="email"
           Theme={Theme}
           engText="Let's get started!"
           norText="La oss komme i gang!"
           href="/contact"
-          buttonEngText="Contact me"
-          buttonNorText="Kontakt meg"
-        />
+
+        > {language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
+
+
       </PageLayout>
     </>
   );

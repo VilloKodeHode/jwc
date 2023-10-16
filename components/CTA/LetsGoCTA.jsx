@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ResponsiveThemedH3 } from "../Responsive text/ResponsiveText";
-import CallToActionButton from "../Buttons";
+import CallToActionButton, { EmailCTA, ExternalCTA, SendCTA } from "../Buttons";
 import Image from "next/image";
 
 export const LetsGoCTA = ({
@@ -9,8 +9,8 @@ export const LetsGoCTA = ({
   engText,
   norText,
   href,
-  buttonEngText,
-  buttonNorText,
+  children,
+  type,
 }) => {
   return (
     <section className="relative grid items-center justify-center px-12 sm:pt-0 mb-[126px]">
@@ -21,9 +21,16 @@ export const LetsGoCTA = ({
       </div>
       <div className="relative z-20 flex flex-col items-center justify-center mx-auto w-fit group">
         <Link href={href}>
-          <CallToActionButton Theme={Theme}>
-            {language === "Norwegian" ? buttonNorText : buttonEngText}
-          </CallToActionButton>
+          {type === "email" ? (
+            <EmailCTA Theme={Theme}>
+              {children}
+            </EmailCTA>
+          ) : (
+            <CallToActionButton Theme={Theme}>
+              {children}
+            </CallToActionButton>
+          )}
+
         </Link>
         <Image
           src={

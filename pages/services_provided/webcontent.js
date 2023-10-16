@@ -21,13 +21,12 @@ export default function ProvidedServiceWebcontent({ language, Theme }) {
         <WebcontentServiceBottomSection language={language} Theme={Theme} />
         <LetsGoCTA
           language={language}
+          type="email"
           Theme={Theme}
           engText="Let us make some webcontent!"
           norText="La oss lage noe nettside!"
           href="/contact"
-          buttonEngText="Contact us"
-          buttonNorText="Kontakt oss"
-        />
+        >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
       </PageLayout>
     </>
   );

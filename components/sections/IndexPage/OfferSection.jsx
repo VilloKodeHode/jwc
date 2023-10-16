@@ -7,9 +7,9 @@ import CallToActionButton from "../../Buttons";
 
 export const OfferSection = ({ language, Theme }) => {
   return (
-    <div
+    <section
       id="OfferSection"
-      className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 ${Theme === "light" ? "bg-Villo-light-white15" : "bg-Villo-dark-black85"
+      className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"
         }`}
     >
       <div className="mx-auto max-w-7xl ">
@@ -52,7 +52,7 @@ export const OfferSection = ({ language, Theme }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -76,15 +76,12 @@ export const OfferSectionPart = ({
       >
         <div
           className={`grid gap-6 min-h-[131px] transition-colors duration-300  ${Theme === "light"
-            ? "bg-Villo-light-white10 group-hover:bg-Villo-light-primary"
-            : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-primary"
+            ? "bg-Villo-light-white15 group-hover:bg-Villo-light-white10"
+            : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-black50"
             } p-12`}
         >
           <ResponsiveThemedH4
-            className={`font-bold max-w-fit ${Theme === "light"
-              ? "group-hover:text-Villo-light-white"
-              : "group-hover:text-Villo-dark-black"
-              }`}
+            className={`font-bold max-w-fit `}
           >
             {language === "Norwegian" ? norTitle : engTitle}
           </ResponsiveThemedH4>
@@ -99,10 +96,7 @@ export const OfferSectionPart = ({
           </ResponsiveThemedH5> */}
           <div className="mt-2">
             <ThemedP
-              className={`${Theme === "light"
-                ? "group-hover:text-Villo-light-white"
-                : "group-hover:text-Villo-dark-black"
-                }`}
+              className={``}
             >
               {language === "Norwegian" ? norText : engText}
             </ThemedP>

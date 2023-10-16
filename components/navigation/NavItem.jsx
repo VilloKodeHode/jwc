@@ -62,7 +62,7 @@ export const DropDown = ({
     <div className={`relative group z-10 ${className}`}>
 
       <button
-        className={`${textSize} ${Theme === "light"
+        className={`${textSize} active:after:rotate-180 ${Theme === "light"
           ? "text-Villo-light-black"
           : "text-Villo-dark-white"
           }  z-10`}

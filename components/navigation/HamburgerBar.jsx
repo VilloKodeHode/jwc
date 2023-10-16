@@ -95,13 +95,10 @@ export default function HamburgerBar({
                   >
                     {drop_down.text}
                   </DropDown>
-                  <div className={`absolute ${toogleDropDown ? "scale-100 translate-y-[200%]" : "scale-0 translate-y-[130%]"} translate-x-1/4 transition-all`}>
+                  <div className={`absolute ${toogleDropDown ? "scale-100 translate-y-[200%] translate-x-1/4" : "scale-0 translate-x-0 translate-y-[130%]"}  transition-all`}>
 
                     <div className="flex flex-col justify-center items-start gap-4 min-h-[160px]">
-                      {/* <div className={`flex flex-col items-start justify-center gap-4 px-16 border-x-2 rounded-l-full rounded-r-full ${Theme === "light"
-            ? "border-Villo-light-primary "
-            : "border-Villo-dark-primary"
-            }`}> */}
+
 
                       {drop_down_items.map((menu) => (
 

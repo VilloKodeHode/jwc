@@ -20,15 +20,12 @@ export default function ProvidedServiceWebsite({ language, Theme }) {
         <WebsiteServiceBottomSection language={language} Theme={Theme} />
         <LetsGoCTA
           language={language}
+          type="email"
           Theme={Theme}
           engText="Let us make you new website!"
           norText="La oss lage din nye nettside!"
           href="/contact"
-          buttonEngText="Contact us"
-          buttonNorText="Kontakt oss"
-        />
-
-
+        >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
       </PageLayout>
     </>
   );

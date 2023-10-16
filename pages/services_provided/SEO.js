@@ -22,13 +22,13 @@ export default function ProvidedServiceSEO({ language, Theme }) {
         <SEOServiceBottomSection language={language} Theme={Theme} />
         <LetsGoCTA
           language={language}
+          type="email"
           Theme={Theme}
           engText="Lets improve your SEO!"
           norText="Lås opp din synlighet!"
           href="/contact"
-          buttonEngText="Contact us"
-          buttonNorText="Kontakt oss"
-        />
+        >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
+
       </PageLayout>
     </>
   );

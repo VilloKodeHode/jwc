@@ -7,6 +7,7 @@ import { QuotesSection } from "@/components/sections/WorkPage/QuotesSections";
 import { CLIENT_LIST } from "@/data/client_list";
 import MetaTags from "@/components/Utilities/Metatags";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
+import { NewWorkedWithSection, WorkedWithSection } from "@/components/sections/WorkPage/WorkedWithSection";
 
 export default function ProjectPage({ language, Theme }) {
   const clientList =
@@ -37,16 +38,18 @@ export default function ProjectPage({ language, Theme }) {
           language={language}
           Theme={Theme}
         />
+        {/* <NewWorkedWithSection language={language} Theme={Theme} /> */}
+        <WorkedWithSection language={language} Theme={Theme} />
         <QuotesSection language={language} Theme={Theme} />
         <LetsGoCTA
           language={language}
+          type="email"
           Theme={Theme}
-          engText="Become one of my clients!"
-          norText="Bli en av mine kunder!"
+          engText="Make me you coworker!"
+          norText="Få meg som medarbeider!"
           href="/contact"
-          buttonEngText="Contact me"
-          buttonNorText="Kontakt meg"
-        />
+
+        > {language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
 
       </PageLayout>
     </>
