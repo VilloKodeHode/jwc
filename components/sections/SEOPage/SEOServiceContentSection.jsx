@@ -47,13 +47,13 @@ export const SEOServiceBottomSection = ({ language, Theme }) => {
             <div className="mt-10 text-center animate-PageAppearRight">
                 <ResponsiveThemedH5 className={`mt-4 font-normal`}>
                     {language === "Norwegian"
-                        ? "Å velge oss betyr suksess. Vi tilpasser SEO-løsninger eksklusivt for din bedrift, forbedrer nettsidens innhold og struktur for høyere rangering. Vår ekspertise omfatter lokale SEO-strategier, transparent rapportering og maksimal online suksess. Med oss øker du trafikken og blir mer synlig for brukere. Velkommen til å forbedre din online tilstedeværelse."
-                        : "Choosing us means success. We tailor SEO solutions exclusively for your business, improve your website's content and structure for higher rankings. Our expertise includes local SEO strategies, transparent reporting, and maximum online success. With us, you'll increase traffic and become more visible to users. Welcome to improving your online presence."}
+                        ? "Å velge meg betyr suksess. Vi tilpasser SEO-løsninger eksklusivt for din bedrift, forbedrer nettsidens innhold og struktur for høyere rangering. Vår ekspertise omfatter lokale SEO-strategier, transparent rapportering og maksimal online suksess. Med meg øker du trafikken og blir mer synlig for brukere. Velkommen til å forbedre din online tilstedeværelse."
+                        : "Choosing me means success. We tailor SEO solutions exclusively for your business, improve your website's content and structure for higher rankings. Our expertise includes local SEO strategies, transparent reporting, and maximum online success. With me, you'll increase traffic and become more visible to users. Welcome to improving your online presence."}
                 </ResponsiveThemedH5>
                 <ResponsiveThemedH5 className={`mt-4 font-normal`}>
                     {language === "Norwegian"
-                        ? "Enten du trenger engasjerende blogginnlegg, informative artikler, overbevisende produktbeskrivelser eller engasjerende innhold for sosiale medier, har jeg ferdighetene som kreves. Jeg gjennomfører grundig research for å sikre at innholdet ikke bare er velinformert, men også relevant for din målgruppe."
-                        : "Ikke la nettsiden din forbli ubemerket. Forbedre din online synlighet, øk organisk trafikk og forbedre konverteringer med våre ekspert SEO-tjenester. Ta kontakt i dag for å diskutere hvordan vi kan forbedre din SEO-strategi og løfte din bedrift til nye høyder i den digitale verden."}
+                        ? "Ikke la nettsiden din forbli ubemerket. Forbedre din online synlighet, øk organisk trafikk og forbedre konverteringer med våre ekspert SEO-tjenester. Ta kontakt i dag for å diskutere hvordan vi kan forbedre din SEO-strategi og løfte din bedrift til nye høyder i den digitale verden."
+                        : "Don't let your website go unnoticed. Improve your online visibility, increase organic traffic, and enhance conversions with our expert SEO services. Contact us today to discuss how we can enhance your SEO strategy and elevate your business to new heights in the digital world."}
                 </ResponsiveThemedH5>
             </div>
         </div>

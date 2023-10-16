@@ -41,8 +41,8 @@ export default function Navbar({
 
         <div className={`absolute ${toogleDropDown ? "scale-100 translate-x-[150%]" : "scale-0 translate-x-[-30%]"} bottom-1/2 translate-y-1/2 transition-all`}>
 
-          <div className="flex flex-col justify-center items-start gap-4 min-h-[160px]">
-          {/* <div className={`flex flex-col items-start justify-center gap-4 px-16 border-x-2 rounded-l-full rounded-r-full ${Theme === "light"
+          <div className="flex flex-col justify-center items-start gap-2 min-h-[160px]">
+            {/* <div className={`flex flex-col items-start justify-center gap-4 px-16 border-x-2 rounded-l-full rounded-r-full ${Theme === "light"
             ? "border-Villo-light-primary "
             : "border-Villo-dark-primary"
             }`}> */}

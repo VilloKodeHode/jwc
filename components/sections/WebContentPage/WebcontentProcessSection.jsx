@@ -5,7 +5,7 @@ import { CheckProcessBullitin, SectionProcessPartSection } from "../ServiceSecti
 
 export const WebcontentProcessSection = ({ language, Theme, id }) => {
     return (
-        <section className="relative grid justify-center items-center w-full bg-Villo-tertiary min-h-[35vh] text-left xl:gap-0 gap-12">
+        <section className="grid justify-center items-center w-full bg-Villo-tertiary min-h-[35vh] text-left xl:gap-0 gap-12">
             <TextFlex>
                 <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
                     {language === "Norwegian"
@@ -84,6 +84,7 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                             ? "Følg din SEO fremgang med gjennomsiktig rapportering og analyser, som sikrer at du kan se de konkrete resultatene av våre innsats."
                             : "Track your SEO progress with transparent reporting and analytics, ensuring you can see the tangible results of our efforts."}
                     </CheckProcessBullitin>
+                    <div className={`absolute -z-10 w-screen overflow-hidden translate-x-1/2 -translate-y-1/2 bg-opacity-50  ml:h-[90%] h-[97%] right-1/2 top-1/2 ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"} `} />
                 </SectionProcessPartSection>
             </div>
         </section>

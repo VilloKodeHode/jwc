@@ -73,7 +73,7 @@ export const DropDown = ({
       <div
         className={`${subPagesPaths ? `h-2` : "group-hover:h-2"
           } absolute w-full h-0 transition-all ${Theme === "light"
-            ? "bg-Villo-light-primary "
+            ? "bg-Villo-light-primary"
             : "bg-Villo-dark-primary"
           }`}
       />

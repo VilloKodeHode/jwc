@@ -30,8 +30,8 @@ export default function Header({
   const menu_items = menuObj ? menuObj.menu_items : [];
   const drop_down = menuObj ? menuObj.drop_down : {};
   const drop_down_items = drop_down ? drop_down.drop_down_items : [];
-  console.log(drop_down);
-  console.log(drop_down_items);
+  // console.log(drop_down);
+  // console.log(drop_down_items);
 
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
@@ -70,11 +70,10 @@ export default function Header({
   return (
     <>
       <div
-        className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-2 ${
-          Theme === "light"
-            ? "bg-Villo-light-white15 text-Villo-light-black"
-            : "bg-black text-Villo-dark-white10"
-        } `}
+        className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-2 ${Theme === "light"
+          ? "bg-Villo-light-white15 text-Villo-light-black"
+          : "bg-black text-Villo-dark-white10"
+          } `}
       >
         <div
           className={`grid transition-all z-40 grid-flow-col gap-12
@@ -107,13 +106,11 @@ export default function Header({
 
       <div className="relative">
         <div
-          className={`fixed transition-all p-3 group top-2 duration-1000 z-[999] hover:bg-opacity-100 border-b-2 hover:border-opacity-100 bg-opacity-40  border-opacity-40 flex items-center rounded-r-[30px] pr-5 justify-between ${
-            notTop ? "animate-ToolsSlideIn" : "animate-ToolsSlideOut"
-          } ${
-            Theme === "light"
+          className={`fixed transition-all p-3 group top-2 duration-1000 z-[999] hover:bg-opacity-100 border-b-2 hover:border-opacity-100 bg-opacity-40  border-opacity-40 flex items-center rounded-r-[30px] pr-5 justify-between ${notTop ? "animate-ToolsSlideIn" : "animate-ToolsSlideOut"
+            } ${Theme === "light"
               ? "bg-Villo-light-white15  text-Villo-light-black border-Villo-light-primary"
               : "bg-Villo-dark-black75 text-Villo-dark-white10 border-Villo-dark-black85"
-          } 
+            } 
           ${showToolBar ? "" : "translate-x-[-100%]"}
           `}
         >
@@ -142,9 +139,8 @@ export default function Header({
       </div>
 
       <header
-        className={`relative transition-all duration-1000 z-50 bg-opacity-[0.925] ${
-          Theme === "light" ? "bg-Villo-light-white10" : "bg-black"
-        } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
+        className={`relative transition-all duration-1000 z-50 bg-opacity-[0.925] ${Theme === "light" ? "bg-Villo-light-white10" : "bg-black"
+          } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between">
           <div className="grid items-center h-[112px] min-w-[200px] gap-8 rounded-br-full">
@@ -180,6 +176,8 @@ export default function Header({
             menu_items={menu_items}
             drop_down={drop_down}
             drop_down_items={drop_down_items}
+            toogleDropDown={toogleDropDown}
+            setToogleDropDown={setToogleDropDown}
           />
         </div>
       </header>
