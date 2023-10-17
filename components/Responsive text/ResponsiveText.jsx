@@ -265,6 +265,18 @@ export const ThemedLi = ({ children, className }) => {
   );
 };
 
+export const ResponsiveThemedLi = ({ children, className }) => {
+  const { Theme } = useContext(ThemeContext);
+  return (
+    <li
+      className={` ${Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+        } md:text-h5 text-p md:leading-h5 leading-p ${className}`}
+    >
+      {children}
+    </li>
+  );
+};
+
 
 export function ResponsiveUL({ children, className }) {
   return (

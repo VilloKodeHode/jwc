@@ -31,8 +31,8 @@ export const WebsiteProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Grundig forarbeid som er tilpasset dine spesifikke behov"
-                            : "Preparatory work that is tailored to your specific needs"}
+                            ? "Grundig forarbeid med designmal og markedsundersøkelser som er tilpasset dine spesifikke behov"
+                            : "Preparatory work with a design brief and market research that is tailored to your specific needs"}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -85,8 +85,8 @@ export const WebsiteProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Fornøydhetsgaranti! Resultatet skal bli som avtalt, og jeg strekker meg ekstra langt for å gi et godt produkt."
-                            : "Guarantee of quality! The result will be as agreed, and I will go the extra mile to give you a good product."}
+                            ? "Full support på opplæring av hvordan du kan styre innholdet på nettsiden din."
+                            : "Full support during learning of how you can manage the content on your website."}
                     </CheckProcessBullitin>
                     <div className={`absolute -z-10 w-screen overflow-hidden translate-x-1/2 -translate-y-1/2 bg-opacity-50  ml:h-[90%] h-[97%] right-1/2 top-1/2 ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"} `} />
                 </SectionProcessPartSection>

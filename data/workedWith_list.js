@@ -20,7 +20,7 @@ export const WORKEDWITH_LIST = [
                 progress: "current",
                 color: "#f4a366",
             },
-            
+
         ],
     },
     {
@@ -35,7 +35,7 @@ export const WORKEDWITH_LIST = [
                 progress: "done",
                 color: "#7fe5d3",
             },
-            
+
             {
                 id: "2English",
                 name: "Jobloop",

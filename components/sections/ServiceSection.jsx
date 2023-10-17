@@ -1,5 +1,5 @@
 import { AiOutlineCheck } from "react-icons/ai";
-import { ResponsiveThemedH2, ResponsiveThemedH5, ThemedH4, ThemedLi, ThemedP } from "../Responsive text/ResponsiveText";
+import { ResponsiveThemedH2, ResponsiveThemedH4, ResponsiveThemedH5, ResponsiveThemedLi, ThemedH4, ThemedLi, ThemedP } from "../Responsive text/ResponsiveText";
 import { LogoBullitinPoint } from "../base components/LogoBullitinPoint";
 
 
@@ -119,7 +119,7 @@ export const SectionProcessPartSection = ({ Theme, language, norTitle, engTitle,
                             : engTitle}
                     </ThemedH4>
                 </div>
-                <div className={`relative transition-all flex shadow flex-row flex-wrap lg:justify-around p-8 max-w-5xl rounded-md  ${Theme === "light"
+                <div className={`relative transition-all flex shadow flex-row flex-wrap lg:justify-around justify-center py-8 gap-8 max-w-5xl rounded-md  ${Theme === "light"
                     ? "bg-Villo-light-white10 shadow-Villo-light-white15 hover:shadow-Villo-light-primary"
                     : "bg-Villo-dark-black85 shadow-Villo-dark-black75 hover:shadow-Villo-dark-primary"
                     }`}>
@@ -132,7 +132,7 @@ export const SectionProcessPartSection = ({ Theme, language, norTitle, engTitle,
 
 export const CheckProcessBullitin = ({ Theme, children }) => {
     return (
-        <div className={`flex relative group items-start min-h-[103px] p-8 m-2 transition-all gap-2 sm:rounded-lg 
+        <div className={`flex relative group items-start min-h-[103px] px-4 transition-all gap-2 sm:rounded-lg 
   
             `}>
             <div>
@@ -142,7 +142,7 @@ export const CheckProcessBullitin = ({ Theme, children }) => {
                     }`} />
             </div>
             {/* <div className="flex flex-col justify-center h-full"> */}
-            <ThemedLi className="list-none lg:max-w-xs ">
+            <ThemedLi className="list-none md:max-w-xs ">
                 {children}
             </ThemedLi>
             {/* </div> */}

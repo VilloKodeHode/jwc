@@ -8,9 +8,10 @@ import {
 import Link from "next/link";
 import { WORKEDWITH_LIST } from "@/data/workedWith_list";
 
-
 export const WorkedWithSection = ({ language, Theme }) => {
-    const companyObj = WORKEDWITH_LIST.find((client) => client.language === language);
+    const companyObj = WORKEDWITH_LIST.find(
+        (company) => company.language === language
+    );
     const COMPANY = companyObj ? companyObj.Company : [];
     return (
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -21,35 +22,39 @@ export const WorkedWithSection = ({ language, Theme }) => {
             </div>
             <div className="mt-10">
                 <div className="flex flex-wrap items-center justify-center gap-8">
-                    {COMPANY.map((client) => (
+                    {COMPANY.map((company) => (
                         <Link
-                            key={client.id}
-                            className={`overflow-hidden shadow transition-all  max-w-sm rounded-lg
+                            key={company.id}
+                            className={`shadow hover:scale-105 ${company.name === "Kodeverket Bergen"
+                                ? "shadow-[#7fe5d3]"
+                                : company.name === "Jobloop"
+                                    ? "shadow-[#f4a366]"
+                                    : "shadow-white"
+                                }  transition-all max-w-sm rounded-lg
                             ${Theme === "light"
                                     ? "bg-Villo-light-black50"
                                     : "bg-Villo-dark-black75"
-                                    }
+                                }
                             `}
-                            href={client.href}
-                            //TODO få til at skyggefargene er forskjellige for hver enkelt company
-                            // style={{
-                            //     boxShadow: `2px 2px 7px ${client.color}`,
-                            //     ':hover': { boxShadow: `20px 20px 70px ${client.color}` }
-                            //   }}
+                            href={company.href}
+                        //TODO få til at skyggefargene er forskjellige for hver enkelt company
+                        // style={{
+                        //     boxShadow: `2px 2px 7px ${company.color}`,
+                        //     ':hover': { boxShadow: `20px 20px 70px ${company.color}` }
+                        //   }}
                         >
                             <div className="grid items-center grid-flow-col gap-4 px-2 py-4">
                                 <div className="flex items-center justify-start w-full h-28">
                                     <Image
                                         className="w-fit h-[90%]"
-                                        src={client.imageUrl}
-                                        alt={client.name}
+                                        src={company.imageUrl}
+                                        alt={company.name}
                                         width={800}
                                         height={600}
-                                        
                                     />
                                 </div>
                                 {/* <ResponsiveH4 className="font-medium text-Villo-dark-black">
-                                    {client.name}
+                                    {company.name}
                                 </ResponsiveH4> */}
                             </div>
                             <div
@@ -59,9 +64,9 @@ export const WorkedWithSection = ({ language, Theme }) => {
                                     }`}
                             >
                                 <ResponsiveThemedH4 className="font-medium">
-                                    {client.name}
+                                    {company.name}
                                 </ResponsiveThemedH4>
-                                <ThemedP className="mt-2 text-sm">{client.jobDone}</ThemedP>
+                                <ThemedP className="mt-2 text-sm">{company.jobDone}</ThemedP>
                             </div>
                         </Link>
                     ))}
@@ -72,12 +77,16 @@ export const WorkedWithSection = ({ language, Theme }) => {
 };
 
 export const NewWorkedWithSection = ({ language, Theme }) => {
-    const companyObj = WORKEDWITH_LIST.find((company) => company.language === language);
+    const companyObj = WORKEDWITH_LIST.find(
+        (company) => company.language === language
+    );
     const COMPANY = companyObj ? companyObj.Company : [];
     return (
-
         <div className="relative z-10 flex flex-col justify-center py-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 min-h-[30vh]">
-            <div className={`absolute w-screen h-full translate-x-1/2  -z-10 right-1/2 ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"}`} />
+            <div
+                className={`absolute w-screen h-full translate-x-1/2  -z-10 right-1/2 ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"
+                    }`}
+            />
             <div className="z-10 text-center">
                 <ResponsiveThemedH2 className="px-12 text-center">
                     {language === "Norwegian" ? "Arbeidet hos" : "Worked at"}
@@ -99,7 +108,12 @@ export const NewWorkedWithSection = ({ language, Theme }) => {
                                     }`}
                             >
                                 <div className="relative w-28 h-28">
-                                    <p className="absolute z-10 text-center transition-all translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 bottom-1/2 right-1/2">{company.progress === "in progress" || company.progress === "under arbeid" ? company.progress : ""}</p>
+                                    <p className="absolute z-10 text-center transition-all translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 bottom-1/2 right-1/2">
+                                        {company.progress === "in progress" ||
+                                            company.progress === "under arbeid"
+                                            ? company.progress
+                                            : ""}
+                                    </p>
                                     <Image
                                         className="object-contain w-full h-full filter grayscale"
                                         src={company.imageUrl}
@@ -114,7 +128,5 @@ export const NewWorkedWithSection = ({ language, Theme }) => {
                 </div>
             </div>
         </div>
-
     );
 };
-

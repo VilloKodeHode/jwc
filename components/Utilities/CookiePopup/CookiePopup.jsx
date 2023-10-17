@@ -72,10 +72,10 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
             width="50"
             height="50"
             alt="cookie"
-            className={` absolute transition-all duration-500 bottom-[230px] left-[280px]
+            className={` absolute transition-all duration-500 bottom-[230px] sm:bottom-[242px] left-[280px] sm:left-[290px]
           ${showPopup
                 ? ""
-                : "bottom-[4px] left-[320px] hover:scale-125 opacity-30 hover:animate-cookieShake hover:opacity-100"
+                : "bottom-[4px] left-[320px] sm:bottom-[16px] sm:left-[334px] hover:scale-125 opacity-30 hover:animate-cookieShake hover:opacity-100"
               }
           `}
           ></Image>

@@ -18,8 +18,8 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                 <SectionProcessPartSection Theme={Theme} language={language} engTitle="You get:" norTitle="Du får:">
                     <CheckProcessBullitin Theme={Theme} language={language}>
                         {language === "Norwegian"
-                            ? "Dra nytte av tilpassede SEO løsninger utviklet for å møte dine spesifikke forretningsbehov og mål."
-                            : "Benefit from customized SEO solutions designed to meet your specific business needs and goals."}
+                            ? "Engasjerende og brukersentrert innhold som fanger målgruppens oppmerksomhet og gir en enestående brukeropplevelse."
+                            : "Engaging and user-centric content that attracts your target audience and drives engagement."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -27,8 +27,8 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Oppnå høyere rangering på populære søkemotorer som Google, slik at nettsiden din blir lagt merke til av målgruppen din."
-                            : "Achieve higher rankings on popular search engines like Google, ensuring your website gets noticed by your target audience."}
+                            ? "Økt kvaliteten og relevansen til webinnholdet ditt for å engasjere både brukere og søkemotorer."
+                            : "Elevated quality and relevance of your web content to engage both users and search engines."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -36,8 +36,8 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? " Bruk strategisk nøkkelordoptimalisering for å øke nettsidens synlighet og relevans i søkeresultatene."
-                            : "Harness the power of strategic keyword optimization to boost your website's visibility and relevance in search results."}
+                            ? "Skreddersydde webinnholdsløsninger som samsvarer med dine spesifikke forretningsbehov og mål."
+                            : "Tailor-made web content solutions designed to align with your specific business needs and goals."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -45,8 +45,8 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Jeg forbedrer kvaliteten og relevansen til nettsidens innhold for å engasjere brukere og søkemotorer."
-                            : "I enhance the quality and relevance of your website's content to engage users and search engines alike."}
+                            ? "Webinnhold som er både visuelt tiltalende og enkelt å navigere for målgruppen."
+                            : "Web content that is not only visually appealing but also easy to navigate for your audience."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -54,8 +54,8 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Vår omfattende tilnærming inkluderer både on-page og off-page SEO teknikker for å maksimere din online suksess"
-                            : "Our comprehensive approach includes both on-page and off-page SEO techniques to maximize your online success"}
+                            ? "Overholdt prosjektfrister for å sikre at webinnholdet er tilgjengelig når du trenger det."
+                            : "Consistent project deadlines to ensure your web content is available when you need it."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -63,8 +63,8 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Dominer ditt lokale marked med våre spesialiserte lokale SEO strategier, som tiltrekker flere lokale kunder til din virksomhet"
-                            : "Dominate your local market with our specialized local SEO strategies, driving more local customers to your business"}
+                            ? "Webinnhold som fungerer sømløst på ulike enheter og skjermstørrelser."
+                            : "Web content that works seamlessly across various devices and screen sizes."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -72,8 +72,8 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Søkemotoroptimalisering som gjør at du får mer trafikk til nettsiden og blir lettere å søke opp"
-                            : "Search engine optimization that makes it easier for you to get more traffic to the site and make it easier to search for it"}
+                            ? "Opprettholdt åpen kommunikasjon for å sikre at dine krav blir møtt og forventninger overskrides."
+                            : "Continuous open communication channels to ensure your requirements are met and expectations are exceeded."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -81,8 +81,8 @@ export const WebcontentProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Følg din SEO fremgang med gjennomsiktig rapportering og analyser, som sikrer at du kan se de konkrete resultatene av våre innsats."
-                            : "Track your SEO progress with transparent reporting and analytics, ensuring you can see the tangible results of our efforts."}
+                            ? "Innhold som treffer målgruppen din, oppfordrer til interaksjon og bygger merkevarelojalitet."
+                            : "Content that resonates with your target audience, encouraging interaction and building brand loyalty."}
                     </CheckProcessBullitin>
                     <div className={`absolute -z-10 w-screen overflow-hidden translate-x-1/2 -translate-y-1/2 bg-opacity-50  ml:h-[90%] h-[97%] right-1/2 top-1/2 ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"} `} />
                 </SectionProcessPartSection>

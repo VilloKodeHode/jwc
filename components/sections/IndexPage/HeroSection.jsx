@@ -12,9 +12,9 @@ export const HeroSection = ({ language, Theme }) => {
 
   return (
     <>
-      <div className="flex justify-center w-full h-full ">
+      <div className="flex justify-center w-full h-full">
         <section
-          className=" max-w-6xl z-10 flex items-center justify-center w-full min-h-[calc(100vh-152px)] bg-center bg-cover"
+          className=" max-w-6xl z-10 flex items-center  py-28  justify-center w-full min-h-[calc(100vh-152px)] bg-center bg-cover"
           id="HeroSection"
         >
           <div className="max-w-6xl animate-PageAppearRight">

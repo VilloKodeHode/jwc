@@ -19,7 +19,7 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                     <CheckProcessBullitin Theme={Theme} language={language}>
                         {language === "Norwegian"
                             ? "Dra nytte av tilpassede SEO løsninger utviklet for å møte dine spesifikke forretningsbehov og mål."
-                            : "Benefit from customized SEO solutions designed to meet your specific business needs and goals."}
+                            : "Benefits from customized SEO solutions designed to meet your specific business needs and goals."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -27,8 +27,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Oppnå høyere rangering på populære søkemotorer som Google, slik at nettsiden din blir lagt merke til av målgruppen din."
-                            : "Achieve higher rankings on popular search engines like Google, ensuring your website gets noticed by your target audience."}
+                            ? "Oppnådd høyere rangering på populære søkemotorer som Google, slik at nettsiden din blir lagt merke til av målgruppen din."
+                            : "Achieved higher rankings on popular search engines like Google, ensuring your website gets noticed by your target audience."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -36,8 +36,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? " Bruk strategisk nøkkelordoptimalisering for å øke nettsidens synlighet og relevans i søkeresultatene."
-                            : "Harness the power of strategic keyword optimization to boost your website's visibility and relevance in search results."}
+                            ? "Strategisk nøkkelordoptimalisering for å øke nettsidens synlighet og relevans i søkeresultatene."
+                            : "Strategic keyword optimization to boost your website's visibility and relevance in search results."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -45,8 +45,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Jeg forbedrer kvaliteten og relevansen til nettsidens innhold for å engasjere brukere og søkemotorer."
-                            : "I enhance the quality and relevance of your website's content to engage users and search engines alike."}
+                            ? "Forbedret kvaliteten og relevansen til nettsidens innhold for å engasjere brukere og søkemotorer."
+                            : "Enhanced quality and relevance of your website's content to engage users and search engines alike."}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -54,8 +54,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Min omfattende tilnærming inkluderer både on-page og off-page SEO teknikker for å maksimere din online suksess"
-                            : "My comprehensive approach includes both on-page and off-page SEO techniques to maximize your online success"}
+                            ? "En omfattende tilnærming som inkluderer både on-page og off-page SEO teknikker for å maksimere din online suksess"
+                            : "A comprehensive approach that includes both on-page and off-page SEO techniques to maximize your online success"}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -63,8 +63,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Dominer ditt lokale marked med mine spesialiserte lokale SEO strategier, som tiltrekker flere lokale kunder til din virksomhet"
-                            : "Dominate your local market with my specialized local SEO strategies, driving more local customers to your business"}
+                            ? "Dominere ditt lokale marked med mine spesialiserte lokale SEO strategier, som tiltrekker flere lokale kunder til din virksomhet"
+                            : "Local market domination with my specialized local SEO strategies, driving more local customers to your business"}
                     </CheckProcessBullitin>
 
                     <CheckProcessBullitin
@@ -81,8 +81,8 @@ export const SEOProcessSection = ({ language, Theme, id }) => {
                         language={language}
                     >
                         {language === "Norwegian"
-                            ? "Følg din SEO fremgang med gjennomsiktig rapportering og analyser, som sikrer at du kan se de konkrete resultatene av min innsats."
-                            : "Track your SEO progress with transparent reporting and analytics, ensuring you can see the tangible results of my efforts."}
+                            ? "Oversikt over din SEO fremgang med gjennomsiktig rapportering og analyser, som sikrer at du kan se de konkrete resultatene av min innsats."
+                            : "Tracking of your SEO progress with transparent reporting and analytics, ensuring you can see the tangible results of my efforts."}
                     </CheckProcessBullitin>
                     <div className={`absolute -z-10 w-screen overflow-hidden translate-x-1/2 -translate-y-1/2 bg-opacity-50  ml:h-[90%] h-[97%] right-1/2 top-1/2 ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"} `} />
                 </SectionProcessPartSection>
