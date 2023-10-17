@@ -38,7 +38,7 @@ export const LetsGoCTA = ({
               ? "/logo/WindLogoNoTextLightMode.svg"
               : "/logo/WindLogoNoTextDarkMode.svg"
           }
-          className="absolute duration-500 -translate-y-1/2 -z-10 group-active:scale-110 group-hover:rotate-180 group-hover:scale-150 top-1/2"
+          className="absolute duration-500 -translate-y-1/2 opacity-70 -z-10 group-active:scale-110 group-hover:rotate-180 group-hover:scale-150 top-1/2"
           width={200}
           height={200}
           alt=""

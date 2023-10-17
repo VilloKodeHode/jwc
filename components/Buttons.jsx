@@ -60,7 +60,7 @@ export function ReadMoreButton({ children, Theme, onClick, className }) {
   return (
     <button
       onClick={onClick}
-      className={`relative flex justify-center items-center group m-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
+      className={`relative flex w-fit justify-center items-center group font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
         ? "text-Villo-light-black85  hover:text-Villo-light-primary"
         : "text-Villo-dark-white10  hover:text-Villo-dark-primary"
         } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-center`}
@@ -115,9 +115,9 @@ export function EmailCTA({ children, Theme, onClick, className }) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-100 ease-in-out ${className} ${Theme === "light"
-        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-dark-primary"
-        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
+      className={`px-6 outline outline-2 flex justify-center shadow items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-100 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 bg-Villo-light-white hover:shadow-Villo-light-black outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-light-primary"
+        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:shadow-Villo-dark-black hover:bg-Villo-dark-primary"
         } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>
@@ -127,6 +127,8 @@ export function EmailCTA({ children, Theme, onClick, className }) {
     </button>
   );
 }
+
+
 
 export function CookieAccept({ children, Theme, onClick, className }) {
   return (

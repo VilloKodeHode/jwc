@@ -20,29 +20,40 @@ export const WorkedWithSection = ({ language, Theme }) => {
                 </ResponsiveThemedH2>
             </div>
             <div className="mt-10">
-                <div className="flex items-center justify-center gap-1">
+                <div className="flex flex-wrap items-center justify-center gap-8">
                     {COMPANY.map((client) => (
                         <Link
                             key={client.id}
-                            className={`overflow-hidden bg-[${client.color}] max-w-sm rounded-lg shadow shadow-[${client.color}]`}
+                            className={`overflow-hidden shadow transition-all  max-w-sm rounded-lg
+                            ${Theme === "light"
+                                    ? "bg-Villo-light-black50"
+                                    : "bg-Villo-dark-black75"
+                                    }
+                            `}
                             href={client.href}
+                            //TODO få til at skyggefargene er forskjellige for hver enkelt company
+                            // style={{
+                            //     boxShadow: `2px 2px 7px ${client.color}`,
+                            //     ':hover': { boxShadow: `20px 20px 70px ${client.color}` }
+                            //   }}
                         >
                             <div className="grid items-center grid-flow-col gap-4 px-2 py-4">
-                                <div className="w-28 h-28">
+                                <div className="flex items-center justify-start w-full h-28">
                                     <Image
-                                        className="w-28 h-28"
+                                        className="w-fit h-[90%]"
                                         src={client.imageUrl}
                                         alt={client.name}
-                                        width={300}
-                                        height={300}
+                                        width={800}
+                                        height={600}
+                                        
                                     />
                                 </div>
-                                <ResponsiveH4 className="font-medium text-Villo-dark-black">
+                                {/* <ResponsiveH4 className="font-medium text-Villo-dark-black">
                                     {client.name}
-                                </ResponsiveH4>
+                                </ResponsiveH4> */}
                             </div>
                             <div
-                                className={`h-full p-6  ${Theme === "light"
+                                className={`flex flex-col transition-all justify-between min-h-[175px] p-6  ${Theme === "light"
                                     ? "bg-Villo-light-white10"
                                     : "bg-Villo-dark-black85"
                                     }`}

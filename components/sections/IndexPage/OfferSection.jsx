@@ -2,7 +2,7 @@ import Link from "next/link";
 import {
   ResponsiveThemedH2, ResponsiveThemedH4, ThemedP,
 } from "../../Responsive text/ResponsiveText";
-import CallToActionButton from "../../Buttons";
+import CallToActionButton, { ReadMoreButton } from "../../Buttons";
 
 
 export const OfferSection = ({ language, Theme }) => {
@@ -85,15 +85,6 @@ export const OfferSectionPart = ({
           >
             {language === "Norwegian" ? norTitle : engTitle}
           </ResponsiveThemedH4>
-          {/* <ResponsiveThemedH5
-            className={`font-bold max-w-fit ${
-              Theme === "light"
-                ? "group-hover:text-Villo-light-white"
-                : "group-hover:text-Villo-dark-black"
-            }`}
-          >
-            {language === "Norwegian" ? norSubTitle : engSubTitle}
-          </ResponsiveThemedH5> */}
           <div className="mt-2">
             <ThemedP
               className={``}
@@ -101,8 +92,8 @@ export const OfferSectionPart = ({
               {language === "Norwegian" ? norText : engText}
             </ThemedP>
           </div>
-          <Link href={href}>
-            <CallToActionButton Theme={Theme} >{language === "Norwegian" ? "les mer" : "read more"}</CallToActionButton>
+          <Link href={href} className="w-fit">
+            <ReadMoreButton Theme={Theme} >{language === "Norwegian" ? "les mer" : "read more"}</ReadMoreButton>
           </Link>
         </div>
 

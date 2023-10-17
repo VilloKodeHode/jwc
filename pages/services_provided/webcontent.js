@@ -24,7 +24,7 @@ export default function ProvidedServiceWebcontent({ language, Theme }) {
           type="email"
           Theme={Theme}
           engText="Let us make some webcontent!"
-          norText="La oss lage noe nettside!"
+          norText="La oss lage noe nettinnhold!"
           href="/contact"
         >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
       </PageLayout>
