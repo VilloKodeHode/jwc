@@ -10,6 +10,7 @@ import {
   FiExternalLink,
   FiSend,
 } from "react-icons/fi";
+import { TfiEmail } from "react-icons/tfi";
 
 import { MdDoubleArrow } from "react-icons/md";
 
@@ -22,9 +23,9 @@ export default function CallToActionButton({
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
-        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white  hover:bg-Villo-dark-primary"
-        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
+      className={`px-6 outline outline-2 group  hover:outline-none py-4 font-bold uppercase shadow-lg transition duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 hover:bg-opacity-[0.95] bg-Villo-light-white outline-Villo-light-black85 hover:shadow-Villo-light-white15 hover:text-Villo-light-white  hover:bg-Villo-light-primary"
+        : "text-Villo-dark-white10 bg-Villo-light-black hover:bg-opacity-[0.95] outline-Villo-dark-white10 hover:shadow-Villo-dark-black75 hover:bg-Villo-dark-primary"
         } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
     >
       <>{children}</>
@@ -32,22 +33,66 @@ export default function CallToActionButton({
   );
 }
 
+export function SkillLinkButton({
+  children,
+  Theme,
+  onClick,
+  className,
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`px-4 outline outline-[1px] group hover:outline-none py-1 font-bold uppercase shadow-lg transition duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 hover:bg-opacity-[0.95] bg-Villo-light-white outline-Villo-light-black85 hover:shadow-Villo-light-white15 hover:text-Villo-light-white  hover:bg-Villo-light-primary"
+        : "text-Villo-dark-white10 bg-Villo-light-black hover:bg-opacity-[0.95] outline-Villo-dark-white10 hover:shadow-Villo-dark-black75 hover:bg-Villo-dark-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+    >
+      <>{children}</>
+    </button>
+  );
+}
+
+
 export function ArrowCTA({ children, Theme, onClick, className }) {
   return (
     <button
       onClick={onClick}
-      className={`px-6 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
-        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-light-secondary"
-        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-light-primary"
-        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-bottom-right`}
+      className={`relative px-6 pr-12 outline outline-2 flex justify-center items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 bg-Villo-light-white outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-dark-secondary"
+        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:bg-Villo-dark-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-center`}
     >
       <>
         {children}
-        <FiArrowRight className="inline-block w-5 h-5 m-auto ml-1 transition-all duration-200 opacity-90 group-hover:opacity-100 group-hover:ml-2 group-hover:w-7 group-hover:h-7" />
+        <FiArrowRight className={`${Theme === "light"
+          ? "text-Villo-light-black85   group-hover:text-Villo-light-white"
+          : "text-Villo-dark-white10 "
+          } group-hover:rotate-[360deg] absolute inline-block w-5 h-5 m-auto ml-1 transition-all duration-200 right-4 opacity-90 group-hover:ml-2 group-hover:w-7 group-hover:h-7`} />
       </>
     </button>
   );
 }
+
+export function ReadMoreButton({ children, Theme, onClick, className }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`relative flex w-fit justify-center items-center group font-bold uppercase transition duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85  hover:text-Villo-light-primary"
+        : "text-Villo-dark-white10  hover:text-Villo-dark-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.05] origin-center`}
+    >
+      <>
+        {children}
+        <div className={`absolute w-full h-[1px] py-[1px] bottom-0 ${Theme === "light"
+          ? "bg-Villo-light-black85  group-hover:bg-Villo-light-primary"
+          : "bg-Villo-dark-white10  group-hover:bg-Villo-dark-primary"
+          }`} />
+      </>
+    </button>
+  );
+}
+
 
 export function ExternalCTA({ children, Theme, onClick, className }) {
   return (
@@ -77,11 +122,30 @@ export function SendCTA({ children, Theme, onClick, className }) {
     >
       <>
         {children}
-        <FiSend className="inline-block w-5 h-5 m-auto ml-1 transition-all duration-200 opacity-90 group-hover:opacity-100 group-hover:ml-2 group-hover:w-5 group-hover:h-5 group-hover:animate-pulse" />
+        <FiSend className="inline-block w-5 h-5 m-auto ml-1 transition-all duration-200 opacity-90 group-hover:rotate-[405deg] group-hover:opacity-100 group-hover:ml-2 group-hover:w-5 group-hover:h-5 group-hover:animate-pulse" />
       </>
     </button>
   );
 }
+
+export function EmailCTA({ children, Theme, onClick, className }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`px-6 outline outline-2 flex justify-center shadow items-center group hover:outline-none py-4 my-4 font-bold uppercase transition duration-100 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 bg-Villo-light-white hover:shadow-Villo-light-black outline-Villo-light-black85 hover:text-Villo-light-white hover:bg-Villo-light-primary"
+        : "text-Villo-dark-white10 bg-Villo-light-black outline-Villo-dark-white10 hover:shadow-Villo-dark-black hover:bg-Villo-dark-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+    >
+      <>
+        {children}
+        <TfiEmail className="inline-block w-5 h-5 m-auto ml-2 transition-all duration-200 group-hover:translate-x-1/2 group-hover:-translate-y-1/4 opacity-90 group-hover:rotate-45 group-hover:opacity-100 group-hover:ml-2 group-hover:w-5 group-hover:h-5 group-hover:animate-pulse" />
+      </>
+    </button>
+  );
+}
+
+
 
 export function CookieAccept({ children, Theme, onClick, className }) {
   return (
@@ -113,6 +177,8 @@ export function ToolsToggleButton({ children, Theme, onClick, className }) {
     </button>
   );
 }
+
+
 
 export function CallToActionButtonAlt({ children, onClick }) {
   return (
@@ -169,13 +235,13 @@ export function ScrollToTopButton({ Theme }) {
   return (
     <button
       onClick={scrollToTop}
-      className={`${Theme === "light"
-        ? "text-Villo-light-white20 hover:text-Villo-light-secondary"
-        : "text-Villo-dark-black50 hover:text-Villo-dark-secondary"
-        } z-50 p-1 fixed md:bottom-8 bottom-4 md:right-8 right-4 transition-all duration-200 rounded-full hover:scale-125  ${isVisible ? "opacity-100 " : "opacity-0 cursor-default"
+      className={` ${Theme === "light"
+        ? "text-Villo-light-white20 hover:text-Villo-light-primary"
+        : "text-Villo-dark-black50 hover:text-Villo-dark-primary"
+        } z-50 p-1 fixed sm:bottom-4 bottom-1 sm:right-4 right-1 transition-all duration-200 rounded-full hover:scale-125  ${isVisible ? "opacity-100 " : "opacity-0 cursor-default"
         }`}
     >
-      <FiArrowUpCircle className="w-12 h-12" strokeWidth={1.5} />
+      <FiArrowUpCircle className={`w-12 h-12 hover:fill-none ${Theme === "light" ? "fill-Villo-light-white hover:fill-Villo-light-white20" : "fill-Villo-dark-black85 hover:fill-Villo-dark-black"}`} strokeWidth={1.5} />
     </button>
   );
 }

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CallToActionButton, { SendCTA } from "../Buttons";
+import CallToActionButton, { SendCTA } from "../../Buttons";
 import {
   ResponsiveH2,
   ResponsiveH4,
@@ -8,10 +8,10 @@ import {
   ResponsiveThemedH2,
   ResponsiveThemedP,
   ThemedP,
-} from "../Responsive text/ResponsiveText";
+} from "../../Responsive text/ResponsiveText";
 import { useContext, useState } from "react";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
+import LanguageContext from "../../Utilities/LanguageSwitch/LanguageContext";
+
 
 export const ContactformSection = ({ language, Theme }) => {
   const [showModal, setShowModal] = useState(false);
@@ -21,8 +21,10 @@ export const ContactformSection = ({ language, Theme }) => {
     message: "",
   });
 
-  const endpoint =
-    "https://drayggdi6t7tnbviin7ucjgsjq0jhztd.lambda-url.eu-north-1.on.aws/";
+
+
+  const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -121,7 +123,7 @@ export const ContactformSection = ({ language, Theme }) => {
                     } w-full px-4 py-2 border rounded-lg  focus:outline `}
                   placeholder={
                     language === "Norwegian"
-                      ? "Din email addresse"
+                      ? "Din email adresse"
                       : "Your email address"
                   }
                   value={formData.email}

@@ -4,27 +4,45 @@ export const MENU_LIST = [
   {
     language: "Norwegian",
     menu_items: [
+      { text: "Hjem", href: "/" },
       { text: "Om", href: "/about" },
       {
-        text: "Prosjekter",
-        href: "/projects",
+        text: "Portofølje",
+        href: "/portfolio",
       },
-      { text: "Arbeid", href: "/work", },
+      // { text: "Arbeid", href: "/work", },
       // { text: "AI kunst", href: "/aiArt", },
       { text: "Kontakt", href: "/contact", },
       // { text: "Laster", href: "/loading",},
     ],
+    drop_down: {
+      text: "Tjenester",
+      drop_down_items: [
+        { text: "Ny nettside", href: "/services_provided/website" },
+        { text: "Forbedre SEO", href: "/services_provided/SEO" },
+        { text: "Nytt nettinnhold", href: "/services_provided/webcontent" },
+      ]
+    }
   },
   {
     language: "English",
     menu_items: [
+      { text: "Home", href: "/" },
       { text: "About", href: "/about", },
-      { text: "Projects", href: "/projects", },
-      { text: "Work", href: "/work", },
+      { text: "Portfolio", href: "/portfolio", },
+      // { text: "Work", href: "/work", },
       // { text: "AI art", href: "/aiArt", },
       { text: "Contact", href: "/contact", },
       // { text: "Loading", href: "/loading",},
     ],
+    drop_down: {
+      text: "Services",
+      drop_down_items: [
+        { text: "New website", href: "/services_provided/website" },
+        { text: "Improved SEO", href: "/services_provided/SEO" },
+        { text: "New webcontent", href: "/services_provided/webcontent" },
+      ]
+    }
   },
 ];
 

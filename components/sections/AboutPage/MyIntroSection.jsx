@@ -1,48 +1,51 @@
 import Image from "next/image";
 import { SimpleLogoComponent } from "@/components/base components/Logo";
 import {
+  ResponsiveH2,
   ResponsiveH3,
+  ResponsiveThemedH2,
   ResponsiveThemedH3,
   ResponsiveThemedH4,
-  ResponsiveThemedH5,
   ResponsiveThemedP,
-} from "../Responsive text/ResponsiveText";
-import { TextFlex } from "../Layout";
+} from "../../Responsive text/ResponsiveText";
+import { TextFlex } from "../../Layout/Layout";
 import { useContext } from "react";
-import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
+import LanguageContext from "../../Utilities/LanguageSwitch/LanguageContext";
 
-export const CompanyInfo = ({ language, Theme }) => {
-  // const { language } = useContext(LanguageContext);
-  // const { Theme } = useContext(ThemeContext);
+export const MyIntroSection = ({ language, Theme }) => {
   return (
-    <div className="grid max-w-7xl justify-center items-center min-h-[calc(100vh-144px)]">
+    <div className="grid max-w-7xl justify-center text-center items-center min-h-[calc(100vh-144px)]">
+      <ResponsiveThemedH2>
+        {language === "Norwegian"
+          ? "Kort om meg"
+          : "About me"}
+      </ResponsiveThemedH2>
       <div className="animate-PageAppearRight">
         <div
           className={`sm:rounded-lg grid min-h-[70vh] lg:grid-cols-2 transition-colors duration-1000  ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
             }`}
         >
           <div
-            className={`col-span-1 py-12 min-h-[30vh] flex flex-col justify-center items-center`}
+            className={`col-span-1 py-12 min-h-[30vh] text-left flex flex-col justify-center items-center`}
           >
-            <SimpleLogoComponent />
+            {/* <SimpleLogoComponent /> */}
 
-            <ResponsiveThemedH3 className="py-5 text-bold">
+            <ResponsiveThemedH3 className="py-5 text-left text-bold">
               Joakim Villo
             </ResponsiveThemedH3>
-            <ResponsiveThemedP className="max-w-md pb-5 text-center">
+            <ResponsiveThemedP className="max-w-md px-8 pb-5 text-center">
               {language === "Norwegian"
-                ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
-                : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
+                ? "Jeg er en utdannet utvikler som for øyeblikket underviser i grunnleggende programmering og webutviklingskurs. Jeg har to bachelorgrader i andre fagfelt, og tidligere jobb har hatt sammenheng med disse gradene. I 2022 byttet jeg til programmering og koding, som nå har blitt min sanne lidenskap i livet."
+                : "I'm a trained developer who's currently teaching fundamental programming and web development courses. I hold two bachelor's degrees in other fields, and previous work has been related to those degrees. In 2022, I switched to programming and coding, which has now become my true passion in life."}
             </ResponsiveThemedP>
           </div>
           <div className="col-span-1">
             <Image
-              src="/Tonsberg.jpg"
-              width={800}
-              height={800}
+              src="/Joakim.webp"
+              width={1200}
+              height={1200}
               alt="Tønsberg brygge"
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full rounded-b-lg lg:rounded-r-lg lg:rounded-b-none"
             />
           </div>
         </div>

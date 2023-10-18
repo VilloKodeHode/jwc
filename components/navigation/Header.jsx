@@ -4,13 +4,15 @@ import ChakraDrawer from "./ChakraDrawer";
 import { useDisclosure } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
-
+import MENU_LIST from "../../data/menu_list";
 import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
 import LogoComponent from "../base components/Logo";
 import { SiGithub } from "react-icons/si";
 import HamburgerBar from "./HamburgerBar";
 import Image from "next/image";
 import { FcSettings } from "react-icons/fc";
+import NavItem from "./NavItem";
+import { ThemedP } from "../Responsive text/ResponsiveText";
 
 export default function Header({
   language,
@@ -23,6 +25,13 @@ export default function Header({
   const [notTop, setNotTop] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showToolBar, setShowToolBar] = useState(false);
+  const [toogleDropDown, setToogleDropDown] = useState(false);
+  const menuObj = MENU_LIST.find((menu) => menu.language === language);
+  const menu_items = menuObj ? menuObj.menu_items : [];
+  const drop_down = menuObj ? menuObj.drop_down : {};
+  const drop_down_items = drop_down ? drop_down.drop_down_items : [];
+  // console.log(drop_down);
+  // console.log(drop_down_items);
 
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
@@ -69,38 +78,27 @@ export default function Header({
         <div
           className={`grid transition-all z-40 grid-flow-col gap-12
  
-          ${notTop
-              ? "animate-SlideInFromBottom"
-              :
-              "animate-SlideInFromTop"
-            }`}
+          ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
         >
           <LanguageSwitch
             setLanguage={setLanguage}
             cookiesAccepted={cookiesAccepted}
           />
 
-
-          <ThemeSwitch
-            setTheme={setTheme}
-            cookiesAccepted={cookiesAccepted}
-          />
-
+          <ThemeSwitch setTheme={setTheme} cookiesAccepted={cookiesAccepted} />
         </div>
 
-
-        <a href="https://github.com/VilloKodeHode" target="_blank" className={`grid transition-all z-40 grid-flow-col gap-12
+        <a
+          href="https://github.com/VilloKodeHode"
+          target="_blank"
+          className={`grid transition-all z-40 grid-flow-col gap-12
  
- ${notTop
-            ? "animate-SlideInFromBottom"
-            :
-            "animate-SlideInFromTop"
-          }`}>
+ ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
+        >
           <SiGithub
             className={`z-10 w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}
           />
         </a>
-
       </div>
 
       {/* Floating util bar: */}
@@ -131,8 +129,8 @@ export default function Header({
             />
             <button onClick={toggleToolBar} className="">
               <FcSettings
-                className={`absolute h-[50px] w-fit top-0 2xl:left-[120px] left-[60px] transition-all duration-500 hover:animate-cogSpin 
-          ${showToolBar ? "" : "2xl:left-[155px] left-[70px]"}
+                className={`absolute h-[50px] w-fit top-0 2xl:left-[140px] left-[50px] transition-all duration-500 hover:animate-cogSpin 
+          ${showToolBar ? "" : "2xl:left-[165px] left-[65px]"}
           `}
               ></FcSettings>
             </button>
@@ -145,14 +143,27 @@ export default function Header({
           } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between">
-          <div className="flex flex-row items-center justify-start lg:min-w-[500px] h-[112px] min-w-[200px] gap-8 rounded-br-full">
-            <div className="relative z-40">
-              <LogoComponent currentPath={currentPath} />
-            </div>
-            <div className="items-center justify-center hidden grid-flow-row lg:grid animate-SlideInFromLeft">
+          <div className="grid items-center h-[112px] min-w-[200px] gap-8 rounded-br-full">
+            <div className="relative z-40 flex flex-row items-center">
+              <LogoComponent
+                onClick={() => {
+                  handleMenuToggle();
+                  setToogleDropDown(false);
+                }}
+                currentPath={currentPath}
+              />
             </div>
           </div>
-          <Navbar language={language} Theme={Theme} currentPath={currentPath} />
+          <Navbar
+            language={language}
+            toogleDropDown={toogleDropDown}
+            setToogleDropDown={setToogleDropDown}
+            Theme={Theme}
+            currentPath={currentPath}
+            menu_items={menu_items}
+            drop_down={drop_down}
+            drop_down_items={drop_down_items}
+          />
 
           <HamburgerBar
             menuRef={menuRef}
@@ -162,6 +173,11 @@ export default function Header({
             language={language}
             Theme={Theme}
             currentPath={currentPath}
+            menu_items={menu_items}
+            drop_down={drop_down}
+            drop_down_items={drop_down_items}
+            toogleDropDown={toogleDropDown}
+            setToogleDropDown={setToogleDropDown}
           />
         </div>
       </header>

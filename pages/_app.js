@@ -18,6 +18,8 @@ export default function App({ Component, pageProps }) {
   const { setLanguage } = useContext(LanguageContext);
   const { setTheme } = useContext(ThemeContext);
 
+
+
   useEffect(() => {
     // Check if the user has accepted cookies by checking a cookie
     const acceptedCookies = getCookie("acceptedCookies");
@@ -61,15 +63,43 @@ function AppContent({
 
   const currentPath = router.asPath;
 
-  // useEffect(() => {
-  //   console.log("Current path changed:", currentPath);
-  // }, [currentPath]);
+  useEffect(() => {
+    // Function to check if an element is in the viewport
+    function isElementInViewport(element, threshold = 0.6) {
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const elementTop = rect.top;
+      return elementTop <= windowHeight * threshold;
+    }
+  
+    // Function to handle the scroll event
+    function handleScroll() {
+      const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+  
+      elementsToAnimate.forEach((element) => {
+        if (isElementInViewport(element, 0.6)) {
+          // Add your animation class or logic here
+          element.classList.add('scroll-into-view'); // Apply your animation class
+        }
+      });
+    }
+  
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+  
+    // Initial check to see if the elements are already in the viewport on page load
+    handleScroll();
+  
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-  // useEffect(() => {
-  //   console.log("theme:", Theme, "language:", language);
-  // }, [Theme, language]);
-
-  // console.log(navigator.language === "nb-NO");
+  useEffect(() => {
+    // Set a global JavaScript variable based on the Theme value
+    window.appTheme = Theme;
+  }, [Theme]);
 
   return (
     <>
@@ -83,9 +113,8 @@ function AppContent({
           cookiesAccepted={cookiesAccepted}
         />
         <div
-          className={` transition-colors duration-1000 ${
-            Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
-          }`}
+          className={` transition-colors duration-1000 ${Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
+            }`}
         >
           <CookiePopup
             handleCookieAccept={handleCookieAccept}

@@ -1,10 +1,7 @@
-import { TextFlex } from "../Layout";
-import {
-  ResponsiveH2,
-  ResponsiveLi,
-  ResponsiveP,
-} from "../Responsive text/ResponsiveText";
+import { TextFlex } from "../Layout/Layout";
+import { ResponsiveH2, ResponsiveLi, ResponsiveP } from "../Responsive text/ResponsiveText";
 import VilloIcon from "../base components/Icon";
+
 
 export const BullitinSection = ({ language, Theme }) => {
   return (
