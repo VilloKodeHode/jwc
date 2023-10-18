@@ -23,16 +23,19 @@ export default function AboutPage({ language, Theme }) {
         <SkillsSection language={language} Theme={Theme} />
 
         <ProjectSection language={language} Theme={Theme} />
-
         <LetsGoCTA
           language={language}
+          type="portfolio"
           Theme={Theme}
           engText="Check my portfolio"
           norText="Sjekk min portfølje"
           href="/portfolio"
-          buttonEngText="View portfolio"
-          buttonNorText="Se portfølje"
-        />
+
+        > {language === "Norwegian" ? "Portofølje" : "Portfolio"}
+        </LetsGoCTA>
+
+
+
       </PageLayout>
     </>
   );

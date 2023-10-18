@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ResponsiveThemedH3 } from "../Responsive text/ResponsiveText";
-import CallToActionButton, { EmailCTA, ExternalCTA, SendCTA } from "../Buttons";
+import CallToActionButton, { EmailCTA, ExternalCTA, PortfolioCTA, SendCTA } from "../Buttons";
 import Image from "next/image";
 
 export const LetsGoCTA = ({
@@ -25,11 +25,14 @@ export const LetsGoCTA = ({
             <EmailCTA Theme={Theme}>
               {children}
             </EmailCTA>
-          ) : (
-            <CallToActionButton Theme={Theme}>
+          ) : type === "portfolio" ?
+            (
+              <PortfolioCTA Theme={Theme}>
+                {children}
+              </PortfolioCTA>
+            ) : (<CallToActionButton Theme={Theme}>
               {children}
-            </CallToActionButton>
-          )}
+            </CallToActionButton>)}
 
         </Link>
         <Image
