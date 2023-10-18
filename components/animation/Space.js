@@ -98,10 +98,23 @@ const THREESpace = ({ Theme }) => {
     };
   }, [Theme, canvasRef, scene, camera, renderer, particles]);
 
-  return <canvas ref={canvasRef} className={`absolute top-0 border-b ${Theme === "light"
-    ? "border-Villo-light-primary opacity-0"
-    : "border-Villo-dark-primary opacity-100"
-    }`} />;
+  return (
+    <div className="absolute top-0 transition-all">
+      <canvas ref={canvasRef} className={`transition-all shadow- duration-500 ${Theme === "light"
+        ? " shadow-[0_20px_60px_1px_#e6ddff] opacity-0"
+        : " shadow-[0_20px_60px_1px_#2e2f34]"
+        }`} />
+      {/* <div className={`absolute transition-all shadow- duration-1000 w-screen h-12 ${Theme === "light"
+        ? " shadow-[0_35px_60px_15px_#858ee0]"
+        : " shadow-[0_35px_60px_15px_#858ee0]"
+        } bottom-0`} /> */}
+    </div>
+  )
+
+  // <canvas ref={canvasRef} className={`border-b transition-all ${Theme === "light"
+  // ? "border-Villo-light-primary opacity-0"
+  // : "border-Villo-dark-primary opacity-100"
+  // }`} />
 };
 
 export default THREESpace;

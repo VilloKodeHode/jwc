@@ -122,7 +122,7 @@ export function SendCTA({ children, Theme, onClick, className }) {
     >
       <>
         {children}
-        <FiSend className="inline-block w-5 h-5 m-auto ml-1 transition-all duration-200 opacity-90 group-hover:rotate-45 group-hover:opacity-100 group-hover:ml-2 group-hover:w-5 group-hover:h-5 group-hover:animate-pulse" />
+        <FiSend className="inline-block w-5 h-5 m-auto ml-1 transition-all duration-200 opacity-90 group-hover:rotate-[405deg] group-hover:opacity-100 group-hover:ml-2 group-hover:w-5 group-hover:h-5 group-hover:animate-pulse" />
       </>
     </button>
   );
@@ -241,7 +241,7 @@ export function ScrollToTopButton({ Theme }) {
         } z-50 p-1 fixed sm:bottom-4 bottom-1 sm:right-4 right-1 transition-all duration-200 rounded-full hover:scale-125  ${isVisible ? "opacity-100 " : "opacity-0 cursor-default"
         }`}
     >
-      <FiArrowUpCircle className={`w-12 h-12 hover:fill-none ${Theme === "light" ? "fill-Villo-light-black50" : "fill-Villo-light-white20"}`} strokeWidth={1.5} />
+      <FiArrowUpCircle className={`w-12 h-12 hover:fill-none ${Theme === "light" ? "fill-Villo-light-white hover:fill-Villo-light-white20" : "fill-Villo-dark-black85 hover:fill-Villo-dark-black"}`} strokeWidth={1.5} />
     </button>
   );
 }

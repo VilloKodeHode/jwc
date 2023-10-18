@@ -36,7 +36,7 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
     >
       <div
         className={`min-h-[131px] max-w-[300px] transition-all duration-300 bg-opacity-[0.95] px-6 py-4 outline m-2 rounded-xl  ${Theme === "light"
-          ? "bg-Villo-light-white10 group-hover:bg-Villo-light-white20 outline-Villo-dark-black85"
+          ? "bg-Villo-light-white10 group-hover:bg-Villo-light-white15 outline-Villo-light-black85"
           : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-black85 outline-Villo-dark-white10"
           }`}
       >
