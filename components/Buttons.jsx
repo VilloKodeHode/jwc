@@ -33,7 +33,24 @@ export default function CallToActionButton({
   );
 }
 
-
+export function SkillLinkButton({
+  children,
+  Theme,
+  onClick,
+  className,
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`px-4 outline outline-[1px] group hover:outline-none py-1 font-bold uppercase shadow-lg transition duration-200 ease-in-out ${className} ${Theme === "light"
+        ? "text-Villo-light-black85 hover:bg-opacity-[0.95] bg-Villo-light-white outline-Villo-light-black85 hover:shadow-Villo-light-white15 hover:text-Villo-light-white  hover:bg-Villo-light-primary"
+        : "text-Villo-dark-white10 bg-Villo-light-black hover:bg-opacity-[0.95] outline-Villo-dark-white10 hover:shadow-Villo-dark-black75 hover:bg-Villo-dark-primary"
+        } rounded-full shadow-md xl:w-fit active:scale-95 text-p leading-p hover:scale-[1.02]`}
+    >
+      <>{children}</>
+    </button>
+  );
+}
 
 
 export function ArrowCTA({ children, Theme, onClick, className }) {
@@ -218,13 +235,13 @@ export function ScrollToTopButton({ Theme }) {
   return (
     <button
       onClick={scrollToTop}
-      className={`${Theme === "light"
-        ? "text-Villo-light-white20 hover:text-Villo-light-secondary"
-        : "text-Villo-dark-black50 hover:text-Villo-dark-secondary"
+      className={` ${Theme === "light"
+        ? "text-Villo-light-white20 hover:text-Villo-light-primary"
+        : "text-Villo-dark-black50 hover:text-Villo-dark-primary"
         } z-50 p-1 fixed sm:bottom-4 bottom-1 sm:right-4 right-1 transition-all duration-200 rounded-full hover:scale-125  ${isVisible ? "opacity-100 " : "opacity-0 cursor-default"
         }`}
     >
-      <FiArrowUpCircle className="w-12 h-12" strokeWidth={1.5} />
+      <FiArrowUpCircle className={`w-12 h-12 hover:fill-none ${Theme === "light" ? "fill-Villo-light-black50" : "fill-Villo-light-white20"}`} strokeWidth={1.5} />
     </button>
   );
 }

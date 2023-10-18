@@ -185,6 +185,18 @@ export const ThemedP = ({ children, className }) => {
   );
 };
 
+export const ReversedThemedP = ({ children, className }) => {
+  const { Theme } = useContext(ThemeContext);
+  return (
+    <p
+      className={` ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-black"
+        } text-p leading-p ${className}`}
+    >
+      {children}
+    </p>
+  );
+};
+
 export function ResponsiveSmall({ children, maxWidth, className }) {
   return (
     <p

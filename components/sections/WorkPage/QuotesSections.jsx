@@ -25,13 +25,13 @@ export const QuotesSection = ({ Theme, language }) => {
             >
               <div
                 key={quote.id}
-                className={`transition-all border border-b-8 border-r-8 w-fit h-fit rounded-xl ${Theme === "light"
+                className={`transition-all border overflow-hidden border-b-8 border-r-8 w-fit h-fit rounded-xl ${Theme === "light"
                   ? "border-Villo-light-primary"
                   : "border-Villo-dark-primary"
                   }  `}
               >
                 <Image
-                  className={`object-cover object-center duration-500  bg-Villo-dark-primary transition-all rounded-[4px] rounded-tl-xl md:w-[300px] md:h-[300px] h-[250px] w-[250px]`}
+                  className={`object-cover object-center duration-500  bg-Villo-dark-primary transition-all rounded-[4px] md:w-[300px] md:h-[300px] h-[250px] w-[250px]`}
                   src={quote.imageUrl}
                   alt={quote.person}
                   width={300}
