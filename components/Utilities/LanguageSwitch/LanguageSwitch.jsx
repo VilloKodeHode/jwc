@@ -14,7 +14,6 @@ const LanguageSwitch = ({ cookiesAccepted, className }) => {
     if (storedLanguage) {
       setLanguage(storedLanguage);
     }
-    console.log("Is theme cookie set?", !!storedLanguage);
   }, [setLanguage, cookiesAccepted]);
 
   const changeLanguage = () => {

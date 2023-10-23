@@ -69,10 +69,7 @@ export const OfferSectionPart = ({
   return (
     <div className="mt-5  transition-all duration-300 md:mt-0 md:col-span-1 hover:scale-[1.02] active:scale-[1.02] group cursor-default">
       <div
-        className={`overflow-hidden max-w-sm transition-transform duration-300 shadow sm:rounded-lg group-hover:outline  ${Theme === "light"
-          ? " group-hover:outline-Villo-light-white20"
-          : " group-hover:outline-Villo-dark-black50"
-          }`}
+        className={`overflow-hidden max-w-sm transition-transform duration-300 shadow sm:rounded-lg`}
       >
         <div
           className={`grid gap-6 min-h-[131px] transition-colors duration-300  ${Theme === "light"
