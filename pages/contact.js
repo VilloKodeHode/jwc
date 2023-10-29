@@ -24,10 +24,7 @@ export default function ContactPage({ language, Theme }) {
       <PageLayout>
         <ContactformSection language={language} Theme={Theme} />
         {/* Google Tag Manager script */}
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-METSFG26LN"
-        />
+
       </PageLayout>
     </>
   );
