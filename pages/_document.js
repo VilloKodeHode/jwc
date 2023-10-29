@@ -11,10 +11,7 @@ export default function Document() {
       <body className={`scrollbar scrollbar-track-Villo-dark-black75 scrollbar-thumb-Villo-light-white20`}>
         <Main />
         <NextScript />
-        <Script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-METSFG26LN"
-        />
+
       </body>
     </Html>
   );
