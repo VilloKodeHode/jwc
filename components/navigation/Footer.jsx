@@ -32,7 +32,7 @@ export default function Footer({ language, Theme }) {
           </div>
           <p>Email: Joakim@jvwebconsult.no</p>
           <p>Phone: +47 932 850 44</p>
-          <p>Address: 123 Main Street, City, Country</p>
+          <p>Address: Brekkelia 62B, 3153 Tolvsrød</p>
         </div>
         {/* Copyright Information */}
         <div className={`flex items-center text-center ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>

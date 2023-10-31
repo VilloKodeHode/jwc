@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+/.unlighthouse
 # next.js
 /.next/
 /out/
