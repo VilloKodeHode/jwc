@@ -33,8 +33,8 @@ export const WorkedWithSection = ({ language, Theme }) => {
                 company.name === "Kodeverket Bergen"
                   ? "shadow-[#7fe5d3]"
                   : company.name === "Jobloop"
-                  ? "shadow-[#f4a366]"
-                  : "shadow-white"
+                  ? "shadow-[#f4a366]" : company.name === "Villo utvikling" ?
+                   "shadow-[#858ee0]" : "shadow-white"
               }  transition-all max-w-sm rounded-lg
                             ${
                               Theme === "light"

@@ -96,7 +96,7 @@ export const NewClientLayout = ({ language, Theme }) => {
                   }`}
               >
                 <div className="relative w-28 h-28">
-                  <p className="absolute z-10 text-center transition-all translate-x-1/2 translate-y-1/2 opacity-0 group-hover:opacity-100 bottom-1/2 right-1/2">{client.progress === "in progress" || client.progress === "under arbeid" ? client.progress : ""}</p>
+                  <ThemedP className="absolute z-10 w-full text-center transition-all translate-x-1/2 opacity-0 -top-4 group-hover:opacity-100 right-1/2">{client.progress === "in progress" || client.progress === "under arbeid" ? client.progress : ""}</ThemedP>
                   <Image
                     className="object-contain w-full h-full filter grayscale"
                     src={client.imageUrl}

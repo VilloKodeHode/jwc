@@ -23,4 +23,16 @@ export const QUOTES_LIST = [
     norPersonTitle: "Daglig leder i Wileo AS",
     engPersonTitle: "Managing Director at Wileo AS",
   },
+  {
+    id: "TrondBorg_quote",
+    norQuote:
+      "“Da har jeg publisert nettsiden og det ble veldig bra med god respons. Veldig fornøyd med hjelpen jeg fikk av deg”",
+    engQuote:
+      "I have now published the website and the result was very good. Also the response has already been very positive. Very pleased with the help I got from you”",
+    person: "Trond Borg",
+    imageUrl: "/images/quotes/TrondBorg.webp",
+    logo: "/images/companies/TrondBorg_logo.svg",
+    norPersonTitle: "Eier av Trond Borg - Virvelløse hobbydyr",
+    engPersonTitle: "Owner of Trond Borg - Virvelløse hobbydyr",
+  },
 ];
