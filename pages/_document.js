@@ -11,7 +11,6 @@ export default function Document() {
       <body className={`scrollbar scrollbar-track-Villo-dark-black75 scrollbar-thumb-Villo-light-white20`}>
         <Main />
         <NextScript />
-
       </body>
     </Html>
   );

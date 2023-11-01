@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) => {
-  const [showPopup, setShowPopup] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleAccept = () => {
     setShowPopup(false);
@@ -25,7 +25,7 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
   };
 
   useEffect(() => {
-    // Update showPopup based on cookiesAccepted when the component mounts
+    // cookiesAccepted === false ? setShowPopup(false) : setShowPopup(true);
     setShowPopup(!cookiesAccepted);
   }, [cookiesAccepted]);
 
