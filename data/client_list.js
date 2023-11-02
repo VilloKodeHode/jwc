@@ -20,7 +20,7 @@ export const CLIENT_LIST = [
       },
       {
         id: "3Norwegian",
-        name: "nåværende freelance jobb",
+        name: "Trond Borg",
         jobDone: "Made complete webshop with wix",
         imageUrl: "/images/companies/TrondBorg_logo.svg",
         href: "https://www.trond-borg.com/",
@@ -49,7 +49,7 @@ export const CLIENT_LIST = [
       },
       {
         id: "3English",
-        name: "current freelance job",
+        name: "Trond Borg",
         jobDone: "Complete webstore with wix",
         imageUrl: "/images/companies/TrondBorg_logo.svg",
         href: "https://www.trond-borg.com/",
