@@ -43,6 +43,27 @@ export const WORKEDWITH_LIST = [
           { name: "React", href: "https://reactjs.org/" },
         ],
       },
+      {
+        id: "3Norwegian",
+        name: "Villo utvikling",
+        jobDone:
+          "Min frilanser jobb. Jeg Lager nettsider (deler eller hele), nettinnhold og forbedret SEO",
+          imageUrl: "/images/companies/WindLogoDarkmode.svg",
+        href: "https://www.jvwebconsult.no/",
+        progress: "current",
+        color: "#858ee0",
+        skillsUsed: [
+            {
+              name: "Next.js",
+              href: "https://nextjs.org/",
+            },
+            { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
+            { name: "Sanity", href: "https://www.sanity.io/" },
+            { name: "Figma", href: "https://www.figma.com/" },
+            { name: "React", href: "https://reactjs.org/" },
+            { name: "Wix", href: "https://wix.com/" },
+          ],
+      },
     ],
   },
   {
@@ -88,6 +109,27 @@ export const WORKEDWITH_LIST = [
             },
             { name: "Figma", href: "https://www.figma.com/" },
             { name: "React", href: "https://reactjs.org/" },
+          ],
+      },
+      {
+        id: "3English",
+        name: "Villo utvikling",
+        jobDone:
+          "My freelance job. I create Websites (parts or whole), webcontent and improve SEO.",
+        imageUrl: "/images/companies/WindLogoDarkmode.svg",
+        href: "https://www.jvwebconsult.no/",
+        progress: "current",
+        color: "#858ee0",
+        skillsUsed: [
+            {
+              name: "Next.js",
+              href: "https://nextjs.org/",
+            },
+            { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
+            { name: "Sanity", href: "https://www.sanity.io/" },
+            { name: "Figma", href: "https://www.figma.com/" },
+            { name: "React", href: "https://reactjs.org/" },
+            { name: "Wix", href: "https://wix.com/" },
           ],
       },
     ],
