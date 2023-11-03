@@ -4,9 +4,7 @@ import { OfferSection } from "@/components/sections/IndexPage/OfferSection";
 import { HeroSection } from "@/components/sections/IndexPage/HeroSection";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
-import { SectionNavigation } from "@/components/sections/IndexPage/SectionNavigation";
-import { useEffect } from "react";
-import { EmailCTA } from "@/components/Buttons";
+
 
 
 export default function Home({ language, Theme }) {
