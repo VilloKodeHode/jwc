@@ -12,6 +12,7 @@ import { ContextProviders } from "@/components/Utilities/CombinedContextProvider
 import { useRouter } from "next/router";
 import { getCookie, setCookie } from "cookies-next";
 import CookiePopup from "@/components/Utilities/CookiePopup/CookiePopup";
+import PageLayout from "@/components/Layout/Layout";
 
 export default function App({ Component, pageProps }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
@@ -63,6 +64,7 @@ function AppContent({
 
   const currentPath = router.asPath;
 
+
   useEffect(() => {
     // Function to check if an element is in the viewport
     function isElementInViewport(element, threshold = 0.6) {
@@ -71,11 +73,11 @@ function AppContent({
       const elementTop = rect.top;
       return elementTop <= windowHeight * threshold;
     }
-  
+
     // Function to handle the scroll event
     function handleScroll() {
       const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
-  
+
       elementsToAnimate.forEach((element) => {
         if (isElementInViewport(element, 0.6)) {
           // Add your animation class or logic here
@@ -83,13 +85,13 @@ function AppContent({
         }
       });
     }
-  
+
     // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
-  
+
     // Initial check to see if the elements are already in the viewport on page load
     handleScroll();
-  
+
     // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -122,13 +124,14 @@ function AppContent({
             Theme={Theme}
             cookiesAccepted={cookiesAccepted}
           />
-
-          <Component
-            {...pageProps}
-            language={language}
-            Theme={Theme}
-            currentPath={currentPath}
-          />
+          <PageLayout>
+            <Component
+              {...pageProps}
+              language={language}
+              Theme={Theme}
+              currentPath={currentPath}
+            />
+          </PageLayout>
           <Analytics defer />
           <Script
             src="https://cdn.addrow.com/ads/viewability251.js"

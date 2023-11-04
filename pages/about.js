@@ -16,27 +16,25 @@ export default function AboutPage({ language, Theme }) {
         title="Villo Utvikling - About"
         url="https://jvwebconsult.no/about"
       />
-      <PageLayout gap="gap-28">
-        <CompanyInfo language={language} Theme={Theme} />
-        <MyIntroSection language={language} Theme={Theme} />
 
-        <SkillsSection language={language} Theme={Theme} />
+      <CompanyInfo language={language} Theme={Theme} />
+      <MyIntroSection language={language} Theme={Theme} />
+      <SkillsSection language={language} Theme={Theme} />
+      <ProjectSection language={language} Theme={Theme} />
+      <LetsGoCTA
+        language={language}
+        type="portfolio"
+        Theme={Theme}
+        engText="Check my portfolio"
+        norText="Sjekk min portfølje"
+        href="/portfolio"
 
-        <ProjectSection language={language} Theme={Theme} />
-        <LetsGoCTA
-          language={language}
-          type="portfolio"
-          Theme={Theme}
-          engText="Check my portfolio"
-          norText="Sjekk min portfølje"
-          href="/portfolio"
-
-        > {language === "Norwegian" ? "Portofølje" : "Portfolio"}
-        </LetsGoCTA>
+      > {language === "Norwegian" ? "Portofølje" : "Portfolio"}
+      </LetsGoCTA>
 
 
 
-      </PageLayout>
+
     </>
   );
 }

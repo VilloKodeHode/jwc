@@ -21,37 +21,37 @@ export default function ProjectPage({ language, Theme }) {
         title="Villo Utvikling - Work"
         url="https://jvwebconsult.no/work"
       />
-      <PageLayout gap="gap-28">
-        <div className="pt-12 text-center">
-          <ResponsiveThemedH1>
-            {language === "Norwegian" ? "Portofølje" : "Portfolio"}
-          </ResponsiveThemedH1>
-          <ThemedP className="px-4 pt-8 mx-auto text-left max-w-7xl sm:px-6 lg:px-8">
-            {language === "Norwegian"
-              ? "Med lidenskap for front-end-utvikling og et forpliktende fokus på å skape brukersentrerte design, gir jeg liv til din visjon. Utforsk prosjektene jeg har hatt gleden av å jobbe med, hver av dem representerer en blanding av kunst og teknologi som definerer min tilnærming."
-              : "With a passion for front-end development and a commitment to creating user-centric designs, I bring your vision to life. Explore the projects I&apos;ve had the privilege to work on, each representing the blend of art and technology that defines my approach."}
 
-          </ThemedP>
-        </div>
-        <NewClientLayout
-          clients={clientList}
-          language={language}
-          Theme={Theme}
-        />
-        {/* <NewWorkedWithSection language={language} Theme={Theme} /> */}
-        <WorkedWithSection language={language} Theme={Theme} />
-        <QuotesSection language={language} Theme={Theme} />
-        <LetsGoCTA
-          language={language}
-          type="email"
-          Theme={Theme}
-          engText="Make me you coworker!"
-          norText="Få meg som medarbeider!"
-          href="/contact"
+      <div className="pt-12 text-center">
+        <ResponsiveThemedH1>
+          {language === "Norwegian" ? "Portofølje" : "Portfolio"}
+        </ResponsiveThemedH1>
+        <ThemedP className="px-4 pt-8 mx-auto text-left max-w-7xl sm:px-6 lg:px-8">
+          {language === "Norwegian"
+            ? "Med lidenskap for front-end-utvikling og et forpliktende fokus på å skape brukersentrerte design, gir jeg liv til din visjon. Utforsk prosjektene jeg har hatt gleden av å jobbe med, hver av dem representerer en blanding av kunst og teknologi som definerer min tilnærming."
+            : "With a passion for front-end development and a commitment to creating user-centric designs, I bring your vision to life. Explore the projects I&apos;ve had the privilege to work on, each representing the blend of art and technology that defines my approach."}
 
-        > {language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
+        </ThemedP>
+      </div>
+      <NewClientLayout
+        clients={clientList}
+        language={language}
+        Theme={Theme}
+      />
+      {/* <NewWorkedWithSection language={language} Theme={Theme} /> */}
+      <WorkedWithSection language={language} Theme={Theme} />
+      <QuotesSection language={language} Theme={Theme} />
+      <LetsGoCTA
+        language={language}
+        type="email"
+        Theme={Theme}
+        engText="Make me you coworker!"
+        norText="Få meg som medarbeider!"
+        href="/contact"
 
-      </PageLayout>
+      > {language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
+
+
     </>
   );
 }

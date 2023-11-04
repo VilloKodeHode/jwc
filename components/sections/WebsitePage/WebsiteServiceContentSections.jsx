@@ -4,11 +4,12 @@ import {
   ResponsiveThemedH5,
 } from "../../Responsive text/ResponsiveText";
 import { ArrowCTA, ReadMoreButton } from "@/components/Buttons";
+import { scrollToSection } from "@/components/navigation/scrollLogic";
 
 export const WebsiteServiceTopSection = ({ language, Theme }) => {
   return (
     <section className="py-12">
-      <div className="flex flex-col items-start justify-center gap-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+       <div className="flex flex-col items-start justify-center gap-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="w-full text-left">
           <ResponsiveThemedH1>
             {language === "Norwegian"
@@ -17,7 +18,7 @@ export const WebsiteServiceTopSection = ({ language, Theme }) => {
           </ResponsiveThemedH1>
         </div>
         <div className="animate-PageAppearRight">
-          <ResponsiveThemedH5 className={`font-normal`}>
+          <ResponsiveThemedH5 className={`mt-4 font-normal`}>
             {language === "Norwegian"
               ? "Jeg lager nettsider som er optimalisert for best mulig brukeropplevelse og trafikk på nettet. Den nyeste teknologien blir brukt for å sikre at nettsiden din er rask, moderne og responsiv. Som profesjonell nettsidedesigner spesialiserer jeg meg på å lage imponerende og funksjonelle nettsteder som tilpasses dine unike behov og mål."
               : "I create websites that are optimized for the best user experience and web traffic. The latest technology is used to ensure that your website is fast, secure, and responsive. As a professional website designer, I specialize in crafting stunning and functional websites that cater to your unique needs and goals."}
@@ -25,7 +26,10 @@ export const WebsiteServiceTopSection = ({ language, Theme }) => {
         </div>
         <div className="grid justify-center gap-8 ml:grid-flow-col">
           <div className="h-[60px] flex justify-start items-center max-w-fit">
-            <a href="#websiteYouGet" className="">
+            <a
+              onClick={(event) => scrollToSection(event, "websiteYouGet")}
+              className=""
+            >
               <ReadMoreButton Theme={Theme} className="">
                 {language === "Norwegian" ? "lær mer" : "learn more"}
               </ReadMoreButton>

@@ -6,10 +6,9 @@ import {
 } from "../../Responsive text/ResponsiveText";
 import Link from "next/link";
 import THREESpace from "../../animation/Space";
-
+import { scrollToSection } from "@/components/navigation/scrollLogic";
 
 export const HeroSection = ({ language, Theme }) => {
-
   return (
     <>
       <div className="flex justify-center w-full h-full">
@@ -20,10 +19,11 @@ export const HeroSection = ({ language, Theme }) => {
           <div className="max-w-6xl animate-PageAppearRight">
             <div className="relative z-50 text-left">
               <ResponsiveP
-                className={`mb-8 text-left ${Theme === "light"
-                  ? "text-Villo-light-black85"
-                  : "text-Villo-dark-white10"
-                  }  w-fit`}
+                className={`mb-8 text-left ${
+                  Theme === "light"
+                    ? "text-Villo-light-black85"
+                    : "text-Villo-dark-white10"
+                }  w-fit`}
               >
                 {language === "Norwegian"
                   ? "Nettsider for små og mellomstore bedrifter"
@@ -31,23 +31,20 @@ export const HeroSection = ({ language, Theme }) => {
               </ResponsiveP>
               <ResponsiveThemedH1 className="mb-8">
                 <span
-                  className={`${Theme === "light"
-                    ? "text-Villo-light-primary"
-                    : "text-Villo-dark-primary"
-                    }`}
+                  className={`${
+                    Theme === "light"
+                      ? "text-Villo-light-primary"
+                      : "text-Villo-dark-primary"
+                  }`}
                 >
                   {language === "Norwegian"
                     ? "Webutviklinger"
                     : "Website developer"}
                 </span>{" "}
                 {language === "Norwegian" ? "som lager" : "creating"}{" "}
-
                 {language === "Norwegian" ? "din idè" : "your idea"}{" "}
-
                 {language === "Norwegian" ? "raskere" : "faster"}{" "}
-
                 {language === "Norwegian" ? "og" : "and"}{" "}
-
                 {language === "Norwegian" ? "bedre" : "better"}
               </ResponsiveThemedH1>
 
@@ -65,22 +62,21 @@ export const HeroSection = ({ language, Theme }) => {
                   </Link>
                 </div>
                 <div className="h-[60px] flex justify-start items-center max-w-fit">
-                  <a href="#OfferSection" className="">
+                  <a
+                    onClick={(event) => scrollToSection(event, "OfferSection")}
+                    className=""
+                  >
                     <ReadMoreButton Theme={Theme} className="">
                       {language === "Norwegian" ? "tjenester" : "Services"}
                     </ReadMoreButton>
                   </a>
                 </div>
-
               </div>
             </div>
-
           </div>
-
         </section>
         <THREESpace className="absolute top-0 -z-20" Theme={Theme} />
       </div>
-
     </>
   );
 };

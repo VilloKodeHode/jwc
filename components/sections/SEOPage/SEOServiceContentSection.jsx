@@ -4,6 +4,7 @@ import {
   ResponsiveThemedH5,
 } from "../../Responsive text/ResponsiveText";
 import Link from "next/link";
+import { scrollToSection } from "@/components/navigation/scrollLogic";
 
 export const SEOServiceTopSection = ({ language, Theme }) => {
   return (
@@ -25,7 +26,11 @@ export const SEOServiceTopSection = ({ language, Theme }) => {
         </div>
         <div className="grid justify-center gap-8 ml:grid-flow-col">
           <div className="h-[60px] flex justify-start items-center max-w-fit">
-            <a href="#SEOYouGet" className="">
+            <a
+              href="#SEOYouGet"
+              onClick={(event) => scrollToSection(event, "SEOYouGet")}
+              className=""
+            >
               <ReadMoreButton Theme={Theme} className="">
                 {language === "Norwegian" ? "lær mer" : "learn more"}
               </ReadMoreButton>

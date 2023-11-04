@@ -13,21 +13,21 @@ export default function ProjectPage({ language, Theme }) {
         title="Villo Utvikling - Projects"
         url="https://jvwebconsult.no/projects"
       />
-      <PageLayout gap="gap-28">
-        <ProjectSection language={language} Theme={Theme} />
 
-        {/* <NewClientLayout language={language} Theme={Theme} /> */}
+      <ProjectSection language={language} Theme={Theme} />
 
-        <LetsGoCTA
-          language={language}
-          Theme={Theme}
-          engText="Check my work with previous customers"
-          norText="Sjekk mitt arbeid med tidligere kunder"
-          href="/work"
-          buttonEngText="My work"
-          buttonNorText="Mitt arbeid"
-        />
-      </PageLayout>
+      {/* <NewClientLayout language={language} Theme={Theme} /> */}
+
+      <LetsGoCTA
+        language={language}
+        Theme={Theme}
+        engText="Check my work with previous customers"
+        norText="Sjekk mitt arbeid med tidligere kunder"
+        href="/work"
+        buttonEngText="My work"
+        buttonNorText="Mitt arbeid"
+      />
+
     </>
   );
 }

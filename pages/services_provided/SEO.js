@@ -16,20 +16,18 @@ export default function ProvidedServiceSEO({ language, Theme }) {
         title="Villo Utvikling - Trenger du nettinnhold?"
         url="https://jvwebconsult.no/services_provided/webcontent"
       />
-      <PageLayout gap="gap-28">
-        <SEOServiceTopSection language={language} Theme={Theme} />
-        <SEOProcessSection id="SEOYouGet" language={language} Theme={Theme} />
-        <SEOServiceBottomSection language={language} Theme={Theme} />
-        <LetsGoCTA
-          language={language}
-          type="email"
-          Theme={Theme}
-          engText="Lets improve your SEO!"
-          norText="Lås opp din synlighet!"
-          href="/contact"
-        >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
+      <SEOServiceTopSection language={language} Theme={Theme} />
+      <SEOProcessSection id="SEOYouGet" language={language} Theme={Theme} />
+      <SEOServiceBottomSection language={language} Theme={Theme} />
+      <LetsGoCTA
+        language={language}
+        type="email"
+        Theme={Theme}
+        engText="Lets improve your SEO!"
+        norText="Lås opp din synlighet!"
+        href="/contact"
+      >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
 
-      </PageLayout>
     </>
   );
 }

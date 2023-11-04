@@ -4,6 +4,7 @@ import {
   ResponsiveThemedH5,
 } from "../../Responsive text/ResponsiveText";
 import Link from "next/link";
+import { scrollToSection } from "@/components/navigation/scrollLogic";
 
 export const WebcontentServiceTopSection = ({ language, Theme }) => {
   return (
@@ -16,7 +17,7 @@ export const WebcontentServiceTopSection = ({ language, Theme }) => {
               : "Need webcontent?"}
           </ResponsiveThemedH1>
         </div>
-        <div className="text-center animate-PageAppearRight">
+        <div className="animate-PageAppearRight">
           <ResponsiveThemedH5 className={`mt-4 font-normal`}>
             {language === "Norwegian"
               ? "Levering av engasjerende og innflytelsesrik webinnhold er min ekspertise. Jeg forstår at innholdet på nettstedet ditt spiller en avgjørende rolle i å tiltrekke og beholde besøkende. Med en lidenskap for effektiv kommunikasjon og en evne for kreativitet, tilbyr jeg profesjonelle tjenester innen webinnholdsskaping til bedrifter og enkeltpersoner som ønsker å skape et varig inntrykk på nettet."
@@ -25,7 +26,10 @@ export const WebcontentServiceTopSection = ({ language, Theme }) => {
         </div>
         <div className="grid justify-center gap-8 ml:grid-flow-col">
           <div className="h-[60px] flex justify-start items-center max-w-fit">
-            <a href="#webContentYouGet" className="">
+            <a
+              onClick={(event) => scrollToSection(event, "webContentYouGet")}
+              className=""
+            >
               <ReadMoreButton Theme={Theme} className="">
                 {language === "Norwegian" ? "lær mer" : "learn more"}
               </ReadMoreButton>

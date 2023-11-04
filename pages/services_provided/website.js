@@ -14,19 +14,19 @@ export default function ProvidedServiceWebsite({ language, Theme }) {
         title="Villo Utvikling - Trenger du ny nettside?"
         url="https://jvwebconsult.no/services_provided/website"
       />
-      <PageLayout gap="gap-28">
-        <WebsiteServiceTopSection language={language} Theme={Theme} />
-        <WebsiteProcessSection id="websiteYouGet" language={language} Theme={Theme} />
-        <WebsiteServiceBottomSection language={language} Theme={Theme} />
-        <LetsGoCTA
-          language={language}
-          type="email"
-          Theme={Theme}
-          engText="Let us make you new website!"
-          norText="La oss lage din nye nettside!"
-          href="/contact"
-        >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
-      </PageLayout>
+
+      <WebsiteServiceTopSection language={language} Theme={Theme} />
+      <WebsiteProcessSection id="websiteYouGet" language={language} Theme={Theme} />
+      <WebsiteServiceBottomSection language={language} Theme={Theme} />
+      <LetsGoCTA
+        language={language}
+        type="email"
+        Theme={Theme}
+        engText="Let us make you new website!"
+        norText="La oss lage din nye nettside!"
+        href="/contact"
+      >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
+
     </>
   );
 }

@@ -3,7 +3,7 @@
 export default function PageLayout({ children, gap }) {
   return (
     <main
-      className={`flex flex-col animate-Appear items-center px-4 mx-auto sm:px-6 lg:px-12 justify-start min-h-screen overflow-x-hidden ${gap}`}
+      className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start min-h-screen overflow-x-hidden gap-28`}
     >
       <>{children}</>
     </main>

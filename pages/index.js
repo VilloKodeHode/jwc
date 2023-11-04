@@ -5,10 +5,7 @@ import { HeroSection } from "@/components/sections/IndexPage/HeroSection";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
 
-
-
 export default function Home({ language, Theme }) {
-
   return (
     <>
       <MetaTags
@@ -17,22 +14,20 @@ export default function Home({ language, Theme }) {
         title="Villo Utvikling - Home"
         url="https://jvwebconsult.no/"
       />
-      <PageLayout gap="gap-28">
-        <HeroSection language={language} Theme={Theme} />
-        <CTAOneSection language={language} Theme={Theme} />
-        <OfferSection language={language} Theme={Theme} />
-        <LetsGoCTA
-          language={language}
-          type="email"
-          Theme={Theme}
-          engText="Let's get started!"
-          norText="La oss komme i gang!"
-          href="/contact"
 
-        > {language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
-
-
-      </PageLayout>
+      <HeroSection language={language} Theme={Theme} />
+      <CTAOneSection language={language} Theme={Theme} />
+      <OfferSection language={language} Theme={Theme} />
+      <LetsGoCTA
+        language={language}
+        type="email"
+        Theme={Theme}
+        engText="Let's get started!"
+        norText="La oss komme i gang!"
+        href="/contact"
+      >
+        {language === "Norwegian" ? "Kontakt meg" : "Contact me"}
+      </LetsGoCTA>
     </>
   );
 }

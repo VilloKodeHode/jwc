@@ -21,9 +21,9 @@ export default function ContactPage({ language, Theme }) {
         />
 
       </Head>
-      <PageLayout>
-        <ContactformSection language={language} Theme={Theme} />
-      </PageLayout>
+
+      <ContactformSection language={language} Theme={Theme} />
+
     </>
   );
 }

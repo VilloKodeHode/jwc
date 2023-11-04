@@ -15,19 +15,17 @@ export default function ProvidedServiceWebcontent({ language, Theme }) {
         title="Villo Utvikling - Trenger du nettinnhold?"
         url="https://jvwebconsult.no/services_provided/webcontent"
       />
-      <PageLayout gap="gap-28">
-        <WebcontentServiceTopSection language={language} Theme={Theme} />
-        <WebcontentProcessSection id="webContentYouGet" language={language} Theme={Theme} />
-        <WebcontentServiceBottomSection language={language} Theme={Theme} />
-        <LetsGoCTA
-          language={language}
-          type="email"
-          Theme={Theme}
-          engText="Let us make some webcontent!"
-          norText="La oss lage noe nettinnhold!"
-          href="/contact"
-        >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
-      </PageLayout>
+      <WebcontentServiceTopSection language={language} Theme={Theme} />
+      <WebcontentProcessSection id="webContentYouGet" language={language} Theme={Theme} />
+      <WebcontentServiceBottomSection language={language} Theme={Theme} />
+      <LetsGoCTA
+        language={language}
+        type="email"
+        Theme={Theme}
+        engText="Let us make some webcontent!"
+        norText="La oss lage noe nettinnhold!"
+        href="/contact"
+      >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
     </>
   );
 }
