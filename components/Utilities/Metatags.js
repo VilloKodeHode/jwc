@@ -1,6 +1,7 @@
 // components/MetaTags.js
 
 import Head from "next/head";
+import Script from "next/script";
 
 function MetaTags({ title, description, url, Theme }) {
   return (
@@ -33,6 +34,18 @@ function MetaTags({ title, description, url, Theme }) {
             : "/logo/WindLogoNoTextDarkMode.svg"
         }
       />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-METSFG26LN" />
+      <script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-METSFG26LN');
+        `}
+      </script>
+
+
     </Head>
   );
 }
