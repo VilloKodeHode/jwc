@@ -12,7 +12,6 @@ import {
 import { useContext, useState } from "react";
 import LanguageContext from "../../Utilities/LanguageSwitch/LanguageContext";
 
-
 export const ContactformSection = ({ language, Theme }) => {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -21,10 +20,7 @@ export const ContactformSection = ({ language, Theme }) => {
     message: "",
   });
 
-
-
   const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,16 +29,19 @@ export const ContactformSection = ({ language, Theme }) => {
 
     // Construct message string with the form data
 
-    const fetchPromise = fetch(endpoint, {
-      method: "POST",
-      mode: "cors",
-      cache: "no-cache",
-      body: JSON.stringify({
-        name: data.name,
-        email: data.email,
-        message: data.message,
-      }),
-    });
+    const fetchPromise = fetch(
+      "https://drayggdi6t7tnbviin7ucjgsjq0jhztd.lambda-url.eu-north-1.on.aws/",
+      {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        }),
+      }
+    );
     fetchPromise
       .then((response) => response.json())
       .then((data) => {
@@ -80,20 +79,22 @@ export const ContactformSection = ({ language, Theme }) => {
               <div className="mb-4">
                 <label
                   htmlFor="name"
-                  className={`block font-bold mb-2 ${Theme === "light"
-                    ? "text-Villo-light-black"
-                    : "text-Villo-dark-white"
-                    }`}
+                  className={`block font-bold mb-2 ${
+                    Theme === "light"
+                      ? "text-Villo-light-black"
+                      : "text-Villo-dark-white"
+                  }`}
                 >
                   {language === "Norwegian" ? "Navn" : "Name"}
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className={` ${Theme === "light"
-                    ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
-                    : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
-                    } w-full px-4 py-2 border rounded-lg  focus:outline `}
+                  className={` ${
+                    Theme === "light"
+                      ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
+                      : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
+                  } w-full px-4 py-2 border rounded-lg  focus:outline `}
                   placeholder={
                     language === "Norwegian" ? "Ditt navn" : "Your name"
                   }
@@ -107,20 +108,22 @@ export const ContactformSection = ({ language, Theme }) => {
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className={`block font-bold mb-2 ${Theme === "light"
-                    ? "text-Villo-light-black"
-                    : "text-Villo-dark-white"
-                    }`}
+                  className={`block font-bold mb-2 ${
+                    Theme === "light"
+                      ? "text-Villo-light-black"
+                      : "text-Villo-dark-white"
+                  }`}
                 >
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className={` ${Theme === "light"
-                    ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
-                    : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
-                    } w-full px-4 py-2 border rounded-lg  focus:outline `}
+                  className={` ${
+                    Theme === "light"
+                      ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
+                      : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
+                  } w-full px-4 py-2 border rounded-lg  focus:outline `}
                   placeholder={
                     language === "Norwegian"
                       ? "Din email adresse"
@@ -136,19 +139,21 @@ export const ContactformSection = ({ language, Theme }) => {
               <div className="mb-4">
                 <label
                   htmlFor="message"
-                  className={`block font-bold mb-2 ${Theme === "light"
-                    ? "text-Villo-light-black"
-                    : "text-Villo-dark-white"
-                    }`}
+                  className={`block font-bold mb-2 ${
+                    Theme === "light"
+                      ? "text-Villo-light-black"
+                      : "text-Villo-dark-white"
+                  }`}
                 >
                   {language === "Norwegian" ? "Melding" : "Message"}
                 </label>
                 <textarea
                   id="message"
-                  className={` ${Theme === "light"
-                    ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
-                    : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
-                    } w-full px-4 py-2 border rounded-lg  focus:outline `}
+                  className={` ${
+                    Theme === "light"
+                      ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
+                      : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
+                  } w-full px-4 py-2 border rounded-lg  focus:outline `}
                   rows="4"
                   placeholder={
                     language === "Norwegian" ? "Din melding" : "Your message"
@@ -169,10 +174,11 @@ export const ContactformSection = ({ language, Theme }) => {
       )}
       {showModal && (
         <div
-          className={`flex items-center rounded-xl justify-center ${Theme === "light"
-            ? "bg-Villo-light-white20"
-            : "bg-Villo-dark-black50"
-            } `}
+          className={`flex items-center rounded-xl justify-center ${
+            Theme === "light"
+              ? "bg-Villo-light-white20"
+              : "bg-Villo-dark-black50"
+          } `}
         >
           <div className="relative flex flex-col items-center justify-center gap-8 p-8 bg-Villo-black rounded-3xl">
             <ResponsiveThemedH2 className="text-center">
