@@ -54,7 +54,7 @@ export const SkillsSection = ({ language, Theme }) => {
           >
             <Image
               src="/images/skills/html-logo.png"
-              className="relative z-10 w-[53.5px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[53.5px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="react logo"
               height={60}
               width={60}
@@ -62,7 +62,7 @@ export const SkillsSection = ({ language, Theme }) => {
 
             <Image
               src="/images/skills/react-logo.png"
-              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="react logo"
               height={60}
               width={60}
@@ -70,14 +70,14 @@ export const SkillsSection = ({ language, Theme }) => {
 
             <Image
               src="/images/skills/css-logo.png"
-              className="relative z-10 w-[53.5px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[53.5px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="react logo"
               height={60}
               width={60}
             ></Image>
             <Image
               src="/images/skills/javascript-logo.png"
-              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="javascript logo"
               height={60}
               width={60}
@@ -91,28 +91,28 @@ export const SkillsSection = ({ language, Theme }) => {
             ></Image>
             <Image
               src="/images/skills/svelte-logo.png"
-              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="nextjs logo"
               height={60}
               width={60}
             ></Image>
             <Image
               src="/images/skills/nuxt-logo.png"
-              className="relative z-10 w-[92px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[92px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="nextjs logo"
               height={60}
               width={60}
             ></Image>
             <Image
               src="/images/skills/vsc.png"
-              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="react logo"
               height={60}
               width={60}
             ></Image>
             <Image
               src="/images/skills/git-logo.png"
-              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="nextjs logo"
               height={60}
               width={60}
@@ -126,7 +126,7 @@ export const SkillsSection = ({ language, Theme }) => {
             ></Image>
             <Image
               src="/images/skills/tailwindcss-logo.png"
-              className="relative object-fit z-10 w-[60px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative object-fit z-10 w-[60px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="figma logo"
               height={80}
               width={80}
@@ -135,7 +135,7 @@ export const SkillsSection = ({ language, Theme }) => {
             <figure className="grid grid-cols-[2fr_1fr] w-[120px] group hover:scale-110 duration-500">
               <Image
                 src="/images/skills/daisy1-logo.png"
-                className="relative object-fit z-10 w-[70px] aspect-auto m-auto duration-500 saturate-50 group-hover:saturate-100"
+                className="relative object-fit z-10 w-[70px] aspect-auto m-auto duration-500 saturate-[70%] group-hover:saturate-100"
                 alt="figma logo"
                 height={80}
                 width={80}
@@ -150,7 +150,7 @@ export const SkillsSection = ({ language, Theme }) => {
             </figure>
             <Image
               src="/images/skills/chakraUI-logo.png"
-              className="relative object-fit z-10 w-[60px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative object-fit z-10 w-[60px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="figma logo"
               height={80}
               width={80}
@@ -158,7 +158,7 @@ export const SkillsSection = ({ language, Theme }) => {
 
             <Image
               src="/images/skills/figma-logo.png"
-              className="relative object-fit z-10 w-[40px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative object-fit z-10 w-[40px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="figma logo"
               height={80}
               width={80}
@@ -166,7 +166,7 @@ export const SkillsSection = ({ language, Theme }) => {
 
             <Image
               src="/images/skills/canva-logo.png"
-              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="react logo"
               height={60}
               width={60}
@@ -180,14 +180,14 @@ export const SkillsSection = ({ language, Theme }) => {
             ></Image>
             <Image
               src="/images/skills/squarespace-logo.png"
-              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[60px] aspect-auto m-auto duration-500 contrast-50 hover:contrast-100 hover:scale-110"
               alt="react logo"
               height={60}
               width={60}
             />
             <Image
               src="/images/skills/sanity-logo.png"
-              className="relative z-10 w-[45px] aspect-auto m-auto duration-500 saturate-50 hover:saturate-100 hover:scale-110"
+              className="relative z-10 w-[45px] aspect-auto m-auto duration-500 saturate-[70%] hover:saturate-100 hover:scale-110"
               alt="react logo"
               height={60}
               width={60}
