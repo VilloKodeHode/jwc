@@ -23,17 +23,10 @@ export const ContactformSection = ({ language, Theme }) => {
     console.log("Email:", formData.email);
     console.log("Message:", formData.message);
 
-    // Construct message string with the form data
-    // const formDataToSend = new FormData();
-    // formDataToSend.append("name", formData.name);
-    // formDataToSend.append("email", formData.email);
-    // formDataToSend.append("message", formData.message);
-
     setShowModal(true);
 
     const fetchPromise = fetch("/api/sendEmail", {
       method: "POST",
-      // mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },

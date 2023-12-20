@@ -6,7 +6,7 @@ export const WORKEDWITH_LIST = [
         id: "1Norwegian",
         name: "Kodeverket Bergen",
         jobDone:
-          "Jeg jobbet som prosjektleder for bygging av nettsiden Hawii.no. Vi brukte Next.js, tailwind css og Sanity for denne prosjektet",
+          "Jeg jobbet som prosjektleder for bygging av nettsiden Hawii.no. Vi brukte Next.js, tailwind css og Sanity for dette prosjektet",
         imageUrl: "/images/companies/kodeverket_logo.svg",
         href: "https://www.kodeverketbergen.no/",
         progress: "ferdig",
@@ -21,7 +21,7 @@ export const WORKEDWITH_LIST = [
         id: "2Norwegian",
         name: "Jobloop",
         jobDone:
-          "Jeg jobber her nå som faglig kursveileder for programmering og koding. Jeg lærer bort HTML, CSS, javascript, figma og react + veldig mange utviklerverktøy",
+          "Jeg jobber her nå som faglig kursveileder for programmering og koding. Jeg lærer bort HTML, CSS, javascript, figma og react, sammen med en stor bredde av utviklerverktøy",
         imageUrl: "/images/companies/jobloop_logo.png",
         href: "https://www.jobloop.no/",
         progress: "current",
