@@ -20,17 +20,23 @@ export const ContactformSection = ({ language, Theme }) => {
     message: "",
   });
 
-  const endpoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
+  const myEmail = process.env.NEXT_PUBLIC_EMAIL;
+const myPassword = process.env.NEXT_PUBLIC_PASSWORD;
+
+
+
+console.log("Using credentials:");
+console.log("Email:", myEmail);
+console.log("Password:", myPassword);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = formData;
     setShowModal(true);
-
+    
     // Construct message string with the form data
 
-    const fetchPromise = fetch(
-      "https://drayggdi6t7tnbviin7ucjgsjq0jhztd.lambda-url.eu-north-1.on.aws/",
+    const fetchPromise = fetch("/api/sendEmail",
       {
         method: "POST",
         mode: "cors",
@@ -43,10 +49,17 @@ export const ContactformSection = ({ language, Theme }) => {
       }
     );
     fetchPromise
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data); // handle response, catch errors
-      });
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data); // handle response, catch errors
+      // You can perform additional actions based on the response here
+      console.log("req.body:", req.body);
+
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      // Handle error scenarios here
+    });
   };
 
   const handleCloseModal = () => {
@@ -73,7 +86,7 @@ export const ContactformSection = ({ language, Theme }) => {
             </ThemedP>
             <form
               className="w-full max-w-lg"
-              action={endpoint}
+              // action={endpoint}
               onSubmit={handleSubmit}
             >
               <div className="mb-4">
