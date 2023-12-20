@@ -4,9 +4,8 @@ export default async function handler(req, res) {
   if (req.method === "POST") {
     const { name, email, message } = req.body;
 
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
+const secretPassword = process.env.NEXT_PUBLIC_MY_EMAIL_PASSWORD
+const secretEmail = process.env.NEXT_PUBLIC_MY_EMAIL
 
       // Create a nodemailer transporter
       const transporter = nodemailer.createTransport({
@@ -14,15 +13,15 @@ export default async function handler(req, res) {
         // Example for using Gmail:
         service: "Gmail",
         auth: {
-          user: "villokodehode@gmail.com",
-          pass: "mysr vrrp zgbp sdcs",
+          user: secretEmail,
+          pass: secretPassword,
         },
       });
 
       // Email content
       const mailOptions = {
         from: email,
-        to: "villokodehode@gmail.com",
+        to: secretEmail,
         subject: "Project inquiry",
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       };
