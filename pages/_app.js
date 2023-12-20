@@ -19,8 +19,6 @@ export default function App({ Component, pageProps }) {
   const { setLanguage } = useContext(LanguageContext);
   const { setTheme } = useContext(ThemeContext);
 
-
-
   useEffect(() => {
     // Check if the user has accepted cookies by checking a cookie
     const acceptedCookies = getCookie("acceptedCookies");
