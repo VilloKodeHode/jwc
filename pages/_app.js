@@ -7,12 +7,12 @@ import Footer from "@/components/navigation/Footer";
 import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
 import { ScrollToTopButton } from "@/components/Buttons";
 import ThemeContext from "@/components/Utilities/ThemeSwitch/ThemeContext";
-import { Analytics } from "@vercel/analytics/react";
 import { ContextProviders } from "@/components/Utilities/CombinedContextProvider";
 import { useRouter } from "next/router";
 import { getCookie, setCookie } from "cookies-next";
 import CookiePopup from "@/components/Utilities/CookiePopup/CookiePopup";
 import PageLayout from "@/components/Layout/Layout";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function App({ Component, pageProps }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
@@ -130,7 +130,7 @@ function AppContent({
               currentPath={currentPath}
             />
           </PageLayout>
-          <Analytics defer />
+          <SpeedInsights />
           <Script
             src="https://cdn.addrow.com/ads/viewability251.js"
             strategy="lazyOnload"
