@@ -4,7 +4,7 @@ export const ParallaxEffect = (selector, speedMultiplier) => {
     element.style.transition = "transform 0.5s ease-out";
     element.style.transform = "translateY(0px)";
     window.addEventListener("scroll", () => {
-      const scrollPosition = window.pageYOffset;
+      const scrollPosition = window.scrollY;
       const elementPosition = element.offsetTop;
       const distance = (scrollPosition - elementPosition) * speedMultiplier;
       element.style.transform = `translateY(${distance}px)`;

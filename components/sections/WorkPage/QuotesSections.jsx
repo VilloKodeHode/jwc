@@ -40,7 +40,7 @@ export const QuotesSection = ({ Theme, language }) => {
               </div>
               <div className="relative z-10 flex flex-col justify-between h-full p-1">
                 <Image
-                  className={`absolute transform -translate-x-1/2 -translate-y-1/2 ${Theme === "light" ? "opacity-5" : "opacity-20"} top-1/2 left-1/2`}
+                  className={`absolute -z-10 transform -translate-x-1/2 -translate-y-1/2 ${Theme === "light" ? "opacity-5" : "opacity-20"} top-1/2 left-1/2`}
                   src={quote.logo}
                   alt="company logo"
                   width={300}
