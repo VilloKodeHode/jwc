@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Accordion from "../Accordion";
-import SKILLS_LIST from "./skills_list";
+import SKILLS_LIST from "../../data/skills_list";
 
 export default function SkillsWithAccordion() {
   return (
