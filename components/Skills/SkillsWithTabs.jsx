@@ -2,7 +2,7 @@
 
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
 import Image from "next/image";
-import SKILLS_LIST from "./skills_list";
+import SKILLS_LIST from "../../data/skills_list";
 import { useContext } from "react";
 import LanguageContext from "../Utilities/LanguageSwitch/LanguageContext";
 
