@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import Head from "next/head";
+import { Analytics } from '@vercel/analytics/react';
 import Script from "next/script";
 import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";
@@ -139,6 +139,7 @@ function AppContent({
         <Footer language={language} Theme={Theme} currentPath={currentPath} />
         <ScrollToTopButton Theme={Theme} />
       </div>
+      <Analytics />
     </>
   );
 }
