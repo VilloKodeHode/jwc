@@ -1,6 +1,6 @@
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import PageLayout from "@/components/Layout/Layout";
-import { ProjectSection } from "@/components/sections/ProjectsPage/ProjectSection";
+import { ProjectSection } from "@/components/sections/AboutPage/ProjectSection";
 import MetaTags from "@/components/Utilities/Metatags";
 
 export default function ProjectPage({ language, Theme }) {

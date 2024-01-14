@@ -1,12 +1,10 @@
 import Image from "next/image";
 import {
-  ResponsiveH5,
-  ResponsiveP,
   ResponsiveThemedH1,
   ResponsiveThemedH5,
   ResponsiveThemedP,
 } from "../../Responsive text/ResponsiveText";
-import CallToActionButton, { CallToActionButtonAlt, ArrowCTA, ExternalCTA } from "../../Buttons";
+import  { ExternalCTA } from "../../Buttons";
 import PROJECT_LIST from "./projects_list";
 import Link from "next/link";
 
@@ -24,7 +22,7 @@ export const ProjectSection = ({ language, Theme }) => {
             {PROJECT_LIST.map((project) => (
               <div
                 key={project.engProjectName}
-                className={`flex flex-col h-[530px] justify-between overflow-hidden rounded-lg shadow ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
+                className={`flex flex-col h-[460px] md:h-[550px] lg:h-[600px] justify-between overflow-hidden rounded-lg shadow ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
                   }  shadow-Villo-black75`}
               >
 

@@ -4,7 +4,7 @@ import MetaTags from "@/components/Utilities/Metatags";
 import { CompanyInfo } from "@/components/sections/AboutPage/CompanyInfoSection";
 import { MyIntroSection } from "@/components/sections/AboutPage/MyIntroSection";
 import { SkillsSection } from "@/components/sections/AboutPage/SkillsSection";
-import { ProjectSection } from "@/components/sections/ProjectsPage/ProjectSection";
+import { ProjectSection } from "@/components/sections/AboutPage/ProjectSection";
 
 
 export default function AboutPage({ language, Theme }) {
