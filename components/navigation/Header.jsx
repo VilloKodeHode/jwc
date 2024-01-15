@@ -1,7 +1,5 @@
 //Header component
 import { useEffect, useRef, useState } from "react";
-import ChakraDrawer from "./ChakraDrawer";
-import { useDisclosure } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
 import MENU_LIST from "../../data/menu_list";
@@ -9,10 +7,7 @@ import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
 import LogoComponent from "../base components/Logo";
 import { SiGithub } from "react-icons/si";
 import HamburgerBar from "./HamburgerBar";
-import Image from "next/image";
 import { FcSettings } from "react-icons/fc";
-import NavItem from "./NavItem";
-import { ThemedP } from "../Responsive text/ResponsiveText";
 
 export default function Header({
   language,
@@ -70,10 +65,11 @@ export default function Header({
   return (
     <>
       <div
-        className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-2 ${Theme === "light"
-          ? "bg-Villo-light-white15 text-Villo-light-black"
-          : "bg-black text-Villo-dark-white10"
-          } `}
+        className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-6 ${
+          Theme === "light"
+            ? "bg-Villo-light-white15 text-Villo-light-black"
+            : "bg-black text-Villo-dark-white10"
+        } `}
       >
         <div
           className={`grid transition-all z-40 grid-flow-col gap-12
@@ -106,11 +102,13 @@ export default function Header({
 
       <div className="relative">
         <div
-          className={`fixed transition-all p-3 group top-2 duration-1000 z-[999] hover:bg-opacity-100 border-b-2 hover:border-opacity-100 bg-opacity-40  border-opacity-40 flex items-center rounded-r-[30px] pr-5 justify-between ${notTop ? "animate-ToolsSlideIn" : "animate-ToolsSlideOut"
-            } ${Theme === "light"
+          className={`fixed transition-all p-3 group top-2 duration-1000 z-[999] hover:bg-opacity-100 border-b-2 hover:border-opacity-100 bg-opacity-40  border-opacity-40 flex items-center rounded-r-[30px] pr-5 justify-between ${
+            notTop ? "animate-ToolsSlideIn" : "animate-ToolsSlideOut"
+          } ${
+            Theme === "light"
               ? "bg-Villo-light-white15  text-Villo-light-black border-Villo-light-primary"
               : "bg-Villo-dark-black75 text-Villo-dark-white10 border-Villo-dark-black85"
-            } 
+          } 
           ${showToolBar ? "" : "translate-x-[-100%]"}
           `}
         >
@@ -139,8 +137,9 @@ export default function Header({
       </div>
 
       <header
-        className={`relative transition-all duration-1000 z-50 bg-opacity-[0.925] ${Theme === "light" ? "bg-Villo-light-white10" : "bg-black"
-          } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
+        className={`relative transition-all duration-1000 z-50 bg-opacity-[0.925] ${
+          Theme === "light" ? "bg-Villo-light-white10" : "bg-black"
+        } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between">
           <div className="grid items-center h-[112px] min-w-[200px] gap-8 rounded-br-full">

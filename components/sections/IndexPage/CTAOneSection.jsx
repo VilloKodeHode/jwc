@@ -33,9 +33,9 @@ export const CTAOneSection = ({ language, Theme }) => {
     return () => clearInterval(interval);
   }, [currentWeb]);
 
-  const imageWidth = currentWeb === "/images/showcase/HeroLogo.png" ? 400 : 500; // Adjust the sizes as needed
+  const imageWidth = currentWeb === "/images/showcase/HeroLogo.png" ? 400 : 500;
   const imageHeight =
-    currentWeb === "/images/showcase/HeroLogo.png" ? 400 : 300; // Adjust the sizes as needed
+    currentWeb === "/images/showcase/HeroLogo.png" ? 400 : 300;
 
   return (
     <>
@@ -63,7 +63,7 @@ export const CTAOneSection = ({ language, Theme }) => {
                         Theme === "light"
                           ? "group-hover:text-Villo-light-primary"
                           : "group-hover:text-Villo-dark-primary"
-                      }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
+                      }  group-hover:opacity-100 transition-all duration-500 opacity-80 h1hidden ${
                         currentWeb === "/images/showcase/HeroDesign.png"
                           ? "text-Villo-dark-primary"
                           : Theme === "light"
