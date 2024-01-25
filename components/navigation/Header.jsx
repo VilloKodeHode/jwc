@@ -5,7 +5,7 @@ import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
 import MENU_LIST from "../../data/menu_list";
 import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
 import LogoComponent from "../base components/Logo";
-import { SiGithub } from "react-icons/si";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 import HamburgerBar from "./HamburgerBar";
 import { FcSettings } from "react-icons/fc";
 
@@ -83,18 +83,30 @@ export default function Header({
 
           <ThemeSwitch setTheme={setTheme} cookiesAccepted={cookiesAccepted} />
         </div>
-
-        <a
-          href="https://github.com/VilloKodeHode"
-          target="_blank"
-          className={`grid transition-all z-40 grid-flow-col gap-12
+        <div className="flex gap-4">
+          <a
+            href="https://github.com/VilloKodeHode"
+            target="_blank"
+            className={`transition-all z-40
  
- ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
-        >
-          <SiGithub
-            className={`z-10 w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}
-          />
-        </a>
+          ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
+          >
+            <SiLinkedin
+              className={`z-10 w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}
+            />
+          </a>
+          <a
+            href="https://github.com/VilloKodeHode"
+            target="_blank"
+            className={`transition-all z-40
+ 
+          ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
+          >
+            <SiGithub
+              className={`z-10 w-8 h-8 mx-auto duration-200 hover:scale-105 flex transition-all`}
+            />
+          </a>
+        </div>
       </div>
 
       {/* Floating util bar: */}
