@@ -14,19 +14,19 @@ import LanguageContext from "../../Utilities/LanguageSwitch/LanguageContext";
 
 export const MyIntroSection = ({ language, Theme }) => {
   return (
-    <div className="grid max-w-7xl justify-center text-center items-center min-h-[calc(100vh-144px)]">
-      <ResponsiveThemedH2>
+    <div className="grid max-w-7xl justify-center text-center items-center min-h-[calc(100dvh-144px)]">
+      <ResponsiveThemedH2 className="py-4">
         {language === "Norwegian"
           ? "Kort om meg"
           : "About me"}
       </ResponsiveThemedH2>
       <div className="animate-PageAppearRight">
         <div
-          className={`sm:rounded-lg grid min-h-[70vh] lg:grid-cols-2 transition-colors duration-1000  ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
+          className={`sm:rounded-lg grid min-h-[70dvh] lg:grid-cols-2 transition-colors duration-1000  ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
             }`}
         >
           <div
-            className={`col-span-1 py-12 min-h-[30vh] text-left flex flex-col justify-center items-center`}
+            className={`col-span-1 py-12 min-h-[30dvh] text-left flex flex-col justify-center items-center`}
           >
             {/* <SimpleLogoComponent /> */}
 
@@ -57,8 +57,8 @@ export const MyIntroSection = ({ language, Theme }) => {
 export const OldCompanyInfo = () => {
   const { language } = useContext(LanguageContext);
   return (
-    <section className="grid items-center min-h-[60vh] justify-center w-screen font-bold text-center lg:grid-cols-2 mt-[56px]">
-      <div className="flex flex-col items-center justify-center lg:h-full h-[50vh] shadow shadow-Villo-black75 px-8">
+    <section className="grid items-center min-h-[60dvh] justify-center w-screen font-bold text-center lg:grid-cols-2 mt-[56px]">
+      <div className="flex flex-col items-center justify-center lg:h-full h-[50dvh] shadow shadow-Villo-black75 px-8">
         <SimpleLogoComponent />
         <div className="">
           {/* <ResponsiveThemedH5>JV Web Consult</ResponsiveThemedH5> */}
@@ -80,7 +80,7 @@ export const OldCompanyInfo = () => {
         </TextFlex>
       </div>
 
-      <div className="lg:h-full lg:w-full h-[40vh] shadow shadow-Villo-black75 tonsbergBG" />
+      <div className="lg:h-full lg:w-full h-[40dvh] shadow shadow-Villo-black75 tonsbergBG" />
     </section>
   );
 };

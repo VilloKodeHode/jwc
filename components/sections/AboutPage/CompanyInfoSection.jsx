@@ -10,14 +10,14 @@ import {
 
 export const CompanyInfo = ({ language, Theme }) => {
     return (
-        <div className="grid max-w-7xl justify-center items-center min-h-[calc(100vh-144px)]">
+        <div className="grid max-w-7xl justify-center items-center py-4 ml:py-24 min-h-[calc(50dvh)]">
             <div className="animate-PageAppearRight">
                 <div
-                    className={`sm:rounded-lg grid min-h-[70vh] transition-colors duration-1000  ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
+                    className={`sm:rounded-lg grid transition-colors duration-1000  ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
                         }`}
                 >
                     <div
-                        className={`col-span-1 py-12 min-h-[30vh] flex flex-col justify-center items-center`}
+                        className={`col-span-1 ml:py-12 h-full flex flex-col justify-center items-center`}
                     >
                         <SimpleLogoComponent />
 

@@ -7,6 +7,7 @@ import { VscGithubAlt } from "react-icons/vsc";
 import { ResponsiveH5 } from "../Responsive text/ResponsiveText";
 
 export default function Footer({ language, Theme }) {
+  const year = new Date().getFullYear();
   return (
     <div className={`relative py-24 sm:px-6 lg:px-12 px-4 ${Theme === "light" ? "bg-Villo-light-primary" : "bg-Villo-dark-primary"}`}>
 
@@ -36,7 +37,7 @@ export default function Footer({ language, Theme }) {
         </div>
         {/* Copyright Information */}
         <div className={`flex items-center text-center ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
-          <h4 className="text-h4">{language === "Norwegian" ? "© 2023 Villo utvikling" : "© 2023 Villo development"}</h4>
+          <h4 className="text-h4">{language === "Norwegian" ? `© ${year} Villo utvikling` : `© ${year} Villo development`}</h4>
         </div>
         {/* Privacy Policy and Terms of Service */}
         {/* <div className={`text-right ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>

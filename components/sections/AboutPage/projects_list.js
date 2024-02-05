@@ -42,9 +42,9 @@ export const PROJECT_LIST = [
     href: "https://villokodehode.github.io/PokeAPI/",
     hrefCode: "https://github.com/VilloKodeHode/PokeAPI",
     engDescription:
-      "A REST API app for displaying a variety of pokemons. Uses 3-layered fetching to retrieve all data. Recently created an improved version, but lacks some styling (link within the same app). Can be easily modified to display other data from a REST API.",
+      "A REST API app for displaying a variety of pokemons. Uses 3-layered fetching to retrieve all data. Recently created an improved version, but lacks some styling (link within the same app).",
     norDescription:
-      " En REST-API app for å vise en rekke pokémoner. Bruker 3-lags henting for å hente all data. Nylig opprettet en forbedret versjon, men mangler litt styling (lenke innenfor samme app). Kan enkelt endres for å vise annen data fra en REST-API.",
+      " En REST-API app for å vise en rekke pokémoner. Bruker 3-lags henting for å hente all data. Nylig opprettet en forbedret versjon, men mangler litt styling (lenke innenfor samme app).",
   },
   {
     engProjectName: "Rock, paper, scissors game",
