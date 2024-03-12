@@ -73,6 +73,7 @@ export const SkillsSection = ({ language, Theme }) => {
               colored={false}
             />
             <SkillIcon text="Sanity" logo="sanity" saturate="70" width={45} />
+            <SkillIcon text="MongoDB" logo="mongodb" saturate="70" />
           </div>
         </div>
       </div>

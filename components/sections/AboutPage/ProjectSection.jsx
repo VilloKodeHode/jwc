@@ -27,9 +27,10 @@ export const ProjectSection = ({ language, Theme }) => {
               >
 
                 <div className={`p-4 pb-0 border-b-4 ${Theme === "light" ? "border-Villo-light-primary" : "border-Villo-dark-primary"} `}>
+                  
                   <Image
                     className="object-cover object-center w-full h-48"
-                    src={project.src}
+                    src={project.src ? project.src : Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"}
                     alt={project.engProjectName}
                     width={400}
                     height={300}

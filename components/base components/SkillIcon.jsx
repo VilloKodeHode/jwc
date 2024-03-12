@@ -7,7 +7,7 @@ export const SkillIcon = ({ text, logo, colored = true, width = 60 }) => {
   const { Theme } = useContext(ThemeContext);
   return (
     <figure
-      className={`relative hover:scale-105 transition-all flex justify-center p-6 m-4 rounded-sm shadow-lg ${
+      className={`relative z-20 hover:scale-105 transition-all flex justify-center p-6 m-4 rounded-sm shadow-lg ${
         Theme === "light"
           ? "bg-Villo-light-white15 hover:bg-Villo-light-white10"
           : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
@@ -24,8 +24,8 @@ export const SkillIcon = ({ text, logo, colored = true, width = 60 }) => {
         height={width * 1.5}
         width={width * 1.5}
       />
-      <div className="absolute translate-x-1/2 translate-y-1/2 rounded-full group-hover:scale-125 bottom-1/2 right-1/2" />
-      <span className="absolute font-bold text-center translate-x-1/2 opacity-0 select-none w-max group-hover:opacity-100 -top-6 right-1/2">
+      <div className="absolute translate-x-1/2 translate-y-1/2 rounded-full -z-50 group-hover:scale-125 bottom-1/2 right-1/2" />
+      <span className="absolute top-0 font-bold text-center transition-all translate-x-1/2 opacity-0 select-none -z-10 w-max group-hover:opacity-100 group-hover:-top-6 right-1/2">
         <ThemedP>{text}</ThemedP>
       </span>
     </figure>

@@ -108,6 +108,22 @@ export const PROJECT_LIST = [
     norDescription:
       "En satire webside om en fiktiv kokk. Ekstremt enkle oppskrifter for personer som ikke vet hvordan man skal lage mat. Koblet til Sanity CMS for enkelt innholdsoppdatering. Foreløpig bare på engelsk.",
   },
+  {
+    engProjectName: "Current project: Rock, paper, scissors game v2",
+    norProjectName: "Nåværende prosjekt: Stein, sakser, papir spill v2",
+    textColor: "text-Villo-white",
+    // src: "/images/projects/RPS-collage.png",
+    // mobileSrc: "/images/projects/RPS.png",
+    alt: "Stein sakser papir app v2.",
+    cardColor: "bg-[#6792e2]",
+    href: "https://rps-omega-seven.vercel.app/",
+    hrefCode:
+      "https://github.com/VilloKodeHode/rps-omega",
+    engDescription:
+      "Im currently working on refractoring the old code, making it more scalable and connecting a database",
+    norDescription:
+      "I jobber nå med å refaktorere den gamle koden slik at den blir mer skalbar. Jeg skal også koble til en database. ",
+  },
 ];
 
 export default PROJECT_LIST;

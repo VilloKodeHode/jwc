@@ -24,7 +24,7 @@ export const ClientSection = ({ language, Theme }) => {
           {language === "Norwegian" ? "Klienter" : "Clients"}
         </ResponsiveThemedH2>
       </div>
-      <div className="mt-10">
+      <div className="mt-22">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {CLIENTS.map((client) => (
             <Link
@@ -98,7 +98,7 @@ export const NewClientLayout = ({ language, Theme }) => {
                 <div className="relative w-28 h-28">
                   <ThemedP className="absolute z-10 w-full text-center transition-all translate-x-1/2 opacity-0 -top-4 group-hover:opacity-100 right-1/2">{client.progress === "in progress" || client.progress === "under arbeid" ? client.progress : ""}</ThemedP>
                   <Image
-                    className="object-contain w-full h-full filter grayscale"
+                    className={`object-contain w-full h-full ${Theme !== "light" && "invert"}`}
                     src={client.imageUrl}
                     alt={client.name}
                     width={300}
