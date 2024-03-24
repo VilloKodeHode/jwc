@@ -21,7 +21,7 @@ export const ParallaxEffectX = (selector, speedMultiplier) => {
   }
 
   window.addEventListener("scroll", function () {
-    var scrollPosition = window.pageYOffset;
+    var scrollPosition = window.scrollY;
     var backgroundPosition = scrollPosition * speedMultiplier;
 
     element.style.transform = "translateY(" + backgroundPosition + "px)";

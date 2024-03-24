@@ -1,18 +1,20 @@
-import { TextFlex } from "../Layout/Layout";
-import { ResponsiveH2, ResponsiveLi, ResponsiveP } from "../Responsive text/ResponsiveText";
-import VilloIcon from "../base components/Icon";
+import { useContext } from "react";
+import { ResponsiveH2, ResponsiveLi, ResponsiveP } from "../base_components/ResponsiveText";
+import { UserContext } from "../Utilities/UserContext";
+import VilloIcon from "../base_components/Icon";
 
 
-export const BullitinSection = ({ language, Theme }) => {
+export const BullitinSection = () => {
+  const { theme, language } = useContext(UserContext);
   return (
     <section className="relative grid justify-center items-center py-8 w-full bg-Villo-tertiary my-8 min-h-[35vh] text-left xl:gap-0 gap-12">
-      <TextFlex>
+      <div className="mx-auto">
         <ResponsiveH2 className="flex px-12 text-center">
           {language === "Norwegian"
             ? "Hva du kan oppnå med Villo utvikling"
             : "What you can achieve with Villo development"}
         </ResponsiveH2>
-      </TextFlex>
+      </div>
       <div className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15">
         <div>
           <div className="flex gap-2">
@@ -64,16 +66,17 @@ export const BullitinSection = ({ language, Theme }) => {
   );
 };
 
-export const OldBullitinSection = (language) => {
+export const OldBullitinSection = () => {
+  const { theme, language } = useContext(UserContext);
   return (
     <section className="relative grid justify-center items-center py-8 w-full bg-Villo-tertiary my-8 min-h-[35vh] text-left xl:gap-0 gap-12">
-      <TextFlex>
+      <div className="mx-auto">
         <ResponsiveH2 className="flex px-12 text-center">
           {language === "Norwegian"
             ? "Hva du kan oppnå med Villo"
             : "What you can achieve with Villo"}
         </ResponsiveH2>
-      </TextFlex>
+      </div>
       <div className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15">
         <div>
           <div className="flex gap-2">

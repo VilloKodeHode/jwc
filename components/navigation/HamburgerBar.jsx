@@ -2,13 +2,14 @@
 
 import MENU_LIST from "../../data/menu_list";
 import NavItem, { DropDown, DropDownItem } from "./NavItem";
-import LogoComponent from "../base components/Logo";
+import LogoComponent from "../base_components/Logo";
 import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { UserContext } from "../Utilities/UserContext";
+import { useContext } from "react";
 
 export default function HamburgerBar({
-  language,
-  Theme,
+  //TODO: Too many props...make a context for it?
   currentPath,
   setIsOpen,
   isOpen,
@@ -19,6 +20,7 @@ export default function HamburgerBar({
   toogleDropDown,
   setToogleDropDown,
 }) {
+  const { theme, language } = useContext(UserContext);
   const menuObj = MENU_LIST.find((menu) => menu.language === language);
   const menu_items = menuObj ? menuObj.menu_items : [];
 
@@ -26,7 +28,7 @@ export default function HamburgerBar({
     <>
       <div className="z-[99] flex items-center h-full rounded-bl-full md:hidden">
         <button
-          className={`block ml-8 duration-200 hover:scale-110 ${Theme === "light"
+          className={`block ml-8 duration-200 hover:scale-110 ${theme === "light"
             ? "text-Villo-light-primary"
             : "text-Villo-dark-primary"
             } `}
@@ -45,7 +47,7 @@ export default function HamburgerBar({
             <div className={`relative flex justify-center  `}></div>
             <div
               className={`z-50 w-full h-full bg-opacity-[0.99]
-                ${Theme === "light"
+                ${theme === "light"
                   ? "bg-Villo-light-white"
                   : "bg-Villo-dark-black"
                 }
@@ -59,7 +61,7 @@ export default function HamburgerBar({
                     aria-label="Lukke navigasjonsmeny"
                   >
                     <IoCloseSharp
-                      className={` ${isOpen ? "block" : "hidden"} ${Theme === "light"
+                      className={` ${isOpen ? "block" : "hidden"} ${theme === "light"
                         ? "text-Villo-light-primary"
                         : "text-Villo-dark-primary"
                         } hover:opacity-70 transition duration-500 z-50 w-10 h-10`}
@@ -80,14 +82,14 @@ export default function HamburgerBar({
                       href={menu.href}
                       color={menu.color}
                       icon={menu.icon}
-                      Theme={Theme}
+                      Theme={theme}
                       currentPath={currentPath}
                     />
                   ))}
                   <DropDown
                     onClick={() => setToogleDropDown(!toogleDropDown)}
                     textSize="text-h4"
-                    Theme={Theme}
+                    Theme={theme}
                     language={language}
                     currentPath={currentPath}
                     className="-z-50"
@@ -100,7 +102,7 @@ export default function HamburgerBar({
                     <div className="flex flex-col justify-center items-start gap-4 min-h-[160px]">
 
 
-                      {drop_down_items.map((menu) => (
+                      {drop_down_items?.map((menu) => (
 
                         <DropDownItem
                           onClick={() => { setToogleDropDown(false); setIsOpen(false) }}
@@ -110,7 +112,7 @@ export default function HamburgerBar({
                           href={menu.href}
                           color={menu.color}
                           icon={menu.icon}
-                          Theme={Theme}
+                          Theme={theme}
                           language={language}
                           currentPath={currentPath}
                         />

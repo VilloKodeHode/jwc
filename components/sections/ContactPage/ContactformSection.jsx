@@ -1,14 +1,16 @@
 import Image from "next/image";
-import CallToActionButton, { SendCTA } from "../../Buttons";
+import CallToActionButton, { SendCTA } from "../../base_components/Buttons";
 import {
   ResponsiveThemedH1,
   ResponsiveThemedH2,
   ResponsiveThemedP,
   ThemedP,
-} from "../../Responsive text/ResponsiveText";
-import { useState } from "react";
+} from "../../base_components/ResponsiveText";
+import { useContext, useState } from "react";
+import { UserContext } from "../../Utilities/UserContext";
 
-export const ContactformSection = ({ language, Theme }) => {
+export const ContactformSection = () => {
+  const { theme, language } = useContext(UserContext);
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -74,7 +76,7 @@ export const ContactformSection = ({ language, Theme }) => {
                 <label
                   htmlFor="name"
                   className={`block font-bold mb-2 ${
-                    Theme === "light"
+                    theme === "light"
                       ? "text-Villo-light-black"
                       : "text-Villo-dark-white"
                   }`}
@@ -85,7 +87,7 @@ export const ContactformSection = ({ language, Theme }) => {
                   type="text"
                   id="name"
                   className={` ${
-                    Theme === "light"
+                    theme === "light"
                       ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
                       : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
                   } w-full px-4 py-2 border rounded-lg  focus:outline `}
@@ -103,7 +105,7 @@ export const ContactformSection = ({ language, Theme }) => {
                 <label
                   htmlFor="email"
                   className={`block font-bold mb-2 ${
-                    Theme === "light"
+                    theme === "light"
                       ? "text-Villo-light-black"
                       : "text-Villo-dark-white"
                   }`}
@@ -114,7 +116,7 @@ export const ContactformSection = ({ language, Theme }) => {
                   type="email"
                   id="email"
                   className={` ${
-                    Theme === "light"
+                    theme === "light"
                       ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
                       : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
                   } w-full px-4 py-2 border rounded-lg  focus:outline `}
@@ -134,7 +136,7 @@ export const ContactformSection = ({ language, Theme }) => {
                 <label
                   htmlFor="message"
                   className={`block font-bold mb-2 ${
-                    Theme === "light"
+                    theme === "light"
                       ? "text-Villo-light-black"
                       : "text-Villo-dark-white"
                   }`}
@@ -144,7 +146,7 @@ export const ContactformSection = ({ language, Theme }) => {
                 <textarea
                   id="message"
                   className={` ${
-                    Theme === "light"
+                    theme === "light"
                       ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
                       : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
                   } w-full px-4 py-2 border rounded-lg  focus:outline `}
@@ -159,7 +161,7 @@ export const ContactformSection = ({ language, Theme }) => {
                   required
                 ></textarea>
               </div>
-              <SendCTA Theme={Theme} type="submit">
+              <SendCTA Theme={theme} type="submit">
                 Send
               </SendCTA>
             </form>
@@ -169,7 +171,7 @@ export const ContactformSection = ({ language, Theme }) => {
       {showModal && (
         <div
           className={`flex items-center rounded-xl justify-center ${
-            Theme === "light"
+            theme === "light"
               ? "bg-Villo-light-white20"
               : "bg-Villo-dark-black50"
           } `}
@@ -195,7 +197,7 @@ export const ContactformSection = ({ language, Theme }) => {
             <Image
               className="animate-pulse"
               src={
-                Theme === "light"
+                theme === "light"
                   ? "/logo/WindLogoNoTextLightMode.svg"
                   : "/logo/WindLogoNoTextDarkMode.svg"
               }
@@ -203,7 +205,7 @@ export const ContactformSection = ({ language, Theme }) => {
               height={200}
               alt="loading..."
             />
-            <CallToActionButton Theme={Theme} onClick={handleCloseModal}>
+            <CallToActionButton Theme={theme} onClick={handleCloseModal}>
               {language === "Norwegian" ? "Flotters!" : "Roger that!"}
             </CallToActionButton>
           </div>

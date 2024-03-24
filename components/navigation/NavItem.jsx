@@ -1,21 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
+import { UserContext } from "../Utilities/UserContext";
 
-
+//TODO check if logic in these Components can be improved
 const NavItem = ({
+  //TODO: make a context for the props instead (headerContext?)
   text,
   href,
   onClick,
   className,
   textSize,
-  Theme,
   currentPath,
 }) => {
+  const { theme } = useContext(UserContext);
   return (
     <div key={text} className={`relative group z-10 ${className}`}>
       <Link href={href} className="">
         <p
-          className={`${textSize} ${Theme === "light"
+          className={`${textSize} ${theme === "light"
             ? "text-Villo-light-black"
             : "text-Villo-dark-white"
             }  z-10`}
@@ -25,7 +28,7 @@ const NavItem = ({
         </p>
         <div
           className={`${currentPath === href ? `h-2` : "group-hover:h-2"
-            } absolute w-full h-0 transition-all ${Theme === "light"
+            } absolute w-full h-0 transition-all ${theme === "light"
               ? "bg-Villo-light-primary "
               : "bg-Villo-dark-primary"
             }`}
@@ -35,7 +38,7 @@ const NavItem = ({
         <div className="absolute top-0 w-3 h-full -left-4">
           <Image
             src={
-              Theme === "light"
+              theme === "light"
                 ? "/logo/WindLogoNoTextLightMode.svg"
                 : "/logo/WindLogoNoTextDarkMode.svg"
             }
@@ -49,20 +52,21 @@ const NavItem = ({
   );
 };
 export const DropDown = ({
+   //TODO: make a context for the props instead (headerContext?)
   children,
   onClick,
   className,
   textSize,
-  Theme,
   currentPath,
 
 }) => {
+  const { theme } = useContext(UserContext);
   const subPagesPaths = (currentPath === "/services_provided/website" || currentPath === "/services_provided/webcontent" || currentPath === "/services_provided/SEO")
   return (
     <div className={`relative group z-10 ${className}`}>
 
       <button
-        className={`${textSize} active:after:rotate-180 ${Theme === "light"
+        className={`${textSize} active:after:rotate-180 ${theme === "light"
           ? "text-Villo-light-black"
           : "text-Villo-dark-white"
           }  z-10`}
@@ -72,7 +76,7 @@ export const DropDown = ({
       </button>
       <div
         className={`${subPagesPaths ? `h-2` : "group-hover:h-2"
-          } absolute w-full h-0 transition-all ${Theme === "light"
+          } absolute w-full h-0 transition-all ${theme === "light"
             ? "bg-Villo-light-primary"
             : "bg-Villo-dark-primary"
           }`}
@@ -82,7 +86,7 @@ export const DropDown = ({
         <div className="absolute top-0 w-3 h-full -left-4">
           <Image
             src={
-              Theme === "light"
+              theme === "light"
                 ? "/logo/WindLogoNoTextLightMode.svg"
                 : "/logo/WindLogoNoTextDarkMode.svg"
             }
@@ -97,19 +101,20 @@ export const DropDown = ({
 }
 
 export const DropDownItem = ({
+   //TODO: make a context for the props instead (headerContext?)
   text,
   href,
   onClick,
   className,
   textSize,
-  Theme,
   currentPath,
 }) => {
+  const { theme } = useContext(UserContext);
   return (
     <div key={text} className={`relative group z-10 ${className}`}>
       <Link href={href} className="">
         <p
-          className={`z-10 hover:animate-pulse ${textSize} ${Theme === "light"
+          className={`z-10 hover:animate-pulse ${textSize} ${theme === "light"
             ? "text-Villo-light-black"
             : "text-Villo-dark-white"
             }  
@@ -131,7 +136,7 @@ export const DropDownItem = ({
         <div className="absolute top-0 w-3 h-full -left-4">
           <Image
             src={
-              Theme === "light"
+              theme === "light"
                 ? "/logo/WindLogoNoTextLightMode.svg"
                 : "/logo/WindLogoNoTextDarkMode.svg"
             }
@@ -144,11 +149,6 @@ export const DropDownItem = ({
     </div>
   );
 };
-
-
-
-
-
 
 
 export default NavItem;

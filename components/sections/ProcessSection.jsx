@@ -4,9 +4,12 @@ import {
   ResponsiveLi,
   ResponsiveP,
   ResponsiveSmall,
-} from "../Responsive text/ResponsiveText";
+} from "../base_components/ResponsiveText";
+import { UserContext } from "../Utilities/UserContext";
+import { useContext } from "react";
 
-export const ProcessSection = ({ language, Theme }) => {
+export const ProcessSection = () => {
+  const { theme, language } = useContext(UserContext);
   return (
     <section className="relative grid items-center justify-center gap-12 px-12 lg:px-24">
       <div className="grid items-center justify-center gap-12 lg:grid-cols-2">

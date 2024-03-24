@@ -1,37 +1,37 @@
 //Header component
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Navbar from "./Navbar";
-import LanguageSwitch from "../Utilities/LanguageSwitch/LanguageSwitch";
+import LanguageSwitch from "../features/LanguageSwitch/LanguageSwitch";
 import MENU_LIST from "../../data/menu_list";
-import ThemeSwitch from "../Utilities/ThemeSwitch/ThemeSwitch";
-import LogoComponent from "../base components/Logo";
+import ThemeSwitch from "../features/ThemeSwitch/ThemeSwitch";
+import LogoComponent from "../base_components/Logo";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import HamburgerBar from "./HamburgerBar";
 import { FcSettings } from "react-icons/fc";
+import { UserContext } from "../Utilities/UserContext";
 
 export default function Header({
-  language,
-  setLanguage,
-  Theme,
-  setTheme,
   currentPath,
-  cookiesAccepted,
 }) {
+   //TODO: Too many useStates...make a context for it?
+  const {language, theme, setTheme, cookiesAccepted} = useContext(UserContext);
   const [notTop, setNotTop] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showToolBar, setShowToolBar] = useState(false);
   const [toogleDropDown, setToogleDropDown] = useState(false);
+  //TODO: See if logic can be moved (to utils?)
   const menuObj = MENU_LIST.find((menu) => menu.language === language);
   const menu_items = menuObj ? menuObj.menu_items : [];
   const drop_down = menuObj ? menuObj.drop_down : {};
   const drop_down_items = drop_down ? drop_down.drop_down_items : [];
-  // console.log(drop_down);
-  // console.log(drop_down_items);
-
+  console.log(drop_down);
+  console.log(drop_down_items);
+console.log(language)
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
   };
 
+  //TODO: Move logic to utils
   const toggleToolBar = () => {
     setShowToolBar(!showToolBar);
   };
@@ -66,7 +66,7 @@ export default function Header({
     <>
       <div
         className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-6 ${
-          Theme === "light"
+          theme === "light"
             ? "bg-Villo-light-white15 text-Villo-light-black"
             : "bg-black text-Villo-dark-white10"
         } `}
@@ -76,12 +76,8 @@ export default function Header({
  
           ${notTop ? "animate-SlideInFromBottom" : "animate-SlideInFromTop"}`}
         >
-          <LanguageSwitch
-            setLanguage={setLanguage}
-            cookiesAccepted={cookiesAccepted}
-          />
-
-          <ThemeSwitch setTheme={setTheme} cookiesAccepted={cookiesAccepted} />
+          <LanguageSwitch />
+          <ThemeSwitch />
         </div>
         <div className="flex gap-4">
           <a
@@ -117,7 +113,7 @@ export default function Header({
           className={`fixed transition-all p-3 group top-2 duration-1000 z-[999] hover:bg-opacity-100 border-b-2 hover:border-opacity-100 bg-opacity-40  border-opacity-40 flex items-center rounded-r-[30px] pr-5 justify-between ${
             notTop ? "animate-ToolsSlideIn" : "animate-ToolsSlideOut"
           } ${
-            Theme === "light"
+            theme === "light"
               ? "bg-Villo-light-white15  text-Villo-light-black border-Villo-light-primary"
               : "bg-Villo-dark-black75 text-Villo-dark-white10 border-Villo-dark-black85"
           } 
@@ -129,14 +125,9 @@ export default function Header({
           >
             <LanguageSwitch
               className={`2xl:flex-row flex-col`}
-              setLanguage={setLanguage}
-              cookiesAccepted={cookiesAccepted}
             />
 
-            <ThemeSwitch
-              setTheme={setTheme}
-              cookiesAccepted={cookiesAccepted}
-            />
+            <ThemeSwitch />
             <button onClick={toggleToolBar} className="">
               <FcSettings
                 className={`absolute h-[50px] w-fit top-0 2xl:left-[140px] left-[50px] transition-all duration-500 hover:animate-cogSpin 
@@ -150,7 +141,7 @@ export default function Header({
 
       <header
         className={`relative transition-all duration-1000 z-50 bg-opacity-[0.925] ${
-          Theme === "light" ? "bg-Villo-light-white10" : "bg-black"
+          theme === "light" ? "bg-Villo-light-white10" : "bg-black"
         } flex flex-col w-full justify-center px-4 mx-auto sm:px-6 lg:px-12 z-10 backdrop-blur-[1px]`}
       >
         <div className="z-50 flex items-center justify-between">
@@ -166,10 +157,8 @@ export default function Header({
             </div>
           </div>
           <Navbar
-            language={language}
             toogleDropDown={toogleDropDown}
             setToogleDropDown={setToogleDropDown}
-            Theme={Theme}
             currentPath={currentPath}
             menu_items={menu_items}
             drop_down={drop_down}
@@ -181,8 +170,6 @@ export default function Header({
             handleMenuToggle={handleMenuToggle}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
-            language={language}
-            Theme={Theme}
             currentPath={currentPath}
             menu_items={menu_items}
             drop_down={drop_down}

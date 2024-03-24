@@ -1,14 +1,18 @@
-import CallToActionButton, { ArrowCTA, ReadMoreButton } from "../../Buttons";
+import { ArrowCTA, ReadMoreButton } from "../../base_components/Buttons";
 import {
   ResponsiveP,
   ResponsiveThemedH1,
   ResponsiveThemedH5,
-} from "../../Responsive text/ResponsiveText";
+} from "../../base_components/ResponsiveText";
 import Link from "next/link";
 import THREESpace from "../../animation/Space";
 import { scrollToSection } from "@/components/navigation/scrollLogic";
+import { useContext } from "react";
+import { UserContext } from "../../Utilities/UserContext";
 
-export const HeroSection = ({ language, Theme }) => {
+export const HeroSection = () => {
+  const { language, theme } = useContext(UserContext);
+
   return (
     <>
       <div className="flex justify-center w-full h-full">
@@ -20,7 +24,7 @@ export const HeroSection = ({ language, Theme }) => {
             <div className="relative z-50 text-left">
               <ResponsiveP
                 className={`mb-8 text-left ${
-                  Theme === "light"
+                  theme === "light"
                     ? "text-Villo-light-black85"
                     : "text-Villo-dark-white10"
                 }  w-fit`}
@@ -32,7 +36,7 @@ export const HeroSection = ({ language, Theme }) => {
               <ResponsiveThemedH1 className="mb-8">
                 <span
                   className={`${
-                    Theme === "light"
+                    theme === "light"
                       ? "text-Villo-light-primary"
                       : "text-Villo-dark-primary"
                   }`}
@@ -56,7 +60,7 @@ export const HeroSection = ({ language, Theme }) => {
               <div className="grid justify-start grid-flow-col gap-8">
                 <div className="h-[60px] flex justify-start items-center">
                   <Link href="/contact" className="">
-                    <ArrowCTA Theme={Theme} className="">
+                    <ArrowCTA Theme={theme} className="">
                       {language === "Norwegian" ? "Kontakt nå" : "Contact now"}
                     </ArrowCTA>
                   </Link>
@@ -66,7 +70,7 @@ export const HeroSection = ({ language, Theme }) => {
                     onClick={(event) => scrollToSection(event, "OfferSection")}
                     className=""
                   >
-                    <ReadMoreButton Theme={Theme} className="">
+                    <ReadMoreButton Theme={theme} className="">
                       {language === "Norwegian" ? "tjenester" : "Services"}
                     </ReadMoreButton>
                   </a>
@@ -75,7 +79,7 @@ export const HeroSection = ({ language, Theme }) => {
             </div>
           </div>
         </section>
-        <THREESpace className="absolute top-0 -z-20" Theme={Theme} />
+        <THREESpace className="absolute top-0 -z-20" Theme={theme} />
       </div>
     </>
   );

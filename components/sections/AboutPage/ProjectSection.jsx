@@ -3,12 +3,15 @@ import {
   ResponsiveThemedH1,
   ResponsiveThemedH5,
   ResponsiveThemedP,
-} from "../../Responsive text/ResponsiveText";
-import  { ExternalCTA } from "../../Buttons";
-import PROJECT_LIST from "./projects_list";
+} from "../../base_components/ResponsiveText";
+import  { ExternalCTA } from "../../base_components/Buttons";
 import Link from "next/link";
+import { useContext } from "react";
+import { UserContext } from "../../Utilities/UserContext";
+import PROJECT_LIST from "@/data/projects_list";
 
-export const ProjectSection = ({ language, Theme }) => {
+export const ProjectSection = () => {
+  const { theme, language } = useContext(UserContext);
   return (
     <div className="py-12">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -22,15 +25,15 @@ export const ProjectSection = ({ language, Theme }) => {
             {PROJECT_LIST.map((project) => (
               <div
                 key={project.engProjectName}
-                className={`flex flex-col h-[460px] md:h-[550px] lg:h-[600px] justify-between overflow-hidden rounded-lg shadow ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
+                className={`flex flex-col h-[460px] md:h-[550px] lg:h-[600px] justify-between overflow-hidden rounded-lg shadow ${theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black85"
                   }  shadow-Villo-black75`}
               >
 
-                <div className={`p-4 pb-0 border-b-4 ${Theme === "light" ? "border-Villo-light-primary" : "border-Villo-dark-primary"} `}>
+                <div className={`p-4 pb-0 border-b-4 ${theme === "light" ? "border-Villo-light-primary" : "border-Villo-dark-primary"} `}>
                   
                   <Image
                     className="object-cover object-center w-full h-48"
-                    src={project.src ? project.src : Theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"}
+                    src={project.src ? project.src : theme === "light" ? "/logo/WindLogoNoTextLightMode.svg" : "/logo/WindLogoNoTextDarkMode.svg"}
                     alt={project.engProjectName}
                     width={400}
                     height={300}
@@ -44,7 +47,7 @@ export const ProjectSection = ({ language, Theme }) => {
                       : project.engProjectName}
                   </ResponsiveThemedH5>
                   <ResponsiveThemedP
-                    className={`mt-2 ${Theme === "light"
+                    className={`mt-2 ${theme === "light"
                       ? "text-Villo-black"
                       : "text-Villo-white15"
                       } `}
@@ -60,7 +63,7 @@ export const ProjectSection = ({ language, Theme }) => {
                     href={project.href}
                     target="_blank"
                   >
-                    <ExternalCTA Theme={Theme}>
+                    <ExternalCTA Theme={theme}>
                       {language === "Norwegian" ? "Prøv ut" : "Try it out"}
                     </ExternalCTA>
                   </Link>

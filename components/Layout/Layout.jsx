@@ -46,6 +46,7 @@ export function SkillsLayout({ children }) {
   );
 }
 
+//TODO: Dont use this component. OR make more of it, and make more different that could be used in other places. Choose 1.
 export function TextFlex({ children, textWidth }) {
   return (
     <div

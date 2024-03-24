@@ -201,12 +201,12 @@ module.exports = {
           "100%": { translate: "-200% 0%", display: "hidden" },
         },
         cookiesSlideOut: {
-          "0%": { translate: "0% 0%" },
-          "100%": { translate: "-100% 0%" },
+          "0%": { translate: "100% 0%" },
+          "100%": { translate: "0% 0%" },
         },
         cookiesSlideIn: {
-          "0%": { translate: "-100% 0%" },
-          "100%": { translate: "0% 0%" },
+          "0%": { translate: "0% 0%" },
+          "100%": { translate: "100% 0%" },
         },
         scroll: {
           "0%": { transform: "translateX(0)" },

@@ -109,8 +109,8 @@ export const PROJECT_LIST = [
       "En satire webside om en fiktiv kokk. Ekstremt enkle oppskrifter for personer som ikke vet hvordan man skal lage mat. Koblet til Sanity CMS for enkelt innholdsoppdatering. Foreløpig bare på engelsk.",
   },
   {
-    engProjectName: "Current project: Rock, paper, scissors game v2",
-    norProjectName: "Nåværende prosjekt: Stein, sakser, papir spill v2",
+    engProjectName: "Rock, paper, scissors game - Omega version",
+    norProjectName: "Stein, sakser, papir spill - Omega versjon",
     textColor: "text-Villo-white",
     // src: "/images/projects/RPS-collage.png",
     // mobileSrc: "/images/projects/RPS.png",
@@ -120,9 +120,9 @@ export const PROJECT_LIST = [
     hrefCode:
       "https://github.com/VilloKodeHode/rps-omega",
     engDescription:
-      "Im currently working on refractoring the old code, making it more scalable and connecting a database",
+      "The game is extended even further. Also the code is alot more scalable, refactored and generally improved upon. Now connected a database (MongoDB)",
     norDescription:
-      "I jobber nå med å refaktorere den gamle koden slik at den blir mer skalbar. Jeg skal også koble til en database. ",
+      "Spillet er blitt utvidet videre. I tillegg er koden koden blitt mye mer skalerbar, refaktorert og generell forbedret. Er nå koblet til en database (MongoDB)",
   },
 ];
 

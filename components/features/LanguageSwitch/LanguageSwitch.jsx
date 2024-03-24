@@ -1,12 +1,12 @@
 import { useContext, useEffect } from "react";
-import LanguageContext from "./LanguageContext";
 import NORWEGIAN from "./assets/norwegian.png";
 import ENGLISH from "./assets/english.png";
 import Image from "next/image";
 import { setCookie, getCookie } from "cookies-next"; // Import the necessary functions
+import { UserContext } from "../../Utilities/UserContext";
 
-const LanguageSwitch = ({ cookiesAccepted, className }) => {
-  const { language, setLanguage } = useContext(LanguageContext);
+const LanguageSwitch = ({ className }) => {
+  const { language, setLanguage, cookiesAccepted } = useContext(UserContext);
 
   useEffect(() => {
     // Check if cookies are accepted and the language cookie is set

@@ -1,16 +1,17 @@
 import Image from "next/image";
 import {
-  ResponsiveH4,
   ResponsiveThemedH2,
   ResponsiveThemedH4,
-  ReversedThemedP,
   ThemedP,
-} from "../../Responsive text/ResponsiveText";
+} from "../../base_components/ResponsiveText";
 import Link from "next/link";
 import { WORKEDWITH_LIST } from "@/data/workedWith_list";
-import CallToActionButton, { SkillLinkButton } from "@/components/Buttons";
+import { useContext } from "react";
+import { UserContext } from "../../Utilities/UserContext";
+import { SkillLinkButton } from "../../base_components/Buttons";
 
-export const WorkedWithSection = ({ language, Theme }) => {
+export const WorkedWithSection = () => {
+  const { theme, language } = useContext(UserContext);
   const companyObj = WORKEDWITH_LIST.find(
     (company) => company.language === language
   );
@@ -37,7 +38,7 @@ export const WorkedWithSection = ({ language, Theme }) => {
                    "shadow-[#858ee0]" : "shadow-white"
               }  transition-all max-w-sm rounded-lg
                             ${
-                              Theme === "light"
+                              theme === "light"
                                 ? "bg-Villo-light-black50"
                                 : "bg-Villo-dark-black75"
                             }
@@ -60,7 +61,7 @@ export const WorkedWithSection = ({ language, Theme }) => {
               </div>
               <div
                 className={`flex flex-col transition-all justify-between min-h-[300px] p-6  ${
-                  Theme === "light"
+                  theme === "light"
                     ? "bg-Villo-light-white10"
                     : "bg-Villo-dark-black85"
                 }`}
@@ -73,7 +74,7 @@ export const WorkedWithSection = ({ language, Theme }) => {
                 {company.skillsUsed.map((skill) => (
                   <div key={skill.name} >
                     <a href={skill.href} target="_blank" rel="noreferrer">
-                    <SkillLinkButton Theme={Theme}>
+                    <SkillLinkButton>
                       {skill.name}
                     </SkillLinkButton>
                     </a>
@@ -89,7 +90,8 @@ export const WorkedWithSection = ({ language, Theme }) => {
   );
 };
 
-export const NewWorkedWithSection = ({ language, Theme }) => {
+export const NewWorkedWithSection = () => {
+  const { theme, language } = useContext(UserContext);
   const companyObj = WORKEDWITH_LIST.find(
     (company) => company.language === language
   );
@@ -98,7 +100,7 @@ export const NewWorkedWithSection = ({ language, Theme }) => {
     <div className="relative z-10 flex flex-col justify-center py-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 min-h-[30vh]">
       <div
         className={`absolute w-screen h-full translate-x-1/2  -z-10 right-1/2 ${
-          Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"
+          theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"
         }`}
       />
       <div className="z-10 text-center">
@@ -117,7 +119,7 @@ export const NewWorkedWithSection = ({ language, Theme }) => {
             >
               <div
                 className={`z-20 group grid justify-center transition-all px-2 py-4 ${
-                  Theme === "light"
+                  theme === "light"
                     ? "bg-Villo-light-white15 hover:bg-Villo-light-white10"
                     : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
                 }`}

@@ -1,29 +1,29 @@
 import Image from "next/image";
-import { SimpleLogoComponent } from "@/components/base components/Logo";
+import { SimpleLogoComponent } from "@/components/base_components/Logo";
 import {
-  ResponsiveH2,
   ResponsiveH3,
   ResponsiveThemedH2,
   ResponsiveThemedH3,
   ResponsiveThemedH4,
   ResponsiveThemedP,
-} from "../../Responsive text/ResponsiveText";
-import { TextFlex } from "../../Layout/Layout";
+} from "../../base_components/ResponsiveText";
 import { useContext } from "react";
-import LanguageContext from "../../Utilities/LanguageSwitch/LanguageContext";
+import { UserContext } from "../../Utilities/UserContext";
 
-export const MyIntroSection = ({ language, Theme }) => {
+export const MyIntroSection = () => {
+  const { theme, language } = useContext(UserContext);
   return (
     <div className="grid max-w-7xl justify-center text-center items-center min-h-[calc(100dvh-144px)]">
       <ResponsiveThemedH2 className="py-4">
-        {language === "Norwegian"
-          ? "Kort om meg"
-          : "About me"}
+        {language === "Norwegian" ? "Kort om meg" : "About me"}
       </ResponsiveThemedH2>
       <div className="animate-PageAppearRight">
         <div
-          className={`sm:rounded-lg grid min-h-[70dvh] lg:grid-cols-2 transition-colors duration-1000  ${Theme === "light" ? "bg-Villo-light-white10" : "bg-Villo-dark-black75"
-            }`}
+          className={`sm:rounded-lg grid min-h-[70dvh] lg:grid-cols-2 transition-colors duration-1000  ${
+            theme === "light"
+              ? "bg-Villo-light-white10"
+              : "bg-Villo-dark-black75"
+          }`}
         >
           <div
             className={`col-span-1 py-12 min-h-[30dvh] text-left flex flex-col justify-center items-center`}
@@ -55,7 +55,7 @@ export const MyIntroSection = ({ language, Theme }) => {
 };
 
 export const OldCompanyInfo = () => {
-  const { language } = useContext(LanguageContext);
+  const { language } = useContext(UserContext);
   return (
     <section className="grid items-center min-h-[60dvh] justify-center w-screen font-bold text-center lg:grid-cols-2 mt-[56px]">
       <div className="flex flex-col items-center justify-center lg:h-full h-[50dvh] shadow shadow-Villo-black75 px-8">
@@ -68,7 +68,8 @@ export const OldCompanyInfo = () => {
             </div>
           </ResponsiveH3>
         </div>
-        <TextFlex textWidth="md:max-w-[60ch] max-w-[80ch]">
+
+        <div className="flex flex-col items-center snap-center justify-center  mx-auto text-Villo-black md:max-w-[60ch] max-w-[80ch]">
           <ResponsiveThemedH4>
             {language === "Norwegian" ? "Norsk foretak" : "Norwegian company"}
           </ResponsiveThemedH4>
@@ -77,7 +78,7 @@ export const OldCompanyInfo = () => {
               ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
               : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
           </ResponsiveThemedP>
-        </TextFlex>
+        </div>
       </div>
 
       <div className="lg:h-full lg:w-full h-[40dvh] shadow shadow-Villo-black75 tonsbergBG" />

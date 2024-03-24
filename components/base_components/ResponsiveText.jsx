@@ -1,7 +1,7 @@
 // Components to simplify the use of responsive text
 
 import { useContext } from "react";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
+import { UserContext } from "../Utilities/UserContext";
 
 export default function ResponsiveH1({ children, className }) {
   return (
@@ -14,11 +14,11 @@ export default function ResponsiveH1({ children, className }) {
 }
 
 export const ResponsiveThemedH1 = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+  const { theme } = useContext(UserContext);
   return (
     <h1
       className={`lg:text-h1  ${
-        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+        theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } sm:text-h2 text-h3 lg:leading-h1 sm:leading-h2 leading-h3 ${className}`}
     >
       {children}
@@ -27,6 +27,7 @@ export const ResponsiveThemedH1 = ({ children, className }) => {
 };
 
 export function ResponsiveH2({ children, className }) {
+  const { theme } = useContext(UserContext);
   return (
     <h2 className={`sm:leading-h2 leading-h3 sm:text-h2 text-h3 ${className}`}>
       {children}
@@ -35,11 +36,11 @@ export function ResponsiveH2({ children, className }) {
 }
 
 export const ResponsiveThemedH2 = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+  const { theme } = useContext(UserContext);
   return (
     <h2
       className={` ${
-        Theme === "light"
+        theme === "light"
           ? "text-Villo-light-black75"
           : "text-Villo-dark-white15"
       } sm:leading-h2 leading-h3 sm:text-h2 text-h3 ${className}`}
@@ -58,11 +59,11 @@ export function ResponsiveH3({ children, className }) {
 }
 
 export const ResponsiveThemedH3 = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <h3
       className={` ${
-        Theme === "light"
+        theme === "light"
           ? "text-Villo-light-black75"
           : "text-Villo-dark-white15"
       } md:text-h3 text-h4 md:leading-h3 leading-h4 ${className}`}
@@ -73,11 +74,11 @@ export const ResponsiveThemedH3 = ({ children, className }) => {
 };
 
 export function ThemedH3({ children, className }) {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <h3
       className={`text-h3 leading-h3 ${
-        Theme === "light"
+        theme === "light"
           ? "text-Villo-light-black75"
           : "text-Villo-dark-white15"
       } ${className}`}
@@ -96,11 +97,11 @@ export function ResponsiveH4({ children, className }) {
 }
 
 export const ResponsiveThemedH4 = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <h4
       className={` ${
-        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+        theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } md:text-h4 text-h5 md:leading-h4 leading-h5 ${className}`}
     >
       {children}
@@ -109,11 +110,11 @@ export const ResponsiveThemedH4 = ({ children, className }) => {
 };
 
 export function ThemedH4({ children, className }) {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <h3
       className={`text-h4 leading-h4 ${
-        Theme === "light"
+        theme === "light"
           ? "text-Villo-light-black75"
           : "text-Villo-dark-white15"
       } ${className}`}
@@ -132,11 +133,11 @@ export function ResponsiveH5({ children, className }) {
 }
 
 export function ThemedH5({ children, className }) {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <h3
       className={`text-h5 leading-h5 ${
-        Theme === "light"
+        theme === "light"
           ? "text-Villo-light-black75"
           : "text-Villo-dark-white15"
       } ${className}`}
@@ -147,11 +148,11 @@ export function ThemedH5({ children, className }) {
 }
 
 export const ResponsiveThemedH5 = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <h5
       className={` ${
-        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+        theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } md:text-h5 text-h6 md:leading-h5 leading-h6 ${className}`}
     >
       {children}
@@ -170,11 +171,11 @@ export function ResponsiveP({ children, maxWidth, className }) {
 }
 
 export const ResponsiveThemedP = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <p
       className={` ${
-        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+        theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } md:text-p text-p0 md:leading-p leading-p0 ${className}`}
     >
       {children}
@@ -183,11 +184,11 @@ export const ResponsiveThemedP = ({ children, className }) => {
 };
 
 export const ThemedP = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <p
       className={` ${
-        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+        theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } text-p leading-p ${className}`}
     >
       {children}
@@ -196,11 +197,11 @@ export const ThemedP = ({ children, className }) => {
 };
 
 export const ReversedThemedP = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <p
       className={` ${
-        Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-black"
+        theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-black"
       } text-p leading-p ${className}`}
     >
       {children}
@@ -219,11 +220,11 @@ export function ResponsiveSmall({ children, maxWidth, className }) {
 }
 
 export const ThemedSmall = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <p
       className={` ${
-        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+        theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } text-p0 leading-p0 ${className}`}
     >
       {children}
@@ -232,11 +233,11 @@ export const ThemedSmall = ({ children, className }) => {
 };
 
 export const ResponsiveThemedSmall = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <p
       className={` ${
-        Theme === "light" ? "text-Villo-light-black85" : "text-Villo-dark-white"
+        theme === "light" ? "text-Villo-light-black85" : "text-Villo-dark-white"
       } md:text-p0 text-small font-normal md:leading-p0 leading-small ${className}`}
     >
       {children}
@@ -255,11 +256,11 @@ export function ResponsiveMini({ children, maxWidth, className }) {
 }
 
 export const ResponsiveThemedMini = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <small
       className={` ${
-        Theme === "light"
+        theme === "light"
           ? "text-Villo-light-black75"
           : "text-Villo-dark-white25"
       } md:text-small font-normal text-mini md:leading-small leading-mini ${className}`}
@@ -280,11 +281,11 @@ export function ResponsiveLi({ children, maxWidth, className }) {
 }
 
 export const ThemedLi = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <li
       className={` ${
-        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+        theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } text-h5 leading-h5 ${className}`}
     >
       {children}
@@ -293,11 +294,11 @@ export const ThemedLi = ({ children, className }) => {
 };
 
 export const ResponsiveThemedLi = ({ children, className }) => {
-  const { Theme } = useContext(ThemeContext);
+   const { theme } = useContext(UserContext);
   return (
     <li
       className={` ${
-        Theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
+        theme === "light" ? "text-Villo-light-black" : "text-Villo-dark-white"
       } md:text-h5 text-p md:leading-h5 leading-p ${className}`}
     >
       {children}

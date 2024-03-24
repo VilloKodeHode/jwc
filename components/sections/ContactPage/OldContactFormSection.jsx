@@ -1,13 +1,13 @@
 import Image from "next/image";
-import CallToActionButton from "../../Buttons";
+import CallToActionButton from "../../base_components/Buttons";
 import {
   ResponsiveH2,
   ResponsiveH4,
   ResponsiveP,
 
-} from "../../Responsive text/ResponsiveText";
+} from "../../base_components/ResponsiveText";
 import { useContext, useState } from "react";
-import LanguageContext from "../../Utilities/LanguageSwitch/LanguageContext";
+import { UserContext } from "../../Utilities/UserContext";
 
 export const OldContactformSection = () => {
     const [showModal, setShowModal] = useState(false);
@@ -47,7 +47,7 @@ export const OldContactformSection = () => {
           console.log(data); // handle response, catch errors
         });
     };
-    const { language } = useContext(LanguageContext);
+    const { language } = useContext(UserContext);
     return (
       <section className="relative grid lg:grid-cols-[50%_50%] lg:grid-flow-col items-center justify-center min-w-[80%] min-h-[70vh] my-28 text-center">
         <div className="flex justify-center px-8">

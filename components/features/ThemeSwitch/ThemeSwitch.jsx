@@ -1,12 +1,12 @@
 import { useContext, useEffect } from "react";
-import ThemeContext from "./ThemeContext";
 import Image from "next/image";
 import LIGHTMODE from "./assets/lightmode.svg";
 import DARKMODE from "./assets/darkmode.svg";
 import { getCookie, setCookie } from "cookies-next";
+import { UserContext } from "../../Utilities/UserContext";
 
-const ThemeSwitch = ({ cookiesAccepted }) => {
-  const { Theme, setTheme } = useContext(ThemeContext);
+const ThemeSwitch = () => {
+  const { theme, setTheme, cookiesAccepted } = useContext(UserContext);
 
   useEffect(() => {
     // Check if cookies are accepted and the theme cookie is set
@@ -18,7 +18,7 @@ const ThemeSwitch = ({ cookiesAccepted }) => {
   }, [setTheme, cookiesAccepted]);
 
   const toggleTheme = () => {
-    if (Theme === "light") {
+    if (theme === "light") {
       setTheme("dark");
       if (cookiesAccepted) {
         setCookie("theme", "dark", {
@@ -45,7 +45,7 @@ const ThemeSwitch = ({ cookiesAccepted }) => {
         width={30}
         height={30}
         alt="themeswitch to darkmode"
-        className={` origin-top ${Theme === "light"
+        className={` origin-top ${theme === "light"
           ? "animate-ThemeSwitchSlideIn"
           : "animate-ThemeSwitchSlideOut pointer-events-none"
           }  max-w-8 h-8 absolute translate-x-1/2 origin-center -translate-y-1/2 top-1/2 hover:scale-110 right-1/2 transition`}
@@ -56,7 +56,7 @@ const ThemeSwitch = ({ cookiesAccepted }) => {
           width={30}
           height={30}
           alt="themeswitch to lightmode"
-          className={`origin-top ${Theme === "light"
+          className={`origin-top ${theme === "light"
             ? "animate-ThemeSwitchSlideOut pointer-events-none"
             : "animate-ThemeSwitchSlideIn "
             } max-w-8 h-8 absolute translate-x-1/2 origin-center -translate-y-1/2 top-1/2 right-1/2 hover:scale-110 transition`}

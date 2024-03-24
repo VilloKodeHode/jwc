@@ -1,14 +1,14 @@
 import Image from "next/image";
-import { ThemedP } from "../Responsive text/ResponsiveText";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
+import { ThemedP } from "./ResponsiveText";
 import { useContext } from "react";
+import { UserContext } from "../Utilities/UserContext";
 
 export const SkillIcon = ({ text, logo, colored = true, width = 60 }) => {
-  const { Theme } = useContext(ThemeContext);
+  const { theme } = useContext(UserContext);
   return (
     <figure
       className={`relative z-20 hover:scale-105 transition-all flex justify-center p-6 m-4 rounded-sm shadow-lg ${
-        Theme === "light"
+        theme === "light"
           ? "bg-Villo-light-white15 hover:bg-Villo-light-white10"
           : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
       } group`}

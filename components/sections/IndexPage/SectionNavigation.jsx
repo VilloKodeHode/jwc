@@ -1,4 +1,8 @@
-export const SectionNavigation = ({ Theme, language }) => {
+import { useContext } from "react";
+import { UserContext } from "../../Utilities/UserContext";
+
+export const SectionNavigation = () => {
+  const { theme, language } = useContext(UserContext);
   const generateSpans = (text, href) => {
     return (
       <a href={href} className="my-2 h-fit min-w-[300px]">

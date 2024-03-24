@@ -1,15 +1,15 @@
 import { useContext } from "react";
-import ThemeContext from "../Utilities/ThemeSwitch/ThemeContext";
 import Link from "next/link";
 import Image from "next/image";
 import { LOGO } from "../../data/menu_list";
+import { UserContext } from "../Utilities/UserContext";
 
 
 const LogoComponent = ({ onclick }) => {
-  const { Theme } = useContext(ThemeContext);
+  const { theme } = useContext(UserContext);
 
   // Find the logo object based on the theme
-  const logoObject = LOGO.find((logo) => logo.hasOwnProperty(Theme));
+  const logoObject = LOGO.find((logo) => logo.hasOwnProperty(theme));
 
   if (!logoObject) {
     // Handle case when logo object for the theme is not found
@@ -17,7 +17,7 @@ const LogoComponent = ({ onclick }) => {
   }
 
   // Get the logo details for the theme
-  const logoDetails = logoObject[Theme];
+  const logoDetails = logoObject[theme];
 
   return (
     <Link onClick={onclick} key={logoDetails.text} href={logoDetails.href} className="">
@@ -34,9 +34,9 @@ const LogoComponent = ({ onclick }) => {
 };
 
 export const SimpleLogoComponent = () => {
-  const { Theme } = useContext(ThemeContext);
+  const { theme } = useContext(UserContext);
   // Find the logo object based on the theme
-  const logoObject = LOGO.find((logo) => logo.hasOwnProperty(Theme));
+  const logoObject = LOGO.find((logo) => logo.hasOwnProperty(theme));
 
   if (!logoObject) {
     // Handle case when logo object for the theme is not found
@@ -44,7 +44,7 @@ export const SimpleLogoComponent = () => {
   }
 
   // Get the logo details for the theme
-  const logoDetails = logoObject[Theme];
+  const logoDetails = logoObject[theme];
 
   return (
     <div>

@@ -1,15 +1,30 @@
-import {
-  CookieAccept,
-} from "@/components/Buttons";
-import {
-  ThemedH5,
-  ThemedSmall,
-} from "@/components/Responsive text/ResponsiveText";
-import Image from "next/image";
-import { useEffect, useState } from "react";
 
-const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) => {
+import Image from "next/image";
+import { useContext, useState } from "react";
+import { UserContext } from "../../Utilities/UserContext";
+import { setCookie } from "cookies-next";
+import { CookieAccept } from "../../base_components/Buttons";
+import { ThemedH5, ThemedSmall } from "../../base_components/ResponsiveText";
+
+const CookiePopup = () => {
+
+  const {language, theme, cookiesAccepted, setCookiesAccepted} = useContext(UserContext);
   const [showPopup, setShowPopup] = useState(false);
+
+  const handleCookieAccept = () => {
+    // Set a cookie to remember that the user has accepted cookies
+    setCookie("acceptedCookies", "true", {
+      maxAge: 365 * 24 * 60 * 60, // Cookie expiration in seconds (1 year)
+    });
+    setCookiesAccepted(true);
+  };
+
+const handleCookieDecline = () => {
+  setCookie("acceptedCookies", "false", {
+    maxAge: 365 * 24 * 60 * 60, // Cookie expiration in seconds (1 year)
+  });
+  setCookiesAccepted(false);
+}
 
   const handleAccept = () => {
     setShowPopup(false);
@@ -18,24 +33,24 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
 
   const handleDecline = () => {
     setShowPopup(false);
+    handleCookieDecline();
   };
 
   const handleShowPopup = () => {
-    setShowPopup(true);
+    setShowPopup(!showPopup);
   };
 
-  useEffect(() => {
-    // cookiesAccepted === false ? setShowPopup(false) : setShowPopup(true);
-    setShowPopup(!cookiesAccepted);
-  }, [cookiesAccepted]);
+  // useEffect(() => {
+  //   setShowPopup(!showPopup);
+  // }, [showPopup]);
 
   return (
     <div
       className={`${showPopup ? "animate-CookiesSlideIn" : "animate-CookiesSlideOut"
-        } fixed bottom-0 left-0 z-50 flex items-center justify-center group h-fit w-fit`}
+        } fixed bottom-0 -left-[320px] z-50 flex items-center justify-center group h-fit w-fit`}
     >
       <div
-        className={`min-h-[131px] max-w-[300px] transition-all duration-300 bg-opacity-[0.95] px-6 py-4 outline m-2 rounded-xl  ${Theme === "light"
+        className={`min-h-[131px] max-w-[300px] transition-all duration-300 bg-opacity-[0.95] px-6 py-4 outline m-2 rounded-xl  ${theme === "light"
           ? "bg-Villo-light-white10 group-hover:bg-Villo-light-white15 outline-Villo-light-black85"
           : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-black85 outline-Villo-dark-white10"
           }`}
@@ -58,10 +73,10 @@ const CookiePopup = ({ handleCookieAccept, language, Theme, cookiesAccepted }) =
               : "We do not store information that can identify you as a person. Cookies are stored for 1 year."}
           </ThemedSmall>
           <div className="flex justify-around gap-2">
-            <CookieAccept onClick={handleAccept} Theme={Theme} className="">
+            <CookieAccept onClick={handleAccept}  className="">
               {language === "Norwegian" ? "Godta" : "Accept"}
             </CookieAccept>
-            <CookieAccept onClick={handleDecline} Theme={Theme} className="">
+            <CookieAccept onClick={handleDecline}  className="">
               {language === "Norwegian" ? "Avslå" : "Decline"}
             </CookieAccept>
           </div>

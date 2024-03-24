@@ -1,17 +1,18 @@
 import Link from "next/link";
-import { ResponsiveThemedH3 } from "../Responsive text/ResponsiveText";
-import CallToActionButton, { EmailCTA, ExternalCTA, PortfolioCTA, SendCTA } from "../Buttons";
+import { ResponsiveThemedH3 } from "../base_components/ResponsiveText";
+import CallToActionButton, { EmailCTA, PortfolioCTA } from "../base_components/Buttons";
 import Image from "next/image";
+import { UserContext } from "../Utilities/UserContext";
+import { useContext } from "react";
 
 export const LetsGoCTA = ({
-  Theme,
-  language,
   engText,
   norText,
   href,
   children,
   type,
 }) => {
+  const { language, theme } = useContext(UserContext);
   return (
     <section className="relative grid items-center justify-center px-12 sm:pt-0 mb-[126px]">
       <div className="z-20 mb-16">
@@ -22,22 +23,22 @@ export const LetsGoCTA = ({
       <div className="relative z-20 flex flex-col items-center justify-center mx-auto w-fit group">
         <Link href={href}>
           {type === "email" ? (
-            <EmailCTA Theme={Theme}>
+            <EmailCTA Theme={theme}>
               {children}
             </EmailCTA>
           ) : type === "portfolio" ?
             (
-              <PortfolioCTA Theme={Theme}>
+              <PortfolioCTA Theme={theme}>
                 {children}
               </PortfolioCTA>
-            ) : (<CallToActionButton Theme={Theme}>
+            ) : (<CallToActionButton Theme={theme}>
               {children}
             </CallToActionButton>)}
 
         </Link>
         <Image
           src={
-            Theme === "light"
+            theme === "light"
               ? "/logo/WindLogoNoTextLightMode.svg"
               : "/logo/WindLogoNoTextDarkMode.svg"
           }

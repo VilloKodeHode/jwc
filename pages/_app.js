@@ -1,68 +1,46 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Analytics } from '@vercel/analytics/react';
 import Script from "next/script";
 import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";
 import Footer from "@/components/navigation/Footer";
-import LanguageContext from "@/components/Utilities/LanguageSwitch/LanguageContext";
-import { ScrollToTopButton } from "@/components/Buttons";
-import ThemeContext from "@/components/Utilities/ThemeSwitch/ThemeContext";
-import { ContextProviders } from "@/components/Utilities/CombinedContextProvider";
+
 import { useRouter } from "next/router";
-import { getCookie, setCookie } from "cookies-next";
-import CookiePopup from "@/components/Utilities/CookiePopup/CookiePopup";
 import PageLayout from "@/components/Layout/Layout";
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import UserContextProvider, { UserContext } from "../components/Utilities/UserContext";
+import { ScrollToTopButton } from "../components/base_components/Buttons";
+import CookiePopup from "../components/features/CookiePopup/CookiePopup";
 
-export default function App({ Component, pageProps }) {
-  const [cookiesAccepted, setCookiesAccepted] = useState(false);
-  const { setLanguage } = useContext(LanguageContext);
-  const { setTheme } = useContext(ThemeContext);
 
-  useEffect(() => {
-    // Check if the user has accepted cookies by checking a cookie
-    const acceptedCookies = getCookie("acceptedCookies");
-    if (acceptedCookies) {
-      setCookiesAccepted(true);
-    }
-  }, [setTheme, setLanguage]);
-
-  // Callback to handle cookie acceptance
-  const handleCookieAccept = () => {
-    // Set a cookie to remember that the user has accepted cookies
-    setCookie("acceptedCookies", "true", {
-      maxAge: 365 * 24 * 60 * 60, // Cookie expiration in seconds (1 year)
-    });
-    setCookiesAccepted(true);
-  };
-
+export const Main = ({ Component }) => {
+  const { theme } = useContext(UserContext);
   return (
-    <>
-      <ContextProviders cookiesAccepted={cookiesAccepted}>
-        <AppContent
-          Component={Component}
-          pageProps={pageProps}
-          cookiesAccepted={cookiesAccepted}
-          handleCookieAccept={handleCookieAccept}
-        />
-      </ContextProviders>
-    </>
-  );
+    <div
+      className={` transition-colors duration-1000 ${theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
+        }`}
+    >
+      <CookiePopup />
+      <PageLayout>
+        <Component />
+      </PageLayout>
+      <SpeedInsights />
+      <Script
+        src="https://cdn.addrow.com/ads/viewability251.js"
+        strategy="lazyOnload"
+      />
+    </div>
+  )
 }
 
-function AppContent({
-  Component,
-  pageProps,
-  cookiesAccepted,
-  handleCookieAccept,
-}) {
+export default function App({ Component }) {
+  const { theme } = useContext(UserContext);
+  
+  //TODO: Can this be moved to useContext?
   const router = useRouter();
-  const { language, setLanguage } = useContext(LanguageContext);
-  const { Theme, setTheme } = useContext(ThemeContext);
-
   const currentPath = router.asPath;
 
-
+//TODO: Se if this code here can be moved (make into a function and call it here?)
   useEffect(() => {
     // Function to check if an element is in the viewport
     function isElementInViewport(element, threshold = 0.6) {
@@ -98,48 +76,24 @@ function AppContent({
 
   useEffect(() => {
     // Set a global JavaScript variable based on the Theme value
-    window.appTheme = Theme;
-  }, [Theme]);
-
+    window.appTheme = theme;
+  }, [theme]);
   return (
     <>
-      <div className={`relative transition-colors duration-1000 `}>
-        <Header
-          language={language}
-          setLanguage={setLanguage}
-          Theme={Theme}
-          setTheme={setTheme}
-          currentPath={currentPath}
-          cookiesAccepted={cookiesAccepted}
-        />
-        <div
-          className={` transition-colors duration-1000 ${Theme === "light" ? "bg-Villo-light-white" : "bg-Villo-dark-black"
-            }`}
-        >
-          <CookiePopup
-            handleCookieAccept={handleCookieAccept}
-            language={language}
-            Theme={Theme}
-            cookiesAccepted={cookiesAccepted}
-          />
-          <PageLayout>
-            <Component
-              {...pageProps}
-              language={language}
-              Theme={Theme}
+      <UserContextProvider>
+        <>
+          <div className={`relative transition-colors duration-1000 `}>
+            {/* //TODO: Make a context for header since there are alot of useStates there.... */}
+            <Header
               currentPath={currentPath}
             />
-          </PageLayout>
-          <SpeedInsights />
-          <Script
-            src="https://cdn.addrow.com/ads/viewability251.js"
-            strategy="lazyOnload"
-          />
-        </div>
-        <Footer language={language} Theme={Theme} currentPath={currentPath} />
-        <ScrollToTopButton Theme={Theme} />
-      </div>
-      <Analytics />
+            <Main Component={Component} />
+            <Footer currentPath={currentPath} />
+            <ScrollToTopButton />
+          </div>
+          <Analytics />
+        </>
+      </UserContextProvider>
     </>
   );
 }

@@ -2,13 +2,16 @@ import Image from "next/image";
 import {
   ResponsiveThemedH2,
   ThemedP,
-} from "../../Responsive text/ResponsiveText";
+} from "../../base_components/ResponsiveText";
+import { UserContext } from "../../Utilities/UserContext";
+import { useContext } from "react";
 
-export const SkillsSection = ({ language, Theme }) => {
+export const SkillsSection = () => {
+  const { theme, language } = useContext(UserContext);
   return (
     <section
       className={`w-screen py-20 ${
-        Theme === "light" ? "bg-Villo-light-white15" : " bg-Villo-dark-black85"
+        theme === "light" ? "bg-Villo-light-white15" : " bg-Villo-dark-black85"
       }`}
     >
       <div className="px-4 m-auto max-w-7xl sm:px-6 lg:px-8">
@@ -25,7 +28,7 @@ export const SkillsSection = ({ language, Theme }) => {
 
         <div
           className={`relative flex justify-center mt-10 ${
-            Theme === "light" ? " bg-Villo-light-" : "bg-Villo-dark-"
+            theme === "light" ? " bg-Villo-light-" : "bg-Villo-dark-"
           } `}
         >
           <div

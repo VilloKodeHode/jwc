@@ -1,8 +1,11 @@
 import Image from "next/image";
-import { ResponsiveH2, ThemedP } from "../../Responsive text/ResponsiveText";
-import { useEffect, useState } from "react";
+import { ResponsiveH2, ThemedP } from "../../base_components/ResponsiveText";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../../Utilities/UserContext";
 
-export const CTAOneSection = ({ language, Theme }) => {
+export const CTAOneSection = () => {
+  const { language, theme } = useContext(UserContext);
+
   const [currentWeb, setCurrentWeb] = useState("/images/showcase/HeroLogo.png");
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -53,20 +56,20 @@ export const CTAOneSection = ({ language, Theme }) => {
                       setCurrentWeb("/images/showcase/HeroDesign.png")
                     }
                     className={`cursor-pointer group  ${
-                      Theme === "light"
+                      theme === "light"
                         ? "text-Villo-light-primary"
                         : "text-Villo-dark-primary"
                     }`}
                   >
                     <span
                       className={` ${
-                        Theme === "light"
+                        theme === "light"
                           ? "group-hover:text-Villo-light-primary"
                           : "group-hover:text-Villo-dark-primary"
                       }  group-hover:opacity-100 transition-all duration-500 opacity-80 h1hidden ${
                         currentWeb === "/images/showcase/HeroDesign.png"
                           ? "text-Villo-dark-primary"
-                          : Theme === "light"
+                          : theme === "light"
                           ? "text-Villo-light-white20"
                           : "text-Villo-dark-black50"
                       }`}
@@ -80,20 +83,20 @@ export const CTAOneSection = ({ language, Theme }) => {
                       setCurrentWeb("/images/showcase/HeroDevelopment.png")
                     }
                     className={`cursor-pointer group  ${
-                      Theme === "light"
+                      theme === "light"
                         ? "text-Villo-light-primary"
                         : "text-Villo-dark-primary"
                     }`}
                   >
                     <span
                       className={` ${
-                        Theme === "light"
+                        theme === "light"
                           ? "group-hover:text-Villo-light-primary"
                           : "group-hover:text-Villo-dark-primary"
                       }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
                         currentWeb === "/images/showcase/HeroDevelopment.png"
                           ? "text-Villo-dark-primary"
-                          : Theme === "light"
+                          : theme === "light"
                           ? "text-Villo-light-white20"
                           : "text-Villo-dark-black50"
                       }`}
@@ -108,20 +111,20 @@ export const CTAOneSection = ({ language, Theme }) => {
                       setCurrentWeb("/images/showcase/HeroCollage.webp")
                     }
                     className={`cursor-pointer group  ${
-                      Theme === "light"
+                      theme === "light"
                         ? "text-Villo-light-primary"
                         : "text-Villo-dark-primary"
                     }`}
                   >
                     <span
                       className={` ${
-                        Theme === "light"
+                        theme === "light"
                           ? "group-hover:text-Villo-light-primary"
                           : "group-hover:text-Villo-dark-primary"
                       }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
                         currentWeb === "/images/showcase/HeroCollage.webp"
                           ? "text-Villo-dark-primary"
-                          : Theme === "light"
+                          : theme === "light"
                           ? "text-Villo-light-white20"
                           : "text-Villo-dark-black50"
                       }`}
@@ -157,7 +160,7 @@ export const CTAOneSection = ({ language, Theme }) => {
               <div className={`relative z-10 grid items-center justify-center`}>
                 <div
                   className={`transition-all border border-b-8 border-r-8 w-fit md:h-[450px] rounded-xl ${
-                    Theme === "light"
+                    theme === "light"
                       ? "border-Villo-light-primary"
                       : "border-Villo-dark-primary"
                   }  `}

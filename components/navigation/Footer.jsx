@@ -4,30 +4,33 @@ import Link from "next/link";
 import { FiMail } from "react-icons/fi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { VscGithubAlt } from "react-icons/vsc";
-import { ResponsiveH5 } from "../Responsive text/ResponsiveText";
+import { UserContext } from "../Utilities/UserContext";
+import { useContext } from "react";
 
-export default function Footer({ language, Theme }) {
+export default function Footer() {
+  //TODO: Currenpath can be used to highlight links to different pages here (which one is active too)
+  const { theme, language } = useContext(UserContext);
   const year = new Date().getFullYear();
   return (
-    <div className={`relative py-24 sm:px-6 lg:px-12 px-4 ${Theme === "light" ? "bg-Villo-light-primary" : "bg-Villo-dark-primary"}`}>
+    <div className={`relative py-24 sm:px-6 lg:px-12 px-4 ${theme === "light" ? "bg-Villo-light-primary" : "bg-Villo-dark-primary"}`}>
 
       {/* <FooterLinks Theme={Theme} /> */}
       <div className="flex flex-col items-center justify-center w-full gap-4 sm:justify-between sm:flex-row">
         {/* Contact Information */}
-        <div className={`flex flex-col gap-2 ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
+        <div className={`flex flex-col gap-2 ${theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
           <div className="flex gap-4">
             <Link className="w-fit" href="/contact">
-              <FiMail className={`w-8 h-8  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-white20" : "text-Villo-dark-white10 hover:text-Villo-dark-white20"} duration-200  hover:scale-125`} />
+              <FiMail className={`w-8 h-8  ${theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-white20" : "text-Villo-dark-white10 hover:text-Villo-dark-white20"} duration-200  hover:scale-125`} />
             </Link>
 
             <a href="https://github.com/VilloKodeHode" target="_blank">
-              <VscGithubAlt className={`w-8 h-8  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-white20" : "text-Villo-dark-white10 hover:text-Villo-dark-white20"} duration-200  hover:scale-125`} />
+              <VscGithubAlt className={`w-8 h-8  ${theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-white20" : "text-Villo-dark-white10 hover:text-Villo-dark-white20"} duration-200  hover:scale-125`} />
             </a>
             <a
               href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
               target="_blank"
             >
-              <SlSocialLinkedin className={`w-8 h-8  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-white20" : "text-Villo-dark-white10 hover:text-Villo-dark-white20"} duration-200  hover:scale-125`} />
+              <SlSocialLinkedin className={`w-8 h-8  ${theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-white20" : "text-Villo-dark-white10 hover:text-Villo-dark-white20"} duration-200  hover:scale-125`} />
             </a>
 
           </div>
@@ -36,7 +39,7 @@ export default function Footer({ language, Theme }) {
           <p>Address: Brekkelia 62B, 3153 Tolvsrød</p>
         </div>
         {/* Copyright Information */}
-        <div className={`flex items-center text-center ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
+        <div className={`flex items-center text-center ${theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
           <h4 className="text-h4">{language === "Norwegian" ? `© ${year} Villo utvikling` : `© ${year} Villo development`}</h4>
         </div>
         {/* Privacy Policy and Terms of Service */}
@@ -55,17 +58,18 @@ export default function Footer({ language, Theme }) {
 
 
 
-export const FooterLinks = (Theme) => {
+export const FooterLinks = () => {
+  const { theme } = useContext(UserContext);
   return (
     <div className="flex flex-row">
       <div className="flex flex-row items-center justify-center m-4">
         <Link href="/contact">
-          <FiMail className={`w-8 h-8 mr-4  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-secondary" : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"} duration-200  hover:scale-125`} />
+          <FiMail className={`w-8 h-8 mr-4  ${theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-secondary" : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"} duration-200  hover:scale-125`} />
         </Link>
       </div>
       <div className="flex flex-row items-center justify-center m-4">
         <a href="https://github.com/VilloKodeHode" target="_blank">
-          <VscGithubAlt className={`w-8 h-8 mr-4  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-secondary" : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"} duration-200  hover:scale-125`} />
+          <VscGithubAlt className={`w-8 h-8 mr-4  ${theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-secondary" : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"} duration-200  hover:scale-125`} />
         </a>
       </div>
       <div className="flex flex-row items-center justify-center m-4">
@@ -73,7 +77,7 @@ export const FooterLinks = (Theme) => {
           href="https://www.linkedin.com/in/joakim-villo-71b814a1/"
           target="_blank"
         >
-          <SlSocialLinkedin className={`w-8 h-8 mr-4  ${Theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-secondary" : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"} duration-200  hover:scale-125`} />
+          <SlSocialLinkedin className={`w-8 h-8 mr-4  ${theme === "light" ? "text-Villo-light-white10 hover:text-Villo-light-secondary" : "text-Villo-dark-white10 hover:text-Villo-dark-secondary"} duration-200  hover:scale-125`} />
         </a>
       </div>
     </div>

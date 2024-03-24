@@ -1,16 +1,22 @@
 import Link from "next/link";
 import {
-  ResponsiveThemedH2, ResponsiveThemedH4, ThemedP,
-} from "../../Responsive text/ResponsiveText";
-import CallToActionButton, { ReadMoreButton } from "../../Buttons";
+  ResponsiveThemedH2,
+  ResponsiveThemedH4,
+  ThemedP,
+} from "../../base_components/ResponsiveText";
+import { ReadMoreButton } from "../../base_components/Buttons";
+import { useContext } from "react";
+import { UserContext } from "../../Utilities/UserContext";
 
+export const OfferSection = () => {
+  const { language, theme } = useContext(UserContext);
 
-export const OfferSection = ({ language, Theme }) => {
   return (
     <section
       id="OfferSection"
-      className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 ${Theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"
-        }`}
+      className={`w-screen overflow-x-hidden py-12 sm:px-6 px-4 lg:px-12 ${
+        theme === "light" ? "bg-Villo-light-white20" : "bg-Villo-dark-black85"
+      }`}
     >
       <div className="mx-auto max-w-7xl ">
         <div className="text-center">
@@ -24,7 +30,7 @@ export const OfferSection = ({ language, Theme }) => {
           <div className="flex flex-wrap items-center justify-center md:gap-6">
             <OfferSectionPart
               language={language}
-              Theme={Theme}
+              Theme={theme}
               norTitle="Høykvalitets nettsider"
               engTitle="High-Quality websites"
               norText="Med design som følger de siste trendene og den nyeste teknologien for en moderne nettside."
@@ -33,7 +39,7 @@ export const OfferSection = ({ language, Theme }) => {
             />
             <OfferSectionPart
               language={language}
-              Theme={Theme}
+              Theme={theme}
               norTitle="Søkemotor-optimalisering"
               engTitle="Search engine optimization"
               norText="Jeg øker trafikken til til nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester."
@@ -42,7 +48,7 @@ export const OfferSection = ({ language, Theme }) => {
             />
             <OfferSectionPart
               language={language}
-              Theme={Theme}
+              Theme={theme}
               norTitle="Engasjerende nettinnhold"
               engTitle="Engaging webcontent"
               norText="Jeg skaper engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer."
@@ -56,44 +62,41 @@ export const OfferSection = ({ language, Theme }) => {
   );
 };
 
-
 export const OfferSectionPart = ({
-  language,
-  Theme,
+
   norTitle,
   engTitle,
   norText,
   engText,
-  href
+  href,
 }) => {
+  const { theme, language } = useContext(UserContext);
   return (
     <div className="mt-5  transition-all duration-300 md:mt-0 md:col-span-1 hover:scale-[1.02] active:scale-[1.02] group cursor-default">
       <div
         className={`overflow-hidden max-w-sm transition-transform duration-300 shadow sm:rounded-lg`}
       >
         <div
-          className={`grid gap-6 min-h-[131px] transition-colors duration-300  ${Theme === "light"
-            ? "bg-Villo-light-white15 group-hover:bg-Villo-light-white10"
-            : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-black50"
-            } p-12`}
+          className={`grid gap-6 min-h-[131px] transition-colors duration-300  ${
+            theme === "light"
+              ? "bg-Villo-light-white15 group-hover:bg-Villo-light-white10"
+              : "bg-Villo-dark-black75 group-hover:bg-Villo-dark-black50"
+          } p-12`}
         >
-          <ResponsiveThemedH4
-            className={`font-bold max-w-fit `}
-          >
+          <ResponsiveThemedH4 className={`font-bold max-w-fit `}>
             {language === "Norwegian" ? norTitle : engTitle}
           </ResponsiveThemedH4>
           <div className="mt-2">
-            <ThemedP
-              className={``}
-            >
+            <ThemedP className={``}>
               {language === "Norwegian" ? norText : engText}
             </ThemedP>
           </div>
           <Link href={href} className="w-fit">
-            <ReadMoreButton Theme={Theme} >{language === "Norwegian" ? "les mer" : "read more"}</ReadMoreButton>
+            <ReadMoreButton>
+              {language === "Norwegian" ? "les mer" : "read more"}
+            </ReadMoreButton>
           </Link>
         </div>
-
       </div>
     </div>
   );

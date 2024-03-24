@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { UserContext } from "../Utilities/UserContext";
+import { useContext } from "react";
 
 export const LogoSlider = ({ content }) => {
+  const { theme, language } = useContext(UserContext);
   return (
     <div className="grid grid-flow-col py-5 overflow-hidden bg-gray-300">
       <div className="grid grid-flow-col animate-scroll">

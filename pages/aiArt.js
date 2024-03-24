@@ -1,38 +1,20 @@
-import PageLayout from "@/components/Layout/Layout";
-import {
-  ResponsiveH2,
-  ResponsiveH3,
-  ThemedH3,
-} from "@/components/Responsive text/ResponsiveText";
-import MetaTags from "@/components/Utilities/Metatags";
+
+
 import AIART_LIST from "@/data/aiArt_list";
 
-import Head from "next/head";
-import Image from "next/image";
 
-export default function AIArtPage({ language, Theme }) {
+import Image from "next/image";
+import { useContext } from "react";
+import { UserContext } from "../components/Utilities/UserContext";
+import MetaTags from "../components/Utilities/Metatags";
+import { ResponsiveH2, ResponsiveH3, ThemedH3 } from "../components/base_components/ResponsiveText";
+
+export default function AIArtPage() {
+  const { language, theme } = useContext(UserContext);
   return (
     <>
-      {/* <Head>
-        <title>JV Web Consult</title>
-        <meta name="JV Web Consult" content="Villo's AI art" />
-        <meta
-          name="keywords"
-          content="AI art, AI kunst, nettinnhold, webcontent, AI"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="manifest" href="/manifest.json" />
-        <link
-          rel="icon"
-          href={
-            Theme === "light"
-              ? "/logo/WindLogoNoTextLightMode.svg"
-              : "/logo/WindLogoNoTextDarkMode.svg"
-          }
-        />
-      </Head> */}
+
       <MetaTags
-        Theme={Theme}
         description="Villo utvikling spesialiserer seg på å tilby høykvalitets webutviklings- og designtjenester. Se på mitt arbeid med AI-kunst"
         title="Villo Utvikling - Ai kunst"
         url="https://jvwebconsult.no/aiArt"
@@ -77,7 +59,7 @@ export default function AIArtPage({ language, Theme }) {
       <section className="grid justify-center">
         <div className="grid justify-center">
           <ThemedH3
-            className={`p-36 transition-all text-[4.209rem] font-light bg-gradient-to-r bg-clip-text transparent ${Theme === "light"
+            className={`p-36 transition-all text-[4.209rem] font-light bg-gradient-to-r bg-clip-text transparent ${theme === "light"
               ? "from-Villo-light-primary to-Villo-light-secondary"
               : "from-Villo-dark-primary to-Villo-dark-secondary"
               } `}

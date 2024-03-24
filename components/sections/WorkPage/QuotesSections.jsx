@@ -3,10 +3,13 @@ import {
   ResponsiveThemedH2,
   ResponsiveThemedH5,
   ResponsiveThemedP,
-} from "../../Responsive text/ResponsiveText";
+} from "../../base_components/ResponsiveText";
 import { QUOTES_LIST } from "@/data/quotes_list";
+import { useContext } from "react";
+import { UserContext } from "../../Utilities/UserContext";
 
-export const QuotesSection = ({ Theme, language }) => {
+export const QuotesSection = () => {
+  const { theme, language } = useContext(UserContext);
   return (
     <div className="flex flex-col items-center gap-8">
       <div className="text-center">
@@ -18,14 +21,14 @@ export const QuotesSection = ({ Theme, language }) => {
         {QUOTES_LIST.map((quote) => (
           <>
             <div
-              className={`flex 2xl:flex-row lg:flex-col gap-4 p-2 rounded-xl  ${Theme === "light"
+              className={`flex 2xl:flex-row lg:flex-col gap-4 p-2 rounded-xl  ${theme === "light"
                 ? "bg-Villo-light-white10"
                 : "bg-Villo-dark-black85"
                 } `}
             >
               <div
                 key={quote.id}
-                className={`transition-all border overflow-hidden border-b-8 border-r-8 w-fit lg:h-fit rounded-xl ${Theme === "light"
+                className={`transition-all border overflow-hidden border-b-8 border-r-8 w-fit lg:h-fit rounded-xl ${theme === "light"
                   ? "border-Villo-light-primary"
                   : "border-Villo-dark-primary"
                   }  `}
@@ -40,7 +43,7 @@ export const QuotesSection = ({ Theme, language }) => {
               </div>
               <div className="relative z-10 flex flex-col justify-between h-full p-1">
                 <Image
-                  className={`absolute -z-10 transform -translate-x-1/2 -translate-y-1/2 ${Theme === "light" ? "opacity-5" : "opacity-20"} top-1/2 left-1/2`}
+                  className={`absolute -z-10 transform -translate-x-1/2 -translate-y-1/2 ${theme === "light" ? "opacity-5" : "opacity-20"} top-1/2 left-1/2`}
                   src={quote.logo}
                   alt="company logo"
                   width={300}

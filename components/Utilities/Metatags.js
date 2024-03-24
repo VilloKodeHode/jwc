@@ -1,9 +1,11 @@
 // components/MetaTags.js
 
 import Head from "next/head";
-import Script from "next/script";
+import { useContext } from "react";
+import { UserContext } from "./UserContext";
 
-function MetaTags({ title, description, url, Theme }) {
+function MetaTags({ title, description, url}) {
+  const { theme, language } = useContext(UserContext);
   return (
     <Head>
       <title>{title}</title>
@@ -29,12 +31,13 @@ function MetaTags({ title, description, url, Theme }) {
       <link
         rel="icon"
         href={
-          Theme === "light"
+          theme === "light"
             ? "/logo/WindLogoNoTextLightMode.svg"
             : "/logo/WindLogoNoTextDarkMode.svg"
         }
       />
 
+{/* @ts-ignore */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-METSFG26LN" />
       <script id="google-analytics">
         {`
