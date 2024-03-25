@@ -2,13 +2,14 @@ import Image from "next/image";
 import { ResponsiveH2, ThemedP } from "../../base_components/ResponsiveText";
 import { useContext, useEffect, useState } from "react";
 import { UserContext } from "../../Utilities/UserContext";
+import { SHOWCASE_LIST } from "../../../data/showcase_data";
 
-export const CTAOneSection = () => {
+export const ShowcaseSection = () => {
   const { language, theme } = useContext(UserContext);
   const [currentWeb, setCurrentWeb] = useState("/images/showcase/HeroLogo.png");
   const [isAnimating, setIsAnimating] = useState(false);
 
-//TODO: Reduser koden (diss Sabine etterpå)
+  //TODO: Reduser koden (diss Sabine etterpå)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,89 +53,21 @@ export const CTAOneSection = () => {
             <div className="w-full md:w-1/2">
               <div className="relative z-10 select-none">
                 <ResponsiveH2 className="mb-8 ">
-                  <span
-                    onMouseEnter={() =>
-                      setCurrentWeb("/images/showcase/HeroDesign.png")
-                    }
-                    className={`cursor-pointer group  ${
-                      theme === "light"
-                        ? "text-Villo-light-primary"
-                        : "text-Villo-dark-primary"
-                    }`}
-                  >
-                    <span
-                      className={` ${
-                        theme === "light"
-                          ? "group-hover:text-Villo-light-primary"
-                          : "group-hover:text-Villo-dark-primary"
-                      }  group-hover:opacity-100 transition-all duration-500 opacity-80 h1hidden ${
-                        currentWeb === "/images/showcase/HeroDesign.png"
-                          ? "text-Villo-dark-primary"
-                          : theme === "light"
-                          ? "text-Villo-light-white20"
-                          : "text-Villo-dark-black50"
-                      }`}
-                    >
-                      Web
-                    </span>
-                    design
-                  </span>{" "}
-                  <span
-                    onMouseEnter={() =>
-                      setCurrentWeb("/images/showcase/HeroDevelopment.png")
-                    }
-                    className={`cursor-pointer group  ${
-                      theme === "light"
-                        ? "text-Villo-light-primary"
-                        : "text-Villo-dark-primary"
-                    }`}
-                  >
-                    <span
-                      className={` ${
-                        theme === "light"
-                          ? "group-hover:text-Villo-light-primary"
-                          : "group-hover:text-Villo-dark-primary"
-                      }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
-                        currentWeb === "/images/showcase/HeroDevelopment.png"
-                          ? "text-Villo-dark-primary"
-                          : theme === "light"
-                          ? "text-Villo-light-white20"
-                          : "text-Villo-dark-black50"
-                      }`}
-                    >
-                      <br />
-                      Web
-                    </span>
-                    {language === "Norwegian" ? "utvikling" : "development"}
-                  </span>{" "}
-                  <span
-                    onMouseEnter={() =>
-                      setCurrentWeb("/images/showcase/HeroCollage.webp")
-                    }
-                    className={`cursor-pointer group  ${
-                      theme === "light"
-                        ? "text-Villo-light-primary"
-                        : "text-Villo-dark-primary"
-                    }`}
-                  >
-                    <span
-                      className={` ${
-                        theme === "light"
-                          ? "group-hover:text-Villo-light-primary"
-                          : "group-hover:text-Villo-dark-primary"
-                      }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
-                        currentWeb === "/images/showcase/HeroCollage.webp"
-                          ? "text-Villo-dark-primary"
-                          : theme === "light"
-                          ? "text-Villo-light-white20"
-                          : "text-Villo-dark-black50"
-                      }`}
-                    >
-                      <br />
-                      Web
-                    </span>
-                    {language === "Norwegian" ? "innhold" : "content"}
-                  </span>
+                  <Showcase
+                    setCurrentWeb={setCurrentWeb}
+                    currentWeb={currentWeb}
+                    type="design"
+                  />
+                  <Showcase
+                    setCurrentWeb={setCurrentWeb}
+                    currentWeb={currentWeb}
+                    type="development"
+                  />
+                  <Showcase
+                    setCurrentWeb={setCurrentWeb}
+                    currentWeb={currentWeb}
+                    type="content"
+                  />
                 </ResponsiveH2>
                 <ThemedP className="md:max-w-md max-h-[48px] mb-8">
                   {currentWeb === "/images/showcase/HeroLogo.png"
@@ -194,5 +127,38 @@ export const CTAOneSection = () => {
         </div>
       </section>
     </>
+  );
+};
+
+export const Showcase = ({ type, currentWeb, setCurrentWeb }) => {
+  const { language, theme } = useContext(UserContext);
+  const showcase = SHOWCASE_LIST[type];
+  return (
+    <span
+      onMouseEnter={() => setCurrentWeb(showcase.path)}
+      className={`cursor-pointer group  ${
+        theme === "light"
+          ? "text-Villo-light-primary"
+          : "text-Villo-dark-primary"
+      }`}
+    >
+      <span
+        className={` ${
+          theme === "light"
+            ? "group-hover:text-Villo-light-primary"
+            : "group-hover:text-Villo-dark-primary"
+        }  group-hover:opacity-100 transition-all duration-500 opacity-80  h1hidden ${
+          currentWeb === showcase.path
+            ? "text-Villo-dark-primary"
+            : theme === "light"
+            ? "text-Villo-light-white20"
+            : "text-Villo-dark-black50"
+        }`}
+      >
+        <br />
+        Web
+      </span>
+      {language === "Norwegian" ? showcase.norText : showcase.engText}
+    </span>
   );
 };

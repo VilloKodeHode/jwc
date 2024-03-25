@@ -2,10 +2,9 @@ import {
   ResponsiveThemedH2,
   ThemedP,
 } from "../../base_components/ResponsiveText";
-import { SkillIcon } from "@/components/base_components/SkillIcon";
 import { UserContext } from "../../Utilities/UserContext";
 import { useContext } from "react";
-import SKILLS_LIST from "../../../data/skills_list";
+import { SkillIcons } from "../../base_components/SkillIcon";
 
 
 export const SkillsSection = () => {
@@ -27,22 +26,7 @@ export const SkillsSection = () => {
               : "I have experience working with the following technologies and design-tools:"}
           </ThemedP>
         </div>
-
-        <div
-          className={`relative flex justify-center mt-10 ${
-            theme === "light" ? " bg-Villo-light-" : "bg-Villo-dark-"
-          } `}
-        >
-          <div
-            className={`flex gap-8 flex-wrap justify-center transition-colors duration-1000`}
-          >
-            {SKILLS_LIST.map((skill) => (
-              <figure key={skill.alt}>
-              <SkillIcon text={skill.name} logo={skill.logo} saturate={skill.options.saturate} colored={skill.options.colored} width={skill.options.width} />
-              </figure>
-            ))}
-          </div>
-        </div>
+      <SkillIcons/>
       </div>
     </section>
   );

@@ -1,22 +1,20 @@
-import MetaTags from "@/components/Utilities/Metatags";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import { useContext } from "react";
 import { UserContext } from "../../components/Utilities/UserContext";
 import { SubpageContent } from "../../components/sections/subpages/SubPageContent";
+import { useRouter } from "next/router";
+import { DynamicMetaTags } from "../../components/Utilities/Metatags";
 
 
 
 export default function ProvidedServiceWebsite() {
+  const router = useRouter()
+  const { service } = router.query
   const { theme, language } = useContext(UserContext);
   return (
     <>
-      <MetaTags
-        description="Profesjonell frontend webutvikling og webdesign service. Vi omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder."
-        title="Villo Utvikling - Trenger du ny nettside?"
-        url="https://jvwebconsult.no/services_provided/website"
-      />
-
-      <SubpageContent page="website" id="website" />
+      <DynamicMetaTags page={service} />
+      <SubpageContent page={service} />
 
       <LetsGoCTA
         type="email"

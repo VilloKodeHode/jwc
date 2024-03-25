@@ -9,12 +9,9 @@ import {
 import { ArrowCTA, ReadMoreButton } from "../../base_components/Buttons";
 import { scrollToSection } from "@/components/navigation/scrollLogic";
 import Link from "next/link";
-import {
-  CheckProcessBullitin,
-  SectionProcessPartSection,
-} from "../ServiceSection";
+import { ServicesBenefitBullitin, ServicesBenefit } from "./ServiceSection";
 
-export const SubpageContent = ({ page, id }) => {
+export const SubpageContent = ({ page }) => {
   const { theme, language } = useContext(UserContext);
   const pageData = SUBPAGES_DATA[page];
   const topTitle = pageData.top.title;
@@ -40,11 +37,7 @@ export const SubpageContent = ({ page, id }) => {
           </div>
           <div className="grid justify-center gap-8 ml:grid-flow-col">
             <div className="h-[60px] flex justify-start items-center max-w-fit">
-              <a
-                //TODO fix the id target so its dynamic.
-                onClick={(event) => scrollToSection(event, id)}
-                className=""
-              >
+              <a onClick={(event) => scrollToSection(event, page)} className="">
                 <ReadMoreButton className="">
                   {language === "Norwegian" ? "lær mer" : "learn more"}
                 </ReadMoreButton>
@@ -70,14 +63,14 @@ export const SubpageContent = ({ page, id }) => {
           </ResponsiveThemedH3>
         </div>
         <div
-          id={id}
+          id={page}
           className="flex flex-wrap justify-center gap-12 xl:items-start text-Villo-white15"
         >
-          <SectionProcessPartSection engTitle="You get:" norTitle="Du får:">
+          <ServicesBenefit engTitle="You get:" norTitle="Du får:">
             {subpageBullitins.map((bullitin, index) => (
-              <CheckProcessBullitin key={page + "bullitin" + index}>
+              <ServicesBenefitBullitin key={page + "bullitin" + index}>
                 {language === "Norwegian" ? bullitin.norText : bullitin.engText}
-              </CheckProcessBullitin>
+              </ServicesBenefitBullitin>
             ))}
             <div
               className={`absolute -z-10 w-screen overflow-hidden translate-x-1/2 -translate-y-1/2 bg-opacity-50  ml:h-[90%] h-[97%] right-1/2 top-1/2 ${
@@ -86,25 +79,25 @@ export const SubpageContent = ({ page, id }) => {
                   : "bg-Villo-dark-black85"
               } `}
             />
-          </SectionProcessPartSection>
+          </ServicesBenefit>
         </div>
       </section>
 
       <section className="">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="mt-10 text-center animate-PageAppearRight">
-          {bottomParagraph.map((paragraph, index) => (
-            <div key={page + "BottomParagraph" + index}>
-          <ResponsiveThemedH5 className={`mt-4 font-normal`}>
-          {language === "Norwegian"
-           ? paragraph.norText
-           : paragraph.engText}
-        </ResponsiveThemedH5>  
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="mt-10 text-center animate-PageAppearRight">
+            {bottomParagraph.map((paragraph, index) => (
+              <div key={page + "BottomParagraph" + index}>
+                <ResponsiveThemedH5 className={`mt-4 font-normal`}>
+                  {language === "Norwegian"
+                    ? paragraph.norText
+                    : paragraph.engText}
+                </ResponsiveThemedH5>
+              </div>
+            ))}
           </div>
-          ))}
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 };

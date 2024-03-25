@@ -1,11 +1,10 @@
-import PageLayout from "@/components/Layout/Layout";
-import { CTAOneSection } from "@/components/sections/IndexPage/CTAOneSection";
 import { OfferSection } from "@/components/sections/IndexPage/OfferSection";
 import { HeroSection } from "@/components/sections/IndexPage/HeroSection";
 import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
 import { useContext } from "react";
 import { UserContext } from "../components/Utilities/UserContext";
+import { ShowcaseSection } from "../components/sections/IndexPage/ShowcaseSection";
 
 export default function Home() {
   const { language } = useContext(UserContext);
@@ -18,7 +17,7 @@ export default function Home() {
       />
 
       <HeroSection />
-      <CTAOneSection />
+      <ShowcaseSection />
       <OfferSection />
       <LetsGoCTA
         type="email"

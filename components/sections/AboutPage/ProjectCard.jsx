@@ -2,59 +2,76 @@
 
 import Image from "next/image";
 import { useContext } from "react";
-import { CallToActionButtonAlt } from "../../base_components/Buttons";
-import { ResponsiveH3, ResponsiveP } from "../../base_components/ResponsiveText";
+import {ExternalCTA,} from "../../base_components/Buttons";
+import {
+  ResponsiveThemedH5,
+  ResponsiveThemedP,
+} from "../../base_components/ResponsiveText";
 import { UserContext } from "../../Utilities/UserContext";
+import Link from "next/link";
+import PROJECT_LIST from "@/data/projects_list";
 
-export default function ProjectCard(props) {
-  const { href, projectName, src, mobileSrc, description, alt } = props;
-  const { language } = useContext(UserContext);
+export default function ProjectCards() {
+  const { language, theme } = useContext(UserContext);
 
   return (
     <>
-      <section
-        className={`xl:max-w-[60%] md:max-w-[70%] max-w-[90%] my-28 ${cardColor} bg-opacity-10`}
-      >
-        <div className="z-10 flex flex-col items-center justify-center m-4 snap-always snap-mandatory snap-center">
-          <ResponsiveH3 className={`p-4 ${textColor}`}>
-            {projectName}
-          </ResponsiveH3>
-          <div className="flex flex-col items-center justify-center p-8 xl:flex-row">
-            <ResponsiveP
-              className={`xl:max-w-[30%] max-w-[100%] ${textColor} shadow-sm p-8`}
+      {PROJECT_LIST.map((project) => (
+        <div
+          key={project.engProjectName}
+          className={`flex flex-col h-[460px] md:h-[550px] lg:h-[600px] justify-between overflow-hidden rounded-lg shadow ${
+            theme === "light"
+              ? "bg-Villo-light-white10"
+              : "bg-Villo-dark-black85"
+          }  shadow-Villo-black75`}
+        >
+          <div
+            className={`p-4 pb-0 border-b-4 ${
+              theme === "light"
+                ? "border-Villo-light-primary"
+                : "border-Villo-dark-primary"
+            } `}
+          >
+            <Image
+              className="object-cover object-center w-full h-48"
+              src={
+                project.src
+                  ? project.src
+                  : theme === "light"
+                  ? "/logo/WindLogoNoTextLightMode.svg"
+                  : "/logo/WindLogoNoTextDarkMode.svg"
+              }
+              alt={project.engProjectName}
+              width={400}
+              height={300}
+            />
+          </div>
+
+          <div className="h-full p-6">
+            <ResponsiveThemedH5 className="font-bold">
+              {language === "Norwegian"
+                ? project.norProjectName
+                : project.engProjectName}
+            </ResponsiveThemedH5>
+            <ResponsiveThemedP
+              className={`mt-2 ${
+                theme === "light" ? "text-Villo-black" : "text-Villo-white15"
+              } `}
             >
-              {description}
-            </ResponsiveP>
-            <div className="">
-              <Image
-                width={700}
-                height={700}
-                className={`hidden md:block`}
-                src={src}
-                alt={alt}
-              />
-              <Image
-                width={450}
-                height={450}
-                className={`md:hidden block`}
-                src={mobileSrc}
-                alt={alt}
-              />
-              <div className="flex justify-center w-full mt-8">
-                <a className="" href={href} target="_blank">
-                  <CallToActionButtonAlt>
-                    {language === "Norwegian" ? "Prøv ut" : "Try it out"}
-                  </CallToActionButtonAlt>
-                </a>
-              </div>
-            </div>
+              {language === "Norwegian"
+                ? project.norDescription
+                : project.engDescription}
+            </ResponsiveThemedP>
+          </div>
+          <div className="ml-3 max-w-fit">
+            <Link className="w-fit h-fit" href={project.href} target="_blank">
+              <ExternalCTA Theme={theme}>
+                {language === "Norwegian" ? "Prøv ut" : "Try it out"}
+              </ExternalCTA>
+            </Link>
           </div>
         </div>
-      </section>
+      ))}
     </>
   );
 }
-
-
-
-

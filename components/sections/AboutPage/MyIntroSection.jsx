@@ -1,10 +1,7 @@
 import Image from "next/image";
-import { SimpleLogoComponent } from "@/components/base_components/Logo";
 import {
-  ResponsiveH3,
   ResponsiveThemedH2,
   ResponsiveThemedH3,
-  ResponsiveThemedH4,
   ResponsiveThemedP,
 } from "../../base_components/ResponsiveText";
 import { useContext } from "react";
@@ -28,7 +25,6 @@ export const MyIntroSection = () => {
           <div
             className={`col-span-1 py-12 min-h-[30dvh] text-left flex flex-col justify-center items-center`}
           >
-            {/* <SimpleLogoComponent /> */}
 
             <ResponsiveThemedH3 className="py-5 text-left text-bold">
               Joakim Villo
@@ -51,37 +47,5 @@ export const MyIntroSection = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export const OldCompanyInfo = () => {
-  const { language } = useContext(UserContext);
-  return (
-    <section className="grid items-center min-h-[60dvh] justify-center w-screen font-bold text-center lg:grid-cols-2 mt-[56px]">
-      <div className="flex flex-col items-center justify-center lg:h-full h-[50dvh] shadow shadow-Villo-black75 px-8">
-        <SimpleLogoComponent />
-        <div className="">
-          {/* <ResponsiveThemedH5>JV Web Consult</ResponsiveThemedH5> */}
-          <ResponsiveH3>
-            <div className="bg-gradient-to-r from-Villo-tertiary to-Villo-secondary bg-clip-text transparent">
-              Joakim Villo
-            </div>
-          </ResponsiveH3>
-        </div>
-
-        <div className="flex flex-col items-center snap-center justify-center  mx-auto text-Villo-black md:max-w-[60ch] max-w-[80ch]">
-          <ResponsiveThemedH4>
-            {language === "Norwegian" ? "Norsk foretak" : "Norwegian company"}
-          </ResponsiveThemedH4>
-          <ResponsiveThemedP>
-            {language === "Norwegian"
-              ? "Siden oppstarten i Tønsberg i 2023 har selskapet fokusert på å skaffe nye kunder ved å ta på seg mindre prosjekter og bygge opp en lojal kundebase."
-              : "Since its inception in Tønsberg in 2023, the company has focused on acquiring new customers by taking on smaller projects and building a loyal customer base."}
-          </ResponsiveThemedP>
-        </div>
-      </div>
-
-      <div className="lg:h-full lg:w-full h-[40dvh] shadow shadow-Villo-black75 tonsbergBG" />
-    </section>
   );
 };
