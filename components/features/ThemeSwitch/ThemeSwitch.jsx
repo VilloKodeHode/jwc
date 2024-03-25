@@ -14,7 +14,6 @@ const ThemeSwitch = () => {
     if (storedTheme) {
       setTheme(storedTheme);
     }
-    console.log("Is theme cookie set?", !!storedTheme);
   }, [setTheme, cookiesAccepted]);
 
   const toggleTheme = () => {

@@ -24,9 +24,6 @@ export default function Header({
   const menu_items = menuObj ? menuObj.menu_items : [];
   const drop_down = menuObj ? menuObj.drop_down : {};
   const drop_down_items = drop_down ? drop_down.drop_down_items : [];
-  console.log(drop_down);
-  console.log(drop_down_items);
-console.log(language)
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);
   };

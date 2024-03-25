@@ -10,7 +10,7 @@ import { SimpleLogoComponent } from "../../base_components/Logo";
 export const CompanyInfo = () => {
   const { theme, language } = useContext(UserContext);
   return (
-    <div className="grid max-w-7xl justify-center items-center py-4 ml:py-24 min-h-[calc(50dvh)]">
+    <div className="grid max-w-7xl justify-center items-center py-4 ml:pb-0 ml:pt-24 min-h-[calc(50dvh)]">
       <div className="animate-PageAppearRight">
         <div
           className={`sm:rounded-lg grid transition-colors duration-1000  ${
@@ -25,7 +25,7 @@ export const CompanyInfo = () => {
             <SimpleLogoComponent />
 
             <ResponsiveThemedH3 className="py-5 text-bold">
-              Norsk webutvikler
+            {language === "Norwegian" ? "Norsk Webutvikler" : "Norwegian web developer"}
             </ResponsiveThemedH3>
             <ResponsiveThemedP className="max-w-5xl px-8 pb-5 ">
               {language === "Norwegian"

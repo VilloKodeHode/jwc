@@ -3,11 +3,11 @@ import { ThemedP } from "./ResponsiveText";
 import { useContext } from "react";
 import { UserContext } from "../Utilities/UserContext";
 
-export const SkillIcon = ({ text, logo, colored = true, width = 60 }) => {
+export const SkillIcon = ({ text, logo, colored, width }) => {
   const { theme } = useContext(UserContext);
   return (
     <figure
-      className={`relative z-20 hover:scale-105 transition-all flex justify-center p-6 m-4 rounded-sm shadow-lg ${
+      className={`relative z-20 hover:scale-105 transition-all flex justify-center p-6 h-full rounded-sm shadow-lg ${
         theme === "light"
           ? "bg-Villo-light-white15 hover:bg-Villo-light-white10"
           : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"

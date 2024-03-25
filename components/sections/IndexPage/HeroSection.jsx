@@ -41,15 +41,9 @@ export const HeroSection = () => {
                       : "text-Villo-dark-primary"
                   }`}
                 >
-                  {language === "Norwegian"
-                    ? "Webutviklinger"
-                    : "Website developer"}
+                  {language === "Norwegian" ? "Fører ditt konsept til realitet" : "Bringing your consept to reality"}
                 </span>{" "}
-                {language === "Norwegian" ? "som lager" : "creating"}{" "}
-                {language === "Norwegian" ? "din idè" : "your idea"}{" "}
-                {language === "Norwegian" ? "raskere" : "faster"}{" "}
-                {language === "Norwegian" ? "og" : "and"}{" "}
-                {language === "Norwegian" ? "bedre" : "better"}
+                
               </ResponsiveThemedH1>
 
               <ResponsiveThemedH5 className="mb-8 font-normal text-left">

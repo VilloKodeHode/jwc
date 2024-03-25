@@ -5,6 +5,7 @@ import {
 import { SkillIcon } from "@/components/base_components/SkillIcon";
 import { UserContext } from "../../Utilities/UserContext";
 import { useContext } from "react";
+import SKILLS_LIST from "../../../data/skills_list";
 
 
 export const SkillsSection = () => {
@@ -33,48 +34,13 @@ export const SkillsSection = () => {
           } `}
         >
           <div
-            className={`flex flex-wrap justify-center transition-colors duration-1000`}
+            className={`flex gap-8 flex-wrap justify-center transition-colors duration-1000`}
           >
-            <SkillIcon text="HTML" logo="html" saturate="70" width={53.5} />
-            <SkillIcon text="CSS" logo="css" saturate="70" width={53.5} />
-            <SkillIcon text="Javascript" logo="javascript" saturate="70" />
-            <SkillIcon text="Visual studio code" logo="vsc" saturate="70" />
-            <SkillIcon text="React" logo="react" saturate="70" />
-            <SkillIcon
-              text="Nextjs"
-              logo="nextjs"
-              colored={false}
-              saturate="10"
-            />
-            <SkillIcon text="Scss" logo="scss" saturate="70" />
-            <SkillIcon text="Svelte" logo="svelte" saturate="70" />
-            <SkillIcon text="Nuxt" logo="nuxt" saturate="70" width={92} />
-            <SkillIcon text="Git" logo="git" saturate="70" />
-            <SkillIcon
-              text="Github"
-              logo="github"
-              saturate="70"
-              colored={false}
-            />
-            <SkillIcon text="Tailwindcss" logo="tailwindcss" saturate="70" />
-            <SkillIcon text="ChakraUI" logo="chakraUI" saturate="70" />
-            <SkillIcon text="Figma" logo="figma" saturate="70" width={40} />
-            <SkillIcon text="Canva" logo="canva" saturate="70" />
-            <SkillIcon
-              text="Wix"
-              logo="wix"
-              saturate="70"
-              width={120}
-              colored={false}
-            />
-            <SkillIcon
-              text="Squarespace"
-              logo="squarespace"
-              saturate="70"
-              colored={false}
-            />
-            <SkillIcon text="Sanity" logo="sanity" saturate="70" width={45} />
-            <SkillIcon text="MongoDB" logo="mongodb" saturate="70" />
+            {SKILLS_LIST.map((skill) => (
+              <figure key={skill.alt}>
+              <SkillIcon text={skill.name} logo={skill.logo} saturate={skill.options.saturate} colored={skill.options.colored} width={skill.options.width} />
+              </figure>
+            ))}
           </div>
         </div>
       </div>

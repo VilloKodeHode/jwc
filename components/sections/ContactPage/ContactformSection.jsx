@@ -21,10 +21,6 @@ export const ContactformSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Name:", formData.name);
-    console.log("Email:", formData.email);
-    console.log("Message:", formData.message);
-
     setShowModal(true);
 
     const fetchPromise = fetch("/api/sendEmail", {
