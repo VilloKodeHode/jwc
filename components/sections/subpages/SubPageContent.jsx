@@ -19,7 +19,7 @@ export const SubpageContent = ({ page, id }) => {
   const pageData = SUBPAGES_DATA[page];
   const topTitle = pageData.top.title;
   const topParagraph = pageData.top.paragraph;
-  const middleTittle = pageData.middle.title;
+  const middleTitle = pageData.middle.title;
   const subpageBullitins = pageData.middle.bullitins;
   const bottomParagraph = pageData.bottom.paragraphs;
   return (
@@ -65,8 +65,8 @@ export const SubpageContent = ({ page, id }) => {
         <div className="mx-auto">
           <ResponsiveThemedH3 className="flex mb-12 text-center md:max-w-full max-w-[280px]">
             {language === "Norwegian"
-              ? middleTittle.norText
-              : middleTittle.engText}
+              ? middleTitle.norText
+              : middleTitle.engText}
           </ResponsiveThemedH3>
         </div>
         <div
