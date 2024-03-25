@@ -14,7 +14,7 @@ export default function ProvidedServiceSEO() {
         title="Villo Utvikling - Trenger du nettinnhold?"
         url="https://jvwebconsult.no/services_provided/webcontent"
       />
-      <SubpageContent page="SEO" />
+      <SubpageContent page="SEO" id="SEO" />
       <LetsGoCTA
         type="email"
         engText="Lets improve your SEO!"

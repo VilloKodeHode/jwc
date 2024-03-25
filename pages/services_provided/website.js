@@ -16,7 +16,7 @@ export default function ProvidedServiceWebsite() {
         url="https://jvwebconsult.no/services_provided/website"
       />
 
-      <SubpageContent page="website" />
+      <SubpageContent page="website" id="website" />
 
       <LetsGoCTA
         type="email"

@@ -5,9 +5,10 @@ import { UserContext } from "../../Utilities/UserContext";
 
 export const CTAOneSection = () => {
   const { language, theme } = useContext(UserContext);
-
   const [currentWeb, setCurrentWeb] = useState("/images/showcase/HeroLogo.png");
   const [isAnimating, setIsAnimating] = useState(false);
+
+//TODO: Reduser koden (diss Sabine etterpå)
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -16,7 +16,7 @@ export default function ProvidedServiceWebcontent() {
         title="Villo Utvikling - Trenger du nettinnhold?"
         url="https://jvwebconsult.no/services_provided/webcontent"
       />
-<SubpageContent page="webcontent" />
+<SubpageContent page="webcontent" id="webcontent" />
       <LetsGoCTA
         type="email"
         engText="Let us make some webcontent!"
