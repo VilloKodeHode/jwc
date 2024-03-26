@@ -12,10 +12,10 @@ export const WORKEDWITH_LIST = [
         progress: "ferdig",
         color: "#7fe5d3",
         skillsUsed: [
-            { name: "Next.js", href: "https://nextjs.org/" },
-            { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
-            { name: "Sanity", href: "https://www.sanity.io/" }
-          ],
+          { name: "Next.js", href: "https://nextjs.org/" },
+          { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
+          { name: "Sanity", href: "https://www.sanity.io/" }
+        ],
       },
       {
         id: "2Norwegian",
@@ -48,21 +48,18 @@ export const WORKEDWITH_LIST = [
         name: "Villo utvikling",
         jobDone:
           "Min frilanser jobb. Jeg Lager nettsider (deler eller hele), nettinnhold og forbedret SEO",
-          imageUrl: "/images/companies/WindLogoDarkmode.svg",
+        imageUrl: "/images/companies/WindLogoDarkmode.svg",
         href: "https://www.jvwebconsult.no/",
         progress: "current",
         color: "#858ee0",
         skillsUsed: [
-            {
-              name: "Next.js",
-              href: "https://nextjs.org/",
-            },
-            { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
-            { name: "Sanity", href: "https://www.sanity.io/" },
-            { name: "Figma", href: "https://www.figma.com/" },
-            { name: "React", href: "https://reactjs.org/" },
-            { name: "Wix", href: "https://wix.com/" },
-          ],
+          { name: "Next.js", href: "https://nextjs.org/" },
+          { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
+          { name: "Sanity", href: "https://www.sanity.io/" },
+          { name: "Figma", href: "https://www.figma.com/" },
+          { name: "React", href: "https://reactjs.org/" },
+          { name: "Wix", href: "https://wix.com/" },
+        ],
       },
     ],
   },
@@ -79,10 +76,10 @@ export const WORKEDWITH_LIST = [
         progress: "done",
         color: "#7fe5d3",
         skillsUsed: [
-            { name: "Next.js", href: "https://nextjs.org/" },
-            { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
-            { name: "Sanity", href: "https://www.sanity.io/" }
-          ],
+          { name: "Next.js", href: "https://nextjs.org/" },
+          { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
+          { name: "Sanity", href: "https://www.sanity.io/" }
+        ],
       },
 
       {
@@ -95,21 +92,21 @@ export const WORKEDWITH_LIST = [
         progress: "current",
         color: "#f4a366",
         skillsUsed: [
-            {
-              name: "HTML",
-              href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-            },
-            {
-              name: "CSS",
-              href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-            },
-            {
-              name: "JavaScript",
-              href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-            },
-            { name: "Figma", href: "https://www.figma.com/" },
-            { name: "React", href: "https://reactjs.org/" },
-          ],
+          {
+            name: "HTML",
+            href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+          },
+          {
+            name: "CSS",
+            href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+          },
+          {
+            name: "JavaScript",
+            href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+          },
+          { name: "Figma", href: "https://www.figma.com/" },
+          { name: "React", href: "https://reactjs.org/" },
+        ],
       },
       {
         id: "3English",
@@ -121,16 +118,13 @@ export const WORKEDWITH_LIST = [
         progress: "current",
         color: "#858ee0",
         skillsUsed: [
-            {
-              name: "Next.js",
-              href: "https://nextjs.org/",
-            },
-            { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
-            { name: "Sanity", href: "https://www.sanity.io/" },
-            { name: "Figma", href: "https://www.figma.com/" },
-            { name: "React", href: "https://reactjs.org/" },
-            { name: "Wix", href: "https://wix.com/" },
-          ],
+          { name: "Next.js", href: "https://nextjs.org/" },
+          { name: "Tailwind CSS", href: "https://tailwindcss.com/" },
+          { name: "Sanity", href: "https://www.sanity.io/" },
+          { name: "Figma", href: "https://www.figma.com/" },
+          { name: "React", href: "https://reactjs.org/" },
+          { name: "Wix", href: "https://wix.com/" },
+        ],
       },
     ],
   },

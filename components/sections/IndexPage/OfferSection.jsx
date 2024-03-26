@@ -29,8 +29,6 @@ export const OfferSection = () => {
         <div className="flex justify-center mt-10 opacity-0 animate-on-scroll">
           <div className="flex flex-wrap items-center justify-center md:gap-6">
             <OfferSectionPart
-              language={language}
-              Theme={theme}
               norTitle="Høykvalitets nettsider"
               engTitle="High-Quality websites"
               norText="Med design som følger de siste trendene og den nyeste teknologien for en moderne nettside."
@@ -38,8 +36,6 @@ export const OfferSection = () => {
               href="/services_provided/website"
             />
             <OfferSectionPart
-              language={language}
-              Theme={theme}
               norTitle="Søkemotor-optimalisering"
               engTitle="Search engine optimization"
               norText="Jeg øker trafikken til til nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester."
@@ -47,8 +43,6 @@ export const OfferSection = () => {
               href="/services_provided/SEO"
             />
             <OfferSectionPart
-              language={language}
-              Theme={theme}
               norTitle="Engasjerende nettinnhold"
               engTitle="Engaging webcontent"
               norText="Jeg skaper engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer."
@@ -63,7 +57,6 @@ export const OfferSection = () => {
 };
 
 export const OfferSectionPart = ({
-
   norTitle,
   engTitle,
   norText,

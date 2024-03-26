@@ -16,20 +16,20 @@ export const ShowcaseSection = () => {
       setIsAnimating(true);
       setTimeout(() => {
         switch (currentWeb) {
-          case "/images/showcase/HeroLogo.png":
-            setCurrentWeb("/images/showcase/HeroDesign.png");
+          case SHOWCASE_LIST.main.path:
+            setCurrentWeb(SHOWCASE_LIST.design.path);
             break;
-          case "/images/showcase/HeroDesign.png":
-            setCurrentWeb("/images/showcase/HeroDevelopment.png");
+          case SHOWCASE_LIST.design.path:
+            setCurrentWeb(SHOWCASE_LIST.development.path);
             break;
-          case "/images/showcase/HeroDevelopment.png":
-            setCurrentWeb("/images/showcase/HeroCollage.webp");
+          case SHOWCASE_LIST.development.path:
+            setCurrentWeb(SHOWCASE_LIST.content.path);
             break;
-          case "/images/showcase/HeroCollage.webp":
-            setCurrentWeb("/images/showcase/HeroLogo.png");
+          case SHOWCASE_LIST.content.path:
+            setCurrentWeb(SHOWCASE_LIST.main.path);
             break;
           default:
-            setCurrentWeb("/images/showcase/HeroLogo.png");
+            setCurrentWeb(SHOWCASE_LIST.main.path);
         }
         setIsAnimating(false);
       }, 500); // Adjust the duration here
@@ -38,9 +38,8 @@ export const ShowcaseSection = () => {
     return () => clearInterval(interval);
   }, [currentWeb]);
 
-  const imageWidth = currentWeb === "/images/showcase/HeroLogo.png" ? 400 : 500;
-  const imageHeight =
-    currentWeb === "/images/showcase/HeroLogo.png" ? 400 : 300;
+  const imageWidth = currentWeb === SHOWCASE_LIST.main.path ? 400 : 500;
+  const imageHeight = currentWeb === SHOWCASE_LIST.main.path ? 400 : 300;
 
   return (
     <>
@@ -70,22 +69,22 @@ export const ShowcaseSection = () => {
                   />
                 </ResponsiveH2>
                 <ThemedP className="md:max-w-md max-h-[48px] mb-8">
-                  {currentWeb === "/images/showcase/HeroLogo.png"
+                  {currentWeb === SHOWCASE_LIST.main.path
                     ? language === "Norwegian"
-                      ? "Engasjerende nettsider for ditt formål: Fra enkle til komplekse nettsider, som er tilpasset alle enheter."
-                      : "Engaging websites for your purpose: From simple to complex websites, customized for all devices."
-                    : currentWeb === "/images/showcase/HeroDesign.png"
+                      ? SHOWCASE_LIST.main.norParagraph
+                      : SHOWCASE_LIST.main.engParagraph
+                    : currentWeb === SHOWCASE_LIST.design.path
                     ? language === "Norwegian"
-                      ? "Gjennomgående design som er estetisk og funksjonelt, med fokus på brukervennlighet og konvertering"
-                      : "Consistent design that is aesthetic and functional, with a focus on user-friendliness and conversion"
-                    : currentWeb === "/images/showcase/HeroDevelopment.png"
+                    ? SHOWCASE_LIST.design.norParagraph
+                    : SHOWCASE_LIST.design.engParagraph
+                    : currentWeb === SHOWCASE_LIST.development.path
                     ? language === "Norwegian"
-                      ? "Ekspertise innenfor utvikling av nettsider som er lette å vedlikeholde og endre innhold på"
-                      : "Expertise in developing websites that are easy to maintain and change content on"
-                    : currentWeb === "/images/showcase/HeroCollage.webp"
+                    ? SHOWCASE_LIST.development.norParagraph
+                    : SHOWCASE_LIST.development.engParagraph
+                    : currentWeb === SHOWCASE_LIST.content.path
                     ? language === "Norwegian"
-                      ? "Originalt høykvalitets innhold til nettsiden din, som er tilpasset ditt formål og målgruppe"
-                      : "Original high-quality content for your website, customized for your purpose and target audience"
+                    ? SHOWCASE_LIST.content.norParagraph
+                    : SHOWCASE_LIST.content.engParagraph
                     : null}
                 </ThemedP>
               </div>
@@ -102,15 +101,13 @@ export const ShowcaseSection = () => {
                   <Image
                     src={currentWeb}
                     alt={
-                      currentWeb === "/images/showcase/HeroLogo.png"
-                        ? "Logo"
-                        : currentWeb === "/images/showcase/HeroLogo.png"
+                      currentWeb === SHOWCASE_LIST.main.path
                         ? "Villo utvikling"
-                        : currentWeb === "/images/showcase/HeroDesign.png"
+                        : currentWeb === SHOWCASE_LIST.design.path
                         ? "Web design"
-                        : currentWeb === "/images/showcase/HeroDevelopment.png"
+                        : currentWeb === SHOWCASE_LIST.development.path
                         ? "Web utvikling"
-                        : currentWeb === "/images/showcase/HeroCollage.webp"
+                        : currentWeb === SHOWCASE_LIST.content.path
                         ? "Web innhold"
                         : "Image showing the services of Villo utvikling"
                     }
