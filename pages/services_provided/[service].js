@@ -13,26 +13,21 @@ export default function ProvidedServiceWebsite() {
   const { theme, language } = useContext(UserContext);
   return (
     <>
-      <DynamicMetaTags page={service} />
-      <SubpageContent page={service} />
+      {service &&
+        <>
+          <DynamicMetaTags page={service} />
+          <SubpageContent page={service} />
+        </>
+      }
+
 
       <LetsGoCTA
         type="email"
         engText="Let us make you new website!"
         norText="La oss lage din nye nettside!"
         href="/contact"
-      >
-        {language === "Norwegian" ? "Kontakt meg" : "Contact me"}
-      </LetsGoCTA>
+      >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
 
     </>
   );
-}
-
-export async function getStaticProps({ params }) {
-  return {
-    props: {
-      service: params.service,
-    },
-  };
 }
