@@ -11,9 +11,8 @@ const NavItem = ({
   onClick,
   className,
   textSize,
-  currentPath,
 }) => {
-  const { theme } = useContext(UserContext);
+  const { theme, currentPath } = useContext(UserContext);
   return (
     <div key={text} className={`relative group z-10 ${className}`}>
       <Link href={href} className="">
@@ -57,10 +56,9 @@ export const DropDown = ({
   onClick,
   className,
   textSize,
-  currentPath,
 
 }) => {
-  const { theme } = useContext(UserContext);
+  const { theme, currentPath } = useContext(UserContext);
   const subPagesPaths = (currentPath === "/services_provided/website" || currentPath === "/services_provided/webcontent" || currentPath === "/services_provided/SEO")
   return (
     <div className={`relative group z-10 ${className}`}>
@@ -107,9 +105,8 @@ export const DropDownItem = ({
   onClick,
   className,
   textSize,
-  currentPath,
 }) => {
-  const { theme } = useContext(UserContext);
+  const { theme, currentPath } = useContext(UserContext);
   return (
     <div key={text} className={`relative group z-10 ${className}`}>
       <Link href={href} className="">

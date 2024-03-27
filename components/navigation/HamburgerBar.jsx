@@ -6,21 +6,36 @@ import LogoComponent from "../base_components/Logo";
 import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { UserContext } from "../Utilities/UserContext";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
+import { NavigationContext } from "../Utilities/NavigationContext";
 
 export default function HamburgerBar({
   //TODO: Too many props...make a context for it?
-  currentPath,
-  setIsOpen,
-  isOpen,
   handleMenuToggle,
-  menuRef,
   drop_down,
   drop_down_items,
-  toogleDropDown,
-  setToogleDropDown,
 }) {
-  const { theme, language } = useContext(UserContext);
+  const { theme, language, currentPath } = useContext(UserContext);
+  const { isOpen, setIsOpen, toggleDropDown, setToggleDropDown } = useContext(
+    NavigationContext)
+
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+          setIsOpen(false);
+        }
+      };
+  
+      document.addEventListener("mousedown", handleClickOutside);
+  
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [setIsOpen]);
+  
+    const menuRef = useRef(null);
+
+
   const menuObj = MENU_LIST.find((menu) => menu.language === language);
   const menu_items = menuObj ? menuObj.menu_items : [];
 
@@ -39,14 +54,13 @@ export default function HamburgerBar({
         </button>
 
         <div
-          className={`absolute top-0 z-10 right-0 w-screen h-screen transition-transform duration-300 transform ${isOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed top-0 z-10 right-0 w-screen h-screen transition-transform duration-300 transform ${isOpen ? "translate-x-0" : "translate-x-full"
             } `}
           ref={menuRef}
         >
           <nav className={`relative z-10 flex justify-center h-screen `}>
-            <div className={`relative flex justify-center  `}></div>
             <div
-              className={`z-50 w-full h-full bg-opacity-[0.99]
+              className={`z-50 w-full h-full
                 ${theme === "light"
                   ? "bg-Villo-light-white"
                   : "bg-Villo-dark-black"
@@ -68,8 +82,7 @@ export default function HamburgerBar({
                     />
                   </button>
                   <LogoComponent
-                    handleMenuToggle={handleMenuToggle}
-                    currentPath={currentPath}
+                    onclick={handleMenuToggle}
                   />
                   {menu_items.map((menu) => (
                     <NavItem
@@ -82,38 +95,32 @@ export default function HamburgerBar({
                       href={menu.href}
                       color={menu.color}
                       icon={menu.icon}
-                      Theme={theme}
                       currentPath={currentPath}
                     />
                   ))}
                   <DropDown
-                    onClick={() => setToogleDropDown(!toogleDropDown)}
+                    onClick={() => setToggleDropDown(!toggleDropDown)}
                     textSize="text-h4"
-                    Theme={theme}
-                    language={language}
                     currentPath={currentPath}
                     className="-z-50"
 
                   >
                     {drop_down.text}
                   </DropDown>
-                  <div className={`absolute ${toogleDropDown ? "scale-100 translate-y-[200%] translate-x-1/4" : "scale-0 translate-x-0 translate-y-[130%]"}  transition-all`}>
+                  <div className={`absolute ${toggleDropDown ? "scale-100 translate-y-[200%] translate-x-4" : "scale-0 translate-x-0 translate-y-[130%]"}  transition-all bottom-14`}>
 
-                    <div className="flex flex-col justify-center items-start gap-4 min-h-[160px]">
+                    <div className="flex flex-col items-start justify-center">
 
 
                       {drop_down_items?.map((menu) => (
-
                         <DropDownItem
-                          onClick={() => { setToogleDropDown(false); setIsOpen(false) }}
-                          textSize="text-h5"
+                          onClick={() => { setToggleDropDown(false); setIsOpen(false) }}
+                          textSize="text-p"
                           key={menu.text}
                           text={menu.text}
                           href={menu.href}
                           color={menu.color}
                           icon={menu.icon}
-                          Theme={theme}
-                          language={language}
                           currentPath={currentPath}
                         />
                       ))}

@@ -1,9 +1,13 @@
 // Components to simplify the layout of the page and sections
 
-export default function PageLayout({ children, gap }) {
+import { useContext } from "react";
+import { NavigationContext } from "../Utilities/NavigationContext";
+
+export default function PageLayout({ children }) {
+  const { isOpen } = useContext(NavigationContext);
   return (
     <main
-      className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start min-h-screen overflow-x-hidden gap-28`}
+      className={`flex flex-col animate-Appear items-center px-4 sm:px-6 lg:px-12 justify-start ${isOpen ? "h-[500px] [&>*]:hidden overflow-y-hidden" : "min-h-screen"}  overflow-x-hidden gap-28`}
     >
       <>{children}</>
     </main>

@@ -6,7 +6,7 @@ import { UserContext } from "../Utilities/UserContext";
 
 
 const LogoComponent = ({ onclick }) => {
-  const { theme } = useContext(UserContext);
+  const { theme, currentPath } = useContext(UserContext);
 
   // Find the logo object based on the theme
   const logoObject = LOGO.find((logo) => logo.hasOwnProperty(theme));

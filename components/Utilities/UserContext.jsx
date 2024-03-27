@@ -1,5 +1,8 @@
 import { getCookie, setCookie } from "cookies-next";
+import { useRouter } from "next/router";
 import { createContext, useEffect, useState } from "react";
+
+
 
 export const UserContext = createContext({
   theme: "",
@@ -8,14 +11,20 @@ export const UserContext = createContext({
   setLanguage: () => {},
   cookiesAccepted: false,
   setCookiesAccepted: () => {},
+  currentPath: "",
 });
 
 
 
 export default function UserContextProvider({ children }) {
+  
   const [language, setLanguage] = useState("Norwegian");
   const [theme, setTheme] = useState("dark");
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
+  const router = useRouter();
+  const currentPath = router.asPath;
+
+
 
   useEffect(() => {
     // Check if the user has accepted cookies by checking a cookie
@@ -42,7 +51,7 @@ export default function UserContextProvider({ children }) {
     }
   }, [cookiesAccepted, theme, language]);
   return (
-    <UserContext.Provider value={{language, setLanguage, theme, setTheme, cookiesAccepted, setCookiesAccepted }}>
+    <UserContext.Provider value={{language, setLanguage, theme, setTheme, cookiesAccepted, setCookiesAccepted, currentPath }}>
       {children}
     </UserContext.Provider>
   );

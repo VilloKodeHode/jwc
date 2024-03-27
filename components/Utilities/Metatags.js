@@ -55,8 +55,6 @@ function MetaTags({ title, description, url }) {
 }
 
 export const DynamicMetaTags = ({ page }) => {
-  console.log(METATAG_DATA)
-
   return (
     <>
       <MetaTags

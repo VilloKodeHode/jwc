@@ -9,7 +9,7 @@ import { useContext } from "react";
 
 export default function Footer() {
   //TODO: Currenpath can be used to highlight links to different pages here (which one is active too)
-  const { theme, language } = useContext(UserContext);
+  const { theme, language, currentPath } = useContext(UserContext);
   const year = new Date().getFullYear();
   return (
     <div className={`relative py-24 sm:px-6 lg:px-12 px-4 ${theme === "light" ? "bg-Villo-light-primary" : "bg-Villo-dark-primary"}`}>

@@ -1,24 +1,27 @@
+import { useContext } from "react";
 import NavItem, { DropDown, DropDownItem } from "./NavItem";
+import { NavigationContext } from "../Utilities/NavigationContext";
+import { UserContext } from "../Utilities/UserContext";
 
 
 export default function Navbar({
   className,
-  currentPath,
   menu_items,
   drop_down,
   drop_down_items,
-  toogleDropDown,
-  setToogleDropDown,
 }) {
+
+  const { toggleDropDown, setToggleDropDown, } = useContext(
+    NavigationContext)
+    const {currentPath} = useContext(UserContext);
 
   return (
     <div className={`flex w-full items-center justify-start ${className}`}>
       <div className="z-[100] hidden ml-8 md:block">
         {/* <ThemedP className="cursor-pointer">{drop_down.text}</ThemedP> */}
         <DropDown
-          onClick={() => setToogleDropDown(!toogleDropDown)}
+          onClick={() => setToggleDropDown(!toggleDropDown)}
           textSize="text-p"
-          currentPath={currentPath}
           className="-z-50"
         >
           {drop_down.text}
@@ -26,7 +29,7 @@ export default function Navbar({
 
         <div
           className={`absolute ${
-            toogleDropDown
+            toggleDropDown
               ? "scale-100 translate-x-[150%]"
               : "scale-0 translate-x-[-30%]"
           } bottom-1/2 translate-y-1/2 transition-all`}
@@ -39,14 +42,13 @@ export default function Navbar({
 
             {drop_down_items?.map((menu) => (
               <DropDownItem
-                onClick={() => setToogleDropDown(false)}
+                onClick={() => setToggleDropDown(false)}
                 textSize="text-p0"
                 key={menu.text}
                 text={menu.text}
                 href={menu.href}
                 color={menu.color}
                 icon={menu.icon}
-                currentPath={currentPath}
               />
             ))}
           </div>
@@ -56,13 +58,12 @@ export default function Navbar({
         {menu_items.map((menu) => (
           <NavItem
             textSize="text-p"
-            onClick={() => setToogleDropDown(false)}
+            onClick={() => setToggleDropDown(false)}
             key={menu.text}
             text={menu.text}
             href={menu.href}
             color={menu.color}
             icon={menu.icon}
-            currentPath={currentPath}
           />
         ))}
       </div>
