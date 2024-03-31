@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { UserContext } from "../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 import { useContext } from "react";
 
 export const LogoSlider = ({ content }) => {

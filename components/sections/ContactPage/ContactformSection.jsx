@@ -1,13 +1,14 @@
 import Image from "next/image";
-import CallToActionButton, { SendCTA } from "../../base_components/Buttons";
+import CallToActionButton, { SendCTA } from "../../atoms/Buttons";
 import {
   ResponsiveThemedH1,
   ResponsiveThemedH2,
   ResponsiveThemedP,
   ThemedP,
-} from "../../base_components/ResponsiveText";
+} from "../../atoms/ResponsiveText";
 import { useContext, useState } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
+import { InputWithLabel } from "./InputWithLabel";
 
 export const ContactformSection = () => {
   const { theme, language } = useContext(UserContext);
@@ -32,8 +33,6 @@ export const ContactformSection = () => {
       body: JSON.stringify(formData),
     });
 
-
-
     try {
       const response = await fetchPromise;
       const data = await response.json();
@@ -45,7 +44,7 @@ export const ContactformSection = () => {
     }
   };
 
-  const handleCloseModal = () => {
+  const resetForm = () => {
     setShowModal(false);
     setFormData({
       name: "",
@@ -68,96 +67,46 @@ export const ContactformSection = () => {
                 : "Please fill out the form below and we will get back to you as soon as possible."}
             </ThemedP>
             <form className="w-full max-w-lg" onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label
-                  htmlFor="name"
-                  className={`block font-bold mb-2 ${
-                    theme === "light"
-                      ? "text-Villo-light-black"
-                      : "text-Villo-dark-white"
-                  }`}
-                >
-                  {language === "Norwegian" ? "Navn" : "Name"}
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className={` ${
-                    theme === "light"
-                      ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
-                      : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
-                  } w-full px-4 py-2 border rounded-lg  focus:outline `}
-                  placeholder={
-                    language === "Norwegian" ? "Ditt navn" : "Your name"
-                  }
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="email"
-                  className={`block font-bold mb-2 ${
-                    theme === "light"
-                      ? "text-Villo-light-black"
-                      : "text-Villo-dark-white"
-                  }`}
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className={` ${
-                    theme === "light"
-                      ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
-                      : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
-                  } w-full px-4 py-2 border rounded-lg  focus:outline `}
-                  placeholder={
-                    language === "Norwegian"
-                      ? "Din email adresse"
-                      : "Your email address"
-                  }
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  required
-                />
-              </div>
-              <div className="mb-4">
-                <label
-                  htmlFor="message"
-                  className={`block font-bold mb-2 ${
-                    theme === "light"
-                      ? "text-Villo-light-black"
-                      : "text-Villo-dark-white"
-                  }`}
-                >
-                  {language === "Norwegian" ? "Melding" : "Message"}
-                </label>
-                <textarea
-                  id="message"
-                  className={` ${
-                    theme === "light"
-                      ? "text-Villo-light-black bg-Villo-light-white border-Villo-light-black focus:border-Villo-light-primary focus:outline-Villo-light-primary"
-                      : "text-Villo-dark-white bg-Villo-dark-black focus:border-Villo-dark-primary border-Villo-dark-white focus:outline-Villo-dark-primary"
-                  } w-full px-4 py-2 border rounded-lg  focus:outline `}
-                  rows="4"
-                  placeholder={
-                    language === "Norwegian" ? "Din melding" : "Your message"
-                  }
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  required
-                ></textarea>
-              </div>
-              <SendCTA Theme={theme} type="submit">
+              <InputWithLabel
+                formData={formData}
+                setFormData={setFormData}
+                type="text"
+                name="name"
+                placeholder={
+                  language === "Norwegian" ? "Ditt navn" : "Your name"
+                }
+              >
+                {language === "Norwegian" ? "Navn" : "Name"}
+              </InputWithLabel>
+
+              <InputWithLabel
+                formData={formData}
+                setFormData={setFormData}
+                type="email"
+                name="email"
+                placeholder={
+                  language === "Norwegian"
+                    ? "Din email adresse"
+                    : "Your email address"
+                }
+              >
+                Email
+              </InputWithLabel>
+
+              <InputWithLabel
+                formData={formData}
+                setFormData={setFormData}
+                type="textarea"
+                name="message"
+                placeholder={
+                  language === "Norwegian" ? "Din melding" : "Your message"
+                }
+              >
+                {language === "Norwegian" ? "Melding" : "Message"}
+              </InputWithLabel>
+
+              
+              <SendCTA type="submit">
                 Send
               </SendCTA>
             </form>
@@ -201,7 +150,7 @@ export const ContactformSection = () => {
               height={200}
               alt="loading..."
             />
-            <CallToActionButton Theme={theme} onClick={handleCloseModal}>
+            <CallToActionButton onClick={resetForm}>
               {language === "Norwegian" ? "Flotters!" : "Roger that!"}
             </CallToActionButton>
           </div>

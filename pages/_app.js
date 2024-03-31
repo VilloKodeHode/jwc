@@ -8,12 +8,11 @@ import Footer from "@/components/navigation/Footer";
 import { useRouter } from "next/router";
 import PageLayout from "@/components/Layout/Layout";
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import UserContextProvider, { UserContext } from "../components/Utilities/UserContext";
-import { ScrollToTopButton } from "../components/base_components/Buttons";
-import CookiePopup from "../components/features/CookiePopup/CookiePopup";
-import { AddScrollToElement } from "../components/Utilities/handleScroll";
-import NavigationContextProvider from "../components/Utilities/NavigationContext";
-
+import UserContextProvider, { UserContext } from "@/context/UserContext";
+import { ScrollToTopButton } from "@/components/atoms/Buttons";
+import CookiePopup from "@/components/features/CookiePopup/CookiePopup";
+import { AddScrollToElement } from "@/components/Utilities/handleScroll";
+import NavigationContextProvider from "@/context/NavigationContext";
 
 export const Main = ({ Component }) => {
   const { theme } = useContext(UserContext);

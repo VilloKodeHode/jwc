@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 export const SectionNavigation = () => {
   const { theme, language } = useContext(UserContext);

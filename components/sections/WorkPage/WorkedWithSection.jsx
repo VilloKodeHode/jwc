@@ -3,12 +3,12 @@ import {
   ResponsiveThemedH2,
   ResponsiveThemedH4,
   ThemedP,
-} from "../../base_components/ResponsiveText";
+} from "../../atoms/ResponsiveText";
 import Link from "next/link";
 import { WORKEDWITH_LIST } from "@/data/workedWith_list";
 import { useContext } from "react";
-import { UserContext } from "../../Utilities/UserContext";
-import { SkillLinkButton } from "../../base_components/Buttons";
+import { UserContext } from "@/context/UserContext";
+import { SkillLinkButton } from "../../atoms/Buttons";
 
 export const WorkedWithSection = () => {
   const { theme, language } = useContext(UserContext);

@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { LOGO } from "../../data/menu_list";
-import { UserContext } from "../Utilities/UserContext";
+import { LOGO } from "@/data/menu_list";
+import { UserContext } from "@/context/UserContext";
 
 
 const LogoComponent = ({ onclick }) => {

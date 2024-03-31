@@ -9,6 +9,7 @@ export const NavigationContext = createContext({
   setShowToolBar: () => {},
   toggleDropDown: false,
   setToggleDropDown: () => {},
+  handleMenuToggle: () => {},
 });
 
 export default function NavigationContextProvider({ children }) {
@@ -16,6 +17,10 @@ export default function NavigationContextProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [showToolBar, setShowToolBar] = useState(false);
   const [toggleDropDown, setToggleDropDown] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <NavigationContext.Provider
@@ -28,6 +33,7 @@ export default function NavigationContextProvider({ children }) {
         setShowToolBar,
         toggleDropDown,
         setToggleDropDown,
+        handleMenuToggle,
       }}
     >
       {children}

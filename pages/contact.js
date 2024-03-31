@@ -1,5 +1,5 @@
 import { ContactformSection } from "@/components/sections/ContactPage/ContactformSection";
-import MetaTags from "../components/Utilities/Metatags";
+import MetaTags from "@/components/Utilities/Metatags";
 
 
 export default function ContactPage() {

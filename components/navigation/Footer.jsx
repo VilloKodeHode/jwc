@@ -4,8 +4,9 @@ import Link from "next/link";
 import { FiMail } from "react-icons/fi";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { VscGithubAlt } from "react-icons/vsc";
-import { UserContext } from "../Utilities/UserContext";
+
 import { useContext } from "react";
+import { UserContext } from "@/context/UserContext";
 
 export default function Footer() {
   //TODO: Currenpath can be used to highlight links to different pages here (which one is active too)

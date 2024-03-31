@@ -11,6 +11,7 @@
       "@/components/*": ["components/*"],
       "@/styles/*": ["styles/*"],
       "@/data/*": ["data/*"],
+      "@/context/*": ["context/*"],
     },
     "noImplicitAny": true,
     "noImplicitThis": true,

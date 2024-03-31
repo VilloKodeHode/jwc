@@ -1,8 +1,8 @@
 import { AiOutlineCheck } from "react-icons/ai";
 import { useContext } from "react";
-import { ResponsiveThemedH5, ThemedH4, ThemedLi, ThemedP } from "../../base_components/ResponsiveText";
-import { LogoBullitinPoint } from "../../base_components/LogoBullitinPoint";
-import { UserContext } from "../../Utilities/UserContext";
+import { ResponsiveThemedH5, ThemedH4, ThemedLi, ThemedP } from "../../atoms/ResponsiveText";
+import { LogoBullitinPoint } from "../../atoms/LogoBullitinPoint";
+import { UserContext } from "@/context/UserContext";
 
 
 export const ServicesBenefit = ({ norTitle, engTitle, children }) => {

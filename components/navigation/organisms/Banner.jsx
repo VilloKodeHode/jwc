@@ -1,9 +1,9 @@
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import LanguageSwitch from "../features/LanguageSwitch/LanguageSwitch";
-import ThemeSwitch from "../features/ThemeSwitch/ThemeSwitch";
-import { UserContext } from "../Utilities/UserContext";
+import LanguageSwitch from "../../features/LanguageSwitch/LanguageSwitch";
+import ThemeSwitch from "../../features/ThemeSwitch/ThemeSwitch";
+import { UserContext } from "@/context/UserContext";
 import { useContext } from "react";
-import { NavigationContext } from "../Utilities/NavigationContext";
+import { NavigationContext } from "@/context/NavigationContext";
 
 export const Banner = () => {
   const { theme } = useContext(UserContext);

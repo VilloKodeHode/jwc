@@ -1,6 +1,6 @@
-import {ResponsiveThemedH1,} from "../../base_components/ResponsiveText";
+import {ResponsiveThemedH1,} from "../../atoms/ResponsiveText";
 import { useContext } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 import ProjectCards from "./ProjectCard";
 
 export const ProjectSection = () => {

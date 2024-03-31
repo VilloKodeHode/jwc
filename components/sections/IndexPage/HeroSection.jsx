@@ -1,14 +1,15 @@
-import { ArrowCTA, ReadMoreButton } from "../../base_components/Buttons";
+import { ArrowCTA, ReadMoreButton } from "../../atoms/Buttons";
 import {
   ResponsiveP,
   ResponsiveThemedH1,
   ResponsiveThemedH5,
-} from "../../base_components/ResponsiveText";
+} from "../../atoms/ResponsiveText";
 import Link from "next/link";
 import THREESpace from "../../animation/Space";
 import { scrollToSection } from "@/components/navigation/scrollLogic";
 import { useContext } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
+
 
 export const HeroSection = () => {
   const { language, theme } = useContext(UserContext);

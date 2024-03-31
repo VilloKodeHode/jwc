@@ -1,11 +1,9 @@
 
-import {
-  ResponsiveThemedH3,
-  ResponsiveThemedP,
-} from "../../base_components/ResponsiveText";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 import { useContext } from "react";
-import { SimpleLogoComponent } from "../../base_components/Logo";
+import { SimpleLogoComponent } from "../../atoms/Logo";
+import { ResponsiveThemedH3, ResponsiveThemedP } from "../../atoms/ResponsiveText";
+
 
 export const CompanyInfo = () => {
   const { theme, language } = useContext(UserContext);

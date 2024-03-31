@@ -1,5 +1,6 @@
 import { useContext, useEffect } from "react";
-import { UserContext } from "./UserContext";
+import { UserContext } from "@/context/UserContext";
+
 
 export const AddScrollToElement = () => {
     const { theme } = useContext(UserContext);

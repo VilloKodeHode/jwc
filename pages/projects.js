@@ -1,4 +1,4 @@
-import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
+import { LetsGoCTA } from "@/components/organisms/LetsGoCTA";
 import { ProjectSection } from "@/components/sections/AboutPage/ProjectSection";
 import MetaTags from "@/components/Utilities/Metatags";
 

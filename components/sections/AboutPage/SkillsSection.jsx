@@ -1,10 +1,10 @@
 import {
   ResponsiveThemedH2,
   ThemedP,
-} from "../../base_components/ResponsiveText";
-import { UserContext } from "../../Utilities/UserContext";
+} from "../../atoms/ResponsiveText";
+import { UserContext } from "@/context/UserContext";
 import { useContext } from "react";
-import { SkillIcons } from "../../base_components/SkillIcon";
+import { SkillIcons } from "./organisms/SkillIcons";
 
 
 export const SkillsSection = () => {

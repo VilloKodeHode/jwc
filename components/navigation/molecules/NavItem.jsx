@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useContext } from "react";
-import { UserContext } from "../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 //TODO check if logic in these Components can be improved
 const NavItem = ({

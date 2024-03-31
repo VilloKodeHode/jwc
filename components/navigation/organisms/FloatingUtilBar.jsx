@@ -1,9 +1,9 @@
 import { FcSettings } from "react-icons/fc";
-import LanguageSwitch from "../features/LanguageSwitch/LanguageSwitch";
-import ThemeSwitch from "../features/ThemeSwitch/ThemeSwitch";
-import { NavigationContext } from "../Utilities/NavigationContext";
+import LanguageSwitch from "../../features/LanguageSwitch/LanguageSwitch";
+import ThemeSwitch from "../../features/ThemeSwitch/ThemeSwitch";
+import { NavigationContext } from "../../../context/NavigationContext";
 import { useContext, useEffect } from "react";
-import { UserContext } from "../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 export const FloatingUtilsBar = () => {
   const { theme } = useContext(UserContext);

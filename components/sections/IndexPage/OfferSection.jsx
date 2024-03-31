@@ -3,10 +3,10 @@ import {
   ResponsiveThemedH2,
   ResponsiveThemedH4,
   ThemedP,
-} from "../../base_components/ResponsiveText";
-import { ReadMoreButton } from "../../base_components/Buttons";
+} from "../../atoms/ResponsiveText";
+import { ReadMoreButton } from "../../atoms/Buttons";
 import { useContext } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 export const OfferSection = () => {
   const { language, theme } = useContext(UserContext);

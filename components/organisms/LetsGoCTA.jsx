@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { ResponsiveThemedH3 } from "../base_components/ResponsiveText";
-import CallToActionButton, { EmailCTA, PortfolioCTA } from "../base_components/Buttons";
+import { ResponsiveThemedH3 } from "../atoms/ResponsiveText";
+import CallToActionButton, { EmailCTA, PortfolioCTA } from "../atoms/Buttons";
 import Image from "next/image";
-import { UserContext } from "../Utilities/UserContext";
 import { useContext } from "react";
+import { UserContext } from "@/context/UserContext";
 
 export const LetsGoCTA = ({
   engText,

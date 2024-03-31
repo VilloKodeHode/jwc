@@ -1,7 +1,6 @@
 import { useContext } from "react";
-import NavItem, { DropDown, DropDownItem } from "./NavItem";
-import { NavigationContext } from "../Utilities/NavigationContext";
-import { UserContext } from "../Utilities/UserContext";
+import NavItem, { DropDown, DropDownItem } from "../molecules/NavItem";
+import { NavigationContext } from "@/context/NavigationContext";
 
 
 export default function Navbar({
@@ -13,12 +12,10 @@ export default function Navbar({
 
   const { toggleDropDown, setToggleDropDown, } = useContext(
     NavigationContext)
-    const {currentPath} = useContext(UserContext);
 
   return (
     <div className={`flex w-full items-center justify-start ${className}`}>
       <div className="z-[100] hidden ml-8 md:block">
-        {/* <ThemedP className="cursor-pointer">{drop_down.text}</ThemedP> */}
         <DropDown
           onClick={() => setToggleDropDown(!toggleDropDown)}
           textSize="text-p"
@@ -35,10 +32,6 @@ export default function Navbar({
           } bottom-1/2 translate-y-1/2 transition-all`}
         >
           <div className="flex flex-col justify-center items-start gap-2 min-h-[160px]">
-            {/* <div className={`flex flex-col items-start justify-center gap-4 px-16 border-x-2 rounded-l-full rounded-r-full ${Theme === "light"
-            ? "border-Villo-light-primary "
-            : "border-Villo-dark-primary"
-            }`}> */}
 
             {drop_down_items?.map((menu) => (
               <DropDownItem

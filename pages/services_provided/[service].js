@@ -1,13 +1,14 @@
-import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
+import { LetsGoCTA } from "@/components/organisms/LetsGoCTA";
 import { useContext } from "react";
-import { UserContext } from "../../components/Utilities/UserContext";
-import { SubpageContent } from "../../components/sections/subpages/SubPageContent";
+import { UserContext } from "@/context/UserContext";
+import { SubpageContent } from "@/components/sections/subpages/SubPageContent";
 import { useRouter } from "next/router";
-import { DynamicMetaTags } from "../../components/Utilities/Metatags";
+import { DynamicMetaTags } from "@/components/Utilities/Metatags";
 
 
 
 export default function ProvidedServiceWebsite() {
+  //TODO see if this can me moved to the UserContext
   const router = useRouter()
   const { service } = router.query
   const { theme, language } = useContext(UserContext);

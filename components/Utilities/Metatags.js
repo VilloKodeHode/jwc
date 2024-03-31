@@ -2,8 +2,9 @@
 
 import Head from "next/head";
 import { useContext } from "react";
-import { UserContext } from "./UserContext";
-import { METATAG_DATA } from "../../data/metaTag_data";
+
+import { METATAG_DATA } from "@/data/metaTag_data";
+import { UserContext } from "@/context/UserContext";
 
 function MetaTags({ title, description, url }) {
   const { theme, language } = useContext(UserContext);

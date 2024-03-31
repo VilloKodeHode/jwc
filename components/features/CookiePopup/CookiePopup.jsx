@@ -1,10 +1,10 @@
 
 import Image from "next/image";
 import { useContext, useState } from "react";
-import { UserContext } from "../../Utilities/UserContext";
 import { setCookie } from "cookies-next";
-import { CookieAccept } from "../../base_components/Buttons";
-import { ThemedH5, ThemedSmall } from "../../base_components/ResponsiveText";
+import { UserContext } from "@/context/UserContext";
+import { ThemedH5, ThemedSmall } from "../../atoms/ResponsiveText";
+import { CookieAccept } from "../../atoms/Buttons";
 
 const CookiePopup = () => {
 

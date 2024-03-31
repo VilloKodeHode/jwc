@@ -3,7 +3,7 @@ import NORWEGIAN from "./assets/norwegian.png";
 import ENGLISH from "./assets/english.png";
 import Image from "next/image";
 import { setCookie, getCookie } from "cookies-next"; // Import the necessary functions
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 const LanguageSwitch = ({ className }) => {
   const { language, setLanguage, cookiesAccepted } = useContext(UserContext);

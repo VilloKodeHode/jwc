@@ -1,8 +1,7 @@
 // Components to simplify the layout of the page and sections
 
 import { useContext } from "react";
-import { NavigationContext } from "../Utilities/NavigationContext";
-
+import { NavigationContext } from "@/context/NavigationContext";
 export default function PageLayout({ children }) {
   const { isOpen } = useContext(NavigationContext);
   return (

@@ -3,10 +3,10 @@ import {
   ResponsiveThemedH2,
   ResponsiveThemedH5,
   ResponsiveThemedP,
-} from "../../base_components/ResponsiveText";
+} from "../../atoms/ResponsiveText";
 import { QUOTES_LIST } from "@/data/quotes_list";
 import { useContext } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 export const QuotesSection = () => {
   const { theme, language } = useContext(UserContext);

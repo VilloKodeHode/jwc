@@ -1,3 +1,5 @@
+//! Unused
+
 import Image from "next/image";
 // import JWCMAINSHAPE from "/logo_main_shape.svg";
 

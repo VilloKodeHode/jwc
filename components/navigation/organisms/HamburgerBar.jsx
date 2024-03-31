@@ -1,22 +1,21 @@
 // The navigation drawer. Made with Chakra UI.
 
-import MENU_LIST from "../../data/menu_list";
-import NavItem, { DropDown, DropDownItem } from "./NavItem";
-import LogoComponent from "../base_components/Logo";
+import MENU_LIST from "../../../data/menu_list";
+import NavItem, { DropDown, DropDownItem } from "../molecules/NavItem";
+import LogoComponent from "../../atoms/Logo";
 import { IoCloseSharp } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { UserContext } from "../Utilities/UserContext";
+import { UserContext } from "../../../context/UserContext";
 import { useContext, useEffect, useRef } from "react";
-import { NavigationContext } from "../Utilities/NavigationContext";
+import { NavigationContext } from "@/context/NavigationContext";
 
 export default function HamburgerBar({
-  //TODO: Too many props...make a context for it?
-  handleMenuToggle,
   drop_down,
   drop_down_items,
+  menu_items
 }) {
-  const { theme, language, currentPath } = useContext(UserContext);
-  const { isOpen, setIsOpen, toggleDropDown, setToggleDropDown } = useContext(
+  const { theme, currentPath } = useContext(UserContext);
+  const { isOpen, setIsOpen, toggleDropDown, setToggleDropDown, handleMenuToggle } = useContext(
     NavigationContext)
 
     useEffect(() => {
@@ -36,8 +35,6 @@ export default function HamburgerBar({
     const menuRef = useRef(null);
 
 
-  const menuObj = MENU_LIST.find((menu) => menu.language === language);
-  const menu_items = menuObj ? menuObj.menu_items : [];
 
   return (
     <>

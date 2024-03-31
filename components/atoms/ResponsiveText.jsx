@@ -1,7 +1,8 @@
 // Components to simplify the use of responsive text
 
 import { useContext } from "react";
-import { UserContext } from "../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
+
 
 export default function ResponsiveH1({ children, className }) {
   return (

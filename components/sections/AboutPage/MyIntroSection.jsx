@@ -3,9 +3,9 @@ import {
   ResponsiveThemedH2,
   ResponsiveThemedH3,
   ResponsiveThemedP,
-} from "../../base_components/ResponsiveText";
+} from "../../atoms/ResponsiveText";
 import { useContext } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 export const MyIntroSection = () => {
   const { theme, language } = useContext(UserContext);

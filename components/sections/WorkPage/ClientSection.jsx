@@ -2,10 +2,10 @@ import Image from "next/image";
 import {
   ResponsiveThemedH2,
   ThemedP,
-} from "../../base_components/ResponsiveText";
+} from "../../atoms/ResponsiveText";
 import { CLIENT_LIST } from "@/data/client_list";
 import { useContext } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 export const ClientsSection = () => {
   const { theme, language } = useContext(UserContext);

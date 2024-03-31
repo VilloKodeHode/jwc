@@ -5,9 +5,9 @@ import AIART_LIST from "@/data/aiArt_list";
 
 import Image from "next/image";
 import { useContext } from "react";
-import { UserContext } from "../components/Utilities/UserContext";
-import MetaTags from "../components/Utilities/Metatags";
-import { ResponsiveH2, ResponsiveH3, ThemedH3 } from "../components/base_components/ResponsiveText";
+import { UserContext } from "@/context/UserContext";
+import MetaTags from "@/components/Utilities/Metatags";
+import { ResponsiveH2, ResponsiveH3, ThemedH3 } from "@/components/atoms/ResponsiveText";
 
 export default function AIArtPage() {
   const { language, theme } = useContext(UserContext);

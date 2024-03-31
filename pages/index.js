@@ -1,9 +1,9 @@
 import { OfferSection } from "@/components/sections/IndexPage/OfferSection";
 import { HeroSection } from "@/components/sections/IndexPage/HeroSection";
-import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
+import { LetsGoCTA } from "@/components/organisms/LetsGoCTA";
 import MetaTags from "@/components/Utilities/Metatags";
 import { useContext } from "react";
-import { UserContext } from "../components/Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 import { ShowcaseSection } from "../components/sections/IndexPage/ShowcaseSection";
 
 export default function Home() {

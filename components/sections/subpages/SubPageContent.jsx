@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 import { SUBPAGES_DATA } from "../../../data/subPages_data";
 import {
   ResponsiveThemedH1,
   ResponsiveThemedH3,
   ResponsiveThemedH5,
-} from "../../base_components/ResponsiveText";
-import { ArrowCTA, ReadMoreButton } from "../../base_components/Buttons";
+} from "../../atoms/ResponsiveText";
+import { ArrowCTA, ReadMoreButton } from "../../atoms/Buttons";
 import { scrollToSection } from "@/components/navigation/scrollLogic";
 import Link from "next/link";
 import { ServicesBenefitBullitin, ServicesBenefit } from "./ServiceSection";

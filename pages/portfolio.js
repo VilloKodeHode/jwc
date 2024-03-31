@@ -1,11 +1,11 @@
 import { ClientsSection } from "@/components/sections/WorkPage/ClientSection";
 import { QuotesSection } from "@/components/sections/WorkPage/QuotesSections";
 import MetaTags from "@/components/Utilities/Metatags";
-import { LetsGoCTA } from "@/components/CTA/LetsGoCTA";
+import { LetsGoCTA } from "@/components/organisms/LetsGoCTA";
 import { WorkedWithSection } from "@/components/sections/WorkPage/WorkedWithSection";
 import { useContext } from "react";
-import { UserContext } from "../components/Utilities/UserContext";
-import { ResponsiveThemedH1, ThemedP } from "../components/base_components/ResponsiveText";
+import { UserContext } from "@/context/UserContext";
+import { ResponsiveThemedH1, ThemedP } from "@/components/atoms/ResponsiveText";
 
 export default function ProjectPage() {
   const { language } = useContext(UserContext);

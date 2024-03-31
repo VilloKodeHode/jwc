@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { ResponsiveH2, ResponsiveLi, ResponsiveP } from "../base_components/ResponsiveText";
-import { UserContext } from "../Utilities/UserContext";
-import VilloIcon from "../base_components/Icon";
+import { ResponsiveH2, ResponsiveLi, ResponsiveP } from "../atoms/ResponsiveText";
+import { UserContext } from "@/context/UserContext";
+import VilloIcon from "../atoms/Icon";
 
 
 export const BullitinSection = () => {

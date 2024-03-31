@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ResponsiveH2, ThemedP } from "../../base_components/ResponsiveText";
+import { ResponsiveH2, ThemedP } from "../../atoms/ResponsiveText";
 import { useContext, useEffect, useState } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 import { SHOWCASE_LIST } from "../../../data/showcase_data";
 
 export const ShowcaseSection = () => {

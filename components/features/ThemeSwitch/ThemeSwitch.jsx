@@ -3,7 +3,7 @@ import Image from "next/image";
 import LIGHTMODE from "./assets/lightmode.svg";
 import DARKMODE from "./assets/darkmode.svg";
 import { getCookie, setCookie } from "cookies-next";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 const ThemeSwitch = () => {
   const { theme, setTheme, cookiesAccepted } = useContext(UserContext);
@@ -21,7 +21,7 @@ const ThemeSwitch = () => {
       setTheme("dark");
       if (cookiesAccepted) {
         setCookie("theme", "dark", {
-          maxAge: 30 * 24 * 60 * 60, // Cookie expiration in seconds (30 days in this example)
+          maxAge: 30 * 24 * 60 * 60, // Cookie expiration in seconds (30 days)
         });
       }
     } else {

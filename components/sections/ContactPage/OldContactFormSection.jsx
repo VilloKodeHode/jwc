@@ -1,13 +1,13 @@
 import Image from "next/image";
-import CallToActionButton from "../../base_components/Buttons";
+import CallToActionButton from "../../atoms/Buttons";
 import {
   ResponsiveH2,
   ResponsiveH4,
   ResponsiveP,
 
-} from "../../base_components/ResponsiveText";
+} from "../../atoms/ResponsiveText";
 import { useContext, useState } from "react";
-import { UserContext } from "../../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 
 export const OldContactformSection = () => {
     const [showModal, setShowModal] = useState(false);

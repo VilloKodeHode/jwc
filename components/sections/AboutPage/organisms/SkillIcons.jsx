@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { ThemedP } from "./ResponsiveText";
+import { ThemedP } from "../../../atoms/ResponsiveText";
 import { useContext } from "react";
-import { UserContext } from "../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
 import SKILLS_LIST from "@/data/skills_list";
 
 export const SkillIcons = () => {
@@ -15,7 +15,7 @@ export const SkillIcons = () => {
           {SKILLS_LIST.map((skill) => (
             <div key={skill.alt}>
               <figure
-                className={`relative z-20 hover:scale-105 transition-all flex justify-center p-6 h-full rounded-sm shadow-lg ${
+                className={`relative z-20 hover:scale-95 transition-all flex justify-center p-6 h-full rounded-sm shadow-lg ${
                   theme === "light"
                     ? "bg-Villo-light-white15 hover:bg-Villo-light-white10"
                     : "bg-Villo-dark-black75 hover:bg-Villo-dark-black50"
@@ -36,7 +36,7 @@ export const SkillIcons = () => {
                 />
                 <div className="absolute translate-x-1/2 translate-y-1/2 rounded-full -z-50 group-hover:scale-125 bottom-1/2 right-1/2" />
                 <span className="absolute top-0 font-bold text-center transition-all translate-x-1/2 opacity-0 select-none -z-10 w-max group-hover:opacity-100 group-hover:-top-6 right-1/2">
-                  <ThemedP>{skill.text}</ThemedP>
+                  <ThemedP>{skill.name}</ThemedP>
                 </span>
               </figure>
             </div>

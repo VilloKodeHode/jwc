@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import { useContext } from "react";
-import {ExternalCTA,} from "../../base_components/Buttons";
+import {ExternalCTA,} from "../../atoms/Buttons";
 import {
   ResponsiveThemedH5,
   ResponsiveThemedP,
-} from "../../base_components/ResponsiveText";
-import { UserContext } from "../../Utilities/UserContext";
+} from "../../atoms/ResponsiveText";
+import { UserContext } from "@/context/UserContext";
 import Link from "next/link";
 import PROJECT_LIST from "@/data/projects_list";
 

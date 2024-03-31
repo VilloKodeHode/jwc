@@ -4,8 +4,8 @@ import {
   ResponsiveLi,
   ResponsiveP,
   ResponsiveSmall,
-} from "../base_components/ResponsiveText";
-import { UserContext } from "../Utilities/UserContext";
+} from "../atoms/ResponsiveText";
+import { UserContext } from "@/context/UserContext";
 import { useContext } from "react";
 
 export const ProcessSection = () => {

@@ -8,7 +8,8 @@ import {
 } from "react-icons/fi";
 import { TfiEmail } from "react-icons/tfi";
 import { MdDoubleArrow, MdOutlineWorkOutline } from "react-icons/md";
-import { UserContext } from "../Utilities/UserContext";
+import { UserContext } from "@/context/UserContext";
+
 
 
 export default function CallToActionButton({ children, onClick, className }) {
