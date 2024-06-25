@@ -35,7 +35,7 @@ export default function Footer() {
             </a>
 
           </div>
-          <p>Email: Joakim@jvwebconsult.no</p>
+          <p>Email: Villokodehode@gmail.com</p>
           <p>Phone: +47 932 850 44</p>
           <p>Address: Brekkelia 62B, 3153 Tolvsrød</p>
         </div>

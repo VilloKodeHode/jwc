@@ -31,7 +31,6 @@ module.exports = {
         Villo: {
           dark: {
             primary: "#858ee0",
-
             secondary: "#571dff",
 
             black: "#161618",
@@ -47,7 +46,6 @@ module.exports = {
 
           light: {
             primary: "#571dff",
-
             secondary: "#858ee0",
 
             black: "#141315",

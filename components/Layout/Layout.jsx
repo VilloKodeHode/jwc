@@ -13,6 +13,8 @@ export default function PageLayout({ children }) {
   );
 }
 
+//TODO: Look over the whole code. See if layouts can be made for different parts that are equal in styling.
+
 export function TwoGriddedLayout({ children }) {
   return (
     <section className="grid text-white grid-cols-[60%_40%] h-[100vh] w-full px-4">

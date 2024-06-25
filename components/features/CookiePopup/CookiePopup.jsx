@@ -40,9 +40,6 @@ const handleCookieDecline = () => {
     setShowPopup(!showPopup);
   };
 
-  // useEffect(() => {
-  //   setShowPopup(!showPopup);
-  // }, [showPopup]);
 
   return (
     <div

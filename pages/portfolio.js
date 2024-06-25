@@ -37,7 +37,9 @@ export default function ProjectPage() {
         engText="Make me you coworker!"
         norText="Få meg som medarbeider!"
         href="/contact"
-      > {language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
+      >
+        {language === "Norwegian" ? "Kontakt meg" : "Contact me"}
+      </LetsGoCTA>
 
 
     </>

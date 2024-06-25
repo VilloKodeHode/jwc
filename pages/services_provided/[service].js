@@ -27,7 +27,9 @@ export default function ProvidedServiceWebsite() {
         engText="Let us make you new website!"
         norText="La oss lage din nye nettside!"
         href="/contact"
-      >{language === "Norwegian" ? "Kontakt meg" : "Contact me"}</LetsGoCTA>
+      >
+        {language === "Norwegian" ? "Kontakt meg" : "Contact me"}
+      </LetsGoCTA>
 
     </>
   );

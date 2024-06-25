@@ -14,6 +14,8 @@ import CookiePopup from "@/components/features/CookiePopup/CookiePopup";
 import { AddScrollToElement } from "@/components/Utilities/handleScroll";
 import NavigationContextProvider from "@/context/NavigationContext";
 
+//TODO: Look over the whole code. See if layouts can be made for different parts that are equal in styling.
+
 export const Main = ({ Component }) => {
   const { theme } = useContext(UserContext);
   return (
@@ -35,27 +37,24 @@ export const Main = ({ Component }) => {
 }
 
 export default function App({ Component }) {
-  
+
   //TODO: Can this be moved to useContext?
 
-AddScrollToElement()
- 
+  AddScrollToElement()
+
   return (
     <>
       <UserContextProvider>
         <NavigationContextProvider>
-        <>
-          <div className={`relative transition-colors duration-1000 `}>
-            {/* //TODO: Make a context for header since there are alot of useStates there.... */}
-            <Header
-           
-            />
-            <Main Component={Component} />
-            <Footer />
-            <ScrollToTopButton />
-          </div>
-          <Analytics />
-        </>
+          <>
+            <div className={`relative transition-colors duration-1000 `}>
+              <Header />
+              <Main Component={Component} />
+              <Footer />
+              <ScrollToTopButton />
+            </div>
+            <Analytics />
+          </>
         </NavigationContextProvider>
       </UserContextProvider>
     </>

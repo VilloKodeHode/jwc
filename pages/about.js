@@ -28,8 +28,8 @@ export default function AboutPage() {
         engText="Check my portfolio"
         norText="Sjekk min portfølje"
         href="/portfolio"
-
-      > {language === "Norwegian" ? "Portofølje" : "Portfolio"}
+      >
+        {language === "Norwegian" ? "Portofølje" : "Portfolio"}
       </LetsGoCTA>
 
 
