@@ -13,7 +13,7 @@ export default function Home() {
       <MetaTags
         description="Profesjonell frontend webutvikling og webdesign service. Vi omskaper ideer til fengslende nettsider med fokus på responsive, brukervennlige og visuelt tiltalende nettsteder."
         title="Villo Utvikling - Home"
-        url="https://jvwebconsult.no/"
+        url="https://jvwebconsult.com/"
       />
 
       <HeroSection />

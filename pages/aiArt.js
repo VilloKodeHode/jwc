@@ -17,7 +17,7 @@ export default function AIArtPage() {
       <MetaTags
         description="Villo utvikling spesialiserer seg på å tilby høykvalitets webutviklings- og designtjenester. Se på mitt arbeid med AI-kunst"
         title="Villo Utvikling - Ai kunst"
-        url="https://jvwebconsult.no/aiArt"
+        url="https://jvwebconsult.com/aiArt"
       />
 
       <section className="relative grid lg:grid-cols-[50%_50%] min-h-[70vh] pt-16 lg:grid-flow-col items-center justify-center min-w-full text-center">

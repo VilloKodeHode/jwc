@@ -13,7 +13,7 @@ export default function ContactPage() {
    <MetaTags
         description="Ta kontakt gjennom skjemaet på denne siden for en hyggelig prat om ditt prosjekt"
         title="Villo Utvikling - Contact"
-        url="https://jvwebconsult.no/contact"
+        url="https://jvwebconsult.com/contact"
       />
       <ContactformSection />
       <LetsGoCTA

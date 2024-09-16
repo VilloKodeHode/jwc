@@ -15,7 +15,7 @@ export default function ProjectPage() {
       <MetaTags
         description="Villo utvikling spesialiserer seg på å tilby høykvalitets webutviklings- og designtjenester. Lær mer om mitt tidligere arbeid og attester fra fornøyde kunder."
         title="Villo Utvikling - Work"
-        url="https://jvwebconsult.no/work"
+        url="https://jvwebconsult.com/work"
       />
 
       <div className="pt-12">

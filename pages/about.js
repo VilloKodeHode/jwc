@@ -16,7 +16,7 @@ export default function AboutPage() {
 
         description="Villo utvikling spesialiserer seg på å tilby høykvalitets webutviklings- og designtjenester. Lær mer om meg."
         title="Villo Utvikling - About"
-        url="https://jvwebconsult.no/about"
+        url="https://jvwebconsult.com/about"
       />
 
       <CompanyInfo />

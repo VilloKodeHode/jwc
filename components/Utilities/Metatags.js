@@ -29,6 +29,8 @@ function MetaTags({ title, description, url }) {
       <meta name="twitter:image" content="/logo/WindLogoNoTextLightMode.svg" />
       <meta name="twitter:title" content={title} />
 
+      <link rel="canonical" href={url} />
+
       <link rel="manifest" href="/manifest.json" />
       <link
         rel="icon"
