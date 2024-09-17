@@ -27,7 +27,6 @@ export const Main = ({ Component }) => {
       <PageLayout>
         <Component />
       </PageLayout>
-      <SpeedInsights />
       <Script
         src="https://cdn.addrow.com/ads/viewability251.js"
         strategy="lazyOnload"
@@ -54,6 +53,7 @@ export default function App({ Component }) {
               <ScrollToTopButton />
             </div>
             <Analytics />
+            <SpeedInsights />
           </>
         </NavigationContextProvider>
       </UserContextProvider>
