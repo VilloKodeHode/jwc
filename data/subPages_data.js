@@ -198,5 +198,137 @@ export const SUBPAGES_DATA = {
                 }
             ]
         }
-    }
+    },
+    CMS: {
+        top: {
+            title: {
+                norText: "Få brukervennlig kontroll på innholdet på din nettside!",
+                engText: "Get user-friendly control of your content on your website!",
+            },
+            paragraph: {
+                norText: "Ved å koble til en database til nettsiden din kan du enkelt gjennom et brukervennlig grensesnitt endre på og legge til innhold til nettsiden din. Databasen er skalerbar og kan spesifiseres til akkurat dine behov.",
+                engText: "By connecting a database to your website, you can easily change and add content to your website. The database is scalable and can be customized to your specific needs.",
+            },
+
+        },
+        middle: {
+            title: {
+                norText: "Hvorfor velge meg til å lage en CMS for din nettside...",
+                engText: "Why you should choose me create a CMS for your website..."
+            },
+            bullitins: [
+                {
+                    norText: "100% kontroll på hva som vises på nettsiden din",
+                    engText: "100% control on what is displayed on your website",
+                },
+                {
+                    norText: "Enkel administrasjon av innhold uten teknisk kunnskap",
+                    engText: "Easy content management without technical knowledge",
+                },
+                {
+                    norText: "Skalerbar løsning som vokser med bedriften din",
+                    engText: "Scalable solution that grows with your business",
+                },
+                {
+                    norText: "Tilpasning til spesifikke behov og krav",
+                    engText: "Customization to meet specific needs and requirements",
+                },
+                {
+                    norText: "Sikker lagring og håndtering av data",
+                    engText: "Secure storage and handling of data",
+                },
+                {
+                    norText: "Automatiske sikkerhetskopier for å beskytte innholdet",
+                    engText: "Automatic backups to protect your content",
+                },
+                {
+                    norText: "Integrasjon med populære verktøy og tredjepartstjenester",
+                    engText: "Integration with popular tools and third-party services",
+                },
+                {
+                    norText: "Optimalisert for rask lasting av nettsiden",
+                    engText: "Optimized for fast website loading",
+                },
+            ]
+        },
+        bottom: {
+            paragraphs: [
+                {
+                    norText: "Å integrere en CMS for sin nettsiden er et strategisk steg for å videreutvikle din bedrift. I stedet for å måtte be andre oppdatere nettsiden din kan man styre dette helt selv, akkurat når man vil. Ønsker man å delegere bort innholds-oppdatering så kan man enkelt gjøre dette ved å ha flere brukertilganger til CMS'en.",
+                    engText: "Integrating a database for your website is a strategic step towards futher developing your company. Instead of manually updating the content on your website, you can easily manage it yourself. If you want to delegate content updates it can easily be achieved by adding multiple users to the CMS."
+                    
+                },
+                {
+                    norText: "Enten du trenger en CMS til å styre innhold som bilde, tekst, bloggposter, artikler, nettsiden farger eller til og med utseende, har jeg ferdighetene som krever for å lage dette. Jeg lager en robust CMS som kan brukes til alle dine behov.",
+                    engText: "Either you need a CMS to manage images, text, blog posts, articles, website colors or even the websites design, I have the skills to do this. I am here to create a robust CMS that can be used for all your needs."
+                }
+            ]
+        }
+    },
+    sosialmedia_integration: {
+        top: {
+            title: {
+                norText: "Vis innhold fra din sosiale medier på din nettside!",
+                engText: "Show content from your social media on your website!",
+            },
+            paragraph: {
+                norText: "Ved å koble sammen dine sosiale medier med din nettside kan du enkelt vise fram innholdet på en ny og spennende måte.",
+                engText: "By connecting your social media with your website, you can easily show content from your social media in a new and exiting way.",
+            },
+
+        },
+        middle: {
+            title: {
+                norText: "Hvorfor velge meg til å koble sammen din sosiale media med din nettside...",
+                engText: "Why you should choose me connect your social media with your website..."
+            },
+            bullitins: [
+                {
+                    norText: "Automatisk oppdatering av innhold fra dine sosiale medier",
+                    engText: "Automatic updates of content from your social media",
+                },
+                {
+                    norText: "Spar tid ved å synkronisere innlegg på tvers av plattformer",
+                    engText: "Save time by syncing posts across platforms",
+                },
+                {
+                    norText: "Øk engasjement ved å vise sanntidsinnhold",
+                    engText: "Boost engagement by displaying real-time content",
+                },
+                {
+                    norText: "Innholdet blir tilpasset for å matche nettsidens design",
+                    engText: "The content will be customized to match your website's design",
+                },
+                {
+                    norText: "Integrasjon med populære plattformer som Instagram, Facebook, og Twitter",
+                    engText: "Integration with popular platforms like Instagram, Facebook, and Twitter",
+                },
+                {
+                    norText: "Mobilvennlig og optimalisert for rask lasting",
+                    engText: "Mobile-friendly and optimized for fast loading",
+                },
+                {
+                    norText: "Ingen behov for teknisk kunnskap for å vise innhold",
+                    engText: "No need for technical expertise to display content",
+                },
+                {
+                    norText: "Øk synligheten til din sosiale medieprofil",
+                    engText: "Increase visibility of your social media profile",
+                }
+            ]
+        },
+        bottom: {
+            paragraphs: [
+                {
+                    norText: "Å koble sammen dine sosiale medier med din nettside gjør at du kan vise fram innholdet ditt på en ny måte. Du kan velge om det skal være de siste innholdet, noe spesifikt, eller alt. På denne måten kan man selv styre innholdet på din egen nettside.",
+                    engText: "By connecting your sosial media with your website you can show your content in a new way. You can choose between showing the latest content, specific contant, or everything. This way you can manage the content on your own website.",
+                    
+                },
+                {
+                    norText: "Enten du trenger en integrasjon til sosiale medier til å vise innhold som bilder, tekst, bloggposter, artikler, videoer, osv, har jeg ferdighetene som krever for å lage fikse dette. Jeg lager en lager en løsning DU blir stolt av å vise frem til verden.",
+                    engText: "Either you need an integration with social media to display images, text, blog posts, articles, videos, etc, I have the skills to do this. I will create a solution that you will be proud to show the world.",
+                }
+            ]
+        }
+    },
 }

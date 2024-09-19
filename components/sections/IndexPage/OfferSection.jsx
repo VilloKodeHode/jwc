@@ -38,16 +38,30 @@ export const OfferSection = () => {
             <OfferSectionPart
               norTitle="Søkemotor-optimalisering"
               engTitle="Search engine optimization"
-              norText="Jeg øker trafikken til til nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester."
-              engText="I increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services."
+              norText="Øk trafikken til din nettside med et bredt spekter av SEO (Søkemotoroptimalisering) tjenester."
+              engText="Increase traffic to your website with a comprehensive range of SEO (Search Engine Optimization) services."
               href="/services_provided/SEO"
             />
             <OfferSectionPart
               norTitle="Engasjerende nettinnhold"
               engTitle="Engaging webcontent"
-              norText="Jeg skaper engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer."
-              engText="I creating captivating online experiences that combine powerful words with eye-catching visuals."
+              norText="Engasjerende opplevelser på nettet som kombinerer kraftfulle ord med iøynefallende visuelle elementer."
+              engText="Captivating experiences that combine powerful words with eye-catching visuals."
               href="/services_provided/webcontent"
+            />
+            <OfferSectionPart
+              norTitle="Content Management System (CMS)"
+              engTitle="Content Management System (CMS)"
+              norText="Integrer et innholdshånderingssystem for at du selv skal kunne styre innholdet på din nettside."
+              engText="Integrate a content management system so that you can manage your content on your website."
+              href="/services_provided/CMS"
+            />
+            <OfferSectionPart
+              norTitle="Sosiale media integrasjon"
+              engTitle="Social media integration"
+              norText="Koble sammen dine sosiale medier med din nettside for å vise fram innholdet ditt på en ny og spennende måte."
+              engText="Connect your social media with your website to show content from your social media on a new and exciting way."
+              href="/services_provided/sosialmedia_integration"
             />
           </div>
         </div>

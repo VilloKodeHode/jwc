@@ -27,16 +27,16 @@ export default function Navbar({
         <div
           className={`absolute ${
             toggleDropDown
-              ? "scale-100 translate-x-[150%]"
+              ? "scale-100 translate-x-[50%]"
               : "scale-0 translate-x-[-30%]"
           } bottom-1/2 translate-y-1/2 transition-all`}
         >
-          <div className="flex flex-col justify-center items-start gap-2 min-h-[160px]">
+          <div className="grid items-start justify-center grid-flow-col grid-rows-3 gap-2 gap-x-8">
 
             {drop_down_items?.map((menu) => (
               <DropDownItem
                 onClick={() => setToggleDropDown(false)}
-                textSize="text-p0"
+                textSize="text-p"
                 key={menu.text}
                 text={menu.text}
                 href={menu.href}

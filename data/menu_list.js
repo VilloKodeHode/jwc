@@ -21,6 +21,8 @@ export const MENU_LIST = [
         { text: "Ny nettside", href: "/services_provided/website" },
         { text: "Forbedre SEO", href: "/services_provided/SEO" },
         { text: "Nytt nettinnhold", href: "/services_provided/webcontent" },
+        { text: "Content management system", href: "/services_provided/CMS" },
+        { text: "Sosiale media integrasjon", href: "/services_provided/sosialmedia_integration" },
       ]
     }
   },
@@ -41,6 +43,8 @@ export const MENU_LIST = [
         { text: "New website", href: "/services_provided/website" },
         { text: "Improved SEO", href: "/services_provided/SEO" },
         { text: "New webcontent", href: "/services_provided/webcontent" },
+        { text: "Content management system", href: "/services_provided/CMS" },
+        { text: "Social media integration", href: "/services_provided/sosialmedia_integration" },
       ]
     }
   },

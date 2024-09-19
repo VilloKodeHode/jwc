@@ -1,11 +1,10 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Analytics } from '@vercel/analytics/react';
 import Script from "next/script";
 import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";
 import Footer from "@/components/navigation/Footer";
 
-import { useRouter } from "next/router";
 import PageLayout from "@/components/Layout/Layout";
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import UserContextProvider, { UserContext } from "@/context/UserContext";
@@ -15,6 +14,7 @@ import { AddScrollToElement } from "@/components/Utilities/handleScroll";
 import NavigationContextProvider from "@/context/NavigationContext";
 
 //TODO: Look over the whole code. See if layouts can be made for different parts that are equal in styling.
+//TODO: Add other services i provide: Database driven content, sosial media integration
 
 export const Main = ({ Component }) => {
   const { theme } = useContext(UserContext);

@@ -30,9 +30,7 @@ export const HeroSection = () => {
                     : "text-Villo-dark-white10"
                 }  w-fit`}
               >
-                {language === "Norwegian"
-                  ? "Nettsider for små og mellomstore bedrifter"
-                  : "Websites for small and medium-sized businesses"}
+                {language === "Norwegian" ? "Fører ditt konsept til realitet" : "Bringing your consept to reality"}
               </ResponsiveP>
               <ResponsiveThemedH1 className="mb-8">
                 <span
@@ -42,9 +40,11 @@ export const HeroSection = () => {
                       : "text-Villo-dark-primary"
                   }`}
                 >
-                  {language === "Norwegian" ? "Fører ditt konsept til realitet" : "Bringing your consept to reality"}
+                             {language === "Norwegian"
+                  ? "Nettsider for små og mellomstore bedrifter og klubber"
+                  : "Websites for small and medium-sized businesses and clubs"}
+                  
                 </span>{" "}
-                
               </ResponsiveThemedH1>
 
               <ResponsiveThemedH5 className="mb-8 font-normal text-left">
