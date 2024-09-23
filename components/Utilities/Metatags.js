@@ -15,7 +15,7 @@ function MetaTags({ title, description, url }) {
       {/* Meta Tags for SEO */}
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="keywords" content="webutvikling, frontend, SEO, webdesign, utvikling, frontendutvikling, headless CMS, Sanity, MongoDB, Javascript, nettside, hjemmeside, bedriftside, klubbside, rimlige priser, freelance, erfaren, profesjonell, Vestfold, Telemark, Viken, Tønsberg, Horten, Sandefjord, Tjøme, Oslo, Drammen, Moss, Stokke, Norge, Norway"/>
+      <meta name="keywords" content="webutvikling, frontend, SEO, webdesign, utvikling, frontendutvikling, headless CMS, Sanity, MongoDB, Javascript, nettside, hjemmeside, bedriftside, klubbside, rimlige priser, freelance, erfaren, profesjonell, Vestfold, Telemark, Viken, Tønsberg, Horten, Sandefjord, Tjøme, Oslo, Drammen, Moss, Stokke, Norge, Norway" />
 
       {/* OpenGraph Meta Tags for SEO */}
       <meta property="og:title" content={title} />
@@ -33,6 +33,8 @@ function MetaTags({ title, description, url }) {
 
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
+      {/* sitemap: */}
+      <link rel="sitemap" type="application/xml" href="https://www.villoutvikling.com/api/sitemap" />
 
       {/* <link rel="manifest" href="/manifest.json" /> */}
       <link
