@@ -30,7 +30,6 @@ export default function ProjectPage() {
       </div>
       <ClientsSection />
       <WorkedWithSection />
-      {/* <NewWorkedWithSection /> */}
       <QuotesSection />
       <LetsGoCTA
         type="email"

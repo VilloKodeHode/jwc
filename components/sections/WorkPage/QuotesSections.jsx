@@ -34,16 +34,16 @@ export const QuotesSection = () => {
                   }  `}
               >
                 <Image
-                  className={`object-cover object-center duration-500  bg-Villo-dark-primary transition-all rounded-[4px] md:w-[300px] md:h-[300px] h-full w-[250px]`}
+                  className={`object-cover object-[25%_30%] duration-500  bg-Villo-dark-primary transition-all rounded-[4px] md:w-[300px] md:h-[300px] h-full w-[250px]`}
                   src={quote.imageUrl}
                   alt={quote.person}
                   width={300}
                   height={300}
                 />
               </div>
-              <div className="relative z-10 flex flex-col justify-between h-full p-1">
+              <div className="relative z-10 flex flex-col justify-between p-1">
                 <Image
-                  className={`absolute -z-10 transform -translate-x-1/2 -translate-y-1/2 ${theme === "light" ? "opacity-5" : "opacity-20"} top-1/2 left-1/2`}
+                  className={`absolute h-full -z-10 transform -translate-x-1/2 -translate-y-1/2 ${theme === "light" ? "opacity-5" : "opacity-20"} top-1/2 left-1/2`}
                   src={quote.logo}
                   alt="company logo"
                   width={300}

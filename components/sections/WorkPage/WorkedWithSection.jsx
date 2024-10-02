@@ -2,6 +2,7 @@ import Image from "next/image";
 import {
   ResponsiveThemedH2,
   ResponsiveThemedH4,
+  ResponsiveThemedH5,
   ThemedP,
 } from "../../atoms/ResponsiveText";
 import Link from "next/link";
@@ -16,6 +17,24 @@ export const WorkedWithSection = () => {
     (company) => company.language === language
   );
   const COMPANY = companyObj ? companyObj.Company : [];
+  const companyColors = {
+    KodeverketBergen: {
+      shadow: "shadow-[#7fe5d3]",
+      text: "text-[#7fe5d3]",
+      bg: "bg-[#7fe5d3]",
+    },
+    Jobloop: {
+      shadow: "shadow-[#f4a366]",
+      text: "text-[#f4a366]",
+      bg: "bg-[#f4a366]",
+    },
+    VilloUtvikling: {
+      shadow: "shadow-[#858ee0]",
+      text: "text-[#858ee0]",
+      bg: "bg-[#858ee0]",
+    },
+  };
+
   return (
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
       <div className="text-center">
@@ -30,12 +49,8 @@ export const WorkedWithSection = () => {
               target="_blank"
               rel="noreferrer"
               key={company.id}
-              className={`shadow-lg overflow-hidden hover:scale-105 ${
-                company.name === "Kodeverket Bergen"
-                  ? "shadow-[#7fe5d3]"
-                  : company.name === "Jobloop"
-                  ? "shadow-[#f4a366]" : company.name === "Villo utvikling" ?
-                   "shadow-[#858ee0]" : "shadow-white"
+              className={`shadow-md overflow-hidden hover:scale-105 ${
+                company.colors.shadow
               }  transition-all max-w-sm rounded-lg
                             ${
                               theme === "light"
@@ -69,17 +84,18 @@ export const WorkedWithSection = () => {
                 <ResponsiveThemedH4 className="font-medium">
                   {company.name}
                 </ResponsiveThemedH4>
+                <ResponsiveThemedH5 className={`${company.colors.text} `}>
+                  {company.jobTitle}
+                </ResponsiveThemedH5>
                 <ThemedP className="mt-2 text-sm">{company.jobDone}</ThemedP>
                 <div className="flex flex-wrap gap-4 mt-4">
-                {company.skillsUsed.map((skill) => (
-                  <div key={skill.name} >
-                    <a href={skill.href} target="_blank" rel="noreferrer">
-                    <SkillLinkButton>
-                      {skill.name}
-                    </SkillLinkButton>
-                    </a>
-                  </div>
-                ))}
+                  {company.skillsUsed.map((skill) => (
+                    <div key={skill.name}>
+                      <a href={skill.href} target="_blank" rel="noreferrer">
+                        <SkillLinkButton>{skill.name}</SkillLinkButton>
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
             </Link>

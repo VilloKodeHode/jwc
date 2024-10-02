@@ -35,4 +35,16 @@ export const QUOTES_LIST = [
     norPersonTitle: "Eier av Trond Borg - Virvelløse hobbydyr",
     engPersonTitle: "Owner of Trond Borg - Virvelløse hobbydyr",
   },
+  {
+    id: "Vegard_Kristensen_quote",
+    norQuote:
+      "“Kan anbefale Villo utvikling på det sterkeste. God informasjon og forskjellige løsninger ble presentert underveis. Kommunikasjonen har vært meget god, og resultatet ble over all forventning. Igjen, anbefaler Joakim!”",
+    engQuote:
+      "“I can strongly recommend Villo development. Good information and different solutions were presented. Communication was very good, and the result was above and beyond expectation. Again, I can recommend Joakim ”",
+    person: "Vegard Kristensen",
+    imageUrl: "/images/quotes/VegardKristensen.webp",
+    logo: "/images/companies/KVS-logo-black.svg",
+    norPersonTitle: "Eier Kristensen Vedlikehold Service",
+    engPersonTitle: "Owner of Kristensen Maintenance Service",
+  },
 ];
