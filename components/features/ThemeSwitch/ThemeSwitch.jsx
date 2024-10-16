@@ -57,7 +57,7 @@ const ThemeSwitch = () => {
           alt="themeswitch to lightmode"
           className={`origin-top ${theme === "light"
             ? "animate-ThemeSwitchSlideOut pointer-events-none"
-            : "animate-ThemeSwitchSlideIn "
+            : "animate-ThemeSwitchSlideIn"
             } max-w-8 h-8 absolute translate-x-1/2 origin-center -translate-y-1/2 top-1/2 right-1/2 hover:scale-110 transition`}
         />
       </div>

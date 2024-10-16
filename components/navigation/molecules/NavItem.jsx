@@ -59,7 +59,7 @@ export const DropDown = ({
 
 }) => {
   const { theme, currentPath } = useContext(UserContext);
-  const subPagesPaths = (currentPath === "/services_provided/website" || currentPath === "/services_provided/webcontent" || currentPath === "/services_provided/SEO")
+  const isServiceSubPage = (currentPath === "/services_provided/website" || currentPath === "/services_provided/webcontent" || currentPath === "/services_provided/SEO")
   return (
     <div className={`relative group z-10 ${className}`}>
 
@@ -73,14 +73,18 @@ export const DropDown = ({
         {children}
       </button>
       <div
-        className={`${subPagesPaths ? `h-2` : "group-hover:h-2"
-          } absolute w-full h-0 transition-all ${theme === "light"
-            ? "bg-Villo-light-primary"
-            : "bg-Villo-dark-primary"
-          }`}
+          className={`
+            ${
+              isServiceSubPage ? 
+            `h-2` : "group-hover:h-2"
+            } 
+            absolute w-full h-0 transition-all ${theme === "light"
+              ? "bg-Villo-light-primary"
+              : "bg-Villo-dark-primary"
+            }`}
       />
 
-      {(subPagesPaths) && (
+      {isServiceSubPage && (
         <div className="absolute top-0 w-3 h-full -left-4">
           <Image
             src={

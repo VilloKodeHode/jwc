@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 import Script from "next/script";
 import Header from "@/components/navigation/Header";
 import "@/styles/globals.css";

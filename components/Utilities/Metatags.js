@@ -15,7 +15,7 @@ function MetaTags({ title, description, url }) {
       {/* Meta Tags for SEO */}
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="keywords" content="webutvikling, frontend, SEO, webdesign, utvikling, frontendutvikling, headless CMS, Sanity, MongoDB, Javascript, nettside, hjemmeside, bedriftside, klubbside, rimlige priser, freelance, erfaren, profesjonell, Vestfold, Telemark, Viken, Tønsberg, Horten, Sandefjord, Tjøme, Oslo, Drammen, Moss, Stokke, Norge, Norway" />
+      <meta name="keywords" content= "webutvikling, frontend utvikling, SEO tjenester, webdesign, nettsider, hjemmeside, bedriftside, klubbside, headless CMS, Sanity, MongoDB, JavaScript, freelance utvikler, rimelige webutvikling priser, profesjonell webutvikler, Vestfold, Tønsberg, Sandefjord, Oslo, Norge" />
 
       {/* OpenGraph Meta Tags for SEO */}
       <meta property="og:title" content={title} />
@@ -34,7 +34,7 @@ function MetaTags({ title, description, url }) {
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
       {/* sitemap: */}
-      <link rel="sitemap" type="application/xml" href="https://www.villoutvikling.com/api/sitemap" />
+      <link rel="sitemap" type="application/xml" href="https://villoutvikling.com/api/sitemap" />
 
       {/* <link rel="manifest" href="/manifest.json" /> */}
       <link
@@ -47,7 +47,7 @@ function MetaTags({ title, description, url }) {
       />
 
       {/* @ts-ignore */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-METSFG26LN" />
+      {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-METSFG26LN" />
       <script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -55,7 +55,7 @@ function MetaTags({ title, description, url }) {
           gtag('js', new Date());
           gtag('config', 'G-METSFG26LN');
         `}
-      </script>
+      </script> */}
 
 
     </Head>
