@@ -16,7 +16,8 @@ function MetaTags({ title, description, url }) {
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="keywords" content="webutvikling, frontend utvikling, SEO tjenester, webdesign, nettsider, hjemmeside, bedriftside, klubbside, headless CMS, Sanity, MongoDB, JavaScript, freelance utvikler, rimelige webutvikling priser, profesjonell webutvikler, Vestfold, Tønsberg, Sandefjord, Oslo, Norge" />
-
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      
       {/* OpenGraph Meta Tags for SEO */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
