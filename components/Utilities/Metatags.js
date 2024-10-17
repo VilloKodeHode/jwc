@@ -15,12 +15,15 @@ function MetaTags({ title, description, url }) {
       {/* Meta Tags for SEO */}
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="keywords" content= "webutvikling, frontend utvikling, SEO tjenester, webdesign, nettsider, hjemmeside, bedriftside, klubbside, headless CMS, Sanity, MongoDB, JavaScript, freelance utvikler, rimelige webutvikling priser, profesjonell webutvikler, Vestfold, Tønsberg, Sandefjord, Oslo, Norge" />
+      <meta name="keywords" content="webutvikling, frontend utvikling, SEO tjenester, webdesign, nettsider, hjemmeside, bedriftside, klubbside, headless CMS, Sanity, MongoDB, JavaScript, freelance utvikler, rimelige webutvikling priser, profesjonell webutvikler, Vestfold, Tønsberg, Sandefjord, Oslo, Norge" />
 
       {/* OpenGraph Meta Tags for SEO */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content="/logo/WindLogoNoTextLightMode.svg" />
+      <meta property="og:image" content="/logo/Villo_Utvikling_full-Logo.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:url" content={url} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Villo utvikling " />
@@ -28,7 +31,7 @@ function MetaTags({ title, description, url }) {
       {/* Twitter Meta Tags for SEO */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="/logo/WindLogoNoTextLightMode.svg" />
+      <meta name="twitter:image" content="/logo/Villo_Utvikling_full-Logo.png" />
       <meta name="twitter:title" content={title} />
 
       <meta name="robots" content="index, follow" />
@@ -45,7 +48,7 @@ function MetaTags({ title, description, url }) {
             : "/logo/WindLogoNoTextDarkMode.svg"
         }
       />
-            {/* @ts-ignore */}
+      {/* @ts-ignore */}
       {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-METSFG26LN" />
       <script id="google-analytics">
         {`
