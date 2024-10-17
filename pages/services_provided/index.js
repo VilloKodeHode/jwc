@@ -1,8 +1,9 @@
-import { OfferPageContent } from "../components/sections/ServicesPage/OfferPageContent";
+import { OfferPageContent } from "../../components/sections/ServicesPage/OfferPageContent";
 import { LetsGoCTA } from "@/components/organisms/LetsGoCTA";
-import { UserContext } from "../context/UserContext";
+import { UserContext } from "../../context/UserContext";
 import { useContext } from "react";
-import MetaTags from "../components/Utilities/Metatags";
+import MetaTags from "../../components/Utilities/Metatags";
+
 
 export default function ServicesProvided() {
     const { language } = useContext(UserContext);
