@@ -34,7 +34,7 @@ function MetaTags({ title, description, url }) {
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={url} />
       {/* sitemap: */}
-      <link rel="sitemap" type="application/xml" href="https://villoutvikling.com/api/sitemap" />
+      <link rel="sitemap" type="application/xml" href="https://www.villoutvikling.com/api/sitemap" />
 
       {/* <link rel="manifest" href="/manifest.json" /> */}
       <link
@@ -45,8 +45,7 @@ function MetaTags({ title, description, url }) {
             : "/logo/WindLogoNoTextDarkMode.svg"
         }
       />
-
-      {/* @ts-ignore */}
+            {/* @ts-ignore */}
       {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-METSFG26LN" />
       <script id="google-analytics">
         {`
@@ -56,11 +55,11 @@ function MetaTags({ title, description, url }) {
           gtag('config', 'G-METSFG26LN');
         `}
       </script> */}
-
-
     </Head>
   );
 }
+
+
 
 export const DynamicMetaTags = ({ page }) => {
   return (

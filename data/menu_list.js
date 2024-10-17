@@ -13,6 +13,7 @@ export const MENU_LIST = [
       // { text: "Arbeid", href: "/work", },
       // { text: "AI kunst", href: "/aiArt", },
       { text: "Kontakt", href: "/contact", },
+      { text: "Tjenester", href: "/services_provided", },
       // { text: "Laster", href: "/loading",},
     ],
     drop_down: {
@@ -35,6 +36,7 @@ export const MENU_LIST = [
       // { text: "Work", href: "/work", },
       // { text: "AI art", href: "/aiArt", },
       { text: "Contact", href: "/contact", },
+      { text: "Services", href: "/services_provided", },
       // { text: "Loading", href: "/loading",},
     ],
     drop_down: {

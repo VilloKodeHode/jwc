@@ -95,16 +95,17 @@ export default function HamburgerBar({
                       currentPath={currentPath}
                     />
                   ))}
-                  <DropDown
+                  {/* <DropDown
                     onClick={() => setToggleDropDown(!toggleDropDown)}
                     textSize="text-h4"
                     currentPath={currentPath}
                     className="-z-50"
+                    href="/services_provided"
 
                   >
                     {drop_down.text}
-                  </DropDown>
-                  <div className={`absolute ${toggleDropDown ? "scale-100 translate-y-[200%] translate-x-4" : "scale-0 translate-x-0 translate-y-[130%]"}  transition-all bottom-14`}>
+                  </DropDown> */}
+                  {/* <div className={`absolute ${toggleDropDown ? "scale-100 translate-y-[200%] translate-x-4" : "scale-0 translate-x-0 translate-y-[130%]"}  transition-all bottom-14`}>
 
                     <div className="flex flex-col items-start justify-center">
 
@@ -123,7 +124,7 @@ export default function HamburgerBar({
                       ))}
 
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex-row hidden justify-end h-[112px] items-center rounded-bl-full gap-8 w-full md:flex">
                 </div>

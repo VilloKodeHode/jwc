@@ -7,7 +7,7 @@ export const NavigationContext = createContext({
   setIsOpen: () => {},
   showToolBar: false,
   setShowToolBar: () => {},
-  toggleDropDown: false,
+  toggleDropDown: true,
   setToggleDropDown: () => {},
   handleMenuToggle: () => {},
 });
@@ -16,7 +16,7 @@ export default function NavigationContextProvider({ children }) {
   const [notTop, setNotTop] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showToolBar, setShowToolBar] = useState(false);
-  const [toggleDropDown, setToggleDropDown] = useState(false);
+  const [toggleDropDown, setToggleDropDown] = useState(true);
 
   const handleMenuToggle = () => {
     setIsOpen(!isOpen);

@@ -4,6 +4,9 @@ import { UserContext } from "@/context/UserContext";
 
 export const AddScrollToElement = () => {
     const { theme } = useContext(UserContext);
+
+
+
     useEffect(() => {
         // Function to check if an element is in the viewport
         function isElementInViewport(element, threshold = 0.6) {
@@ -12,12 +15,17 @@ export const AddScrollToElement = () => {
             const elementTop = rect.top;
             return elementTop <= windowHeight * threshold;
         }
+        // ids to ignore
+        // const ignoredIds = ['OfferPageContent', 'another-id-to-ignore'];
 
         // Function to handle the scroll event
         function handleScroll() {
             const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
 
             elementsToAnimate.forEach((element) => {
+                // if (ignoredIds.includes(element.id)) {
+                //     return;
+                // }
                 if (isElementInViewport(element, 0.6)) {
                     // Add your animation class or logic here
                     element.classList.add('scroll-into-view'); // Apply your animation class

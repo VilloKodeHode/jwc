@@ -12,6 +12,7 @@ export const UserContext = createContext({
   cookiesAccepted: false,
   setCookiesAccepted: () => {},
   currentPath: "",
+  isServiceSubPage: "",
 });
 
 
@@ -23,6 +24,7 @@ export default function UserContextProvider({ children }) {
   const [cookiesAccepted, setCookiesAccepted] = useState(false);
   const router = useRouter();
   const currentPath = router.asPath;
+  const isServiceSubPage = router.query.services_provided
 
 
 
@@ -51,7 +53,7 @@ export default function UserContextProvider({ children }) {
     }
   }, [cookiesAccepted, theme, language]);
   return (
-    <UserContext.Provider value={{language, setLanguage, theme, setTheme, cookiesAccepted, setCookiesAccepted, currentPath }}>
+    <UserContext.Provider value={{language, setLanguage, theme, setTheme, cookiesAccepted, setCookiesAccepted, currentPath, isServiceSubPage }}>
       {children}
     </UserContext.Provider>
   );

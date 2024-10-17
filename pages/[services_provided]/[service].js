@@ -11,7 +11,7 @@ export default function ProvidedServiceWebsite() {
   //TODO see if this can me moved to the UserContext
   const router = useRouter()
   const { service } = router.query
-  const { theme, language } = useContext(UserContext);
+  const { language } = useContext(UserContext);
   return (
     <>
       {service &&

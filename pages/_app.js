@@ -27,13 +27,15 @@ export const Main = ({ Component }) => {
       <PageLayout>
         <Component />
       </PageLayout>
-      <Script
-        src="https://cdn.addrow.com/ads/viewability251.js"
-        strategy="lazyOnload"
-      />
+
     </div>
   )
 }
+
+{/* <Script
+src="https://cdn.addrow.com/ads/viewability251.js"
+strategy="lazyOnload"
+/> */}
 
 export default function App({ Component }) {
 

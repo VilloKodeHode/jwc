@@ -10,7 +10,7 @@ export const Banner = () => {
   const { notTop } = useContext(NavigationContext);
   return (
     <div
-      className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-12 py-6 ${
+      className={`relative transition-colors bg-opacity-[0.93] duration-1000 backdrop-blur-[10px] z-40 h-10 flex items-center justify-between px-4 sm:px-6 lg:px-12 py-6 ${
         theme === "light"
           ? "bg-Villo-light-white15 text-Villo-light-black"
           : "bg-black text-Villo-dark-white10"
