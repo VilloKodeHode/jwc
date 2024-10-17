@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     { url: '/portfolio', lastmod: '2024-03-18', priority: 0.9 }, // Portfolio - high priority
     { url: '/about', lastmod: '2024-03-18', priority: 0.8 }, // About page - medium priority
     { url: '/contact', lastmod: '2024-03-18', priority: 0.8 }, // Contact page - lower priority
-    { url: '/services_provided', lastmod: '2024-16-10', priority: 0.8 }, // Services - lower priority
+    { url: '/services_provided', lastmod: '2024-10-16', priority: 0.8 }, // Services - lower priority
     { url: '/services_provided/website', lastmod: '2024-03-18', priority: 0.6 },
     { url: '/services_provided/SEO', lastmod: '2024-03-18', priority: 0.6 },
     { url: '/services_provided/webcontent', lastmod: '2024-03-18', priority: 0.6 },
