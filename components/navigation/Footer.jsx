@@ -7,6 +7,7 @@ import { VscGithubAlt } from "react-icons/vsc";
 
 import { useContext } from "react";
 import { UserContext } from "@/context/UserContext";
+import Image from "next/image";
 
 export default function Footer() {
   //TODO: Currenpath can be used to highlight links to different pages here (which one is active too)
@@ -41,8 +42,10 @@ export default function Footer() {
         </div>
         {/* Copyright Information */}
         <div className={`flex items-center text-center ${theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
+          
           <h4 className="text-h4">{language === "Norwegian" ? `© ${year} Villo utvikling` : `© ${year} Villo development`}</h4>
         </div>
+        
         {/* Privacy Policy and Terms of Service */}
         {/* <div className={`text-right ${Theme === "light" ? "text-Villo-light-white" : "text-Villo-dark-white"}`}>
             <Link href="/privacy-policy">
@@ -53,6 +56,7 @@ export default function Footer() {
             </Link>
           </div> */}
       </div>
+      <Image src="/logo/Villo_Utvikling_full-Logo.png" width={200} height={150} alt="" className="absolute bottom-0 right-0 opacity-0" />
     </div>
   );
 }
