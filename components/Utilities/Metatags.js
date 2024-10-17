@@ -20,7 +20,7 @@ function MetaTags({ title, description, url }) {
       {/* OpenGraph Meta Tags for SEO */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content="/logo/Villo_Utvikling_full-Logo.png" />
+      <meta property="og:image" content="https://www.villoutvikling.com/logo/Villo_Utvikling_full-Logo.png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:type" content="image/png" />
@@ -31,7 +31,7 @@ function MetaTags({ title, description, url }) {
       {/* Twitter Meta Tags for SEO */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="/logo/Villo_Utvikling_full-Logo.png" />
+      <meta name="twitter:image" content="https://www.villoutvikling.com/logo/Villo_Utvikling_full-Logo.png" />
       <meta name="twitter:title" content={title} />
 
       <meta name="robots" content="index, follow" />
